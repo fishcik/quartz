@@ -60,6 +60,10 @@ export default (() => {
           </>
         )}
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <meta name="og:site_name" content={cfg.pageTitle}></meta>
@@ -99,7 +103,40 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
-        <script dangerouslySetInnerHTML={{__html: `(function(){var s=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar."];var t=s[Math.floor(Math.random()*s.length)];function i(){var e=document.querySelector('.page-title');if(e&&!document.querySelector('.site-slogan')){var n=document.createElement('p');n.className='site-slogan';n.textContent=t;e.insertAdjacentElement('afterend',n);}}document.addEventListener('DOMContentLoaded',i);document.addEventListener('nav',i);})();`}} />
+        <script dangerouslySetInnerHTML={{__html: `(function(){
+var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar."];
+function once(){
+  if(window.__scInit)return; window.__scInit=1;
+  // ── Dikey okuma ilerleme çubuğu (sol, aşağıdan yukarı) ──
+  var pb=document.createElement('div'); pb.id='sc-progress'; document.body.appendChild(pb);
+  function prog(){var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;pb.style.height=(p*100)+'%';}
+  window.addEventListener('scroll',prog,{passive:true}); window.addEventListener('resize',prog); window.__scProg=prog; prog();
+  // ── Sağ üst araç çubuğu: Mondaine saat + odak/gizle tuşları ──
+  var tb=document.createElement('div'); tb.id='sc-tools';
+  var ticks=''; for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
+  tb.innerHTML='<div id="sc-clock"><svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><circle cx="50" cy="20" r="5" class="sc-sec-dot"/></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div></div>'+
+  '<button id="sc-focus" class="sc-btn" title="Odak modu: kenar sütunları soluklaşır, odak ortada kalır" aria-label="Odak modu"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="3.5" fill="currentColor"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>'+
+  '<button id="sc-collapse" class="sc-btn" title="Menüleri gizle: yan sütunlar kapanır, yazı tam ekran olur" aria-label="Menüleri gizle"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M4 9V4h5v2H6v3H4zm11-5h5v5h-2V6h-3V4zM4 15h2v3h3v2H4v-5zm14 3v-3h2v5h-5v-2h3z" fill="currentColor"/></svg></button>';
+  document.body.appendChild(tb);
+  document.getElementById('sc-focus').addEventListener('click',function(){document.body.classList.toggle('sc-focus-mode');this.classList.toggle('sc-active');});
+  document.getElementById('sc-collapse').addEventListener('click',function(){document.body.classList.toggle('sc-menus-hidden');this.classList.toggle('sc-active');if(window.__scProg)window.__scProg();});
+  function tick(){var d=new Date(),z=new Date(d.toLocaleString('en-US',{timeZone:'Europe/Zurich'})),s=z.getSeconds(),m=z.getMinutes(),h=z.getHours(),H=document.getElementById('sc-h'),M=document.getElementById('sc-m'),S=document.getElementById('sc-s');if(!H)return;H.setAttribute('transform','rotate('+((h%12)*30+m*0.5)+' 50 50)');M.setAttribute('transform','rotate('+(m*6+s*0.1)+' 50 50)');S.setAttribute('transform','rotate('+(s*6)+' 50 50)');var dn=document.getElementById('sc-day');if(dn){var day=d.toLocaleDateString('tr-TR',{weekday:'long',timeZone:'Europe/Zurich'});dn.textContent=day.charAt(0).toLocaleUpperCase('tr-TR')+day.slice(1);}}
+  tick(); setInterval(tick,1000);
+}
+function perNav(){
+  var slogan=SLO[Math.floor(Math.random()*SLO.length)];
+  // ── Header: SAYKO.ch + dönüşümlü slogan (arama kutusunun üzerine) ──
+  var ph=document.querySelector('.page-header');
+  if(ph&&!ph.querySelector('.site-header')){var sh=document.createElement('div');sh.className='site-header';sh.innerHTML='<a class="site-header-title" href="/">SAYKO.ch</a><p class="site-header-slogan"></p>';sh.querySelector('.site-header-slogan').textContent=slogan;ph.insertAdjacentElement('afterbegin',sh);}
+  // ── "Bağlam ağı" başlığı tıklanınca global grafik açılır ──
+  var gt=document.querySelector('.graph > h3');
+  if(gt&&!gt.getAttribute('data-sc')){gt.setAttribute('data-sc','1');gt.classList.add('sc-graph-link');gt.addEventListener('click',function(){var b=document.querySelector('.global-graph-icon');if(b)b.click();});}
+  if(window.__scProg)window.__scProg();
+}
+function init(){once();perNav();}
+document.addEventListener('DOMContentLoaded',init);
+document.addEventListener('nav',init);
+})();`}} />
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
             return resource(fileData)

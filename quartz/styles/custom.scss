@@ -1,8 +1,11 @@
 // ================================================
 //  sayko.ch — Arşiv
-//  Sepia default, sıcak kahve accent
+//  Light: sepia + sage yeşili + cardinal kırmızı
+//  Dark: zifiri siyah + kırık beyaz
 //  Retro academic / editorial
 // ================================================
+
+// Cursive font (Dancing Script) Head.tsx'te <link> ile yükleniyor.
 
 // ─── Light mode (default / sepia) ───────────────
 
@@ -30,32 +33,44 @@ html:not([saved-theme="dark"]),
   --bordo-h: #8a6240;
   --bordo-d: rgba(107, 74, 47, 0.10);
   --br:      #e2dccf;
+
+  // Accent renkleri
+  --sage:      #7d8c5c;   // soluk zeytin yeşili (aktif vurgular)
+  --sage-d:    rgba(125, 140, 92, 0.14);
+  --cardinal:  #c1272d;   // cardinal kırmızı (SAYKO.ch, progress, imza)
+  --progress:  #c1272d;
 }
 
-// ─── Dark mode (warm sepia dark) ─────────────────
+// ─── Dark mode (zifiri siyah + kırık beyaz) ──────
 
 html[saved-theme="dark"],
 [saved-theme="dark"] {
-  --light:         #1a1712 !important;
-  --lightgray:     #2a2620 !important;
-  --gray:          #5a5346 !important;
-  --darkgray:      #d8cfc0 !important;
-  --dark:          #f3ece0 !important;
-  --secondary:     #c79a6d !important;
+  --light:         #000000 !important;
+  --lightgray:     #141414 !important;
+  --gray:          #3a3a38 !important;
+  --darkgray:      #e8e3d8 !important;
+  --dark:          #f4efe6 !important;
+  --secondary:     #d9b083 !important;
   --tertiary:      #b07a4a !important;
-  --highlight:     rgba(199, 154, 109, 0.10) !important;
-  --textHighlight: rgba(199, 154, 109, 0.20) !important;
+  --highlight:     rgba(217, 176, 131, 0.08) !important;
+  --textHighlight: rgba(217, 176, 131, 0.18) !important;
 
-  --bg:      #1a1712;
-  --bg-2:    #221e18;
-  --bg-3:    #2a2620;
-  --fg:      #f3ece0;
-  --fg-2:    #b8ad9a;
-  --fg-3:    #6a6051;
-  --bordo:   #c79a6d;
-  --bordo-h: #d9b083;
-  --bordo-d: rgba(199, 154, 109, 0.12);
-  --br:      #2f2a22;
+  --bg:      #000000;
+  --bg-2:    #0c0c0c;
+  --bg-3:    #161616;
+  --fg:      #ece7dd;   // kırık beyaz
+  --fg-2:    #b3ac9e;
+  --fg-3:    #6f685c;
+  --bordo:   #d9b083;
+  --bordo-h: #e8c89a;
+  --bordo-d: rgba(217, 176, 131, 0.12);
+  --br:      #1e1e1e;
+
+  // Accent renkleri (dark)
+  --sage:      #a7b585;   // dark'ta daha açık sage
+  --sage-d:    rgba(167, 181, 133, 0.16);
+  --cardinal:  #ece7dd;   // dark'ta imza/progress kırık beyaz
+  --progress:  #ece7dd;
 }
 
 // ─── Base ────────────────────────────────────────
@@ -203,29 +218,30 @@ aside {
 
 // ─── Site title ──────────────────────────────────
 
+// Sol sütunun en üstünde küçük, cardinal kırmızı SAYKO.ch
 .page-title,
 h1.page-title,
 a.page-title,
 div.page-title {
   font-family: 'Playfair Display', serif !important;
-  font-size: 1.05rem !important;
-  font-weight: 400 !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
   font-style: normal !important;
-  letter-spacing: 0.14em !important;
-  text-transform: uppercase !important;
-  color: var(--fg) !important;
+  letter-spacing: 0.12em !important;
+  text-transform: none !important;
+  color: var(--cardinal) !important;
   text-decoration: none !important;
   border: none !important;
   border-bottom: 1px solid var(--br) !important;
-  padding-bottom: 1rem !important;
-  margin-bottom: 1.5rem !important;
+  padding-bottom: 0.85rem !important;
+  margin-bottom: 1.25rem !important;
   display: block !important;
   width: 100%;
-  transition: color 140ms;
+  transition: opacity 140ms;
 }
 
 a.page-title:hover {
-  color: var(--bordo) !important;
+  opacity: 0.7;
 }
 
 // ─── Explorer / navigation ───────────────────────
@@ -271,7 +287,47 @@ li.file a:hover {
 }
 
 .file.active a {
-  color: var(--bordo) !important;
+  color: var(--sage) !important;
+}
+
+// Explorer başlığı "İçerik" — biraz büyütülmüş
+.explorer .title-button h2,
+.explorer h2,
+button.explorer-toggle h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+  color: var(--fg) !important;
+  margin: 0;
+}
+
+// Dropdown menüler açıldığında kırpılmasın / kaybolmasın
+.explorer,
+.explorer-content,
+.explorer ul {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+.explorer-content {
+  margin-top: 0.25rem;
+}
+
+// Explorer'ın en altında ince ayırıcı + sabit "Müfredat" metni
+.explorer::after {
+  content: "Müfredat";
+  display: block;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--br);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  cursor: default;
+  user-select: none;
 }
 
 // ─── Search (üst-orta, sabit) ────────────────────
@@ -281,7 +337,7 @@ li.file a:hover {
   top: 0.75rem;
   z-index: 900;
   margin: 0 auto 2rem;
-  max-width: 74ch;
+  max-width: 82ch;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -346,7 +402,7 @@ article,
 
 article {
   padding: 2.5rem 3rem;
-  max-width: 74ch;
+  max-width: 82ch;
 }
 
 .article-title,
@@ -529,9 +585,39 @@ a.internal.tag-link,
     transition: color 140ms, padding-left 140ms;
 
     &:hover {
-      color: var(--bordo) !important;
+      color: var(--sage) !important;
       padding-left: 3px;
     }
+
+    &.in-view {
+      color: var(--sage) !important;
+    }
+  }
+
+  // Liste: sınırlı yükseklik + scroll; scrollbar yalnız hover'da görünür
+  & ul {
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-width: none;            // Firefox: gizli
+    transition: scrollbar-color 140ms;
+  }
+
+  & ul:hover {
+    scrollbar-width: thin;            // Firefox: hover'da ince
+    scrollbar-color: var(--gray) transparent;
+  }
+
+  & ul::-webkit-scrollbar {
+    width: 0;                         // WebKit: gizli
+  }
+
+  & ul:hover::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  & ul:hover::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 2px;
   }
 }
 
@@ -661,10 +747,12 @@ article figure {
   }
 }
 
-// ─── Footer (sade: C.Ç. © 2026) ──────────────────
+// ─── Footer (tek imza: C.Ç. © 2026) ──────────────
+// NOT: .page-footer afterBody WRAPPER'ıdır (recent-notes vs. içerir);
+// gerçek footer <footer> elemanıdır. ::after SADECE <footer>'a verilir,
+// yoksa imza iki kez yazılır (eski hata buydu).
 
-footer,
-.page-footer {
+footer {
   border-top: 1px solid var(--br) !important;
   background: var(--bg) !important;
   color: var(--fg-3) !important;
@@ -672,19 +760,17 @@ footer,
   text-align: center;
 }
 
-// Quartz varsayılan footer içeriğini gizle, kendi imzamızı koy
+// Quartz varsayılan footer içeriğini (Quartz linki vs.) gizle
 footer > p,
-footer > ul,
-.page-footer > p,
-.page-footer > ul {
+footer > ul {
   display: none !important;
 }
 
-footer::after,
-.page-footer::after {
+// Tek imza — açık modda cardinal kırmızı, koyu modda kırık beyaz
+footer::after {
   content: "C.Ç. © 2026";
   display: block;
-  color: var(--fg-3);
+  color: var(--cardinal);
   font-family: 'Source Serif 4', serif;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
@@ -767,16 +853,16 @@ article > p:first-of-type {
 
 .recent-notes {
   margin: 3rem auto 0;
-  max-width: 74ch;
+  max-width: 82ch;
 
   & > h3 {
     font-family: 'Source Serif 4', serif !important;
     font-size: 0.72rem !important;
     font-style: normal !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     text-transform: uppercase;
     letter-spacing: 0.16em;
-    color: var(--fg-3) !important;
+    color: var(--sage) !important;
     border-bottom: 1px solid var(--br);
     padding-bottom: 0.6rem;
     margin-bottom: 0.5rem;
@@ -807,6 +893,195 @@ article > p:first-of-type {
   }
 }
 
+// ═══ CUSTOM INJECTION BİLEŞENLERİ ════════════════
+
+// ─── Header: SAYKO.ch + slogan (arama üstünde) ───
+
+.site-header {
+  text-align: center;
+  margin: 0 auto 1.25rem;
+  max-width: 82ch;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--br);
+}
+
+.site-header-title {
+  display: inline-block;
+  font-family: 'Playfair Display', serif !important;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--cardinal) !important;
+  text-decoration: none !important;
+  border: none !important;
+  line-height: 1.1;
+  transition: opacity 140ms;
+
+  &:hover { opacity: 0.75; }
+}
+
+.site-header-slogan {
+  margin: 0.35rem 0 0 !important;
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--fg-3) !important;
+  letter-spacing: 0.02em;
+}
+
+// ─── "Bağlam ağı" tıklanabilir başlık ────────────
+
+.graph > h3.sc-graph-link {
+  cursor: pointer;
+  transition: color 140ms;
+
+  &:hover { color: var(--sage) !important; }
+
+  &::after {
+    content: " ↗";
+    font-size: 0.7em;
+    opacity: 0.6;
+  }
+}
+
+// ─── Dikey okuma ilerleme çubuğu (sol) ───────────
+
+#sc-progress {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 0;
+  background: var(--progress);
+  z-index: 9998;
+  opacity: 0.55;
+  transition: height 80ms linear;
+  pointer-events: none;
+}
+
+// ─── Sağ üst araç çubuğu (saat + tuşlar) ─────────
+
+#sc-tools {
+  position: fixed;
+  top: 0.85rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+// SBB Mondaine saati
+#sc-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+#sc-clockface {
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.18));
+}
+
+.sc-face {
+  fill: #ffffff;
+  stroke: #e3e3e3;
+  stroke-width: 1.5;
+}
+
+.sc-tick {
+  stroke: #1a1a1a;
+  stroke-width: 2.2;
+  stroke-linecap: butt;
+}
+
+.sc-hand {
+  stroke: #1a1a1a;
+  stroke-linecap: round;
+}
+
+.sc-hand-h { stroke-width: 5; }
+.sc-hand-m { stroke-width: 3.4; }
+
+// Saniye ibresi: kırmızı, yuvarlak uçlu (Mondaine imzası)
+.sc-hand-s {
+  stroke: #d2151a;
+  stroke-width: 1.6;
+}
+
+.sc-sec-dot { fill: #d2151a; }
+.sc-cap { fill: #1a1a1a; }
+
+// Günün ismi — zarif el yazısı
+#sc-day {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--fg-2);
+}
+
+// Odak / gizle tuşları
+.sc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--br);
+  border-radius: 50%;
+  background: var(--bg-2);
+  color: var(--fg-2);
+  cursor: pointer;
+  transition: color 140ms, border-color 140ms, background 140ms;
+
+  &:hover {
+    color: var(--cardinal);
+    border-color: var(--cardinal);
+  }
+
+  &.sc-active {
+    color: #fff;
+    background: var(--sage);
+    border-color: var(--sage);
+  }
+}
+
+// Native tooltip (title) + ince gecikmeli ipucu
+.sc-btn[title] { position: relative; }
+
+// ─── Odak modu: kenar sütunları soluklaşır ───────
+
+body.sc-focus-mode .left.sidebar,
+body.sc-focus-mode .right.sidebar {
+  opacity: 0.12;
+  transition: opacity 200ms;
+}
+
+body.sc-focus-mode .left.sidebar:hover,
+body.sc-focus-mode .right.sidebar:hover {
+  opacity: 1;
+}
+
+// ─── Menüleri gizle: tam ekran yazı ──────────────
+
+body.sc-menus-hidden .left.sidebar,
+body.sc-menus-hidden .right.sidebar {
+  display: none !important;
+}
+
+body.sc-menus-hidden > #quartz-root .page > #quartz-body,
+body.sc-menus-hidden #quartz-body {
+  grid-template-columns: auto !important;
+  grid-template-areas:
+    "grid-header"
+    "grid-center"
+    "grid-footer" !important;
+}
+
 // ─── Mobile ──────────────────────────────────────
 
 @media (max-width: 768px) {
@@ -814,6 +1089,11 @@ article > p:first-of-type {
   article { padding: 1.75rem 1.25rem; }
   h1, .article-title { font-size: 2.1rem !important; }
   h2 { font-size: 1.65rem; }
+
+  // Mobilde sabit araç çubuğu ve progress çubuğunu gizle
+  #sc-tools { display: none; }
+  #sc-progress { display: none; }
+  .site-header-title { font-size: 1.9rem; }
 }
 
 @media (max-width: 480px) {

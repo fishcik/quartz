@@ -72,7 +72,7 @@ plugins:
     order: 50
     layout:
       position: right
-      priority: 30
+      priority: 8
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -125,6 +125,8 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
+    options:
+      title: İçerik
     layout:
       position: left
       priority: 50
