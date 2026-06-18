@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Cormorant Garamond
-      body: Lora
+      header: Playfair Display
+      body: Source Serif 4
       code: JetBrains Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#f9f8f6"
+        lightgray: "#ece8e1"
+        gray: "#b5aea2"
+        darkgray: "#4a433a"
+        dark: "#2b2826"
+        secondary: "#6b4a2f"
+        tertiary: "#8a6240"
+        highlight: rgba(107, 74, 47, 0.08)
+        textHighlight: "#d9b96a55"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#1a1712"
+        lightgray: "#2a2620"
+        gray: "#5a5346"
+        darkgray: "#d8cfc0"
+        dark: "#f3ece0"
+        secondary: "#c79a6d"
+        tertiary: "#b07a4a"
+        highlight: rgba(199, 154, 109, 0.10)
+        textHighlight: "#c79a6d55"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -136,11 +136,8 @@ plugins:
   - source: github:quartz-community/search
     enabled: true
     layout:
-      position: left
-      priority: 20
-      group: toolbar
-      groupOptions:
-        grow: true
+      position: beforeBody
+      priority: 1
   - source: github:quartz-community/backlinks
     enabled: true
     layout:
@@ -156,6 +153,7 @@ plugins:
     layout:
       position: beforeBody
       priority: 20
+      condition: not-index
   - source: github:quartz-community/tag-list
     enabled: false
     layout:
@@ -195,13 +193,27 @@ plugins:
   - source: github:quartz-community/footer
     enabled: true
     options:
-      links:
-        sayko.ch: https://sayko.ch
+      links: {}
   - source: github:quartz-community/recent-notes
     enabled: true
+    options:
+      limit: 5
+      showTags: false
     layout:
       position: right
       priority: 45
+      condition: not-index
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      title: Son Eklenenler
+      limit: 5
+      linkToMore: tags
+      showTags: false
+    layout:
+      position: afterBody
+      priority: 20
+      condition: index
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -269,11 +281,13 @@ layout:
     folder:
       exclude:
         - reader-mode
+        - content-meta
       positions:
         right: []
     tag:
       exclude:
         - reader-mode
+        - content-meta
       positions:
         right: []
     canvas: {}

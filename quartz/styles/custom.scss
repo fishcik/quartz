@@ -1,61 +1,61 @@
 // ================================================
 //  sayko.ch — Arşiv
-//  Cream default, koyu bordo accent
-//  Retrofuturistic editorial
+//  Sepia default, sıcak kahve accent
+//  Retro academic / editorial
 // ================================================
 
-// ─── Light mode (default / cream) ───────────────
+// ─── Light mode (default / sepia) ───────────────
 
 :root,
 html,
 html:not([saved-theme="dark"]),
 [saved-theme="light"] {
-  --light:         #f5f0e6 !important;
-  --lightgray:     #ece4d4 !important;
-  --gray:          #b0a48e !important;
-  --darkgray:      #1e1812 !important;
-  --dark:          #160f0a !important;
-  --secondary:     #7a1e2e !important;
-  --tertiary:      #9a2a3e !important;
-  --highlight:     rgba(122, 30, 46, 0.08) !important;
-  --textHighlight: rgba(122, 30, 46, 0.18) !important;
+  --light:         #f9f8f6 !important;
+  --lightgray:     #ece8e1 !important;
+  --gray:          #b5aea2 !important;
+  --darkgray:      #4a433a !important;
+  --dark:          #2b2826 !important;
+  --secondary:     #6b4a2f !important;
+  --tertiary:      #8a6240 !important;
+  --highlight:     rgba(107, 74, 47, 0.08) !important;
+  --textHighlight: rgba(217, 185, 106, 0.33) !important;
 
-  --bg:      #f5f0e6;
-  --bg-2:    #ece4d4;
-  --bg-3:    #e4dac8;
-  --fg:      #1e1812;
-  --fg-2:    #7a6b58;
-  --fg-3:    #b0a08a;
-  --bordo:   #7a1e2e;
-  --bordo-h: #9a2a3e;
-  --bordo-d: rgba(122, 30, 46, 0.12);
-  --br:      #ddd4c0;
+  --bg:      #f9f8f6;
+  --bg-2:    #f2efe9;
+  --bg-3:    #ebe6dd;
+  --fg:      #2b2826;
+  --fg-2:    #6b6155;
+  --fg-3:    #a89e8f;
+  --bordo:   #6b4a2f;
+  --bordo-h: #8a6240;
+  --bordo-d: rgba(107, 74, 47, 0.10);
+  --br:      #e2dccf;
 }
 
-// ─── Dark mode ───────────────────────────────────
+// ─── Dark mode (warm sepia dark) ─────────────────
 
 html[saved-theme="dark"],
 [saved-theme="dark"] {
-  --light:         #1a1510 !important;
-  --lightgray:     #231e17 !important;
-  --gray:          #5a5040 !important;
-  --darkgray:      #ede3cf !important;
-  --dark:          #f5ede0 !important;
-  --secondary:     #c44058 !important;
-  --tertiary:      #d45068 !important;
-  --highlight:     rgba(196, 64, 88, 0.10) !important;
-  --textHighlight: rgba(196, 64, 88, 0.20) !important;
+  --light:         #1a1712 !important;
+  --lightgray:     #2a2620 !important;
+  --gray:          #5a5346 !important;
+  --darkgray:      #d8cfc0 !important;
+  --dark:          #f3ece0 !important;
+  --secondary:     #c79a6d !important;
+  --tertiary:      #b07a4a !important;
+  --highlight:     rgba(199, 154, 109, 0.10) !important;
+  --textHighlight: rgba(199, 154, 109, 0.20) !important;
 
-  --bg:      #1a1510;
-  --bg-2:    #231e17;
-  --bg-3:    #2c2620;
-  --fg:      #ede3cf;
-  --fg-2:    #9a8e78;
-  --fg-3:    #5a5040;
-  --bordo:   #c44058;
-  --bordo-h: #d45068;
-  --bordo-d: rgba(196, 64, 88, 0.12);
-  --br:      #2c2620;
+  --bg:      #1a1712;
+  --bg-2:    #221e18;
+  --bg-3:    #2a2620;
+  --fg:      #f3ece0;
+  --fg-2:    #b8ad9a;
+  --fg-3:    #6a6051;
+  --bordo:   #c79a6d;
+  --bordo-h: #d9b083;
+  --bordo-d: rgba(199, 154, 109, 0.12);
+  --br:      #2f2a22;
 }
 
 // ─── Base ────────────────────────────────────────
@@ -73,7 +73,7 @@ html {
 body {
   background-color: var(--bg) !important;
   color: var(--fg) !important;
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   line-height: 1.8;
 }
 
@@ -101,7 +101,7 @@ main {
 // ─── Typography ──────────────────────────────────
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
   color: var(--dark) !important;
   font-style: normal !important;
   line-height: 1.2;
@@ -128,7 +128,7 @@ h3 {
 }
 
 h4, h5, h6 {
-  font-family: 'Lora', serif !important;
+  font-family: 'Source Serif 4', serif !important;
   font-size: 0.72rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -138,7 +138,7 @@ h4, h5, h6 {
 }
 
 p {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   color: var(--fg) !important;
   font-size: 1rem;
   margin-bottom: 1.4rem;
@@ -155,7 +155,7 @@ a {
 
 a:hover {
   color: var(--bordo-h) !important;
-  border-bottom-color: rgba(122, 30, 46, 0.35);
+  border-bottom-color: var(--bordo);
 }
 
 [saved-theme="dark"] a,
@@ -164,7 +164,7 @@ html[saved-theme="dark"] a {
 }
 
 article a {
-  border-bottom: 1px solid rgba(122, 30, 46, 0.3);
+  border-bottom: 1px solid var(--bordo-d);
 }
 
 article a:hover {
@@ -189,7 +189,7 @@ aside {
 // ─── Site slogan (rotating, injected via JS) ─────
 
 .site-slogan {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 0.7rem;
   font-style: italic;
   color: var(--fg-3);
@@ -207,7 +207,7 @@ aside {
 h1.page-title,
 a.page-title,
 div.page-title {
-  font-family: 'Cormorant Garamond', serif !important;
+  font-family: 'Playfair Display', serif !important;
   font-size: 1.05rem !important;
   font-weight: 400 !important;
   font-style: normal !important;
@@ -235,7 +235,7 @@ a.page-title:hover {
 summary,
 summary span,
 details > summary {
-  font-family: 'Lora', serif !important;
+  font-family: 'Source Serif 4', serif !important;
   font-size: 0.82rem !important;
   font-weight: 400 !important;
   letter-spacing: 0.01em !important;
@@ -252,7 +252,7 @@ summary:hover span {
 
 .file a,
 li.file a {
-  font-family: 'Lora', serif !important;
+  font-family: 'Source Serif 4', serif !important;
   font-size: 0.82rem !important;
   font-weight: 400 !important;
   text-transform: none !important;
@@ -274,7 +274,43 @@ li.file a:hover {
   color: var(--bordo) !important;
 }
 
-// ─── Search ──────────────────────────────────────
+// ─── Search (üst-orta, sabit) ────────────────────
+
+.search {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 900;
+  margin: 0 auto 2rem;
+  max-width: 74ch;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search .search-button {
+  width: 100%;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--bg-2) !important;
+  border: 1px solid var(--br) !important;
+  border-radius: 4px;
+  padding: 0.55rem 1rem;
+  color: var(--fg-2) !important;
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.04em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 140ms, box-shadow 140ms, color 140ms;
+
+  &:hover {
+    border-color: var(--bordo) !important;
+    color: var(--fg) !important;
+    box-shadow: 0 2px 8px var(--bordo-d);
+  }
+
+  & p { margin: 0 !important; }
+  & svg { color: var(--fg-3); }
+}
 
 input,
 input[type="text"],
@@ -282,7 +318,7 @@ input[type="text"],
   background-color: var(--bg-2) !important;
   border: 1px solid var(--br) !important;
   color: var(--fg) !important;
-  font-family: 'Lora', serif !important;
+  font-family: 'Source Serif 4', serif !important;
   font-size: 0.85rem !important;
   border-radius: 2px;
   transition: border-color 140ms, box-shadow 140ms;
@@ -315,7 +351,7 @@ article {
 
 .article-title,
 h1.article-title {
-  font-family: 'Cormorant Garamond', serif !important;
+  font-family: 'Playfair Display', serif !important;
   font-size: 2.8rem !important;
   font-weight: 300 !important;
   font-style: normal !important;
@@ -329,7 +365,7 @@ h1.article-title {
 
 .content-meta,
 p.content-meta {
-  font-family: 'Lora', serif !important;
+  font-family: 'Source Serif 4', serif !important;
   font-size: 0.72rem !important;
   color: var(--fg-3) !important;
   letter-spacing: 0.07em;
@@ -344,7 +380,7 @@ p.content-meta {
 .breadcrumb-container,
 nav.breadcrumb {
   font-size: 0.74rem;
-  font-family: 'Lora', serif;
+  font-family: 'Source Serif 4', serif;
 
   a, span {
     color: var(--fg-3) !important;
@@ -429,7 +465,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  font-family: 'Lora', serif;
+  font-family: 'Source Serif 4', serif;
   margin: 2rem 0;
 }
 
@@ -507,7 +543,7 @@ a.internal.tag-link,
   border-top: 1px solid var(--br) !important;
 
   h3, h4 {
-    font-family: 'Lora', serif !important;
+    font-family: 'Source Serif 4', serif !important;
     font-size: 0.68rem !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -625,7 +661,7 @@ article figure {
   }
 }
 
-// ─── Footer ──────────────────────────────────────
+// ─── Footer (sade: C.Ç. © 2026) ──────────────────
 
 footer,
 .page-footer {
@@ -633,13 +669,26 @@ footer,
   background: var(--bg) !important;
   color: var(--fg-3) !important;
   font-size: 0.72rem;
+  text-align: center;
+}
 
-  a {
-    color: var(--fg-3) !important;
-    border-bottom: none !important;
+// Quartz varsayılan footer içeriğini gizle, kendi imzamızı koy
+footer > p,
+footer > ul,
+.page-footer > p,
+.page-footer > ul {
+  display: none !important;
+}
 
-    &:hover { color: var(--bordo) !important; }
-  }
+footer::after,
+.page-footer::after {
+  content: "C.Ç. © 2026";
+  display: block;
+  color: var(--fg-3);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 0;
 }
 
 // ─── Scrollbar ───────────────────────────────────
@@ -655,7 +704,7 @@ footer,
 // ─── Selection ───────────────────────────────────
 
 ::selection {
-  background: rgba(122, 30, 46, 0.18);
+  background: var(--textHighlight);
   color: var(--fg);
 }
 
@@ -682,6 +731,80 @@ h1.article-title::after {
 
 article {
   animation: fadeUp 0.28s ease both;
+}
+
+// ─── Okunabilirlik (klasik kitap formu) ──────────
+
+article {
+  font-size: 1.02rem;
+}
+
+article p,
+article li {
+  line-height: 1.85;
+}
+
+article p {
+  margin-bottom: 1.55rem;
+}
+
+article ul,
+article ol {
+  margin-bottom: 1.55rem;
+  padding-left: 1.4rem;
+}
+
+article li {
+  margin-bottom: 0.4rem;
+}
+
+// İlk paragraf — kitap girişi havası
+article > p:first-of-type {
+  margin-top: 1.25rem;
+}
+
+// ─── Son Eklenenler (anasayfa merkez) ────────────
+
+.recent-notes {
+  margin: 3rem auto 0;
+  max-width: 74ch;
+
+  & > h3 {
+    font-family: 'Source Serif 4', serif !important;
+    font-size: 0.72rem !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--fg-3) !important;
+    border-bottom: 1px solid var(--br);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .recent-ul { list-style: none; padding: 0; margin: 0; }
+
+  .recent-li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--br);
+
+    .desc h3 {
+      margin: 0;
+      font-size: 1.15rem !important;
+      font-style: italic !important;
+      border: none;
+    }
+
+    .meta {
+      font-size: 0.68rem;
+      color: var(--fg-3);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 0.2rem 0 0;
+    }
+
+    a { border-bottom: none !important; }
+  }
 }
 
 // ─── Mobile ──────────────────────────────────────
