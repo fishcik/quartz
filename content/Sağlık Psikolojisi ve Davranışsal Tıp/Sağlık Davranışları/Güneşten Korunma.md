@@ -40,7 +40,7 @@
 ***Halk vs. Bilim***
 
 *"Bulutlu havada güneş çarpmaz yaa, UV yok."*
-**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.
+**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**
 
 -
 
