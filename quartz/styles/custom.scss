@@ -324,49 +324,62 @@ button.explorer-toggle h2 {
   margin: 0;
 }
 
-// Dropdown menüler açıldığında kırpılmasın / kaybolmasın
-.explorer,
+// Açıkken dropdown menüler kırpılmasın
+.explorer:not(.collapsed),
 .explorer-content,
 .explorer ul {
   overflow: visible !important;
   max-height: none !important;
 }
 
+// ── BUG 1: Explorer KAPALI iken ders listesi tamamen gizli ──
+.explorer.collapsed .explorer-content,
+.explorer.collapsed::after {
+  display: none !important;
+}
+
 .explorer-content {
   margin-top: 0.15rem;
 }
 
-// ── 4a: Sol menü (Explorer) dikey boşlukları ~%50 sıkılaştır ──
+// ── BUG 2: Sol menüdeki ders isimleri arası boşluğu sıfırla ──
+// Gerçek class'lar: .explorer-ul, .nav-file-title, .folder-container, .folder-outer
 .sidebar.left {
   gap: 0.4rem;
 }
 
+.explorer-ul,
+.explorer-ul ul,
 .explorer ul,
 .explorer-content ul {
   margin: 0 !important;
-  padding-left: 0.6rem;
+  padding-left: 0.55rem !important;
 }
 
+.explorer-ul li,
 .explorer ul li,
 .explorer-content ul li {
   margin: 0 !important;
   padding: 0 !important;
 }
 
+.explorer-ul .nav-file-title,
+.explorer-ul .nav-folder-title,
+.explorer-ul .folder-container,
 .explorer .file a,
 .explorer li.file a {
-  padding: 0.06rem 0 !important;
-  line-height: 1.4;
-}
-
-.explorer .folder-title,
-.explorer summary {
-  padding: 0.1rem 0 !important;
+  padding: 0.05rem 0 !important;
   margin: 0 !important;
+  line-height: 1.35 !important;
 }
 
 .explorer .folder-outer,
+.explorer .folder-button,
+.explorer .folder-title,
+.explorer summary,
 .explorer details {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   margin: 0 !important;
 }
 
@@ -397,6 +410,24 @@ button.explorer-toggle h2 {
   width: 100%;
   display: flex;
   justify-content: center;
+  transition: all 200ms ease;
+}
+
+// ── BUG 3: Scroll'da arama kutusu küçülüp sol üste (bar olarak) iner ──
+body.sc-scrolled .search {
+  position: fixed;
+  top: 0.7rem;
+  left: 1rem;
+  width: 210px;
+  max-width: 210px;
+  margin: 0;
+  z-index: 950;
+}
+
+body.sc-scrolled .search .search-button {
+  padding: 0.34rem 0.7rem;
+  font-size: 0.72rem !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
 }
 
 .search .search-button {
@@ -804,9 +835,8 @@ article figure {
 }
 
 // ─── Footer (tek imza: C.Ç. © 2026) ──────────────
-// NOT: .page-footer afterBody WRAPPER'ıdır (recent-notes vs. içerir);
-// gerçek footer <footer> elemanıdır. ::after SADECE <footer>'a verilir,
-// yoksa imza iki kez yazılır (eski hata buydu).
+// BUG 7: Footer artık yerel plugin (local-plugins/footer) ile gerçek
+// "C.Ç. © 2026" metnini DOM'a basıyor. Quartz linki tamamen kaldırıldı.
 
 footer {
   border-top: 1px solid var(--br) !important;
@@ -816,21 +846,13 @@ footer {
   text-align: center;
 }
 
-// Quartz varsayılan footer içeriğini (Quartz linki vs.) gizle
-footer > p,
-footer > ul {
-  display: none !important;
-}
-
-// Tek imza — açık modda cardinal kırmızı, koyu modda kırık beyaz
-footer::after {
-  content: "C.Ç. © 2026";
-  display: block;
+footer .sc-sign {
+  margin: 0;
+  padding: 0.5rem 0;
   color: var(--cardinal);
   font-family: 'Source Serif 4', serif;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
-  padding: 0.5rem 0;
 }
 
 // ─── Scrollbar ───────────────────────────────────
@@ -1076,12 +1098,12 @@ html[saved-theme="dark"] #sc-progress,
 
 #sc-tools {
   position: fixed;
-  top: 0.85rem;
-  right: 1rem;
+  top: 1rem;
+  right: 1.5rem;          // ── BUG 6: kenardan biraz boşluk, sola çekik
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.7rem;
 }
 
 // SBB Mondaine saati
@@ -1089,12 +1111,12 @@ html[saved-theme="dark"] #sc-progress,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.2rem;
 }
 
 #sc-clockface {
-  width: 52px;
-  height: 52px;
+  width: 68px;            // ── BUG 6: saat büyüdü (52 → 68px)
+  height: 68px;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.18));
 }
 
@@ -1127,13 +1149,18 @@ html[saved-theme="dark"] #sc-progress,
 .sc-sec-dot { fill: #d2151a; }
 .sc-cap { fill: #1a1a1a; }
 
-// Günün ismi — zarif el yazısı
+// ── BUG 6: Günün ismi — el yazısı (Cedarville Cursive), büyük ──
 #sc-day {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Cedarville Cursive', 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  font-weight: 400;
   line-height: 1;
-  color: var(--fg-2);
+  color: var(--fg);       // hafta içi: temaya göre (light'ta ~siyah)
+}
+
+// Hafta sonu (Cmt + Paz): cardinal kırmızı — her iki modda da kırmızı
+#sc-day.weekend {
+  color: #c1272d;
 }
 
 // ── 4c: Sol araç çubuğu tuşları (Genişlet + Fokus) — darkmode yanında ──

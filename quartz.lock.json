@@ -128,10 +128,8 @@
       "installedAt": "2026-05-24T15:36:16.992Z"
     },
     "footer": {
-      "source": "github:quartz-community/footer",
-      "resolved": "https://github.com/quartz-community/footer.git",
-      "commit": "9e3f6d734d886eac0d41841c4dc8862b377fcaf4",
-      "installedAt": "2026-05-25T15:27:47.250Z"
+      "source": "./local-plugins/footer",
+      "local": true
     },
     "github-flavored-markdown": {
       "source": "github:quartz-community/github-flavored-markdown",
