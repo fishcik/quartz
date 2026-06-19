@@ -37,8 +37,9 @@ html:not([saved-theme="dark"]),
   // Accent renkleri
   --sage:      #7d8c5c;   // soluk zeytin yeşili (aktif vurgular)
   --sage-d:    rgba(125, 140, 92, 0.14);
-  --cardinal:  #c1272d;   // cardinal kırmızı (SAYKO.ch, progress, imza)
-  --progress:  #c1272d;
+  --cardinal:  #c1272d;   // cardinal kırmızı (SAYKO.ch, imza)
+  --gold:      #b8893b;   // soft gold (hover vurguları)
+  --progress:  #c1272d;   // cardinal kırmızı SADECE progress bar'da
 }
 
 // ─── Dark mode (zifiri siyah + kırık beyaz) ──────
@@ -69,8 +70,9 @@ html[saved-theme="dark"],
   // Accent renkleri (dark)
   --sage:      #a7b585;   // dark'ta daha açık sage
   --sage-d:    rgba(167, 181, 133, 0.16);
-  --cardinal:  #ece7dd;   // dark'ta imza/progress kırık beyaz
-  --progress:  #ece7dd;
+  --cardinal:  #ece7dd;   // dark'ta imza kırık beyaz
+  --gold:      #d9b083;   // dark soft gold (hover vurguları)
+  --progress:  #c1272d;   // progress bar her iki modda da cardinal kırmızı
 }
 
 // ─── Base ────────────────────────────────────────
@@ -201,6 +203,26 @@ aside {
   border-left: 1px solid var(--br) !important;
 }
 
+// ── 7b: Sağ sütun iç scroll'lansın (sticky + sepia ince scrollbar) ──
+@media all and (min-width: 800px) {
+  .sidebar.right {
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bordo-d) transparent;
+
+    &::-webkit-scrollbar { width: 6px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb {
+      background: var(--br);
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb:hover { background: var(--bordo); }
+  }
+}
+
 // ─── Site slogan (rotating, injected via JS) ─────
 
 .site-slogan {
@@ -311,7 +333,41 @@ button.explorer-toggle h2 {
 }
 
 .explorer-content {
-  margin-top: 0.25rem;
+  margin-top: 0.15rem;
+}
+
+// ── 4a: Sol menü (Explorer) dikey boşlukları ~%50 sıkılaştır ──
+.sidebar.left {
+  gap: 0.4rem;
+}
+
+.explorer ul,
+.explorer-content ul {
+  margin: 0 !important;
+  padding-left: 0.6rem;
+}
+
+.explorer ul li,
+.explorer-content ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.explorer .file a,
+.explorer li.file a {
+  padding: 0.06rem 0 !important;
+  line-height: 1.4;
+}
+
+.explorer .folder-title,
+.explorer summary {
+  padding: 0.1rem 0 !important;
+  margin: 0 !important;
+}
+
+.explorer .folder-outer,
+.explorer details {
+  margin: 0 !important;
 }
 
 // Explorer'ın en altında ince ayırıcı + sabit "Müfredat" metni
@@ -903,6 +959,12 @@ article > p:first-of-type {
   max-width: 82ch;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--br);
+  // ── 5: ~150px scroll sonrası küçülüp viewport üstüne yapışır ──
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: var(--bg);
+  transition: all 200ms ease;
 }
 
 .site-header-title {
@@ -915,9 +977,10 @@ article > p:first-of-type {
   text-decoration: none !important;
   border: none !important;
   line-height: 1.1;
-  transition: opacity 140ms;
+  transition: color 160ms ease, font-size 200ms ease;
 
-  &:hover { opacity: 0.75; }
+  // ── 6: Hover SOFT GOLD (cardinal red DEĞİL) ──
+  &:hover { color: var(--gold) !important; opacity: 1; }
 }
 
 .site-header-slogan {
@@ -927,36 +990,86 @@ article > p:first-of-type {
   font-size: 0.82rem;
   color: var(--fg-3) !important;
   letter-spacing: 0.02em;
+  transition: opacity 180ms ease, max-height 200ms ease, margin 200ms ease;
+}
+
+// ── 5: Condensed (sticky) hâl — slogan gizlenir, başlık küçülür ──
+body.sc-scrolled .site-header {
+  padding: 0.5rem 0;
+  margin-bottom: 0.75rem;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--br);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+body.sc-scrolled .site-header-title {
+  font-size: 1.35rem;
+}
+
+body.sc-scrolled .site-header-slogan {
+  opacity: 0;
+  max-height: 0;
+  margin: 0 !important;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 // ─── "Bağlam ağı" tıklanabilir başlık ────────────
 
+// ── 7a: "Bağlam ağı" başlığı tıklanabilir — yerel grafiği aç/kapat ──
 .graph > h3.sc-graph-link {
   cursor: pointer;
   transition: color 140ms;
+  user-select: none;
 
-  &:hover { color: var(--sage) !important; }
+  &:hover { color: var(--gold) !important; }
 
   &::after {
-    content: " ↗";
+    content: " ▸";
     font-size: 0.7em;
     opacity: 0.6;
+    transition: transform 160ms ease;
   }
 }
 
-// ─── Dikey okuma ilerleme çubuğu (sol) ───────────
+// Varsayılan kapalı: grafik konteyneri gizli; başlık açınca görünür
+.graph.sc-graph-collapsed .graph-outer,
+.graph.sc-graph-collapsed #graph-container {
+  display: none;
+}
+
+.graph:not(.sc-graph-collapsed) > h3.sc-graph-link::after {
+  content: " ▾";
+}
+
+// Açık hâldeyken grafik ~%50 daha küçük (sağ sütun en altında)
+.graph:not(.sc-graph-collapsed) .graph-outer,
+.graph:not(.sc-graph-collapsed) #graph-container {
+  height: 180px;
+  max-height: 180px;
+}
+
+// ─── 2: Dikey okuma ilerleme çubuğu (sol kenar, cardinal kırmızı) ──
 
 #sc-progress {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 3px;
+  width: 4px;
   height: 0;
-  background: var(--progress);
-  z-index: 9998;
-  opacity: 0.55;
+  background: var(--progress) !important;
+  z-index: 9999;
+  opacity: 1;
   transition: height 80ms linear;
   pointer-events: none;
+}
+
+// Dark modda hafif soluk
+html[saved-theme="dark"] #sc-progress,
+[saved-theme="dark"] #sc-progress {
+  opacity: 0.85;
 }
 
 // ─── Sağ üst araç çubuğu (saat + tuşlar) ─────────
@@ -1023,63 +1136,66 @@ article > p:first-of-type {
   color: var(--fg-2);
 }
 
-// Odak / gizle tuşları
-.sc-btn {
+// ── 4c: Sol araç çubuğu tuşları (Genişlet + Fokus) — darkmode yanında ──
+.sc-toolbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   padding: 0;
-  border: 1px solid var(--br);
-  border-radius: 50%;
-  background: var(--bg-2);
-  color: var(--fg-2);
+  border: none;
+  background: none;
+  color: var(--darkgray);
   cursor: pointer;
-  transition: color 140ms, border-color 140ms, background 140ms;
+  transition: color 140ms, transform 140ms;
 
-  &:hover {
-    color: var(--cardinal);
-    border-color: var(--cardinal);
-  }
+  & svg { display: block; }
 
-  &.sc-active {
-    color: #fff;
-    background: var(--sage);
-    border-color: var(--sage);
-  }
+  &:hover { color: var(--gold); transform: scale(1.08); }
+
+  &.sc-active { color: var(--sage); }
 }
 
-// Native tooltip (title) + ince gecikmeli ipucu
-.sc-btn[title] { position: relative; }
+// ─── 4c / Fokus modu: kenar sütun child'ları soluklaşır + blur ──
 
-// ─── Odak modu: kenar sütunları soluklaşır ───────
-
-body.sc-focus-mode .left.sidebar,
-body.sc-focus-mode .right.sidebar {
-  opacity: 0.12;
-  transition: opacity 200ms;
+body.is-focus .left.sidebar > *,
+body.is-focus .right.sidebar > * {
+  opacity: 0.25;
+  filter: blur(2px);
+  transition: opacity 300ms ease, filter 300ms ease;
 }
 
-body.sc-focus-mode .left.sidebar:hover,
-body.sc-focus-mode .right.sidebar:hover {
+body.is-focus .left.sidebar:hover > *,
+body.is-focus .right.sidebar:hover > * {
   opacity: 1;
+  filter: none;
 }
 
-// ─── Menüleri gizle: tam ekran yazı ──────────────
+// Fokusta araç çubuğunun kendisi net kalsın (tekrar tıklanabilsin)
+body.is-focus .flex-component {
+  opacity: 1 !important;
+  filter: none !important;
+}
 
-body.sc-menus-hidden .left.sidebar,
-body.sc-menus-hidden .right.sidebar {
+// ─── 4c / Genişlet modu: yan sütunlar gizlenir, orta tam genişlik ──
+
+body.is-expanded .left.sidebar,
+body.is-expanded .right.sidebar {
   display: none !important;
 }
 
-body.sc-menus-hidden > #quartz-root .page > #quartz-body,
-body.sc-menus-hidden #quartz-body {
+body.is-expanded #quartz-body {
   grid-template-columns: auto !important;
   grid-template-areas:
     "grid-header"
     "grid-center"
     "grid-footer" !important;
+}
+
+body.is-expanded .center,
+body.is-expanded article {
+  max-width: 100% !important;
 }
 
 // ─── Mobile ──────────────────────────────────────

@@ -134,7 +134,7 @@ plugins:
     enabled: true
     layout:
       position: right
-      priority: 10
+      priority: 90
   - source: github:quartz-community/search
     enabled: true
     layout:
@@ -173,7 +173,7 @@ plugins:
       priority: 30
       group: toolbar
   - source: github:quartz-community/reader-mode
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 35
@@ -203,7 +203,7 @@ plugins:
       showTags: false
     layout:
       position: right
-      priority: 45
+      priority: 10
       condition: not-index
   - source: github:quartz-community/recent-notes
     enabled: true
