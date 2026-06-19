@@ -383,6 +383,19 @@ button.explorer-toggle h2 {
   margin: 0 !important;
 }
 
+// Task 1: Kapalı klasörler sıfır boşluk — jilet gibi alt alta
+.explorer .folder-outer {
+  overflow: hidden;
+}
+
+.explorer details:not([open]) > ul,
+.explorer details:not([open]) > .explorer-ul {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 // Explorer'ın en altında ince ayırıcı + sabit "Müfredat" metni
 .explorer::after {
   content: "Müfredat";
@@ -849,9 +862,11 @@ footer {
 footer .sc-sign {
   margin: 0;
   padding: 0.5rem 0;
-  color: var(--cardinal);
+  color: #c1272d !important;
   font-family: 'Source Serif 4', serif;
   font-size: 0.72rem;
+  font-weight: 700;
+  font-style: italic;
   letter-spacing: 0.08em;
 }
 
@@ -995,13 +1010,12 @@ article > p:first-of-type {
   font-size: 2.4rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: var(--cardinal) !important;
+  color: #c1272d !important;
   text-decoration: none !important;
   border: none !important;
   line-height: 1.1;
   transition: color 160ms ease, font-size 200ms ease;
 
-  // ── 6: Hover SOFT GOLD (cardinal red DEĞİL) ──
   &:hover { color: var(--gold) !important; opacity: 1; }
 }
 
@@ -1015,27 +1029,32 @@ article > p:first-of-type {
   transition: opacity 180ms ease, max-height 200ms ease, margin 200ms ease;
 }
 
-// ── 5: Condensed (sticky) hâl — slogan gizlenir, başlık küçülür ──
+// ── 5: Condensed hâl — SBB saatinin hemen üstüne, sağa fixed ──
 body.sc-scrolled .site-header {
-  padding: 0.5rem 0;
-  margin-bottom: 0.75rem;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--br);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: 0.3rem;
+  right: 1.5rem;
+  left: auto;
+  width: auto;
+  max-width: none;
+  text-align: right;
+  margin: 0;
+  padding: 0.15rem 0;
+  border-bottom: none;
+  background: transparent;
+  z-index: 9998;
+}
+
+body.sc-scrolled #sc-tools {
+  top: 2.2rem;
 }
 
 body.sc-scrolled .site-header-title {
-  font-size: 1.35rem;
+  font-size: 1.0rem;
 }
 
 body.sc-scrolled .site-header-slogan {
-  opacity: 0;
-  max-height: 0;
-  margin: 0 !important;
-  overflow: hidden;
-  pointer-events: none;
+  display: none;
 }
 
 // ─── "Bağlam ağı" tıklanabilir başlık ────────────
@@ -1153,14 +1172,14 @@ html[saved-theme="dark"] #sc-progress,
 #sc-day {
   font-family: 'Cedarville Cursive', 'Dancing Script', cursive;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 700;
+  font-style: italic;
   line-height: 1;
-  color: var(--fg);       // hafta içi: temaya göre (light'ta ~siyah)
+  color: #c1272d !important;
 }
 
-// Hafta sonu (Cmt + Paz): cardinal kırmızı — her iki modda da kırmızı
 #sc-day.weekend {
-  color: #c1272d;
+  color: #c1272d !important;
 }
 
 // ── 4c: Sol araç çubuğu tuşları (Genişlet + Fokus) — darkmode yanında ──
