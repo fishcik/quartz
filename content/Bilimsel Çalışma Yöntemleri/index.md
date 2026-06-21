@@ -1,0 +1,3 @@
+---
+title: Bilimsel Çalışma Yöntemleri
+---

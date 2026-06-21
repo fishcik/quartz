@@ -1,0 +1,3 @@
+---
+title: İstatistik 1
+---

@@ -1,3 +1,5 @@
+import fs from "fs"
+import path from "path"
 import { i18n } from "../i18n"
 import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
@@ -5,6 +7,45 @@ import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../../.quartz/plugins"
+
+// ── Müfredat verisi: ders adı + GERÇEK Quartz slug'ı + ASCII ikon dosyası ──
+// (Quartz slugify Türkçe karakterleri KORUR; İstatistik → i̇ + U+0307 combining)
+const SC_COURSES = [
+  { n: "01", name: "Bilimsel Çalışma Yöntemleri", slug: "bilimsel-çalışma-yöntemleri", icon: "bilimsel-calisma-yontemleri" },
+  { n: "02", name: "Biliş Psikolojisi 1", slug: "biliş-psikolojisi-1", icon: "bilis-psikolojisi-1" },
+  { n: "03", name: "Biyolojik Psikoloji 2", slug: "biyolojik-psikoloji-2", icon: "biyolojik-psikoloji-2" },
+  { n: "04", name: "Gelişim Psikolojisi 1", slug: "gelişim-psikolojisi-1", icon: "gelisim-psikolojisi-1" },
+  { n: "05", name: "Gelişim Psikolojisi 2", slug: "gelişim-psikolojisi-2", icon: "gelisim-psikolojisi-2" },
+  { n: "06", name: "İstatistik 1", slug: "i̇statistik-1", icon: "istatistik-1" },
+  { n: "07", name: "Klinik Psikoloji 1", slug: "klinik-psikoloji-1", icon: "klinik-psikoloji-1" },
+  { n: "08", name: "Klinik Psikoloji 2", slug: "klinik-psikoloji-2", icon: "klinik-psikoloji-2" },
+  { n: "09", name: "Sağlık Psikolojisi ve Davranışsal Tıp", slug: "sağlık-psikolojisi-ve-davranışsal-tıp", icon: "saglik-psikolojisi-ve-davranissal-tip" },
+  { n: "10", name: "Sosyal Psikoloji", slug: "sosyal-psikoloji", icon: "sosyal-psikoloji" },
+]
+
+function readSvg(rel: string): string {
+  try {
+    return fs
+      .readFileSync(path.join(process.cwd(), rel), "utf8")
+      .replace(/<\?xml[^>]*\?>/, "")
+      .trim()
+  } catch {
+    return ""
+  }
+}
+
+// Build-time: ikon + logo SVG'lerini oku, JS'e gömülecek veriyi hazırla
+const SC_LOGO_SVG = readSvg("quartz/static/logo-symbol.svg")
+const SC_GRID_DATA = SC_COURSES.map((c) => ({
+  n: c.n,
+  name: c.name,
+  slug: c.slug,
+  svg: readSvg(`quartz/static/icons/${c.icon}.svg`),
+}))
+// Slug → ders adı (eyebrow etiketleri için)
+const SC_COURSE_MAP: Record<string, string> = {}
+for (const c of SC_COURSES) SC_COURSE_MAP[c.slug] = c.name
+
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -62,7 +103,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -104,6 +145,9 @@ export default (() => {
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
         <script dangerouslySetInnerHTML={{__html: `(function(){
+var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
+var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
+var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar."];
 // ── 1: Saat + progress bar her sayfada (DOMContentLoaded + nav) yeniden kurulur ──
 function ensure(){
@@ -141,26 +185,95 @@ function ensure(){
     window.__scScroll=1;
   }
 }
+function setupStickyTitle(isHome){
+  // ── Görev 2.4: Scroll'da yazı başlığı üstte sticky bar olur ──
+  var old=document.getElementById('sc-titlebar');
+  var h1=document.querySelector('article .article-title, .page-header .article-title');
+  if(isHome||!h1){if(old)old.remove();if(window.__scTitleObs){window.__scTitleObs.disconnect();window.__scTitleObs=null;}return;}
+  var bar=old;
+  if(!bar){bar=document.createElement('div');bar.id='sc-titlebar';bar.innerHTML='<span class="sc-titlebar-text"></span>';document.body.appendChild(bar);}
+  bar.querySelector('.sc-titlebar-text').textContent=(h1.textContent||'').trim();
+  bar.classList.remove('sc-show');
+  if(window.__scTitleObs){window.__scTitleObs.disconnect();}
+  window.__scTitleObs=new IntersectionObserver(function(es){es.forEach(function(e){bar.classList.toggle('sc-show',!e.isIntersecting&&e.boundingClientRect.top<0);});},{threshold:0});
+  window.__scTitleObs.observe(h1);
+}
 function perNav(){
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
-  // ── 5: Header: SAYKO.ch + dönüşümlü slogan (arama kutusunun üstüne) ──
+  var isHome=(document.body.getAttribute('data-slug')==='index');
+  // ── Görev 1.6: Header — ψ logo + SAYKO.CH (slogan arama kutusunun üstünde) ──
   var ph=document.querySelector('.page-header');
-  if(ph&&!ph.querySelector('.site-header')){var sh=document.createElement('div');sh.className='site-header';sh.innerHTML='<a class="site-header-title" href="/">SAYKO.ch</a><p class="site-header-slogan"></p>';sh.querySelector('.site-header-slogan').textContent=slogan;ph.insertAdjacentElement('afterbegin',sh);}
-  // ── BUG 1: Explorer ("İçerik") varsayılan KAPALI; başlığa tıklayınca açılır ──
-  // (Quartz'ın kendi .explorer-toggle düğmesi .collapsed sınıfını toggle eder.)
-  var ex=document.querySelector('.explorer');
-  if(ex&&!ex.getAttribute('data-sc-ex')){ex.setAttribute('data-sc-ex','1');ex.classList.add('collapsed');ex.setAttribute('aria-expanded','false');}
+  if(ph&&!ph.querySelector('.site-header')){
+    var sh=document.createElement('div');sh.className='site-header';
+    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word">SAYKO<span class="sh-tld">.CH</span></span></a><p class="site-header-slogan"></p>';
+    sh.querySelector('.site-header-slogan').textContent=slogan;
+    ph.insertAdjacentElement('afterbegin',sh);
+  }
+  // ── Görev 1.2/1.3: Anasayfa müfredat grid'i (10 ders kutusu) ──
+  if(isHome){
+    var center=document.querySelector('.center');
+    if(center&&!center.querySelector('.curriculum-grid')){
+      var grid=document.createElement('nav');grid.className='curriculum-grid';grid.setAttribute('aria-label','Müfredat');
+      var hh='';
+      for(var i=0;i<SC_GRID.length;i++){var c=SC_GRID[i];
+        hh+='<a class="cg-cell" href="'+c.slug+'/"><span class="cg-num">'+c.n+'</span><span class="cg-icon">'+c.svg+'</span><span class="cg-name">'+c.name+'</span></a>';
+      }
+      grid.innerHTML=hh;
+      var art=center.querySelector('article');
+      if(art){center.insertBefore(grid,art);}else{center.appendChild(grid);}
+    }
+  }
+  // ── Son yazı listelerinden ders FOLDER-INDEX sayfalarını ve kökü çıkar ──
+  // (Yeni eklenen 10 ders index.md bugünün tarihiyle listeyi domine ediyordu.)
+  document.querySelectorAll('.recent-notes .recent-li').forEach(function(li){
+    var a=li.querySelector('.desc h3 a');if(!a)return;
+    var t=(a.textContent||'').trim().toLowerCase();
+    var np=decodeURIComponent((a.getAttribute('href')||'')).replace(/^(\\.\\/|\\.\\.\\/)+/,'').replace(/\\/+$/,'');
+    // np içinde '/' yoksa üst-düzey sayfa (folder index / kök) → ele
+    var topLevel=(np===''||np.indexOf('/')<0);
+    if(t==='sayko.ch'||np===''||np==='.'||/(^|\\/)index$/.test(np)||(topLevel&&SC_MAP[np])||topLevel){li.remove();}
+  });
+  // ── Görev 1.4a/1.4b: Son yazılara ders eyebrow etiketi + (feed'de) hiyerarşi ──
+  document.querySelectorAll('.recent-notes').forEach(function(rn){
+    var feed=!!rn.closest('.page-footer');
+    rn.querySelectorAll('.recent-li').forEach(function(li,idx){
+      if(li.getAttribute('data-sc-rp'))return;
+      li.setAttribute('data-sc-rp','1');
+      var a=li.querySelector('.desc h3 a')||li.querySelector('a');
+      var desc=li.querySelector('.desc')||li;
+      if(a){
+        var href=(a.getAttribute('href')||'').replace(/^\\.\\//,'').replace(/^\\//,'');
+        var seg=decodeURIComponent(href).split('/')[0];
+        var label=SC_MAP[seg];
+        if(label){var eb=document.createElement('span');eb.className='rp-eyebrow';eb.textContent=label;desc.insertBefore(eb,desc.firstChild);}
+      }
+      if(feed){li.classList.add('rp-'+(idx+1));}
+    });
+  });
+  // ── Görev 1.4b: Sol sütun "Son Yazılar" → kapalı <details> accordion ──
+  var lrn=document.querySelector('.left.sidebar .recent-notes');
+  if(lrn&&!lrn.getAttribute('data-sc-acc')){
+    lrn.setAttribute('data-sc-acc','1');
+    var ttl=lrn.querySelector('h3');var ttltxt=ttl?(ttl.textContent||'Son Yazılar'):'Son Yazılar';
+    var det=document.createElement('details');det.className='rp-accordion';
+    var sum=document.createElement('summary');sum.textContent=ttltxt;det.appendChild(sum);
+    if(ttl)ttl.remove();
+    while(lrn.firstChild){det.appendChild(lrn.firstChild);}
+    lrn.appendChild(det);
+  }
   // ── 7a: Graph başlığı tıklanınca yerel grafik açılır/kapanır (varsayılan kapalı) ──
   var g=document.querySelector('.graph');
   if(g&&!g.getAttribute('data-sc')){g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');var gt=g.querySelector('h3');if(gt){gt.classList.add('sc-graph-link');gt.addEventListener('click',function(){g.classList.toggle('sc-graph-collapsed');});}}
-  // ── 3: Anasayfa ("sayko.ch") "Son Eklenenler"den çıkar (kod kilidi) ──
-  document.querySelectorAll('.recent-notes .recent-li').forEach(function(li){
-    var a=li.querySelector('.desc h3 a');
-    if(!a)return;
-    var t=(a.textContent||'').trim().toLowerCase();
-    var href=(a.getAttribute('href')||'').replace(/\\/+$/,'');
-    if(t==='sayko.ch'||href===''||href==='.'||href==='/'||/(^|\\/)index$/.test(href)){li.remove();}
-  });
+  // ── Görev 2.3a: TOC varsayılan AÇIK (buton toggle'ı native çalışır) ──
+  var toc=document.querySelector('.left.sidebar .toc');
+  if(toc&&!toc.getAttribute('data-sc-toc')){
+    toc.setAttribute('data-sc-toc','1');
+    var th=toc.querySelector('.toc-header');var tc=toc.querySelector('.toc-content');
+    if(th)th.setAttribute('aria-expanded','true');
+    if(tc)tc.classList.remove('collapsed');
+  }
+  // ── Görev 2.4: sticky yazı başlığı ──
+  setupStickyTitle(isHome);
   if(window.__scProg)window.__scProg();
 }
 function init(){ensure();perNav();}

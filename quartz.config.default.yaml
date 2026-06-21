@@ -67,12 +67,14 @@ plugins:
   - source: github:quartz-community/github-flavored-markdown
     enabled: true
     order: 40
+  # Görev 1.7/2.3: TOC sol sütuna taşındı
   - source: github:quartz-community/table-of-contents
     enabled: true
     order: 50
     layout:
-      position: right
+      position: left
       priority: 8
+      condition: not-index
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -123,8 +125,9 @@ plugins:
     enabled: true
   - source: github:quartz-community/tag-page
     enabled: true
+  # Görev 1.1: Explorer kaldırıldı — müfredat grid'i + folder sayfaları yerini aldı
   - source: github:quartz-community/explorer
-    enabled: true
+    enabled: false
     options:
       title: İçerik
     layout:
@@ -166,12 +169,13 @@ plugins:
     layout:
       position: left
       priority: 10
+      condition: not-index
+  # Görev 1.7/2.1b: Darkmode sağ sütun en üstte (saatin yanı hizasında)
   - source: github:quartz-community/darkmode
     enabled: true
     layout:
-      position: left
-      priority: 30
-      group: toolbar
+      position: right
+      priority: 5
   - source: github:quartz-community/reader-mode
     enabled: false
     layout:
@@ -196,20 +200,24 @@ plugins:
     enabled: true
     options:
       links: {}
+  # Görev 1.4b: Sol sütun "Son Yazılar" accordion (JS ile <details>'e sarılır)
+  # limit yüksek: JS folder-index sayfalarını eler, gerçek yazılar yüzeye çıkar
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
-      limit: 5
+      title: Son Yazılar
+      limit: 18
       showTags: false
     layout:
-      position: right
-      priority: 10
+      position: left
+      priority: 40
       condition: not-index
+  # Görev 1.4a: Anasayfa son yazılar (JS folder-index'leri eler → ilk 3 hiyerarşi)
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
       title: Son Eklenenler
-      limit: 5
+      limit: 18
       linkToMore: tags
       showTags: false
     layout:
@@ -280,16 +288,19 @@ layout:
         left: []
         right: []
     content: {}
+    # Görev 1.7: folder (ders index) sağ sütun korunur (darkmode + graph);
+    # sol sütunda TOC ve backlinks gizli — sadece "Son Yazılar" accordion kalır
     folder:
       exclude:
         - reader-mode
         - content-meta
-      positions:
-        right: []
+        - table-of-contents
+        - backlinks
     tag:
       exclude:
         - reader-mode
         - content-meta
+        - table-of-contents
       positions:
         right: []
     canvas: {}
