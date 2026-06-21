@@ -38,6 +38,7 @@ html:not([saved-theme="dark"]),
   --sage:      #7d8c5c;   // soluk zeytin yeşili (aktif vurgular)
   --sage-d:    rgba(125, 140, 92, 0.14);
   --cardinal:  #c1272d;   // cardinal kırmızı (SAYKO.ch, imza)
+  --accent:    #c8102e;   // ── Müfredat tasarım sistemi: TEK kırmızı ──
   --gold:      #b8893b;   // soft gold (hover vurguları)
   --progress:  #c1272d;   // cardinal kırmızı SADECE progress bar'da
 }
@@ -71,6 +72,7 @@ html[saved-theme="dark"],
   --sage:      #a7b585;   // dark'ta daha açık sage
   --sage-d:    rgba(167, 181, 133, 0.16);
   --cardinal:  #ece7dd;   // dark'ta imza kırık beyaz
+  --accent:    #c8102e;   // ── Müfredat: TEK kırmızı her iki modda sabit ──
   --gold:      #d9b083;   // dark soft gold (hover vurguları)
   --progress:  #c1272d;   // progress bar her iki modda da cardinal kırmızı
 }
@@ -996,27 +998,53 @@ article > p:first-of-type {
   max-width: 82ch;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--br);
-  // ── 5: ~150px scroll sonrası küçülüp viewport üstüne yapışır ──
-  position: sticky;
-  top: 0;
-  z-index: 900;
+  position: relative;   // yazı sayfalarında scroll'la akıp gider; sticky bar devralır
   background: var(--bg);
   transition: all 200ms ease;
 }
 
+// Anasayfada header sticky kalır (üstte ortada büyük logo)
+body[data-slug="index"] .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+// ── Görev 1.6: ψ logo + SAYKO.CH ──
 .site-header-title {
-  display: inline-block;
-  font-family: 'Playfair Display', serif !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Bebas Neue', 'Playfair Display', serif !important;
   font-size: 2.4rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  color: #c1272d !important;
+  letter-spacing: 0.04em;
   text-decoration: none !important;
   border: none !important;
-  line-height: 1.1;
+  line-height: 1;
+  // ── Görev 2.2: light=koyu, dark=kırmızı; her ikisinde hover gold ──
+  color: var(--fg) !important;
   transition: color 160ms ease, font-size 200ms ease;
 
   &:hover { color: var(--gold) !important; opacity: 1; }
+
+  .sh-logo {
+    display: inline-flex;
+    align-items: center;
+    svg { width: 1.15em; height: 1.15em; display: block; }
+  }
+  .sh-word { color: inherit; }
+  .sh-tld { color: var(--accent); }   // ".CH" daima kırmızı
+}
+
+// Dark mode: SAYKO kırmızı (currentColor → ψ kolları da kırmızı), hover gold
+html[saved-theme="dark"] .site-header-title,
+[saved-theme="dark"] .site-header-title {
+  color: var(--accent) !important;
+}
+html[saved-theme="dark"] .site-header-title:hover,
+[saved-theme="dark"] .site-header-title:hover {
+  color: var(--gold) !important;
 }
 
 .site-header-slogan {
@@ -1029,8 +1057,8 @@ article > p:first-of-type {
   transition: opacity 180ms ease, max-height 200ms ease, margin 200ms ease;
 }
 
-// ── 5: Condensed hâl — SBB saatinin hemen üstüne, sağa fixed ──
-body.sc-scrolled .site-header {
+// ── Anasayfa: scroll'da SAYKO.ch küçülüp SBB saatinin hemen üstüne sağa gider ──
+body.sc-scrolled[data-slug="index"] .site-header {
   position: fixed;
   top: 0.3rem;
   right: 1.5rem;
@@ -1045,12 +1073,12 @@ body.sc-scrolled .site-header {
   z-index: 9998;
 }
 
-body.sc-scrolled #sc-tools {
+body.sc-scrolled[data-slug="index"] #sc-tools {
   top: 2.2rem;
 }
 
-body.sc-scrolled .site-header-title {
-  font-size: 1.0rem;
+body.sc-scrolled[data-slug="index"] .site-header-title {
+  font-size: 1.05rem;
 }
 
 body.sc-scrolled .site-header-slogan {
@@ -1168,18 +1196,20 @@ html[saved-theme="dark"] #sc-progress,
 .sc-sec-dot { fill: #d2151a; }
 .sc-cap { fill: #1a1a1a; }
 
-// ── BUG 6: Günün ismi — el yazısı (Cedarville Cursive), büyük ──
+// ── Görev 2.1a: Günün ismi — JetBrains Mono, düz (italik DEĞİL) ──
 #sc-day {
-  font-family: 'Cedarville Cursive', 'Dancing Script', cursive;
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.04em;
   line-height: 1;
-  color: #c1272d !important;
+  color: var(--fg);          // hafta içi: tema rengi
 }
 
+// Hafta sonu (Cmt + Paz): kırmızı (her iki modda)
 #sc-day.weekend {
-  color: #c1272d !important;
+  color: var(--accent) !important;
 }
 
 // ── 4c: Sol araç çubuğu tuşları (Genişlet + Fokus) — darkmode yanında ──
@@ -1244,6 +1274,238 @@ body.is-expanded article {
   max-width: 100% !important;
 }
 
+// ═══════════════════════════════════════════════════
+//  FAZ 1 — MÜFREDAT LAYOUT
+// ═══════════════════════════════════════════════════
+
+// ─── Görev 1.3/1.7: Anasayfa tek sütun (yan sütunlar gizli) ───
+body[data-slug="index"] {
+  .left.sidebar,
+  .right.sidebar { display: none !important; }
+
+  #quartz-body {
+    grid-template-columns: auto !important;
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-footer" !important;
+  }
+
+  .center,
+  article { max-width: 100% !important; }
+
+  // Boş anasayfa article + ayırıcı çizgi gizli (grid + son yazılar kalır)
+  .center > article,
+  .center > hr { display: none !important; }
+}
+
+// ─── Görev 1.2: Müfredat grid (5×2) ───
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  max-width: 900px;
+  margin: 2.5rem auto 3rem;
+}
+
+.cg-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 32px 20px 26px;
+  border: 1px solid var(--br) !important;
+  border-radius: 2px;
+  background: var(--bg-2);
+  color: var(--dark) !important;        // açık kutu → ikon outline koyu
+  text-decoration: none !important;
+  transition: box-shadow 160ms ease, transform 160ms ease, border-color 160ms ease;
+
+  &:hover {
+    box-shadow: 0 0 0 2px var(--accent);
+    border-color: var(--accent) !important;
+    transform: translateY(-2px);
+  }
+}
+
+// Koyu modda ders kutusu siyah, ikon outline beyaz
+html[saved-theme="dark"] .cg-cell,
+[saved-theme="dark"] .cg-cell {
+  background: #0a0a0a;
+  color: #ffffff !important;
+  border-color: #1e1e1e !important;
+}
+
+.cg-num {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-family: 'Bebas Neue', 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.cg-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg { width: 64px; height: 64px; display: block; }
+}
+
+.cg-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.4;
+  color: inherit;
+}
+
+// ─── Görev 1.4a: Anasayfa "Son Eklenenler" görsel hiyerarşi ───
+.rp-eyebrow {
+  display: block;
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.page-footer .recent-notes .recent-li.rp-1 .desc h3 { font-size: 1.6rem !important; }
+.page-footer .recent-notes .recent-li.rp-2 .desc h3 { font-size: 1.2rem !important; }
+.page-footer .recent-notes .recent-li.rp-3 .desc h3 { font-size: 1rem  !important; }
+// Yalnız ilk 3 yazı (hiyerarşi)
+.page-footer .recent-notes .recent-li:nth-child(n+4) { display: none; }
+
+// ─── Görev 1.4b: Sol sütun "Son Yazılar" accordion ───
+.rp-accordion {
+  border-top: 1px solid var(--br);
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+
+  > summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--fg-2);
+    user-select: none;
+
+    &::-webkit-details-marker { display: none; }
+    &::after { content: " +"; color: var(--fg-3); }
+  }
+  &[open] > summary::after { content: " −"; }
+  .recent-ul { margin-top: 0.6rem; }
+  // Görev 1.4b: en fazla 5 yazı göster
+  .recent-ul .recent-li:nth-child(n+6) { display: none; }
+}
+
+// ─── Görev 1.5: TopicGrid — folder sayfası konu pill'leri ───
+body[data-slug$="/index"] {
+  .page-listing > p {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--fg-3);
+    margin-bottom: 1.25rem;
+  }
+  .page-listing .section-ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .page-listing .section-li {
+    padding: 0;
+    border: none;
+    display: block;
+  }
+  .page-listing .section-li .meta,
+  .page-listing .section-li .tags { display: none; }
+  .page-listing .section-li .desc { margin: 0; }
+  .page-listing .section-li .desc h3 { margin: 0; font-size: inherit; border: none; }
+  .page-listing .section-li .desc h3 a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--br) !important;
+    border-radius: 4px;
+    background: var(--bg-2);
+    color: var(--fg) !important;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem;
+    font-style: normal;
+    transition: box-shadow 140ms, border-color 140ms, color 140ms;
+
+    &:hover {
+      box-shadow: 0 0 0 2px var(--accent);
+      border-color: var(--accent) !important;
+      color: var(--accent) !important;
+      padding-left: 18px;
+    }
+  }
+}
+
+// ─── Görev 2.4: Sticky yazı başlığı bar'ı ───
+#sc-titlebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  background: #0a0a0a;                 // light: siyah bar
+  z-index: 9000;
+  transform: translateY(-100%);
+  transition: transform 220ms ease;
+  pointer-events: none;
+}
+#sc-titlebar.sc-show { transform: translateY(0); }
+
+.sc-titlebar-text {
+  font-family: 'Source Serif 4', Georgia, serif;   // slogan fontu (italik)
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ece7dd;                     // krem yazı
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 140px);      // sağ üst saate çarpmasın
+}
+
+html[saved-theme="dark"] #sc-titlebar,
+[saved-theme="dark"] #sc-titlebar { background: #ece7dd; }   // dark: krem bar
+html[saved-theme="dark"] .sc-titlebar-text,
+[saved-theme="dark"] .sc-titlebar-text { color: #0a0a0a; }   // siyah yazı
+
+// ─── Görev 2.3: TOC sol sütunda — dikey ortalı (sticky) ───
+.left.sidebar .toc {
+  position: sticky;
+  top: 28vh;
+}
+.left.sidebar .toc .toc-header {
+  cursor: pointer;          // 2.3a: tıklanır başlık (aç/kapat native button)
+  user-select: none;
+}
+// 2.3a: açık durumda içerik görünür; collapsed durumda native gizlenir (toggle çalışır)
+.left.sidebar .toc .toc-content:not(.collapsed) {
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
 // ─── Mobile ──────────────────────────────────────
 
 @media (max-width: 768px) {
@@ -1256,6 +1518,15 @@ body.is-expanded article {
   #sc-tools { display: none; }
   #sc-progress { display: none; }
   .site-header-title { font-size: 1.9rem; }
+
+  // Görev: müfredat grid mobilde 2 sütun
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 1.5rem auto 2rem;
+  }
+  .cg-cell { padding: 24px 12px 20px; }
+  #sc-titlebar { height: 52px; }
 }
 
 @media (max-width: 480px) {
