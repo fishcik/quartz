@@ -87,6 +87,8 @@ html {
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
 }
 
 body {
@@ -94,6 +96,7 @@ body {
   color: var(--fg) !important;
   font-family: 'Source Serif 4', Georgia, serif;
   line-height: 1.8;
+  overscroll-behavior: none;
 }
 
 // Subtle grain texture — analog warmth
@@ -115,6 +118,13 @@ body::after {
 div#quartz-body,
 main {
   background-color: var(--bg) !important;
+}
+
+// ─── Column widths (sol 200px / sağ 200px / orta ~720-760px) ─────
+@media all and (min-width: 1200px) {
+  .page > #quartz-body {
+    grid-template-columns: 200px auto 200px !important;
+  }
 }
 
 // ─── Typography ──────────────────────────────────
@@ -205,8 +215,24 @@ aside {
   border-left: 1px solid var(--br) !important;
 }
 
-// ── 7b: Sağ sütun iç scroll'lansın (sticky + sepia ince scrollbar) ──
+// ── Sol ve sağ sütun sticky scroll ──
 @media all and (min-width: 800px) {
+  .sidebar.left {
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary) transparent;
+
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb {
+      background: var(--br);
+      border-radius: 2px;
+    }
+  }
+
   .sidebar.right {
     position: sticky;
     top: 2rem;
@@ -229,15 +255,16 @@ aside {
 
 .site-slogan {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 0.7rem;
+  font-size: 0.95rem;
   font-style: italic;
-  color: var(--fg-3);
-  letter-spacing: 0.03em;
-  margin-top: -0.75rem;
+  color: var(--darkgray);
+  letter-spacing: 0.01em;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   padding: 0;
   line-height: 1.5;
   opacity: 0.85;
+  text-align: center;
 }
 
 // ─── Site title ──────────────────────────────────
@@ -267,6 +294,11 @@ div.page-title {
 a.page-title:hover {
   opacity: 0.7;
 }
+
+// Görev 1.2b/c: Sol sütun "SAYKO.ch" page-title ve anasayfa article-title gizle
+.left.sidebar .page-title { display: none !important; }
+body[data-slug="index"] .article-title,
+body[data-slug="index"] h1.article-title { display: none !important; }
 
 // ─── Explorer / navigation ───────────────────────
 
@@ -414,60 +446,52 @@ button.explorer-toggle h2 {
   user-select: none;
 }
 
-// ─── Search (üst-orta, sabit) ────────────────────
+// ─── Search (araç çubuğunda, orijinal konumu gizli) ────────────────────
 
+// Orijinal konumda search gizlenir; perNav() toolbar'a taşır
 .search {
-  position: sticky;
-  top: 0.75rem;
-  z-index: 900;
-  margin: 0 auto 2rem;
-  max-width: 82ch;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  transition: all 200ms ease;
+  display: none;
 }
 
-// ── BUG 3: Scroll'da arama kutusu küçülüp sol üste (bar olarak) iner ──
-body.sc-scrolled .search {
-  position: fixed;
-  top: 0.7rem;
-  left: 1rem;
-  width: 210px;
-  max-width: 210px;
-  margin: 0;
-  z-index: 950;
+// Toolbar içinde search: kompakt ikon buton
+#sc-tools .search {
+  display: flex !important;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  z-index: auto !important;
 }
 
-body.sc-scrolled .search .search-button {
-  padding: 0.34rem 0.7rem;
-  font-size: 0.72rem !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
-}
-
-.search .search-button {
-  width: 100%;
-  justify-content: center;
-  gap: 0.6rem;
-  background: var(--bg-2) !important;
-  border: 1px solid var(--br) !important;
+#sc-tools .search .search-button {
+  width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  background: none !important;
+  border: none !important;
+  color: var(--tertiary) !important;
   border-radius: 4px;
-  padding: 0.55rem 1rem;
-  color: var(--fg-2) !important;
-  font-family: 'Source Serif 4', serif !important;
-  font-size: 0.8rem !important;
-  letter-spacing: 0.04em;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-  transition: border-color 140ms, box-shadow 140ms, color 140ms;
+  transition: color 150ms ease, background 150ms ease;
 
   &:hover {
-    border-color: var(--bordo) !important;
     color: var(--fg) !important;
-    box-shadow: 0 2px 8px var(--bordo-d);
+    background: rgba(0,0,0,0.06) !important;
   }
 
-  & p { margin: 0 !important; }
-  & svg { color: var(--fg-3); }
+  & p { display: none !important; }
+  & svg { width: 18px !important; height: 18px !important; color: inherit !important; }
+}
+
+[saved-theme="dark"] #sc-tools .search .search-button {
+  color: var(--darkgray) !important;
+  &:hover { background: rgba(255,255,255,0.08) !important; }
 }
 
 input,
@@ -1057,30 +1081,7 @@ html[saved-theme="dark"] .site-header-title:hover,
   transition: opacity 180ms ease, max-height 200ms ease, margin 200ms ease;
 }
 
-// ── Anasayfa: scroll'da SAYKO.ch küçülüp SBB saatinin hemen üstüne sağa gider ──
-body.sc-scrolled[data-slug="index"] .site-header {
-  position: fixed;
-  top: 0.3rem;
-  right: 1.5rem;
-  left: auto;
-  width: auto;
-  max-width: none;
-  text-align: right;
-  margin: 0;
-  padding: 0.15rem 0;
-  border-bottom: none;
-  background: transparent;
-  z-index: 9998;
-}
-
-body.sc-scrolled[data-slug="index"] #sc-tools {
-  top: 2.2rem;
-}
-
-body.sc-scrolled[data-slug="index"] .site-header-title {
-  font-size: 1.05rem;
-}
-
+// Scroll'da slogan gizlenir; anasayfa header yerinde kalır (toolbar zaten logo içeriyor)
 body.sc-scrolled .site-header-slogan {
   display: none;
 }
@@ -1141,17 +1142,63 @@ html[saved-theme="dark"] #sc-progress,
   opacity: 0.85;
 }
 
-// ─── Sağ üst araç çubuğu (saat + tuşlar) ─────────
+// ─── Sağ üst araç çubuğu (toolbar cluster) ────────
 
 #sc-tools {
   position: fixed;
   top: 1rem;
-  right: 1.5rem;          // ── BUG 6: kenardan biraz boşluk, sola çekik
+  right: 1.5rem;
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.5rem;
+  // Frosted glass
+  background: rgba(249, 248, 246, 0.90);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border-radius: 8px;
+  padding: 6px 10px;
+  border: 1px solid rgba(226, 220, 207, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
+
+html[saved-theme="dark"] #sc-tools,
+[saved-theme="dark"] #sc-tools {
+  background: rgba(0, 0, 0, 0.88);
+  border-color: rgba(30, 30, 30, 0.7);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+// Toolbar logo (küçük ψ + SAYKO.CH)
+.sc-logo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none !important;
+  border: none !important;
+  color: var(--fg) !important;
+  font-family: 'Bebas Neue', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  transition: color 150ms ease;
+
+  &:hover { color: var(--gold) !important; }
+
+  .sc-logo-icon {
+    display: inline-flex;
+    align-items: center;
+    svg { width: 22px; height: 22px; display: block; }
+  }
+
+  .sc-logo-word { color: inherit; }
+  .sc-logo-tld  { color: var(--accent); }
+}
+
+html[saved-theme="dark"] .sc-logo-btn,
+[saved-theme="dark"] .sc-logo-btn { color: var(--accent) !important; }
+html[saved-theme="dark"] .sc-logo-btn:hover,
+[saved-theme="dark"] .sc-logo-btn:hover { color: var(--gold) !important; }
 
 // SBB Mondaine saati
 #sc-clock {
@@ -1212,33 +1259,50 @@ html[saved-theme="dark"] #sc-progress,
   color: var(--accent) !important;
 }
 
-// ── 4c: Sol araç çubuğu tuşları (Genişlet + Fokus) — darkmode yanında ──
+// Toolbar tuşları: 36×36, off=sepya, on=kırmızı
 .sc-toolbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   padding: 0;
   border: none;
   background: none;
-  color: var(--darkgray);
+  color: var(--tertiary);
   cursor: pointer;
-  transition: color 140ms, transform 140ms;
+  border-radius: 4px;
+  transition: color 150ms ease, background 150ms ease;
+  flex-shrink: 0;
 
   & svg { display: block; }
 
-  &:hover { color: var(--gold); transform: scale(1.08); }
+  &:hover {
+    color: var(--fg);
+    background: rgba(0, 0, 0, 0.05);
+  }
 
-  &.sc-active { color: var(--sage); }
+  &.sc-active { color: var(--accent) !important; }
 }
 
-// ─── 4c / Fokus modu: kenar sütun child'ları soluklaşır + blur ──
+[saved-theme="dark"] .sc-toolbtn {
+  color: var(--fg-3);
+  &:hover { background: rgba(255,255,255,0.07); color: var(--fg); }
+}
+
+// Tema tuşu: dark modda "on" = kırmızı; light modda "off" = sepya
+:root[saved-theme="dark"] #sc-tools .sc-themebtn { color: var(--accent) !important; }
+
+// Quartz darkmode buton — sağ sidebar'dakini gizle (toolbar'daki kullanılıyor)
+.sidebar.right .darkmode { display: none !important; }
+.sidebar.left  .darkmode { display: none !important; }
+
+// ─── Fokus modu: kenar sütunlar belirgin blur ──
 
 body.is-focus .left.sidebar > *,
 body.is-focus .right.sidebar > * {
-  opacity: 0.25;
-  filter: blur(2px);
+  opacity: 0.3;
+  filter: blur(14px);
   transition: opacity 300ms ease, filter 300ms ease;
 }
 
@@ -1248,31 +1312,19 @@ body.is-focus .right.sidebar:hover > * {
   filter: none;
 }
 
-// Fokusta araç çubuğunun kendisi net kalsın (tekrar tıklanabilsin)
-body.is-focus .flex-component {
-  opacity: 1 !important;
-  filter: none !important;
-}
+// Toolbar ve progress bar fokusta her zaman net
+body.is-focus #sc-tools { opacity: 1 !important; filter: none !important; }
+body.is-focus .flex-component { opacity: 1 !important; filter: none !important; }
 
-// ─── 4c / Genişlet modu: yan sütunlar gizlenir, orta tam genişlik ──
-
+// Genişlet modu CSS korunuyor (gelecekte kullanılabilir)
 body.is-expanded .left.sidebar,
-body.is-expanded .right.sidebar {
-  display: none !important;
-}
-
+body.is-expanded .right.sidebar { display: none !important; }
 body.is-expanded #quartz-body {
   grid-template-columns: auto !important;
-  grid-template-areas:
-    "grid-header"
-    "grid-center"
-    "grid-footer" !important;
+  grid-template-areas: "grid-header" "grid-center" "grid-footer" !important;
 }
-
 body.is-expanded .center,
-body.is-expanded article {
-  max-width: 100% !important;
-}
+body.is-expanded article { max-width: 100% !important; }
 
 // ═══════════════════════════════════════════════════
 //  FAZ 1 — MÜFREDAT LAYOUT
@@ -1410,7 +1462,7 @@ html[saved-theme="dark"] .cg-cell,
   .recent-ul .recent-li:nth-child(n+6) { display: none; }
 }
 
-// ─── Görev 1.5: TopicGrid — folder sayfası konu pill'leri ───
+// ─── Görev 1.7: TopicGrid — folder sayfası konu kartları (müfredat grid'i gibi) ───
 body[data-slug$="/index"] {
   .page-listing > p {
     font-size: 0.72rem;
@@ -1420,54 +1472,72 @@ body[data-slug$="/index"] {
     margin-bottom: 1.25rem;
   }
   .page-listing .section-ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 14px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 2rem auto 3rem !important;
+    justify-content: start;
   }
   .page-listing .section-li {
-    padding: 0;
-    border: none;
-    display: block;
+    padding: 0 !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column;
   }
   .page-listing .section-li .meta,
-  .page-listing .section-li .tags { display: none; }
-  .page-listing .section-li .desc { margin: 0; }
-  .page-listing .section-li .desc h3 { margin: 0; font-size: inherit; border: none; }
+  .page-listing .section-li .tags { display: none !important; }
+  .page-listing .section-li .desc { margin: 0 !important; flex: 1; display: flex; }
+  .page-listing .section-li .desc h3 { margin: 0 !important; font-size: inherit !important; border: none !important; flex: 1; display: flex; }
   .page-listing .section-li .desc h3 a {
-    display: inline-block;
-    padding: 10px 18px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 130px !important;
+    padding: 20px 12px !important;
     border: 1px solid var(--br) !important;
-    border-radius: 4px;
+    border-radius: 2px !important;
     background: var(--bg-2);
     color: var(--fg) !important;
     font-family: 'Source Serif 4', serif;
-    font-size: 0.85rem;
-    font-style: normal;
-    transition: box-shadow 140ms, border-color 140ms, color 140ms;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-style: normal !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center !important;
+    line-height: 1.4;
+    transition: box-shadow 160ms ease, border-color 160ms ease, transform 160ms ease;
 
     &:hover {
-      box-shadow: 0 0 0 2px var(--accent);
+      box-shadow: 0 0 0 2px var(--accent) !important;
       border-color: var(--accent) !important;
-      color: var(--accent) !important;
-      padding-left: 18px;
+      transform: translateY(-2px);
+      padding-left: 12px !important;
     }
   }
 }
 
-// ─── Görev 2.4: Sticky yazı başlığı bar'ı ───
+html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a,
+[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a {
+  background: #0a0a0a;
+  color: #ece7dd !important;
+  border-color: #1e1e1e !important;
+}
+
+// ─── Sticky yazı başlığı bar'ı (sadece sol yarı) ───
 #sc-titlebar {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  height: 64px;
+  width: 50vw;                         // sadece sol yarı — toolbar sağda kalır
+  height: 60px;
   display: flex;
   align-items: center;
   padding: 0 1.5rem;
-  background: #0a0a0a;                 // light: siyah bar
+  background: #0a0a0a;
   z-index: 9000;
   transform: translateY(-100%);
   transition: transform 220ms ease;
@@ -1476,14 +1546,14 @@ body[data-slug$="/index"] {
 #sc-titlebar.sc-show { transform: translateY(0); }
 
 .sc-titlebar-text {
-  font-family: 'Source Serif 4', Georgia, serif;   // slogan fontu (italik)
+  font-family: 'Source Serif 4', Georgia, serif;
   font-style: italic;
-  font-size: 1.2rem;
-  color: #ece7dd;                     // krem yazı
+  font-size: 1.1rem;
+  color: #ece7dd;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100% - 140px);      // sağ üst saate çarpmasın
+  max-width: calc(100% - 2rem);
 }
 
 html[saved-theme="dark"] #sc-titlebar,
@@ -1491,20 +1561,31 @@ html[saved-theme="dark"] #sc-titlebar,
 html[saved-theme="dark"] .sc-titlebar-text,
 [saved-theme="dark"] .sc-titlebar-text { color: #0a0a0a; }   // siyah yazı
 
-// ─── Görev 2.3: TOC sol sütunda — dikey ortalı (sticky) ───
-.left.sidebar .toc {
-  position: sticky;
-  top: 28vh;
-}
-.left.sidebar .toc .toc-header {
-  cursor: pointer;          // 2.3a: tıklanır başlık (aç/kapat native button)
+// ─── TOC sağ sütunda, click-to-reveal (varsayılan kapalı) ───
+.sidebar .toc .toc-header {
+  cursor: pointer;
   user-select: none;
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--fg-2);
+  background: none;
+  border: none;
+  padding: 0.4rem 0;
+  width: 100%;
+  text-align: left;
+  transition: color 140ms;
+  &:hover { color: var(--fg); }
 }
-// 2.3a: açık durumda içerik görünür; collapsed durumda native gizlenir (toggle çalışır)
-.left.sidebar .toc .toc-content:not(.collapsed) {
-  max-height: 55vh;
+.sidebar .toc .toc-content {
+  max-height: 60vh;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bordo-d) transparent;
 }
+.sidebar .toc .toc-content.collapsed { display: none !important; }
 
 // ─── Mobile ──────────────────────────────────────
 
@@ -1519,14 +1600,19 @@ html[saved-theme="dark"] .sc-titlebar-text,
   #sc-progress { display: none; }
   .site-header-title { font-size: 1.9rem; }
 
-  // Görev: müfredat grid mobilde 2 sütun
+  // Müfredat grid mobilde 2 sütun
   .curriculum-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin: 1.5rem auto 2rem;
   }
   .cg-cell { padding: 24px 12px 20px; }
-  #sc-titlebar { height: 52px; }
+  #sc-titlebar { height: 50px; width: 100vw; }
+
+  // Konu grid mobilde 2 sütun
+  body[data-slug$="/index"] .page-listing .section-ul {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 480px) {

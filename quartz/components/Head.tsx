@@ -149,35 +149,41 @@ var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar."];
-// ── 1: Saat + progress bar her sayfada (DOMContentLoaded + nav) yeniden kurulur ──
 function ensure(){
-  // ── 2: Dikey okuma ilerleme çubuğu (sol kenar, aşağıdan yukarı dolar) ──
   var pb=document.getElementById('sc-progress');
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
   function prog(){var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;pb.style.height=(p*100)+'%';}
-  window.__scProg=prog; prog();
-  // ── Sağ üst sabit bar: Mondaine saat + Genişlet + Fokus tuşları ──
-  // (Tuşlar sol sütunda DEĞİL — çünkü Genişlet sol sütunu gizler ve
-  //  tuş kaybolup geri toggle edilemezdi. Sabit bar her zaman görünür.)
+  window.__scProg=prog;prog();
   var tb=document.getElementById('sc-tools');
   if(!tb){
-    tb=document.createElement('div'); tb.id='sc-tools';
-    var ticks=''; for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
-    tb.innerHTML='<div id="sc-clock"><svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><circle cx="50" cy="20" r="5" class="sc-sec-dot"/></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div></div>';
-    var be=document.createElement('button');
-    be.type='button'; be.className='sc-toolbtn sc-expand'; be.title='Genişlet: yan sütunları gizle, yazıyı tam genişliğe al'; be.setAttribute('aria-label','Genişlet');
-    be.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>';
-    be.addEventListener('click',function(){document.body.classList.toggle('is-expanded');this.classList.toggle('sc-active');if(window.__scProg)window.__scProg();});
-    var bf=document.createElement('button');
-    bf.type='button'; bf.className='sc-toolbtn sc-focusbtn'; bf.title='Fokus: yan sütunları soluklaştır, ortadaki yazıya odaklan'; bf.setAttribute('aria-label','Fokus');
+    tb=document.createElement('div');tb.id='sc-tools';
+    var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
+    var lg=document.createElement('a');lg.className='sc-logo-btn';lg.href='/';lg.setAttribute('aria-label','SAYKO.ch');
+    lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word">SAYKO<span class="sc-logo-tld">.CH</span></span>';
+    var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
+    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><circle cx="50" cy="20" r="5" class="sc-sec-dot"/></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn darkmode';bt.title='Tema değiştir';bt.setAttribute('aria-label','Tema');
+    bt.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus modu';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
-    tb.appendChild(be); tb.appendChild(bf);
+    tb.appendChild(lg);tb.appendChild(clkDiv);tb.appendChild(bt);tb.appendChild(bf);
     document.body.appendChild(tb);
   }
-  if(!window.__scTick){
-    function tick(){var d=new Date(),z=new Date(d.toLocaleString('en-US',{timeZone:'Europe/Zurich'})),s=z.getSeconds(),m=z.getMinutes(),h=z.getHours(),H=document.getElementById('sc-h'),M=document.getElementById('sc-m'),S=document.getElementById('sc-s');if(!H)return;H.setAttribute('transform','rotate('+((h%12)*30+m*0.5)+' 50 50)');M.setAttribute('transform','rotate('+(m*6+s*0.1)+' 50 50)');S.setAttribute('transform','rotate('+(s*6)+' 50 50)');var dn=document.getElementById('sc-day');if(dn){var wd=z.getDay();var day=d.toLocaleDateString('tr-TR',{weekday:'long',timeZone:'Europe/Zurich'});dn.textContent=day.charAt(0).toLocaleUpperCase('tr-TR')+day.slice(1);dn.classList.toggle('weekend',wd===0||wd===6);}}
-    tick(); window.__scTick=setInterval(tick,1000);
+  if(!window.__scRafRunning){
+    window.__scRafRunning=true;
+    var tick=function(){
+      var d=new Date();var z=new Date(d.toLocaleString('en-US',{timeZone:'Europe/Zurich'}));
+      var H=document.getElementById('sc-h'),M=document.getElementById('sc-m'),S=document.getElementById('sc-s');
+      if(H){var ms=z.getMilliseconds(),s=z.getSeconds(),m=z.getMinutes(),h=z.getHours();
+        H.setAttribute('transform','rotate('+((h%12)*30+m*0.5+s/120)+' 50 50)');
+        M.setAttribute('transform','rotate('+(m*6+s*0.1+ms/10000)+' 50 50)');
+        var secMs=s*1000+ms;var sa=secMs<58500?(secMs/58500)*360:360;
+        S.setAttribute('transform','rotate('+sa+' 50 50)');}
+      var dn=document.getElementById('sc-day');
+      if(dn){var wd=z.getDay();var day=d.toLocaleDateString('tr-TR',{weekday:'long',timeZone:'Europe/Zurich'});var nt=day.charAt(0).toLocaleUpperCase('tr-TR')+day.slice(1);if(dn.textContent!==nt)dn.textContent=nt;dn.classList.toggle('weekend',wd===0||wd===6);}
+      requestAnimationFrame(tick);
+    };tick();
   }
   if(!window.__scScroll){
     window.addEventListener('scroll',function(){if(window.__scProg)window.__scProg();document.body.classList.toggle('sc-scrolled',(window.scrollY||window.pageYOffset)>100);},{passive:true});
@@ -186,7 +192,6 @@ function ensure(){
   }
 }
 function setupStickyTitle(isHome){
-  // ── Görev 2.4: Scroll'da yazı başlığı üstte sticky bar olur ──
   var old=document.getElementById('sc-titlebar');
   var h1=document.querySelector('article .article-title, .page-header .article-title');
   if(isHome||!h1){if(old)old.remove();if(window.__scTitleObs){window.__scTitleObs.disconnect();window.__scTitleObs=null;}return;}
@@ -201,7 +206,6 @@ function setupStickyTitle(isHome){
 function perNav(){
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
   var isHome=(document.body.getAttribute('data-slug')==='index');
-  // ── Görev 1.6: Header — ψ logo + SAYKO.CH (slogan arama kutusunun üstünde) ──
   var ph=document.querySelector('.page-header');
   if(ph&&!ph.querySelector('.site-header')){
     var sh=document.createElement('div');sh.className='site-header';
@@ -209,70 +213,59 @@ function perNav(){
     sh.querySelector('.site-header-slogan').textContent=slogan;
     ph.insertAdjacentElement('afterbegin',sh);
   }
-  // ── Görev 1.2/1.3: Anasayfa müfredat grid'i (10 ders kutusu) ──
+  // Move search into toolbar (first slot)
+  var tb=document.getElementById('sc-tools');
+  if(tb){
+    var oldSrch=tb.querySelector('.search');if(oldSrch)oldSrch.remove();
+    var srchEl=document.querySelector('.search');if(srchEl)tb.insertBefore(srchEl,tb.firstChild);
+  }
   if(isHome){
     var center=document.querySelector('.center');
     if(center&&!center.querySelector('.curriculum-grid')){
       var grid=document.createElement('nav');grid.className='curriculum-grid';grid.setAttribute('aria-label','Müfredat');
-      var hh='';
-      for(var i=0;i<SC_GRID.length;i++){var c=SC_GRID[i];
-        hh+='<a class="cg-cell" href="'+c.slug+'/"><span class="cg-num">'+c.n+'</span><span class="cg-icon">'+c.svg+'</span><span class="cg-name">'+c.name+'</span></a>';
-      }
+      var hh='';for(var i=0;i<SC_GRID.length;i++){var c=SC_GRID[i];hh+='<a class="cg-cell" href="'+c.slug+'/"><span class="cg-num">'+c.n+'</span><span class="cg-icon">'+c.svg+'</span><span class="cg-name">'+c.name+'</span></a>';}
       grid.innerHTML=hh;
-      var art=center.querySelector('article');
-      if(art){center.insertBefore(grid,art);}else{center.appendChild(grid);}
+      var art=center.querySelector('article');if(art){center.insertBefore(grid,art);}else{center.appendChild(grid);}
     }
   }
-  // ── Son yazı listelerinden ders FOLDER-INDEX sayfalarını ve kökü çıkar ──
-  // (Yeni eklenen 10 ders index.md bugünün tarihiyle listeyi domine ediyordu.)
   document.querySelectorAll('.recent-notes .recent-li').forEach(function(li){
     var a=li.querySelector('.desc h3 a');if(!a)return;
     var t=(a.textContent||'').trim().toLowerCase();
     var np=decodeURIComponent((a.getAttribute('href')||'')).replace(/^(\\.\\/|\\.\\.\\/)+/,'').replace(/\\/+$/,'');
-    // np içinde '/' yoksa üst-düzey sayfa (folder index / kök) → ele
-    var topLevel=(np===''||np.indexOf('/')<0);
-    if(t==='sayko.ch'||np===''||np==='.'||/(^|\\/)index$/.test(np)||(topLevel&&SC_MAP[np])||topLevel){li.remove();}
+    var parts=np.split('/').filter(Boolean);
+    var topLevel=parts.length<=1;
+    var isCI=parts.length===2&&parts[1]==='index';
+    if(t==='sayko.ch'||np===''||np==='.'||/(^|\\/)index$/.test(np)||isCI||(topLevel&&(SC_MAP[parts[0]]||SC_MAP[np]))||topLevel){li.remove();}
   });
-  // ── Görev 1.4a/1.4b: Son yazılara ders eyebrow etiketi + (feed'de) hiyerarşi ──
   document.querySelectorAll('.recent-notes').forEach(function(rn){
     var feed=!!rn.closest('.page-footer');
     rn.querySelectorAll('.recent-li').forEach(function(li,idx){
-      if(li.getAttribute('data-sc-rp'))return;
-      li.setAttribute('data-sc-rp','1');
-      var a=li.querySelector('.desc h3 a')||li.querySelector('a');
-      var desc=li.querySelector('.desc')||li;
-      if(a){
-        var href=(a.getAttribute('href')||'').replace(/^\\.\\//,'').replace(/^\\//,'');
-        var seg=decodeURIComponent(href).split('/')[0];
-        var label=SC_MAP[seg];
-        if(label){var eb=document.createElement('span');eb.className='rp-eyebrow';eb.textContent=label;desc.insertBefore(eb,desc.firstChild);}
-      }
+      if(li.getAttribute('data-sc-rp'))return;li.setAttribute('data-sc-rp','1');
+      var a=li.querySelector('.desc h3 a')||li.querySelector('a');var desc=li.querySelector('.desc')||li;
+      if(a){var href=(a.getAttribute('href')||'').replace(/^\\.\\//,'').replace(/^\\//,'');var seg=decodeURIComponent(href).split('/')[0];var label=SC_MAP[seg];
+        if(label){var eb=document.createElement('span');eb.className='rp-eyebrow';eb.textContent=label;desc.insertBefore(eb,desc.firstChild);}}
       if(feed){li.classList.add('rp-'+(idx+1));}
     });
   });
-  // ── Görev 1.4b: Sol sütun "Son Yazılar" → kapalı <details> accordion ──
   var lrn=document.querySelector('.left.sidebar .recent-notes');
   if(lrn&&!lrn.getAttribute('data-sc-acc')){
     lrn.setAttribute('data-sc-acc','1');
     var ttl=lrn.querySelector('h3');var ttltxt=ttl?(ttl.textContent||'Son Yazılar'):'Son Yazılar';
     var det=document.createElement('details');det.className='rp-accordion';
     var sum=document.createElement('summary');sum.textContent=ttltxt;det.appendChild(sum);
-    if(ttl)ttl.remove();
-    while(lrn.firstChild){det.appendChild(lrn.firstChild);}
-    lrn.appendChild(det);
+    if(ttl)ttl.remove();while(lrn.firstChild){det.appendChild(lrn.firstChild);}lrn.appendChild(det);
   }
-  // ── 7a: Graph başlığı tıklanınca yerel grafik açılır/kapanır (varsayılan kapalı) ──
   var g=document.querySelector('.graph');
   if(g&&!g.getAttribute('data-sc')){g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');var gt=g.querySelector('h3');if(gt){gt.classList.add('sc-graph-link');gt.addEventListener('click',function(){g.classList.toggle('sc-graph-collapsed');});}}
-  // ── Görev 2.3a: TOC varsayılan AÇIK (buton toggle'ı native çalışır) ──
-  var toc=document.querySelector('.left.sidebar .toc');
+  // TOC: right sidebar, default CLOSED, auto-close on link click
+  var toc=document.querySelector('.sidebar .toc');
   if(toc&&!toc.getAttribute('data-sc-toc')){
     toc.setAttribute('data-sc-toc','1');
     var th=toc.querySelector('.toc-header');var tc=toc.querySelector('.toc-content');
-    if(th)th.setAttribute('aria-expanded','true');
-    if(tc)tc.classList.remove('collapsed');
+    if(th)th.setAttribute('aria-expanded','false');
+    if(tc){tc.classList.add('collapsed');
+      tc.querySelectorAll('a').forEach(function(lnk){lnk.addEventListener('click',function(){if(th)th.setAttribute('aria-expanded','false');if(tc)tc.classList.add('collapsed');});});}
   }
-  // ── Görev 2.4: sticky yazı başlığı ──
   setupStickyTitle(isHome);
   if(window.__scProg)window.__scProg();
 }
