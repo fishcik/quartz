@@ -136,6 +136,7 @@ export default (() => {
           </>
         )}
 
+        <link rel="icon" type="image/svg+xml" href={joinSegments(baseDir, "static/favicon.svg")} />
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
@@ -161,7 +162,13 @@ function ensure(){
     var lg=document.createElement('a');lg.className='sc-logo-btn';lg.href='/';lg.setAttribute('aria-label','SAYKO.ch');
     lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word">SAYKO<span class="sc-logo-tld">.CH</span></span>';
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
-    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><circle cx="50" cy="20" r="5" class="sc-sec-dot"/></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><text x="50" y="24" class="sc-sec-psi" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold">Ψ</text></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    // Change 3: saat kutusu altında açılır breadcrumb katmanları + chevron toggle
+    var chev=document.createElement('button');chev.type='button';chev.id='sc-clk-toggle';chev.className='sc-clk-chev';chev.setAttribute('aria-label','Breadcrumb aç/kapat');chev.setAttribute('aria-expanded','true');
+    chev.innerHTML='<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+    var bclayers=document.createElement('div');bclayers.id='sc-bclayers';bclayers.className='sc-bclayers';
+    chev.addEventListener('click',function(){var exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',exp?'false':'true');bclayers.classList.toggle('sc-collapsed',exp);});
+    clkDiv.appendChild(chev);clkDiv.appendChild(bclayers);
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema değiştir';bt.setAttribute('aria-label','Tema');
     bt.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
     bt.addEventListener('click',function(){var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
@@ -179,6 +186,9 @@ function ensure(){
     tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
     document.body.appendChild(tt);
   }
+  // ── Change 7: Vinyet overlay (::after yerine gerçek div — stacking sorunu çözümü) ──
+  var vig=document.getElementById('sc-vignette');
+  if(!vig){vig=document.createElement('div');vig.id='sc-vignette';vig.setAttribute('aria-hidden','true');document.body.appendChild(vig);}
   if(!window.__scRafRunning){
     window.__scRafRunning=true;
     var tick=function(){
@@ -205,45 +215,53 @@ function ensure(){
     window.__scScroll=1;
   }
 }
-// ── Görev 2: SBB-KUTUSU — sticky bar + breadcrumb birleşimi (sol üst) ──
-// Sayfa derinliğine göre içerik: anasayfa/ders-index gizli, konu = ders+konu,
-// yazı = (ders › konu) breadcrumb + büyük yazı başlığı.
-function setupSbbBox(){
-  var box=document.getElementById('sc-sbb');
+// ── Change 3: Saat kutusu breadcrumb katmanları (sayfa derinliğine göre) ──
+function updateBcLayers(){
+  var bl=document.getElementById('sc-bclayers');if(!bl)return;
+  bl.innerHTML='';
   var slug=document.body.getAttribute('data-slug')||'';
   var parts=slug.split('/').filter(Boolean);
   var isFolder=parts.length>0&&parts[parts.length-1]==='index';
   var real=isFolder?parts.slice(0,-1):parts;
-  // Anasayfa veya ders-index (tek seviye) → kutu gizli
-  if(slug===''||slug==='index'||real.length<=1){if(box)box.remove();return;}
-  if(!box){box=document.createElement('div');box.id='sc-sbb';document.body.insertBefore(box,document.body.firstChild);}
+  // Anasayfa + ders-index → katman yok
+  if(slug===''||slug==='index'||real.length===0)return;
+  if(isFolder&&real.length<=1)return;
+  // Katman 1: Ders adı (tıklanır)
   var dersName=SC_MAP[real[0]]||real[0];
-  var h1=document.querySelector('.center .article-title, article .article-title, article h1');
-  var leafTitle=h1?(h1.textContent||'').trim():'';
-  var bc=document.querySelector('.breadcrumb-container');
-  var anchors=bc?Array.prototype.slice.call(bc.querySelectorAll('a')):[];
-  var crumbEl=document.createElement('span');crumbEl.className='sbb-crumb';
-  var titleEl=document.createElement('span');titleEl.className='sbb-title';
-  if(isFolder){
-    // Konu sayfası: üstte ders adı, altta konu başlığı (folder h1)
-    crumbEl.textContent=dersName;
-    titleEl.textContent=leafTitle||real[real.length-1];
-  } else {
-    // Yazı sayfası: üstte "ders › konu", altta yazı başlığı
-    var konuName='';
-    if(real.length>=3){
-      // ders/konu/yazi → konu adı: slug segmentine karşılık gelen breadcrumb anchor'u bul
-      var konuSlug=real[real.length-2];konuName=konuSlug;
+  var l1=document.createElement('a');l1.className='sc-bclayer sc-bcl-course';l1.href='/'+real[0]+'/';l1.textContent=dersName;
+  bl.appendChild(l1);setTimeout(function(){l1.classList.add('sc-bcl-in');},30);
+  // Konu adı: folder ise leaf, yazı(depth>=3) ise sondan ikinci segment
+  var toSlug='';
+  if(isFolder&&real.length===2){toSlug=real[1];}
+  else if(!isFolder&&real.length>=3){toSlug=real[real.length-2];}
+  if(toSlug){
+    var toName=toSlug;
+    if(isFolder&&real.length===2){
+      // Konu folder sayfası → konu adı = bu sayfanın kendi h1 başlığı
+      var fh1=document.querySelector('.center .article-title, article .article-title');
+      if(fh1&&(fh1.textContent||'').trim())toName=(fh1.textContent||'').trim();
+    } else {
+      // Yazı sayfası → konu adını breadcrumb anchor'undan al (slug yerine)
+      var bc=document.querySelector('.breadcrumb-container');
+      var anchors=bc?Array.prototype.slice.call(bc.querySelectorAll('a')):[];
       for(var ai=0;ai<anchors.length;ai++){
         var hp=decodeURIComponent(anchors[ai].getAttribute('href')||'').replace(/\\/+$/,'').split('/').filter(Boolean);
         var last=hp[hp.length-1],prev=hp[hp.length-2];
-        if(last===konuSlug||(last==='index'&&prev===konuSlug)){konuName=(anchors[ai].textContent||'').trim();break;}
+        if(last===toSlug||(last==='index'&&prev===toSlug)){toName=(anchors[ai].textContent||'').trim();break;}
       }
     }
-    crumbEl.textContent=dersName+(konuName?' › '+konuName:'');
-    titleEl.textContent=leafTitle||real[real.length-1];
+    var l2=document.createElement('a');l2.className='sc-bclayer sc-bcl-topic';l2.href='/'+real[0]+'/'+toSlug+'/';l2.textContent=toName;
+    bl.appendChild(l2);setTimeout(function(){l2.classList.add('sc-bcl-in');},90);
   }
-  box.innerHTML='';box.appendChild(crumbEl);box.appendChild(titleEl);
+  // Katman 3: Yazı başlığı (sadece makale sayfası — folder değil)
+  if(!isFolder&&real.length>=2){
+    var h1=document.querySelector('.center .article-title, article .article-title');
+    var artTitle=h1?(h1.textContent||'').trim():'';
+    if(artTitle){
+      var l3=document.createElement('span');l3.className='sc-bclayer sc-bcl-article';l3.textContent=artTitle;
+      bl.appendChild(l3);setTimeout(function(){l3.classList.add('sc-bcl-in');},150);
+    }
+  }
 }
 function perNav(){
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
@@ -299,9 +317,9 @@ function perNav(){
   }
   // Görev 4: Graph View → "Nöral Ağ" + nöron ikonu, tıklanınca aç/kapat
   var g=document.querySelector('.graph');
-  if(g&&!g.getAttribute('data-sc')){g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');var gt=g.querySelector('h3');if(gt){gt.classList.add('sc-graph-link');gt.innerHTML='<svg class="sc-neural-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="1.8"/><circle cx="5" cy="18" r="1.8"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="7" r="1.8"/><circle cx="19" cy="17" r="1.8"/><line x1="6.6" y1="6.7" x2="10.2" y2="11.1"/><line x1="6.6" y1="17.3" x2="10.2" y2="12.9"/><line x1="13.9" y1="11.1" x2="17.4" y2="7.6"/><line x1="13.9" y1="12.9" x2="17.4" y2="16.4"/></svg><span class="sc-neural-tx">Nöral Ağ</span>';gt.addEventListener('click',function(){g.classList.toggle('sc-graph-collapsed');});}}
-  // Görev 2: SBB-KUTUSU (eski sticky başlık + breadcrumb yerine)
-  setupSbbBox();
+  if(g&&!g.getAttribute('data-sc')){g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');var gt=g.querySelector('h3');if(gt){gt.classList.add('sc-graph-link');gt.innerHTML='<svg class="sc-neural-ic" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 7.5c0 1.5.5 2.8 1.4 3.8C6.5 12.1 6 13.5 6 15c0 3.3 2.7 6 6 6s6-2.7 6-6c0-1.5-.5-2.9-1.4-3.7.9-1 1.4-2.3 1.4-3.8C18 4.5 15.5 2 12 2z"/><line x1="12" y1="10" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg><span class="sc-neural-tx">Nöral Ağ</span>';gt.addEventListener('click',function(){g.classList.toggle('sc-graph-collapsed');});}}
+  // Change 3: saat kutusu breadcrumb katmanları
+  updateBcLayers();
   if(window.__scProg)window.__scProg();
 }
 function init(){ensure();perNav();}
