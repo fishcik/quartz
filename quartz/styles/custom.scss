@@ -1240,7 +1240,11 @@ html[saved-theme="dark"] .sc-logo-btn:hover,
   stroke-width: 1.6;
 }
 
-.sc-sec-dot { fill: #d2151a; }
+.sc-sec-psi {
+  fill: #d2151a;
+  font-family: Georgia, 'Times New Roman', serif;
+  user-select: none;
+}
 .sc-cap { fill: #1a1a1a; }
 
 // ── Görev 2.1a: Günün ismi — JetBrains Mono, düz (italik DEĞİL) ──
@@ -1315,23 +1319,24 @@ body.is-focus .right.sidebar:hover > * {
   filter: none;
 }
 
-// Toolbar (fokus tuşu burada — net kalmalı), SBB-KUTUSU ve progress fokusta net
+// Toolbar (fokus tuşu burada — net kalmalı) ve progress fokusta net
 body.is-focus #sc-tools { opacity: 1 !important; filter: none !important; }
-body.is-focus #sc-sbb { opacity: 1 !important; filter: none !important; }
 body.is-focus .flex-component { opacity: 1 !important; filter: none !important; }
 
-// Vinyet overlay — kenarları karart, orta sütuna ışık ver
-body.is-focus::after {
-  content: '';
+// Change 7: Vinyet overlay — ::after yerine gerçek div (#sc-vignette).
+// body::after Quartz'ın stacking/overflow bağlamında güvenilir değildi.
+#sc-vignette {
+  display: none;
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9998;
-  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.45) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%);
 }
-html[saved-theme="dark"] body.is-focus::after,
-[saved-theme="dark"] body.is-focus::after {
-  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.25) 100%);
+body.is-focus #sc-vignette { display: block; }
+html[saved-theme="dark"] body.is-focus #sc-vignette,
+[saved-theme="dark"] body.is-focus #sc-vignette {
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%);
 }
 
 // ─── Görev 5: Back-to-top tuşu (sağ alt, scroll>400px sonrası) ───
@@ -1615,57 +1620,66 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
   color: #fff !important;
 }
 
-// ─── Görev 2: SBB-KUTUSU (sticky bar + breadcrumb birleşimi) ───
-// SBB istasyon tabelası: siyah zemin, krem yazı, keskin köşeler, sol üstte sticky.
-// Sağ kenar SAYKO.CH logo ile saat arasına denk gelecek genişlikte (clamp).
-#sc-sbb {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 8000;
+// ─── Change 3: Saat kutusu breadcrumb katmanları ───
+#sc-clock { position: relative; }
+#sc-clk-toggle {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 200ms ease, color 140ms ease;
+  svg { display: block; }
+  &:hover { color: var(--accent); }
+  &[aria-expanded="false"] { transform: rotate(180deg); }
+}
+[saved-theme="dark"] #sc-clk-toggle { color: var(--fg-3); }
+.sc-bclayers {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.25rem;
-  width: clamp(280px, 58vw, calc(100vw - 230px));
-  min-height: 80px;
-  margin: 0 0 1.5rem;
-  padding: 0.9rem 1.4rem;
-  background: #0a0a0a;
-  border-radius: 0;                    // keskin köşeler — istasyon tabelası
-  border-left: 4px solid var(--accent);
-  transition: all 200ms ease;          // SPA geçişlerinde yumuşak büyüme
+  width: 100%;
+  overflow: hidden;
+  max-height: 240px;
+  margin-top: 0.25rem;
+  transition: max-height 320ms ease, opacity 300ms ease;
+  &.sc-collapsed { max-height: 0; opacity: 0; margin-top: 0; }
 }
-#sc-sbb .sbb-crumb {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #b8893b;                      // gold/sepya breadcrumb
-  line-height: 1.2;
-}
-#sc-sbb .sbb-title {
+.sc-bclayer {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-style: italic;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.15;
-  color: #ece7dd;                      // krem başlık
+  font-size: 0.72rem;
+  color: var(--fg-2);
+  padding: 4px 2px;
+  border-top: 1px solid var(--br);
+  text-decoration: none !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 280ms ease, transform 280ms ease;
+  &.sc-bcl-in { opacity: 1; transform: translateY(0); }
+  &:hover { color: var(--accent) !important; }
 }
-// Dark mode: ters — krem zemin, siyah yazı
-html[saved-theme="dark"] #sc-sbb,
-[saved-theme="dark"] #sc-sbb {
-  background: #ece7dd;
-  border-left-color: var(--accent);
+.sc-bcl-article {
+  font-weight: 700;
+  color: var(--fg) !important;
+  border-left: 2px solid #C8102E;
+  padding-left: 6px;
+  white-space: normal;
+  line-height: 1.2;
+  display: block;
+  cursor: default;
+  &:hover { color: var(--fg) !important; }
 }
-html[saved-theme="dark"] #sc-sbb .sbb-title,
-[saved-theme="dark"] #sc-sbb .sbb-title { color: #0a0a0a; }
-html[saved-theme="dark"] #sc-sbb .sbb-crumb,
-[saved-theme="dark"] #sc-sbb .sbb-crumb { color: #8a6240; }
-
-// Görev 2: eski breadcrumb component'i gizli (SBB-KUTUSU veriyi ondan okur)
-.breadcrumb-container { display: none !important; }
 
 // ─── Mobile ──────────────────────────────────────
 
@@ -1687,10 +1701,6 @@ html[saved-theme="dark"] #sc-sbb .sbb-crumb,
     margin: 1.5rem auto 2rem;
   }
   .cg-cell { padding: 24px 12px 20px; }
-
-  // SBB-KUTUSU mobilde tam genişlik
-  #sc-sbb { width: 100%; min-height: 64px; padding: 0.75rem 1rem; }
-  #sc-sbb .sbb-title { font-size: 1.25rem; }
 
   // Görev 1: Konu hex grid mobilde daha küçük + 3 sütun, offset kapalı
   body[data-slug$="/index"] {
