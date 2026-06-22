@@ -1297,12 +1297,15 @@ html[saved-theme="dark"] .sc-logo-btn:hover,
 .sidebar.right .darkmode { display: none !important; }
 .sidebar.left  .darkmode { display: none !important; }
 
-// ─── Fokus modu: kenar sütunlar belirgin blur ──
+// ─── Görev 7: Fokus modu — blur + vinyet (cinema mode) ──
+// Yazı gövdesi + SBB-KUTUSU net kalır; gerisi blur+opacity, üstte vinyet.
 
 body.is-focus .left.sidebar > *,
-body.is-focus .right.sidebar > * {
-  opacity: 0.3;
+body.is-focus .right.sidebar > *,
+body.is-focus .page-header .site-header-slogan,
+body.is-focus .content-meta {
   filter: blur(14px);
+  opacity: 0.3;
   transition: opacity 300ms ease, filter 300ms ease;
 }
 
@@ -1312,9 +1315,63 @@ body.is-focus .right.sidebar:hover > * {
   filter: none;
 }
 
-// Toolbar ve progress bar fokusta her zaman net
+// Toolbar (fokus tuşu burada — net kalmalı), SBB-KUTUSU ve progress fokusta net
 body.is-focus #sc-tools { opacity: 1 !important; filter: none !important; }
+body.is-focus #sc-sbb { opacity: 1 !important; filter: none !important; }
 body.is-focus .flex-component { opacity: 1 !important; filter: none !important; }
+
+// Vinyet overlay — kenarları karart, orta sütuna ışık ver
+body.is-focus::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.45) 100%);
+}
+html[saved-theme="dark"] body.is-focus::after,
+[saved-theme="dark"] body.is-focus::after {
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.25) 100%);
+}
+
+// ─── Görev 5: Back-to-top tuşu (sağ alt, scroll>400px sonrası) ───
+#sc-totop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9997;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--br);
+  border-radius: 8px;
+  background: var(--bg-2);
+  color: var(--tertiary);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease, color 160ms ease, background 160ms ease, border-color 160ms ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+#sc-totop.sc-show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+#sc-totop:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+#sc-totop svg { display: block; }
+html[saved-theme="dark"] #sc-totop,
+[saved-theme="dark"] #sc-totop { background: #1c1a16; color: var(--fg-3); border-color: #2a2620; }
+html[saved-theme="dark"] #sc-totop:hover,
+[saved-theme="dark"] #sc-totop:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+
+// ─── Görev 4: "Nöral Ağ" başlığı ikonu hizalama ───
+.graph > h3.sc-graph-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  .sc-neural-ic { flex-shrink: 0; }
+}
 
 // Genişlet modu CSS korunuyor (gelecekte kullanılabilir)
 body.is-expanded .left.sidebar,
@@ -1462,29 +1519,49 @@ html[saved-theme="dark"] .cg-cell,
   .recent-ul .recent-li:nth-child(n+6) { display: none; }
 }
 
-// ─── Görev 1.7: TopicGrid — folder sayfası konu kartları (müfredat grid'i gibi) ───
+// ─── Görev 1: TopicGrid — HEXAGONAL HONEYCOMB konu kutuları ───
+// Flat-top altıgenler, 5'erli sıralar, çift sıralar yarım hücre offset,
+// sıralar dikey olarak ~H/4 örtüşür (balpeteği nesting).
+$sc-hex-w: 140px;
+$sc-hex-h: 120px;
+$sc-hex-mx: 3px;            // yatay margin
+$sc-hex-overlap: 30px;      // dikey örtüşme (H/4)
+$sc-hex-offset: 73px;       // çift sıra yatay kayma (≈ yarım hücre)
+
 body[data-slug$="/index"] {
-  .page-listing > p {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--fg-3);
-    margin-bottom: 1.25rem;
-  }
+  // Görev 9: "Bu klasör altındaki N öğe." metni gizli
+  .page-listing > p { display: none !important; }
+
   .page-listing .section-ul {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 14px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start;
+    gap: 0 !important;
     list-style: none !important;
     padding: 0 !important;
-    margin: 2rem auto 3rem !important;
-    justify-content: start;
+    margin: 2.5rem auto 2rem !important;
+    max-width: #{($sc-hex-w + 2 * $sc-hex-mx) * 5};
   }
   .page-listing .section-li {
+    width: $sc-hex-w !important;
+    height: $sc-hex-h !important;
+    margin: 0 $sc-hex-mx -#{$sc-hex-overlap} !important;
     padding: 0 !important;
     border: none !important;
     display: flex !important;
     flex-direction: column;
+    transition: transform 160ms ease;
+  }
+  // İlk sıra (1-5) örtüşmesin
+  .page-listing .section-li:nth-child(-n+5) { margin-top: 0 !important; }
+  // Çift sıralar (6-10, 16-20, ...) yarım hücre sağa kayar → honeycomb nesting
+  .page-listing .section-li:nth-child(10n+6),
+  .page-listing .section-li:nth-child(10n+7),
+  .page-listing .section-li:nth-child(10n+8),
+  .page-listing .section-li:nth-child(10n+9),
+  .page-listing .section-li:nth-child(10n+10) {
+    transform: translateX(#{$sc-hex-offset});
   }
   .page-listing .section-li .meta,
   .page-listing .section-li .tags { display: none !important; }
@@ -1495,97 +1572,100 @@ body[data-slug$="/index"] {
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    min-height: 130px !important;
-    padding: 20px 12px !important;
-    border: 1px solid var(--br) !important;
-    border-radius: 2px !important;
+    height: 100% !important;
+    padding: 14px 26px !important;
+    // Flat-top hexagon
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     background: var(--bg-2);
     color: var(--fg) !important;
     font-family: 'Source Serif 4', serif;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 600;
     font-style: normal !important;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     text-align: center !important;
-    line-height: 1.4;
-    transition: box-shadow 160ms ease, border-color 160ms ease, transform 160ms ease;
-
-    &:hover {
-      box-shadow: 0 0 0 2px var(--accent) !important;
-      border-color: var(--accent) !important;
-      transform: translateY(-2px);
-      padding-left: 12px !important;
-    }
+    line-height: 1.25;
+    // 3 satır sonrası ellipsis
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    align-content: center;
+    transition: background 160ms ease, color 160ms ease, transform 160ms ease, filter 160ms ease;
+  }
+  // Hover: kırmızı (clip-path nedeniyle outline yerine glow + scale)
+  .page-listing .section-li:hover { z-index: 5; }
+  .page-listing .section-li .desc h3 a:hover {
+    background: var(--accent) !important;
+    color: #fff !important;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 3px rgba(200,16,46,0.55));
   }
 }
 
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a {
-  background: #0a0a0a;
+  background: #1c1a16;
   color: #ece7dd !important;
-  border-color: #1e1e1e !important;
+}
+html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover,
+[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
 }
 
-// ─── Sticky yazı başlığı bar'ı (sadece sol yarı) ───
-#sc-titlebar {
-  position: fixed;
+// ─── Görev 2: SBB-KUTUSU (sticky bar + breadcrumb birleşimi) ───
+// SBB istasyon tabelası: siyah zemin, krem yazı, keskin köşeler, sol üstte sticky.
+// Sağ kenar SAYKO.CH logo ile saat arasına denk gelecek genişlikte (clamp).
+#sc-sbb {
+  position: sticky;
   top: 0;
   left: 0;
-  width: 50vw;                         // sadece sol yarı — toolbar sağda kalır
-  height: 60px;
+  z-index: 8000;
   display: flex;
-  align-items: center;
-  padding: 0 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  width: clamp(280px, 58vw, calc(100vw - 230px));
+  min-height: 80px;
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 1.4rem;
   background: #0a0a0a;
-  z-index: 9000;
-  transform: translateY(-100%);
-  transition: transform 220ms ease;
-  pointer-events: none;
+  border-radius: 0;                    // keskin köşeler — istasyon tabelası
+  border-left: 4px solid var(--accent);
+  transition: all 200ms ease;          // SPA geçişlerinde yumuşak büyüme
 }
-#sc-titlebar.sc-show { transform: translateY(0); }
-
-.sc-titlebar-text {
+#sc-sbb .sbb-crumb {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b8893b;                      // gold/sepya breadcrumb
+  line-height: 1.2;
+}
+#sc-sbb .sbb-title {
   font-family: 'Source Serif 4', Georgia, serif;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #ece7dd;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 2rem);
-}
-
-html[saved-theme="dark"] #sc-titlebar,
-[saved-theme="dark"] #sc-titlebar { background: #ece7dd; }   // dark: krem bar
-html[saved-theme="dark"] .sc-titlebar-text,
-[saved-theme="dark"] .sc-titlebar-text { color: #0a0a0a; }   // siyah yazı
-
-// ─── TOC sağ sütunda, click-to-reveal (varsayılan kapalı) ───
-.sidebar .toc .toc-header {
-  cursor: pointer;
-  user-select: none;
-  font-family: 'Source Serif 4', serif;
-  font-size: 0.68rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--fg-2);
-  background: none;
-  border: none;
-  padding: 0.4rem 0;
-  width: 100%;
-  text-align: left;
-  transition: color 140ms;
-  &:hover { color: var(--fg); }
+  line-height: 1.15;
+  color: #ece7dd;                      // krem başlık
 }
-.sidebar .toc .toc-content {
-  max-height: 60vh;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--bordo-d) transparent;
+// Dark mode: ters — krem zemin, siyah yazı
+html[saved-theme="dark"] #sc-sbb,
+[saved-theme="dark"] #sc-sbb {
+  background: #ece7dd;
+  border-left-color: var(--accent);
 }
-.sidebar .toc .toc-content.collapsed { display: none !important; }
+html[saved-theme="dark"] #sc-sbb .sbb-title,
+[saved-theme="dark"] #sc-sbb .sbb-title { color: #0a0a0a; }
+html[saved-theme="dark"] #sc-sbb .sbb-crumb,
+[saved-theme="dark"] #sc-sbb .sbb-crumb { color: #8a6240; }
+
+// Görev 2: eski breadcrumb component'i gizli (SBB-KUTUSU veriyi ondan okur)
+.breadcrumb-container { display: none !important; }
 
 // ─── Mobile ──────────────────────────────────────
 
@@ -1607,11 +1687,22 @@ html[saved-theme="dark"] .sc-titlebar-text,
     margin: 1.5rem auto 2rem;
   }
   .cg-cell { padding: 24px 12px 20px; }
-  #sc-titlebar { height: 50px; width: 100vw; }
 
-  // Konu grid mobilde 2 sütun
-  body[data-slug$="/index"] .page-listing .section-ul {
-    grid-template-columns: repeat(2, 1fr) !important;
+  // SBB-KUTUSU mobilde tam genişlik
+  #sc-sbb { width: 100%; min-height: 64px; padding: 0.75rem 1rem; }
+  #sc-sbb .sbb-title { font-size: 1.25rem; }
+
+  // Görev 1: Konu hex grid mobilde daha küçük + 3 sütun, offset kapalı
+  body[data-slug$="/index"] {
+    .page-listing .section-ul { max-width: #{(112px + 6px) * 3}; }
+    .page-listing .section-li {
+      width: 112px !important;
+      height: 98px !important;
+      margin: 0 3px -22px !important;
+      transform: none !important;
+    }
+    .page-listing .section-li:nth-child(-n+3) { margin-top: 0 !important; }
+    .page-listing .section-li .desc h3 a { font-size: 0.64rem; padding: 10px 20px !important; }
   }
 }
 

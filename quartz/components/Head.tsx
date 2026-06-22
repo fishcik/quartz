@@ -171,15 +171,28 @@ function ensure(){
     tb.appendChild(lg);tb.appendChild(clkDiv);tb.appendChild(bt);tb.appendChild(bf);
     document.body.appendChild(tb);
   }
+  // ── Görev 5: Back-to-top tuşu (sağ alt, scroll>400px sonrası görünür) ──
+  var tt=document.getElementById('sc-totop');
+  if(!tt){
+    tt=document.createElement('button');tt.type='button';tt.id='sc-totop';tt.setAttribute('aria-label','Yukarı çık');tt.title='Yukarı çık';
+    tt.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>';
+    tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+    document.body.appendChild(tt);
+  }
   if(!window.__scRafRunning){
     window.__scRafRunning=true;
     var tick=function(){
       var d=new Date();var z=new Date(d.toLocaleString('en-US',{timeZone:'Europe/Zurich'}));
       var H=document.getElementById('sc-h'),M=document.getElementById('sc-m'),S=document.getElementById('sc-s');
-      if(H){var ms=z.getMilliseconds(),s=z.getSeconds(),m=z.getMinutes(),h=z.getHours();
-        H.setAttribute('transform','rotate('+((h%12)*30+m*0.5+s/120)+' 50 50)');
-        M.setAttribute('transform','rotate('+(m*6+s*0.1+ms/10000)+' 50 50)');
-        var secMs=s*1000+ms;var sa=secMs<58500?(secMs/58500)*360:360;
+      if(H){
+        // Görev 6: saniye/ms timezone-bağımsız — toLocaleString ms'yi düşürdüğü için
+        // gerçek Date.now() kullan (önceki bug: getMilliseconds() hep 0 → step).
+        var secMs=Date.now()%60000;var m=z.getMinutes(),h=z.getHours();
+        var frac=secMs/60000;
+        H.setAttribute('transform','rotate('+((h%12)*30+m*0.5+frac*0.5)+' 50 50)');
+        M.setAttribute('transform','rotate('+(m*6+frac*6)+' 50 50)');
+        // SBB glide: 0→58.5s smooth sweep, 58.5→60s 12'de pause
+        var sa=secMs<58500?(secMs/58500)*360:360;
         S.setAttribute('transform','rotate('+sa+' 50 50)');}
       var dn=document.getElementById('sc-day');
       if(dn){var wd=z.getDay();var day=d.toLocaleDateString('tr-TR',{weekday:'long',timeZone:'Europe/Zurich'});var nt=day.charAt(0).toLocaleUpperCase('tr-TR')+day.slice(1);if(dn.textContent!==nt)dn.textContent=nt;dn.classList.toggle('weekend',wd===0||wd===6);}
@@ -187,22 +200,50 @@ function ensure(){
     };tick();
   }
   if(!window.__scScroll){
-    window.addEventListener('scroll',function(){if(window.__scProg)window.__scProg();document.body.classList.toggle('sc-scrolled',(window.scrollY||window.pageYOffset)>100);},{passive:true});
+    window.addEventListener('scroll',function(){if(window.__scProg)window.__scProg();var y=window.scrollY||window.pageYOffset;document.body.classList.toggle('sc-scrolled',y>100);var tt=document.getElementById('sc-totop');if(tt)tt.classList.toggle('sc-show',y>400);},{passive:true});
     window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();});
     window.__scScroll=1;
   }
 }
-function setupStickyTitle(isHome){
-  var old=document.getElementById('sc-titlebar');
-  var h1=document.querySelector('article .article-title, .page-header .article-title');
-  if(isHome||!h1){if(old)old.remove();if(window.__scTitleObs){window.__scTitleObs.disconnect();window.__scTitleObs=null;}return;}
-  var bar=old;
-  if(!bar){bar=document.createElement('div');bar.id='sc-titlebar';bar.innerHTML='<span class="sc-titlebar-text"></span>';document.body.appendChild(bar);}
-  bar.querySelector('.sc-titlebar-text').textContent=(h1.textContent||'').trim();
-  bar.classList.remove('sc-show');
-  if(window.__scTitleObs){window.__scTitleObs.disconnect();}
-  window.__scTitleObs=new IntersectionObserver(function(es){es.forEach(function(e){bar.classList.toggle('sc-show',!e.isIntersecting&&e.boundingClientRect.top<0);});},{threshold:0});
-  window.__scTitleObs.observe(h1);
+// ── Görev 2: SBB-KUTUSU — sticky bar + breadcrumb birleşimi (sol üst) ──
+// Sayfa derinliğine göre içerik: anasayfa/ders-index gizli, konu = ders+konu,
+// yazı = (ders › konu) breadcrumb + büyük yazı başlığı.
+function setupSbbBox(){
+  var box=document.getElementById('sc-sbb');
+  var slug=document.body.getAttribute('data-slug')||'';
+  var parts=slug.split('/').filter(Boolean);
+  var isFolder=parts.length>0&&parts[parts.length-1]==='index';
+  var real=isFolder?parts.slice(0,-1):parts;
+  // Anasayfa veya ders-index (tek seviye) → kutu gizli
+  if(slug===''||slug==='index'||real.length<=1){if(box)box.remove();return;}
+  if(!box){box=document.createElement('div');box.id='sc-sbb';document.body.insertBefore(box,document.body.firstChild);}
+  var dersName=SC_MAP[real[0]]||real[0];
+  var h1=document.querySelector('.center .article-title, article .article-title, article h1');
+  var leafTitle=h1?(h1.textContent||'').trim():'';
+  var bc=document.querySelector('.breadcrumb-container');
+  var anchors=bc?Array.prototype.slice.call(bc.querySelectorAll('a')):[];
+  var crumbEl=document.createElement('span');crumbEl.className='sbb-crumb';
+  var titleEl=document.createElement('span');titleEl.className='sbb-title';
+  if(isFolder){
+    // Konu sayfası: üstte ders adı, altta konu başlığı (folder h1)
+    crumbEl.textContent=dersName;
+    titleEl.textContent=leafTitle||real[real.length-1];
+  } else {
+    // Yazı sayfası: üstte "ders › konu", altta yazı başlığı
+    var konuName='';
+    if(real.length>=3){
+      // ders/konu/yazi → konu adı: slug segmentine karşılık gelen breadcrumb anchor'u bul
+      var konuSlug=real[real.length-2];konuName=konuSlug;
+      for(var ai=0;ai<anchors.length;ai++){
+        var hp=decodeURIComponent(anchors[ai].getAttribute('href')||'').replace(/\\/+$/,'').split('/').filter(Boolean);
+        var last=hp[hp.length-1],prev=hp[hp.length-2];
+        if(last===konuSlug||(last==='index'&&prev===konuSlug)){konuName=(anchors[ai].textContent||'').trim();break;}
+      }
+    }
+    crumbEl.textContent=dersName+(konuName?' › '+konuName:'');
+    titleEl.textContent=leafTitle||real[real.length-1];
+  }
+  box.innerHTML='';box.appendChild(crumbEl);box.appendChild(titleEl);
 }
 function perNav(){
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
@@ -256,18 +297,11 @@ function perNav(){
     var sum=document.createElement('summary');sum.textContent=ttltxt;det.appendChild(sum);
     if(ttl)ttl.remove();while(lrn.firstChild){det.appendChild(lrn.firstChild);}lrn.appendChild(det);
   }
+  // Görev 4: Graph View → "Nöral Ağ" + nöron ikonu, tıklanınca aç/kapat
   var g=document.querySelector('.graph');
-  if(g&&!g.getAttribute('data-sc')){g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');var gt=g.querySelector('h3');if(gt){gt.classList.add('sc-graph-link');gt.addEventListener('click',function(){g.classList.toggle('sc-graph-collapsed');});}}
-  // TOC: right sidebar, default CLOSED, auto-close on link click
-  var toc=document.querySelector('.sidebar .toc');
-  if(toc&&!toc.getAttribute('data-sc-toc')){
-    toc.setAttribute('data-sc-toc','1');
-    var th=toc.querySelector('.toc-header');var tc=toc.querySelector('.toc-content');
-    if(th)th.setAttribute('aria-expanded','false');
-    if(tc){tc.classList.add('collapsed');
-      tc.querySelectorAll('a').forEach(function(lnk){lnk.addEventListener('click',function(){if(th)th.setAttribute('aria-expanded','false');if(tc)tc.classList.add('collapsed');});});}
-  }
-  setupStickyTitle(isHome);
+  if(g&&!g.getAttribute('data-sc')){g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');var gt=g.querySelector('h3');if(gt){gt.classList.add('sc-graph-link');gt.innerHTML='<svg class="sc-neural-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="1.8"/><circle cx="5" cy="18" r="1.8"/><circle cx="12" cy="12" r="2.2"/><circle cx="19" cy="7" r="1.8"/><circle cx="19" cy="17" r="1.8"/><line x1="6.6" y1="6.7" x2="10.2" y2="11.1"/><line x1="6.6" y1="17.3" x2="10.2" y2="12.9"/><line x1="13.9" y1="11.1" x2="17.4" y2="7.6"/><line x1="13.9" y1="12.9" x2="17.4" y2="16.4"/></svg><span class="sc-neural-tx">Nöral Ağ</span>';gt.addEventListener('click',function(){g.classList.toggle('sc-graph-collapsed');});}}
+  // Görev 2: SBB-KUTUSU (eski sticky başlık + breadcrumb yerine)
+  setupSbbBox();
   if(window.__scProg)window.__scProg();
 }
 function init(){ensure();perNav();}
