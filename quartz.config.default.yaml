@@ -207,6 +207,8 @@ plugins:
       title: Son Yazılar
       limit: 18
       showTags: false
+      hideFolderPages: true
+      hideTagPages: true
     layout:
       position: left
       priority: 40
@@ -219,6 +221,8 @@ plugins:
       limit: 18
       linkToMore: tags
       showTags: false
+      hideFolderPages: true
+      hideTagPages: true
     layout:
       position: afterBody
       priority: 20

@@ -148,7 +148,7 @@ export default (() => {
 var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
-var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar."];
+var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
@@ -162,8 +162,9 @@ function ensure(){
     lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word">SAYKO<span class="sc-logo-tld">.CH</span></span>';
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
     clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><circle cx="50" cy="20" r="5" class="sc-sec-dot"/></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
-    var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn darkmode';bt.title='Tema değiştir';bt.setAttribute('aria-label','Tema');
+    var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema değiştir';bt.setAttribute('aria-label','Tema');
     bt.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    bt.addEventListener('click',function(){var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus modu';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
@@ -213,11 +214,11 @@ function perNav(){
     sh.querySelector('.site-header-slogan').textContent=slogan;
     ph.insertAdjacentElement('afterbegin',sh);
   }
-  // Move search into toolbar (first slot)
+  // Move search into toolbar (first slot) — idempotent across DOMContentLoaded+nav
   var tb=document.getElementById('sc-tools');
   if(tb){
-    var oldSrch=tb.querySelector('.search');if(oldSrch)oldSrch.remove();
-    var srchEl=document.querySelector('.search');if(srchEl)tb.insertBefore(srchEl,tb.firstChild);
+    var srchEl=document.querySelector('.search');
+    if(srchEl&&srchEl.parentElement!==tb){tb.insertBefore(srchEl,tb.firstChild);}
   }
   if(isHome){
     var center=document.querySelector('.center');
