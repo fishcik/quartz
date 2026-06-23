@@ -1,3 +1,11 @@
+---
+title: Sigaranın Psikolojisi
+date: 2026-06-17
+tags:
+  - sağlık-psikolojisi
+  - bağımlılık-psikolojisi
+---
+
 # Sigaranın Psikolojisi
 
 Legal ölüm ürünü.
