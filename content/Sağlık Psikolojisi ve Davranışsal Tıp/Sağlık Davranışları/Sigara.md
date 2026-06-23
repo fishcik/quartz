@@ -1,4 +1,10 @@
-
+---
+title: Sigaranın Psikolojisi
+date: 17.06.2026
+tags:
+  - bağımlılık-psikolojisi
+  - nöropsikoloji
+  - öğrenme-teorileri
 ---
 
 # Sigaranın Psikolojisi
@@ -90,4 +96,4 @@ Doğru strateji ile.
 > - **1 yılda:** Kalp riskini yarıya indiriyor. 
 
 *Evet...*
-Beyin **zaten** napması gerektiğini biliyor. Bazen sadece **doğru anda doğru şeyi** hatırlaması yeterli.
+Beyin ***zaten*** napması gerektiğini biliyor. Bazen sadece **doğru anda doğru şeyi** hatırlaması yeterli.
