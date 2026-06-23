@@ -103,7 +103,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -151,7 +151,7 @@ var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
-var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia'];
+var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
 function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
@@ -183,7 +183,10 @@ function ensure(){
     // Clock
     var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
-    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<text x="50" y="35" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan style="fill:#C8102E">SAYKO</tspan><tspan style="fill:#1a1a1a">.ch</tspan></text><line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><text x="50" y="24" class="sc-sec-psi" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold">Ψ</text></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    var psiTip='<g class="sc-sec-psi" transform="translate(50,20) scale(0.17) translate(-40,-40)"><line x1="40" y1="8" x2="40" y2="76" stroke-width="6" stroke-linecap="round"/><path d="M16,8 C16,8 16,56 40,62" stroke-width="5.5" stroke-linecap="round" fill="none"/><path d="M64,8 C64,8 64,56 40,62" stroke-width="5.5" stroke-linecap="round" fill="none"/><circle cx="16" cy="8" r="6"/><circle cx="40" cy="8" r="6"/><circle cx="64" cy="8" r="6"/></g>';
+    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<text x="50" y="35" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text><line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="18" class="sc-hand-s"/>'+psiTip+'</g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    // Masaüstünde saate tıklamak SBB-kutusunu kapatır (kuyruğa döner)
+    clkDiv.addEventListener('click',function(){if(window.innerWidth>=1200){document.body.classList.remove('sc-sbb-open');}});
     sbb.appendChild(clkDiv);
     // Chevron: bottom-right of SBB box, toggles breadcrumb layers
     var bclayers=document.createElement('div');bclayers.id='sc-bclayers';bclayers.className='sc-bclayers';
@@ -191,8 +194,15 @@ function ensure(){
     chev.innerHTML='<svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
     chev.addEventListener('click',function(){var exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',exp?'false':'true');bclayers.classList.toggle('sc-collapsed',exp);});
     sbb.appendChild(bclayers);sbb.appendChild(chev);
-    var rsb0=document.querySelector('.sidebar.right');
-    if(rsb0&&window.innerWidth>=1200){rsb0.insertBefore(sbb,rsb0.firstChild);}else{document.body.appendChild(sbb);}
+    document.body.appendChild(sbb);
+  }
+  // Masaüstü: sağ sütun kenarından beliren minik SAAT kuyruğu → tıkla, SBB açılır
+  var stail=document.getElementById('sc-sbb-tail');
+  if(!stail){
+    stail=document.createElement('button');stail.type='button';stail.id='sc-sbb-tail';stail.setAttribute('aria-label','SAYKO panelini aç');
+    stail.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><line x1="12" y1="12" x2="12" y2="6.5" stroke-linecap="round"/><line x1="12" y1="12" x2="15.5" y2="13.5" stroke-linecap="round" stroke="#d2151a"/></svg>';
+    stail.addEventListener('click',function(){document.body.classList.add('sc-sbb-open');});
+    document.body.appendChild(stail);
   }
   // Mobil/tablet: SBB-kutusunu açan cardinal kırmızı psi tuşu (FAB) + arka perde
   var fab=document.getElementById('sc-sbb-fab');
@@ -242,9 +252,10 @@ function ensure(){
   }
   if(!window.__scScroll){
     window.addEventListener('scroll',function(){if(window.__scProg)window.__scProg();var y=window.scrollY||window.pageYOffset;document.body.classList.toggle('sc-scrolled',y>100);var tt=document.getElementById('sc-totop');if(tt)tt.classList.toggle('sc-show',y>400);},{passive:true});
-    window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();clearTimeout(window.__scFitT);window.__scFitT=setTimeout(function(){scFitHex();scFitHeader();},160);});
+    window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();scREdge();clearTimeout(window.__scFitT);window.__scFitT=setTimeout(function(){scFitHex();scFitHeader();},160);});
     window.__scScroll=1;
   }
+  scREdge();
 }
 function updateBcLayers(){
   var bl=document.getElementById('sc-bclayers');if(!bl)return;
@@ -303,6 +314,29 @@ function scFitHex(){
     while((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>6.5&&guard<40){fs-=0.5;lbl.style.fontSize=fs+'px';guard++;}
   });
 }
+// Sayfanın sağ kenarı ile içerik kutusu arası mesafe (scrollbar hariç) → SBB/kuyruk
+// tam sayfa kenarına otursun diye --sc-redge olarak ölçülür.
+function scREdge(){
+  var pg=document.querySelector('.page');
+  var w=document.documentElement.clientWidth||window.innerWidth;
+  var re=0;
+  if(pg){var r=pg.getBoundingClientRect();re=Math.max(0,Math.round(w-r.right));}
+  document.documentElement.style.setProperty('--sc-redge',re+'px');
+}
+// Künye paneli: yazının sonuna taşı, başlık + anahtarları Türkçeleştir
+function scProps(){
+  var np=document.querySelector('.note-properties');if(!np)return;
+  var art=document.querySelector('.center article');
+  if(art&&np.parentNode!==art){art.appendChild(np);}
+  else if(art&&art.lastElementChild!==np){art.appendChild(np);}
+  var ttl=np.querySelector('.note-properties-title');
+  if(ttl)ttl.textContent='Künye';
+  var KEYS={'tags':'Etiketler','description':'Açıklama','aliases':'Takma Adlar','title':'Başlık'};
+  np.querySelectorAll('.note-properties-key').forEach(function(k){
+    var t=(k.textContent||'').trim().toLowerCase();
+    if(KEYS[t]&&!k.getAttribute('data-sc-tr')){k.textContent=KEYS[t];k.setAttribute('data-sc-tr','1');}
+  });
+}
 // Header SAYKO kelimesi: sabit kutuya sığana dek küçülür (logo/slogan asla kaymaz, ".ch" kırpılmaz)
 function scFitHeader(){
   var w=document.querySelector('.site-header .sh-word');if(!w)return;
@@ -310,16 +344,11 @@ function scFitHeader(){
   var g=0;while(w.scrollWidth>w.clientWidth&&fs>1.2&&g<28){fs-=0.07;w.style.fontSize=fs+'rem';g++;}
 }
 function perNav(){
-  // Move SBB into right sidebar on desktop (exact alignment); back to body on mobile
-  var sbbEl=document.getElementById('sc-sbb');
-  var rsbEl=document.querySelector('.sidebar.right');
-  if(sbbEl){
-    if(rsbEl&&window.innerWidth>=1200){
-      if(sbbEl.parentNode!==rsbEl)rsbEl.insertBefore(sbbEl,rsbEl.firstChild);
-    } else if(sbbEl.parentNode!==document.body&&window.innerWidth<1200){
-      document.body.appendChild(sbbEl);
-    }
-  }
+  // Sayfa değişince SBB kuyruğunu kapat (her sayfaya temiz başla) + sağ kenarı ölç
+  document.body.classList.remove('sc-sbb-open');
+  scREdge();
+  // Künye (note-properties) panelini yazının SONUNA taşı + Türkçe etiketle
+  scProps();
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
   var isHome=(document.body.getAttribute('data-slug')==='index');
   // Site header with rotating font
@@ -400,6 +429,9 @@ function perNav(){
     g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');
   }
   updateBcLayers();
+  // Chevron yalnız gerçekten açılır/kapanır katman varsa görünür
+  var bl2=document.getElementById('sc-bclayers'),chev2=document.getElementById('sc-clk-toggle');
+  if(chev2)chev2.style.display=(bl2&&bl2.children.length>0)?'':'none';
   if(window.__scProg)window.__scProg();
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}

@@ -462,7 +462,7 @@ button.explorer-toggle h2 {
   display: flex !important;
   position: fixed !important;
   top: 0 !important;
-  right: calc(200px + var(--sc-pgap, 0px)) !important;   // sağ sütunun sol sınırı
+  right: calc(200px + var(--sc-redge, 0px)) !important;   // sağ sütunun sol sınırı
   z-index: 9998 !important;
   width: 44px !important;
   height: 48px !important;
@@ -510,7 +510,7 @@ html[saved-theme="dark"] .search.sc-search-tail > .search-button {
 // ── Görev 9: kuyruk tıklanınca SOLA uzar ve arama çubuğuna dönüşür ──
 // (tam ekran modal + blur YOK; sonuçlar çubuğun altında açılan panelde)
 .search.sc-search-tail.sc-search-open {
-  width: min(440px, calc(100vw - 2 * var(--sc-pgap, 0px) - 230px)) !important;
+  width: min(440px, calc(100vw - 2 * var(--sc-redge, 0px) - 230px)) !important;
 }
 // Container artık tam-ekran modal değil; kuyruğun içine oturan inline panel
 .search.sc-search-tail > .search-container {
@@ -626,6 +626,8 @@ article,
 article {
   padding: 2.5rem 3rem;
   max-width: 82ch;
+  margin-left: auto;    // header (82ch, ortalı) ile aynı eksende — başlık ortalı görünür
+  margin-right: auto;
 }
 
 .article-title,
@@ -638,6 +640,7 @@ h1.article-title {
   line-height: 1.12;
   color: var(--dark) !important;
   margin-bottom: 0.4rem;
+  text-align: center !important;   // en tepe başlık header'a göre ortalı
 }
 
 // ─── Content meta ────────────────────────────────
@@ -936,65 +939,83 @@ html[saved-theme="dark"] #graph-container,
   border-color: #1e1e1e !important;
 }
 
-// ─── Properties / Frontmatter panel ─────────────
+// ─── Künye (note-properties) — yazının SONUNA, kompakt, sade ───────
+// JS (scProps) bu paneli article'ın sonuna taşır + başlık/anahtarları
+// Türkçeleştirir. Burada görsel olarak minimal, göz yormayan bir kart yapılır.
 
-.properties,
-.page-property-container {
-  margin: 0 0 1.5rem !important;
-  padding: 0.75rem 1rem !important;
-  border: 1px solid var(--br) !important;
-  border-radius: 3px;
-  background: var(--bg-2) !important;
+.note-properties {
+  margin: 3rem 0 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-top: 1px solid var(--br) !important;
+  background: none !important;
+  font-family: 'Source Serif 4', serif !important;
 }
 
-.properties-table,
-.page-property-container table {
-  width: 100%;
-  font-size: 0.78rem !important;
-  border-collapse: collapse;
+.note-properties .note-properties-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 0.85rem 0 0 !important;
   margin: 0 !important;
 
-  th, td {
-    padding: 0.3rem 0.5rem !important;
-    border: none !important;
-    border-bottom: 1px solid var(--br) !important;
-    text-align: left;
-  }
+  &::-webkit-details-marker { display: none; }
 
-  tr:last-child td,
-  tr:last-child th { border-bottom: none !important; }
-
-  th, .property-key {
-    font-family: 'Source Serif 4', serif !important;
-    font-size: 0.62rem !important;
-    font-weight: 600 !important;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--fg-3) !important;
-    min-width: 80px;
-    background: none !important;
-  }
-
-  td, .property-value {
-    color: var(--fg-2) !important;
-    font-family: 'Source Serif 4', serif !important;
+  &::before {
+    content: "▸";
+    font-size: 0.6rem;
+    color: var(--fg-3);
+    transition: transform 160ms ease;
   }
 }
+.note-properties[open] .note-properties-header::before { content: "▾"; }
 
-// Properties section heading
-.properties-title,
-.page-property-container > p,
-.page-property-container > h4 {
+.note-properties .note-properties-title {
   font-family: 'Source Serif 4', serif !important;
   font-size: 0.62rem !important;
   font-weight: 600 !important;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--fg-3) !important;
-  margin: 0 0 0.5rem !important;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--br);
 }
+
+// Sayaç balonu gizli — sade görünüm
+.note-properties .note-properties-count { display: none !important; }
+
+.note-properties .note-properties-table {
+  width: auto !important;
+  border-collapse: collapse;
+  margin: 0.6rem 0 0 !important;
+  font-size: 0.82rem !important;
+}
+
+.note-properties .note-properties-row { border: none !important; }
+.note-properties .note-properties-row:hover td { background: none !important; }
+
+.note-properties .note-properties-key {
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.6rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--fg-3) !important;
+  border: none !important;
+  padding: 0.18rem 1rem 0.18rem 0 !important;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.note-properties .note-properties-value {
+  border: none !important;
+  padding: 0.18rem 0 !important;
+  color: var(--fg-2) !important;
+  font-size: 0.85rem !important;
+}
+
+.note-properties .note-properties-separator { color: var(--fg-3) !important; }
 
 // ─── Tags (article page, properties panel) ───────
 
@@ -1124,7 +1145,7 @@ h1.article-title::after {
   width: 2.5rem;
   height: 2px;
   background: var(--bordo);
-  margin-top: 0.8rem;
+  margin: 0.8rem auto 0;   // ortalı başlığın altında ortalı vurgu çizgisi
   opacity: 0.7;
 }
 
@@ -1388,11 +1409,16 @@ html[saved-theme="dark"] #sc-progress,
 // ─── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ────────────────
 
 // Day/night sitenin moduyla AYNI: light→açık sepya kutu, dark→siyah kutu
+// SBB her sayfada VARSAYILAN KAPALI bir çekmece; sağ kenardan minik saat
+// kuyruğu (#sc-sbb-tail) ile açılır, içindeki saate basınca kapanır.
 #sc-sbb {
   position: fixed;
   top: 0;
-  right: var(--sc-pgap, 0px);          // sağ sütunun sağ kenarı ile hizalı
+  right: var(--sc-redge, 0px);         // sayfanın sağ kenarına TAM oturur (scrollbar hariç)
   width: 200px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -1400,10 +1426,48 @@ html[saved-theme="dark"] #sc-progress,
   background: #f2efe9;
   color: #2b2826;
   border-left: 1px solid #ddd6c9;
-  box-shadow: -2px 0 16px rgba(0,0,0,0.07);
+  box-shadow: -6px 0 22px rgba(0,0,0,0.16);
   padding-bottom: 0.5rem;
-  transition: transform 300ms cubic-bezier(.2,.7,.3,1);
+  transform: translateX(calc(100% + var(--sc-redge, 0px)));   // kapalı: ekran dışı
+  transition: transform 320ms cubic-bezier(.2,.7,.3,1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+  &::-webkit-scrollbar { width: 5px; }
+  &::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }
 }
+body.sc-sbb-open #sc-sbb { transform: translateX(0); }
+
+// Masaüstü saat kuyruğu — sağ kenardan beliren minik saat (SBB'yi açar)
+#sc-sbb-tail {
+  position: fixed;
+  right: var(--sc-redge, 0px);
+  top: 96px;
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--br);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background: var(--bg-2);
+  color: var(--tertiary);
+  cursor: pointer;
+  box-shadow: -3px 0 12px rgba(0,0,0,0.10);
+  transition: opacity 220ms ease, transform 220ms ease, color 160ms ease, background 160ms ease, border-color 160ms ease;
+
+  svg { display: block; }
+  &:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+}
+body.sc-sbb-open #sc-sbb-tail { opacity: 0; pointer-events: none; transform: translateX(46px); }
+// Anasayfada SBB ve kuyruk tamamen gizli; mobil/tablette kuyruk yerine psi-FAB var
+body[data-slug="index"] #sc-sbb,
+body[data-slug="index"] #sc-sbb-tail { display: none !important; }
+@media (max-width: 1199px) { #sc-sbb-tail { display: none !important; } }
+html[saved-theme="dark"] #sc-sbb-tail { background: #1c1a16; color: var(--fg-3); border-color: #2a2620; }
+html[saved-theme="dark"] #sc-sbb-tail:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 
 html[saved-theme="dark"] #sc-sbb,
 [saved-theme="dark"] #sc-sbb {
@@ -1494,12 +1558,6 @@ html[saved-theme="dark"] .sc-logo-btn,
   stroke-width: 1.5;
 }
 
-html[saved-theme="dark"] .sc-face,
-[saved-theme="dark"] .sc-face {
-  fill: #f5f0e8;
-  stroke: #d8d0c4;
-}
-
 .sc-tick {
   stroke: #1a1a1a;
   stroke-width: 2.2;
@@ -1520,20 +1578,38 @@ html[saved-theme="dark"] .sc-face,
   stroke-width: 1.6;
 }
 
+// Saniye ucundaki psi: logo psi şekli (line/path stroke + circle fill kırmızı)
 .sc-sec-psi {
+  stroke: #d2151a;
   fill: #d2151a;
-  font-family: Georgia, 'Times New Roman', serif;
   user-select: none;
 }
 .sc-cap { fill: #1a1a1a; }
 
 // SAYKO.ch brand text on clock face — SABİT font: Contrail One
-// (fill tspan inline style'larından geliyor: SAYKO=kırmızı, .ch=siyah)
 .sc-sbb-brand {
   font-family: 'Contrail One', Georgia, serif;
   user-select: none;
   letter-spacing: 0.5px;
 }
+.sc-brand-name { fill: #C8102E; }   // SAYKO → cardinal kırmızı (her iki mod)
+.sc-brand-tld  { fill: #1a1a1a; }   // .ch → light: siyah
+
+// ── Gece modu: saat siyah/sepya/kırmızı ──
+html[saved-theme="dark"] .sc-face,
+[saved-theme="dark"] .sc-face { fill: #14110d; stroke: #2a2620; }
+html[saved-theme="dark"] .sc-tick,
+[saved-theme="dark"] .sc-tick { stroke: #d9b083; }                 // sepya
+html[saved-theme="dark"] .sc-hand,
+[saved-theme="dark"] .sc-hand { stroke: #ece7dd; }                 // kırık beyaz
+html[saved-theme="dark"] .sc-cap,
+[saved-theme="dark"] .sc-cap { fill: #ece7dd; }
+html[saved-theme="dark"] .sc-hand-s,
+[saved-theme="dark"] .sc-hand-s,
+html[saved-theme="dark"] .sc-sec-psi,
+[saved-theme="dark"] .sc-sec-psi { stroke: #e0392f; fill: #e0392f; }
+html[saved-theme="dark"] .sc-brand-tld,
+[saved-theme="dark"] .sc-brand-tld { fill: #ece7dd; }              // .ch → dark: kırık beyaz
 
 // Günün ismi
 #sc-day {
@@ -1739,25 +1815,6 @@ html[saved-theme="dark"] #sc-lsb-restore:hover { color: #fff; background: var(--
   #sc-lsb-restore { display: none !important; }
 }
 
-// Sağ sidebar: SBB kutusunu içinde barındırır — sıfır padding, tam üstten başlar
-@media all and (min-width: 1200px) {
-  .sidebar.right {
-    padding: 0 !important;
-    top: 0 !important;
-    max-height: 100vh !important;
-    overflow: visible !important;
-  }
-  // SBB sidebar içindeyken tam genişlik, statik akış, kendi kenarlığı yok
-  .sidebar.right > #sc-sbb {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    width: 100% !important;
-    border-left: none !important;
-    box-shadow: none !important;
-    z-index: auto;
-  }
-}
 
 // Genişlet modu CSS korunuyor (gelecekte kullanılabilir)
 body.is-expanded .left.sidebar,
