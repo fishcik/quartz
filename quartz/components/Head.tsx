@@ -103,7 +103,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -150,8 +150,8 @@ var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
-// Rotating logo fonts — picks one per page load/nav
-var SC_FONTS=['Bebas Neue','Playfair Display','Dancing Script','Cedarville Cursive','Georgia'];
+// Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
+var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia'];
 function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
@@ -163,13 +163,12 @@ function ensure(){
     sbb=document.createElement('div');sbb.id='sc-sbb';
     // Header row: logo + graph toggle + theme + focus
     var sbbHdr=document.createElement('div');sbbHdr.className='sc-sbb-hdr';
-    var fnt=SC_FONTS[Math.floor(Math.random()*SC_FONTS.length)];
+    // SBB logo: sabit kompakt font (rotasyon yok — sadece sayfa header'ı döner)
     var lg=document.createElement('a');lg.className='sc-logo-btn';lg.href='/';lg.setAttribute('aria-label','SAYKO.ch');
     lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
-    lg.querySelector('.sc-logo-name').style.fontFamily=fnt+',serif';
-    // Graph toggle
-    var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Graf aç/kapat');
-    gtb.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="12" cy="19" r="1.8"/><line x1="6.7" y1="5.9" x2="10.8" y2="18"/><line x1="17.3" y1="5.9" x2="13.2" y2="18"/><line x1="6.8" y1="5" x2="17.2" y2="5"/></svg>';
+    // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
+    var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
+    gtb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 7.5c0 1.5.5 2.8 1.4 3.8C6.5 12.1 6 13.5 6 15c0 3.3 2.7 6 6 6s6-2.7 6-6c0-1.5-.5-2.9-1.4-3.7.9-1 1.4-2.3 1.4-3.8C18 4.5 15.5 2 12 2z"/><line x1="12" y1="10" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg>';
     gtb.addEventListener('click',function(){var g=document.querySelector('.graph');if(g){var closed=g.classList.toggle('sc-graph-collapsed');this.classList.toggle('sc-active',!closed);}});
     // Theme
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema';bt.setAttribute('aria-label','Tema');
@@ -340,24 +339,10 @@ function perNav(){
     var rn2=lsb.querySelector('.recent-notes');
     if(rn2)lsb.insertBefore(cb,rn2);else lsb.appendChild(cb);
   }
-  // Graph → "Nöral Ağ" + beyin ikonu + kursif başlık açıkken
+  // Graph: başlangıçta kapalı; başlık/kursif metin gizli (SBB beyin tuşu açar/kapatır)
   var g=document.querySelector('.graph');
   if(g&&!g.getAttribute('data-sc')){
     g.setAttribute('data-sc','1');g.classList.add('sc-graph-collapsed');
-    var gt=g.querySelector('h3');
-    if(gt){
-      gt.classList.add('sc-graph-link');
-      gt.innerHTML='<svg class="sc-neural-ic" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 7.5c0 1.5.5 2.8 1.4 3.8C6.5 12.1 6 13.5 6 15c0 3.3 2.7 6 6 6s6-2.7 6-6c0-1.5-.5-2.9-1.4-3.7.9-1 1.4-2.3 1.4-3.8C18 4.5 15.5 2 12 2z"/><line x1="12" y1="10" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg><span class="sc-neural-tx">Nöral Ağ</span>';
-      // Kursif başlık — sadece graf açıkken görünür
-      var ntitle=document.createElement('div');ntitle.className='sc-neural-title';ntitle.textContent='Nöral Ağ';
-      var go=g.querySelector('.graph-outer')||g.querySelector('canvas')||null;
-      if(go)g.insertBefore(ntitle,go);else g.appendChild(ntitle);
-      gt.addEventListener('click',function(){
-        var closed=g.classList.toggle('sc-graph-collapsed');
-        var gtb=document.getElementById('sc-gtoggle');
-        if(gtb)gtb.classList.toggle('sc-active',!closed);
-      });
-    }
   }
   updateBcLayers();
   if(window.__scProg)window.__scProg();

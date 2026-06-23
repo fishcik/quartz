@@ -463,15 +463,17 @@ button.explorer-toggle h2 {
   height: 48px !important;
   align-items: center !important;
   justify-content: center !important;
-  background: #1a1a1a !important;
+  background: #f2efe9 !important;
   border-radius: 6px 0 0 6px !important;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.06);
   margin: 0 !important;
   padding: 0 !important;
   transition: width 220ms ease, background 160ms ease;
 }
 
 html[saved-theme="dark"] .search.sc-search-tail {
-  background: #ede8df !important;
+  background: #0c0c0c !important;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.4);
 }
 
 .search.sc-search-tail .search-button {
@@ -485,7 +487,7 @@ html[saved-theme="dark"] .search.sc-search-tail {
   gap: 0 !important;
   background: none !important;
   border: none !important;
-  color: #f3ece0 !important;
+  color: #2b2826 !important;
   cursor: pointer !important;
 
   &:hover { color: var(--accent) !important; }
@@ -494,7 +496,7 @@ html[saved-theme="dark"] .search.sc-search-tail {
 }
 
 html[saved-theme="dark"] .search.sc-search-tail .search-button {
-  color: #2b2826 !important;
+  color: #ece7dd !important;
   &:hover { color: var(--accent) !important; }
 }
 
@@ -1032,27 +1034,47 @@ body[data-slug="index"] .site-header {
 .site-header-title {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  font-family: 'Bebas Neue', 'Playfair Display', serif !important;
-  font-size: 2.4rem;
+  height: 3.2rem;                 // sabit yükseklik → font değişse de psi + slogan kaymaz
   font-weight: 600;
   letter-spacing: 0.04em;
   text-decoration: none !important;
   border: none !important;
   line-height: 1;
-  // ── Görev 2.2: light=koyu, dark=kırmızı; her ikisinde hover gold ──
   color: var(--fg) !important;
-  transition: color 160ms ease, font-size 200ms ease;
+  transition: color 160ms ease;
 
   &:hover { color: var(--gold) !important; opacity: 1; }
 
+  // psi logosu sabit boyut/pozisyon (font rotasyonundan bağımsız)
   .sh-logo {
     display: inline-flex;
     align-items: center;
-    svg { width: 1.15em; height: 1.15em; display: block; }
+    flex-shrink: 0;
+    width: 2.7rem;
+    height: 2.7rem;
+    justify-content: center;
+    svg { width: 2.7rem; height: 2.7rem; display: block; }
   }
-  .sh-word { color: inherit; }
-  .sh-tld { color: var(--accent); }   // ".ch" daima kırmızı
+  // Yalnız SAYKO ismi font değiştirir; .ch sabit
+  .sh-word {
+    color: inherit;
+    display: inline-flex;
+    align-items: baseline;
+    line-height: 1;
+  }
+  .sh-name {
+    font-size: 2.4rem;
+    line-height: 1;
+    font-family: 'Bebas Neue', 'Playfair Display', serif;  // JS inline ile override edilir
+  }
+  .sh-tld {
+    color: var(--accent);
+    font-family: 'Bebas Neue', 'Playfair Display', serif !important;  // ".ch" sabit font
+    font-size: 2.4rem;
+    line-height: 1;
+  }
 }
 
 // Dark mode: SAYKO kırmızı (currentColor → ψ kolları da kırmızı), hover gold
@@ -1138,6 +1160,7 @@ html[saved-theme="dark"] #sc-progress,
 
 // ─── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ────────────────
 
+// Day/night sitenin moduyla AYNI: light→açık sepya kutu, dark→siyah kutu
 #sc-sbb {
   position: fixed;
   top: 0;
@@ -1147,19 +1170,19 @@ html[saved-theme="dark"] #sc-progress,
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #1a1a1a;
-  color: #f3ece0;
-  border-left: 1px solid #2e2e2e;
-  box-shadow: -2px 0 16px rgba(0,0,0,0.25);
+  background: #f2efe9;
+  color: #2b2826;
+  border-left: 1px solid #ddd6c9;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.07);
   padding-bottom: 0.5rem;
 }
 
 html[saved-theme="dark"] #sc-sbb,
 [saved-theme="dark"] #sc-sbb {
-  background: #ede8df;
-  color: #2b2826;
-  border-left-color: #d0c8bc;
-  box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+  background: #0c0c0c;
+  color: #ece7dd;
+  border-left-color: #242424;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.45);
 }
 
 // SBB header row: logo + controls
@@ -1169,25 +1192,26 @@ html[saved-theme="dark"] #sc-sbb,
   width: 100%;
   padding: 8px 8px 6px;
   gap: 4px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   min-height: 48px;
 }
 
 html[saved-theme="dark"] .sc-sbb-hdr,
 [saved-theme="dark"] .sc-sbb-hdr {
-  border-bottom-color: rgba(0,0,0,0.1);
+  border-bottom-color: rgba(255,255,255,0.08);
 }
 
-// Logo in SBB box
+// Logo in SBB box (sabit kompakt font)
 .sc-logo-btn {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   text-decoration: none !important;
   border: none !important;
-  color: #f3ece0 !important;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
+  color: #2b2826 !important;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
   line-height: 1;
   flex: 1;
   min-width: 0;
@@ -1216,7 +1240,7 @@ html[saved-theme="dark"] .sc-sbb-hdr,
 
 html[saved-theme="dark"] .sc-logo-btn,
 [saved-theme="dark"] .sc-logo-btn {
-  color: #2b2826 !important;
+  color: #ece7dd !important;
   &:hover { color: var(--accent) !important; }
 }
 
@@ -1275,12 +1299,12 @@ html[saved-theme="dark"] .sc-face,
 }
 .sc-cap { fill: #1a1a1a; }
 
-// SAYKO.ch brand text on clock face
+// SAYKO.ch brand text on clock face — SABİT font: Contrail One
 .sc-sbb-brand {
   fill: #6b5a42;
-  font-family: 'Bebas Neue', Georgia, serif;
+  font-family: 'Contrail One', Georgia, serif;
   user-select: none;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 html[saved-theme="dark"] .sc-sbb-brand,
 [saved-theme="dark"] .sc-sbb-brand {
@@ -1295,11 +1319,11 @@ html[saved-theme="dark"] .sc-sbb-brand,
   font-style: normal;
   letter-spacing: 0.04em;
   line-height: 1;
-  color: #f3ece0;
+  color: #2b2826;
 }
 
 html[saved-theme="dark"] #sc-day,
-[saved-theme="dark"] #sc-day { color: #2b2826; }
+[saved-theme="dark"] #sc-day { color: #ece7dd; }
 
 #sc-day.weekend { color: var(--accent) !important; }
 
@@ -1313,7 +1337,7 @@ html[saved-theme="dark"] #sc-day,
   padding: 0;
   border: none;
   background: none;
-  color: rgba(243, 236, 224, 0.6);
+  color: rgba(43, 40, 38, 0.55);
   cursor: pointer;
   border-radius: 3px;
   transition: color 150ms ease, background 150ms ease;
@@ -1322,8 +1346,8 @@ html[saved-theme="dark"] #sc-day,
   & svg { display: block; }
 
   &:hover {
-    color: #f3ece0;
-    background: rgba(255,255,255,0.1);
+    color: #2b2826;
+    background: rgba(0,0,0,0.07);
   }
 
   &.sc-active { color: var(--accent) !important; }
@@ -1331,12 +1355,12 @@ html[saved-theme="dark"] #sc-day,
 
 html[saved-theme="dark"] .sc-toolbtn,
 [saved-theme="dark"] .sc-toolbtn {
-  color: rgba(43, 40, 38, 0.6);
-  &:hover { background: rgba(0,0,0,0.1); color: #2b2826; }
+  color: rgba(236, 231, 221, 0.6);
+  &:hover { background: rgba(255,255,255,0.1); color: #ece7dd; }
 }
 
-// Tema tuşu: dark modda kırmızı
-:root[saved-theme="dark"] #sc-sbb .sc-themebtn { color: var(--accent) !important; }
+// Tema tuşu: aktif modda kırmızı vurgulu
+#sc-sbb .sc-themebtn { color: var(--accent) !important; }
 
 // Quartz darkmode buton — sidebarlarda gizli (SBB kutusu devraldı)
 .sidebar.right .darkmode { display: none !important; }
@@ -1419,18 +1443,11 @@ html[saved-theme="dark"] #sc-totop:hover,
   .sc-neural-ic { flex-shrink: 0; }
 }
 
-// Kursif "Nöral Ağ" başlığı — sadece graf açıkken görünür
-.sc-neural-title {
-  display: none;
-  font-family: 'Dancing Script', 'Cedarville Cursive', cursive;
-  font-size: 1.15rem;
-  color: var(--bordo);
-  margin: 0.3rem 0 0.5rem 0.2rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.graph:not(.sc-graph-collapsed) .sc-neural-title { display: block; }
+// Graph içindeki "Nöral Ağ" başlık metni ve kursif başlık tamamen gizli
+// (SBB kutusundaki beyin tuşu grafiği açıp kapatıyor)
+.graph > h3,
+.graph > h3.sc-graph-link,
+.sc-neural-title { display: none !important; }
 
 // ─── Sol sütun perde (curtain) toggle ───
 
@@ -1624,17 +1641,18 @@ html[saved-theme="dark"] .cg-cell,
   .recent-ul .recent-li:nth-child(n+6) { display: none; }
 }
 
-// ─── Görev 1: TopicGrid — HEXAGONAL HONEYCOMB konu kutuları ───
-// Flat-top altıgenler, 5'erli sıralar, çift sıralar yarım hücre offset,
-// sıralar dikey olarak ~H/4 örtüşür (balpeteği nesting).
-$sc-hex-w: 140px;
-$sc-hex-h: 120px;
-$sc-hex-mx: 1px;            // yatay margin (0-gap honeycomb)
-$sc-hex-overlap: 30px;      // dikey örtüşme (H/4)
-$sc-hex-offset: 71px;       // çift sıra yatay kayma ((W+2px)/2)
+// ─── Görev 1: TopicGrid — POINTY-TOP HONEYCOMB konu kutuları ───
+// Sivri-tepe altıgenler dikey kenarlarından temas eder (sıfır boşluk, dolu
+// balpeteği); çift sıralar yarım hücre kayar, sıralar dikey 1/4H örtüşür.
+// Geometri: W (yatay düz kenar) / H (dikey sivri) ≈ 0.866 oranı → regular hex.
+$sc-hx-w: 132px;            // hücre genişliği (yatay düz-kenar mesafesi)
+$sc-hx-h: 152px;            // hücre yüksekliği (sivri-sivri)
+$sc-hx-over: 38px;          // dikey örtüşme (H/4) → satır adımı 0.75H
+$sc-hx-off: 66px;           // çift sıra yatay kayma (W/2)
+$sc-hx-per: 5;              // satır başına altıgen (kendiliğinden sarar)
 
 body[data-slug$="/index"] {
-  // Görev 9: "Bu klasör altındaki N öğe." metni gizli
+  // "Bu klasör altındaki N öğe." metni gizli
   .page-listing > p { display: none !important; }
 
   .page-listing .section-ul {
@@ -1645,74 +1663,76 @@ body[data-slug$="/index"] {
     gap: 0 !important;
     list-style: none !important;
     padding: 0 !important;
-    margin: 2.5rem auto 2rem !important;
-    max-width: #{($sc-hex-w + 2 * $sc-hex-mx) * 5};
+    margin: 3rem auto 2.5rem !important;
+    max-width: #{$sc-hx-w * $sc-hx-per + $sc-hx-off};
   }
   .page-listing .section-li {
-    width: $sc-hex-w !important;
-    height: $sc-hex-h !important;
-    margin: 0 $sc-hex-mx -#{$sc-hex-overlap} !important;
+    position: relative;
+    width: $sc-hx-w !important;
+    height: $sc-hx-h !important;
+    margin: 0 0 -#{$sc-hx-over} !important;
     padding: 0 !important;
     border: none !important;
-    display: flex !important;
-    flex-direction: column;
-    transition: transform 160ms ease;
+    display: block !important;
+    transition: transform 160ms ease, filter 160ms ease, z-index 0s;
   }
-  // İlk sıra (1-5) örtüşmesin
-  .page-listing .section-li:nth-child(-n+5) { margin-top: 0 !important; }
-  // Çift sıralar (6-10, 16-20, ...) yarım hücre sağa kayar → honeycomb nesting
+  // Çift sıralar (6-10, 16-20, …) yarım hücre sağa kayar → honeycomb nesting
   .page-listing .section-li:nth-child(10n+6),
   .page-listing .section-li:nth-child(10n+7),
   .page-listing .section-li:nth-child(10n+8),
   .page-listing .section-li:nth-child(10n+9),
   .page-listing .section-li:nth-child(10n+10) {
-    transform: translateX(#{$sc-hex-offset});
+    transform: translateX(#{$sc-hx-off});
   }
+  // Ara sarmalayıcıları (.section/.desc/h3) hücreyi kaplayacak şekilde düzleştir
   .page-listing .section-li .meta,
   .page-listing .section-li .tags { display: none !important; }
-  .page-listing .section-li .desc { margin: 0 !important; flex: 1; display: flex; }
-  .page-listing .section-li .desc h3 { margin: 0 !important; font-size: inherit !important; border: none !important; flex: 1; display: flex; }
+  .page-listing .section-li .section,
+  .page-listing .section-li .desc,
+  .page-listing .section-li .desc h3 {
+    margin: 0 !important; padding: 0 !important; border: none !important;
+    position: static !important; font-size: inherit !important;
+  }
+  // Asıl altıgen: a etiketi hücreyi tam kaplar (absolute inset)
   .page-listing .section-li .desc h3 a {
+    position: absolute !important;
+    inset: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    padding: 14px 26px !important;
-    // Flat-top hexagon
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background: var(--bg-2);
-    color: var(--fg) !important;
+    padding: 0 20px !important;
+    // Pointy-top hexagon
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #e6dcc6;
+    color: #3a3026 !important;
+    border-bottom: none !important;
     font-family: 'Source Serif 4', serif;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 600;
     font-style: normal !important;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-align: center !important;
-    line-height: 1.25;
-    // 3 satır sonrası ellipsis
+    line-height: 1.2;
     overflow: hidden;
     display: -webkit-box !important;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     align-content: center;
-    transition: background 160ms ease, color 160ms ease, transform 160ms ease, filter 160ms ease;
+    transition: background 160ms ease, color 160ms ease;
   }
-  // Hover: kırmızı (clip-path nedeniyle outline yerine glow + scale)
+  // Hover: kırmızı + öne çıkar
   .page-listing .section-li:hover { z-index: 5; }
   .page-listing .section-li .desc h3 a:hover {
     background: var(--accent) !important;
     color: #fff !important;
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 3px rgba(200,16,46,0.55));
   }
 }
 
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a {
-  background: #1c1a16;
-  color: #ece7dd !important;
+  background: #211d17;
+  color: #d8cdb8 !important;
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover {
@@ -1732,21 +1752,21 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
   padding: 0;
   border: none;
   background: none;
-  color: rgba(243, 236, 224, 0.5);
+  color: rgba(43, 40, 38, 0.45);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 200ms ease, color 140ms ease;
   svg { display: block; }
-  &:hover { color: #f3ece0; }
+  &:hover { color: #2b2826; }
   &[aria-expanded="false"] { transform: rotate(180deg); }
 }
 
 html[saved-theme="dark"] #sc-clk-toggle,
 [saved-theme="dark"] #sc-clk-toggle {
-  color: rgba(43, 40, 38, 0.5);
-  &:hover { color: #2b2826; }
+  color: rgba(236, 231, 221, 0.5);
+  &:hover { color: #ece7dd; }
 }
 
 #sc-sbb { position: fixed; } // ensure relative context for chevron
@@ -1764,9 +1784,9 @@ html[saved-theme="dark"] #sc-clk-toggle,
 .sc-bclayer {
   font-family: 'Source Serif 4', Georgia, serif;
   font-size: 0.7rem;
-  color: rgba(243, 236, 224, 0.75);
+  color: rgba(43, 40, 38, 0.75);
   padding: 5px 10px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(0,0,0,0.08);
   text-decoration: none !important;
   text-align: left !important;
   white-space: nowrap;
@@ -1782,14 +1802,14 @@ html[saved-theme="dark"] #sc-clk-toggle,
 
 html[saved-theme="dark"] .sc-bclayer,
 [saved-theme="dark"] .sc-bclayer {
-  color: rgba(43, 40, 38, 0.75);
-  border-top-color: rgba(0,0,0,0.1);
+  color: rgba(236, 231, 221, 0.75);
+  border-top-color: rgba(255,255,255,0.08);
 }
 
 .sc-bcl-article {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #f3ece0 !important;
+  color: #2b2826 !important;
   border-left: 2px solid #C8102E;
   padding-left: 8px;
   white-space: normal;
@@ -1797,13 +1817,13 @@ html[saved-theme="dark"] .sc-bclayer,
   display: block;
   cursor: default;
   text-align: left !important;
-  &:hover { color: #f3ece0 !important; }
+  &:hover { color: #2b2826 !important; }
 }
 
 html[saved-theme="dark"] .sc-bcl-article,
 [saved-theme="dark"] .sc-bcl-article {
-  color: #2b2826 !important;
-  &:hover { color: #2b2826 !important; }
+  color: #ece7dd !important;
+  &:hover { color: #ece7dd !important; }
 }
 
 // ─── Mobile ──────────────────────────────────────
@@ -1828,17 +1848,26 @@ html[saved-theme="dark"] .sc-bcl-article,
   }
   .cg-cell { padding: 24px 12px 20px; }
 
-  // Görev 1: Konu hex grid mobilde daha küçük + 3 sütun, offset kapalı
+  // Konu hex grid mobilde: 3'erli pointy-top honeycomb
   body[data-slug$="/index"] {
-    .page-listing .section-ul { max-width: #{(112px + 6px) * 3}; }
+    $m-w: 104px;
+    $m-h: 120px;
+    $m-over: 30px;
+    $m-off: 52px;
+    .page-listing .section-ul { max-width: #{$m-w * 3 + $m-off}; }
     .page-listing .section-li {
-      width: 112px !important;
-      height: 98px !important;
-      margin: 0 3px -22px !important;
+      width: $m-w !important;
+      height: $m-h !important;
+      margin: 0 0 -#{$m-over} !important;
       transform: none !important;
     }
-    .page-listing .section-li:nth-child(-n+3) { margin-top: 0 !important; }
-    .page-listing .section-li .desc h3 a { font-size: 0.64rem; padding: 10px 20px !important; }
+    // 3'erli: çift sıralar (4-6, 10-12, …) yarım hücre kayar
+    .page-listing .section-li:nth-child(6n+4),
+    .page-listing .section-li:nth-child(6n+5),
+    .page-listing .section-li:nth-child(6n+6) {
+      transform: translateX(#{$m-off}) !important;
+    }
+    .page-listing .section-li .desc h3 a { font-size: 0.6rem; padding: 0 14px !important; }
   }
 }
 
