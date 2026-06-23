@@ -168,7 +168,7 @@ function ensure(){
     lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
     // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
-    gtb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.5 2 6 4.5 6 7.5c0 1.5.5 2.8 1.4 3.8C6.5 12.1 6 13.5 6 15c0 3.3 2.7 6 6 6s6-2.7 6-6c0-1.5-.5-2.9-1.4-3.7.9-1 1.4-2.3 1.4-3.8C18 4.5 15.5 2 12 2z"/><line x1="12" y1="10" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg>';
+    gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>';
     gtb.addEventListener('click',function(){var g=document.querySelector('.graph');if(g){var closed=g.classList.toggle('sc-graph-collapsed');this.classList.toggle('sc-active',!closed);}});
     // Theme
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema';bt.setAttribute('aria-label','Tema');
@@ -192,6 +192,24 @@ function ensure(){
     chev.addEventListener('click',function(){var exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',exp?'false':'true');bclayers.classList.toggle('sc-collapsed',exp);});
     sbb.appendChild(bclayers);sbb.appendChild(chev);
     document.body.appendChild(sbb);
+  }
+  // Mobil/tablet: SBB-kutusunu açan cardinal kırmızı psi tuşu (FAB) + arka perde
+  var fab=document.getElementById('sc-sbb-fab');
+  if(!fab){
+    fab=document.createElement('button');fab.type='button';fab.id='sc-sbb-fab';fab.setAttribute('aria-label','SAYKO panelini aç/kapat');
+    fab.innerHTML='<span class="sc-fab-icon">'+SC_LOGO+'</span>';
+    var bd=document.createElement('div');bd.id='sc-sbb-backdrop';bd.setAttribute('aria-hidden','true');
+    fab.addEventListener('click',function(){document.body.classList.toggle('sc-sbb-open');});
+    bd.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');});
+    document.body.appendChild(bd);document.body.appendChild(fab);
+  }
+  // Sol sütun perdesini geri açan ">>" tuşu (sol-orta, sabit)
+  var lrb=document.getElementById('sc-lsb-restore');
+  if(!lrb){
+    lrb=document.createElement('button');lrb.type='button';lrb.id='sc-lsb-restore';lrb.setAttribute('aria-label','Sol sütunu aç');
+    lrb.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 18 13 12 7 6"/><polyline points="13 18 19 12 13 6"/></svg>';
+    lrb.addEventListener('click',function(){document.body.classList.remove('sc-lsb-closed');});
+    document.body.appendChild(lrb);
   }
   // Back-to-top
   var tt=document.getElementById('sc-totop');
@@ -223,7 +241,7 @@ function ensure(){
   }
   if(!window.__scScroll){
     window.addEventListener('scroll',function(){if(window.__scProg)window.__scProg();var y=window.scrollY||window.pageYOffset;document.body.classList.toggle('sc-scrolled',y>100);var tt=document.getElementById('sc-totop');if(tt)tt.classList.toggle('sc-show',y>400);},{passive:true});
-    window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();});
+    window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();clearTimeout(window.__scFitT);window.__scFitT=setTimeout(function(){scFitHex();scFitHeader();},160);});
     window.__scScroll=1;
   }
 }
@@ -268,6 +286,28 @@ function updateBcLayers(){
     }
   }
 }
+// Altıgen konu kutuları: yazı, altıgenin geniş orta bandına TAM sığana dek küçülür
+function scFitHex(){
+  var slug=document.body.getAttribute('data-slug')||'';
+  if(!/\/index$/.test(slug))return; // yalnız klasör (konu) sayfaları
+  var links=document.querySelectorAll('.page-listing .section-li .desc h3 a');
+  links.forEach(function(a){
+    var lbl=a.querySelector('.sc-hx-label');
+    if(!lbl){lbl=document.createElement('span');lbl.className='sc-hx-label';lbl.textContent=(a.textContent||'').trim();a.textContent='';a.appendChild(lbl);}
+    var li=a.closest('.section-li');if(!li)return;
+    var H=li.clientHeight||152,W=li.clientWidth||132;
+    var maxH=H*0.52,maxW=W-18;
+    var fs=12;lbl.style.lineHeight='1.18';lbl.style.fontSize=fs+'px';
+    var guard=0;
+    while((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>6.5&&guard<40){fs-=0.5;lbl.style.fontSize=fs+'px';guard++;}
+  });
+}
+// Header SAYKO kelimesi: sabit kutuya sığana dek küçülür (logo/slogan asla kaymaz, ".ch" kırpılmaz)
+function scFitHeader(){
+  var w=document.querySelector('.site-header .sh-word');if(!w)return;
+  var fs=2.1;w.style.fontSize=fs+'rem';
+  var g=0;while(w.scrollWidth>w.clientWidth&&fs>1.2&&g<28){fs-=0.07;w.style.fontSize=fs+'rem';g++;}
+}
 function perNav(){
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
   var isHome=(document.body.getAttribute('data-slug')==='index');
@@ -276,16 +316,26 @@ function perNav(){
   if(ph&&!ph.querySelector('.site-header')){
     var fnt2=SC_FONTS[Math.floor(Math.random()*SC_FONTS.length)];
     var sh=document.createElement('div');sh.className='site-header';
-    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><p class="site-header-slogan"></p>';
+    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><span class="sh-divider" aria-hidden="true"></span><p class="site-header-slogan"></p>';
     sh.querySelector('.sh-name').style.fontFamily=fnt2+',serif';
     sh.querySelector('.site-header-slogan').textContent=slogan;
     ph.insertAdjacentElement('afterbegin',sh);
+    // Kelimeyi sabit kutuya sığdır → logo/slogan sabit kalır, ".ch" asla kırpılmaz
+    requestAnimationFrame(scFitHeader);
+    if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHeader);}
   }
-  // Search: move to body as fixed tail (protrudes from left edge of SBB box)
+  // Search: move to body as fixed tail (SBB kutusunun sol kenarından uzanır).
+  // Tıklanınca Quartz container'a .active ekler; biz bunu .sc-search-open olarak
+  // kuyruğa yansıtırız → kuyruk sola doğru genişleyip arama çubuğuna dönüşür.
   var srchEl=document.querySelector('.search');
   if(srchEl&&!srchEl.classList.contains('sc-search-tail')){
     srchEl.classList.add('sc-search-tail');
     document.body.appendChild(srchEl);
+    var scont=srchEl.querySelector('.search-container');
+    if(scont&&window.MutationObserver){
+      var smo=new MutationObserver(function(){srchEl.classList.toggle('sc-search-open',scont.classList.contains('active'));});
+      smo.observe(scont,{attributes:true,attributeFilter:['class']});
+    }
   }
   if(isHome){
     var center=document.querySelector('.center');
@@ -327,15 +377,9 @@ function perNav(){
   // Sol sütun perde (curtain) toggle butonu — "Son Yazılar"ın hemen üstünde
   var lsb=document.querySelector('.sidebar.left');
   if(lsb&&!lsb.querySelector('.sc-curtain-btn')){
-    var cb=document.createElement('button');cb.type='button';cb.className='sc-curtain-btn';cb.setAttribute('aria-label','Sol sütun aç/kapat');cb.setAttribute('data-open','1');
-    cb.innerHTML='<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg><span class="sc-curtain-label">Son Yazılar</span>';
-    cb.addEventListener('click',function(){
-      var isOpen=this.getAttribute('data-open')==='1';
-      lsb.classList.toggle('sc-curtain-closed',isOpen);
-      this.setAttribute('data-open',isOpen?'0':'1');
-      var ic=this.querySelector('svg');
-      if(ic){ic.innerHTML=isOpen?'<polyline points="9 18 15 12 9 6"/>':'<polyline points="15 18 9 12 15 6"/>';}
-    });
+    var cb=document.createElement('button');cb.type='button';cb.className='sc-curtain-btn';cb.title='Sol sütunu kapat';cb.setAttribute('aria-label','Sol sütunu kapat');
+    cb.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 18 11 12 17 6"/><polyline points="11 18 5 12 11 6"/></svg>';
+    cb.addEventListener('click',function(){document.body.classList.add('sc-lsb-closed');});
     var rn2=lsb.querySelector('.recent-notes');
     if(rn2)lsb.insertBefore(cb,rn2);else lsb.appendChild(cb);
   }
@@ -346,6 +390,8 @@ function perNav(){
   }
   updateBcLayers();
   if(window.__scProg)window.__scProg();
+  requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
+  if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
 }
 function init(){ensure();perNav();}
 document.addEventListener('DOMContentLoaded',init);
