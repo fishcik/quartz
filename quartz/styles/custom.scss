@@ -41,6 +41,11 @@ html:not([saved-theme="dark"]),
   --accent:    #c8102e;   // ── Müfredat tasarım sistemi: TEK kırmızı ──
   --gold:      #b8893b;   // soft gold (hover vurguları)
   --progress:  #c1272d;   // cardinal kırmızı SADECE progress bar'da
+
+  // Sayfa (.page) max-width 1500px ve ortalı; geniş ekranda sağ sütun ile
+  // viewport kenarı arası boşluk. SBB-kutusu + arama kuyruğu bu kadar içeri kayar
+  // → sağ sütunun sol sınırı ile tam hizalanır.
+  --sc-pgap: max(0px, calc((100vw - 1500px) / 2));
 }
 
 // ─── Dark mode (zifiri siyah + kırık beyaz) ──────
@@ -457,18 +462,19 @@ button.explorer-toggle h2 {
   display: flex !important;
   position: fixed !important;
   top: 0 !important;
-  right: 200px !important;
+  right: calc(200px + var(--sc-pgap, 0px)) !important;   // sağ sütunun sol sınırı
   z-index: 9998 !important;
   width: 44px !important;
   height: 48px !important;
-  align-items: center !important;
-  justify-content: center !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
   background: #f2efe9 !important;
   border-radius: 6px 0 0 6px !important;
   box-shadow: -2px 0 10px rgba(0,0,0,0.06);
   margin: 0 !important;
   padding: 0 !important;
-  transition: width 220ms ease, background 160ms ease;
+  overflow: visible !important;
+  transition: width 240ms cubic-bezier(.2,.7,.3,1), background 160ms ease;
 }
 
 html[saved-theme="dark"] .search.sc-search-tail {
@@ -476,11 +482,12 @@ html[saved-theme="dark"] .search.sc-search-tail {
   box-shadow: -2px 0 10px rgba(0,0,0,0.4);
 }
 
-.search.sc-search-tail .search-button {
+.search.sc-search-tail > .search-button {
   width: 44px !important;
   height: 48px !important;
   min-height: unset !important;
   padding: 0 !important;
+  flex: 0 0 44px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -495,9 +502,93 @@ html[saved-theme="dark"] .search.sc-search-tail {
   & svg { width: 17px !important; height: 17px !important; color: inherit !important; }
 }
 
-html[saved-theme="dark"] .search.sc-search-tail .search-button {
+html[saved-theme="dark"] .search.sc-search-tail > .search-button {
   color: #ece7dd !important;
   &:hover { color: var(--accent) !important; }
+}
+
+// ── Görev 9: kuyruk tıklanınca SOLA uzar ve arama çubuğuna dönüşür ──
+// (tam ekran modal + blur YOK; sonuçlar çubuğun altında açılan panelde)
+.search.sc-search-tail.sc-search-open {
+  width: min(440px, calc(100vw - 2 * var(--sc-pgap, 0px) - 230px)) !important;
+}
+// Container artık tam-ekran modal değil; kuyruğun içine oturan inline panel
+.search.sc-search-tail > .search-container {
+  position: absolute !important;
+  contain: none !important;
+  inset: 0 0 auto 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow: visible !important;
+  backdrop-filter: none !important;
+  background: transparent !important;
+}
+.search.sc-search-tail > .search-container.active { display: block !important; }
+.search.sc-search-tail > .search-container > .search-space {
+  width: 100% !important;
+  margin: 0 !important;
+}
+// Arama input'u = çubuğun kendisi (kuyruk yüksekliğinde, sol köşe yuvarlak)
+.search.sc-search-tail > .search-container > .search-space > input.search-bar {
+  width: 100% !important;
+  height: 48px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 14px 0 40px !important;        // soldaki arama ikonu için boşluk
+  border: none !important;
+  border-radius: 6px 0 0 6px !important;
+  background: #f2efe9 !important;
+  color: #2b2826 !important;
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.92rem !important;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.06) !important;
+}
+html[saved-theme="dark"] .search.sc-search-tail > .search-container > .search-space > input.search-bar {
+  background: #0c0c0c !important;
+  color: #ece7dd !important;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.4) !important;
+}
+.search.sc-search-tail > .search-container > .search-space > input.search-bar:focus {
+  outline: none !important;
+}
+// Açıkken arama ikonu input'un sol başında durur (tıklama input'a geçer)
+.search.sc-search-tail.sc-search-open > .search-button {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 40px !important;
+  height: 48px !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+// Sonuç listesi: çubuğun altına açılan panel (önizleme paneli gizli)
+.search.sc-search-tail > .search-container > .search-space > .search-layout {
+  position: absolute !important;
+  top: 50px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-height: min(64vh, 520px) !important;
+  margin: 0 !important;
+  border: 1px solid var(--br) !important;
+  border-radius: 0 0 8px 8px !important;
+  background: var(--bg) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+.search.sc-search-tail > .search-container > .search-space > .search-layout.display-results {
+  display: block !important;
+}
+.search.sc-search-tail > .search-container > .search-space > .search-layout > .preview-container {
+  display: none !important;
+}
+.search.sc-search-tail > .search-container > .search-space > .search-layout > .results-container {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: min(64vh, 520px) !important;
+  border: none !important;
 }
 
 input,
@@ -1030,13 +1121,17 @@ body[data-slug="index"] .site-header {
   z-index: 900;
 }
 
-// ── Görev 1.6: ψ logo + SAYKO.CH ──
+// ── Görev 1.6 / 6: ψ logo + SAYKO.ch ──
+// Tüm çocuklar SABİT genişlikte → başlığın iç genişliği değişmez → ortalı
+// başlık her zaman aynı yerde durur; psi logosu ve slogan kaymaz.
+// SAYKO ismi font değiştirir ama JS auto-fit kelimeyi sabit kutuya sığdırır
+// (".ch" asla kırpılmaz, logo asla oynamaz).
 .site-header-title {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  height: 3.2rem;                 // sabit yükseklik → font değişse de psi + slogan kaymaz
+  height: 3.2rem;                 // sabit yükseklik → slogan dikeyde kaymaz
   font-weight: 600;
   letter-spacing: 0.04em;
   text-decoration: none !important;
@@ -1051,31 +1146,49 @@ body[data-slug="index"] .site-header {
   .sh-logo {
     display: inline-flex;
     align-items: center;
-    flex-shrink: 0;
+    flex: 0 0 2.7rem;
     width: 2.7rem;
     height: 2.7rem;
     justify-content: center;
     svg { width: 2.7rem; height: 2.7rem; display: block; }
   }
-  // Yalnız SAYKO ismi font değiştirir; .ch sabit
+  // SABİT genişlikli kelime kutusu — içerik ortalanır, taşma gizli (auto-fit zaten sığdırır)
   .sh-word {
     color: inherit;
+    flex: 0 0 12.5rem;
+    width: 12.5rem;
     display: inline-flex;
     align-items: baseline;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
     line-height: 1;
+    font-size: 2.1rem;            // JS auto-fit bu değeri kutuya göre küçültür
   }
+  // Yalnız SAYKO ismi font değiştirir; .ch sabit. İkisi de kutudan font-size devralır.
   .sh-name {
-    font-size: 2.4rem;
+    font-size: inherit;
     line-height: 1;
     font-family: 'Bebas Neue', 'Playfair Display', serif;  // JS inline ile override edilir
   }
   .sh-tld {
     color: var(--accent);
     font-family: 'Bebas Neue', 'Playfair Display', serif !important;  // ".ch" sabit font
-    font-size: 2.4rem;
+    font-size: inherit;
     line-height: 1;
   }
 }
+
+// Görev 6: başlık ile slogan arasında ince ayraç çizgi
+.site-header .sh-divider {
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  margin: 0.55rem auto 0;
+  background: var(--br);
+  border: none;
+}
+body.sc-scrolled .site-header .sh-divider { display: none; }
 
 // Dark mode: SAYKO kırmızı (currentColor → ψ kolları da kırmızı), hover gold
 html[saved-theme="dark"] .site-header-title,
@@ -1164,7 +1277,7 @@ html[saved-theme="dark"] #sc-progress,
 #sc-sbb {
   position: fixed;
   top: 0;
-  right: 0;
+  right: var(--sc-pgap, 0px);          // sağ sütunun sağ kenarı ile hizalı
   width: 200px;
   z-index: 9999;
   display: flex;
@@ -1175,6 +1288,7 @@ html[saved-theme="dark"] #sc-progress,
   border-left: 1px solid #ddd6c9;
   box-shadow: -2px 0 16px rgba(0,0,0,0.07);
   padding-bottom: 0.5rem;
+  transition: transform 300ms cubic-bezier(.2,.7,.3,1);
 }
 
 html[saved-theme="dark"] #sc-sbb,
@@ -1451,45 +1565,72 @@ html[saved-theme="dark"] #sc-totop:hover,
 
 // ─── Sol sütun perde (curtain) toggle ───
 
+// Görev 5: sadece "«" (etiketsiz, küçük, sağ üstte). Tıklanınca sol sütun komple kapanır.
 .sc-curtain-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  width: 100%;
-  padding: 0.45rem 0.5rem;
-  margin-bottom: 0.25rem;
+  justify-content: center;
+  align-self: flex-end;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  margin: 0 0 0.4rem auto;
   background: none;
-  border: none;
-  border-top: 1px solid var(--br);
-  border-bottom: 1px solid var(--br);
+  border: 1px solid var(--br);
+  border-radius: 5px;
   color: var(--fg-3);
-  font-family: 'Source Serif 4', serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
   cursor: pointer;
-  transition: color 140ms ease, background 140ms ease;
-  text-align: left;
+  transition: color 140ms ease, background 140ms ease, border-color 140ms ease;
 
-  svg { flex-shrink: 0; transition: transform 200ms ease; }
-  &:hover { color: var(--fg); background: var(--bordo-d); }
+  svg { display: block; }
+  &:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 }
 
-.sc-curtain-label { flex: 1; }
-
-.sidebar.left.sc-curtain-closed > *:not(.sc-curtain-btn) {
-  overflow: hidden;
-  max-height: 0 !important;
-  opacity: 0;
-  margin: 0 !important;
-  padding: 0 !important;
-  pointer-events: none;
-  transition: max-height 320ms ease, opacity 300ms ease;
+// Perde kapalı: sol sütun tamamen gizli + masaüstünde sol kolon genişliği 0
+body.sc-lsb-closed .sidebar.left { display: none !important; }
+@media all and (min-width: 1200px) {
+  body.sc-lsb-closed .page > #quartz-body {
+    grid-template-columns: 0 auto 200px !important;
+  }
 }
 
-// Sağ sidebar: SBB kutusu kadar üstten boşluk
-@media all and (min-width: 800px) {
+// Görev 5: ">>" geri-açma tuşu — sol-orta, sabit; yalnız perde kapalıyken görünür
+#sc-lsb-restore {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9996;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--br);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  background: var(--bg-2);
+  color: var(--tertiary);
+  cursor: pointer;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.10);
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+
+  svg { display: block; }
+  &:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+}
+body.sc-lsb-closed #sc-lsb-restore { display: flex; }
+html[saved-theme="dark"] #sc-lsb-restore { background: #1c1a16; color: var(--fg-3); border-color: #2a2620; }
+html[saved-theme="dark"] #sc-lsb-restore:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+
+// Mobil/tablette perde tuşları gizli (sol sütun yatay satıra dönüşür)
+@media (max-width: 1199px) {
+  .sc-curtain-btn,
+  #sc-lsb-restore { display: none !important; }
+}
+
+// Sağ sidebar: SBB kutusu kadar üstten boşluk (yalnız masaüstü — SBB docked)
+@media all and (min-width: 1200px) {
   .sidebar.right {
     padding-top: 280px !important;
   }
@@ -1637,8 +1778,12 @@ html[saved-theme="dark"] .cg-cell,
   }
   &[open] > summary::after { content: " −"; }
   .recent-ul { margin-top: 0.6rem; }
-  // Görev 1.4b: en fazla 5 yazı göster
-  .recent-ul .recent-li:nth-child(n+6) { display: none; }
+  // Görev 5: en yeni 4 yazı; en yeni en büyük (cascade)
+  .recent-ul .recent-li:nth-child(n+5) { display: none; }
+  .recent-ul .recent-li:nth-child(1) .desc h3 { font-size: 1.05rem !important; }
+  .recent-ul .recent-li:nth-child(2) .desc h3 { font-size: 0.94rem !important; }
+  .recent-ul .recent-li:nth-child(3) .desc h3 { font-size: 0.85rem !important; }
+  .recent-ul .recent-li:nth-child(4) .desc h3 { font-size: 0.78rem !important; }
 }
 
 // ─── Görev 1: TopicGrid — POINTY-TOP HONEYCOMB konu kutuları ───
@@ -1658,13 +1803,16 @@ body[data-slug$="/index"] {
   .page-listing .section-ul {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center !important;
+    // flex-start: kısmi son sıra da soldan hizalanır → boşluk/kopukluk olmaz;
+    // blok, max-width + margin auto ile yine ortalanır.
+    justify-content: flex-start !important;
     align-items: flex-start;
     gap: 0 !important;
     list-style: none !important;
     padding: 0 !important;
     margin: 3rem auto 2.5rem !important;
-    max-width: #{$sc-hx-w * $sc-hx-per + $sc-hx-off};
+    width: #{$sc-hx-w * $sc-hx-per + $sc-hx-off};
+    max-width: 100%;
   }
   .page-listing .section-li {
     position: relative;
@@ -1693,51 +1841,77 @@ body[data-slug$="/index"] {
     margin: 0 !important; padding: 0 !important; border: none !important;
     position: static !important; font-size: inherit !important;
   }
-  // Asıl altıgen: a etiketi hücreyi tam kaplar (absolute inset)
+  // Asıl altıgen: a etiketi hücreyi tam kaplar. clip-path kenarlığı kırptığı
+  // için ~1.5px cardinal kırmızı çerçeve şöyle kurulur:
+  //   a'nın zemini = çerçeve rengi (cardinal),  ::before 1.5px içeride = dolgu.
+  // isolation:isolate → ::before(z-index:-1) yalnız a'nın zemini üstünde kalır.
   .page-listing .section-li .desc h3 a {
     position: absolute !important;
     inset: 0 !important;
+    isolation: isolate;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0 20px !important;
-    // Pointy-top hexagon
+    padding: 0 9px !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background: #e6dcc6;
+    background: var(--accent);            // ── cardinal kırmızı outline (her iki mod) ──
     color: #3a3026 !important;
+    border: none !important;
     border-bottom: none !important;
-    font-family: 'Source Serif 4', serif;
-    font-size: 0.7rem;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.66rem;                   // JS auto-fit yoksa makul varsayılan
     font-weight: 600;
     font-style: normal !important;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     text-align: center !important;
-    line-height: 1.2;
+    line-height: 1.18;
     overflow: hidden;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    align-content: center;
-    transition: background 160ms ease, color 160ms ease;
+    transform-origin: center center;
+    will-change: transform;
+    transition: transform 200ms cubic-bezier(.2,.7,.3,1), color 180ms ease, filter 200ms ease;
   }
-  // Hover: kırmızı + öne çıkar
-  .page-listing .section-li:hover { z-index: 5; }
+  .page-listing .section-li .desc h3 a::before {
+    content: '';
+    position: absolute;
+    inset: 1.5px;                         // outline kalınlığı
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #e6dcc6;                  // dolgu (light)
+    z-index: -1;
+    transition: background 180ms ease;
+  }
+  .page-listing .section-li .desc h3 a .sc-hx-label {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    color: inherit;
+  }
+  // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
+  .page-listing .section-li:hover { z-index: 10; }
   .page-listing .section-li .desc h3 a:hover {
-    background: var(--accent) !important;
+    transform: scale(1.09);
     color: #fff !important;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.22));
   }
+  .page-listing .section-li .desc h3 a:hover::before { background: var(--accent); }
 }
 
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a {
-  background: #211d17;
+  background: var(--accent);            // outline yine cardinal
   color: #d8cdb8 !important;
+}
+html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a::before,
+[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a::before {
+  background: #1b1813;                  // dolgu (dark)
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover {
-  background: var(--accent) !important;
   color: #fff !important;
+}
+html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover::before,
+[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover::before {
+  background: var(--accent);
 }
 
 // ─── SBB breadcrumb katmanları + chevron (bottom-right) ───
@@ -1826,6 +2000,73 @@ html[saved-theme="dark"] .sc-bcl-article,
   &:hover { color: #ece7dd !important; }
 }
 
+// ─── Görev 3: Mobil/tablet SBB = sağdan açılır çekmece + cardinal psi FAB ───
+// Masaüstünde (≥1200px) SBB docked; FAB ve perde gizli.
+#sc-sbb-fab { display: none; }
+#sc-sbb-backdrop { display: none; }
+
+@media (max-width: 1199px) {
+  // SBB sağdan açılan çekmece olur
+  #sc-sbb {
+    right: 0 !important;
+    width: min(86vw, 300px) !important;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    transform: translateX(110%);          // kapalı: ekran dışında
+    box-shadow: -10px 0 34px rgba(0,0,0,0.30);
+    z-index: 10001;
+  }
+  body.sc-sbb-open #sc-sbb { transform: translateX(0); }
+
+  // Cardinal kırmızı psi tuşu — sağ kenarda dikey-orta tab
+  #sc-sbb-fab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 58px;
+    z-index: 10002;
+    padding: 0;
+    border: none;
+    border-radius: 9px 0 0 9px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -3px 0 14px rgba(0,0,0,0.28);
+    transition: opacity 200ms ease, transform 160ms ease;
+
+    .sc-fab-icon { display: inline-flex; width: 24px; height: 24px; }
+    .sc-fab-icon svg { width: 24px; height: 24px; display: block; }
+    .sc-fab-icon svg circle { fill: #fff !important; }   // psi noktaları da beyaz
+    &:active { transform: translateY(-50%) scale(0.95); }
+  }
+  body.sc-sbb-open #sc-sbb-fab { opacity: 0; pointer-events: none; }
+
+  // Arka perde — açıkken içeriği karartır, tıklayınca kapatır
+  #sc-sbb-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms ease;
+  }
+  body.sc-sbb-open #sc-sbb-backdrop { opacity: 1; pointer-events: auto; }
+
+  // Arama kuyruğu mobilde sağ-üst köşeye sabit (docked SBB yok)
+  .search.sc-search-tail { right: 0 !important; }
+  .search.sc-search-tail.sc-search-open {
+    width: min(420px, calc(100vw - 20px)) !important;
+  }
+}
+
 // ─── Mobile ──────────────────────────────────────
 
 @media (max-width: 768px) {
@@ -1834,11 +2075,8 @@ html[saved-theme="dark"] .sc-bcl-article,
   h1, .article-title { font-size: 2.1rem !important; }
   h2 { font-size: 1.65rem; }
 
-  // Mobilde SBB kutusu ve progress çubuğunu gizle
-  #sc-sbb { display: none; }
+  // Mobilde progress çubuğunu gizle (SBB artık çekmece; aşağıda ele alınıyor)
   #sc-progress { display: none; }
-  .search.sc-search-tail { display: none !important; }
-  .site-header-title { font-size: 1.9rem; }
 
   // Müfredat grid mobilde 2 sütun
   .curriculum-grid {
@@ -1867,7 +2105,7 @@ html[saved-theme="dark"] .sc-bcl-article,
     .page-listing .section-li:nth-child(6n+6) {
       transform: translateX(#{$m-off}) !important;
     }
-    .page-listing .section-li .desc h3 a { font-size: 0.6rem; padding: 0 14px !important; }
+    .page-listing .section-li .desc h3 a { padding: 0 7px !important; }
   }
 }
 
@@ -1875,4 +2113,14 @@ html[saved-theme="dark"] .sc-bcl-article,
   html { font-size: 15px; }
   article { padding: 1.25rem 1rem; }
   h1, .article-title { font-size: 1.85rem !important; }
+
+  // Çok dar telefon: header biraz küçülsün, grid tek-iki sütun dengeli
+  .site-header { padding-bottom: 0.8rem; }
+  .site-header-title { gap: 0.35rem; }
+  .site-header-title .sh-logo { flex: 0 0 2.2rem; width: 2.2rem; height: 2.2rem; }
+  .site-header-title .sh-logo svg { width: 2.2rem; height: 2.2rem; }
+  .site-header-title .sh-word { flex-basis: 10.5rem; width: 10.5rem; }
+  .curriculum-grid { gap: 8px; }
+  .cg-cell { padding: 20px 8px 16px; }
+  .cg-icon svg { width: 52px; height: 52px; }
 }
