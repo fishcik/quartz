@@ -165,7 +165,8 @@ function ensure(){
     var sbbHdr=document.createElement('div');sbbHdr.className='sc-sbb-hdr';
     var fnt=SC_FONTS[Math.floor(Math.random()*SC_FONTS.length)];
     var lg=document.createElement('a');lg.className='sc-logo-btn';lg.href='/';lg.setAttribute('aria-label','SAYKO.ch');
-    lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name" style="font-family:\''+fnt+'\',serif">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
+    lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
+    lg.querySelector('.sc-logo-name').style.fontFamily=fnt+',serif';
     // Graph toggle
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Graf aç/kapat');
     gtb.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="12" cy="19" r="1.8"/><line x1="6.7" y1="5.9" x2="10.8" y2="18"/><line x1="17.3" y1="5.9" x2="13.2" y2="18"/><line x1="6.8" y1="5" x2="17.2" y2="5"/></svg>';
@@ -276,7 +277,8 @@ function perNav(){
   if(ph&&!ph.querySelector('.site-header')){
     var fnt2=SC_FONTS[Math.floor(Math.random()*SC_FONTS.length)];
     var sh=document.createElement('div');sh.className='site-header';
-    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word"><span class="sh-name" style="font-family:\''+fnt2+'\',serif">SAYKO</span><span class="sh-tld">.ch</span></span></a><p class="site-header-slogan"></p>';
+    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><p class="site-header-slogan"></p>';
+    sh.querySelector('.sh-name').style.fontFamily=fnt2+',serif';
     sh.querySelector('.site-header-slogan').textContent=slogan;
     ph.insertAdjacentElement('afterbegin',sh);
   }
