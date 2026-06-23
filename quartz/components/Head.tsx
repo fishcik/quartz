@@ -289,7 +289,7 @@ function updateBcLayers(){
 // Altıgen konu kutuları: yazı, altıgenin geniş orta bandına TAM sığana dek küçülür
 function scFitHex(){
   var slug=document.body.getAttribute('data-slug')||'';
-  if(!/\/index$/.test(slug))return; // yalnız klasör (konu) sayfaları
+  if(!/\\/index$/.test(slug))return; // yalnız klasör (konu) sayfaları
   var links=document.querySelectorAll('.page-listing .section-li .desc h3 a');
   links.forEach(function(a){
     var lbl=a.querySelector('.sc-hx-label');
