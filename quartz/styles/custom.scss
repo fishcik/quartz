@@ -446,29 +446,38 @@ button.explorer-toggle h2 {
   user-select: none;
 }
 
-// ─── Search (araç çubuğunda, orijinal konumu gizli) ────────────────────
+// ─── Search — orijinal konumda gizli; perNav() body'ye taşır, tail olur ──
 
-// Orijinal konumda search gizlenir; perNav() toolbar'a taşır
 .search {
   display: none;
 }
 
-// Toolbar içinde search: kompakt ikon buton
-#sc-tools .search {
+// Arama kutusu: SBB-kutusu'nun sol kenarından dışarı uzanan kuyruk
+.search.sc-search-tail {
   display: flex !important;
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
-  width: auto !important;
-  max-width: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 200px !important;
+  z-index: 9998 !important;
+  width: 44px !important;
+  height: 48px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #1a1a1a !important;
+  border-radius: 6px 0 0 6px !important;
   margin: 0 !important;
-  z-index: auto !important;
+  padding: 0 !important;
+  transition: width 220ms ease, background 160ms ease;
 }
 
-#sc-tools .search .search-button {
-  width: 36px !important;
-  height: 36px !important;
-  min-height: 36px !important;
+html[saved-theme="dark"] .search.sc-search-tail {
+  background: #ede8df !important;
+}
+
+.search.sc-search-tail .search-button {
+  width: 44px !important;
+  height: 48px !important;
+  min-height: unset !important;
   padding: 0 !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -476,22 +485,17 @@ button.explorer-toggle h2 {
   gap: 0 !important;
   background: none !important;
   border: none !important;
-  color: var(--tertiary) !important;
-  border-radius: 4px;
-  transition: color 150ms ease, background 150ms ease;
+  color: #f3ece0 !important;
+  cursor: pointer !important;
 
-  &:hover {
-    color: var(--fg) !important;
-    background: rgba(0,0,0,0.06) !important;
-  }
-
+  &:hover { color: var(--accent) !important; }
   & p { display: none !important; }
-  & svg { width: 18px !important; height: 18px !important; color: inherit !important; }
+  & svg { width: 17px !important; height: 17px !important; color: inherit !important; }
 }
 
-[saved-theme="dark"] #sc-tools .search .search-button {
-  color: var(--darkgray) !important;
-  &:hover { background: rgba(255,255,255,0.08) !important; }
+html[saved-theme="dark"] .search.sc-search-tail .search-button {
+  color: #2b2826 !important;
+  &:hover { color: var(--accent) !important; }
 }
 
 input,
@@ -557,21 +561,11 @@ p.content-meta {
   border-bottom: 1px solid var(--br) !important;
 }
 
-// ─── Breadcrumbs ─────────────────────────────────
+// ─── Breadcrumbs — tamamen gizli (SBB kutusu devraldı) ──────────────
 
 .breadcrumb-container,
 nav.breadcrumb {
-  font-size: 0.74rem;
-  font-family: 'Source Serif 4', serif;
-
-  a, span {
-    color: var(--fg-3) !important;
-    border-bottom: none !important;
-  }
-
-  a:hover {
-    color: var(--bordo) !important;
-  }
+  display: none !important;
 }
 
 // ─── Blockquote ──────────────────────────────────
@@ -1058,7 +1052,7 @@ body[data-slug="index"] .site-header {
     svg { width: 1.15em; height: 1.15em; display: block; }
   }
   .sh-word { color: inherit; }
-  .sh-tld { color: var(--accent); }   // ".CH" daima kırmızı
+  .sh-tld { color: var(--accent); }   // ".ch" daima kırmızı
 }
 
 // Dark mode: SAYKO kırmızı (currentColor → ψ kolları da kırmızı), hover gold
@@ -1142,82 +1136,116 @@ html[saved-theme="dark"] #sc-progress,
   opacity: 0.85;
 }
 
-// ─── Sağ üst araç çubuğu (toolbar cluster) ────────
+// ─── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ────────────────
 
-#sc-tools {
+#sc-sbb {
   position: fixed;
-  top: 1rem;
-  right: 1.5rem;
+  top: 0;
+  right: 0;
+  width: 200px;
   z-index: 9999;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  // Frosted glass
-  background: rgba(249, 248, 246, 0.90);
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
-  border-radius: 8px;
-  padding: 6px 10px;
-  border: 1px solid rgba(226, 220, 207, 0.6);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: #1a1a1a;
+  color: #f3ece0;
+  border-left: 1px solid #2e2e2e;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.25);
+  padding-bottom: 0.5rem;
 }
 
-html[saved-theme="dark"] #sc-tools,
-[saved-theme="dark"] #sc-tools {
-  background: rgba(0, 0, 0, 0.88);
-  border-color: rgba(30, 30, 30, 0.7);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+html[saved-theme="dark"] #sc-sbb,
+[saved-theme="dark"] #sc-sbb {
+  background: #ede8df;
+  color: #2b2826;
+  border-left-color: #d0c8bc;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.08);
 }
 
-// Toolbar logo (küçük ψ + SAYKO.CH)
+// SBB header row: logo + controls
+.sc-sbb-hdr {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 8px 6px;
+  gap: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  min-height: 48px;
+}
+
+html[saved-theme="dark"] .sc-sbb-hdr,
+[saved-theme="dark"] .sc-sbb-hdr {
+  border-bottom-color: rgba(0,0,0,0.1);
+}
+
+// Logo in SBB box
 .sc-logo-btn {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   text-decoration: none !important;
   border: none !important;
-  color: var(--fg) !important;
-  font-family: 'Bebas Neue', serif;
-  font-size: 1.1rem;
+  color: #f3ece0 !important;
+  font-size: 1rem;
   letter-spacing: 0.04em;
   line-height: 1;
+  flex: 1;
+  min-width: 0;
   transition: color 150ms ease;
 
-  &:hover { color: var(--gold) !important; }
+  &:hover { color: var(--accent) !important; }
 
   .sc-logo-icon {
     display: inline-flex;
     align-items: center;
-    svg { width: 22px; height: 22px; display: block; }
+    flex-shrink: 0;
+    svg { width: 18px; height: 18px; display: block; }
   }
 
-  .sc-logo-word { color: inherit; }
+  .sc-logo-word {
+    color: inherit;
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .sc-logo-name { color: inherit; }
   .sc-logo-tld  { color: var(--accent); }
 }
 
 html[saved-theme="dark"] .sc-logo-btn,
-[saved-theme="dark"] .sc-logo-btn { color: var(--accent) !important; }
-html[saved-theme="dark"] .sc-logo-btn:hover,
-[saved-theme="dark"] .sc-logo-btn:hover { color: var(--gold) !important; }
+[saved-theme="dark"] .sc-logo-btn {
+  color: #2b2826 !important;
+  &:hover { color: var(--accent) !important; }
+}
 
 // SBB Mondaine saati
 #sc-clock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.25rem;
+  padding: 10px 0 6px;
+  width: 100%;
 }
 
 #sc-clockface {
-  width: 68px;            // ── BUG 6: saat büyüdü (52 → 68px)
-  height: 68px;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.18));
+  width: 82px;
+  height: 82px;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.30));
 }
 
 .sc-face {
   fill: #ffffff;
   stroke: #e3e3e3;
   stroke-width: 1.5;
+}
+
+html[saved-theme="dark"] .sc-face,
+[saved-theme="dark"] .sc-face {
+  fill: #f5f0e8;
+  stroke: #d8d0c4;
 }
 
 .sc-tick {
@@ -1234,7 +1262,7 @@ html[saved-theme="dark"] .sc-logo-btn:hover,
 .sc-hand-h { stroke-width: 5; }
 .sc-hand-m { stroke-width: 3.4; }
 
-// Saniye ibresi: kırmızı, yuvarlak uçlu (Mondaine imzası)
+// Saniye ibresi: kırmızı, Mondaine imzası
 .sc-hand-s {
   stroke: #d2151a;
   stroke-width: 1.6;
@@ -1247,57 +1275,70 @@ html[saved-theme="dark"] .sc-logo-btn:hover,
 }
 .sc-cap { fill: #1a1a1a; }
 
-// ── Görev 2.1a: Günün ismi — JetBrains Mono, düz (italik DEĞİL) ──
+// SAYKO.ch brand text on clock face
+.sc-sbb-brand {
+  fill: #6b5a42;
+  font-family: 'Bebas Neue', Georgia, serif;
+  user-select: none;
+  letter-spacing: 1px;
+}
+html[saved-theme="dark"] .sc-sbb-brand,
+[saved-theme="dark"] .sc-sbb-brand {
+  fill: #8a7a60;
+}
+
+// Günün ismi
 #sc-day {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.04em;
   line-height: 1;
-  color: var(--fg);          // hafta içi: tema rengi
+  color: #f3ece0;
 }
 
-// Hafta sonu (Cmt + Paz): kırmızı (her iki modda)
-#sc-day.weekend {
-  color: var(--accent) !important;
-}
+html[saved-theme="dark"] #sc-day,
+[saved-theme="dark"] #sc-day { color: #2b2826; }
 
-// Toolbar tuşları: 36×36, off=sepya, on=kırmızı
+#sc-day.weekend { color: var(--accent) !important; }
+
+// SBB kutusu içindeki toolbar tuşları: küçük, SBB renklerine uyumlu
 .sc-toolbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border: none;
   background: none;
-  color: var(--tertiary);
+  color: rgba(243, 236, 224, 0.6);
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: color 150ms ease, background 150ms ease;
   flex-shrink: 0;
 
   & svg { display: block; }
 
   &:hover {
-    color: var(--fg);
-    background: rgba(0, 0, 0, 0.05);
+    color: #f3ece0;
+    background: rgba(255,255,255,0.1);
   }
 
   &.sc-active { color: var(--accent) !important; }
 }
 
+html[saved-theme="dark"] .sc-toolbtn,
 [saved-theme="dark"] .sc-toolbtn {
-  color: var(--fg-3);
-  &:hover { background: rgba(255,255,255,0.07); color: var(--fg); }
+  color: rgba(43, 40, 38, 0.6);
+  &:hover { background: rgba(0,0,0,0.1); color: #2b2826; }
 }
 
-// Tema tuşu: dark modda "on" = kırmızı; light modda "off" = sepya
-:root[saved-theme="dark"] #sc-tools .sc-themebtn { color: var(--accent) !important; }
+// Tema tuşu: dark modda kırmızı
+:root[saved-theme="dark"] #sc-sbb .sc-themebtn { color: var(--accent) !important; }
 
-// Quartz darkmode buton — sağ sidebar'dakini gizle (toolbar'daki kullanılıyor)
+// Quartz darkmode buton — sidebarlarda gizli (SBB kutusu devraldı)
 .sidebar.right .darkmode { display: none !important; }
 .sidebar.left  .darkmode { display: none !important; }
 
@@ -1323,20 +1364,20 @@ body.is-focus .right.sidebar:hover > * {
 body.is-focus #sc-tools { opacity: 1 !important; filter: none !important; }
 body.is-focus .flex-component { opacity: 1 !important; filter: none !important; }
 
-// Change 7: Vinyet overlay — ::after yerine gerçek div (#sc-vignette).
-// body::after Quartz'ın stacking/overflow bağlamında güvenilir değildi.
+// Vinyet overlay — geniş şeffaf merkez, sadece köşeler karardı
+// "at 40% center" → geniş alan açık, 90%+ kenarda hafif karardı
 #sc-vignette {
   display: none;
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9998;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(ellipse 80% 70% at center, transparent 55%, rgba(0,0,0,0.55) 100%);
 }
 body.is-focus #sc-vignette { display: block; }
 html[saved-theme="dark"] body.is-focus #sc-vignette,
 [saved-theme="dark"] body.is-focus #sc-vignette {
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.3) 100%);
+  background: radial-gradient(ellipse 80% 70% at center, transparent 55%, rgba(0,0,0,0.30) 100%);
 }
 
 // ─── Görev 5: Back-to-top tuşu (sağ alt, scroll>400px sonrası) ───
@@ -1376,6 +1417,65 @@ html[saved-theme="dark"] #sc-totop:hover,
   align-items: center;
   gap: 0.4rem;
   .sc-neural-ic { flex-shrink: 0; }
+}
+
+// Kursif "Nöral Ağ" başlığı — sadece graf açıkken görünür
+.sc-neural-title {
+  display: none;
+  font-family: 'Dancing Script', 'Cedarville Cursive', cursive;
+  font-size: 1.15rem;
+  color: var(--bordo);
+  margin: 0.3rem 0 0.5rem 0.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.graph:not(.sc-graph-collapsed) .sc-neural-title { display: block; }
+
+// ─── Sol sütun perde (curtain) toggle ───
+
+.sc-curtain-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  margin-bottom: 0.25rem;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--br);
+  border-bottom: 1px solid var(--br);
+  color: var(--fg-3);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: color 140ms ease, background 140ms ease;
+  text-align: left;
+
+  svg { flex-shrink: 0; transition: transform 200ms ease; }
+  &:hover { color: var(--fg); background: var(--bordo-d); }
+}
+
+.sc-curtain-label { flex: 1; }
+
+.sidebar.left.sc-curtain-closed > *:not(.sc-curtain-btn) {
+  overflow: hidden;
+  max-height: 0 !important;
+  opacity: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none;
+  transition: max-height 320ms ease, opacity 300ms ease;
+}
+
+// Sağ sidebar: SBB kutusu kadar üstten boşluk
+@media all and (min-width: 800px) {
+  .sidebar.right {
+    padding-top: 280px !important;
+  }
 }
 
 // Genişlet modu CSS korunuyor (gelecekte kullanılabilir)
@@ -1529,9 +1629,9 @@ html[saved-theme="dark"] .cg-cell,
 // sıralar dikey olarak ~H/4 örtüşür (balpeteği nesting).
 $sc-hex-w: 140px;
 $sc-hex-h: 120px;
-$sc-hex-mx: 3px;            // yatay margin
+$sc-hex-mx: 1px;            // yatay margin (0-gap honeycomb)
 $sc-hex-overlap: 30px;      // dikey örtüşme (H/4)
-$sc-hex-offset: 73px;       // çift sıra yatay kayma (≈ yarım hücre)
+$sc-hex-offset: 71px;       // çift sıra yatay kayma ((W+2px)/2)
 
 body[data-slug$="/index"] {
   // Görev 9: "Bu klasör altındaki N öğe." metni gizli
@@ -1620,65 +1720,90 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
   color: #fff !important;
 }
 
-// ─── Change 3: Saat kutusu breadcrumb katmanları ───
-#sc-clock { position: relative; }
+// ─── SBB breadcrumb katmanları + chevron (bottom-right) ───
+
+// Chevron: SBB kutusu sağ altında
 #sc-clk-toggle {
   position: absolute;
-  top: -2px;
-  right: -4px;
+  bottom: 6px;
+  right: 8px;
   width: 20px;
   height: 20px;
   padding: 0;
   border: none;
   background: none;
-  color: var(--tertiary);
+  color: rgba(243, 236, 224, 0.5);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 200ms ease, color 140ms ease;
   svg { display: block; }
-  &:hover { color: var(--accent); }
+  &:hover { color: #f3ece0; }
   &[aria-expanded="false"] { transform: rotate(180deg); }
 }
-[saved-theme="dark"] #sc-clk-toggle { color: var(--fg-3); }
+
+html[saved-theme="dark"] #sc-clk-toggle,
+[saved-theme="dark"] #sc-clk-toggle {
+  color: rgba(43, 40, 38, 0.5);
+  &:hover { color: #2b2826; }
+}
+
+#sc-sbb { position: fixed; } // ensure relative context for chevron
+
 .sc-bclayers {
   display: flex;
   flex-direction: column;
   width: 100%;
   overflow: hidden;
   max-height: 240px;
-  margin-top: 0.25rem;
   transition: max-height 320ms ease, opacity 300ms ease;
-  &.sc-collapsed { max-height: 0; opacity: 0; margin-top: 0; }
+  &.sc-collapsed { max-height: 0; opacity: 0; }
 }
+
 .sc-bclayer {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 0.72rem;
-  color: var(--fg-2);
-  padding: 4px 2px;
-  border-top: 1px solid var(--br);
+  font-size: 0.7rem;
+  color: rgba(243, 236, 224, 0.75);
+  padding: 5px 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
   text-decoration: none !important;
+  text-align: left !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 130px;
+  max-width: 200px;
   opacity: 0;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   transition: opacity 280ms ease, transform 280ms ease;
   &.sc-bcl-in { opacity: 1; transform: translateY(0); }
   &:hover { color: var(--accent) !important; }
 }
+
+html[saved-theme="dark"] .sc-bclayer,
+[saved-theme="dark"] .sc-bclayer {
+  color: rgba(43, 40, 38, 0.75);
+  border-top-color: rgba(0,0,0,0.1);
+}
+
 .sc-bcl-article {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--fg) !important;
+  color: #f3ece0 !important;
   border-left: 2px solid #C8102E;
-  padding-left: 6px;
+  padding-left: 8px;
   white-space: normal;
-  line-height: 1.2;
+  line-height: 1.25;
   display: block;
   cursor: default;
-  &:hover { color: var(--fg) !important; }
+  text-align: left !important;
+  &:hover { color: #f3ece0 !important; }
+}
+
+html[saved-theme="dark"] .sc-bcl-article,
+[saved-theme="dark"] .sc-bcl-article {
+  color: #2b2826 !important;
+  &:hover { color: #2b2826 !important; }
 }
 
 // ─── Mobile ──────────────────────────────────────
@@ -1689,9 +1814,10 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
   h1, .article-title { font-size: 2.1rem !important; }
   h2 { font-size: 1.65rem; }
 
-  // Mobilde sabit araç çubuğu ve progress çubuğunu gizle
-  #sc-tools { display: none; }
+  // Mobilde SBB kutusu ve progress çubuğunu gizle
+  #sc-sbb { display: none; }
   #sc-progress { display: none; }
+  .search.sc-search-tail { display: none !important; }
   .site-header-title { font-size: 1.9rem; }
 
   // Müfredat grid mobilde 2 sütun
