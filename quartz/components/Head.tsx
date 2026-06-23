@@ -183,7 +183,7 @@ function ensure(){
     // Clock
     var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
-    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<text x="50" y="34" class="sc-sbb-brand" text-anchor="middle" font-size="5.5" letter-spacing="1.2">SAYKO.ch</text><line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><text x="50" y="24" class="sc-sec-psi" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold">Ψ</text></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<text x="50" y="35" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan style="fill:#C8102E">SAYKO</tspan><tspan style="fill:#1a1a1a">.ch</tspan></text><line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="15" class="sc-hand-s"/><text x="50" y="24" class="sc-sec-psi" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="bold">Ψ</text></g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
     sbb.appendChild(clkDiv);
     // Chevron: bottom-right of SBB box, toggles breadcrumb layers
     var bclayers=document.createElement('div');bclayers.id='sc-bclayers';bclayers.className='sc-bclayers';
@@ -191,7 +191,8 @@ function ensure(){
     chev.innerHTML='<svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
     chev.addEventListener('click',function(){var exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',exp?'false':'true');bclayers.classList.toggle('sc-collapsed',exp);});
     sbb.appendChild(bclayers);sbb.appendChild(chev);
-    document.body.appendChild(sbb);
+    var rsb0=document.querySelector('.sidebar.right');
+    if(rsb0&&window.innerWidth>=1200){rsb0.insertBefore(sbb,rsb0.firstChild);}else{document.body.appendChild(sbb);}
   }
   // Mobil/tablet: SBB-kutusunu açan cardinal kırmızı psi tuşu (FAB) + arka perde
   var fab=document.getElementById('sc-sbb-fab');
@@ -309,6 +310,16 @@ function scFitHeader(){
   var g=0;while(w.scrollWidth>w.clientWidth&&fs>1.2&&g<28){fs-=0.07;w.style.fontSize=fs+'rem';g++;}
 }
 function perNav(){
+  // Move SBB into right sidebar on desktop (exact alignment); back to body on mobile
+  var sbbEl=document.getElementById('sc-sbb');
+  var rsbEl=document.querySelector('.sidebar.right');
+  if(sbbEl){
+    if(rsbEl&&window.innerWidth>=1200){
+      if(sbbEl.parentNode!==rsbEl)rsbEl.insertBefore(sbbEl,rsbEl.firstChild);
+    } else if(sbbEl.parentNode!==document.body&&window.innerWidth<1200){
+      document.body.appendChild(sbbEl);
+    }
+  }
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
   var isHome=(document.body.getAttribute('data-slug')==='index');
   // Site header with rotating font

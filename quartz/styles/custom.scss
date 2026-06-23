@@ -764,21 +764,47 @@ tr:hover td {
 a.internal.tag-link,
 .tag-list a,
 .tags a {
-  font-size: 0.67rem !important;
-  letter-spacing: 0.1em !important;
+  display: inline-block;
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
   color: var(--fg-3) !important;
   border: 1px solid var(--br) !important;
   border-radius: 2px;
-  padding: 0.18em 0.6em !important;
+  padding: 0.2em 0.65em !important;
   background: transparent !important;
   transition: all 140ms;
+  margin: 0.15em 0.25em 0.15em 0 !important;
 
   &:hover {
-    color: var(--bordo) !important;
-    border-color: var(--bordo) !important;
-    background: var(--bordo-d) !important;
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    background: rgba(200,16,46,0.07) !important;
   }
+}
+
+// Tags listesi / tag sayfası
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.75rem 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+// Tag page header
+.page-listing > h2 {
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent) !important;
+  margin-bottom: 0.35rem !important;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--br);
 }
 
 // ─── TOC ─────────────────────────────────────────
@@ -877,12 +903,100 @@ a.internal.tag-link,
 
 // ─── Graph ───────────────────────────────────────
 
+.graph {
+  padding: 0.5rem 0.75rem 0.75rem;
+  border-top: 1px solid var(--br);
+  margin-top: 0.5rem;
+}
+
 .graph-outer,
 #graph-container {
   background-color: var(--bg-2) !important;
   border: 1px solid var(--br) !important;
-  border-radius: 2px;
+  border-radius: 3px;
+  margin-top: 0.5rem;
 }
+
+.graph > h3 {
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.62rem !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--fg-3) !important;
+  margin: 0 0 0.35rem !important;
+}
+
+html[saved-theme="dark"] .graph-outer,
+[saved-theme="dark"] .graph-outer,
+html[saved-theme="dark"] #graph-container,
+[saved-theme="dark"] #graph-container {
+  background-color: #0a0a0a !important;
+  border-color: #1e1e1e !important;
+}
+
+// ─── Properties / Frontmatter panel ─────────────
+
+.properties,
+.page-property-container {
+  margin: 0 0 1.5rem !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid var(--br) !important;
+  border-radius: 3px;
+  background: var(--bg-2) !important;
+}
+
+.properties-table,
+.page-property-container table {
+  width: 100%;
+  font-size: 0.78rem !important;
+  border-collapse: collapse;
+  margin: 0 !important;
+
+  th, td {
+    padding: 0.3rem 0.5rem !important;
+    border: none !important;
+    border-bottom: 1px solid var(--br) !important;
+    text-align: left;
+  }
+
+  tr:last-child td,
+  tr:last-child th { border-bottom: none !important; }
+
+  th, .property-key {
+    font-family: 'Source Serif 4', serif !important;
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--fg-3) !important;
+    min-width: 80px;
+    background: none !important;
+  }
+
+  td, .property-value {
+    color: var(--fg-2) !important;
+    font-family: 'Source Serif 4', serif !important;
+  }
+}
+
+// Properties section heading
+.properties-title,
+.page-property-container > p,
+.page-property-container > h4 {
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.62rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--fg-3) !important;
+  margin: 0 0 0.5rem !important;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--br);
+}
+
+// ─── Tags (article page, properties panel) ───────
 
 // ─── Popover ─────────────────────────────────────
 
@@ -1414,15 +1528,11 @@ html[saved-theme="dark"] .sc-face,
 .sc-cap { fill: #1a1a1a; }
 
 // SAYKO.ch brand text on clock face — SABİT font: Contrail One
+// (fill tspan inline style'larından geliyor: SAYKO=kırmızı, .ch=siyah)
 .sc-sbb-brand {
-  fill: #6b5a42;
   font-family: 'Contrail One', Georgia, serif;
   user-select: none;
   letter-spacing: 0.5px;
-}
-html[saved-theme="dark"] .sc-sbb-brand,
-[saved-theme="dark"] .sc-sbb-brand {
-  fill: #8a7a60;
 }
 
 // Günün ismi
@@ -1586,11 +1696,11 @@ html[saved-theme="dark"] #sc-totop:hover,
   &:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 }
 
-// Perde kapalı: sol sütun tamamen gizli + masaüstünde sol kolon genişliği 0
+// Perde kapalı: sol sütun tamamen gizli + masaüstünde grid iki sütuna düşer
 body.sc-lsb-closed .sidebar.left { display: none !important; }
 @media all and (min-width: 1200px) {
   body.sc-lsb-closed .page > #quartz-body {
-    grid-template-columns: 0 auto 200px !important;
+    grid-template-columns: auto 200px !important;
   }
 }
 
@@ -1629,10 +1739,23 @@ html[saved-theme="dark"] #sc-lsb-restore:hover { color: #fff; background: var(--
   #sc-lsb-restore { display: none !important; }
 }
 
-// Sağ sidebar: SBB kutusu kadar üstten boşluk (yalnız masaüstü — SBB docked)
+// Sağ sidebar: SBB kutusunu içinde barındırır — sıfır padding, tam üstten başlar
 @media all and (min-width: 1200px) {
   .sidebar.right {
-    padding-top: 280px !important;
+    padding: 0 !important;
+    top: 0 !important;
+    max-height: 100vh !important;
+    overflow: visible !important;
+  }
+  // SBB sidebar içindeyken tam genişlik, statik akış, kendi kenarlığı yok
+  .sidebar.right > #sc-sbb {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    border-left: none !important;
+    box-shadow: none !important;
+    z-index: auto;
   }
 }
 
