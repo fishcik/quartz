@@ -1,12 +1,3 @@
----
-title: Sigaranın Psikolojisi
-date: 17.06.2026
-tags:
-  - bağımlılık-psikolojisi
-  - nöropsikoloji
-  - öğrenme-teorileri
----
-
 # Sigaranın Psikolojisi
 
 Legal ölüm ürünü.
@@ -24,7 +15,7 @@ Pasif içicilik de tehlikeli tabi. Sigara içen eşle yaşayan sigara içmeyenle
 
 ---
 
-### 📊 40 Yıllık Doktor Çalışması (Doll ve ark. 1994)
+### 40 Yıllık Doktor Çalışması (Doll ve ark. 1994)
 
 *Sigara içme üzerine yapılmış gelmiş geçmiş en uzun ve en saygın çalışma tam 34.439 erkek İngiliz hekim üzerinde yapıldı.*
 
@@ -40,7 +31,7 @@ Sonuçlar, sigaranın tam bi ==zaman gecikmeli katil== olduğunu kanıtladı:
 
 ---
 
-### 🧠 Sigara Bağımlılığı Nasıl Açıklanıyor?
+### Sigara Bağımlılığı Nasıl Açıklanıyor?
 
 Olay sadece nikotin mi?
 Bu da başka konularda olduğu gibi farklı modellerle açıklanmaya çalışılıyor.
@@ -60,7 +51,7 @@ Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir ti
 
 ---
 
-### 🔬 Nörolojik Boyut: Olay Nasıl Gerçekleşiyor?
+### Nörolojik Boyut: Olay Nasıl Gerçekleşiyor?
 
 Bir sigarayı yakar yakmaz nikotin molekülleri akciğerlerden kana karışıyor ve **6-10 saniye içinde** beyne ulaşıyor. 
 Bu, ==eroin enjeksiyonundan bile hızlı.== 
@@ -87,7 +78,7 @@ Doğru strateji ile.
 
 ---
 
-### ⏱️ Nöral Plastisite ve İyileşme
+### Nöral Plastisite ve İyileşme
 
 > [!check] İyileşme Zaman Çizelgesi
 > İlk 3 ay zor. 2024'te yayınlanan araştırmalar, sigara bırakıldıktan yaklaşık **3 ay** sonra beynin dopamin sisteminin yeniden normale döndüğünü gösteriyor.
@@ -95,5 +86,5 @@ Doğru strateji ile.
 > - **3 ayda:** Dopaminini düzenliyor, dengeliyor. 
 > - **1 yılda:** Kalp riskini yarıya indiriyor. 
 
-*Evet...*
-Beyin ***zaten*** napması gerektiğini biliyor. Bazen sadece **doğru anda doğru şeyi** hatırlaması yeterli.
+Evet...
+Beyin zaten napması gerektiğini biliyor. Bazen sadece doğru anda doğru şeyi hatırlaması yeterli.
