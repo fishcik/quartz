@@ -908,9 +908,13 @@ a.internal.tag-link,
 
 .graph {
   padding: 0.5rem 0.75rem 0.75rem;
-  border-top: 1px solid var(--br);
+  border-top: none;
   margin-top: 0.5rem;
 }
+// Sağ sütundaki yatay ayırıcıları yok et (sidebar.right içindeki hr, üst border'lar)
+.sidebar.right > hr,
+.sidebar.right hr { display: none !important; }
+.sidebar.right > * { border-top: none !important; }
 
 .graph-outer,
 #graph-container {
@@ -938,6 +942,9 @@ html[saved-theme="dark"] #graph-container,
   background-color: #0a0a0a !important;
   border-color: #1e1e1e !important;
 }
+
+// Global graph (fullscreen) → SBB üstünde göster
+.graph > .global-graph-outer { z-index: 10005 !important; }
 
 // ─── Künye (note-properties) — yazının SONUNA, kompakt, sade ───────
 // JS (scProps) bu paneli article'ın sonuna taşır + başlık/anahtarları
@@ -1099,7 +1106,15 @@ article figure {
 // BUG 7: Footer artık yerel plugin (local-plugins/footer) ile gerçek
 // "C.Ç. © 2026" metnini DOM'a basıyor. Quartz linki tamamen kaldırıldı.
 
-footer, .page-footer footer {
+// Footer: JS body seviyesine taşır → tüm sayfa enini kaplar.
+body > footer {
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  padding: 14px 0 !important;
+  min-height: 48px;
+  max-height: 50px;
+  box-sizing: border-box;
   border-top: 1px solid var(--br) !important;
   background: var(--bg) !important;
   color: var(--fg-3) !important;
@@ -1107,7 +1122,16 @@ footer, .page-footer footer {
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 50px;
+}
+// Footer eski yerinde kalırsa da min boyut
+footer {
+  border-top: 1px solid var(--br) !important;
+  background: var(--bg) !important;
+  color: var(--fg-3) !important;
+  font-size: 0.72rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 footer .sc-sign {

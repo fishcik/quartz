@@ -171,9 +171,16 @@ function ensure(){
     // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
     gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>';
-    gtb.addEventListener('click',function(){
-      var g=document.querySelector('.sidebar.right .graph,.graph');
-      if(g){var closed=g.classList.toggle('sc-graph-collapsed');this.classList.toggle('sc-active',!closed);}
+    // Beyin tuşu → SBB kapan, Quartz'ın fullscreen global graph modunu aç
+    // (stopPropagation: document-level click handler graph'ı hemen kapatmasın)
+    gtb.addEventListener('click',function(e){
+      e.stopPropagation();
+      document.body.classList.remove('sc-sbb-open');
+      var self=this;
+      setTimeout(function(){
+        var icon=document.querySelector('.global-graph-icon');
+        if(icon){icon.click();self.classList.add('sc-active');}
+      },280);
     });
     // Theme
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema';bt.setAttribute('aria-label','Tema');
@@ -348,21 +355,33 @@ function scFitHeader(){
   var fs=2.1;w.style.fontSize=fs+'rem';
   var g=0;while(w.scrollWidth>w.clientWidth&&fs>1.2&&g<28){fs-=0.07;w.style.fontSize=fs+'rem';g++;}
 }
-// ── Header Efekt 0: Kromatik sapma (chromatic aberration) ──────────────────
-// Mouse hareketi: velocity'ye göre SAYKO metninde R/B text-shadow kayması
+// ── Header Efekt 0: Kromatik sapma — sakin, sürekli salınım; imleç yaklaştıkça artar ──
 function initFx0(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
-  var vx=0,lx=0,rafId=null;
+  var amp=0,target=0,phase=0,rafId=null;
   function frame(){
-    nm.style.textShadow=Math.abs(vx)<0.3?'none':
-      (vx*0.38).toFixed(1)+'px 0 rgba(200,16,46,0.6),'+(-vx*0.38).toFixed(1)+'px 0 rgba(0,30,200,0.5)';
-    vx*=0.86;
-    if(Math.abs(vx)>0.15)rafId=requestAnimationFrame(frame);
+    amp+=(target-amp)*0.08;
+    phase+=0.028;
+    if(amp<0.08&&target<0.08){nm.style.textShadow='none';rafId=null;return;}
+    var sx=amp*Math.sin(phase);
+    var sy=amp*0.32*Math.cos(phase*1.3);
+    nm.style.textShadow=
+      sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,0.62),'+
+      (-sx).toFixed(2)+'px '+(-sy).toFixed(2)+'px 0 rgba(40,80,220,0.52)';
+    rafId=requestAnimationFrame(frame);
   }
-  function onMove(e){vx=e.clientX-lx;lx=e.clientX;cancelAnimationFrame(rafId);rafId=requestAnimationFrame(frame);}
-  function onLeave(){nm.style.textShadow='none';vx=0;}
-  hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
-  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.style.textShadow='';};
+  function onEnter(){if(!rafId)rafId=requestAnimationFrame(frame);}
+  function onMove(e){
+    var r=nm.getBoundingClientRect();
+    var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
+    var d=Math.sqrt(dx*dx+dy*dy);
+    target=Math.max(0,(260-d)/260)*5.5;
+  }
+  function onLeave(){target=0;}
+  hdr.addEventListener('mouseenter',onEnter);
+  hdr.addEventListener('mousemove',onMove);
+  hdr.addEventListener('mouseleave',onLeave);
+  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);hdr.removeEventListener('mouseenter',onEnter);hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.style.textShadow='';};
 }
 // ── Header Efekt 1: Manyetik metin — harfler imlecin yakınında iter, kırmızıya döner ──
 function initFx1(hdr){
@@ -396,6 +415,15 @@ function initHeaderFx(){
   var n=0;try{n=parseInt(localStorage.getItem('sayko_fx')||'0');}catch(e){}
   try{localStorage.setItem('sayko_fx',String((n+1)%2));}catch(e){}
   if(n%2===0)initFx0(hdr);else initFx1(hdr);
+}
+// ── Footer'ı body seviyesine taşı → tüm sayfa enini kaplar; SPA nav'da
+// Quartz yeni footer üretirse onları siler, body-level olanı korur.
+function syncFooter(){
+  var fs=document.querySelectorAll('footer');if(fs.length===0)return;
+  var bodyFt=null;
+  for(var i=0;i<fs.length;i++){if(fs[i].parentElement===document.body){bodyFt=fs[i];break;}}
+  if(!bodyFt){document.body.appendChild(fs[0]);}
+  else{for(var i=0;i<fs.length;i++){if(fs[i]!==bodyFt)fs[i].remove();}}
 }
 // ── Footer dalga animasyonu — yalnız <footer> elementini kapsar (yaklaşık 48px) ──
 // IntersectionObserver ile görünür olduğunda çalışır → homepage slowdown yok
@@ -534,6 +562,7 @@ function perNav(){
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   initHeaderFx();
+  syncFooter();
   ensureFooterWave();
 }
 function init(){ensure();perNav();}
