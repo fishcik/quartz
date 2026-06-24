@@ -53,7 +53,6 @@ export default (() => {
     externalResources,
     ctx,
   }: QuartzComponentProps) => {
-    const titleSuffix = cfg.pageTitleSuffix ?? ""
     const rawTitle = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
     const title = fileData.slug === "index"
       ? "SAYKO.ch - Kitapta durduğu gibi durmaz."
@@ -159,6 +158,17 @@ function ensure(){
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
   function prog(){var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;pb.style.height=(p*100)+'%';}
   window.__scProg=prog;prog();
+  // ── Tema geçişi: saved-theme değişince 300ms yumuşak cross-fade ──
+  if(!window.__scThemeObs){
+    window.__scThemeObs=1;
+    var de2=document.documentElement;
+    var tmo=new MutationObserver(function(){
+      de2.classList.add('sc-theme-anim');
+      clearTimeout(window.__scThemeT);
+      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},340);
+    });
+    tmo.observe(de2,{attributes:true,attributeFilter:['saved-theme']});
+  }
   // ── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ──
   var sbb=document.getElementById('sc-sbb');
   if(!sbb){
@@ -202,7 +212,11 @@ function ensure(){
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
-    sbbHdr.appendChild(lg);sbbHdr.appendChild(gtb);sbbHdr.appendChild(bt);sbbHdr.appendChild(bf);
+    // Yazdır — temiz baskı görünümü (@media print kenar süsleri gizler)
+    var bpr=document.createElement('button');bpr.type='button';bpr.className='sc-toolbtn sc-printbtn';bpr.title='Yazdır';bpr.setAttribute('aria-label','Yazdır');
+    bpr.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
+    bpr.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');setTimeout(function(){window.print();},320);});
+    sbbHdr.appendChild(lg);sbbHdr.appendChild(gtb);sbbHdr.appendChild(bt);sbbHdr.appendChild(bf);sbbHdr.appendChild(bpr);
     sbb.appendChild(sbbHdr);
     // Clock
     var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}

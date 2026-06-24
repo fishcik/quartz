@@ -2387,3 +2387,98 @@ html[saved-theme="dark"] .sc-bcl-article,
   .cg-cell { padding: 20px 8px 16px; }
   .cg-icon svg { width: 52px; height: 52px; }
 }
+
+// ═══════════════════════════════════════════════════
+//  Öneri 5 — Yumuşak tema geçişi (300ms cross-fade)
+// ═══════════════════════════════════════════════════
+// JS (MutationObserver) saved-theme değişince <html>'e .sc-theme-anim ekler,
+// 340ms sonra kaldırır → yalnız geçiş anında transition aktif (sürekli değil).
+html.sc-theme-anim,
+html.sc-theme-anim *,
+html.sc-theme-anim *::before,
+html.sc-theme-anim *::after {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    fill 300ms ease,
+    stroke 300ms ease,
+    box-shadow 300ms ease !important;
+}
+// Saat ibreleri / progress / canvas dalgası geçişten muaf (kendi animasyonları var)
+html.sc-theme-anim .sc-hand,
+html.sc-theme-anim .sc-hand-s,
+html.sc-theme-anim #sc-progress,
+html.sc-theme-anim #sc-fw {
+  transition: none !important;
+}
+
+// ═══════════════════════════════════════════════════
+//  Öneri 11 — Yazdırma görünümü (temiz baskı)
+// ═══════════════════════════════════════════════════
+@media print {
+  // Tüm kabuk/süs öğeleri gizli — yalnız makale içeriği basılır
+  #sc-sbb, #sc-sbb-tail, #sc-sbb-fab, #sc-sbb-backdrop,
+  #sc-progress, #sc-totop, #sc-vignette, #sc-lsb-restore,
+  .sidebar.left, .sidebar.right,
+  .site-header-slogan, .sh-divider,
+  body > footer, footer, #sc-fw,
+  .sc-curtain-btn, .search, .graph,
+  .note-properties, .backlinks {
+    display: none !important;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt !important;
+  }
+  body::after { display: none !important; }   // grain dokusu kapalı
+
+  #quartz-body {
+    grid-template-columns: auto !important;
+    grid-template-areas: "grid-center" !important;
+    display: block !important;
+  }
+
+  .center, article {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    animation: none !important;
+  }
+
+  article, article p, article li, article h1, article h2, article h3,
+  .article-title, .content-meta {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  // Bağlantılar siyah + alt çizgi; URL'yi yanına bas
+  article a {
+    color: #000 !important;
+    text-decoration: underline !important;
+    border: none !important;
+  }
+  article a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.78em;
+    color: #444;
+    word-break: break-all;
+  }
+
+  // İçerik içi öğeler sayfa kırılımında bölünmesin
+  blockquote, pre, table, figure, img { page-break-inside: avoid; }
+  h1, h2, h3 { page-break-after: avoid; }
+
+  // Header: yalnız SAYKO.ch logosu kalsın (slogan gizlendi yukarıda)
+  .site-header {
+    border-bottom: 1px solid #000 !important;
+    page-break-after: avoid;
+  }
+  .site-header-title, .sh-name, .sh-tld {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  .sh-tld { color: #c8102e !important; }   // .ch imzası kırmızı kalsın
+}
