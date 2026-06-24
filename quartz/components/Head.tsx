@@ -361,6 +361,45 @@ function scREdge(){
   if(pg){var r=pg.getBoundingClientRect();re=Math.max(0,Math.round(w-r.right));}
   document.documentElement.style.setProperty('--sc-redge',re+'px');
 }
+// ── Öneri 6: Dinamik etiket bulutu ──────────────────────────────────
+// /tags/ sayfasında, fetchData içeriğindeki tüm yazıları tarayıp her etiketin
+// kaç yazıda geçtiğini sayar; etiket bağlantılarını log ölçekle büyütür.
+// İçerik büyüdükçe bulut kendiliğinden güncellenir (build değişikliği yok).
+function scTagCloud(){
+  var slug=document.body.getAttribute('data-slug')||'';
+  if(!(slug==='tags'||slug==='tags/index'||slug.indexOf('tags/')===0))return;
+  if(typeof fetchData==='undefined'||!fetchData||!fetchData.then)return;
+  fetchData.then(function(index){
+    var counts={};
+    for(var k in index){
+      var tags=index[k]&&index[k].tags;
+      if(tags&&tags.length){tags.forEach(function(t){var key=(''+t).toLowerCase();counts[key]=(counts[key]||0)+1;});}
+    }
+    // Yalnız etiket BÖLÜM başlıklarını ölçekle (makale listeleri/iç etiket
+    // çipleri bozulmasın) → çok kullanılan etiketin başlığı daha büyük olur.
+    var links=document.querySelectorAll('h2 > a.tag-link, h2 a.tag-link');
+    if(!links.length)return;
+    var max=1,data=[];
+    links.forEach(function(a){
+      var href=decodeURIComponent(a.getAttribute('href')||'');
+      var m=href.match(/tags\\/([^\\/#?]+)/);
+      if(!m)return;
+      var name=m[1].toLowerCase();
+      var c=counts[name]||1;
+      if(c>max)max=c;
+      data.push([a,c]);
+    });
+    data.forEach(function(d){
+      var a=d[0],c=d[1];
+      var t=Math.log(1+c)/Math.log(1+max);
+      var fs=1.3+t*2.0;
+      a.style.fontSize=fs.toFixed(2)+'rem';
+      a.style.opacity=(0.62+t*0.38).toFixed(2);
+      a.setAttribute('data-sc-count',String(c));
+      a.classList.add('sc-tagcloud-item');
+    });
+  });
+}
 // Künye paneli: yazının sonuna taşı, başlık + anahtarları Türkçeleştir
 function scProps(){
   var np=document.querySelector('.note-properties');if(!np)return;
@@ -500,6 +539,8 @@ function perNav(){
   scREdge();
   // Künye (note-properties) panelini yazının SONUNA taşı + Türkçe etiketle
   scProps();
+  // Dinamik etiket bulutu (/tags sayfası)
+  scTagCloud();
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
   var isHome=(document.body.getAttribute('data-slug')==='index');
   // Site header with rotating font

@@ -2601,3 +2601,54 @@ html[saved-theme="dark"] .sc-404-code,
   .sc-404-code { font-size: 5.5rem; }
   .sc-404-title { font-size: 1.6rem !important; }
 }
+
+// ═══════════════════════════════════════════════════
+//  Öneri 6 — Dinamik etiket bulutu (/tags sayfası)
+// ═══════════════════════════════════════════════════
+// /tags index'inde her etiket bir bölüm başlığıdır (h2 > a.tag-link). JS
+// (scTagCloud) fetchData'dan etiketin kaç yazıda geçtiğini sayar, başlık font
+// boyutunu log ölçekle büyütür → çok kullanılan etiket görsel olarak baskın.
+// İçerik büyüdükçe boyutlar kendiliğinden güncellenir (build değişikliği yok).
+.sc-tagcloud-item {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  line-height: 1.05 !important;
+  color: var(--bordo) !important;
+  border: none !important;
+  border-bottom: none !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+  background: none !important;
+  transition: color 160ms ease, transform 160ms ease !important;
+
+  &:hover {
+    color: var(--accent) !important;
+    transform: translateY(-2px) scale(1.03);
+    background: none !important;
+    border: none !important;
+  }
+
+  // Yazı sayısı rozeti (üst köşede küçük cardinal sayı)
+  &[data-sc-count]::after {
+    content: attr(data-sc-count);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.42em;
+    font-style: normal;
+    vertical-align: super;
+    color: var(--accent);
+    margin-left: 0.2em;
+    opacity: 0.75;
+  }
+}
+
+// Başlık zaten h2; auto-fit ölçek inline font-size ile gelir → h2'nin
+// kendi boyutunu ezmeyelim diye tag-link'e !important font-size JS'ten gelir.
+body[data-slug="tags"] .page-listing > p,
+body[data-slug="tags/index"] .page-listing > p {
+  font-size: 0.7rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-3) !important;
+}
