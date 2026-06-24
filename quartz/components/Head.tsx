@@ -54,8 +54,10 @@ export default (() => {
     ctx,
   }: QuartzComponentProps) => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
-    const title =
-      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const rawTitle = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
+    const title = fileData.slug === "index"
+      ? "SAYKO.ch - Kitapta durduğu gibi durmaz."
+      : `SAYKO.ch - ${rawTitle}`
     const description =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
@@ -222,7 +224,7 @@ function ensure(){
   if(!lrb){
     lrb=document.createElement('button');lrb.type='button';lrb.id='sc-lsb-restore';lrb.setAttribute('aria-label','Sol sütunu aç');
     lrb.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 18 13 12 7 6"/><polyline points="13 18 19 12 13 6"/></svg>';
-    lrb.addEventListener('click',function(){document.body.classList.remove('sc-lsb-closed');});
+    lrb.addEventListener('click',function(){document.body.classList.remove('sc-lsb-closed');setTimeout(scREdge,10);setTimeout(scREdge,330);});
     document.body.appendChild(lrb);
   }
   // Back-to-top
@@ -395,38 +397,42 @@ function initHeaderFx(){
   try{localStorage.setItem('sayko_fx',String((n+1)%2));}catch(e){}
   if(n%2===0)initFx0(hdr);else initFx1(hdr);
 }
-// ── Footer dalga animasyonu — 2 katman, her zaman zıt yönlerde ─────────────
+// ── Footer dalga animasyonu — yalnız <footer> elementini kapsar (yaklaşık 48px) ──
+// IntersectionObserver ile görünür olduğunda çalışır → homepage slowdown yok
 function ensureFooterWave(){
   if(window.__scFwRaf)return;
-  var ft=document.querySelector('.page-footer');if(!ft)return;
+  var ft=document.querySelector('footer');if(!ft)return;
   var cnv=document.createElement('canvas');cnv.id='sc-fw';
   cnv.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:0;';
-  ft.style.position='relative';ft.style.overflow='hidden';
   ft.insertBefore(cnv,ft.firstChild);
   Array.prototype.slice.call(ft.children).forEach(function(c){if(c!==cnv){c.style.position='relative';c.style.zIndex='1';}});
   function rnd(a,b){return a+Math.random()*(b-a);}
-  function mkH(){var n=Math.floor(rnd(2,8)),h=[];for(var i=0;i<n;i++)h.push([rnd(0.05,0.22),rnd(1,5),rnd(0,6.28)]);return h;}
+  function mkH(){var n=Math.floor(rnd(2,5)),h=[];for(var i=0;i<n;i++)h.push([rnd(0.06,0.28),rnd(1,4),rnd(0,6.28)]);return h;}
   function evalW(h,x,W,p){var y=0;h.forEach(function(s){y+=Math.sin(x/W*6.28*s[1]+p+s[2])*s[0];});return y;}
   function lrp(a,b,t){var n=Math.max(a.length,b.length),r=[];for(var i=0;i<n;i++){var ai=a[i]||[0,1,0],bi=b[i]||[0,1,0];r.push([ai[0]+(bi[0]-ai[0])*t,ai[1]+(bi[1]-ai[1])*t,ai[2]+(bi[2]-ai[2])*t]);}return r;}
-  var L=[{p:0,v:0.55,a:mkH(),b:mkH(),t:0,d:rnd(5,16)},{p:3.14,v:-0.4,a:mkH(),b:mkH(),t:0,d:rnd(5,16)}];
-  var prev=0;
+  var L=[{p:0,v:0.45,a:mkH(),b:mkH(),t:0,d:rnd(6,18)},{p:3.14,v:-0.32,a:mkH(),b:mkH(),t:0,d:rnd(6,18)}];
+  var prev=0,visible=false;
+  if(window.IntersectionObserver){
+    new IntersectionObserver(function(ents){visible=ents[0].isIntersecting;}).observe(ft);
+  } else { visible=true; }
   function tick(ts){
     window.__scFwRaf=requestAnimationFrame(tick);
+    if(!visible){prev=0;return;}
     var dt=prev?(ts-prev)/1000:0;if(dt>0.1)dt=0.1;prev=ts;
-    var W=ft.clientWidth||300,H=Math.max(ft.clientHeight,80);
+    var W=ft.clientWidth||300,H=Math.max(ft.clientHeight,48);
     if(cnv.width!==W||cnv.height!==H){cnv.width=W;cnv.height=H;}
     var ctx=cnv.getContext('2d');ctx.clearRect(0,0,W,H);
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
-    var cs=dk?['rgba(8,6,4,0.88)','rgba(20,14,8,0.62)']:['rgba(195,183,164,0.68)','rgba(225,216,200,0.48)'];
+    var cs=dk?['rgba(10,8,5,0.85)','rgba(22,16,10,0.6)']:['rgba(190,178,158,0.65)','rgba(220,210,194,0.45)'];
     L.forEach(function(l,i){
       l.p+=l.v*dt;l.t+=dt;
-      if(l.t>=l.d){l.a=lrp(l.a,l.b,1);l.b=mkH();l.t=0;l.d=rnd(5,16);}
+      if(l.t>=l.d){l.a=lrp(l.a,l.b,1);l.b=mkH();l.t=0;l.d=rnd(6,18);}
       var pg=l.t/l.d;pg=pg<0.5?2*pg*pg:(4-2*pg)*pg-1;
       var h=lrp(l.a,l.b,pg);
       ctx.beginPath();
-      var by=H*0.5;
-      for(var x=0;x<=W;x+=2){
-        var y=by+evalW(h,x,W,l.p)*H*0.42;
+      var by=H*0.55;
+      for(var x=0;x<=W;x+=3){
+        var y=by+evalW(h,x,W,l.p)*H*0.38;
         if(x===0){ctx.moveTo(0,H);ctx.lineTo(0,y);}else ctx.lineTo(x,y);
       }
       ctx.lineTo(W,H);ctx.closePath();
@@ -511,7 +517,7 @@ function perNav(){
   if(lsb&&!lsb.querySelector('.sc-curtain-btn')){
     var cb=document.createElement('button');cb.type='button';cb.className='sc-curtain-btn';cb.title='Sol sütunu kapat';cb.setAttribute('aria-label','Sol sütunu kapat');
     cb.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 18 11 12 17 6"/><polyline points="11 18 5 12 11 6"/></svg>';
-    cb.addEventListener('click',function(){document.body.classList.add('sc-lsb-closed');});
+    cb.addEventListener('click',function(){document.body.classList.add('sc-lsb-closed');setTimeout(scREdge,10);setTimeout(scREdge,330);});
     var rn2=lsb.querySelector('.recent-notes');
     if(rn2)lsb.insertBefore(cb,rn2);else lsb.appendChild(cb);
   }

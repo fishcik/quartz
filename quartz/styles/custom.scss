@@ -217,7 +217,7 @@ aside {
 }
 
 .sidebar.right {
-  border-left: 1px solid var(--br) !important;
+  border-left: none !important;
 }
 
 // ── Sol ve sağ sütun sticky scroll ──
@@ -1099,11 +1099,7 @@ article figure {
 // BUG 7: Footer artık yerel plugin (local-plugins/footer) ile gerçek
 // "C.Ç. © 2026" metnini DOM'a basıyor. Quartz linki tamamen kaldırıldı.
 
-footer, .page-footer {
-  min-height: 90px;
-}
-
-footer {
+footer, .page-footer footer {
   border-top: 1px solid var(--br) !important;
   background: var(--bg) !important;
   color: var(--fg-3) !important;
@@ -1111,6 +1107,7 @@ footer {
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 50px;
 }
 
 footer .sc-sign {
@@ -1470,11 +1467,7 @@ body.sc-sbb-open #sc-sbb { transform: translateX(0); }
   &:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 }
 body.sc-sbb-open #sc-sbb-tail { opacity: 0; pointer-events: none; transform: translateX(46px); }
-// Anasayfada YALNIZ MASAÜSTÜNDE SBB ve kuyruk gizli; mobil FAB çalışmaya devam eder
-@media (min-width: 1200px) {
-  body[data-slug="index"] #sc-sbb,
-  body[data-slug="index"] #sc-sbb-tail { display: none !important; }
-}
+// Mobil/tablette saat kuyruğu gizli (FAB kullanılıyor)
 @media (max-width: 1199px) { #sc-sbb-tail { display: none !important; } }
 html[saved-theme="dark"] #sc-sbb-tail { background: #1c1a16; color: var(--fg-3); border-color: #2a2620; }
 html[saved-theme="dark"] #sc-sbb-tail:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
