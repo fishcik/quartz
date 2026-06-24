@@ -217,7 +217,7 @@ aside {
 }
 
 .sidebar.right {
-  border-left: 1px solid var(--br) !important;
+  border-left: none !important;
 }
 
 // ── Sol ve sağ sütun sticky scroll ──
@@ -908,9 +908,13 @@ a.internal.tag-link,
 
 .graph {
   padding: 0.5rem 0.75rem 0.75rem;
-  border-top: 1px solid var(--br);
+  border-top: none;
   margin-top: 0.5rem;
 }
+// Sağ sütundaki yatay ayırıcıları yok et (sidebar.right içindeki hr, üst border'lar)
+.sidebar.right > hr,
+.sidebar.right hr { display: none !important; }
+.sidebar.right > * { border-top: none !important; }
 
 .graph-outer,
 #graph-container {
@@ -937,6 +941,65 @@ html[saved-theme="dark"] #graph-container,
 [saved-theme="dark"] #graph-container {
   background-color: #0a0a0a !important;
   border-color: #1e1e1e !important;
+}
+
+// Global graph (fullscreen) → SBB üstünde göster
+.graph > .global-graph-outer { z-index: 10005 !important; }
+
+// ─── Global graph overlay başlığı + X tuşu (JS enjekte eder) ────────
+.sc-gg-hdr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 10px;
+  pointer-events: none;
+}
+
+.sc-gg-title {
+  font-family: 'Italiana', 'Marcellus', 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-shadow: 0 1px 12px rgba(200,16,46,0.25);
+  pointer-events: none;
+  user-select: none;
+}
+
+html[saved-theme="dark"] .sc-gg-title,
+[saved-theme="dark"] .sc-gg-title {
+  color: var(--accent);
+  text-shadow: 0 1px 18px rgba(200,16,46,0.45);
+}
+
+.sc-gg-close {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid rgba(200,16,46,0.4);
+  border-radius: 50%;
+  background: rgba(200,16,46,0.10);
+  color: var(--accent);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+
+  &:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    transform: scale(1.12);
+  }
 }
 
 // ─── Künye (note-properties) — yazının SONUNA, kompakt, sade ───────
@@ -1099,12 +1162,32 @@ article figure {
 // BUG 7: Footer artık yerel plugin (local-plugins/footer) ile gerçek
 // "C.Ç. © 2026" metnini DOM'a basıyor. Quartz linki tamamen kaldırıldı.
 
+// Footer: JS body seviyesine taşır → tüm sayfa enini kaplar.
+body > footer {
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  padding: 14px 0 !important;
+  min-height: 48px;
+  max-height: 50px;
+  box-sizing: border-box;
+  border-top: 1px solid var(--br) !important;
+  background: var(--bg) !important;
+  color: var(--fg-3) !important;
+  font-size: 0.72rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+// Footer eski yerinde kalırsa da min boyut
 footer {
   border-top: 1px solid var(--br) !important;
   background: var(--bg) !important;
   color: var(--fg-3) !important;
   font-size: 0.72rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 footer .sc-sign {
@@ -1325,14 +1408,14 @@ body[data-slug="index"] .site-header {
 }
 body.sc-scrolled .site-header .sh-divider { display: none; }
 
-// Dark mode: SAYKO kırmızı (currentColor → ψ kolları da kırmızı), hover gold
+// Dark mode: SAYKO sepya/bordo dinlenim hali, hover'da kırmızıya döner
 html[saved-theme="dark"] .site-header-title,
 [saved-theme="dark"] .site-header-title {
-  color: var(--accent) !important;
+  color: var(--bordo) !important;
 }
 html[saved-theme="dark"] .site-header-title:hover,
 [saved-theme="dark"] .site-header-title:hover {
-  color: var(--gold) !important;
+  color: var(--accent) !important;
 }
 
 .site-header-slogan {
@@ -1437,17 +1520,19 @@ html[saved-theme="dark"] #sc-progress,
 }
 body.sc-sbb-open #sc-sbb { transform: translateX(0); }
 
-// Masaüstü saat kuyruğu — sağ kenardan beliren minik saat (SBB'yi açar)
+// Masaüstü saat kuyruğu — sağ sütunun sol sınırından içeri sarkan minik saat (SBB'yi açar)
+// Arama kuyruğu: right=calc(200px+redge) → sol kenara sarkar (orta sütuna doğru)
+// Saat kuyruğu: right=calc(160px+redge) → aynı noktadan SAĞ sütun içine sarkar → sırt sırta
 #sc-sbb-tail {
   position: fixed;
-  right: var(--sc-redge, 0px);
-  top: 96px;
+  right: calc(160px + var(--sc-redge, 0px));
+  top: 0;
   z-index: 9998;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
-  height: 44px;
+  height: 48px;
   padding: 0;
   border: 1px solid var(--br);
   border-right: none;
@@ -1462,9 +1547,7 @@ body.sc-sbb-open #sc-sbb { transform: translateX(0); }
   &:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 }
 body.sc-sbb-open #sc-sbb-tail { opacity: 0; pointer-events: none; transform: translateX(46px); }
-// Anasayfada SBB ve kuyruk tamamen gizli; mobil/tablette kuyruk yerine psi-FAB var
-body[data-slug="index"] #sc-sbb,
-body[data-slug="index"] #sc-sbb-tail { display: none !important; }
+// Mobil/tablette saat kuyruğu gizli (FAB kullanılıyor)
 @media (max-width: 1199px) { #sc-sbb-tail { display: none !important; } }
 html[saved-theme="dark"] #sc-sbb-tail { background: #1c1a16; color: var(--fg-3); border-color: #2a2620; }
 html[saved-theme="dark"] #sc-sbb-tail:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
@@ -1547,8 +1630,8 @@ html[saved-theme="dark"] .sc-logo-btn,
 }
 
 #sc-clockface {
-  width: 82px;
-  height: 82px;
+  width: 110px;
+  height: 110px;
   filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.30));
 }
 
