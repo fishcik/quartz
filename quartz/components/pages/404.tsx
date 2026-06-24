@@ -42,7 +42,7 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   var qEl=document.getElementById('sc-404-quote');
   function newQuote(){ if(qEl){ var i=Math.floor(Math.random()*Q.length); qEl.style.opacity='0'; setTimeout(function(){qEl.textContent=Q[i];qEl.style.opacity='1';},220); } }
 
-  // ── Simetrik Rorschach mürekkep lekesi (canvas, metaball-vari) ──
+  // ── Simetrik Rorschach mürekkep lekesi (canvas) ──
   var cnv=document.getElementById('sc-404-blot');
   if(cnv&&cnv.getContext){
     var ctx=cnv.getContext('2d');
@@ -52,17 +52,15 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     function rnd(a,b){return a+Math.random()*(b-a);}
     function mkBlobs(){
       blobs=[];
-      var n=Math.floor(rnd(5,8));
-      for(var i=0;i<n;i++){
-        blobs.push({
-          x:rnd(0.02,0.42),            // sol yarı (0..0.5), sağ aynalanır
-          y:rnd(0.12,0.88),
-          r:rnd(0.06,0.20),
-          ph:rnd(0,6.28),
-          sp:rnd(0.4,1.2),
-          ax:rnd(0.008,0.025),
-          ay:rnd(0.008,0.025)
-        });
+      // Merkez omurga: y ekseninde, aynalanmaz
+      var nc=Math.floor(rnd(2,4));
+      for(var i=0;i<nc;i++){
+        blobs.push({cx:true,y:rnd(0.2,0.8),r:rnd(0.06,0.13),ph:rnd(0,6.28),sp:rnd(0.2,0.7),ay:rnd(0.008,0.018)});
+      }
+      // Sol yarı loblari: sağa aynalanır → simetrik leke
+      var nl=Math.floor(rnd(6,10));
+      for(var i=0;i<nl;i++){
+        blobs.push({cx:false,x:rnd(0.03,0.46),y:rnd(0.08,0.92),r:rnd(0.09,0.24),ph:rnd(0,6.28),sp:rnd(0.3,1.1),ax:rnd(0.008,0.022),ay:rnd(0.008,0.022)});
       }
     }
     mkBlobs();
@@ -74,34 +72,33 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     }
     function inkColor(){
       var dk=document.documentElement.getAttribute('saved-theme')==='dark';
-      return dk?'rgba(217,176,131,':'rgba(28,24,20,';   // dark: sepya, light: koyu mürekkep
+      return dk?'rgba(217,176,131,':'rgba(28,24,20,';
     }
     var t=0;
     function draw(){
       window.__sc404Raf=requestAnimationFrame(draw);
       if(W===0)resize();
-      t+=0.012;
+      t+=0.01;
       ctx.clearRect(0,0,W,H);
       var col=inkColor();
       ctx.save();
-      ctx.filter='blur(6px)';
-      for(var s=0;s<2;s++){            // s=0 sol, s=1 ayna sağ
-        blobs.forEach(function(b){
-          var bx=(b.x+Math.sin(t*b.sp+b.ph)*b.ax);
-          var by=(b.y+Math.cos(t*b.sp*0.8+b.ph)*b.ay);
-          // imleç etkileşimi: yakındaki blob hafifçe itilir
-          var px=(s===0?bx:1-bx)*W, py=by*H;
-          var dx=px-mouse.x, dy=py-mouse.y, d=Math.sqrt(dx*dx+dy*dy);
-          if(d<120&&d>0.01){ var f=(120-d)/120*0.06; px+=dx/d*f*W; py+=dy/d*f*H; }
-          var rr=b.r*Math.min(W,H)*(0.9+0.1*Math.sin(t*1.3+b.ph));
+      ctx.filter='blur(20px)';
+      blobs.forEach(function(b){
+        var by=(b.y+Math.cos(t*b.sp*0.8+b.ph)*(b.ay||0))*H;
+        var rr=b.r*Math.min(W,H)*(0.88+0.12*Math.sin(t*1.2+b.ph));
+        function drawAt(px,py){
+          var dx=px-mouse.x,dy=py-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+          if(d<110&&d>0.01){var f=(110-d)/110*0.055;px+=dx/d*f*W;py+=dy/d*f*H;}
           var g=ctx.createRadialGradient(px,py,0,px,py,rr);
-          g.addColorStop(0,col+'0.92)');
-          g.addColorStop(0.6,col+'0.65)');
-          g.addColorStop(1,col+'0)');
-          ctx.fillStyle=g;
-          ctx.beginPath();ctx.arc(px,py,rr,0,6.2832);ctx.fill();
-        });
-      }
+          g.addColorStop(0,col+'0.96)');g.addColorStop(0.5,col+'0.76)');g.addColorStop(1,col+'0)');
+          ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,rr,0,6.2832);ctx.fill();
+        }
+        if(b.cx){drawAt(W*0.5,by);}
+        else{
+          var bx=(b.x+Math.sin(t*b.sp+b.ph)*b.ax)*W;
+          drawAt(bx,by);drawAt(W-bx,by);
+        }
+      });
       ctx.restore();
     }
     if(!window.__sc404Raf)draw();
@@ -109,7 +106,7 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     cnv.addEventListener('mousemove',function(e){var r=cnv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
     cnv.addEventListener('mouseleave',function(){mouse.x=-9999;mouse.y=-9999;});
     var stage=cnv.parentElement;
-    if(stage){ stage.style.cursor='pointer'; stage.addEventListener('click',function(){mkBlobs();newQuote();}); }
+    if(stage){stage.style.cursor='pointer';stage.addEventListener('click',function(){mkBlobs();newQuote();});}
   }
 
   // ── Quartz orijinal: büyük/küçük harf URL eşleştirme yönlendirmesi ──
