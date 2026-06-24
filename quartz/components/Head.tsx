@@ -165,7 +165,7 @@ function ensure(){
     var tmo=new MutationObserver(function(){
       de2.classList.add('sc-theme-anim');
       clearTimeout(window.__scThemeT);
-      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},340);
+      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},560);
     });
     tmo.observe(de2,{attributes:true,attributeFilter:['saved-theme']});
   }
@@ -180,28 +180,29 @@ function ensure(){
     lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
     // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
-    gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>';
+    gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.5C10.3 4 8.2 4.3 7 5.8c-.9 1.1-1.1 2.5-.7 3.7C5.3 10 5 11 5 12.1c0 1.4.7 2.6 1.8 3.3-.2.6-.3 1.2-.3 1.8 0 1.8 1.5 3.3 3.3 3.3.3 0 .6 0 .9-.1"/><path d="M12 4.5c1.7-.5 3.8-.2 5 1.3.9 1.1 1.1 2.5.7 3.7.9.5 1.3 1.5 1.3 2.6 0 1.4-.7 2.6-1.8 3.3.2.6.3 1.2.3 1.8 0 1.8-1.5 3.3-3.3 3.3-.3 0-.6 0-.9-.1"/><path d="M9.7 18.3C10.4 19.3 11.2 19.8 12 20c.8-.2 1.6-.7 2.3-1.7"/><line x1="12" y1="4.5" x2="12" y2="19.5"/><path d="M8.5 8.5c.7.9 1.6 1.3 2.8 1.3"/><path d="M8 13c.8.7 1.8 1 2.8.8"/><path d="M15.5 8.5c-.7.9-1.6 1.3-2.8 1.3"/><path d="M16 13c-.8.7-1.8 1-2.8.8"/></svg>';
     // Beyin tuşu → Quartz'ın fullscreen global graph modunu aç (SBB açık kalır)
     // (stopPropagation: document-level click handler graph'ı hemen kapatmasın)
     gtb.addEventListener('click',function(e){
       e.stopPropagation();
       var self=this;
+      // Anasayfada sağ sidebar gizli → global-graph-outer body'e taşı ki görünür olsun
+      var ggOuter=document.querySelector('.global-graph-outer');
+      if(ggOuter&&ggOuter.closest('.sidebar')){document.body.appendChild(ggOuter);}
       setTimeout(function(){
         var icon=document.querySelector('.global-graph-icon');
-        if(icon){
-          icon.click();self.classList.add('sc-active');
-          // Başlık + X tuşunu graph container'a enjekte et
-          setTimeout(function(){
-            var cont=document.querySelector('.global-graph-container');
-            if(cont&&!cont.querySelector('.sc-gg-hdr')){
-              var hd=document.createElement('div');hd.className='sc-gg-hdr';
-              hd.innerHTML='<span class="sc-gg-title">Nöral Ağ</span>';
-              var xb=document.createElement('button');xb.type='button';xb.className='sc-gg-close';xb.setAttribute('aria-label','Kapat');xb.innerHTML='&#x2715;';
-              xb.addEventListener('click',function(){var outer=document.querySelector('.global-graph-outer');if(outer)outer.classList.remove('active');self.classList.remove('sc-active');});
-              hd.appendChild(xb);cont.insertBefore(hd,cont.firstChild);
-            }
-          },60);
-        }
+        if(icon){icon.click();}else if(ggOuter){ggOuter.classList.add('active');}
+        self.classList.add('sc-active');
+        setTimeout(function(){
+          var cont=document.querySelector('.global-graph-container');
+          if(cont&&!cont.querySelector('.sc-gg-hdr')){
+            var hd=document.createElement('div');hd.className='sc-gg-hdr';
+            hd.innerHTML='<span class="sc-gg-title">Nöral Ağ</span>';
+            var xb=document.createElement('button');xb.type='button';xb.className='sc-gg-close';xb.setAttribute('aria-label','Kapat');xb.innerHTML='&#x2715;';
+            xb.addEventListener('click',function(){var outer=document.querySelector('.global-graph-outer');if(outer)outer.classList.remove('active');self.classList.remove('sc-active');});
+            hd.appendChild(xb);cont.insertBefore(hd,cont.firstChild);
+          }
+        },60);
       },280);
     });
     // Theme
@@ -215,9 +216,12 @@ function ensure(){
     // Yazdır — temiz baskı görünümü (@media print kenar süsleri gizler)
     var bpr=document.createElement('button');bpr.type='button';bpr.className='sc-toolbtn sc-printbtn';bpr.title='Yazdır';bpr.setAttribute('aria-label','Yazdır');
     bpr.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
-    bpr.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');setTimeout(function(){window.print();},320);});
-    sbbHdr.appendChild(lg);sbbHdr.appendChild(gtb);sbbHdr.appendChild(bt);sbbHdr.appendChild(bf);sbbHdr.appendChild(bpr);
+    bpr.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');var dk=document.documentElement.getAttribute('saved-theme')==='dark';setTimeout(function(){if(dk){document.documentElement.setAttribute('saved-theme','light');try{localStorage.setItem('theme','light');}catch(e){}}window.print();if(dk){setTimeout(function(){document.documentElement.setAttribute('saved-theme','dark');try{localStorage.setItem('theme','dark');}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:'dark'}}));},80);}},320);});
+    sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
+    var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
+    sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);sbbTools.appendChild(bpr);
+    sbb.appendChild(sbbTools);
     // Clock
     var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
@@ -426,7 +430,7 @@ function initFx0(hdr){
   var amp=0,target=0,phase=0,rafId=null;
   function frame(){
     amp+=(target-amp)*0.08;
-    phase+=0.028;
+    phase+=0.018;
     if(amp<0.08&&target<0.08){nm.style.textShadow='none';rafId=null;return;}
     var sx=amp*Math.sin(phase);
     var sy=amp*0.32*Math.cos(phase*1.3);
@@ -439,7 +443,7 @@ function initFx0(hdr){
     var r=nm.getBoundingClientRect();
     var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
     var d=Math.sqrt(dx*dx+dy*dy);
-    target=Math.max(0,(260-d)/260)*5.5;
+    target=Math.max(0,(260-d)/260)*2.5;
     if(!rafId)rafId=requestAnimationFrame(frame);
   }
   function onLeave(){target=0;}
@@ -471,14 +475,47 @@ function initFx1(hdr){
   hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-mag');};
 }
+// ── Header Efekt 2: Mürekkep damlası — imleç hareket ettikçe yazıdan damla akar ──
+function initFx2(hdr){
+  var word=hdr.querySelector('.sh-word');if(!word)return;
+  var cnv=document.createElement('canvas');
+  cnv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:10;';
+  word.style.position='relative';word.style.overflow='visible';
+  word.appendChild(cnv);
+  var drips=[],rafId=null,lastSpawn=0;
+  function resize(){cnv.width=word.clientWidth;cnv.height=word.clientHeight+90;cnv.style.width=word.clientWidth+'px';cnv.style.height=(word.clientHeight+90)+'px';}
+  resize();
+  function dripCol(){var dk=document.documentElement.getAttribute('saved-theme')==='dark';return dk?'rgba(200,16,46,':'rgba(107,74,47,';}
+  function spawn(x){drips.push({x:x+(Math.random()-0.5)*16,y:word.clientHeight*0.85,len:0,max:18+Math.random()*55,w:1.2+Math.random()*2.8,spd:0.35+Math.random()*0.7,alpha:0.55+Math.random()*0.4,blob:3+Math.random()*8});}
+  function frame(){
+    var ctx2=cnv.getContext('2d');ctx2.clearRect(0,0,cnv.width,cnv.height);
+    var col=dripCol();var alive=false;
+    drips=drips.filter(function(d){
+      d.len+=d.spd;if(d.len>=d.max)return false;
+      alive=true;var t=d.len/d.max,a=d.alpha*(1-t*0.55);
+      ctx2.beginPath();ctx2.moveTo(d.x,d.y);ctx2.lineTo(d.x,d.y+d.len);
+      ctx2.strokeStyle=col+a+')';ctx2.lineWidth=d.w*(1-t*0.35);ctx2.stroke();
+      if(t>0.65){var ba=a*(t-0.65)/0.35;ctx2.beginPath();ctx2.arc(d.x,d.y+d.len,d.blob*(t-0.65)/0.35,0,6.2832);ctx2.fillStyle=col+(ba*0.75)+')';ctx2.fill();}
+      return true;
+    });
+    if(alive)rafId=requestAnimationFrame(frame);else rafId=null;
+  }
+  function onMove(e){
+    var r=word.getBoundingClientRect();var mx=e.clientX-r.left;
+    var now=Date.now();if(now-lastSpawn>100+Math.random()*200){lastSpawn=now;spawn(mx);if(Math.random()<0.3)spawn(mx+(Math.random()-0.5)*30);}
+    if(!rafId)rafId=requestAnimationFrame(frame);
+  }
+  hdr.addEventListener('mousemove',onMove);
+  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);rafId=null;drips=[];hdr.removeEventListener('mousemove',onMove);if(cnv.parentNode)cnv.parentNode.removeChild(cnv);if(word){word.style.position='';word.style.overflow='';}};
+}
 // ── Header efekt koordinatörü — her sayfa yükünde efekt sırası döner ──
 function initHeaderFx(){
   if(window.innerWidth<800)return;
   var hdr=document.querySelector('.site-header');if(!hdr)return;
   if(typeof hdr.__scFxClean==='function')hdr.__scFxClean();
   var n=0;try{n=parseInt(localStorage.getItem('sayko_fx')||'0');}catch(e){}
-  try{localStorage.setItem('sayko_fx',String((n+1)%2));}catch(e){}
-  if(n%2===0)initFx0(hdr);else initFx1(hdr);
+  try{localStorage.setItem('sayko_fx',String((n+1)%3));}catch(e){}
+  if(n%3===0)initFx0(hdr);else if(n%3===1)initFx1(hdr);else initFx2(hdr);
 }
 // ── Footer'ı body seviyesine taşı → tüm sayfa enini kaplar; SPA nav'da
 // Quartz yeni footer üretirse onları siler, body-level olanı korur.
@@ -515,7 +552,7 @@ function ensureFooterWave(){
     if(cnv.width!==W||cnv.height!==H){cnv.width=W;cnv.height=H;}
     var ctx=cnv.getContext('2d');ctx.clearRect(0,0,W,H);
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
-    var cs=dk?['rgba(8,4,18,0.93)','rgba(24,10,38,0.70)']:['rgba(185,171,150,0.62)','rgba(215,204,187,0.42)'];
+    var cs=dk?['rgba(50,8,12,0.90)','rgba(22,22,22,0.65)']:['rgba(185,171,150,0.62)','rgba(215,204,187,0.42)'];
     L.forEach(function(l,i){
       l.p+=l.v*dt;l.t+=dt;
       if(l.t>=l.d){l.a=lrp(l.a,l.b,1);l.b=mkH();l.t=0;l.d=rnd(6,18);}

@@ -652,6 +652,7 @@ p.content-meta {
   color: var(--fg-3) !important;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  text-align: center !important;
   margin-bottom: 2.5rem !important;
   padding-bottom: 1.25rem !important;
   border-bottom: 1px solid var(--br) !important;
@@ -1580,16 +1581,17 @@ html[saved-theme="dark"] .sc-sbb-hdr,
 .sc-logo-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   text-decoration: none !important;
   border: none !important;
   color: #2b2826 !important;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   letter-spacing: 0.03em;
   line-height: 1;
-  flex: 1;
-  min-width: 0;
+  width: 100%;
+  padding: 4px 0 2px;
   transition: color 150ms ease;
 
   &:hover { color: var(--accent) !important; }
@@ -1617,6 +1619,21 @@ html[saved-theme="dark"] .sc-logo-btn,
 [saved-theme="dark"] .sc-logo-btn {
   color: #ece7dd !important;
   &:hover { color: var(--accent) !important; }
+}
+
+// Tuş satırı: SAYKO.ch logo altında, saat üstünde
+.sc-sbb-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4px 8px 6px;
+  gap: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+html[saved-theme="dark"] .sc-sbb-tools,
+[saved-theme="dark"] .sc-sbb-tools {
+  border-bottom-color: rgba(255,255,255,0.08);
 }
 
 // SBB Mondaine saati
@@ -2398,12 +2415,12 @@ html.sc-theme-anim *,
 html.sc-theme-anim *::before,
 html.sc-theme-anim *::after {
   transition:
-    background-color 300ms ease,
-    color 300ms ease,
-    border-color 300ms ease,
-    fill 300ms ease,
-    stroke 300ms ease,
-    box-shadow 300ms ease !important;
+    background-color 500ms ease,
+    color 500ms ease,
+    border-color 500ms ease,
+    fill 500ms ease,
+    stroke 500ms ease,
+    box-shadow 500ms ease !important;
 }
 // Saat ibreleri / progress / canvas dalgası geçişten muaf (kendi animasyonları var)
 html.sc-theme-anim .sc-hand,
@@ -2486,10 +2503,29 @@ html.sc-theme-anim #sc-fw {
 // ═══════════════════════════════════════════════════
 //  Öneri 8 — Özel 404: Rorschach mürekkep lekesi (etkileşimli)
 // ═══════════════════════════════════════════════════
+
+// 404 sayfası: tek sütun, tam genişlik (anasayfa gibi)
+body[data-slug="404"] {
+  .left.sidebar, .right.sidebar { display: none !important; }
+  #quartz-body {
+    grid-template-columns: auto !important;
+    grid-template-areas: "grid-header" "grid-center" "grid-footer" !important;
+  }
+  .center { max-width: 100% !important; }
+}
+
+article.sc-404 {
+  max-width: 640px !important;
+  margin: 2rem auto 4rem !important;
+  padding: 1.5rem !important;
+  text-align: center !important;
+  animation: fadeUp 0.4s ease both;
+}
+
 .sc-404 {
   max-width: 640px;
-  margin: 1rem auto 4rem;
-  padding: 1rem;
+  margin: 2rem auto 4rem;
+  padding: 1.5rem;
   text-align: center;
   animation: fadeUp 0.4s ease both;
 }
