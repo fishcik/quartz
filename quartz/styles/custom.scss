@@ -2482,3 +2482,122 @@ html.sc-theme-anim #sc-fw {
   }
   .sh-tld { color: #c8102e !important; }   // .ch imzası kırmızı kalsın
 }
+
+// ═══════════════════════════════════════════════════
+//  Öneri 8 — Özel 404: Rorschach mürekkep lekesi (etkileşimli)
+// ═══════════════════════════════════════════════════
+.sc-404 {
+  max-width: 640px;
+  margin: 1rem auto 4rem;
+  padding: 1rem;
+  text-align: center;
+  animation: fadeUp 0.4s ease both;
+}
+
+// Sahne: leke canvas'ı + üstünde hayalet "404"
+.sc-404-stage {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  margin: 0 auto 1.5rem;
+  user-select: none;
+}
+
+#sc-404-blot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sc-404-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Bebas Neue', 'Playfair Display', serif;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.16;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+html[saved-theme="dark"] .sc-404-code,
+[saved-theme="dark"] .sc-404-code {
+  opacity: 0.22;
+  mix-blend-mode: screen;
+}
+
+.sc-404-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 2rem !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+  color: var(--dark) !important;
+  margin: 0 0 0.75rem !important;
+  text-align: center !important;
+}
+.sc-404-title::after { display: none; }
+
+.sc-404-quote {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--fg-2) !important;
+  min-height: 2.6em;
+  margin: 0 auto 1.25rem !important;
+  max-width: 30rem;
+  line-height: 1.5;
+  transition: opacity 220ms ease;
+}
+
+.sc-404-hint {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.72rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fg-3) !important;
+  margin: 0 auto 2rem !important;
+  max-width: 28rem;
+}
+
+.sc-404-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Source Serif 4', serif !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg) !important;
+  border: 1px solid var(--br) !important;
+  border-radius: 3px;
+  padding: 0.6rem 1.4rem !important;
+  background: var(--bg-2);
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease;
+
+  .sc-404-home-psi {
+    color: var(--accent);
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: color 160ms ease;
+  }
+
+  &:hover {
+    color: #fff !important;
+    background: var(--accent);
+    border-color: var(--accent) !important;
+    transform: translateY(-2px);
+    .sc-404-home-psi { color: #fff; }
+  }
+}
+
+@media (max-width: 600px) {
+  .sc-404-stage { height: 240px; }
+  .sc-404-code { font-size: 5.5rem; }
+  .sc-404-title { font-size: 1.6rem !important; }
+}
