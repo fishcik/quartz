@@ -53,7 +53,6 @@ export default (() => {
     externalResources,
     ctx,
   }: QuartzComponentProps) => {
-    const titleSuffix = cfg.pageTitleSuffix ?? ""
     const rawTitle = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
     const title = fileData.slug === "index"
       ? "SAYKO.ch - Kitapta durduğu gibi durmaz."
@@ -159,6 +158,17 @@ function ensure(){
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
   function prog(){var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;pb.style.height=(p*100)+'%';}
   window.__scProg=prog;prog();
+  // ── Tema geçişi: saved-theme değişince 300ms yumuşak cross-fade ──
+  if(!window.__scThemeObs){
+    window.__scThemeObs=1;
+    var de2=document.documentElement;
+    var tmo=new MutationObserver(function(){
+      de2.classList.add('sc-theme-anim');
+      clearTimeout(window.__scThemeT);
+      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},340);
+    });
+    tmo.observe(de2,{attributes:true,attributeFilter:['saved-theme']});
+  }
   // ── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ──
   var sbb=document.getElementById('sc-sbb');
   if(!sbb){
@@ -171,15 +181,27 @@ function ensure(){
     // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
     gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>';
-    // Beyin tuşu → SBB kapan, Quartz'ın fullscreen global graph modunu aç
+    // Beyin tuşu → Quartz'ın fullscreen global graph modunu aç (SBB açık kalır)
     // (stopPropagation: document-level click handler graph'ı hemen kapatmasın)
     gtb.addEventListener('click',function(e){
       e.stopPropagation();
-      document.body.classList.remove('sc-sbb-open');
       var self=this;
       setTimeout(function(){
         var icon=document.querySelector('.global-graph-icon');
-        if(icon){icon.click();self.classList.add('sc-active');}
+        if(icon){
+          icon.click();self.classList.add('sc-active');
+          // Başlık + X tuşunu graph container'a enjekte et
+          setTimeout(function(){
+            var cont=document.querySelector('.global-graph-container');
+            if(cont&&!cont.querySelector('.sc-gg-hdr')){
+              var hd=document.createElement('div');hd.className='sc-gg-hdr';
+              hd.innerHTML='<span class="sc-gg-title">Nöral Ağ</span>';
+              var xb=document.createElement('button');xb.type='button';xb.className='sc-gg-close';xb.setAttribute('aria-label','Kapat');xb.innerHTML='&#x2715;';
+              xb.addEventListener('click',function(){var outer=document.querySelector('.global-graph-outer');if(outer)outer.classList.remove('active');self.classList.remove('sc-active');});
+              hd.appendChild(xb);cont.insertBefore(hd,cont.firstChild);
+            }
+          },60);
+        }
       },280);
     });
     // Theme
@@ -190,7 +212,11 @@ function ensure(){
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
-    sbbHdr.appendChild(lg);sbbHdr.appendChild(gtb);sbbHdr.appendChild(bt);sbbHdr.appendChild(bf);
+    // Yazdır — temiz baskı görünümü (@media print kenar süsleri gizler)
+    var bpr=document.createElement('button');bpr.type='button';bpr.className='sc-toolbtn sc-printbtn';bpr.title='Yazdır';bpr.setAttribute('aria-label','Yazdır');
+    bpr.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
+    bpr.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');setTimeout(function(){window.print();},320);});
+    sbbHdr.appendChild(lg);sbbHdr.appendChild(gtb);sbbHdr.appendChild(bt);sbbHdr.appendChild(bf);sbbHdr.appendChild(bpr);
     sbb.appendChild(sbbHdr);
     // Clock
     var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
@@ -335,6 +361,45 @@ function scREdge(){
   if(pg){var r=pg.getBoundingClientRect();re=Math.max(0,Math.round(w-r.right));}
   document.documentElement.style.setProperty('--sc-redge',re+'px');
 }
+// ── Öneri 6: Dinamik etiket bulutu ──────────────────────────────────
+// /tags/ sayfasında, fetchData içeriğindeki tüm yazıları tarayıp her etiketin
+// kaç yazıda geçtiğini sayar; etiket bağlantılarını log ölçekle büyütür.
+// İçerik büyüdükçe bulut kendiliğinden güncellenir (build değişikliği yok).
+function scTagCloud(){
+  var slug=document.body.getAttribute('data-slug')||'';
+  if(!(slug==='tags'||slug==='tags/index'||slug.indexOf('tags/')===0))return;
+  if(typeof fetchData==='undefined'||!fetchData||!fetchData.then)return;
+  fetchData.then(function(index){
+    var counts={};
+    for(var k in index){
+      var tags=index[k]&&index[k].tags;
+      if(tags&&tags.length){tags.forEach(function(t){var key=(''+t).toLowerCase();counts[key]=(counts[key]||0)+1;});}
+    }
+    // Yalnız etiket BÖLÜM başlıklarını ölçekle (makale listeleri/iç etiket
+    // çipleri bozulmasın) → çok kullanılan etiketin başlığı daha büyük olur.
+    var links=document.querySelectorAll('h2 > a.tag-link, h2 a.tag-link');
+    if(!links.length)return;
+    var max=1,data=[];
+    links.forEach(function(a){
+      var href=decodeURIComponent(a.getAttribute('href')||'');
+      var m=href.match(/tags\\/([^\\/#?]+)/);
+      if(!m)return;
+      var name=m[1].toLowerCase();
+      var c=counts[name]||1;
+      if(c>max)max=c;
+      data.push([a,c]);
+    });
+    data.forEach(function(d){
+      var a=d[0],c=d[1];
+      var t=Math.log(1+c)/Math.log(1+max);
+      var fs=1.3+t*2.0;
+      a.style.fontSize=fs.toFixed(2)+'rem';
+      a.style.opacity=(0.62+t*0.38).toFixed(2);
+      a.setAttribute('data-sc-count',String(c));
+      a.classList.add('sc-tagcloud-item');
+    });
+  });
+}
 // Künye paneli: yazının sonuna taşı, başlık + anahtarları Türkçeleştir
 function scProps(){
   var np=document.querySelector('.note-properties');if(!np)return;
@@ -370,18 +435,17 @@ function initFx0(hdr){
       (-sx).toFixed(2)+'px '+(-sy).toFixed(2)+'px 0 rgba(40,80,220,0.52)';
     rafId=requestAnimationFrame(frame);
   }
-  function onEnter(){if(!rafId)rafId=requestAnimationFrame(frame);}
   function onMove(e){
     var r=nm.getBoundingClientRect();
     var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
     var d=Math.sqrt(dx*dx+dy*dy);
     target=Math.max(0,(260-d)/260)*5.5;
+    if(!rafId)rafId=requestAnimationFrame(frame);
   }
   function onLeave(){target=0;}
-  hdr.addEventListener('mouseenter',onEnter);
   hdr.addEventListener('mousemove',onMove);
   hdr.addEventListener('mouseleave',onLeave);
-  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);hdr.removeEventListener('mouseenter',onEnter);hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.style.textShadow='';};
+  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.style.textShadow='';};
 }
 // ── Header Efekt 1: Manyetik metin — harfler imlecin yakınında iter, kırmızıya döner ──
 function initFx1(hdr){
@@ -451,7 +515,7 @@ function ensureFooterWave(){
     if(cnv.width!==W||cnv.height!==H){cnv.width=W;cnv.height=H;}
     var ctx=cnv.getContext('2d');ctx.clearRect(0,0,W,H);
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
-    var cs=dk?['rgba(10,8,5,0.85)','rgba(22,16,10,0.6)']:['rgba(190,178,158,0.65)','rgba(220,210,194,0.45)'];
+    var cs=dk?['rgba(8,4,18,0.93)','rgba(24,10,38,0.70)']:['rgba(185,171,150,0.62)','rgba(215,204,187,0.42)'];
     L.forEach(function(l,i){
       l.p+=l.v*dt;l.t+=dt;
       if(l.t>=l.d){l.a=lrp(l.a,l.b,1);l.b=mkH();l.t=0;l.d=rnd(6,18);}
@@ -475,6 +539,8 @@ function perNav(){
   scREdge();
   // Künye (note-properties) panelini yazının SONUNA taşı + Türkçe etiketle
   scProps();
+  // Dinamik etiket bulutu (/tags sayfası)
+  scTagCloud();
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
   var isHome=(document.body.getAttribute('data-slug')==='index');
   // Site header with rotating font
