@@ -5,7 +5,6 @@ tags:
   - sağlık-psikolojisi
   - davranışsal-önlem
   - risk-algısı
-
 ---
 
 [[Sağlık Modelleri; Bilmek Negen Yetmiyor?|Kondom kullanımı]] sadece bir HIV/hastalık korkusu ya da soyut bilgi meselesi değildir. Asıl olay, lojistik hazırlık ve partnerle iletişim süreçlerini kapsayan "planlama" ile bireyin [[Sağlık Modelleri; Bilmek Negen Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] algısıdır. *Özellikle gençlerde gebeliği önleme arzusu, hastalıktan korunma motivasyonuna kıyasla kondom kullanımını çok daha güçlü şekilde tetikler.*

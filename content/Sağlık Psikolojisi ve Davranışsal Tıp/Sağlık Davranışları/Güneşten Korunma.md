@@ -1,11 +1,10 @@
 ---
-
-title: Güneşten Korunma date: 2026-06-18 tags:
-
+title: Güneşten Korunma 
+date: 2026-06-18 
+tags:
 - sağlık-psikolojisi
 - davranışsal-önlem
 - risk-algısı
-
 ---
 
 _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]] doğrudan [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Sağlık davranışı|davranışsal önlemlerle]] nasıl kesiştiğine bakcaz._ _Güneş kremi, plajda sınırsızca takıl diye değil, istesen bile kaçamayacağın ışınlardan_ **korunman** _için tasarlandı._
