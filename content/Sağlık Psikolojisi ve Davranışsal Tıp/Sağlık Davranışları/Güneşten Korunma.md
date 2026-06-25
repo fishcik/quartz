@@ -11,7 +11,8 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 ---
 
-> [!bug] İRONİ! Genelde insanı güneşten koruyan şey siyahileşme korkusu, kırışıklık ve yaşlanma kaygısıdır.
+> [!bug] İRONİ! 
+> Genelde insanı güneşten koruyan şey siyahileşme korkusu, kırışıklık ve yaşlanma kaygısıdır.
 
 ## Risk Grubu
 
@@ -32,9 +33,9 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
     
 - **Güneş kremi** _Düzenli ve erken uygulama. Kaçınılmaz güneş maruziyetinden korunmak içindir._
     
-- **Gölge** _Güneş altında pişmek yerine aktif olarak gölge aramak_
+- **Gölge** _Güneş altında kavrulmak yerine gölge aramak_
     
-- **Çocuklar ve bebeler** _Genel kural: güneşe maruz bırakılmamalı._ _Eğer ille maruz kalacaklarsa krem yerine giysi tercih etmeli._
+- **Çocuklar ve bebeler** _Genel kural: güneşte bırakılmamalı._ _Eğer ille de güneşte kalacaklarsa krem yerine giysi tercih etmeli._
     
 
 ---
@@ -43,7 +44,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 _"Bulutlu havada güneş çarpmaz yaa, UV yok."_ **UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**
 
-_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar şezlongdayım. ~~İçsem hatta biraz da...~~"_ **Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**
+_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_ **Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**
 
 _"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_ **[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**
 
