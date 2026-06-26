@@ -947,6 +947,45 @@ html[saved-theme="dark"] #graph-container,
 // Global graph (fullscreen) → SBB üstünde göster
 .graph > .global-graph-outer { z-index: 10005 !important; }
 
+// SBB beyin tuşu, anasayfada gizli sağ sütundan graph'ı body'e taşır.
+// Body'nin doğrudan çocuğu olunca .graph kapsamlı stil kaybolur → burada
+// pop-up modal görünümünü (ortalı pencere) elle kuruyoruz. Her sayfada çalışır.
+body > .global-graph-outer {
+  position: fixed !important;
+  z-index: 10005;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.18);
+  display: none;
+  overflow: hidden;
+
+  &.active { display: inline-block; }
+
+  & > .global-graph-container {
+    border: 1px solid var(--br);
+    background-color: var(--bg);
+    border-radius: 6px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 80vw;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+
+    @media all and (max-width: 800px) { width: 92%; height: 78vh; }
+  }
+}
+html[saved-theme="dark"] body > .global-graph-outer { background: rgba(0,0,0,0.5); }
+html[saved-theme="dark"] body > .global-graph-outer > .global-graph-container {
+  background-color: #0a0a0a;
+  border-color: #242424;
+}
+
 // ─── Global graph overlay başlığı + X tuşu (JS enjekte eder) ────────
 .sc-gg-hdr {
   position: absolute;
@@ -2169,7 +2208,7 @@ body[data-slug$="/index"] {
   // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
   .page-listing .section-li:hover { z-index: 10; }
   .page-listing .section-li .desc h3 a:hover {
-    transform: scale(1.09);
+    transform: perspective(900px) rotateX(3deg) rotateY(-3deg) scale(1.07);
     color: #fff !important;
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.22));
   }
@@ -2279,6 +2318,88 @@ html[saved-theme="dark"] .sc-bcl-article,
   color: #ece7dd !important;
   &:hover { color: #ece7dd !important; }
 }
+
+// ─── Görev 8: SBB-kutusu ek bölümü (Alakalı yazılar + Etiketler dropdown) ───
+.sc-sbb-extra {
+  width: 100%;
+  margin-top: 2px;             // menünün (sc-bclayers) hemen ardından akar
+  padding: 0 0 26px;           // chevron'a çakışmasın diye alt boşluk
+  box-sizing: border-box;
+}
+// İnce separatör (menüden sonra)
+.sc-sbb-sep {
+  height: 1px;
+  margin: 8px 12px 6px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.18), transparent);
+}
+html[saved-theme="dark"] .sc-sbb-sep {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
+}
+.sc-sbb-rel-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 0 12px 4px;
+}
+// Backlinks listesi → kompakt, SBB içine sığar
+.sc-sbb-backlinks {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 12px 4px !important;
+  border: none !important;
+  background: none !important;
+  ul, ol { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+  li { margin: 0 0 2px !important; padding: 0 !important; }
+  a {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.7rem;
+    line-height: 1.25;
+    color: rgba(43,40,38,0.82);
+    text-decoration: none !important;
+    display: block;
+    padding: 2px 0;
+    white-space: normal;
+    &:hover { color: var(--accent) !important; }
+  }
+  .overflow { max-height: 150px; overflow-y: auto; }
+}
+html[saved-theme="dark"] .sc-sbb-backlinks a { color: rgba(236,231,221,0.82); }
+
+// Etiketler dropdown (varsayılan kapalı)
+.sc-sbb-tags {
+  width: 100%;
+  margin: 4px 0 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg-3, rgba(43,40,38,0.7));
+    padding: 7px 12px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::-webkit-details-marker { display: none; }
+    &::after { content: '▾'; font-size: 0.75rem; transition: transform 200ms ease; }
+  }
+  &[open] > summary::after { transform: rotate(180deg); }
+  &[open] > summary { color: var(--accent); }
+  .note-properties.sc-sbb-np {
+    margin: 0 !important;
+    padding: 0 12px 8px !important;
+    border: none !important;
+    font-size: 0.68rem;
+  }
+}
+html[saved-theme="dark"] .sc-sbb-tags { border-top-color: rgba(255,255,255,0.08); }
 
 // ─── Görev 3: Mobil/tablet SBB = sağdan açılır çekmece + cardinal psi FAB ───
 // Masaüstünde (≥1200px) SBB docked; FAB ve perde gizli.
@@ -2415,12 +2536,12 @@ html.sc-theme-anim *,
 html.sc-theme-anim *::before,
 html.sc-theme-anim *::after {
   transition:
-    background-color 500ms ease,
-    color 500ms ease,
-    border-color 500ms ease,
-    fill 500ms ease,
-    stroke 500ms ease,
-    box-shadow 500ms ease !important;
+    background-color 340ms ease,
+    color 340ms ease,
+    border-color 340ms ease,
+    fill 340ms ease,
+    stroke 340ms ease,
+    box-shadow 340ms ease !important;
 }
 // Saat ibreleri / progress / canvas dalgası geçişten muaf (kendi animasyonları var)
 html.sc-theme-anim .sc-hand,
@@ -2530,42 +2651,42 @@ article.sc-404 {
   animation: fadeUp 0.4s ease both;
 }
 
-// Sahne: leke canvas'ı + üstünde hayalet "404"
-.sc-404-stage {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  margin: 0 auto 1.5rem;
+// "4 [3D BEYİN] 4" satırı
+.sc-404-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 1rem;
   user-select: none;
 }
 
-#sc-404-blot {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.sc-404-code {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.sc-404-d {
   font-family: 'Bebas Neue', 'Playfair Display', serif;
   font-size: 8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
   line-height: 1;
+  letter-spacing: 0.04em;
   color: var(--accent);
-  opacity: 0.16;
-  pointer-events: none;
-  mix-blend-mode: multiply;
 }
-html[saved-theme="dark"] .sc-404-code,
-[saved-theme="dark"] .sc-404-code {
-  opacity: 0.22;
-  mix-blend-mode: screen;
+
+.sc-404-brainstage {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  #sc-404-brain {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sc-404-d { font-size: 5rem; }
+  .sc-404-brainstage { width: 130px; height: 130px; }
 }
 
 .sc-404-title {
@@ -2633,8 +2754,6 @@ html[saved-theme="dark"] .sc-404-code,
 }
 
 @media (max-width: 600px) {
-  .sc-404-stage { height: 240px; }
-  .sc-404-code { font-size: 5.5rem; }
   .sc-404-title { font-size: 1.6rem !important; }
 }
 
