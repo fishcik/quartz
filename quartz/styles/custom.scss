@@ -1410,13 +1410,13 @@ body[data-slug="index"] .site-header {
     justify-content: center;
     svg { width: 2.7rem; height: 2.7rem; display: block; }
   }
-  // SERPENTBRAIN logosu geniş (1.2:1) → yükseklik sabit, genişlik otomatik
+  // SERPENTBRAIN logosu (2366:1824 oran) → yükseklik sabit, genişlik otomatik
   .sh-logo.sh-logo-sb {
-    flex: 0 0 3.2rem;
-    width: 3.2rem;
+    flex: 0 0 3.6rem;
+    width: 3.6rem;
     color: var(--fg);
     transition: color 200ms ease, transform 200ms ease;
-    svg { width: auto; height: 2.5rem; }
+    svg { width: auto; height: 2.6rem; }
     &:hover { transform: scale(1.04); }
   }
   // SABİT genişlikli kelime kutusu — içerik ortalanır, taşma gizli (auto-fit zaten sığdırır)
@@ -1677,13 +1677,14 @@ html[saved-theme="dark"] .sc-logo-btn,
   &:hover { color: var(--accent) !important; }
 }
 
-// Görev 5: SBB üstünde SAYKO.ch yazısı/psi yerine SERPENTBRAIN logosu (saat boyutu, temaya göre renk)
+// Görev 5: SBB üstünde SAYKO.ch yazısı/psi yerine SERPENTBRAIN logosu
 .sc-logo-btn.sc-logo-sb-only {
-  padding: 10px 0 4px;
+  padding: 8px 0 2px;
   .sc-logo-icon.sc-logo-sb {
     justify-content: center;
     width: 100%;
-    svg { width: auto; height: 60px; }
+    // Saat yaklaşık 110px geniş → logo benzer boyutta, ama yüksek değil
+    svg { width: 90px; height: auto; max-height: 72px; }
   }
 }
 
@@ -2650,43 +2651,68 @@ html.sc-theme-anim #sc-fw {
 }
 
 // ═══════════════════════════════════════════════════
-//  Öneri 8 — Özel 404: Rorschach mürekkep lekesi (etkileşimli)
+//  Öneri 8 — Özel 404: Snake oyunu (tam sayfa canvas)
 // ═══════════════════════════════════════════════════
 
-// 404 sayfası: tek sütun, tam genişlik (anasayfa gibi)
+// 404 sayfası: kenar çubukları gizle, tam genişlik
 body[data-slug="404"] {
   .left.sidebar, .right.sidebar { display: none !important; }
   #quartz-body {
     grid-template-columns: auto !important;
     grid-template-areas: "grid-header" "grid-center" "grid-footer" !important;
   }
-  .center { max-width: 100% !important; }
+  .center { max-width: 100% !important; padding: 0 !important; }
+  footer { position: relative; z-index: 20; }
 }
 
+// Article: tam sayfa kapsayıcı
 article.sc-404 {
-  max-width: 640px !important;
-  margin: 2rem auto 4rem !important;
-  padding: 1.5rem !important;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
   text-align: center !important;
-  animation: fadeUp 0.4s ease both;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
 }
 
-.sc-404 {
-  max-width: 640px;
-  margin: 2rem auto 4rem;
-  padding: 1.5rem;
-  text-align: center;
-  animation: fadeUp 0.4s ease both;
+// Tam sayfa Snake canvas (arka plan)
+#sc-404-field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; // mouse events article'dan geliyor
+  display: block;
 }
 
-// "4 [3D BEYİN] 4" satırı
+// UI öğeleri canvas'ın üstünde
+.sc-404-row,
+.sc-404-title,
+.sc-404-quote,
+.sc-404-hint,
+.sc-404-score,
+.sc-404-home {
+  position: relative;
+  z-index: 10;
+}
+
+// "4 BRAIN 4" satırı
 .sc-404-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.5rem;
   user-select: none;
+  pointer-events: none;
 }
 
 .sc-404-d {
@@ -2696,45 +2722,41 @@ article.sc-404 {
   line-height: 1;
   letter-spacing: 0.04em;
   color: var(--accent);
+  opacity: 0.85;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
 }
 
 .sc-404-brainstage {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   flex-shrink: 0;
-  cursor: pointer;
-
-  #sc-404-brain {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media (max-width: 600px) {
   .sc-404-d { font-size: 5rem; }
-  .sc-404-brainstage { width: 130px; height: 130px; }
+  .sc-404-brainstage { width: 80px; height: 80px; }
 }
 
 .sc-404-title {
   font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 2rem !important;
+  font-size: 1.6rem !important;
   font-weight: 300 !important;
   font-style: italic !important;
   color: var(--dark) !important;
-  margin: 0 0 0.75rem !important;
+  margin: 0 0 0.4rem !important;
   text-align: center !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.12);
 }
 .sc-404-title::after { display: none; }
 
 .sc-404-quote {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-style: italic;
   color: var(--fg-2) !important;
-  min-height: 2.6em;
-  margin: 0 auto 1.25rem !important;
+  min-height: 2.4em;
+  margin: 0 auto 0.5rem !important;
   max-width: 30rem;
   line-height: 1.5;
   transition: opacity 220ms ease;
@@ -2742,12 +2764,43 @@ article.sc-404 {
 
 .sc-404-hint {
   font-family: 'Source Serif 4', serif;
-  font-size: 0.72rem !important;
+  font-size: 0.68rem !important;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--fg-3) !important;
-  margin: 0 auto 2rem !important;
+  margin: 0 auto 0.8rem !important;
   max-width: 28rem;
+}
+
+// Skor sayacı
+.sc-404-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Bebas Neue', 'Playfair Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--fg) !important;
+  background: rgba(var(--bg-raw, 255,255,255), 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid var(--br);
+  border-radius: 4px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 0.6rem;
+
+  .sc-404-score-lbl {
+    color: var(--fg-3);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  #sc-404-score-val {
+    color: var(--accent);
+    font-size: 1.3rem;
+  }
 }
 
 .sc-404-home {
@@ -2762,7 +2815,9 @@ article.sc-404 {
   border: 1px solid var(--br) !important;
   border-radius: 3px;
   padding: 0.6rem 1.4rem !important;
-  background: var(--bg-2);
+  background: rgba(var(--bg-raw, 255,255,255), 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease;
 
   .sc-404-home-psi {
@@ -2782,7 +2837,8 @@ article.sc-404 {
 }
 
 @media (max-width: 600px) {
-  .sc-404-title { font-size: 1.6rem !important; }
+  .sc-404-title { font-size: 1.3rem !important; }
+  .sc-404-d { font-size: 5rem; }
 }
 
 // ═══════════════════════════════════════════════════
