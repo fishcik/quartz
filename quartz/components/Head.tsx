@@ -153,6 +153,37 @@ var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
 var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
+// ── Otomatik tema: Luzern gün doğumu/batımına göre (manuel seçim oturum boyunca öncelikli) ──
+function scAutoTheme(){
+  try{
+    if(sessionStorage.getItem('sc_theme_manual'))return; // kullanıcı bu oturumda elle seçtiyse dokunma
+  }catch(e){}
+  function setTh(th){
+    if(document.documentElement.getAttribute('saved-theme')===th)return;
+    document.documentElement.setAttribute('saved-theme',th);
+    try{localStorage.setItem('theme',th);}catch(e){}
+    document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:th}}));
+  }
+  function apply(sr,ss){
+    var now=new Date();var dawn=new Date(sr),dusk=new Date(ss);
+    setTh((now<dawn||now>=dusk)?'dark':'light'); // gün batımı→karanlık, gün doğumu→aydınlık
+  }
+  var today='';try{today=new Date().toISOString().slice(0,10);}catch(e){}
+  var cached=null;try{cached=JSON.parse(localStorage.getItem('sc_suntimes')||'null');}catch(e){}
+  if(cached&&cached.date===today){apply(cached.sunrise,cached.sunset);return;}
+  try{
+    fetch('https://api.sunrise-sunset.org/json?lat=47.05&lng=8.31&formatted=0')
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d&&d.status==='OK'&&d.results){
+          var o={date:today,sunrise:d.results.sunrise,sunset:d.results.sunset};
+          try{localStorage.setItem('sc_suntimes',JSON.stringify(o));}catch(e){}
+          try{if(sessionStorage.getItem('sc_theme_manual'))return;}catch(e){}
+          apply(o.sunrise,o.sunset);
+        }
+      }).catch(function(){});
+  }catch(e){}
+}
 function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
@@ -165,10 +196,12 @@ function ensure(){
     var tmo=new MutationObserver(function(){
       de2.classList.add('sc-theme-anim');
       clearTimeout(window.__scThemeT);
-      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},560);
+      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},340);
     });
     tmo.observe(de2,{attributes:true,attributeFilter:['saved-theme']});
   }
+  // Otomatik tema (gün doğumu/batımı) — sayfa başına bir kez
+  if(!window.__scAutoTheme){window.__scAutoTheme=1;scAutoTheme();}
   // ── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ──
   var sbb=document.getElementById('sc-sbb');
   if(!sbb){
@@ -208,19 +241,15 @@ function ensure(){
     // Theme
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema';bt.setAttribute('aria-label','Tema');
     bt.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    bt.addEventListener('click',function(){var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
+    bt.addEventListener('click',function(){try{sessionStorage.setItem('sc_theme_manual','1');}catch(e){}var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
     // Focus
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
-    // Yazdır — temiz baskı görünümü (@media print kenar süsleri gizler)
-    var bpr=document.createElement('button');bpr.type='button';bpr.className='sc-toolbtn sc-printbtn';bpr.title='Yazdır';bpr.setAttribute('aria-label','Yazdır');
-    bpr.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
-    bpr.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');var dk=document.documentElement.getAttribute('saved-theme')==='dark';setTimeout(function(){if(dk){document.documentElement.setAttribute('saved-theme','light');try{localStorage.setItem('theme','light');}catch(e){}}window.print();if(dk){setTimeout(function(){document.documentElement.setAttribute('saved-theme','dark');try{localStorage.setItem('theme','dark');}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:'dark'}}));},80);}},320);});
     sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
-    sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);sbbTools.appendChild(bpr);
+    sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
     sbb.appendChild(sbbTools);
     // Clock
     var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
@@ -428,14 +457,20 @@ function scFitHeader(){
 function initFx0(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
   var amp=0,target=0,phase=0,rafId=null;
+  var lx=null,ly=null,lt=0,vel=0,dirx=1,diry=0;
   function frame(){
     amp+=(target-amp)*0.08;
     phase+=0.018;
+    vel*=0.9; // hızı yumuşakça söndür
     if(amp<0.08&&target<0.08){nm.style.textShadow='none';rafId=null;return;}
-    var sx=amp*Math.sin(phase);
-    var sy=amp*0.32*Math.cos(phase*1.3);
+    // İmleç hareket yönüne hizalı RGB kanal kayması
+    var base=amp*(0.55+0.45*Math.sin(phase));
+    var sx=base*dirx+amp*0.28*Math.sin(phase);
+    var sy=base*diry+amp*0.18*Math.cos(phase*1.3);
+    // Hız > 0.5 px/frame iken cardinal kırmızıyı sine modülasyonuyla harmanla
+    var rA=vel>0.5?(0.62+0.33*Math.abs(Math.sin(phase*2.0))):0.62;
     nm.style.textShadow=
-      sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,0.62),'+
+      sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,'+rA.toFixed(2)+'),'+
       (-sx).toFixed(2)+'px '+(-sy).toFixed(2)+'px 0 rgba(40,80,220,0.52)';
     rafId=requestAnimationFrame(frame);
   }
@@ -443,10 +478,18 @@ function initFx0(hdr){
     var r=nm.getBoundingClientRect();
     var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
     var d=Math.sqrt(dx*dx+dy*dy);
-    target=Math.max(0,(260-d)/260)*2.5;
+    target=Math.max(0,(260-d)/260)*2.8;
+    var now=Date.now();
+    if(lx!==null){
+      var mvx=e.clientX-lx,mvy=e.clientY-ly,mag=Math.sqrt(mvx*mvx+mvy*mvy);
+      var dt=Math.max(1,now-lt);
+      vel=mag/dt*16; // ~px/frame (16ms kare)
+      if(mag>0.5){dirx=mvx/mag;diry=mvy/mag;}
+    }
+    lx=e.clientX;ly=e.clientY;lt=now;
     if(!rafId)rafId=requestAnimationFrame(frame);
   }
-  function onLeave(){target=0;}
+  function onLeave(){target=0;vel=0;}
   hdr.addEventListener('mousemove',onMove);
   hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){cancelAnimationFrame(rafId);hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.style.textShadow='';};
@@ -482,27 +525,45 @@ function initFx2(hdr){
   cnv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:10;';
   word.style.position='relative';word.style.overflow='visible';
   word.appendChild(cnv);
+  var ctx2=cnv.getContext('2d');
   var drips=[],rafId=null,lastSpawn=0;
-  function resize(){cnv.width=word.clientWidth;cnv.height=word.clientHeight+90;cnv.style.width=word.clientWidth+'px';cnv.style.height=(word.clientHeight+90)+'px';}
+  function resize(){var w=word.clientWidth,h=word.clientHeight;cnv.width=w;cnv.height=h+130;cnv.style.width=w+'px';cnv.style.height=(h+130)+'px';}
   resize();
-  function dripCol(){var dk=document.documentElement.getAttribute('saved-theme')==='dark';return dk?'rgba(200,16,46,':'rgba(107,74,47,';}
-  function spawn(x){drips.push({x:x+(Math.random()-0.5)*16,y:word.clientHeight*0.85,len:0,max:18+Math.random()*55,w:1.2+Math.random()*2.8,spd:0.35+Math.random()*0.7,alpha:0.55+Math.random()*0.4,blob:3+Math.random()*8});}
+  // Tema rengine uygun mürekkep: aydınlık→koyu espresso, karanlık→cardinal kırmızı
+  function rgb(){return document.documentElement.getAttribute('saved-theme')==='dark'?'200,16,46':'32,24,18';}
+  function spawn(x){
+    if(drips.length>52)return;
+    drips.push({x:x+(Math.random()-0.5)*12,w:4+Math.random()*6,y0:word.clientHeight*0.82,
+      len:0,max:30+Math.random()*78,v:0.4+Math.random()*0.5,bulb:3.5+Math.random()*5.5,
+      hold:50+Math.random()*90,alpha:0.86+Math.random()*0.14});
+  }
+  function drawDrip(d,c){
+    var x=d.x,y0=d.y0,tipY=y0+d.len,topW=d.w,bw=d.bulb;
+    ctx2.fillStyle='rgba('+c+','+d.alpha.toFixed(2)+')';
+    // Gooey sütun: üstte geniş, ortada incelir, uçta yuvarlak topuz
+    ctx2.beginPath();
+    ctx2.moveTo(x-topW/2,y0);
+    ctx2.quadraticCurveTo(x-bw*0.55,y0+d.len*0.6,x-bw*0.5,tipY);
+    ctx2.lineTo(x+bw*0.5,tipY);
+    ctx2.quadraticCurveTo(x+bw*0.55,y0+d.len*0.6,x+topW/2,y0);
+    ctx2.closePath();ctx2.fill();
+    ctx2.beginPath();ctx2.arc(x,tipY,bw,0,6.2832);ctx2.fill();
+  }
   function frame(){
-    var ctx2=cnv.getContext('2d');ctx2.clearRect(0,0,cnv.width,cnv.height);
-    var col=dripCol();var alive=false;
+    ctx2.clearRect(0,0,cnv.width,cnv.height);
+    var c=rgb(),alive=false;
     drips=drips.filter(function(d){
-      d.len+=d.spd;if(d.len>=d.max)return false;
-      alive=true;var t=d.len/d.max,a=d.alpha*(1-t*0.55);
-      ctx2.beginPath();ctx2.moveTo(d.x,d.y);ctx2.lineTo(d.x,d.y+d.len);
-      ctx2.strokeStyle=col+a+')';ctx2.lineWidth=d.w*(1-t*0.35);ctx2.stroke();
-      if(t>0.65){var ba=a*(t-0.65)/0.35;ctx2.beginPath();ctx2.arc(d.x,d.y+d.len,d.blob*(t-0.65)/0.35,0,6.2832);ctx2.fillStyle=col+(ba*0.75)+')';ctx2.fill();}
-      return true;
+      if(d.len<d.max){d.len+=d.v;d.v=Math.min(d.v+0.03,2.3);}
+      else{d.hold--;if(d.hold<0)d.alpha-=0.012;}
+      if(d.alpha<=0.02)return false;
+      alive=true;drawDrip(d,c);return true;
     });
     if(alive)rafId=requestAnimationFrame(frame);else rafId=null;
   }
   function onMove(e){
     var r=word.getBoundingClientRect();var mx=e.clientX-r.left;
-    var now=Date.now();if(now-lastSpawn>100+Math.random()*200){lastSpawn=now;spawn(mx);if(Math.random()<0.3)spawn(mx+(Math.random()-0.5)*30);}
+    var now=Date.now();
+    if(now-lastSpawn>90){lastSpawn=now;spawn(mx);if(Math.random()<0.4)spawn(mx+(Math.random()-0.5)*44);}
     if(!rafId)rafId=requestAnimationFrame(frame);
   }
   hdr.addEventListener('mousemove',onMove);
@@ -517,6 +578,47 @@ function initHeaderFx(){
   try{localStorage.setItem('sayko_fx',String((n+1)%3));}catch(e){}
   if(n%3===0)initFx0(hdr);else if(n%3===1)initFx1(hdr);else initFx2(hdr);
 }
+// ── Görev 7.2: Ders kartlarına imleç-güdümlü 3D tilt (yalnız masaüstü) ──
+function scCardTilt(){
+  if(window.innerWidth<800)return;
+  document.querySelectorAll('.curriculum-grid .cg-cell').forEach(function(c){
+    if(c.getAttribute('data-sc-tilt'))return;c.setAttribute('data-sc-tilt','1');
+    c.addEventListener('mousemove',function(e){
+      var r=c.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-0.5,py=(e.clientY-r.top)/r.height-0.5;
+      c.style.transform='perspective(1000px) rotateX('+(-py*6).toFixed(2)+'deg) rotateY('+(px*6).toFixed(2)+'deg) scale(1.01)';
+    });
+    c.addEventListener('mouseleave',function(){c.style.transform='';});
+  });
+}
+// ── Görev 8: Backlinks + Etiketler'i SBB-kutusuna entegre et ──
+// Menüden (sc-bclayers) sonra ince separatör + "Alakalı yazılar:" + backlinks;
+// en altta "Etiketler" dropdown (varsayılan kapalı). Her nav'da yeniden kurulur.
+function scSbbExtras(){
+  var sbb=document.getElementById('sc-sbb');if(!sbb)return;
+  var extra=sbb.querySelector('.sc-sbb-extra');
+  if(!extra){extra=document.createElement('div');extra.className='sc-sbb-extra';sbb.appendChild(extra);}
+  extra.innerHTML='';
+  // Alakalı yazılar (backlinks)
+  var bl=document.querySelector('.backlinks');
+  if(bl){
+    var sep=document.createElement('div');sep.className='sc-sbb-sep';extra.appendChild(sep);
+    var rt=document.createElement('div');rt.className='sc-sbb-rel-title';rt.textContent='Alakalı yazılar:';extra.appendChild(rt);
+    var oh=bl.querySelector('h3');if(oh)oh.style.display='none';
+    bl.classList.add('sc-sbb-backlinks');
+    extra.appendChild(bl);
+  }
+  // Etiketler dropdown (note-properties) — varsayılan kapalı
+  var np=document.querySelector('.note-properties');
+  if(np){
+    var det=document.createElement('details');det.className='sc-sbb-tags';
+    var sm=document.createElement('summary');sm.textContent='Etiketler';det.appendChild(sm);
+    var npt=np.querySelector('.note-properties-title');if(npt)npt.style.display='none';
+    np.classList.add('sc-sbb-np');
+    det.appendChild(np);
+    extra.appendChild(det);
+  }
+}
 // ── Footer'ı body seviyesine taşı → tüm sayfa enini kaplar; SPA nav'da
 // Quartz yeni footer üretirse onları siler, body-level olanı korur.
 function syncFooter(){
@@ -529,28 +631,33 @@ function syncFooter(){
 // ── Footer dalga animasyonu — yalnız <footer> elementini kapsar (yaklaşık 48px) ──
 // IntersectionObserver ile görünür olduğunda çalışır → homepage slowdown yok
 function ensureFooterWave(){
-  if(window.__scFwRaf)return;
   var ft=document.querySelector('footer');if(!ft)return;
-  var cnv=document.createElement('canvas');cnv.id='sc-fw';
-  cnv.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:0;';
-  ft.insertBefore(cnv,ft.firstChild);
-  Array.prototype.slice.call(ft.children).forEach(function(c){if(c!==cnv){c.style.position='relative';c.style.zIndex='1';}});
+  // Canvas yoksa (ilk yük ya da SPA nav'da footer yenilendiyse) ekle → her sayfada garanti
+  if(!ft.querySelector('#sc-fw')){
+    var cnv=document.createElement('canvas');cnv.id='sc-fw';
+    cnv.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:0;';
+    if(getComputedStyle(ft).position==='static')ft.style.position='relative';
+    ft.insertBefore(cnv,ft.firstChild);
+    Array.prototype.slice.call(ft.children).forEach(function(c){if(c.id!=='sc-fw'){c.style.position='relative';c.style.zIndex='1';}});
+  }
+  if(window.__scFwRaf)return; // tek kalıcı döngü; footer + canvas'ı her karede yeniden bulur
   function rnd(a,b){return a+Math.random()*(b-a);}
   function mkH(){var n=Math.floor(rnd(2,5)),h=[];for(var i=0;i<n;i++)h.push([rnd(0.06,0.28),rnd(1,4),rnd(0,6.28)]);return h;}
   function evalW(h,x,W,p){var y=0;h.forEach(function(s){y+=Math.sin(x/W*6.28*s[1]+p+s[2])*s[0];});return y;}
   function lrp(a,b,t){var n=Math.max(a.length,b.length),r=[];for(var i=0;i<n;i++){var ai=a[i]||[0,1,0],bi=b[i]||[0,1,0];r.push([ai[0]+(bi[0]-ai[0])*t,ai[1]+(bi[1]-ai[1])*t,ai[2]+(bi[2]-ai[2])*t]);}return r;}
   var L=[{p:0,v:0.45,a:mkH(),b:mkH(),t:0,d:rnd(6,18)},{p:3.14,v:-0.32,a:mkH(),b:mkH(),t:0,d:rnd(6,18)}];
-  var prev=0,visible=false;
-  if(window.IntersectionObserver){
-    new IntersectionObserver(function(ents){visible=ents[0].isIntersecting;}).observe(ft);
-  } else { visible=true; }
+  var prev=0;
   function tick(ts){
     window.__scFwRaf=requestAnimationFrame(tick);
-    if(!visible){prev=0;return;}
+    var ftn=document.querySelector('footer');if(!ftn){prev=0;return;}
+    var cv=ftn.querySelector('#sc-fw');if(!cv){prev=0;return;}
+    var rect=ftn.getBoundingClientRect();
+    var vh=window.innerHeight||document.documentElement.clientHeight||0;
+    if(rect.bottom<-40||rect.top>vh+40){prev=0;return;} // ekran dışı → boşuna çizme
     var dt=prev?(ts-prev)/1000:0;if(dt>0.1)dt=0.1;prev=ts;
-    var W=ft.clientWidth||300,H=Math.max(ft.clientHeight,48);
-    if(cnv.width!==W||cnv.height!==H){cnv.width=W;cnv.height=H;}
-    var ctx=cnv.getContext('2d');ctx.clearRect(0,0,W,H);
+    var W=ftn.clientWidth||300,H=Math.max(ftn.clientHeight,48);
+    if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}
+    var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
     var cs=dk?['rgba(50,8,12,0.90)','rgba(22,22,22,0.65)']:['rgba(185,171,150,0.62)','rgba(215,204,187,0.42)'];
     L.forEach(function(l,i){
@@ -664,6 +771,8 @@ function perNav(){
   if(window.__scProg)window.__scProg();
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
+  scCardTilt();
+  scSbbExtras();
   initHeaderFx();
   syncFooter();
   ensureFooterWave();
