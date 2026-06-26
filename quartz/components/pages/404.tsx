@@ -17,11 +17,11 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
         </div>
         <span class="sc-404-d" aria-hidden="true">4</span>
       </div>
-      <h1 class="sc-404-title">Bu sayfa bastırıldı.</h1>
+      <h1 class="sc-404-title">Bu sayfa henüz keşfedilmedi.</h1>
       <p class="sc-404-quote" id="sc-404-quote">
-        Aradığın şey burada değil. Belki de hiç olmadı.
+        Aradığın şey burada değil. Belki de henüz keşfedilmeyi bekliyor.
       </p>
-      <p class="sc-404-hint">Beyni imleçle çevir. Tıkla, yeni bir düşünce belirsin.</p>
+      <p class="sc-404-hint">İmleci gezdir — yılan peşinden gelsin. Tıkla, yeni bir düşünce belirsin.</p>
       <a class="sc-404-home" href={baseDir}>
         <span class="sc-404-home-psi">ψ</span> Bilince geri dön
       </a>
@@ -45,119 +45,118 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   var qEl=document.getElementById('sc-404-quote');
   function newQuote(){ if(qEl){ var i=Math.floor(Math.random()*Q.length); qEl.style.opacity='0'; setTimeout(function(){qEl.textContent=Q[i];qEl.style.opacity='1';},220); } }
 
-  // ── 3D nöral beyin nokta-bulutu (canvas) ──
+  // ── SERPENTBRAIN fidget oyuncağı: beyin + peşine düşen yılan (canvas) ──
   var cnv=document.getElementById('sc-404-brain');
   if(cnv&&cnv.getContext){
     var ctx=cnv.getContext('2d');
     var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
-    var N=540;                       // nokta sayısı
-    var pts=[],edges=[];
-    function rnd(a,b){return a+Math.random()*(b-a);}
-    // Fibonacci küresi → eşit dağılım, sonra beyin oranlarına deforme
-    function build(){
-      pts=[];edges=[];
-      var ga=Math.PI*(3-Math.sqrt(5));
-      for(var i=0;i<N;i++){
-        var y=1-(i/(N-1))*2;          // -1..1
-        var rad=Math.sqrt(Math.max(0,1-y*y));
-        var th=ga*i;
-        var x=Math.cos(th)*rad, z=Math.sin(th)*rad;
-        // Beyin oranı: enli, basık; önden arkaya hafif uzun
-        var px=x*1.32, py=y*0.92, pz=z*1.12;
-        // Girus/sulkus kıvrımları → yüzey dalgalanması (normal yönünde)
-        var wob=0.09*Math.sin(5.0*th+3.0*y)+0.06*Math.sin(8.0*y)+0.05*Math.cos(6.5*x);
-        var L=Math.sqrt(px*px+py*py+pz*pz)||1;
-        px+=px/L*wob; py+=py/L*wob; pz+=pz/L*wob;
-        // Longitudinal fissür: üstte (py>0) orta hatta vadi → iki yarımküre
-        var midGap=Math.exp(-(px*px)*7.0)*Math.max(0,py)*0.5;
-        px+=(px>=0?1:-1)*midGap*0.5;
-        py-=midGap*0.55;
-        // Beyin sapı ipucu: alt-arka hafif sarkma
-        if(py<-0.45&&pz<0){ py-=0.06; }
-        pts.push({x:px,y:py,z:pz,sx:0,sy:0,sz:0,pulse:Math.random()<0.10});
-      }
-      // Komşu kenarları (3D mesafe eşiği) — nöral bağlar
-      var TH=0.40;
-      for(var a=0;a<pts.length;a++){
-        var cntE=0;
-        for(var b=a+1;b<pts.length&&cntE<3;b++){
-          var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,dz=pts[a].z-pts[b].z;
-          if(dx*dx+dy*dy+dz*dz<TH*TH){edges.push([a,b]);cntE++;}
-        }
-      }
-    }
-    build();
     function resize(){
       var rect=cnv.getBoundingClientRect();
       W=rect.width;H=rect.height;
       cnv.width=Math.round(W*DPR);cnv.height=Math.round(H*DPR);
       ctx.setTransform(DPR,0,0,DPR,0,0);
     }
-    // Renkler: tema duyarlı (aydınlık koyu mürekkep / karanlık cardinal-krem)
     function palette(){
       var dk=document.documentElement.getAttribute('saved-theme')==='dark';
       return dk
-        ? {node:'232,224,210', acc:'210,21,26', line:'180,170,150'}
-        : {node:'40,32,26',    acc:'200,16,46', line:'120,104,86'};
+        ? {brain:'150,140,124', gyri:'120,112,98', snake:'232,224,210', acc:'210,24,30'}
+        : {brain:'120,104,86',  gyri:'150,134,112', snake:'46,36,28',   acc:'200,16,46'};
     }
-    var rotY=0.4,rotX=-0.15,tgtY=0.4,tgtX=-0.15,spin=0.0035,t=0,mIn=false;
-    function project(){
-      var cy=Math.cos(rotY),sy=Math.sin(rotY),cx=Math.cos(rotX),sx=Math.sin(rotX);
-      var S=Math.min(W,H)*0.40, cxp=W/2, cyp=H/2, FOV=3.0;
-      for(var i=0;i<pts.length;i++){
-        var p=pts[i];
-        var x1=p.x*cy - p.z*sy;
-        var z1=p.x*sy + p.z*cy;
-        var y1=p.y*cx - z1*sx;
-        var z2=p.y*sx + z1*cx;
-        var persp=FOV/(FOV - z2);
-        p.sx=cxp + x1*S*persp;
-        p.sy=cyp + y1*S*persp;
-        p.sz=z2;                       // derinlik (-..+, +öne)
+    // Yılan zinciri (baş → kuyruk), her segment öncekini takip eder
+    var NS=20, seg=[], seglen=0, t=0, mIn=false, idle=0, burst=0;
+    var mx=0,my=0;
+    function initChain(){
+      seglen=Math.min(W,H)*0.052;
+      seg=[];for(var i=0;i<NS;i++)seg.push({x:W/2+i*seglen,y:H/2});
+      mx=W/2;my=H/2;
+    }
+    // Beyin: orta noktada sabit, hafif nabız atan stilize çizim
+    function drawBrain(col){
+      var cx=W/2,cy=H/2,R=Math.min(W,H)*0.30, p=1+0.02*Math.sin(t*1.4);
+      ctx.save();ctx.translate(cx,cy);ctx.scale(R*p/60,R*p/60);
+      ctx.lineWidth=2.0/(R/60);ctx.lineCap='round';ctx.lineJoin='round';
+      ctx.strokeStyle='rgba('+col.brain+',0.85)';
+      // dış hat (iki yarımküre)
+      ctx.beginPath();
+      ctx.moveTo(-2,-44);
+      ctx.bezierCurveTo(-30,-46,-52,-26,-44,-6);
+      ctx.bezierCurveTo(-58,4,-50,30,-30,30);
+      ctx.bezierCurveTo(-26,44,-4,46,2,34);
+      ctx.bezierCurveTo(8,46,30,46,34,30);
+      ctx.bezierCurveTo(54,30,60,6,46,-6);
+      ctx.bezierCurveTo(56,-26,34,-48,8,-42);
+      ctx.bezierCurveTo(6,-46,0,-46,-2,-44);
+      ctx.stroke();
+      // orta yarık
+      ctx.beginPath();ctx.moveTo(1,-42);ctx.lineTo(2,34);ctx.stroke();
+      // girus kıvrımları
+      ctx.strokeStyle='rgba('+col.gyri+',0.7)';ctx.lineWidth=1.6/(R/60);
+      var g=[[-30,-20,-18,-12],[-38,2,-24,8],[-26,18,-14,22],[14,-22,28,-14],[18,4,34,8],[14,20,26,24]];
+      for(var i=0;i<g.length;i++){ctx.beginPath();ctx.moveTo(g[i][0],g[i][1]);ctx.quadraticCurveTo((g[i][0]+g[i][2])/2,g[i][1]-8,g[i][2],g[i][3]);ctx.stroke();}
+      ctx.restore();
+    }
+    function drawSnake(col){
+      // gövde — baştan kuyruğa incelir
+      ctx.lineCap='round';ctx.lineJoin='round';
+      for(var i=0;i<NS-1;i++){
+        var a=seg[i],b=seg[i+1];
+        ctx.strokeStyle='rgba('+col.snake+','+(0.92-i/NS*0.5).toFixed(2)+')';
+        ctx.lineWidth=Math.max(1, (Math.min(W,H)*0.055)*(1-i/NS));
+        ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
       }
+      // baş
+      var h=seg[0],n=seg[1];
+      var ang=Math.atan2(h.y-n.y,h.x-n.x);
+      var hr=Math.min(W,H)*0.038;
+      ctx.fillStyle='rgba('+col.snake+',1)';
+      ctx.beginPath();ctx.ellipse(h.x,h.y,hr*1.25,hr,ang,0,6.2832);ctx.fill();
+      // gözler (kırmızı nabız)
+      var ex=Math.cos(ang+1.4)*hr*0.6,ey=Math.sin(ang+1.4)*hr*0.6;
+      var pulse=0.6+0.4*Math.sin(t*4);
+      ctx.fillStyle='rgba('+col.acc+','+pulse.toFixed(2)+')';
+      ctx.beginPath();ctx.arc(h.x+ex,h.y+ey,hr*0.26,0,6.2832);ctx.fill();
+      ctx.beginPath();ctx.arc(h.x-ex*0.3+Math.cos(ang-1.4)*hr*0.6,h.y-ey*0.3+Math.sin(ang-1.4)*hr*0.6,hr*0.26,0,6.2832);ctx.fill();
+      // çatal dil
+      var tx=h.x+Math.cos(ang)*hr*1.6,ty=h.y+Math.sin(ang)*hr*1.6;
+      ctx.strokeStyle='rgba('+col.acc+',0.9)';ctx.lineWidth=Math.max(0.8,hr*0.12);
+      ctx.beginPath();ctx.moveTo(h.x+Math.cos(ang)*hr*1.2,h.y+Math.sin(ang)*hr*1.2);ctx.lineTo(tx,ty);
+      ctx.lineTo(tx+Math.cos(ang+0.5)*hr*0.5,ty+Math.sin(ang+0.5)*hr*0.5);
+      ctx.moveTo(tx,ty);ctx.lineTo(tx+Math.cos(ang-0.5)*hr*0.5,ty+Math.sin(ang-0.5)*hr*0.5);
+      ctx.stroke();
     }
     function draw(){
       window.__sc404Raf=requestAnimationFrame(draw);
-      if(W===0)resize();
+      if(W===0){resize();initChain();}
       t+=0.016;
-      // İmleç yoksa yavaş otomatik dönüş; varsa hedefe yönel
-      if(!mIn){ tgtY+=spin; }
-      rotY+=(tgtY-rotY)*0.06;
-      rotX+=(tgtX-rotX)*0.06;
-      project();
-      ctx.clearRect(0,0,W,H);
       var col=palette();
-      // Nöral bağlar (derinliğe göre soluk)
-      ctx.lineWidth=0.7;
-      for(var e=0;e<edges.length;e++){
-        var pa=pts[edges[e][0]],pb=pts[edges[e][1]];
-        var dep=(pa.sz+pb.sz)*0.5;          // -..+
-        var a=0.10+Math.max(0,dep)*0.22;
-        ctx.strokeStyle='rgba('+col.line+','+a.toFixed(3)+')';
-        ctx.beginPath();ctx.moveTo(pa.sx,pa.sy);ctx.lineTo(pb.sx,pb.sy);ctx.stroke();
+      // Hedef: imleç varsa imleç; yoksa beyin çevresinde yavaş yörünge
+      var tx,ty;
+      if(mIn){tx=mx;ty=my;}
+      else{idle+=0.012;var R=Math.min(W,H)*0.40;tx=W/2+Math.cos(idle)*R;ty=H/2+Math.sin(idle*1.3)*R*0.7;}
+      // Baş hedefe doğru yumuşakça (tıklayınca kısa "atılış")
+      if(burst>0)burst-=0.04;
+      var sp=0.16+Math.max(0,burst)*0.5;
+      seg[0].x+=(tx-seg[0].x)*sp;seg[0].y+=(ty-seg[0].y)*sp;
+      // Zincir kısıtı: her segment öncekinden sabit mesafede
+      for(var i=1;i<NS;i++){
+        var dx=seg[i].x-seg[i-1].x,dy=seg[i].y-seg[i-1].y;
+        var d=Math.sqrt(dx*dx+dy*dy)||0.001;
+        seg[i].x=seg[i-1].x+dx/d*seglen;
+        seg[i].y=seg[i-1].y+dy/d*seglen;
       }
-      // Düğümler — derinliğe göre boyut/opaklık; bazıları kırmızı nabız atar
-      for(var i=0;i<pts.length;i++){
-        var p=pts[i];
-        var d=(p.sz+1)/2;                    // 0..1
-        var r=0.7+d*2.0;
-        var al=0.25+d*0.65;
-        var c=col.node;
-        if(p.pulse){ var pl=0.5+0.5*Math.sin(t*2.2+i); r+=pl*1.3; al=0.5+pl*0.5; c=col.acc; }
-        ctx.fillStyle='rgba('+c+','+al.toFixed(3)+')';
-        ctx.beginPath();ctx.arc(p.sx,p.sy,r,0,6.2832);ctx.fill();
-      }
+      ctx.clearRect(0,0,W,H);
+      drawBrain(col);
+      drawSnake(col);
     }
     if(!window.__sc404Raf)draw();
-    window.addEventListener('resize',resize,{passive:true});
+    window.addEventListener('resize',function(){resize();initChain();},{passive:true});
     cnv.addEventListener('mousemove',function(e){
       var r=cnv.getBoundingClientRect();
-      var nx=(e.clientX-r.left)/r.width-0.5, ny=(e.clientY-r.top)/r.height-0.5;
-      mIn=true; tgtY=0.4+nx*2.2; tgtX=-0.15+ny*1.6;
+      mx=e.clientX-r.left;my=e.clientY-r.top;mIn=true;
     });
-    cnv.addEventListener('mouseleave',function(){ mIn=false; tgtX=-0.15; });
+    cnv.addEventListener('mouseleave',function(){mIn=false;});
     var stage=cnv.parentElement;
-    if(stage){ stage.style.cursor='pointer'; stage.addEventListener('click',function(){ tgtY+=Math.PI; newQuote(); }); }
+    if(stage){stage.style.cursor='pointer';stage.addEventListener('click',function(){burst=1;newQuote();});}
   }
 
   // ── Quartz orijinal: büyük/küçük harf URL eşleştirme yönlendirmesi ──

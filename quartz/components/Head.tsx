@@ -36,6 +36,7 @@ function readSvg(rel: string): string {
 
 // Build-time: ikon + logo SVG'lerini oku, JS'e gömülecek veriyi hazırla
 const SC_LOGO_SVG = readSvg("quartz/static/logo-symbol.svg")
+const SC_SB_SVG = readSvg("quartz/static/serpentbrain.svg")
 const SC_GRID_DATA = SC_COURSES.map((c) => ({
   n: c.n,
   name: c.name,
@@ -150,6 +151,9 @@ export default (() => {
 var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
+var SC_SB=${JSON.stringify(SC_SB_SVG)};
+// Minimal serpent ayraç: header/slogan ile içerik arasındaki ince sepya çizgi yerine
+var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 240 12" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M2 6 C20 0 36 12 56 6 S94 0 116 6 S156 12 178 6 S214 1 232 6"/><path d="M232 6 l6 -3 m-6 3 l6 3" stroke-width="1.1"/><circle cx="234.5" cy="6" r="0.9" fill="currentColor" stroke="none"/></svg>';
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
 var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
@@ -210,7 +214,8 @@ function ensure(){
     var sbbHdr=document.createElement('div');sbbHdr.className='sc-sbb-hdr';
     // SBB logo: sabit kompakt font (rotasyon yok — sadece sayfa header'ı döner)
     var lg=document.createElement('a');lg.className='sc-logo-btn';lg.href='/';lg.setAttribute('aria-label','SAYKO.ch');
-    lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
+    lg.innerHTML='<span class="sc-logo-icon sc-logo-sb">'+SC_SB+'</span>';
+    lg.classList.add('sc-logo-sb-only');
     // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
     gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.5C10.3 4 8.2 4.3 7 5.8c-.9 1.1-1.1 2.5-.7 3.7C5.3 10 5 11 5 12.1c0 1.4.7 2.6 1.8 3.3-.2.6-.3 1.2-.3 1.8 0 1.8 1.5 3.3 3.3 3.3.3 0 .6 0 .9-.1"/><path d="M12 4.5c1.7-.5 3.8-.2 5 1.3.9 1.1 1.1 2.5.7 3.7.9.5 1.3 1.5 1.3 2.6 0 1.4-.7 2.6-1.8 3.3.2.6.3 1.2.3 1.8 0 1.8-1.5 3.3-3.3 3.3-.3 0-.6 0-.9-.1"/><path d="M9.7 18.3C10.4 19.3 11.2 19.8 12 20c.8-.2 1.6-.7 2.3-1.7"/><line x1="12" y1="4.5" x2="12" y2="19.5"/><path d="M8.5 8.5c.7.9 1.6 1.3 2.8 1.3"/><path d="M8 13c.8.7 1.8 1 2.8.8"/><path d="M15.5 8.5c-.7.9-1.6 1.3-2.8 1.3"/><path d="M16 13c-.8.7-1.8 1-2.8.8"/></svg>';
@@ -279,7 +284,7 @@ function ensure(){
   var fab=document.getElementById('sc-sbb-fab');
   if(!fab){
     fab=document.createElement('button');fab.type='button';fab.id='sc-sbb-fab';fab.setAttribute('aria-label','SAYKO panelini aç/kapat');
-    fab.innerHTML='<span class="sc-fab-icon">'+SC_LOGO+'</span>';
+    fab.innerHTML='<span class="sc-fab-icon sc-fab-sb">'+SC_SB+'</span>';
     var bd=document.createElement('div');bd.id='sc-sbb-backdrop';bd.setAttribute('aria-hidden','true');
     fab.addEventListener('click',function(){document.body.classList.toggle('sc-sbb-open');});
     bd.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');});
@@ -456,22 +461,36 @@ function scFitHeader(){
 // ── Header Efekt 0: Kromatik sapma — sakin, sürekli salınım; imleç yaklaştıkça artar ──
 function initFx0(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
-  var amp=0,target=0,phase=0,rafId=null;
+  var amp=0,target=0,phase=0,rafId=null,trip=0;
   var lx=null,ly=null,lt=0,vel=0,dirx=1,diry=0;
   function frame(){
     amp+=(target-amp)*0.08;
     phase+=0.018;
     vel*=0.9; // hızı yumuşakça söndür
-    if(amp<0.08&&target<0.08){nm.style.textShadow='none';rafId=null;return;}
+    // İmleç üstte oyalandıkça (yakın + yavaş) → psychedelic "trip" yavaşça yükselir
+    var dwell=(target>0.8&&vel<2.4);
+    trip+=((dwell?1:0)-trip)*(dwell?0.012:0.06);
+    if(amp<0.08&&target<0.08&&trip<0.02){nm.style.textShadow='none';rafId=null;return;}
     // İmleç hareket yönüne hizalı RGB kanal kayması
     var base=amp*(0.55+0.45*Math.sin(phase));
-    var sx=base*dirx+amp*0.28*Math.sin(phase);
-    var sy=base*diry+amp*0.18*Math.cos(phase*1.3);
+    var wob=1+trip*2.4*Math.sin(phase*0.7); // trip arttıkça dalgalı, nefes alan genlik
+    var sx=(base*dirx+amp*0.28*Math.sin(phase))*wob;
+    var sy=(base*diry+amp*0.18*Math.cos(phase*1.3))*wob;
     // Hız > 0.5 px/frame iken cardinal kırmızıyı sine modülasyonuyla harmanla
     var rA=vel>0.5?(0.62+0.33*Math.abs(Math.sin(phase*2.0))):0.62;
-    nm.style.textShadow=
-      sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,'+rA.toFixed(2)+'),'+
+    var sh=sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,'+rA.toFixed(2)+'),'+
       (-sx).toFixed(2)+'px '+(-sy).toFixed(2)+'px 0 rgba(40,80,220,0.52)';
+    if(trip>0.02){
+      // LSD katmanları: gökkuşağı kanalları phase ile döner, kayma trip ile büyür
+      var off=4+trip*18;
+      for(var k=0;k<3;k++){
+        var hue=(phase*55+k*120)%360;
+        var ang=phase*1.25+k*2.094;
+        var ox=Math.cos(ang)*off, oy=Math.sin(ang)*off;
+        sh+=','+ox.toFixed(2)+'px '+oy.toFixed(2)+'px '+(trip*3).toFixed(2)+'px hsla('+hue.toFixed(0)+',95%,56%,'+(0.5*trip).toFixed(2)+')';
+      }
+    }
+    nm.style.textShadow=sh;
     rafId=requestAnimationFrame(frame);
   }
   function onMove(e){
@@ -518,56 +537,52 @@ function initFx1(hdr){
   hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-mag');};
 }
-// ── Header Efekt 2: Mürekkep damlası — imleç hareket ettikçe yazıdan damla akar ──
+// ── Header Efekt 2: Rorschach mürekkep lekesi — imleç hareketi simetrik bir
+//    psikoloji testi lekesi büyütür (dikey eksende aynalanır), sonra yavaşça solar ──
 function initFx2(hdr){
-  var word=hdr.querySelector('.sh-word');if(!word)return;
+  var host=hdr.querySelector('.site-header-title')||hdr.querySelector('.sh-word');if(!host)return;
   var cnv=document.createElement('canvas');
-  cnv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:10;';
-  word.style.position='relative';word.style.overflow='visible';
-  word.appendChild(cnv);
+  cnv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:9;mix-blend-mode:multiply;';
+  host.style.position='relative';
+  host.appendChild(cnv);
   var ctx2=cnv.getContext('2d');
-  var drips=[],rafId=null,lastSpawn=0;
-  function resize(){var w=word.clientWidth,h=word.clientHeight;cnv.width=w;cnv.height=h+130;cnv.style.width=w+'px';cnv.style.height=(h+130)+'px';}
+  var blobs=[],rafId=null,lastSpawn=0,axis=0;
+  function resize(){var w=host.clientWidth,h=host.clientHeight;cnv.width=w;cnv.height=h;cnv.style.width=w+'px';cnv.style.height=h+'px';axis=w/2;}
   resize();
-  // Tema rengine uygun mürekkep: aydınlık→koyu espresso, karanlık→cardinal kırmızı
-  function rgb(){return document.documentElement.getAttribute('saved-theme')==='dark'?'200,16,46':'32,24,18';}
-  function spawn(x){
-    if(drips.length>52)return;
-    drips.push({x:x+(Math.random()-0.5)*12,w:4+Math.random()*6,y0:word.clientHeight*0.82,
-      len:0,max:30+Math.random()*78,v:0.4+Math.random()*0.5,bulb:3.5+Math.random()*5.5,
-      hold:50+Math.random()*90,alpha:0.86+Math.random()*0.14});
-  }
-  function drawDrip(d,c){
-    var x=d.x,y0=d.y0,tipY=y0+d.len,topW=d.w,bw=d.bulb;
-    ctx2.fillStyle='rgba('+c+','+d.alpha.toFixed(2)+')';
-    // Gooey sütun: üstte geniş, ortada incelir, uçta yuvarlak topuz
-    ctx2.beginPath();
-    ctx2.moveTo(x-topW/2,y0);
-    ctx2.quadraticCurveTo(x-bw*0.55,y0+d.len*0.6,x-bw*0.5,tipY);
-    ctx2.lineTo(x+bw*0.5,tipY);
-    ctx2.quadraticCurveTo(x+bw*0.55,y0+d.len*0.6,x+topW/2,y0);
-    ctx2.closePath();ctx2.fill();
-    ctx2.beginPath();ctx2.arc(x,tipY,bw,0,6.2832);ctx2.fill();
+  function rgb(){return document.documentElement.getAttribute('saved-theme')==='dark'?'210,24,30':'26,20,16';}
+  // İmleç pozisyonu ve aynası → organik leke parçacığı çifti
+  function spawn(x,y){
+    if(blobs.length>140)return;
+    var r=7+Math.random()*16, jx=(Math.random()-0.5)*6, jy=(Math.random()-0.5)*6;
+    var grow=r*(1.3+Math.random()*0.7);
+    blobs.push({x:x+jx,y:y+jy,r:1,max:grow,a:0.5+Math.random()*0.35,life:1});
+    blobs.push({x:2*axis-(x+jx),y:y+jy,r:1,max:grow,a:0.5+Math.random()*0.35,life:1}); // ayna
   }
   function frame(){
     ctx2.clearRect(0,0,cnv.width,cnv.height);
     var c=rgb(),alive=false;
-    drips=drips.filter(function(d){
-      if(d.len<d.max){d.len+=d.v;d.v=Math.min(d.v+0.03,2.3);}
-      else{d.hold--;if(d.hold<0)d.alpha-=0.012;}
-      if(d.alpha<=0.02)return false;
-      alive=true;drawDrip(d,c);return true;
+    ctx2.shadowColor='rgba('+c+',1)';ctx2.shadowBlur=6;
+    blobs=blobs.filter(function(b){
+      if(b.r<b.max)b.r+=(b.max-b.r)*0.14;
+      b.life-=0.006; if(b.life<=0)return false;
+      alive=true;
+      ctx2.fillStyle='rgba('+c+','+(b.a*b.life).toFixed(3)+')';
+      ctx2.beginPath();ctx2.arc(b.x,b.y,b.r,0,6.2832);ctx2.fill();
+      return true;
     });
+    ctx2.shadowBlur=0;
     if(alive)rafId=requestAnimationFrame(frame);else rafId=null;
   }
   function onMove(e){
-    var r=word.getBoundingClientRect();var mx=e.clientX-r.left;
+    var r=host.getBoundingClientRect();var mx=e.clientX-r.left,my=e.clientY-r.top;
+    if(mx<0||mx>r.width||my<0||my>r.height)return;
     var now=Date.now();
-    if(now-lastSpawn>90){lastSpawn=now;spawn(mx);if(Math.random()<0.4)spawn(mx+(Math.random()-0.5)*44);}
+    if(now-lastSpawn>55){lastSpawn=now;spawn(mx,my);}
     if(!rafId)rafId=requestAnimationFrame(frame);
   }
   hdr.addEventListener('mousemove',onMove);
-  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);rafId=null;drips=[];hdr.removeEventListener('mousemove',onMove);if(cnv.parentNode)cnv.parentNode.removeChild(cnv);if(word){word.style.position='';word.style.overflow='';}};
+  host.__scFxResize=resize;window.addEventListener('resize',resize,{passive:true});
+  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);rafId=null;blobs=[];hdr.removeEventListener('mousemove',onMove);window.removeEventListener('resize',resize);if(cnv.parentNode)cnv.parentNode.removeChild(cnv);if(host)host.style.position='';};
 }
 // ── Header efekt koordinatörü — her sayfa yükünde efekt sırası döner ──
 function initHeaderFx(){
@@ -583,12 +598,31 @@ function scCardTilt(){
   if(window.innerWidth<800)return;
   document.querySelectorAll('.curriculum-grid .cg-cell').forEach(function(c){
     if(c.getAttribute('data-sc-tilt'))return;c.setAttribute('data-sc-tilt','1');
+    var ic=c.querySelector('.cg-icon'),nm=c.querySelector('.cg-name');
     c.addEventListener('mousemove',function(e){
       var r=c.getBoundingClientRect();
       var px=(e.clientX-r.left)/r.width-0.5,py=(e.clientY-r.top)/r.height-0.5;
       c.style.transform='perspective(1000px) rotateX('+(-py*6).toFixed(2)+'deg) rotateY('+(px*6).toFixed(2)+'deg) scale(1.01)';
+      // İkon parallax: kartın derinliğinde hafifçe öne/yana kayar
+      if(ic)ic.style.transform='translate('+(px*9).toFixed(1)+'px,'+(py*9).toFixed(1)+'px) translateZ(24px)';
+      // İsimde minik kromatik sapma (imleç yönüne göre)
+      if(nm)nm.style.textShadow=(px*3).toFixed(1)+'px 0 0 rgba(200,16,46,0.35),'+(-px*3).toFixed(1)+'px 0 0 rgba(40,80,220,0.30)';
     });
-    c.addEventListener('mouseleave',function(){c.style.transform='';});
+    c.addEventListener('mouseleave',function(){c.style.transform='';if(ic)ic.style.transform='';if(nm)nm.style.textShadow='';});
+  });
+}
+// ── Görev 7: Konu hex'lerine (page-listing) hafif 3D tilt + kromatik sapma ──
+function scHexTilt(){
+  if(window.innerWidth<800)return;
+  document.querySelectorAll('.page-listing .section-li .desc h3 a').forEach(function(a){
+    if(a.getAttribute('data-sc-hex'))return;a.setAttribute('data-sc-hex','1');
+    a.addEventListener('mousemove',function(e){
+      var r=a.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-0.5,py=(e.clientY-r.top)/r.height-0.5;
+      a.style.transform='perspective(900px) rotateX('+(-py*5).toFixed(2)+'deg) rotateY('+(px*5).toFixed(2)+'deg) scale(1.06)';
+      a.style.textShadow=(px*2.4).toFixed(1)+'px 0 0 rgba(200,16,46,0.4),'+(-px*2.4).toFixed(1)+'px 0 0 rgba(40,80,220,0.34)';
+    });
+    a.addEventListener('mouseleave',function(){a.style.transform='';a.style.textShadow='';});
   });
 }
 // ── Görev 8: Backlinks + Etiketler'i SBB-kutusuna entegre et ──
@@ -646,7 +680,7 @@ function ensureFooterWave(){
   function evalW(h,x,W,p){var y=0;h.forEach(function(s){y+=Math.sin(x/W*6.28*s[1]+p+s[2])*s[0];});return y;}
   function lrp(a,b,t){var n=Math.max(a.length,b.length),r=[];for(var i=0;i<n;i++){var ai=a[i]||[0,1,0],bi=b[i]||[0,1,0];r.push([ai[0]+(bi[0]-ai[0])*t,ai[1]+(bi[1]-ai[1])*t,ai[2]+(bi[2]-ai[2])*t]);}return r;}
   var L=[{p:0,v:0.45,a:mkH(),b:mkH(),t:0,d:rnd(6,18)},{p:3.14,v:-0.32,a:mkH(),b:mkH(),t:0,d:rnd(6,18)}];
-  var prev=0;
+  var prev=0,snakePhase=0;
   function tick(ts){
     window.__scFwRaf=requestAnimationFrame(tick);
     var ftn=document.querySelector('footer');if(!ftn){prev=0;return;}
@@ -674,6 +708,22 @@ function ensureFooterWave(){
       ctx.lineTo(W,H);ctx.closePath();
       ctx.fillStyle=cs[i];ctx.fill();
     });
+    // ── Dalgaların üstünde ağır ağır süzülen yılan (dalgalara dokunmadan) ──
+    snakePhase+=dt*26;                       // yatay hız ~26px/s (yavaş)
+    var span=W+180, headX=(snakePhase%span)-90;
+    var amp2=Math.min(H*0.20,9), baseY=H*0.46, segs=24, sgap=Math.max(6,W/70);
+    var sc=dk?'rgba(232,224,210,0.50)':'rgba(70,54,40,0.46)';
+    function syAt(x){return baseY+Math.sin(x*0.05+snakePhase*0.012)*amp2;}
+    ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=sc;
+    for(var s=0;s<segs;s++){
+      var x1=headX-s*sgap,x2=headX-(s+1)*sgap;
+      ctx.lineWidth=2.7*(1-s/segs)+0.5;
+      ctx.beginPath();ctx.moveTo(x1,syAt(x1));ctx.lineTo(x2,syAt(x2));ctx.stroke();
+    }
+    var hy=syAt(headX);
+    ctx.fillStyle=sc;ctx.beginPath();ctx.arc(headX,hy,2.5,0,6.2832);ctx.fill();
+    // çatal dil (ucunda)
+    ctx.lineWidth=0.9;ctx.beginPath();ctx.moveTo(headX+2,hy);ctx.lineTo(headX+6,hy-1.4);ctx.moveTo(headX+2,hy);ctx.lineTo(headX+6,hy+1.4);ctx.stroke();
   }
   requestAnimationFrame(tick);
 }
@@ -692,7 +742,7 @@ function perNav(){
   if(ph&&!ph.querySelector('.site-header')){
     var fnt2=SC_FONTS[Math.floor(Math.random()*SC_FONTS.length)];
     var sh=document.createElement('div');sh.className='site-header';
-    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><span class="sh-divider" aria-hidden="true"></span><p class="site-header-slogan"></p>';
+    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo sh-logo-sb">'+SC_SB+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><span class="sh-divider" aria-hidden="true">'+SC_SERPENT_LINE+'</span><p class="site-header-slogan"></p>';
     sh.querySelector('.sh-name').style.fontFamily=fnt2+',serif';
     sh.querySelector('.site-header-slogan').textContent=slogan;
     ph.insertAdjacentElement('afterbegin',sh);
@@ -772,6 +822,7 @@ function perNav(){
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   scCardTilt();
+  scHexTilt();
   scSbbExtras();
   initHeaderFx();
   syncFooter();

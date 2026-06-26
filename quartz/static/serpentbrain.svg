@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Beyin dış hattı (sol profil) -->
+  <path d="M40 22 C28 20 18 28 20 38 C10 42 10 56 20 60 C18 70 30 78 40 72 C45 82 60 82 64 71 C66 73 70 74 73 72"/>
+  <path d="M40 22 C46 16 58 16 63 24 C74 20 86 28 83 39 C92 44 90 57 80 59"/>
+  <!-- Girus kıvrımları -->
+  <path d="M33 33 C39 29 43 35 38 40"/>
+  <path d="M52 28 C59 26 61 35 54 38"/>
+  <path d="M28 47 C34 43 39 49 33 53"/>
+  <path d="M48 44 C56 41 59 50 51 53"/>
+  <path d="M66 36 C73 34 75 44 68 46"/>
+  <path d="M40 60 C47 56 52 63 45 66"/>
+  <!-- Yılan: beyin sapından çıkıp sağa süzülür -->
+  <path d="M64 71 C70 80 84 82 90 74 C95 67 90 58 81 60 C75 61 74 53 81 50 C87 48 95 51 99 46"/>
+  <!-- Yılan başı + çatal dil -->
+  <path d="M99 46 C103 43 109 44 110 40" />
+  <path d="M110 40 l5 -3 m-5 3 l5 3" stroke-width="2.4"/>
+  <circle cx="105.5" cy="42.5" r="1.4" fill="currentColor" stroke="none"/>
+</svg>
