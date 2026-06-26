@@ -152,8 +152,8 @@ var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SC_SB=${JSON.stringify(SC_SB_SVG)};
-// Minimal serpent ayraç: header/slogan ile içerik arasındaki ince sepya çizgi yerine
-var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 240 12" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M2 6 C20 0 36 12 56 6 S94 0 116 6 S156 12 178 6 S214 1 232 6"/><path d="M232 6 l6 -3 m-6 3 l6 3" stroke-width="1.1"/><circle cx="234.5" cy="6" r="0.9" fill="currentColor" stroke="none"/></svg>';
+// Gerçekçi yılan ayraç: S-kıvrımlı gövde + oval baş + göz + çatal dil
+var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 260 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 C14 4 24 16 38 10 C52 4 62 16 78 10 C94 4 106 16 124 10 C142 4 154 16 172 10 C188 4 200 16 214 10 C226 5 234 8 238 10" stroke-width="2.2"/><ellipse cx="245" cy="10" rx="7" ry="4.5" stroke-width="1.8"/><circle cx="248" cy="8.5" r="0.9" fill="currentColor" stroke="none"/><path d="M252 10 L257 7.5 M252 10 L257 12.5" stroke-width="1.1"/></svg>';
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
 var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
@@ -537,52 +537,34 @@ function initFx1(hdr){
   hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-mag');};
 }
-// ── Header Efekt 2: Rorschach mürekkep lekesi — imleç hareketi simetrik bir
-//    psikoloji testi lekesi büyütür (dikey eksende aynalanır), sonra yavaşça solar ──
+// ── Header Efekt 2: Ters-manyetik metin — harfler imlecin yakınında ONA DOĞRU çekilir ──
+// (Efekt 1'in tam tersi: iter değil, çeker; renk yine cardinal kırmızıya döner)
 function initFx2(hdr){
-  var host=hdr.querySelector('.site-header-title')||hdr.querySelector('.sh-word');if(!host)return;
-  var cnv=document.createElement('canvas');
-  cnv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:9;mix-blend-mode:multiply;';
-  host.style.position='relative';
-  host.appendChild(cnv);
-  var ctx2=cnv.getContext('2d');
-  var blobs=[],rafId=null,lastSpawn=0,axis=0;
-  function resize(){var w=host.clientWidth,h=host.clientHeight;cnv.width=w;cnv.height=h;cnv.style.width=w+'px';cnv.style.height=h+'px';axis=w/2;}
-  resize();
-  function rgb(){return document.documentElement.getAttribute('saved-theme')==='dark'?'210,24,30':'26,20,16';}
-  // İmleç pozisyonu ve aynası → organik leke parçacığı çifti
-  function spawn(x,y){
-    if(blobs.length>140)return;
-    var r=7+Math.random()*16, jx=(Math.random()-0.5)*6, jy=(Math.random()-0.5)*6;
-    var grow=r*(1.3+Math.random()*0.7);
-    blobs.push({x:x+jx,y:y+jy,r:1,max:grow,a:0.5+Math.random()*0.35,life:1});
-    blobs.push({x:2*axis-(x+jx),y:y+jy,r:1,max:grow,a:0.5+Math.random()*0.35,life:1}); // ayna
-  }
-  function frame(){
-    ctx2.clearRect(0,0,cnv.width,cnv.height);
-    var c=rgb(),alive=false;
-    ctx2.shadowColor='rgba('+c+',1)';ctx2.shadowBlur=6;
-    blobs=blobs.filter(function(b){
-      if(b.r<b.max)b.r+=(b.max-b.r)*0.14;
-      b.life-=0.006; if(b.life<=0)return false;
-      alive=true;
-      ctx2.fillStyle='rgba('+c+','+(b.a*b.life).toFixed(3)+')';
-      ctx2.beginPath();ctx2.arc(b.x,b.y,b.r,0,6.2832);ctx2.fill();
-      return true;
-    });
-    ctx2.shadowBlur=0;
-    if(alive)rafId=requestAnimationFrame(frame);else rafId=null;
-  }
+  var nm=hdr.querySelector('.sh-name');if(!nm||nm.getAttribute('data-sc-rmag'))return;
+  nm.setAttribute('data-sc-rmag','1');
+  var txt=nm.textContent||'';nm.innerHTML='';
+  var spans=[];
+  txt.split('').forEach(function(ch){
+    var s=document.createElement('span');s.textContent=ch;
+    s.style.cssText='display:inline-block;transition:transform 200ms cubic-bezier(.2,.8,.3,1),color 180ms ease;';
+    nm.appendChild(s);spans.push(s);
+  });
   function onMove(e){
-    var r=host.getBoundingClientRect();var mx=e.clientX-r.left,my=e.clientY-r.top;
-    if(mx<0||mx>r.width||my<0||my>r.height)return;
-    var now=Date.now();
-    if(now-lastSpawn>55){lastSpawn=now;spawn(mx,my);}
-    if(!rafId)rafId=requestAnimationFrame(frame);
+    spans.forEach(function(s){
+      var r=s.getBoundingClientRect();
+      var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
+      var d=Math.sqrt(dx*dx+dy*dy),R=90;
+      if(d<R&&d>0.5){
+        // Manyetiğin TERSİ: imlece doğru çek (+ yönde, - değil)
+        var f=(R-d)/R*0.55;
+        s.style.transform='translate('+(dx*f).toFixed(1)+'px,'+(dy*f).toFixed(1)+'px)';
+        s.style.color='#C8102E';
+      }else{s.style.transform='none';s.style.color='';}
+    });
   }
-  hdr.addEventListener('mousemove',onMove);
-  host.__scFxResize=resize;window.addEventListener('resize',resize,{passive:true});
-  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);rafId=null;blobs=[];hdr.removeEventListener('mousemove',onMove);window.removeEventListener('resize',resize);if(cnv.parentNode)cnv.parentNode.removeChild(cnv);if(host)host.style.position='';};
+  function onLeave(){spans.forEach(function(s){s.style.transform='none';s.style.color='';});}
+  hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
+  hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-rmag');};
 }
 // ── Header efekt koordinatörü — her sayfa yükünde efekt sırası döner ──
 function initHeaderFx(){
@@ -708,22 +690,53 @@ function ensureFooterWave(){
       ctx.lineTo(W,H);ctx.closePath();
       ctx.fillStyle=cs[i];ctx.fill();
     });
-    // ── Dalgaların üstünde ağır ağır süzülen yılan (dalgalara dokunmadan) ──
-    snakePhase+=dt*26;                       // yatay hız ~26px/s (yavaş)
-    var span=W+180, headX=(snakePhase%span)-90;
-    var amp2=Math.min(H*0.20,9), baseY=H*0.46, segs=24, sgap=Math.max(6,W/70);
-    var sc=dk?'rgba(232,224,210,0.50)':'rgba(70,54,40,0.46)';
-    function syAt(x){return baseY+Math.sin(x*0.05+snakePhase*0.012)*amp2;}
-    ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=sc;
-    for(var s=0;s<segs;s++){
+    // ── Dalgaların üstünde ağır ağır süzülen gerçekçi yılan ──
+    snakePhase+=dt*22;                       // yatay hız
+    var span=W+220, headX=(snakePhase%span)-110;
+    var waveF=0.048, wavePh=snakePhase*0.010;
+    var baseY=H*0.44, amp2=Math.min(H*0.22,10);
+    function syAt(x){return baseY+Math.sin(x*waveF+wavePh)*amp2+Math.sin(x*waveF*1.7+wavePh*0.8)*amp2*0.35;}
+    var NS2=36, sgap=Math.max(7,W/52);
+    // olivine rengi; dark'ta biraz koyulaştır ama aynı ton
+    var olivine=dk?'rgba(110,168,72,0.72)':'rgba(145,198,108,0.82)';
+    var olivineD=dk?'rgba(78,118,50,0.60)':'rgba(100,150,70,0.65)';
+    var olivineAcc=dk?'rgba(180,40,40,0.85)':'rgba(200,16,46,0.90)';
+    // gövde — her segmentte farklı kalınlık (kuyruğa doğru incelir)
+    ctx.lineCap='round';ctx.lineJoin='round';
+    for(var s=NS2-1;s>=0;s--){
       var x1=headX-s*sgap,x2=headX-(s+1)*sgap;
-      ctx.lineWidth=2.7*(1-s/segs)+0.5;
+      var ratio=1-s/NS2;
+      ctx.lineWidth=Math.max(1.2,4.5*ratio);
+      // alternating stripe: hafif koyu-açık deri efekti
+      ctx.strokeStyle=(s%3===0)?olivineD:olivine;
       ctx.beginPath();ctx.moveTo(x1,syAt(x1));ctx.lineTo(x2,syAt(x2));ctx.stroke();
     }
+    // scale dots
+    for(var s=2;s<NS2;s+=3){
+      var sx=headX-s*sgap,sy=syAt(sx);
+      ctx.fillStyle=olivineD;ctx.beginPath();ctx.arc(sx,sy,0.8,0,6.2832);ctx.fill();
+    }
+    // baş: oval
     var hy=syAt(headX);
-    ctx.fillStyle=sc;ctx.beginPath();ctx.arc(headX,hy,2.5,0,6.2832);ctx.fill();
-    // çatal dil (ucunda)
-    ctx.lineWidth=0.9;ctx.beginPath();ctx.moveTo(headX+2,hy);ctx.lineTo(headX+6,hy-1.4);ctx.moveTo(headX+2,hy);ctx.lineTo(headX+6,hy+1.4);ctx.stroke();
+    var hPrev=syAt(headX-sgap);
+    var ang=Math.atan2(hy-hPrev,sgap);
+    var hr=5.5;
+    ctx.fillStyle=olivine;
+    ctx.beginPath();ctx.ellipse(headX,hy,hr*1.5,hr,ang,0,6.2832);ctx.fill();
+    ctx.strokeStyle=olivineD;ctx.lineWidth=1.0;
+    ctx.beginPath();ctx.ellipse(headX,hy,hr*1.5,hr,ang,0,6.2832);ctx.stroke();
+    // göz
+    var eyeX=headX+Math.cos(ang+1.2)*hr*0.8, eyeY=hy+Math.sin(ang+1.2)*hr*0.8;
+    ctx.fillStyle='rgba(255,255,255,0.9)';ctx.beginPath();ctx.arc(eyeX,eyeY,1.6,0,6.2832);ctx.fill();
+    ctx.fillStyle=olivineAcc;ctx.beginPath();ctx.arc(eyeX+0.4,eyeY+0.3,0.9,0,6.2832);ctx.fill();
+    // çatal dil
+    var lx=headX+Math.cos(ang)*hr*2.2,ly=hy+Math.sin(ang)*hr*2.2;
+    var lb=headX+Math.cos(ang)*hr*1.4,lby=hy+Math.sin(ang)*hr*1.4;
+    ctx.strokeStyle=olivineAcc;ctx.lineWidth=0.9;
+    ctx.beginPath();ctx.moveTo(lb,lby);ctx.lineTo(lx,ly);
+    ctx.lineTo(lx+Math.cos(ang+0.45)*4,ly+Math.sin(ang+0.45)*4);
+    ctx.moveTo(lx,ly);ctx.lineTo(lx+Math.cos(ang-0.45)*4,ly+Math.sin(ang-0.45)*4);
+    ctx.stroke();
   }
   requestAnimationFrame(tick);
 }
