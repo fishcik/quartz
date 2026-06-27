@@ -1388,8 +1388,8 @@ body[data-slug="index"] .site-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  height: 3.2rem;                 // sabit yükseklik → slogan dikeyde kaymaz
+  gap: 0.6rem;
+  height: 5.4rem;                 // sabit yükseklik → slogan dikeyde kaymaz (büyük logo sığar)
   font-weight: 600;
   letter-spacing: 0.04em;
   text-decoration: none !important;
@@ -1410,16 +1410,18 @@ body[data-slug="index"] .site-header {
     justify-content: center;
     svg { width: 2.7rem; height: 2.7rem; display: block; }
   }
-  // SERPENTBRAIN logosu (2366:1824 oran) → yükseklik sabit, genişlik otomatik
+  // SERPENTBRAIN logosu (2366:1824 oran) → %100 büyütüldü; yükseklik sabit, genişlik otomatik
   .sh-logo.sh-logo-sb {
-    flex: 0 0 3.6rem;
-    width: 3.6rem;
+    flex: 0 0 7rem;
+    width: 7rem;
     color: var(--fg);
     transition: color 200ms ease, transform 200ms ease;
-    svg { width: auto; height: 2.6rem; }
+    svg { width: auto; height: 5rem; }
     &:hover { transform: scale(1.04); }
   }
-  // SABİT genişlikli kelime kutusu — içerik ortalanır, taşma gizli (auto-fit zaten sığdırır)
+  // SABİT genişlikli kelime kutusu — içerik ortalanır. overflow:visible → header
+  // efektleri (manyetik kayma / LSD gölge / yarık skew) görünmez sınıra takılmaz;
+  // auto-fit (scFitHeader) zaten kelimeyi kutuya sığdırdığı için normalde taşma yok.
   .sh-word {
     color: inherit;
     flex: 0 0 12.5rem;
@@ -1427,7 +1429,7 @@ body[data-slug="index"] .site-header {
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     white-space: nowrap;
     line-height: 1;
     font-size: 2.1rem;            // JS auto-fit bu değeri kutuya göre küçültür
@@ -1445,6 +1447,42 @@ body[data-slug="index"] .site-header {
     line-height: 1;
   }
 }
+
+// ── Header Efekt 2: Yarık metin (split-text skew) ──
+// .sh-name şeffaflaşır; iki maske (üst/alt yarı) imleç başlığa değince zıt yönde
+// skew+kayar, aralarında cardinal kırmızı yarık çizgisi açılır. Font rotasyonuyla
+// uyumlu: maskeler aynı metni ve devralınan fontu kullanır.
+.site-header-title .sh-name.sc-split {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+}
+.sh-name.sc-split .sc-split-base { color: transparent; }
+.sh-name.sc-split .sc-split-line {
+  position: absolute;
+  top: 49%; left: -12%; right: -12%;
+  height: 3px; margin-top: -1.5px;
+  border-radius: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98);
+  z-index: 2;
+  pointer-events: none;
+}
+.sh-name.sc-split .sc-split-mask {
+  position: absolute; left: 0; top: 0; width: 100%;
+  height: 49%; overflow: hidden;
+  color: var(--fg);
+  transition: transform 0.8s cubic-bezier(.16,1.08,.38,.98), color 0.5s ease;
+  pointer-events: none;
+}
+.sh-name.sc-split .sc-split-mask > span { display: block; }
+.sh-name.sc-split .sc-split-bot { top: 49%; height: 51%; }
+.sh-name.sc-split .sc-split-bot > span { transform: translateY(-49%); }
+.site-header-title:hover .sh-name.sc-split .sc-split-top { transform: skewX(14deg) translateX(6px); color: var(--accent); }
+.site-header-title:hover .sh-name.sc-split .sc-split-bot { transform: skewX(14deg) translateX(-6px); color: var(--accent); }
+.site-header-title:hover .sh-name.sc-split .sc-split-line { transform: scaleX(1); }
+html[saved-theme="dark"] .sh-name.sc-split .sc-split-mask { color: var(--bordo); }
 
 // Görev 3: başlık ile slogan arasındaki ayraç → minimal, hafif serpent
 .site-header .sh-divider {
@@ -1464,6 +1502,19 @@ body[data-slug="index"] .site-header {
 }
 html[saved-theme="dark"] .site-header .sh-divider { color: var(--br); opacity: 0.7; }
 body.sc-scrolled .site-header .sh-divider { display: none; }
+
+// Görev 3: Site genelinde VARSAYILAN ayraç → serpent (JS <hr>'leri bununla değiştirir)
+.sc-hr-serpent {
+  display: block;
+  width: 11rem;
+  max-width: 60%;
+  height: 1rem;
+  margin: 2.4rem auto;
+  color: var(--br);
+  opacity: 0.85;
+}
+.sc-hr-serpent .sc-serpent-div { display: block; width: 100%; height: 100%; }
+html[saved-theme="dark"] .sc-hr-serpent { color: var(--bordo); opacity: 0.9; }
 
 // Dark mode: SAYKO sepya/bordo dinlenim hali, hover'da kırmızıya döner
 html[saved-theme="dark"] .site-header-title,
@@ -1679,12 +1730,12 @@ html[saved-theme="dark"] .sc-logo-btn,
 
 // Görev 5: SBB üstünde SAYKO.ch yazısı/psi yerine SERPENTBRAIN logosu
 .sc-logo-btn.sc-logo-sb-only {
-  padding: 8px 0 2px;
+  padding: 10px 0 4px;
   .sc-logo-icon.sc-logo-sb {
     justify-content: center;
     width: 100%;
-    // Saat yaklaşık 110px geniş → logo benzer boyutta, ama yüksek değil
-    svg { width: 90px; height: auto; max-height: 72px; }
+    // %100 büyütüldü → SBB kutusu (200px) içinde belirgin, okunur logo
+    svg { width: 168px; height: auto; max-height: 132px; }
   }
 }
 
@@ -1719,39 +1770,34 @@ html[saved-theme="dark"] .sc-sbb-tools,
   filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.30));
 }
 
-.sc-face {
-  fill: #ffffff;
-  stroke: #e3e3e3;
-  stroke-width: 1.5;
-}
+// ── Lüks kasa: dış bezel (gradyan) + iç kadran (radyal gradyan) ──
+.sc-bezel { fill: url(#sc-bezelg); }
+.sc-face { fill: url(#sc-faceg); stroke: #d6d6da; stroke-width: 0.4; }
+.sc-faceg-0  { stop-color: #ffffff; }
+.sc-faceg-1  { stop-color: #ececed; }
+.sc-bezelg-0 { stop-color: #fdfdfd; }
+.sc-bezelg-1 { stop-color: #cbcbd0; }
+.sc-bezelg-2 { stop-color: #fbfbfc; }
 
-.sc-tick {
-  stroke: #1a1a1a;
-  stroke-width: 2.2;
-  stroke-linecap: butt;
-}
+.sc-tick   { stroke: #b7b7bc; stroke-width: 0.7; }
+.sc-tick-h { stroke: #1a1a1a; stroke-width: 1.8; stroke-linecap: round; }
 
-.sc-hand {
-  stroke: #1a1a1a;
-  stroke-linecap: round;
-}
+.sc-hand { stroke: #1a1a1a; stroke-linecap: round; }
+.sc-hand-h { stroke-width: 4.6; }
+.sc-hand-m { stroke-width: 3.2; }
 
-.sc-hand-h { stroke-width: 5; }
-.sc-hand-m { stroke-width: 3.4; }
-
-// Saniye ibresi: kırmızı, Mondaine imzası
-.sc-hand-s {
-  stroke: #d2151a;
-  stroke-width: 1.6;
+// ── Saniyeyi gösteren zarif SERPENT ibresi (dili saniye işaretini gösterir) ──
+.sc-snake-s-body, .sc-snake-s-tail, .sc-snake-s-tongue {
+  fill: none; stroke: #d2151a; stroke-linecap: round; stroke-linejoin: round;
 }
+.sc-snake-s-body   { stroke-width: 2; }
+.sc-snake-s-tail   { stroke-width: 1.5; }
+.sc-snake-s-tongue { stroke-width: 0.7; }
+.sc-snake-s-head   { fill: #d2151a; }
+.sc-snake-s-eye    { fill: #ffe27a; }   // ufak demon-sarı parıltı
 
-// Saniye ucundaki psi: logo psi şekli (line/path stroke + circle fill kırmızı)
-.sc-sec-psi {
-  stroke: #d2151a;
-  fill: #d2151a;
-  user-select: none;
-}
-.sc-cap { fill: #1a1a1a; }
+.sc-cap     { fill: #1a1a1a; }
+.sc-cap-dot { fill: #d2151a; }
 
 // SAYKO.ch brand text on clock face — SABİT font: Contrail One
 .sc-sbb-brand {
@@ -1762,37 +1808,51 @@ html[saved-theme="dark"] .sc-sbb-tools,
 .sc-brand-name { fill: #C8102E; }   // SAYKO → cardinal kırmızı (her iki mod)
 .sc-brand-tld  { fill: #1a1a1a; }   // .ch → light: siyah
 
-// ── Gece modu: saat siyah/sepya/kırmızı ──
-html[saved-theme="dark"] .sc-face,
-[saved-theme="dark"] .sc-face { fill: #14110d; stroke: #2a2620; }
-html[saved-theme="dark"] .sc-tick,
-[saved-theme="dark"] .sc-tick { stroke: #d9b083; }                 // sepya
-html[saved-theme="dark"] .sc-hand,
-[saved-theme="dark"] .sc-hand { stroke: #ece7dd; }                 // kırık beyaz
-html[saved-theme="dark"] .sc-cap,
-[saved-theme="dark"] .sc-cap { fill: #ece7dd; }
-html[saved-theme="dark"] .sc-hand-s,
-[saved-theme="dark"] .sc-hand-s,
-html[saved-theme="dark"] .sc-sec-psi,
-[saved-theme="dark"] .sc-sec-psi { stroke: #e0392f; fill: #e0392f; }
-html[saved-theme="dark"] .sc-brand-tld,
-[saved-theme="dark"] .sc-brand-tld { fill: #ece7dd; }              // .ch → dark: kırık beyaz
-
-// Günün ismi
-#sc-day {
+// Türkçe tarih penceresi ("27 HAZ")
+.sc-date-text {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  color: #2b2826;
+  font-weight: 600; letter-spacing: 0.4px;
+  fill: #74737a; user-select: none;
 }
 
-html[saved-theme="dark"] #sc-day,
-[saved-theme="dark"] #sc-day { color: #ece7dd; }
+// ── Gece modu: saat siyah/sepya/kırmızı ──
+html[saved-theme="dark"] .sc-faceg-0  { stop-color: #1a1610; }
+html[saved-theme="dark"] .sc-faceg-1  { stop-color: #0d0a06; }
+html[saved-theme="dark"] .sc-bezelg-0 { stop-color: #2c2820; }
+html[saved-theme="dark"] .sc-bezelg-1 { stop-color: #14110c; }
+html[saved-theme="dark"] .sc-bezelg-2 { stop-color: #2c2820; }
+html[saved-theme="dark"] .sc-face     { stroke: #2a2620; }
+html[saved-theme="dark"] .sc-tick     { stroke: #6a5d4a; }
+html[saved-theme="dark"] .sc-tick-h   { stroke: #d9b083; }          // sepya
+html[saved-theme="dark"] .sc-hand     { stroke: #ece7dd; }          // kırık beyaz
+html[saved-theme="dark"] .sc-cap      { fill: #ece7dd; }
+html[saved-theme="dark"] .sc-snake-s-body,
+html[saved-theme="dark"] .sc-snake-s-tail,
+html[saved-theme="dark"] .sc-snake-s-tongue { stroke: #e0392f; }
+html[saved-theme="dark"] .sc-snake-s-head   { fill: #e0392f; }
+html[saved-theme="dark"] .sc-brand-tld { fill: #ece7dd; }           // .ch → dark
+html[saved-theme="dark"] .sc-date-text { fill: #b9a98f; }
 
-#sc-day.weekend { color: var(--accent) !important; }
+// ── Türkçe gün şeridi (Pzt→Paz), bugün cardinal vurgulu ──
+.sc-day-strip {
+  display: flex; gap: 2px; justify-content: center; align-items: center;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.58rem; font-weight: 600; letter-spacing: 0.01em;
+  line-height: 1; margin-top: 1px;
+}
+.sc-day-strip span {
+  width: 13px; height: 15px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #9a948c; border-radius: 3px;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+.sc-day-strip span.today {
+  color: #fff; background: var(--accent);
+  box-shadow: 0 1px 4px rgba(200,16,46,0.40);
+  transform: translateY(-0.5px);
+}
+html[saved-theme="dark"] .sc-day-strip span { color: #6a635a; }
+html[saved-theme="dark"] .sc-day-strip span.today { color: #fff; }
 
 // SBB kutusu içindeki toolbar tuşları: küçük, SBB renklerine uyumlu
 .sc-toolbtn {
@@ -2549,6 +2609,10 @@ html[saved-theme="dark"] .sc-sbb-tags { border-top-color: rgba(255,255,255,0.08)
   .site-header-title { gap: 0.35rem; }
   .site-header-title .sh-logo { flex: 0 0 2.2rem; width: 2.2rem; height: 2.2rem; }
   .site-header-title .sh-logo svg { width: 2.2rem; height: 2.2rem; }
+  // SERPENTBRAIN logosu mobilde de büyük ama header'ı ezmeyecek ölçüde
+  .site-header-title { height: 4.2rem; }
+  .site-header-title .sh-logo.sh-logo-sb { flex: 0 0 4.6rem; width: 4.6rem; height: auto; }
+  .site-header-title .sh-logo.sh-logo-sb svg { width: auto; height: 3.3rem; }
   .site-header-title .sh-word { flex-basis: 10.5rem; width: 10.5rem; }
   .curriculum-grid { gap: 8px; }
   .cg-cell { padding: 20px 8px 16px; }
@@ -2574,7 +2638,8 @@ html.sc-theme-anim *::after {
 }
 // Saat ibreleri / progress / canvas dalgası geçişten muaf (kendi animasyonları var)
 html.sc-theme-anim .sc-hand,
-html.sc-theme-anim .sc-hand-s,
+html.sc-theme-anim .sc-snake-s-body,
+html.sc-theme-anim .sc-snake-s-tail,
 html.sc-theme-anim #sc-progress,
 html.sc-theme-anim #sc-fw {
   transition: none !important;
@@ -2726,16 +2791,39 @@ article.sc-404 {
   text-shadow: 0 2px 16px rgba(0,0,0,0.18);
 }
 
-.sc-404-brainstage {
+// "0" = SERPENTBRAIN logosu (LSD hover oyuncağı)
+.sc-404-zero {
   position: relative;
-  width: 120px;
-  height: 120px;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  color: var(--fg);
+  pointer-events: auto;          // row pointer-events:none idi → logo yine hover'lanır
+  cursor: pointer;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.18));
+}
+.sc-404-zero svg {
+  width: auto; height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.sc-404-zero:hover svg { animation: sc-lsd 0.9s linear infinite; }
+
+// LSD: kromatik sapma + hue dönüşü + nefes alan ölçek
+@keyframes sc-lsd {
+  0%   { filter: drop-shadow(3px 0 0 rgba(200,16,46,.85)) drop-shadow(-3px 0 0 rgba(40,120,220,.7)) hue-rotate(0deg); transform: scale(1.05) rotate(-1.5deg); }
+  20%  { filter: drop-shadow(0 3px 0 rgba(0,200,130,.85)) drop-shadow(0 -3px 0 rgba(220,40,200,.7)) hue-rotate(70deg); transform: scale(1.09) rotate(1.5deg); }
+  40%  { filter: drop-shadow(-4px 0 0 rgba(255,180,0,.85)) drop-shadow(4px 0 0 rgba(120,40,220,.7)) hue-rotate(150deg); transform: scale(1.06) rotate(1deg); }
+  60%  { filter: drop-shadow(0 -4px 0 rgba(0,200,200,.85)) drop-shadow(0 4px 0 rgba(255,40,120,.7)) hue-rotate(220deg); transform: scale(1.10) rotate(-1deg); }
+  80%  { filter: drop-shadow(4px 0 0 rgba(120,220,40,.85)) drop-shadow(-4px 0 0 rgba(220,40,40,.7)) hue-rotate(300deg); transform: scale(1.07) rotate(1.5deg); }
+  100% { filter: drop-shadow(3px 0 0 rgba(200,16,46,.85)) drop-shadow(-3px 0 0 rgba(40,120,220,.7)) hue-rotate(360deg); transform: scale(1.05) rotate(-1.5deg); }
 }
 
 @media (max-width: 600px) {
   .sc-404-d { font-size: 5rem; }
-  .sc-404-brainstage { width: 80px; height: 80px; }
+  .sc-404-zero { height: 5rem; }
 }
 
 .sc-404-title {
