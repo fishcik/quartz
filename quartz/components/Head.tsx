@@ -256,11 +256,31 @@ function ensure(){
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
     sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
     sbb.appendChild(sbbTools);
-    // Clock
-    var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
+    // Clock — lüks kasa + Türkçe tarih + saniyeyi gösteren zarif SERPENT ibresi
+    var ticks='';for(var i=0;i<60;i++){var a=i*6*Math.PI/180;var isH=(i%5===0);var r1=isH?38.5:41.5,r2=45;var x1=50+r1*Math.sin(a),y1=50-r1*Math.cos(a),x2=50+r2*Math.sin(a),y2=50-r2*Math.cos(a);ticks+='<line x1="'+x1.toFixed(2)+'" y1="'+y1.toFixed(2)+'" x2="'+x2.toFixed(2)+'" y2="'+y2.toFixed(2)+'" class="sc-tick'+(isH?' sc-tick-h':'')+'"/>';}
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
-    var psiTip='<g class="sc-sec-psi" transform="translate(50,20) scale(0.17) translate(-40,-40)"><line x1="40" y1="8" x2="40" y2="76" stroke-width="6" stroke-linecap="round"/><path d="M16,8 C16,8 16,56 40,62" stroke-width="5.5" stroke-linecap="round" fill="none"/><path d="M64,8 C64,8 64,56 40,62" stroke-width="5.5" stroke-linecap="round" fill="none"/><circle cx="16" cy="8" r="6"/><circle cx="40" cy="8" r="6"/><circle cx="64" cy="8" r="6"/></g>';
-    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<text x="50" y="35" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text><line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="18" class="sc-hand-s"/>'+psiTip+'</g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100">'+
+      '<defs>'+
+        '<radialGradient id="sc-faceg" cx="50%" cy="42%" r="62%"><stop offset="0%" class="sc-faceg-0"/><stop offset="100%" class="sc-faceg-1"/></radialGradient>'+
+        '<linearGradient id="sc-bezelg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" class="sc-bezelg-0"/><stop offset="50%" class="sc-bezelg-1"/><stop offset="100%" class="sc-bezelg-2"/></linearGradient>'+
+      '</defs>'+
+      '<circle cx="50" cy="50" r="49" class="sc-bezel"/>'+
+      '<circle cx="50" cy="50" r="46.2" class="sc-face"/>'+ticks+
+      '<text x="50" y="30" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text>'+
+      '<text id="sc-date-txt" x="50" y="72" class="sc-date-text" text-anchor="middle" font-size="6.4">—</text>'+
+      '<line id="sc-h" x1="50" y1="50" x2="50" y2="30" class="sc-hand sc-hand-h"/>'+
+      '<line id="sc-m" x1="50" y1="50" x2="50" y2="17" class="sc-hand sc-hand-m"/>'+
+      '<g id="sc-s">'+
+        '<path d="M50 50 C 49.3 54 50.7 57 50 59.5" class="sc-snake-s-tail"/>'+
+        '<path d="M50 51 C 47.3 44 52.7 37 50 30 C 48.1 25 51.5 20 50 15.5" class="sc-snake-s-body"/>'+
+        '<ellipse cx="50" cy="13.4" rx="2.5" ry="3.1" class="sc-snake-s-head"/>'+
+        '<circle cx="51" cy="12.5" r="0.6" class="sc-snake-s-eye"/>'+
+        '<path d="M50 10.4 L50 7.2" class="sc-snake-s-tongue"/>'+
+        '<path d="M50 7.2 L48.6 5.3 M50 7.2 L51.4 5.3" class="sc-snake-s-tongue"/>'+
+      '</g>'+
+      '<circle cx="50" cy="50" r="2.7" class="sc-cap"/><circle cx="50" cy="50" r="1.05" class="sc-cap-dot"/>'+
+    '</svg>'+
+    '<div id="sc-day-strip" class="sc-day-strip"><span>P</span><span>S</span><span>Ç</span><span>P</span><span>C</span><span>C</span><span>P</span></div>';
     // Masaüstünde saate tıklamak SBB-kutusunu kapatır (kuyruğa döner)
     clkDiv.addEventListener('click',function(){if(window.innerWidth>=1200){document.body.classList.remove('sc-sbb-open');}});
     sbb.appendChild(clkDiv);
@@ -320,9 +340,13 @@ function ensure(){
         H.setAttribute('transform','rotate('+((h%12)*30+m*0.5+frac*0.5)+' 50 50)');
         M.setAttribute('transform','rotate('+(m*6+frac*6)+' 50 50)');
         var sa=secMs<58500?(secMs/58500)*360:360;
-        S.setAttribute('transform','rotate('+sa+' 50 50)');}
-      var dn=document.getElementById('sc-day');
-      if(dn){var wd=z.getDay();var day=d.toLocaleDateString('tr-TR',{weekday:'long',timeZone:'Europe/Zurich'});var nt=day.charAt(0).toLocaleUpperCase('tr-TR')+day.slice(1);if(dn.textContent!==nt)dn.textContent=nt;dn.classList.toggle('weekend',wd===0||wd===6);}
+        if(S)S.setAttribute('transform','rotate('+sa+' 50 50)');}
+      // Türkçe tarih penceresi: "27 HAZ"
+      var dt2=document.getElementById('sc-date-txt');
+      if(dt2){var AY=['OCA','ŞUB','MAR','NİS','MAY','HAZ','TEM','AĞU','EYL','EKİ','KAS','ARA'];var ds=z.getDate()+' '+AY[z.getMonth()];if(dt2.textContent!==ds)dt2.textContent=ds;}
+      // Gün şeridi (Pzt→Paz), bugünü cardinal vurgula
+      var strip=document.getElementById('sc-day-strip');
+      if(strip){var wd=z.getDay();var idx=(wd+6)%7;if(strip.__scCur!==idx){strip.__scCur=idx;var sp=strip.children;for(var qi=0;qi<sp.length;qi++){sp[qi].classList.toggle('today',qi===idx);}strip.classList.toggle('weekend',wd===0||wd===6);}}
       requestAnimationFrame(tick);
     };tick();
   }
@@ -537,34 +561,20 @@ function initFx1(hdr){
   hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-mag');};
 }
-// ── Header Efekt 2: Ters-manyetik metin — harfler imlecin yakınında ONA DOĞRU çekilir ──
-// (Efekt 1'in tam tersi: iter değil, çeker; renk yine cardinal kırmızıya döner)
+// ── Header Efekt 2: Yarık metin — imleç başlığa değince üst/alt yarı zıt yönde
+// kayar (skew), aralarında cardinal kırmızı bir yarık çizgisi açılır. (CodePen
+// "split menu" efektinin siteye uyarlanmış, font-rotasyonuyla uyumlu hali.) ──
 function initFx2(hdr){
-  var nm=hdr.querySelector('.sh-name');if(!nm||nm.getAttribute('data-sc-rmag'))return;
-  nm.setAttribute('data-sc-rmag','1');
-  var txt=nm.textContent||'';nm.innerHTML='';
-  var spans=[];
-  txt.split('').forEach(function(ch){
-    var s=document.createElement('span');s.textContent=ch;
-    s.style.cssText='display:inline-block;transition:transform 200ms cubic-bezier(.2,.8,.3,1),color 180ms ease;';
-    nm.appendChild(s);spans.push(s);
-  });
-  function onMove(e){
-    spans.forEach(function(s){
-      var r=s.getBoundingClientRect();
-      var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
-      var d=Math.sqrt(dx*dx+dy*dy),R=90;
-      if(d<R&&d>0.5){
-        // Manyetiğin TERSİ: imlece doğru çek (+ yönde, - değil)
-        var f=(R-d)/R*0.55;
-        s.style.transform='translate('+(dx*f).toFixed(1)+'px,'+(dy*f).toFixed(1)+'px)';
-        s.style.color='#C8102E';
-      }else{s.style.transform='none';s.style.color='';}
-    });
-  }
-  function onLeave(){spans.forEach(function(s){s.style.transform='none';s.style.color='';});}
-  hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
-  hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-rmag');};
+  var nm=hdr.querySelector('.sh-name');if(!nm||nm.getAttribute('data-sc-split'))return;
+  nm.setAttribute('data-sc-split','1');
+  var txt=nm.textContent||'';
+  nm.classList.add('sc-split');
+  // İki maske (üst/alt yarı) + sabit boyut için şeffaf taban + yarık çizgisi
+  nm.innerHTML='<span class="sc-split-line" aria-hidden="true"></span>'+
+    '<span class="sc-split-mask sc-split-top" aria-hidden="true"><span>'+txt+'</span></span>'+
+    '<span class="sc-split-mask sc-split-bot" aria-hidden="true"><span>'+txt+'</span></span>'+
+    '<span class="sc-split-base">'+txt+'</span>';
+  hdr.__scFxClean=function(){nm.classList.remove('sc-split');nm.innerHTML=txt;nm.removeAttribute('data-sc-split');};
 }
 // ── Header efekt koordinatörü — her sayfa yükünde efekt sırası döner ──
 function initHeaderFx(){
@@ -593,18 +603,29 @@ function scCardTilt(){
     c.addEventListener('mouseleave',function(){c.style.transform='';if(ic)ic.style.transform='';if(nm)nm.style.textShadow='';});
   });
 }
-// ── Görev 7: Konu hex'lerine (page-listing) hafif 3D tilt + kromatik sapma ──
+// ── Görev 7: Konu hex'lerine BELİRGİN imleç-güdümlü 3D tilt (yalnız masaüstü) ──
+// (Statik CSS :hover'dan ayrışsın diye güçlü açı + imleç yönüne kayan derinlik
+// gölgesi. Kırmızı kromatik gölge kırmızı hover zemininde görünmediğinden,
+// label'a yöne göre koyu gölge veriyoruz → her iki durumda da görünür.)
 function scHexTilt(){
   if(window.innerWidth<800)return;
   document.querySelectorAll('.page-listing .section-li .desc h3 a').forEach(function(a){
     if(a.getAttribute('data-sc-hex'))return;a.setAttribute('data-sc-hex','1');
+    var li=a.closest('.section-li');
     a.addEventListener('mousemove',function(e){
       var r=a.getBoundingClientRect();
       var px=(e.clientX-r.left)/r.width-0.5,py=(e.clientY-r.top)/r.height-0.5;
-      a.style.transform='perspective(900px) rotateX('+(-py*5).toFixed(2)+'deg) rotateY('+(px*5).toFixed(2)+'deg) scale(1.06)';
-      a.style.textShadow=(px*2.4).toFixed(1)+'px 0 0 rgba(200,16,46,0.4),'+(-px*2.4).toFixed(1)+'px 0 0 rgba(40,80,220,0.34)';
+      a.style.transform='perspective(560px) rotateX('+(-py*18).toFixed(2)+'deg) rotateY('+(px*18).toFixed(2)+'deg) scale(1.13)';
+      a.style.filter='drop-shadow('+(px*10).toFixed(1)+'px '+(py*10+5).toFixed(1)+'px 12px rgba(0,0,0,0.30))';
+      var lbl=a.querySelector('.sc-hx-label');
+      if(lbl)lbl.style.textShadow=(px*3).toFixed(1)+'px '+(py*3).toFixed(1)+'px 2px rgba(0,0,0,0.40)';
+      if(li)li.style.zIndex='30';
     });
-    a.addEventListener('mouseleave',function(){a.style.transform='';a.style.textShadow='';});
+    a.addEventListener('mouseleave',function(){
+      a.style.transform='';a.style.filter='';
+      var lbl=a.querySelector('.sc-hx-label');if(lbl)lbl.style.textShadow='';
+      if(li)li.style.zIndex='';
+    });
   });
 }
 // ── Görev 8: Backlinks + Etiketler'i SBB-kutusuna entegre et ──
@@ -662,7 +683,7 @@ function ensureFooterWave(){
   function evalW(h,x,W,p){var y=0;h.forEach(function(s){y+=Math.sin(x/W*6.28*s[1]+p+s[2])*s[0];});return y;}
   function lrp(a,b,t){var n=Math.max(a.length,b.length),r=[];for(var i=0;i<n;i++){var ai=a[i]||[0,1,0],bi=b[i]||[0,1,0];r.push([ai[0]+(bi[0]-ai[0])*t,ai[1]+(bi[1]-ai[1])*t,ai[2]+(bi[2]-ai[2])*t]);}return r;}
   var L=[{p:0,v:0.45,a:mkH(),b:mkH(),t:0,d:rnd(6,18)},{p:3.14,v:-0.32,a:mkH(),b:mkH(),t:0,d:rnd(6,18)}];
-  var prev=0,snakePhase=0;
+  var prev=0,snakePhase=0,snakeInit=false;
   function tick(ts){
     window.__scFwRaf=requestAnimationFrame(tick);
     var ftn=document.querySelector('footer');if(!ftn){prev=0;return;}
@@ -690,55 +711,99 @@ function ensureFooterWave(){
       ctx.lineTo(W,H);ctx.closePath();
       ctx.fillStyle=cs[i];ctx.fill();
     });
-    // ── Dalgaların üstünde ağır ağır süzülen gerçekçi yılan ──
-    snakePhase+=dt*22;                       // yatay hız
-    var span=W+220, headX=(snakePhase%span)-110;
-    var waveF=0.048, wavePh=snakePhase*0.010;
-    var baseY=H*0.44, amp2=Math.min(H*0.22,10);
-    function syAt(x){return baseY+Math.sin(x*waveF+wavePh)*amp2+Math.sin(x*waveF*1.7+wavePh*0.8)*amp2*0.35;}
-    var NS2=36, sgap=Math.max(7,W/52);
-    // olivine rengi; dark'ta biraz koyulaştır ama aynı ton
-    var olivine=dk?'rgba(110,168,72,0.72)':'rgba(145,198,108,0.82)';
-    var olivineD=dk?'rgba(78,118,50,0.60)':'rgba(100,150,70,0.65)';
-    var olivineAcc=dk?'rgba(180,40,40,0.85)':'rgba(200,16,46,0.90)';
-    // gövde — her segmentte farklı kalınlık (kuyruğa doğru incelir)
+    // ── Dalgaların üstünde süzülen GERÇEKÇİ yılan: tek parça dolgulu, ipeksi gövde ──
+    var bodyLen=Math.min(210,W*0.36);          // kısa — sayfayı kaplamaz
+    var spanX=W+bodyLen+40;
+    if(!snakeInit){snakePhase=W*0.28+bodyLen+20;snakeInit=true;}  // ilk karede ekranda başla
+    snakePhase+=dt*26;                         // yavaş, akışkan ama görünür
+    var headX=(snakePhase%spanX)-bodyLen-20;   // sol dış → sağ dış, kısa boşluk
+    var waveF=0.021, wavePh=snakePhase*0.013;
+    var baseY=H*0.42, amp2=Math.min(H*0.19,9);
+    function cyAt(x){return baseY+Math.sin(x*waveF+wavePh)*amp2+Math.sin(x*waveF*2.3+wavePh*1.5)*amp2*0.26;}
+    // olivine (#91c66c) paleti — temaya uyumlu
+    var olivine   =dk?'rgba(124,178,86,0.94)':'rgba(145,198,108,0.95)';
+    var olivineHi =dk?'rgba(158,206,124,0.96)':'rgba(184,224,152,0.98)';
+    var olivineD  =dk?'rgba(80,124,52,0.95)':'rgba(104,156,70,0.96)';
+    var olivinePat=dk?'rgba(54,86,34,0.42)':'rgba(78,116,48,0.34)';
+    var demonY    =dk?'rgba(255,224,60,1)':'rgba(255,208,18,1)';
+    var tongueR   ='rgba(200,16,46,0.95)';
+    var NB=50;
+    function radAt(s){var maxR=Math.min(6.2,H*0.15);if(s<0.10)return Math.max(0.5,maxR*(s/0.10));return Math.max(0.6,maxR*(0.82+0.18*Math.sin(s*3.14159)));}
+    // merkez çizgi noktaları (kuyruk s=0 → baş s=1)
+    var P=[];for(var i=0;i<=NB;i++){var s=i/NB;var x=headX-bodyLen*(1-s);P.push({x:x,y:cyAt(x),s:s});}
+    // kenar şeritleri (normal yönünde)
+    var top=[],bot=[];
+    for(var i=0;i<=NB;i++){
+      var pa=P[Math.max(0,i-1)],pb=P[Math.min(NB,i+1)];
+      var tx=pb.x-pa.x,ty=pb.y-pa.y,tl=Math.sqrt(tx*tx+ty*ty)||1;
+      var nx=-ty/tl,ny=tx/tl,r=radAt(P[i].s);
+      top.push([P[i].x+nx*r,P[i].y+ny*r]);bot.push([P[i].x-nx*r,P[i].y-ny*r]);
+    }
     ctx.lineCap='round';ctx.lineJoin='round';
-    for(var s=NS2-1;s>=0;s--){
-      var x1=headX-s*sgap,x2=headX-(s+1)*sgap;
-      var ratio=1-s/NS2;
-      ctx.lineWidth=Math.max(1.2,4.5*ratio);
-      // alternating stripe: hafif koyu-açık deri efekti
-      ctx.strokeStyle=(s%3===0)?olivineD:olivine;
-      ctx.beginPath();ctx.moveTo(x1,syAt(x1));ctx.lineTo(x2,syAt(x2));ctx.stroke();
+    // dolgulu gövde (tek parça, yumuşak)
+    ctx.beginPath();ctx.moveTo(top[0][0],top[0][1]);
+    for(var i=1;i<=NB;i++)ctx.lineTo(top[i][0],top[i][1]);
+    for(var i=NB;i>=0;i--)ctx.lineTo(bot[i][0],bot[i][1]);
+    ctx.closePath();
+    var bgrad=ctx.createLinearGradient(0,baseY-11,0,baseY+11);
+    bgrad.addColorStop(0,olivineHi);bgrad.addColorStop(0.5,olivine);bgrad.addColorStop(1,olivineD);
+    ctx.fillStyle=bgrad;ctx.fill();
+    // sırt deseni: seyrek, ince eşkenar lekeler (mekanik değil, organik)
+    ctx.fillStyle=olivinePat;
+    for(var i=6;i<NB-3;i+=3){
+      var p=P[i],rr=radAt(p.s)*0.46;
+      var pa=P[i-1],pb=P[i+1];var aa=Math.atan2(pb.y-pa.y,pb.x-pa.x);
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(aa);
+      ctx.beginPath();ctx.moveTo(0,-rr);ctx.lineTo(rr*1.1,0);ctx.lineTo(0,rr);ctx.lineTo(-rr*1.1,0);ctx.closePath();ctx.fill();
+      ctx.restore();
     }
-    // scale dots
-    for(var s=2;s<NS2;s+=3){
-      var sx=headX-s*sgap,sy=syAt(sx);
-      ctx.fillStyle=olivineD;ctx.beginPath();ctx.arc(sx,sy,0.8,0,6.2832);ctx.fill();
+    // ── baş ──
+    var hp=P[NB],pa=P[NB-1];
+    var ang=Math.atan2(hp.y-pa.y,hp.x-pa.x);
+    var hr=radAt(1)*1.12+1.3;
+    ctx.save();ctx.translate(hp.x,hp.y);ctx.rotate(ang);
+    var hgrad=ctx.createLinearGradient(0,-hr,0,hr);
+    hgrad.addColorStop(0,olivineHi);hgrad.addColorStop(1,olivineD);
+    ctx.fillStyle=hgrad;
+    ctx.beginPath();ctx.ellipse(0,0,hr*1.7,hr,0,0,6.2832);ctx.fill();
+    ctx.lineWidth=0.7;ctx.strokeStyle=olivineD;ctx.stroke();
+    // göz: demon-yellow + dikey yarık göz bebeği + parıltı
+    var ex=hr*0.30,ey=-hr*0.52;
+    ctx.fillStyle=demonY;
+    ctx.beginPath();ctx.ellipse(ex,ey,hr*0.46,hr*0.36,0,0,6.2832);ctx.fill();
+    ctx.fillStyle='rgba(18,14,6,0.92)';
+    ctx.beginPath();ctx.ellipse(ex+hr*0.04,ey,hr*0.11,hr*0.30,0,0,6.2832);ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,0.85)';
+    ctx.beginPath();ctx.arc(ex-hr*0.14,ey-hr*0.12,hr*0.07,0,6.2832);ctx.fill();
+    ctx.restore();
+    // ── çatal dil (ara sıra titreyerek çıkar) ──
+    var flick=Math.sin(snakePhase*0.22);
+    if(flick>0.2){
+      var f=(flick-0.2)/0.8;
+      var t0=hr*1.6,tlen=hr*(1.0+f*1.6);
+      var bx=hp.x+Math.cos(ang)*t0,by=hp.y+Math.sin(ang)*t0;
+      var ttx=hp.x+Math.cos(ang)*(t0+tlen),tty=hp.y+Math.sin(ang)*(t0+tlen);
+      var wob=Math.sin(snakePhase*3)*1.1;
+      var mx=(bx+ttx)/2+Math.cos(ang+1.57)*wob,my=(by+tty)/2+Math.sin(ang+1.57)*wob;
+      ctx.strokeStyle=tongueR;ctx.lineWidth=0.85;
+      ctx.beginPath();ctx.moveTo(bx,by);ctx.quadraticCurveTo(mx,my,ttx,tty);
+      ctx.lineTo(ttx+Math.cos(ang+0.42)*hr*0.55,tty+Math.sin(ang+0.42)*hr*0.55);
+      ctx.moveTo(ttx,tty);
+      ctx.lineTo(ttx+Math.cos(ang-0.42)*hr*0.55,tty+Math.sin(ang-0.42)*hr*0.55);
+      ctx.stroke();
     }
-    // baş: oval
-    var hy=syAt(headX);
-    var hPrev=syAt(headX-sgap);
-    var ang=Math.atan2(hy-hPrev,sgap);
-    var hr=5.5;
-    ctx.fillStyle=olivine;
-    ctx.beginPath();ctx.ellipse(headX,hy,hr*1.5,hr,ang,0,6.2832);ctx.fill();
-    ctx.strokeStyle=olivineD;ctx.lineWidth=1.0;
-    ctx.beginPath();ctx.ellipse(headX,hy,hr*1.5,hr,ang,0,6.2832);ctx.stroke();
-    // göz
-    var eyeX=headX+Math.cos(ang+1.2)*hr*0.8, eyeY=hy+Math.sin(ang+1.2)*hr*0.8;
-    ctx.fillStyle='rgba(255,255,255,0.9)';ctx.beginPath();ctx.arc(eyeX,eyeY,1.6,0,6.2832);ctx.fill();
-    ctx.fillStyle=olivineAcc;ctx.beginPath();ctx.arc(eyeX+0.4,eyeY+0.3,0.9,0,6.2832);ctx.fill();
-    // çatal dil
-    var lx=headX+Math.cos(ang)*hr*2.2,ly=hy+Math.sin(ang)*hr*2.2;
-    var lb=headX+Math.cos(ang)*hr*1.4,lby=hy+Math.sin(ang)*hr*1.4;
-    ctx.strokeStyle=olivineAcc;ctx.lineWidth=0.9;
-    ctx.beginPath();ctx.moveTo(lb,lby);ctx.lineTo(lx,ly);
-    ctx.lineTo(lx+Math.cos(ang+0.45)*4,ly+Math.sin(ang+0.45)*4);
-    ctx.moveTo(lx,ly);ctx.lineTo(lx+Math.cos(ang-0.45)*4,ly+Math.sin(ang-0.45)*4);
-    ctx.stroke();
   }
   requestAnimationFrame(tick);
+}
+// ── Görev 3: Sitedeki TÜM ayraçlar (<hr>) varsayılan serpent ayracına dönüşür ──
+function scSerpentHr(){
+  document.querySelectorAll('article hr, .center hr, .popover hr').forEach(function(hr){
+    if(hr.getAttribute('data-sc-snake'))return;hr.setAttribute('data-sc-snake','1');
+    var w=document.createElement('div');w.className='sc-hr-serpent';w.setAttribute('aria-hidden','true');
+    w.innerHTML=SC_SERPENT_LINE;
+    if(hr.parentNode)hr.parentNode.insertBefore(w,hr);
+    hr.style.display='none';
+  });
 }
 function perNav(){
   // Sayfa değişince SBB kuyruğunu kapat (her sayfaya temiz başla) + sağ kenarı ölç
@@ -836,6 +901,7 @@ function perNav(){
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   scCardTilt();
   scHexTilt();
+  scSerpentHr();
   scSbbExtras();
   initHeaderFx();
   syncFooter();

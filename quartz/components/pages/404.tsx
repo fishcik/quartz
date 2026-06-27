@@ -1,27 +1,51 @@
+import fs from "fs"
+import path from "path"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
-// ── SAYKO.ch 404: SERPENT SNAKE OYUNU ──────────────────────────────────────
-// Tam sayfa playground. Yılan imleci takip eder; oyalanınca kendi kendine
-// dolaşır. Ekrana saçılmış stilize beyinleri yiyince büyür (Snake mantığı).
+// Build-time: SERPENTBRAIN logosunu oku (404'ün "0"ı + LSD hover oyuncağı)
+function readSvg(rel: string): string {
+  try {
+    return fs
+      .readFileSync(path.join(process.cwd(), rel), "utf8")
+      .replace(/<\?xml[^>]*\?>/, "")
+      .replace(/<!DOCTYPE[^>]*>/, "")
+      .trim()
+  } catch {
+    return ""
+  }
+}
+const SC_SB_SVG = readSvg("quartz/static/serpentbrain.svg")
+
+// ── SAYKO.ch 404: EVIL SERPENT PLAYGROUND ──────────────────────────────────
+// Boşta: serpent, "404"ün 0'ı olan SERPENTBRAIN logosu etrafında ouroboros gibi
+// ağır ağır döner. İmleç oynayınca snake oyunu başlar; ekrana saçılmış beyinleri
+// yiyince büyür. Yılan tek-parça dolgulu, ipeksi, "evil" çizilir.
 const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
   const baseDir = ctx.argv.serve ? "/" : url.pathname
 
   return (
     <article class="sc-404">
-      {/* Tam sayfa canvas — yılan tüm sayfada gezebilsin */}
+      {/* Tam sayfa canvas — yılan tüm sayfada gezer / 0 etrafında döner */}
       <canvas id="sc-404-field" aria-hidden="true"></canvas>
-      {/* "4 BEYİN 4" üst başlık — canvas'ın üstünde z-index ile */}
+      {/* "4 [SERPENTBRAIN=0] 4" — orta logo, LSD hover oyuncağı */}
       <div class="sc-404-row">
         <span class="sc-404-d" aria-hidden="true">4</span>
-        <div class="sc-404-brainstage" aria-label="Serpent brain canvas" />
+        <div
+          class="sc-404-zero"
+          id="sc-404-zero"
+          aria-label="SERPENTBRAIN"
+          dangerouslySetInnerHTML={{ __html: SC_SB_SVG }}
+        />
         <span class="sc-404-d" aria-hidden="true">4</span>
       </div>
       <h1 class="sc-404-title">Bu sayfa henüz keşfedilmedi.</h1>
       <p class="sc-404-quote" id="sc-404-quote">
         Aradığın şey burada değil. Belki de henüz keşfedilmeyi bekliyor.
       </p>
-      <p class="sc-404-hint" id="sc-404-hint">İmleci gezdir — yılan peşinden gelsin. Beyinleri ye, büyü.</p>
+      <p class="sc-404-hint" id="sc-404-hint">
+        İmleci gezdir — yılan peşinden gelir, beyinleri yer, büyür. Durunca 0'ın etrafında uyur.
+      </p>
       <div class="sc-404-score" id="sc-404-score">
         <span class="sc-404-score-lbl">Beyin:</span>
         <span id="sc-404-score-val">0</span>
@@ -36,7 +60,6 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   var Q=[
     "Aradığın şey burada değil. Belki de hiç olmadı.",
     "Sen kaybolmadın — sadece yanlış nöral yolu izledin.",
-    "Bu bir Rorschach testi değil. Ama yine de bir şey anlatıyor.",
     "Teori biter, 404 başlar.",
     "Bu sayfa, bilinçaltına geri bastırıldı.",
     "Yanlış-anı mı? Sayfanın var olduğuna emin misin?",
@@ -45,18 +68,16 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     "Uyaran yok. Tepki de yok. Sadece boşluk.",
     "Şema uyuşmazlığı: beklediğin sayfa mevcut değil.",
     "Büyüdükçe, daha da kaybolursun.",
-    "Beyin yemek bilgi kazanmak değildir. Ama nöral yoğunluğu artırır.",
+    "Yılan, kuyruğunu ısırır; sen linki ararsın.",
     "Her 404 bir keşfedilmemiş bölgedir."
   ];
   var qEl=document.getElementById('sc-404-quote');
   function newQuote(){ if(qEl){ var i=Math.floor(Math.random()*Q.length); qEl.style.opacity='0'; setTimeout(function(){qEl.textContent=Q[i];qEl.style.opacity='1';},220); } }
 
-  // ── TAM SAYFA CANVAS ──
   var cnv=document.getElementById('sc-404-field');
   if(!cnv||!cnv.getContext)return;
   var ctx=cnv.getContext('2d');
   var W=0,H=0,DPR=Math.min(window.devicePixelRatio||1,2);
-
   function resize(){
     W=window.innerWidth;H=window.innerHeight;
     cnv.width=Math.round(W*DPR);cnv.height=Math.round(H*DPR);
@@ -64,233 +85,209 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     ctx.setTransform(DPR,0,0,DPR,0,0);
   }
 
+  // ── EVIL serpent + brain paleti (temaya uyumlu) ──
   function palette(){
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
     return dk
-      ? {body:'145,198,108', outline:'80,140,55', acc:'210,24,30', eye:'255,255,255',
-         brain:'160,148,128', gyri:'120,108,90', food:'210,24,30', bg:'10,10,10'}
-      : {body:'100,160,65',  outline:'60,110,35', acc:'200,16,46', eye:'255,255,255',
-         brain:'110,96,78',  gyri:'140,124,104',  food:'200,16,46', bg:'245,242,235'};
+      ? {hi:'96,140,64', body:'58,94,42', belly:'24,42,18', pat:'rgba(10,22,6,0.5)',
+         eye:'255,64,52', tongue:'225,40,40', brain:'150,140,122', gyri:'110,100,84', food:'210,28,32'}
+      : {hi:'118,162,78', body:'74,116,50', belly:'34,58,26', pat:'rgba(26,44,18,0.42)',
+         eye:'235,32,32', tongue:'200,16,46', brain:'112,98,80', gyri:'142,126,106', food:'200,16,46'};
   }
 
-  // ── YILAN STATE ──
-  var SEGLEN=14;         // segment arası mesafe (px) — küçük başlar
-  var SEG_W=9;           // başlangıç gövde kalınlığı
-  var seg=[];            // [{x,y}]
-  var score=0;
-  var t=0,idle=0,mIn=false,mx=W/2,my=H/2;
-  var eatAnim=[];        // yeme animasyonu patlamaları
+  // ── state ──
+  var SEGLEN=15, SEG_W=10, score=0;
+  var seg=[], t=0, mode='ouro', lastMove=-999, oro=0;
+  var mx=W/2,my=H/2,mIn=false;
+  var FOOD=[],MAX_FOOD=6, eatAnim=[];
+
+  // "0" (SERPENTBRAIN logosu) merkezi — ouroboros bunun etrafında döner
+  function zero(){
+    var z=document.getElementById('sc-404-zero');
+    if(z){var r=z.getBoundingClientRect();if(r.width)return {x:r.left+r.width/2,y:r.top+r.height/2,R:Math.max(r.width,r.height)*0.66};}
+    return {x:W/2,y:H*0.42,R:90};
+  }
 
   function initSnake(){
-    seg=[];
-    var startX=W*0.5, startY=H*0.5;
-    for(var i=0;i<12;i++)seg.push({x:startX+i*SEGLEN,y:startY});
-    mx=startX-80;my=startY;
+    seg=[];var c=zero();var N=16;
+    for(var i=0;i<N;i++){var a=-i*0.36;seg.push({x:c.x+Math.cos(a)*c.R,y:c.y+Math.sin(a)*c.R});}
   }
+  function snakeRadius(){return SEG_W*0.5+score*0.16;}
 
-  function snakeRadius(){ return SEG_W*0.5+score*0.18; } // büyüdükçe kalınlaşır
-
-  // ── BEYİN YİYECEKLERİ (food items) ──
-  var FOOD=[], MAX_FOOD=6;
+  // ── beyin yiyecekleri ──
   function spawnFood(){
     if(FOOD.length>=MAX_FOOD)return;
-    var margin=60;
-    var fx=margin+Math.random()*(W-2*margin);
-    var fy=margin+Math.random()*(H-2*margin);
-    // başlangıç konumundan çok yakın koyma
-    if(seg.length&&Math.sqrt((fx-seg[0].x)*(fx-seg[0].x)+(fy-seg[0].y)*(fy-seg[0].y))<100)return;
-    FOOD.push({x:fx,y:fy,r:12+Math.random()*6,pulse:Math.random()*6.28,eaten:false,alpha:1});
+    var m=70;var fx=m+Math.random()*(W-2*m),fy=m+Math.random()*(H-2*m);
+    if(seg.length&&Math.hypot(fx-seg[0].x,fy-seg[0].y)<110)return;
+    FOOD.push({x:fx,y:fy,r:12+Math.random()*6,pulse:Math.random()*6.28,alpha:0});
   }
-
-  function drawFood(f,col){
-    var r=f.r*(0.95+0.05*Math.sin(f.pulse+t*2))*f.alpha;
+  function drawBrain(f,col){
+    var r=f.r*(0.95+0.05*Math.sin(f.pulse+t*2))*Math.min(1,f.alpha);
+    if(r<0.5)return;
     ctx.save();ctx.translate(f.x,f.y);ctx.scale(r/60,r/60);
-    ctx.lineWidth=1.8/(r/60);ctx.lineCap='round';ctx.lineJoin='round';
-    ctx.strokeStyle='rgba('+col.brain+','+f.alpha+')';
+    ctx.lineWidth=2.0/(r/60);ctx.lineCap='round';ctx.lineJoin='round';
     ctx.beginPath();
     ctx.moveTo(-2,-44);ctx.bezierCurveTo(-30,-46,-52,-26,-44,-6);
     ctx.bezierCurveTo(-58,4,-50,30,-30,30);ctx.bezierCurveTo(-26,44,-4,46,2,34);
     ctx.bezierCurveTo(8,46,30,46,34,30);ctx.bezierCurveTo(54,30,60,6,46,-6);
     ctx.bezierCurveTo(56,-26,34,-48,8,-42);ctx.bezierCurveTo(6,-46,0,-46,-2,-44);
-    ctx.stroke();
+    ctx.closePath();
+    ctx.fillStyle='rgba('+col.brain+','+(0.14*f.alpha)+')';ctx.fill();
+    ctx.strokeStyle='rgba('+col.brain+','+f.alpha+')';ctx.stroke();
     ctx.beginPath();ctx.moveTo(1,-42);ctx.lineTo(2,34);ctx.stroke();
-    ctx.strokeStyle='rgba('+col.gyri+','+f.alpha*0.6+')';ctx.lineWidth=1.2/(r/60);
+    ctx.strokeStyle='rgba('+col.gyri+','+(f.alpha*0.6)+')';ctx.lineWidth=1.3/(r/60);
     var g=[[-30,-20,-18,-12],[-38,2,-24,8],[-26,18,-14,22],[14,-22,28,-14],[18,4,34,8]];
-    for(var i=0;i<g.length;i++){
-      ctx.beginPath();ctx.moveTo(g[i][0],g[i][1]);
-      ctx.quadraticCurveTo((g[i][0]+g[i][2])/2,g[i][1]-8,g[i][2],g[i][3]);
-      ctx.stroke();
-    }
+    for(var i=0;i<g.length;i++){ctx.beginPath();ctx.moveTo(g[i][0],g[i][1]);ctx.quadraticCurveTo((g[i][0]+g[i][2])/2,g[i][1]-8,g[i][2],g[i][3]);ctx.stroke();}
     ctx.restore();
   }
-
-  // ── YEME KONTROLÜ ──
   function checkEat(col){
-    var hr=snakeRadius()+8;
-    var hx=seg[0].x,hy=seg[0].y;
+    var hr=snakeRadius()+10,hx=seg[0].x,hy=seg[0].y;
     for(var i=FOOD.length-1;i>=0;i--){
-      var f=FOOD[i];if(f.eaten)continue;
-      var dx=hx-f.x,dy=hy-f.y;
+      var f=FOOD[i];var dx=hx-f.x,dy=hy-f.y;
       if(dx*dx+dy*dy<(hr+f.r)*(hr+f.r)){
-        f.eaten=true;score++;
-        var sv=document.getElementById('sc-404-score-val');if(sv)sv.textContent=String(score);
+        score++;var sv=document.getElementById('sc-404-score-val');if(sv)sv.textContent=String(score);
         newQuote();
-        // gövdeye segment ekle (kuyruktan)
-        var last=seg[seg.length-1];
-        for(var j=0;j<5;j++)seg.push({x:last.x,y:last.y});
-        // patlama animasyonu
-        eatAnim.push({x:f.x,y:f.y,r:0,maxR:f.r*4,life:1,col:col.food});
+        var last=seg[seg.length-1];for(var j=0;j<5;j++)seg.push({x:last.x,y:last.y});
+        eatAnim.push({x:f.x,y:f.y,r:0,life:1,col:col.food});
         FOOD.splice(i,1);
       }
     }
   }
 
-  // ── YILAN ÇİZİMİ ──
+  // ── EVIL serpent çizimi: tek parça dolgulu ipeksi gövde ──
   function drawSnake(col){
-    if(seg.length<2)return;
+    var N=seg.length;if(N<3)return;
     var baseR=snakeRadius();
+    function radAt(i){
+      var s=i/(N-1); // 0 baş → 1 kuyruk
+      var r;
+      if(s>0.86)r=baseR*(1-(s-0.86)/0.14);
+      else r=baseR*(0.80+0.20*Math.cos(s*1.15));
+      return Math.max(0.6,r);
+    }
+    var top=[],bot=[];
+    for(var i=0;i<N;i++){
+      var pa=seg[Math.max(0,i-1)],pb=seg[Math.min(N-1,i+1)];
+      var tx=pb.x-pa.x,ty=pb.y-pa.y,tl=Math.hypot(tx,ty)||1;
+      var nx=-ty/tl,ny=tx/tl,r=radAt(i);
+      top.push([seg[i].x+nx*r,seg[i].y+ny*r]);bot.push([seg[i].x-nx*r,seg[i].y-ny*r]);
+    }
     ctx.lineCap='round';ctx.lineJoin='round';
-
-    // gövde: her segment arası kalın çizgi, kuyruğa doğru incelir
-    for(var i=seg.length-2;i>=0;i--){
-      var a=seg[i+1],b=seg[i];
-      var ratio=1-i/(seg.length-1);      // 0 (kuyruk) → 1 (baş)
-      var lw=Math.max(1.5,baseR*2*ratio);
-      var alpha=0.55+ratio*0.45;
-      // deri efekti: hafif yeşil geçişi
-      var g2=ctx.createLinearGradient(a.x,a.y,b.x,b.y);
-      g2.addColorStop(0,'rgba('+col.body+','+alpha+')');
-      g2.addColorStop(1,'rgba('+col.outline+','+alpha+')');
-      ctx.strokeStyle=g2;
-      ctx.lineWidth=lw;
-      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
-    }
-
-    // skales efekti (her 4 segmentte gölge nokta)
-    for(var i=4;i<seg.length;i+=4){
-      var s=seg[i];
-      var r2=Math.max(1,(baseR*2*(1-i/(seg.length-1)))*0.2);
-      ctx.fillStyle='rgba('+col.outline+',0.25)';
-      ctx.beginPath();ctx.arc(s.x,s.y,r2,0,6.2832);ctx.fill();
-    }
-
-    // baş
+    // dolgulu gövde
+    ctx.beginPath();ctx.moveTo(top[0][0],top[0][1]);
+    for(var i=1;i<N;i++)ctx.lineTo(top[i][0],top[i][1]);
+    for(var i=N-1;i>=0;i--)ctx.lineTo(bot[i][0],bot[i][1]);
+    ctx.closePath();
     var h=seg[0],n=seg[1]||seg[0];
     var ang=Math.atan2(h.y-n.y,h.x-n.x);
-    var hr=baseR;
-    ctx.fillStyle='rgba('+col.body+',1)';
-    ctx.beginPath();ctx.ellipse(h.x,h.y,hr*1.4,hr,ang,0,6.2832);ctx.fill();
-    // outline
-    ctx.strokeStyle='rgba('+col.outline+',0.8)';ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.ellipse(h.x,h.y,hr*1.4,hr,ang,0,6.2832);ctx.stroke();
-
-    // gözler
-    var eyeOff=hr*0.65;
-    var ex1=h.x+Math.cos(ang+1.2)*eyeOff, ey1=h.y+Math.sin(ang+1.2)*eyeOff;
-    var ex2=h.x+Math.cos(ang-1.2)*eyeOff, ey2=h.y+Math.sin(ang-1.2)*eyeOff;
-    var er=hr*0.28;
-    ctx.fillStyle='rgba('+col.eye+',0.95)';
-    ctx.beginPath();ctx.arc(ex1,ey1,er,0,6.2832);ctx.fill();
-    ctx.beginPath();ctx.arc(ex2,ey2,er,0,6.2832);ctx.fill();
-    // gözbebekleri — kardinal kırmızı
-    var pu=0.6+0.4*Math.sin(t*4);
-    ctx.fillStyle='rgba('+col.acc+','+pu+')';
-    ctx.beginPath();ctx.arc(ex1+Math.cos(ang)*er*0.3,ey1+Math.sin(ang)*er*0.3,er*0.52,0,6.2832);ctx.fill();
-    ctx.beginPath();ctx.arc(ex2+Math.cos(ang)*er*0.3,ey2+Math.sin(ang)*er*0.3,er*0.52,0,6.2832);ctx.fill();
-
-    // çatal dil
-    var tBase=hr*1.35, tFork=hr*0.6;
-    var tx0=h.x+Math.cos(ang)*hr*1.3, ty0=h.y+Math.sin(ang)*hr*1.3;
-    var tx1=h.x+Math.cos(ang)*hr*(1.3+tBase/hr), ty1=h.y+Math.sin(ang)*hr*(1.3+tBase/hr);
-    ctx.strokeStyle='rgba('+col.acc+',0.92)';ctx.lineWidth=Math.max(0.8,hr*0.15);
-    ctx.beginPath();ctx.moveTo(tx0,ty0);ctx.lineTo(tx1,ty1);
-    ctx.lineTo(tx1+Math.cos(ang+0.42)*tFork,ty1+Math.sin(ang+0.42)*tFork);
-    ctx.moveTo(tx1,ty1);
-    ctx.lineTo(tx1+Math.cos(ang-0.42)*tFork,ty1+Math.sin(ang-0.42)*tFork);
-    ctx.stroke();
-  }
-
-  // ── AI: İmleç yokken kendi kendine güzel bir yol çizer ──
-  var aiTarget={x:0,y:0}, aiTimer=0;
-  function updateAI(){
-    aiTimer-=0.016;
-    if(aiTimer<=0||Math.sqrt((seg[0].x-aiTarget.x)*(seg[0].x-aiTarget.x)+(seg[0].y-aiTarget.y)*(seg[0].y-aiTarget.y))<60){
-      // En yakın food'a git (varsa), yoksa rastgele bir kenar noktası
-      var best=null, bestD=1e9;
-      for(var i=0;i<FOOD.length;i++){
-        var dx=FOOD[i].x-seg[0].x,dy=FOOD[i].y-seg[0].y;
-        var d=dx*dx+dy*dy;if(d<bestD){bestD=d;best=FOOD[i];}
-      }
-      if(best){aiTarget.x=best.x+((Math.random()-0.5)*30);aiTarget.y=best.y+((Math.random()-0.5)*30);}
-      else{
-        var margin=80;
-        aiTarget.x=margin+Math.random()*(W-2*margin);
-        aiTarget.y=margin+Math.random()*(H-2*margin);
-      }
-      aiTimer=2+Math.random()*3;
+    var gx=Math.cos(ang+1.5708),gy=Math.sin(ang+1.5708);
+    var grad=ctx.createLinearGradient(h.x-gx*baseR,h.y-gy*baseR,h.x+gx*baseR,h.y+gy*baseR);
+    grad.addColorStop(0,'rgba('+col.hi+',0.97)');grad.addColorStop(0.5,'rgba('+col.body+',0.97)');grad.addColorStop(1,'rgba('+col.belly+',0.97)');
+    ctx.fillStyle=grad;ctx.fill();
+    // sırt deseni
+    ctx.fillStyle=col.pat;
+    for(var i=5;i<N-3;i+=3){
+      var p=seg[i],rr=radAt(i)*0.46;
+      var pa=seg[i-1],pb=seg[i+1];var aa=Math.atan2(pb.y-pa.y,pb.x-pa.x);
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(aa);
+      ctx.beginPath();ctx.moveTo(0,-rr);ctx.lineTo(rr*1.1,0);ctx.lineTo(0,rr);ctx.lineTo(-rr*1.1,0);ctx.closePath();ctx.fill();
+      ctx.restore();
+    }
+    // ── baş (sivri, evil) ──
+    var hr=baseR*1.12+2;
+    ctx.save();ctx.translate(h.x,h.y);ctx.rotate(ang);
+    var hg=ctx.createLinearGradient(0,-hr,0,hr);
+    hg.addColorStop(0,'rgba('+col.hi+',1)');hg.addColorStop(1,'rgba('+col.belly+',1)');
+    ctx.fillStyle=hg;
+    ctx.beginPath();
+    ctx.moveTo(hr*1.7,0);
+    ctx.quadraticCurveTo(hr*0.5,-hr*1.15,-hr*0.9,-hr*0.85);
+    ctx.quadraticCurveTo(-hr*1.2,0,-hr*0.9,hr*0.85);
+    ctx.quadraticCurveTo(hr*0.5,hr*1.15,hr*1.7,0);
+    ctx.closePath();ctx.fill();
+    ctx.lineWidth=1;ctx.strokeStyle='rgba('+col.belly+',0.8)';ctx.stroke();
+    // gözler — kötücül, parlayan, dikey yarık
+    var pul=0.7+0.3*Math.sin(t*3.5);
+    var eyes=[[hr*0.15,-hr*0.52],[hr*0.15,hr*0.52]];
+    for(var e=0;e<2;e++){
+      var ex=eyes[e][0],ey=eyes[e][1];
+      ctx.save();
+      ctx.shadowColor='rgba('+col.eye+','+pul+')';ctx.shadowBlur=8;
+      ctx.fillStyle='rgba('+col.eye+',1)';
+      ctx.beginPath();ctx.ellipse(ex,ey,hr*0.44,hr*0.34,0,0,6.2832);ctx.fill();
+      ctx.restore();
+      ctx.fillStyle='rgba(12,8,4,0.92)';
+      ctx.beginPath();ctx.ellipse(ex+hr*0.08,ey,hr*0.12,hr*0.26,0,0,6.2832);ctx.fill();
+      ctx.fillStyle='rgba(255,255,255,0.7)';
+      ctx.beginPath();ctx.arc(ex-hr*0.12,ey-hr*0.10,hr*0.07,0,6.2832);ctx.fill();
+    }
+    ctx.restore();
+    // ── çatal dil (titreyerek) ──
+    var fl=Math.sin(t*5);
+    if(fl>0.3){
+      var f=(fl-0.3)/0.7,t0=hr*1.7,tl2=hr*(1.1+f*1.7);
+      var bx=h.x+Math.cos(ang)*t0,by=h.y+Math.sin(ang)*t0;
+      var ttx=h.x+Math.cos(ang)*(t0+tl2),tty=h.y+Math.sin(ang)*(t0+tl2);
+      var wob=Math.sin(t*9)*1.4;
+      var mxp=(bx+ttx)/2+Math.cos(ang+1.5708)*wob,myp=(by+tty)/2+Math.sin(ang+1.5708)*wob;
+      ctx.strokeStyle='rgba('+col.tongue+',0.95)';ctx.lineWidth=Math.max(0.9,hr*0.14);ctx.lineCap='round';
+      ctx.beginPath();ctx.moveTo(bx,by);ctx.quadraticCurveTo(mxp,myp,ttx,tty);
+      ctx.lineTo(ttx+Math.cos(ang+0.42)*hr*0.6,tty+Math.sin(ang+0.42)*hr*0.6);
+      ctx.moveTo(ttx,tty);
+      ctx.lineTo(ttx+Math.cos(ang-0.42)*hr*0.6,tty+Math.sin(ang-0.42)*hr*0.6);
+      ctx.stroke();
     }
   }
 
-  // ── ANA DÖNGÜ ──
-  function draw(){
-    window.__sc404Raf=requestAnimationFrame(draw);
-    if(W===0){resize();initSnake();for(var k=0;k<4;k++)spawnFood();}
-    t+=0.016;
-    var col=palette();
-
-    // yönlendirme
-    var tx,ty;
-    if(mIn){tx=mx;ty=my;}
-    else{updateAI();tx=aiTarget.x;ty=aiTarget.y;}
-
-    // baş hareketi
-    var speed=mIn?0.14:0.11;
-    seg[0].x+=(tx-seg[0].x)*speed;
-    seg[0].y+=(ty-seg[0].y)*speed;
-
-    // zincir kısıtı
+  // ── ouroboros: 0'ın etrafında ağır ağır dön ──
+  function ouroStep(){
+    var c=zero();oro+=0.0055;
+    var N=seg.length,wrap=0.92;
+    for(var i=0;i<N;i++){
+      var a=oro-i*(6.2832*wrap/N);
+      var tx=c.x+Math.cos(a)*c.R,ty=c.y+Math.sin(a)*c.R;
+      seg[i].x+=(tx-seg[i].x)*0.10;seg[i].y+=(ty-seg[i].y)*0.10;
+    }
+  }
+  // ── oyun: imleci takip et, ye, büyü ──
+  function gameStep(col){
+    var tx=mIn?mx:seg[0].x,ty=mIn?my:seg[0].y;
+    seg[0].x+=(tx-seg[0].x)*0.18;seg[0].y+=(ty-seg[0].y)*0.18;
     for(var i=1;i<seg.length;i++){
-      var dx=seg[i].x-seg[i-1].x,dy=seg[i].y-seg[i-1].y;
-      var d=Math.sqrt(dx*dx+dy*dy)||0.001;
+      var dx=seg[i].x-seg[i-1].x,dy=seg[i].y-seg[i-1].y,d=Math.hypot(dx,dy)||0.001;
       if(d>SEGLEN){seg[i].x=seg[i-1].x+dx/d*SEGLEN;seg[i].y=seg[i-1].y+dy/d*SEGLEN;}
     }
-
-    // ekranda tut
-    var margin=20;
-    if(seg[0].x<margin)seg[0].x=margin;if(seg[0].x>W-margin)seg[0].x=W-margin;
-    if(seg[0].y<margin)seg[0].y=margin;if(seg[0].y>H-margin)seg[0].y=H-margin;
-
-    // yeme kontrolü
+    var m=18;
+    if(seg[0].x<m)seg[0].x=m;if(seg[0].x>W-m)seg[0].x=W-m;
+    if(seg[0].y<m)seg[0].y=m;if(seg[0].y>H-m)seg[0].y=H-m;
+    if(FOOD.length<MAX_FOOD&&Math.random()<0.02)spawnFood();
     checkEat(col);
+  }
 
-    // yeni beyin doğur
-    if(FOOD.length<MAX_FOOD&&Math.random()<0.012)spawnFood();
-
-    // çiz
+  function draw(){
+    window.__sc404Raf=requestAnimationFrame(draw);
+    if(W===0){resize();initSnake();}
+    t+=0.016;
+    var col=palette();
+    mode=(mIn&&(t-lastMove)<3.2)?'game':'ouro';
     ctx.clearRect(0,0,W,H);
-
-    // food
-    for(var i=0;i<FOOD.length;i++)drawFood(FOOD[i],col);
-
-    // yeme patlamaları
-    eatAnim=eatAnim.filter(function(a){
-      a.r+=2.5; a.life-=0.04;
-      if(a.life<=0)return false;
-      ctx.strokeStyle='rgba('+a.col+','+a.life+')';
-      ctx.lineWidth=2;
-      ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,6.2832);ctx.stroke();
-      return true;
-    });
-
+    if(mode==='game'){
+      gameStep(col);
+      for(var i=0;i<FOOD.length;i++){FOOD[i].alpha=Math.min(1,FOOD[i].alpha+0.04);FOOD[i].pulse+=0.02;drawBrain(FOOD[i],col);}
+      eatAnim=eatAnim.filter(function(a){a.r+=2.6;a.life-=0.045;if(a.life<=0)return false;ctx.strokeStyle='rgba('+a.col+','+a.life+')';ctx.lineWidth=2;ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,6.2832);ctx.stroke();return true;});
+    } else {
+      // boşta: beyinleri sönümle, ouroboros'a dön
+      for(var i=FOOD.length-1;i>=0;i--){FOOD[i].alpha-=0.05;if(FOOD[i].alpha<=0)FOOD.splice(i,1);else drawBrain(FOOD[i],col);}
+      ouroStep();
+    }
     drawSnake(col);
   }
 
-  if(!window.__sc404Raf){resize();initSnake();for(var k=0;k<4;k++)spawnFood();draw();}
-
+  if(!window.__sc404Raf){resize();initSnake();draw();}
   window.addEventListener('resize',function(){resize();},{passive:true});
-  window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;mIn=true;},{passive:true});
+  window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;mIn=true;lastMove=t;},{passive:true});
   window.addEventListener('mouseleave',function(){mIn=false;});
-  document.getElementById('sc-404-field').style.cursor='crosshair';
+  window.addEventListener('touchmove',function(e){if(e.touches&&e.touches[0]){mx=e.touches[0].clientX;my=e.touches[0].clientY;mIn=true;lastMove=t;}},{passive:true});
 
   // ── Quartz orijinal: büyük/küçük harf URL eşleştirme yönlendirmesi ──
   if (typeof fetchData !== "undefined") {
