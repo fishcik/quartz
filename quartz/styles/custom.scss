@@ -1217,7 +1217,7 @@ body > footer {
   font-size: 0.72rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;            // zarf footer üst kenarının üstünde görünebilsin (dalga canvas'ı zaten footer boyutunda)
 }
 // Footer eski yerinde kalırsa da min boyut
 footer {
@@ -1227,7 +1227,7 @@ footer {
   font-size: 0.72rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 footer .sc-sign {
@@ -1240,6 +1240,73 @@ footer .sc-sign {
   font-style: italic;
   letter-spacing: 0.08em;
 }
+
+// ── Görev 4: Footer animasyonlu zarf (mailto) — telif satırının HEMEN ÜSTÜNDE,
+//    footer çubuğunun üst kenarına yaslı (dalgalar etkilenmez) ──
+.sc-mail-link {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - 8px);
+  transform: translateX(-50%);
+  z-index: 6;
+  display: block;
+  width: 82px;
+  height: 64px;
+  cursor: pointer;
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+}
+.sc-mail {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%) scale(0.34);
+  width: 200px; height: 170px;
+}
+.sc-mail .animated-mail {
+  position: absolute; height: 150px; width: 200px; transition: .4s;
+}
+.sc-mail .body {
+  position: absolute; bottom: 0; width: 0; height: 0;
+  border-style: solid; border-width: 0 0 100px 200px;
+  border-color: transparent transparent #c1272d transparent; z-index: 2;
+}
+.sc-mail .top-fold {
+  position: absolute; top: 50px; width: 0; height: 0;
+  border-style: solid; border-width: 50px 100px 0 100px;
+  transform-origin: 50% 0%;
+  transition: transform .4s .4s, z-index .2s .4s;
+  border-color: #9e1f24 transparent transparent transparent; z-index: 2;
+}
+.sc-mail .back-fold { position: absolute; bottom: 0; width: 200px; height: 100px; background: #9e1f24; z-index: 0; }
+.sc-mail .left-fold {
+  position: absolute; bottom: 0; width: 0; height: 0;
+  border-style: solid; border-width: 50px 0 50px 100px;
+  border-color: transparent transparent transparent #b52026; z-index: 2;
+}
+.sc-mail .letter {
+  left: 20px; bottom: 0; position: absolute; width: 160px; height: 60px;
+  background: #fff; z-index: 1; overflow: hidden; transition: .4s .2s;
+}
+.sc-mail .letter-border {
+  height: 10px; width: 100%;
+  background: repeating-linear-gradient(-45deg, #c1272d, #c1272d 8px, transparent 8px, transparent 18px);
+}
+.sc-mail .letter-title   { margin-top: 10px; margin-left: 5px; height: 10px; width: 40%; background: #c1272d; }
+.sc-mail .letter-context { margin-top: 10px; margin-left: 5px; height: 10px; width: 20%; background: #c1272d; }
+.sc-mail .letter-stamp   { margin-top: 30px; margin-left: 120px; border-radius: 100%; height: 30px; width: 30px; background: #c1272d; opacity: .3; }
+.sc-mail .shadow {
+  position: absolute; top: 200px; left: 50%; width: 400px; height: 30px;
+  transition: .4s; transform: translateX(-50%); border-radius: 100%;
+  background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+}
+.sc-mail-link:hover .animated-mail { transform: translateY(50px); }
+.sc-mail-link:hover .animated-mail .top-fold {
+  transition: transform .4s, z-index .2s; transform: rotateX(180deg); z-index: 0;
+}
+.sc-mail-link:hover .animated-mail .letter { height: 180px; }
+.sc-mail-link:hover .shadow { width: 250px; }
+@media (max-width: 800px) { .sc-mail-link { display: none; } }   // mobilde gizle (yer dar)
 
 // ─── Scrollbar ───────────────────────────────────
 
@@ -1386,10 +1453,11 @@ body[data-slug="index"] .site-header {
 // (".ch" asla kırpılmaz, logo asla oynamaz).
 .site-header-title {
   display: inline-flex;
+  flex-direction: column;         // SERPENTBRAIN logosu ÜSTTE, SAYKO.ch ALTTA
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  height: 5.4rem;                 // sabit yükseklik → slogan dikeyde kaymaz (büyük logo sığar)
+  gap: 0.3rem;
+  height: auto;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-decoration: none !important;
@@ -1410,13 +1478,13 @@ body[data-slug="index"] .site-header {
     justify-content: center;
     svg { width: 2.7rem; height: 2.7rem; display: block; }
   }
-  // SERPENTBRAIN logosu (2366:1824 oran) → %100 büyütüldü; yükseklik sabit, genişlik otomatik
+  // SERPENTBRAIN logosu — daha büyük, başlığın üstünde ortalı
   .sh-logo.sh-logo-sb {
-    flex: 0 0 7rem;
-    width: 7rem;
+    flex: 0 0 auto;
+    width: auto;
     color: var(--fg);
     transition: color 200ms ease, transform 200ms ease;
-    svg { width: auto; height: 5rem; }
+    svg { width: auto; height: 6.2rem; display: block; }
     &:hover { transform: scale(1.04); }
   }
   // SABİT genişlikli kelime kutusu — içerik ortalanır. overflow:visible → header
@@ -1765,8 +1833,8 @@ html[saved-theme="dark"] .sc-sbb-tools,
 }
 
 #sc-clockface {
-  width: 110px;
-  height: 110px;
+  width: 132px;
+  height: 132px;
   filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.30));
 }
 
@@ -2197,10 +2265,10 @@ html[saved-theme="dark"] .cg-cell,
 // Sivri-tepe altıgenler dikey kenarlarından temas eder (sıfır boşluk, dolu
 // balpeteği); çift sıralar yarım hücre kayar, sıralar dikey 1/4H örtüşür.
 // Geometri: W (yatay düz kenar) / H (dikey sivri) ≈ 0.866 oranı → regular hex.
-$sc-hx-w: 132px;            // hücre genişliği (yatay düz-kenar mesafesi)
-$sc-hx-h: 152px;            // hücre yüksekliği (sivri-sivri)
-$sc-hx-over: 38px;          // dikey örtüşme (H/4) → satır adımı 0.75H
-$sc-hx-off: 66px;           // çift sıra yatay kayma (W/2)
+$sc-hx-w: 158px;            // hücre genişliği (büyütüldü → uzun başlıklar 4-5 satır olmasın)
+$sc-hx-h: 182px;            // hücre yüksekliği (sivri-sivri)
+$sc-hx-over: 45px;          // dikey örtüşme (H/4) → satır adımı 0.75H
+$sc-hx-off: 79px;           // çift sıra yatay kayma (W/2)
 $sc-hx-per: 5;              // satır başına altıgen (kendiliğinden sarar)
 
 body[data-slug$="/index"] {
@@ -2257,8 +2325,10 @@ body[data-slug$="/index"] {
     inset: 0 !important;
     isolation: isolate;
     display: flex !important;
+    flex-direction: column !important;     // hiyeroglif ÜSTTE, başlık ALTTA
     align-items: center !important;
     justify-content: center !important;
+    gap: 2px;
     padding: 0 9px !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     background: var(--accent);            // ── cardinal kırmızı outline (her iki mod) ──
@@ -2293,14 +2363,29 @@ body[data-slug$="/index"] {
     overflow: hidden;
     color: inherit;
   }
+  // Mısır hiyeroglifi: başlık üstünde, soluk ikincil renk
+  .page-listing .section-li .desc h3 a .sc-hx-glyph {
+    display: block;
+    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', 'Source Serif 4', serif;
+    font-size: 1.3rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: rgba(58, 48, 38, 0.42);
+    transition: color 180ms ease;
+  }
+  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.82); }
   // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
   .page-listing .section-li:hover { z-index: 10; }
+  // Hover: yalnız renk değişimi + içeri-vuran gölge (shadow-inset-center). Tilt yok.
   .page-listing .section-li .desc h3 a:hover {
-    transform: perspective(900px) rotateX(3deg) rotateY(-3deg) scale(1.07);
     color: #fff !important;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.22));
+    animation: shadow-inset-center .4s cubic-bezier(.25,.46,.45,.94) both;
   }
   .page-listing .section-li .desc h3 a:hover::before { background: var(--accent); }
+}
+@keyframes shadow-inset-center {
+  0%   { box-shadow: inset 0 0 0 0 rgba(0,0,0,0); }
+  100% { box-shadow: inset 0 0 16px 2px rgba(0,0,0,0.45); }
 }
 
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a,
@@ -2319,6 +2404,14 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover::before,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover::before {
   background: var(--accent);
+}
+html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph,
+[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph {
+  color: rgba(216, 205, 184, 0.40);
+}
+html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph,
+[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph {
+  color: rgba(255,255,255,0.85);
 }
 
 // ─── SBB breadcrumb katmanları + chevron (bottom-right) ───
@@ -2609,10 +2702,10 @@ html[saved-theme="dark"] .sc-sbb-tags { border-top-color: rgba(255,255,255,0.08)
   .site-header-title { gap: 0.35rem; }
   .site-header-title .sh-logo { flex: 0 0 2.2rem; width: 2.2rem; height: 2.2rem; }
   .site-header-title .sh-logo svg { width: 2.2rem; height: 2.2rem; }
-  // SERPENTBRAIN logosu mobilde de büyük ama header'ı ezmeyecek ölçüde
-  .site-header-title { height: 4.2rem; }
-  .site-header-title .sh-logo.sh-logo-sb { flex: 0 0 4.6rem; width: 4.6rem; height: auto; }
-  .site-header-title .sh-logo.sh-logo-sb svg { width: auto; height: 3.3rem; }
+  // SERPENTBRAIN logosu mobilde de üstte, makul boyda
+  .site-header-title { height: auto; }
+  .site-header-title .sh-logo.sh-logo-sb { flex: 0 0 auto; width: auto; height: auto; }
+  .site-header-title .sh-logo.sh-logo-sb svg { width: auto; height: 4.4rem; }
   .site-header-title .sh-word { flex-basis: 10.5rem; width: 10.5rem; }
   .curriculum-grid { gap: 8px; }
   .cg-cell { padding: 20px 8px 16px; }

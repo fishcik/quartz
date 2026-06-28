@@ -85,14 +85,15 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     ctx.setTransform(DPR,0,0,DPR,0,0);
   }
 
-  // ── EVIL serpent + brain paleti (temaya uyumlu) ──
+  // ── EVIL serpent + brain paleti — KARANLIK gövde, olivine yalnız sırt/desende ──
+  // (SERPENTBRAIN'deki mürekkep yılanı gibi: kara, parlak, cute değil)
   function palette(){
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
     return dk
-      ? {hi:'96,140,64', body:'58,94,42', belly:'24,42,18', pat:'rgba(10,22,6,0.5)',
-         eye:'255,64,52', tongue:'225,40,40', brain:'150,140,122', gyri:'110,100,84', food:'210,28,32'}
-      : {hi:'118,162,78', body:'74,116,50', belly:'34,58,26', pat:'rgba(26,44,18,0.42)',
-         eye:'235,32,32', tongue:'200,16,46', brain:'112,98,80', gyri:'142,126,106', food:'200,16,46'};
+      ? {hi:'150,196,108', body:'40,50,38', belly:'12,16,12', pat:'rgba(150,196,108,0.55)',
+         eye:'255,52,40', tongue:'225,40,40', brain:'150,140,122', gyri:'110,100,84', food:'210,28,32'}
+      : {hi:'140,186,100', body:'34,42,32', belly:'10,12,10', pat:'rgba(140,186,100,0.5)',
+         eye:'225,28,28', tongue:'200,16,46', brain:'112,98,80', gyri:'142,126,106', food:'200,16,46'};
   }
 
   // ── state ──
@@ -101,15 +102,16 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   var mx=W/2,my=H/2,mIn=false;
   var FOOD=[],MAX_FOOD=6, eatAnim=[];
 
-  // "0" (SERPENTBRAIN logosu) merkezi — ouroboros bunun etrafında döner
-  function zero(){
+  // "0" (SERPENTBRAIN logosu) merkezi — CANVAS-YEREL koordinatta (ox,oy çıkarılır)
+  // ki dönüştürülmüş ata eleman olsa bile ouroboros tam logonun üstünde döner.
+  function zero(ox,oy){
     var z=document.getElementById('sc-404-zero');
-    if(z){var r=z.getBoundingClientRect();if(r.width)return {x:r.left+r.width/2,y:r.top+r.height/2,R:Math.max(r.width,r.height)*0.66};}
+    if(z){var r=z.getBoundingClientRect();if(r.width)return {x:r.left+r.width/2-ox,y:r.top+r.height/2-oy,R:Math.max(r.width,r.height)*0.66};}
     return {x:W/2,y:H*0.42,R:90};
   }
 
-  function initSnake(){
-    seg=[];var c=zero();var N=16;
+  function initSnake(ox,oy){
+    seg=[];var c=zero(ox,oy);var N=16;
     for(var i=0;i<N;i++){var a=-i*0.36;seg.push({x:c.x+Math.cos(a)*c.R,y:c.y+Math.sin(a)*c.R});}
   }
   function snakeRadius(){return SEG_W*0.5+score*0.16;}
@@ -206,20 +208,18 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     ctx.quadraticCurveTo(hr*0.5,hr*1.15,hr*1.7,0);
     ctx.closePath();ctx.fill();
     ctx.lineWidth=1;ctx.strokeStyle='rgba('+col.belly+',0.8)';ctx.stroke();
-    // gözler — kötücül, parlayan, dikey yarık
-    var pul=0.7+0.3*Math.sin(t*3.5);
-    var eyes=[[hr*0.15,-hr*0.52],[hr*0.15,hr*0.52]];
+    // gözler — küçük, kötücül kırmızı, dikey yarık (cute değil; parıltı yok)
+    var pul=0.65+0.35*Math.sin(t*3.5);
+    var eyes=[[hr*0.12,-hr*0.50],[hr*0.12,hr*0.50]];
     for(var e=0;e<2;e++){
       var ex=eyes[e][0],ey=eyes[e][1];
       ctx.save();
-      ctx.shadowColor='rgba('+col.eye+','+pul+')';ctx.shadowBlur=8;
+      ctx.shadowColor='rgba('+col.eye+','+pul+')';ctx.shadowBlur=5;
       ctx.fillStyle='rgba('+col.eye+',1)';
-      ctx.beginPath();ctx.ellipse(ex,ey,hr*0.44,hr*0.34,0,0,6.2832);ctx.fill();
+      ctx.beginPath();ctx.ellipse(ex,ey,hr*0.34,hr*0.26,0,0,6.2832);ctx.fill();
       ctx.restore();
-      ctx.fillStyle='rgba(12,8,4,0.92)';
-      ctx.beginPath();ctx.ellipse(ex+hr*0.08,ey,hr*0.12,hr*0.26,0,0,6.2832);ctx.fill();
-      ctx.fillStyle='rgba(255,255,255,0.7)';
-      ctx.beginPath();ctx.arc(ex-hr*0.12,ey-hr*0.10,hr*0.07,0,6.2832);ctx.fill();
+      ctx.fillStyle='rgba(8,5,3,0.95)';
+      ctx.beginPath();ctx.ellipse(ex+hr*0.05,ey,hr*0.09,hr*0.20,0,0,6.2832);ctx.fill();
     }
     ctx.restore();
     // ── çatal dil (titreyerek) ──
@@ -239,19 +239,19 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     }
   }
 
-  // ── ouroboros: 0'ın etrafında ağır ağır dön ──
-  function ouroStep(){
-    var c=zero();oro+=0.0055;
-    var N=seg.length,wrap=0.92;
+  // ── ouroboros: 0'ın etrafında ağır ağır dön (baş kuyruğa yaklaşır) ──
+  function ouroStep(ox,oy){
+    var c=zero(ox,oy);oro+=0.0055;
+    var N=seg.length,wrap=0.97;
     for(var i=0;i<N;i++){
       var a=oro-i*(6.2832*wrap/N);
       var tx=c.x+Math.cos(a)*c.R,ty=c.y+Math.sin(a)*c.R;
       seg[i].x+=(tx-seg[i].x)*0.10;seg[i].y+=(ty-seg[i].y)*0.10;
     }
   }
-  // ── oyun: imleci takip et, ye, büyü ──
-  function gameStep(col){
-    var tx=mIn?mx:seg[0].x,ty=mIn?my:seg[0].y;
+  // ── oyun: imleci takip et, ye, büyü (imleç canvas-yerel) ──
+  function gameStep(col,ox,oy){
+    var tx=mIn?(mx-ox):seg[0].x,ty=mIn?(my-oy):seg[0].y;
     seg[0].x+=(tx-seg[0].x)*0.18;seg[0].y+=(ty-seg[0].y)*0.18;
     for(var i=1;i<seg.length;i++){
       var dx=seg[i].x-seg[i-1].x,dy=seg[i].y-seg[i-1].y,d=Math.hypot(dx,dy)||0.001;
@@ -266,24 +266,26 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
 
   function draw(){
     window.__sc404Raf=requestAnimationFrame(draw);
-    if(W===0){resize();initSnake();}
+    if(W===0)resize();
+    var crect=cnv.getBoundingClientRect();var ox=crect.left,oy=crect.top;
+    if(seg.length===0)initSnake(ox,oy);
     t+=0.016;
     var col=palette();
     mode=(mIn&&(t-lastMove)<3.2)?'game':'ouro';
     ctx.clearRect(0,0,W,H);
     if(mode==='game'){
-      gameStep(col);
+      gameStep(col,ox,oy);
       for(var i=0;i<FOOD.length;i++){FOOD[i].alpha=Math.min(1,FOOD[i].alpha+0.04);FOOD[i].pulse+=0.02;drawBrain(FOOD[i],col);}
       eatAnim=eatAnim.filter(function(a){a.r+=2.6;a.life-=0.045;if(a.life<=0)return false;ctx.strokeStyle='rgba('+a.col+','+a.life+')';ctx.lineWidth=2;ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,6.2832);ctx.stroke();return true;});
     } else {
       // boşta: beyinleri sönümle, ouroboros'a dön
       for(var i=FOOD.length-1;i>=0;i--){FOOD[i].alpha-=0.05;if(FOOD[i].alpha<=0)FOOD.splice(i,1);else drawBrain(FOOD[i],col);}
-      ouroStep();
+      ouroStep(ox,oy);
     }
     drawSnake(col);
   }
 
-  if(!window.__sc404Raf){resize();initSnake();draw();}
+  if(!window.__sc404Raf){resize();draw();}
   window.addEventListener('resize',function(){resize();},{passive:true});
   window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;mIn=true;lastMove=t;},{passive:true});
   window.addEventListener('mouseleave',function(){mIn=false;});
