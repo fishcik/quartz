@@ -43,16 +43,11 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
       <p class="sc-404-quote" id="sc-404-quote">
         Aradığın şey burada değil. Belki de henüz keşfedilmeyi bekliyor.
       </p>
-      <p class="sc-404-hint" id="sc-404-hint">
-        İmleci gezdir — yılan peşinden gelir, beyinleri yer, büyür. Durunca 0'ın etrafında uyur.
-      </p>
       <div class="sc-404-score" id="sc-404-score">
         <span class="sc-404-score-lbl">Beyin:</span>
         <span id="sc-404-score-val">0</span>
       </div>
-      <a class="sc-404-home" href={baseDir}>
-        <span class="sc-404-home-psi">ψ</span> Bilince geri dön
-      </a>
+      <a class="sc-404-home" href={baseDir}>Bilince geri dön</a>
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -99,8 +94,15 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   // ── state ──
   var SEGLEN=15, SEG_W=10, score=0;
   var seg=[], t=0, mode='ouro', lastMove=-999, oro=0;
-  var mx=W/2,my=H/2,mIn=false;
-  var FOOD=[],MAX_FOOD=6, eatAnim=[];
+  var mx=W/2,my=H/2,mIn=false,tongueT=0;
+  var FOOD=[],MAX_FOOD=2, eatAnim=[];
+  // Beyinler sitenin tüm renklerini kullanır (siyah, cardinal, sepya, olivine, bordo, altın)
+  function brainColors(){
+    var dk=document.documentElement.getAttribute('saved-theme')==='dark';
+    return dk
+      ? ['224,57,47','150,196,108','217,176,131','236,231,221','170,90,60','201,162,72']
+      : ['200,16,46','118,168,72','188,150,108','38,36,32','138,40,52','166,128,58'];
+  }
 
   // "0" (SERPENTBRAIN logosu) merkezi — CANVAS-YEREL koordinatta (ox,oy çıkarılır)
   // ki dönüştürülmüş ata eleman olsa bile ouroboros tam logonun üstünde döner.
@@ -116,16 +118,18 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   }
   function snakeRadius(){return SEG_W*0.5+score*0.16;}
 
-  // ── beyin yiyecekleri ──
+  // ── beyin yiyecekleri (en fazla MAX_FOOD; her biri rastgele site rengi) ──
   function spawnFood(){
     if(FOOD.length>=MAX_FOOD)return;
-    var m=70;var fx=m+Math.random()*(W-2*m),fy=m+Math.random()*(H-2*m);
-    if(seg.length&&Math.hypot(fx-seg[0].x,fy-seg[0].y)<110)return;
-    FOOD.push({x:fx,y:fy,r:12+Math.random()*6,pulse:Math.random()*6.28,alpha:0});
+    var m=80;var fx=m+Math.random()*(W-2*m),fy=m+Math.random()*(H-2*m);
+    if(seg.length&&Math.hypot(fx-seg[0].x,fy-seg[0].y)<140)return;
+    var pal=brainColors();var c=pal[Math.floor(Math.random()*pal.length)];
+    FOOD.push({x:fx,y:fy,r:12+Math.random()*6,pulse:Math.random()*6.28,alpha:0,col:c});
   }
-  function drawBrain(f,col){
+  function drawBrain(f){
     var r=f.r*(0.95+0.05*Math.sin(f.pulse+t*2))*Math.min(1,f.alpha);
     if(r<0.5)return;
+    var c=f.col||'200,16,46';
     ctx.save();ctx.translate(f.x,f.y);ctx.scale(r/60,r/60);
     ctx.lineWidth=2.0/(r/60);ctx.lineCap='round';ctx.lineJoin='round';
     ctx.beginPath();
@@ -134,23 +138,23 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     ctx.bezierCurveTo(8,46,30,46,34,30);ctx.bezierCurveTo(54,30,60,6,46,-6);
     ctx.bezierCurveTo(56,-26,34,-48,8,-42);ctx.bezierCurveTo(6,-46,0,-46,-2,-44);
     ctx.closePath();
-    ctx.fillStyle='rgba('+col.brain+','+(0.14*f.alpha)+')';ctx.fill();
-    ctx.strokeStyle='rgba('+col.brain+','+f.alpha+')';ctx.stroke();
+    ctx.fillStyle='rgba('+c+','+(0.16*f.alpha)+')';ctx.fill();
+    ctx.strokeStyle='rgba('+c+','+f.alpha+')';ctx.stroke();
     ctx.beginPath();ctx.moveTo(1,-42);ctx.lineTo(2,34);ctx.stroke();
-    ctx.strokeStyle='rgba('+col.gyri+','+(f.alpha*0.6)+')';ctx.lineWidth=1.3/(r/60);
+    ctx.strokeStyle='rgba('+c+','+(f.alpha*0.55)+')';ctx.lineWidth=1.3/(r/60);
     var g=[[-30,-20,-18,-12],[-38,2,-24,8],[-26,18,-14,22],[14,-22,28,-14],[18,4,34,8]];
     for(var i=0;i<g.length;i++){ctx.beginPath();ctx.moveTo(g[i][0],g[i][1]);ctx.quadraticCurveTo((g[i][0]+g[i][2])/2,g[i][1]-8,g[i][2],g[i][3]);ctx.stroke();}
     ctx.restore();
   }
-  function checkEat(col){
+  function checkEat(){
     var hr=snakeRadius()+10,hx=seg[0].x,hy=seg[0].y;
     for(var i=FOOD.length-1;i>=0;i--){
       var f=FOOD[i];var dx=hx-f.x,dy=hy-f.y;
       if(dx*dx+dy*dy<(hr+f.r)*(hr+f.r)){
         score++;var sv=document.getElementById('sc-404-score-val');if(sv)sv.textContent=String(score);
-        newQuote();
+        newQuote();tongueT=t;  // yiyince dilini çıkarır
         var last=seg[seg.length-1];for(var j=0;j<5;j++)seg.push({x:last.x,y:last.y});
-        eatAnim.push({x:f.x,y:f.y,r:0,life:1,col:col.food});
+        eatAnim.push({x:f.x,y:f.y,r:0,life:1,col:f.col||'200,16,46'});
         FOOD.splice(i,1);
       }
     }
@@ -222,10 +226,12 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
       ctx.beginPath();ctx.ellipse(ex+hr*0.05,ey,hr*0.09,hr*0.20,0,0,6.2832);ctx.fill();
     }
     ctx.restore();
-    // ── çatal dil (titreyerek) ──
-    var fl=Math.sin(t*5);
-    if(fl>0.3){
-      var f=(fl-0.3)/0.7,t0=hr*1.7,tl2=hr*(1.1+f*1.7);
+    // ── çatal dil: NADİREN kendiliğinden + tıklayınca/yiyince çıkar ──
+    var since=t-tongueT;
+    var flick=since<0.5?Math.sin((1-since/0.5)*1.5708):0;   // tetik sonrası ~0.5s yumuşak
+    var auto=Math.sin(t*0.8); if(auto>0.975)flick=Math.max(flick,(auto-0.975)/0.025);  // çok seyrek
+    if(flick>0.05){
+      var f=flick,t0=hr*1.7,tl2=hr*(1.0+f*1.7);
       var bx=h.x+Math.cos(ang)*t0,by=h.y+Math.sin(ang)*t0;
       var ttx=h.x+Math.cos(ang)*(t0+tl2),tty=h.y+Math.sin(ang)*(t0+tl2);
       var wob=Math.sin(t*9)*1.4;
@@ -260,8 +266,8 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     var m=18;
     if(seg[0].x<m)seg[0].x=m;if(seg[0].x>W-m)seg[0].x=W-m;
     if(seg[0].y<m)seg[0].y=m;if(seg[0].y>H-m)seg[0].y=H-m;
-    if(FOOD.length<MAX_FOOD&&Math.random()<0.02)spawnFood();
-    checkEat(col);
+    if(FOOD.length<MAX_FOOD&&Math.random()<0.012)spawnFood();
+    checkEat();
   }
 
   function draw(){
@@ -275,11 +281,11 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
     ctx.clearRect(0,0,W,H);
     if(mode==='game'){
       gameStep(col,ox,oy);
-      for(var i=0;i<FOOD.length;i++){FOOD[i].alpha=Math.min(1,FOOD[i].alpha+0.04);FOOD[i].pulse+=0.02;drawBrain(FOOD[i],col);}
+      for(var i=0;i<FOOD.length;i++){FOOD[i].alpha=Math.min(1,FOOD[i].alpha+0.04);FOOD[i].pulse+=0.02;drawBrain(FOOD[i]);}
       eatAnim=eatAnim.filter(function(a){a.r+=2.6;a.life-=0.045;if(a.life<=0)return false;ctx.strokeStyle='rgba('+a.col+','+a.life+')';ctx.lineWidth=2;ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,6.2832);ctx.stroke();return true;});
     } else {
       // boşta: beyinleri sönümle, ouroboros'a dön
-      for(var i=FOOD.length-1;i>=0;i--){FOOD[i].alpha-=0.05;if(FOOD[i].alpha<=0)FOOD.splice(i,1);else drawBrain(FOOD[i],col);}
+      for(var i=FOOD.length-1;i>=0;i--){FOOD[i].alpha-=0.05;if(FOOD[i].alpha<=0)FOOD.splice(i,1);else drawBrain(FOOD[i]);}
       ouroStep(ox,oy);
     }
     drawSnake(col);
@@ -289,7 +295,21 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
   window.addEventListener('resize',function(){resize();},{passive:true});
   window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;mIn=true;lastMove=t;},{passive:true});
   window.addEventListener('mouseleave',function(){mIn=false;});
+  window.addEventListener('mousedown',function(){tongueT=t;},{passive:true});  // tıklayınca dil
+  window.addEventListener('touchstart',function(){tongueT=t;},{passive:true});
   window.addEventListener('touchmove',function(e){if(e.touches&&e.touches[0]){mx=e.touches[0].clientX;my=e.touches[0].clientY;mIn=true;lastMove=t;}},{passive:true});
+
+  // ── 404 "0" (SERPENTBRAIN): her yüklemede farklı hover efekti + tıkla→anasayfa ──
+  var zEl=document.getElementById('sc-404-zero');
+  if(zEl){
+    var FX=['sc-fx-lsd','sc-fx-glitch','sc-fx-melt','sc-fx-spin'];
+    var n=0;try{n=parseInt(localStorage.getItem('sc404fx')||'0');}catch(e){}
+    try{localStorage.setItem('sc404fx',String((n+1)%FX.length));}catch(e){}
+    zEl.classList.add(FX[n%FX.length]);
+    zEl.style.cursor='pointer';
+    zEl.setAttribute('title','Anasayfaya dön');
+    zEl.addEventListener('click',function(){window.location.href=${JSON.stringify(baseDir)};});
+  }
 
   // ── Quartz orijinal: büyük/küçük harf URL eşleştirme yönlendirmesi ──
   if (typeof fetchData !== "undefined") {
