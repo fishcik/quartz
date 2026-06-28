@@ -198,8 +198,8 @@ var SC_GLYPHS=[
   ['PSIKOTERAPI NEDIR — PSIKOTERAPI EKOLLERI I','𓋹'],['PSIKOTERAPI EKOLLERI II','𓋹𓋹'],
   ['TERAPININ ZORUNLU VE EKOL ÖTESI BOYUTLARI','𓊪'],
   // Klinik Psikoloji 2
-  ['BAĞIMLILIKLAR','𓎱'],['BILIM FELSEFESI VE ARAŞTIRMA YAKLAŞIMLARI','𓆄'],['BOYUTSAL YAKLAŞIMLAR','𓏣'],
-  ['CINSEL İŞLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI','𓌇'],['DUYGUDURUM BOZUKLUKLARI','𓀠'],['GIRIŞ','𓉐'],
+  ['BAĞIMLILIKLAR','𓆓'],['BILIM FELSEFESI VE ARAŞTIRMA YAKLAŞIMLARI','𓆄'],['BOYUTSAL YAKLAŞIMLAR','𓏣'],
+  ['CINSEL İŞLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI','𓂸'],['DUYGUDURUM BOZUKLUKLARI','𓀠'],['GIRIŞ','𓉐'],
   ['KAYGI BOZUKLUKLARI','𓀉'],['KURAMLAR VE KATEGORIK YAKLAŞIMLAR','𓀗'],
   ['OBSESIF KOMPULSIF BOZUKLUK VE TIKLER','𓀣'],['PSIKOZLAR','𓀡'],
   ['TRAVMA VE TRAVMA SONRASI STRES BOZUKLUĞU','𓀐'],['YEME BOZUKLUKLARI','𓀁'],
@@ -207,7 +207,7 @@ var SC_GLYPHS=[
   ['SAĞLIK DAVRANIŞLARI','𓋹'],['GERI DÜŞÜŞ','𓀒'],['SAĞLIK MODELLERI; BILMEK NEDEN YETMIYOR?','𓀁'],
   ['SAĞLIK PSIKOLOJISI NEDIR VE NEDEN VAR?','𓉐'],
   ['GÜNEŞTEN KORUNMA','𓇳'],['BESLENME PSIKOLOJISI','𓏏'],['FIZIKSEL AKTIVITE','𓂻'],
-  ['SIGARANIN PSIKOLOJISI','𓆑'],['KONDOM KULLANIMI','𓎬'],
+  ['SIGARANIN PSIKOLOJISI','𓆑'],['KONDOM KULLANIMI','𓂺'],
   // Sosyal Psikoloji
   ['BENLIK','𓀀'],['GIRIŞ VE ARAŞTIRMA YÖNTEMLERI','𓉐'],['GRUP DINAMIĞI VE GRUP PERFORMANSI','𓊖'],
   ['KIŞILERARASI ÇEKIM VE YAKIN İLIŞKILER','𓎬'],['PROSOSYAL DAVRANIŞ','𓂠'],['SALDIRGANLIK','𓀜'],
@@ -326,10 +326,14 @@ function ensure(){
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
+    // Geri (tarayıcı geçmişi)
+    var bb=document.createElement('button');bb.type='button';bb.className='sc-toolbtn sc-backbtn';bb.title='Geri';bb.setAttribute('aria-label','Geri');
+    bb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
+    bb.addEventListener('click',function(){if(history.length>1){history.back();}else{location.href='/';}});
     sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
-    sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
+    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
     sbb.appendChild(sbbTools);
     // Clock — lüks kasa + Türkçe tarih + saniyeyi gösteren zarif SERPENT ibresi
     var ticks='';for(var i=0;i<60;i++){var a=i*6*Math.PI/180;var isH=(i%5===0);var r1=isH?38.5:41.5,r2=45;var x1=50+r1*Math.sin(a),y1=50-r1*Math.cos(a),x2=50+r2*Math.sin(a),y2=50-r2*Math.cos(a);ticks+='<line x1="'+x1.toFixed(2)+'" y1="'+y1.toFixed(2)+'" x2="'+x2.toFixed(2)+'" y2="'+y2.toFixed(2)+'" class="sc-tick'+(isH?' sc-tick-h':'')+'"/>';}
@@ -769,6 +773,8 @@ function ensureFooterWave(){
       ctx.lineTo(W,H);ctx.closePath();
       ctx.fillStyle=cs[i];ctx.fill();
     });
+    // 404 sayfasında footer yılanı çizilmez (o yılan, oyuna dönüşen yılanın kendisi)
+    if(document.body.getAttribute('data-slug')==='404')return;
     // ── Dalgaların üstünde süzülen EVIL yılan: kara/ipeksi gövde, olivine sırt parıltısı,
     //    kırmızı yarık göz (cute değil — SERPENTBRAIN'deki mürekkep yılanı gibi). Boy = ekranın 1/3'ü ──
     var bodyLen=Math.max(160,W/3);             // ekran genişliğinin 1/3'ü
@@ -866,17 +872,29 @@ function scSerpentHr(){
     hr.style.display='none';
   });
 }
-// ── Görev 4: Footer'a animasyonlu zarf (mailto:cio@sayko.ch), telif satırının üstünde ──
+// ── Görev: Animasyonlu zarf (mailto:cio@sayko.ch) — sol alt köşede sabit minik buton
+// ("sayfa yukarı" butonunun ayna konumu). Body seviyesinde, oturumda bir kez. ──
 function scFooterMail(){
-  var ft=document.querySelector('footer');if(!ft)return;
-  if(ft.querySelector('.sc-mail-link'))return;
+  if(document.querySelector('.sc-mail-link'))return;
   var a=document.createElement('a');
   a.className='sc-mail-link';a.href='mailto:cio@sayko.ch';a.title='cio@sayko.ch';a.setAttribute('aria-label','E-posta: cio@sayko.ch');
   a.innerHTML='<span class="sc-mail"><span class="animated-mail">'+
     '<span class="body"></span><span class="top-fold"></span><span class="back-fold"></span><span class="left-fold"></span>'+
     '<span class="letter"><span class="letter-border"></span><span class="letter-title"></span><span class="letter-context"></span><span class="letter-stamp"></span></span>'+
     '</span><span class="shadow"></span></span>';
-  ft.appendChild(a);
+  document.body.appendChild(a);
+}
+// ── Görev 3b: Konu makalesinde başlığın üstüne büyük, ortalı hiyeroglif ──
+function scArticleGlyph(){
+  var slug=document.body.getAttribute('data-slug')||'';
+  if(/\\/index$/.test(slug)||slug===''||slug==='index'||slug==='404')return; // yalnız yaprak makaleler
+  var h=document.querySelector('.center .article-title, article .article-title');
+  if(!h||h.getAttribute('data-sc-aglyph'))return;
+  var gl=scGlyphFor(h.textContent||'');
+  if(!gl)return;
+  h.setAttribute('data-sc-aglyph','1');
+  var g=document.createElement('div');g.className='sc-article-glyph';g.setAttribute('aria-hidden','true');g.textContent=gl;
+  if(h.parentNode)h.parentNode.insertBefore(g,h);
 }
 function perNav(){
   // Sayfa değişince SBB kuyruğunu kapat (her sayfaya temiz başla) + sağ kenarı ölç
@@ -974,6 +992,7 @@ function perNav(){
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   scCardTilt();
   scSerpentHr();
+  scArticleGlyph();
   scSbbExtras();
   initHeaderFx();
   syncFooter();

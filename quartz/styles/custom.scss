@@ -1243,15 +1243,15 @@ footer .sc-sign {
 
 // ── Görev 4: Footer animasyonlu zarf (mailto) — telif satırının HEMEN ÜSTÜNDE,
 //    footer çubuğunun üst kenarına yaslı (dalgalar etkilenmez) ──
+// "Sayfa yukarı" (#sc-totop) butonuyla aynı boyut; ekranın SOL ALT köşesi (ayna konum)
 .sc-mail-link {
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% - 8px);
-  transform: translateX(-50%);
-  z-index: 6;
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 9997;
   display: block;
-  width: 82px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   text-decoration: none !important;
   border: none !important;
@@ -1260,8 +1260,8 @@ footer .sc-sign {
 .sc-mail {
   position: absolute;
   left: 50%; top: 50%;
-  transform: translate(-50%, -50%) scale(0.34);
-  width: 200px; height: 170px;
+  transform: translate(-50%, -50%) scale(0.19);
+  width: 200px; height: 150px;
 }
 .sc-mail .animated-mail {
   position: absolute; height: 150px; width: 200px; transition: .4s;
@@ -1306,7 +1306,21 @@ footer .sc-sign {
 }
 .sc-mail-link:hover .animated-mail .letter { height: 180px; }
 .sc-mail-link:hover .shadow { width: 250px; }
-@media (max-width: 800px) { .sc-mail-link { display: none; } }   // mobilde gizle (yer dar)
+
+// ── Görev 3b: Konu makale sayfasında başlığın üstünde büyük, ortalı hiyeroglif ──
+.sc-article-glyph {
+  display: block;
+  text-align: center;
+  font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', serif;
+  font-size: 2.7rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.85;
+  margin: 0.2rem 0 0.5rem;
+  user-select: none;
+  animation: fadeUp 0.5s ease both;
+}
+html[saved-theme="dark"] .sc-article-glyph { color: var(--accent); opacity: 0.9; }
 
 // ─── Scrollbar ───────────────────────────────────
 
@@ -1492,8 +1506,8 @@ body[data-slug="index"] .site-header {
   // auto-fit (scFitHeader) zaten kelimeyi kutuya sığdırdığı için normalde taşma yok.
   .sh-word {
     color: inherit;
-    flex: 0 0 12.5rem;
-    width: 12.5rem;
+    flex: 0 0 auto;              // DİKEY istifte flex-basis YÜKSEKLİK olur → auto (yoksa 12.5rem'lik dev boşluk)
+    width: 12.5rem;             // genişlik sabit kalsın (auto-fit için)
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
@@ -2280,12 +2294,12 @@ body[data-slug$="/index"] {
     flex-wrap: wrap !important;
     // flex-start: kısmi son sıra da soldan hizalanır → boşluk/kopukluk olmaz;
     // blok, max-width + margin auto ile yine ortalanır.
-    justify-content: flex-start !important;
+    justify-content: center !important;
     align-items: flex-start;
     gap: 0 !important;
     list-style: none !important;
     padding: 0 !important;
-    margin: 3rem auto 2.5rem !important;
+    margin: 1.1rem auto 2.2rem !important;
     width: #{$sc-hx-w * $sc-hx-per + $sc-hx-off};
     max-width: 100%;
   }
@@ -2363,15 +2377,19 @@ body[data-slug$="/index"] {
     overflow: hidden;
     color: inherit;
   }
-  // Mısır hiyeroglifi: başlık üstünde, soluk ikincil renk
+  // Mısır hiyeroglifi: altıgenin TEPE noktasına yakın, ortalı, soluk ikincil renk
   .page-listing .section-li .desc h3 a .sc-hx-glyph {
-    display: block;
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', 'Source Serif 4', serif;
     font-size: 1.3rem;
     line-height: 1;
     letter-spacing: 0.02em;
     color: rgba(58, 48, 38, 0.42);
     transition: color 180ms ease;
+    pointer-events: none;
   }
   .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.82); }
   // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
@@ -2578,7 +2596,48 @@ html[saved-theme="dark"] .sc-sbb-backlinks a { color: rgba(236,231,221,0.82); }
     padding: 0 12px 8px !important;
     border: none !important;
     font-size: 0.68rem;
+    // Tablo düzenini düzleştir → etiketler yatay çip olarak sarsın (dikey harf kolonu DEĞİL)
+    .note-properties-table, tbody, .note-properties-row {
+      display: block !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .note-properties-key { display: none !important; }            // "ETİKETLER" zaten summary'de
+    .note-properties-separator { display: none !important; }      // virgül ayraçları gizli
+    .note-properties-value { display: block !important; width: 100% !important; padding: 2px 0 0 !important; }
+    // Asıl çip kabı: etiketler yatay sarar
+    .note-properties-tags {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 5px !important;
+      width: 100% !important;
+    }
+    .note-properties-tags a, .note-properties-tags .tag-link {
+      display: inline-block !important;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
+      overflow-wrap: normal !important;
+      max-width: 100%;
+      background: rgba(200,16,46,0.08);
+      border: 1px solid rgba(200,16,46,0.25) !important;
+      border-radius: 3px;
+      padding: 2px 7px !important;
+      margin: 0 !important;
+      font-size: 0.58rem !important;
+      line-height: 1.35 !important;
+      letter-spacing: 0.02em;
+      color: var(--accent) !important;
+      text-decoration: none !important;
+    }
+    .note-properties-tags a:hover, .note-properties-tags .tag-link:hover {
+      background: var(--accent);
+      color: #fff !important;
+    }
   }
+}
+html[saved-theme="dark"] .sc-sbb-tags .note-properties.sc-sbb-np .note-properties-tags a {
+  background: rgba(224,57,47,0.12);
+  border-color: rgba(224,57,47,0.30) !important;
 }
 html[saved-theme="dark"] .sc-sbb-tags { border-top-color: rgba(255,255,255,0.08); }
 
@@ -2830,14 +2889,14 @@ article.sc-404 {
   width: 100%;
   max-width: 100% !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 0 16vh !important;     // alt boşluk → içerik yukarı kayar (bileşenler yukarıda, yazı ortada)
   text-align: center !important;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.35rem;
 }
 
 // Tam sayfa Snake canvas (arka plan)
@@ -2855,20 +2914,19 @@ article.sc-404 {
 .sc-404-row,
 .sc-404-title,
 .sc-404-quote,
-.sc-404-hint,
 .sc-404-score,
 .sc-404-home {
   position: relative;
   z-index: 10;
 }
 
-// "4 BRAIN 4" satırı
+// "4 [0] 4" satırı — başlıktan biraz daha ayrı, yukarıda
 .sc-404-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0 auto 0.5rem;
+  margin: 0 auto 1.6rem;
   user-select: none;
   pointer-events: none;
 }
@@ -2902,7 +2960,11 @@ article.sc-404 {
   display: block;
   transition: transform 0.3s ease;
 }
-.sc-404-zero:hover svg { animation: sc-lsd 0.9s linear infinite; }
+// Her 404 yüklemesinde JS, 0'a farklı bir sc-fx-* sınıfı verir → 4 dönüşümlü hover efekti
+.sc-404-zero.sc-fx-lsd:hover svg    { animation: sc-lsd 0.9s linear infinite; }
+.sc-404-zero.sc-fx-glitch:hover svg { animation: sc-glitch 0.42s steps(2,end) infinite; }
+.sc-404-zero.sc-fx-melt:hover svg   { animation: sc-melt 1.5s ease-in-out infinite; }
+.sc-404-zero.sc-fx-spin:hover svg   { animation: sc-spin 1.3s ease-in-out infinite; }
 
 // LSD: kromatik sapma + hue dönüşü + nefes alan ölçek
 @keyframes sc-lsd {
@@ -2912,6 +2974,27 @@ article.sc-404 {
   60%  { filter: drop-shadow(0 -4px 0 rgba(0,200,200,.85)) drop-shadow(0 4px 0 rgba(255,40,120,.7)) hue-rotate(220deg); transform: scale(1.10) rotate(-1deg); }
   80%  { filter: drop-shadow(4px 0 0 rgba(120,220,40,.85)) drop-shadow(-4px 0 0 rgba(220,40,40,.7)) hue-rotate(300deg); transform: scale(1.07) rotate(1.5deg); }
   100% { filter: drop-shadow(3px 0 0 rgba(200,16,46,.85)) drop-shadow(-3px 0 0 rgba(40,120,220,.7)) hue-rotate(360deg); transform: scale(1.05) rotate(-1.5deg); }
+}
+// Glitch: hızlı yatay kayma + kanal ayrımı
+@keyframes sc-glitch {
+  0%   { transform: translate(0,0) scale(1.04); filter: drop-shadow(2px 0 0 rgba(200,16,46,.9)) drop-shadow(-2px 0 0 rgba(40,120,220,.8)); }
+  25%  { transform: translate(-3px,1px) scale(1.05); filter: drop-shadow(-5px 0 0 rgba(200,16,46,.9)) drop-shadow(4px 0 0 rgba(0,200,180,.8)); }
+  50%  { transform: translate(3px,-2px) scale(1.04); filter: drop-shadow(4px 0 0 rgba(255,200,0,.9)) drop-shadow(-3px 0 0 rgba(120,40,220,.8)); }
+  75%  { transform: translate(-2px,-1px) scale(1.06); filter: drop-shadow(-3px 0 0 rgba(200,16,46,.9)) drop-shadow(3px 0 0 rgba(40,120,220,.8)); }
+  100% { transform: translate(0,0) scale(1.04); filter: drop-shadow(2px 0 0 rgba(200,16,46,.9)) drop-shadow(-2px 0 0 rgba(40,120,220,.8)); }
+}
+// Melt: dikey gerilme/sıkışma + hafif bulanıklık (eriyor gibi)
+@keyframes sc-melt {
+  0%   { transform: scale(1.04,1.04) skewX(0deg); filter: blur(0); }
+  35%  { transform: scale(1.02,1.13) skewX(3deg); filter: blur(0.5px); }
+  65%  { transform: scale(1.07,0.95) skewX(-3deg); filter: blur(0.2px); }
+  100% { transform: scale(1.04,1.04) skewX(0deg); filter: blur(0); }
+}
+// Spin: 3B Y-ekseni dönüşü
+@keyframes sc-spin {
+  0%   { transform: perspective(420px) rotateY(0deg) scale(1.04); }
+  50%  { transform: perspective(420px) rotateY(180deg) scale(1.13); }
+  100% { transform: perspective(420px) rotateY(360deg) scale(1.04); }
 }
 
 @media (max-width: 600px) {
@@ -2941,16 +3024,6 @@ article.sc-404 {
   max-width: 30rem;
   line-height: 1.5;
   transition: opacity 220ms ease;
-}
-
-.sc-404-hint {
-  font-family: 'Source Serif 4', serif;
-  font-size: 0.68rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--fg-3) !important;
-  margin: 0 auto 0.8rem !important;
-  max-width: 28rem;
 }
 
 // Skor sayacı
