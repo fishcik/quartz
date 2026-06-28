@@ -105,7 +105,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -157,6 +157,81 @@ var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 260 20" fill="none
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
 var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
+// ── Görev 8: Konu hex'lerine Mısır hiyeroglifi — başlık üstünde, soluk ikincil renk ──
+// Eşleştirme başlık metniyle (Türkçe-ASCII fold) yapılır; ardışık konular (I/II/III)
+// aynı glifi tekrarlar. Önce TAM eşleşme, yoksa sondaki sayı ayrılıp temel glif tekrar.
+var SC_GLYPHS=[
+  // Bilimsel Çalışma Yöntemleri
+  ['ARAŞTIRMA DESENLERI I','𓊖'],['ARAŞTIRMA DESENLERI II','𓊖𓊖'],['ARAŞTIRMA ETIĞI','𓆄'],
+  ['ARAŞTIRMA SÜRECI, ARAŞTIRMA SORULARI VE HIPOTEZLER','𓀁'],['BULGULARININ YAYIMLANMASI VE BILIM ETIĞI','𓏞'],
+  ['GIRIŞ — AMPIRIK BIR BILIM OLARAK PSIKOLOJI','𓉐'],['LITERATÜR TARAMASI VE BILIMSEL METIN FORMATLARI','𓏛'],
+  ['VERI TOPLAMA YÖNTEMLERI I','𓎟'],['VERI TOPLAMA YÖNTEMLERI II','𓎟𓎟'],['ÖRNEKLEM SEÇIMI','𓂧'],
+  ['İSTATISTIKSEL VE İÇERIKSEL ANLAMLILIK','𓍝'],
+  // Biliş Psikolojisi 1
+  ['GÖRSEL KORTEKS — NESNELER VE SAHNELER','𓁹'],['DERI DUYULARI VE KIMYASAL DUYULAR','𓂝'],
+  ['GIRIŞ — ALGI, DUYU FIZYOLOJISI, GÖZ VE RETINA','𓉐'],['GÖRSEL DIKKAT VE EYLEM','𓂀'],['HAREKET ALGISI','𓂻'],
+  ['RENK ALGISI, DERINLIK VE BÜYÜKLÜK ALGISI','𓁺'],['İŞITME — ÇEVRE, MÜZIK VE KONUŞMA ALGISI','𓄔'],
+  // Biyolojik Psikoloji 2
+  ['BEYIN HASARI VE NÖROPLASTISITE','𓁶'],['BIYOPSIKOLOJININ DIĞER ARAŞTIRMA YÖNTEMLERI','𓏞'],['DENGE DUYUSU','𓍝'],
+  ['DUYGU, STRES VE SAĞLIĞIN BIYOPSIKOLOJISI','𓄣'],['LATERALIZASYON, DIL VE AYRIK BEYIN','𓄓'],
+  ['MADDE KULLANIMI, BAĞIMLILIK VE ÖDÜL SISTEMI','𓎱'],['NÖROPSIKOLOJIK TESTLER I','𓍼'],['NÖROPSIKOLOJIK TESTLER II','𓍼𓍼'],
+  ['PSIKIYATRIK BOZUKLUKLARIN BIYOPSIKOLOJISI','𓀿'],['UYKU, RÜYA VE SIRKADIYEN RITIMLER','𓇰'],
+  ['ÖĞRENME, BELLEK VE AMNEZI','𓂉'],['İŞITME','𓄕'],
+  // Gelişim Psikolojisi 1
+  ['GIRIŞ','𓉐'],['ALGI','𓁹'],['BILIŞ I','𓀁'],['BILIŞ II','𓀁𓀁'],['BIYOLOJI VE DAVRANIŞ','𓆣'],['DIL GELIŞIMI','𓂋'],
+  ['DOĞUM ÖNCESI GELIŞIM, DOĞUM VE YENIDOĞAN','𓁒'],['GELIŞIM PSIKOLOJISININ KURAMLARI','𓀗'],
+  ['GELIŞIM PSIKOLOJISININ YÖNTEMLERI','𓏞'],['MOTOR GELIŞIM','𓂻'],['OKUL BAŞARISI','𓀋'],['ZEKÂ','𓁶'],
+  // Gelişim Psikolojisi 2
+  ['AHLAK GELIŞIMI','𓆄'],['AILE','𓉐'],['AKRAN İLIŞKILERI','𓀍'],['BAĞLANMA','𓎬'],['CINSIYET GELIŞIMI','𓁐'],
+  ['DUYGUSAL GELIŞIM','𓄣'],['GELIŞIMSEL SAPMALAR','𓀒'],['KIŞILIK VE BENLIK KAVRAMI','𓀀'],
+  ['MOTIVASYON VE EYLEM DÜZENLEMESI','𓀤'],['MÜDAHALE PROGRAMLARI','𓂠'],['SOSYAL GELIŞIM','𓊖'],
+  // İstatistik 1
+  ['BETIMSEL İSTATISTIK I','𓏤'],['BETIMSEL İSTATISTIK II','𓏤𓏤'],['BETIMSEL İSTATISTIK III','𓏤𓏤𓏤'],
+  ['GRUP KARŞILAŞTIRMALARI I','𓂓'],['GRUP KARŞILAŞTIRMALARI II','𓂓𓂓'],
+  ['OLASILIK KURAMI I','𓋳'],['OLASILIK KURAMI II','𓋳𓋳'],['OLASILIK KURAMI III','𓋳𓋳𓋳'],
+  ['ÇIKARIMSAL İSTATISTIK I','𓀞'],['ÇIKARIMSAL İSTATISTIK II','𓀞𓀞'],['İSTATISTIĞE NEDEN İHTIYAÇ DUYARIZ','𓍝'],
+  // Klinik Psikoloji 1
+  ['ARAŞTIRMA YÖNTEMLERI VE KANITA DAYALI TERAPILER','𓏛'],['BENLIK — KAVRAMLAR VE ÖZ-ŞEFKAT','𓀀'],
+  ['BILIŞ — DÜŞÜNCE VE DIL','𓇌'],['DAVRANIŞ — ŞEKILLENDIRME VE KOŞULLU PEKIŞTIRME','𓂻'],
+  ['DEĞERLER VE KABUL VE KARARLILIK TERAPISI (ACT)','𓆄'],['DIKKAT EĞITIMI VE FARKINDALIK','𓂀'],
+  ['MARUZ BIRAKMA VE DUYGULAR','𓀢'],['MOTIVASYON VE MOTIVASYONEL GÖRÜŞME','𓀊'],
+  ['PSIKOTERAPI NEDIR — PSIKOTERAPI EKOLLERI I','𓋹'],['PSIKOTERAPI EKOLLERI II','𓋹𓋹'],
+  ['TERAPININ ZORUNLU VE EKOL ÖTESI BOYUTLARI','𓊪'],
+  // Klinik Psikoloji 2
+  ['BAĞIMLILIKLAR','𓎱'],['BILIM FELSEFESI VE ARAŞTIRMA YAKLAŞIMLARI','𓆄'],['BOYUTSAL YAKLAŞIMLAR','𓏣'],
+  ['CINSEL İŞLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI','𓌇'],['DUYGUDURUM BOZUKLUKLARI','𓀠'],['GIRIŞ','𓉐'],
+  ['KAYGI BOZUKLUKLARI','𓀉'],['KURAMLAR VE KATEGORIK YAKLAŞIMLAR','𓀗'],
+  ['OBSESIF KOMPULSIF BOZUKLUK VE TIKLER','𓀣'],['PSIKOZLAR','𓀡'],
+  ['TRAVMA VE TRAVMA SONRASI STRES BOZUKLUĞU','𓀐'],['YEME BOZUKLUKLARI','𓀁'],
+  // Sağlık Psikolojisi ve Davranışsal Tıp
+  ['SAĞLIK DAVRANIŞLARI','𓋹'],['GERI DÜŞÜŞ','𓀒'],['SAĞLIK MODELLERI; BILMEK NEDEN YETMIYOR?','𓀁'],
+  ['SAĞLIK PSIKOLOJISI NEDIR VE NEDEN VAR?','𓉐'],
+  ['GÜNEŞTEN KORUNMA','𓇳'],['BESLENME PSIKOLOJISI','𓏏'],['FIZIKSEL AKTIVITE','𓂻'],
+  ['SIGARANIN PSIKOLOJISI','𓆑'],['KONDOM KULLANIMI','𓎬'],
+  // Sosyal Psikoloji
+  ['BENLIK','𓀀'],['GIRIŞ VE ARAŞTIRMA YÖNTEMLERI','𓉐'],['GRUP DINAMIĞI VE GRUP PERFORMANSI','𓊖'],
+  ['KIŞILERARASI ÇEKIM VE YAKIN İLIŞKILER','𓎬'],['PROSOSYAL DAVRANIŞ','𓂠'],['SALDIRGANLIK','𓀜'],
+  ['SOSYAL ALGI VE ATIF','𓁷'],['SOSYAL BILIŞ','𓇌'],['SOSYAL ETKI','𓋾'],
+  ['SOSYAL PSIKOLOJI VE KÜLTÜREL FARKLILIKLAR','𓈊'],['TUTUMLAR VE TUTUM DEĞIŞIMI','𓀣'],
+  ['ÖNYARGI VE GRUPLAR ARASI İLIŞKILER','𓈎']
+];
+function scFold(s){
+  s=(s||'').toUpperCase();
+  s=s.replace(/İ/g,'I').replace(/Ş/g,'S').replace(/Ç/g,'C').replace(/Ğ/g,'G').replace(/Ü/g,'U').replace(/Ö/g,'O');
+  return s.replace(/[^A-Z0-9 ]/g,' ').replace(/\\s+/g,' ').trim();
+}
+var SC_GLYPH_FULL={},SC_GLYPH_BASE={};
+SC_GLYPHS.forEach(function(e){
+  var f=scFold(e[0]);if(!SC_GLYPH_FULL[f])SC_GLYPH_FULL[f]=e[1];
+  if(Array.from(e[1]).length===1){var m=f.match(/^(.*?)\\s+(III|II|I|3|2|1)$/);var base=m?m[1]:f;if(!SC_GLYPH_BASE[base])SC_GLYPH_BASE[base]=e[1];}
+});
+function scGlyphFor(title){
+  var f=scFold(title);
+  if(SC_GLYPH_FULL[f])return SC_GLYPH_FULL[f];
+  var m=f.match(/^(.*?)\\s+(III|II|I|3|2|1)$/);
+  if(m){var base=m[1],c=({I:1,II:2,III:3,'1':1,'2':2,'3':3})[m[2]],g=SC_GLYPH_BASE[base];if(g){var o='';for(var i=0;i<c;i++)o+=g;return o;}}
+  return '';
+}
 // ── Otomatik tema: Luzern gün doğumu/batımına göre (manuel seçim oturum boyunca öncelikli) ──
 function scAutoTheme(){
   try{
@@ -266,8 +341,8 @@ function ensure(){
       '</defs>'+
       '<circle cx="50" cy="50" r="49" class="sc-bezel"/>'+
       '<circle cx="50" cy="50" r="46.2" class="sc-face"/>'+ticks+
-      '<text x="50" y="30" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text>'+
-      '<text id="sc-date-txt" x="50" y="72" class="sc-date-text" text-anchor="middle" font-size="6.4">—</text>'+
+      '<text id="sc-date-txt" x="50" y="32" class="sc-date-text" text-anchor="middle" font-size="6.4">—</text>'+
+      '<text x="50" y="74" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text>'+
       '<line id="sc-h" x1="50" y1="50" x2="50" y2="30" class="sc-hand sc-hand-h"/>'+
       '<line id="sc-m" x1="50" y1="50" x2="50" y2="17" class="sc-hand sc-hand-m"/>'+
       '<g id="sc-s">'+
@@ -406,10 +481,16 @@ function scFitHex(){
   links.forEach(function(a){
     var lbl=a.querySelector('.sc-hx-label');
     if(!lbl){lbl=document.createElement('span');lbl.className='sc-hx-label';lbl.textContent=(a.textContent||'').trim();a.textContent='';a.appendChild(lbl);}
+    // Mısır hiyeroglifi: başlığın üstüne bir kez ekle (başlık metninden eşleştir)
+    if(!a.querySelector('.sc-hx-glyph')){
+      var gl=scGlyphFor(lbl.textContent||'');
+      if(gl){var g=document.createElement('span');g.className='sc-hx-glyph';g.setAttribute('aria-hidden','true');g.textContent=gl;a.insertBefore(g,lbl);}
+    }
     var li=a.closest('.section-li');if(!li)return;
     var H=li.clientHeight||152,W=li.clientWidth||132;
-    var maxH=H*0.52,maxW=W-18;
-    var fs=12;lbl.style.lineHeight='1.18';lbl.style.fontSize=fs+'px';
+    var hasG=!!a.querySelector('.sc-hx-glyph');
+    var maxH=H*(hasG?0.44:0.54),maxW=W-18;
+    var fs=12;lbl.style.lineHeight='1.16';lbl.style.fontSize=fs+'px';
     var guard=0;
     while((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>6.5&&guard<40){fs-=0.5;lbl.style.fontSize=fs+'px';guard++;}
   });
@@ -603,31 +684,8 @@ function scCardTilt(){
     c.addEventListener('mouseleave',function(){c.style.transform='';if(ic)ic.style.transform='';if(nm)nm.style.textShadow='';});
   });
 }
-// ── Görev 7: Konu hex'lerine BELİRGİN imleç-güdümlü 3D tilt (yalnız masaüstü) ──
-// (Statik CSS :hover'dan ayrışsın diye güçlü açı + imleç yönüne kayan derinlik
-// gölgesi. Kırmızı kromatik gölge kırmızı hover zemininde görünmediğinden,
-// label'a yöne göre koyu gölge veriyoruz → her iki durumda da görünür.)
-function scHexTilt(){
-  if(window.innerWidth<800)return;
-  document.querySelectorAll('.page-listing .section-li .desc h3 a').forEach(function(a){
-    if(a.getAttribute('data-sc-hex'))return;a.setAttribute('data-sc-hex','1');
-    var li=a.closest('.section-li');
-    a.addEventListener('mousemove',function(e){
-      var r=a.getBoundingClientRect();
-      var px=(e.clientX-r.left)/r.width-0.5,py=(e.clientY-r.top)/r.height-0.5;
-      a.style.transform='perspective(560px) rotateX('+(-py*18).toFixed(2)+'deg) rotateY('+(px*18).toFixed(2)+'deg) scale(1.13)';
-      a.style.filter='drop-shadow('+(px*10).toFixed(1)+'px '+(py*10+5).toFixed(1)+'px 12px rgba(0,0,0,0.30))';
-      var lbl=a.querySelector('.sc-hx-label');
-      if(lbl)lbl.style.textShadow=(px*3).toFixed(1)+'px '+(py*3).toFixed(1)+'px 2px rgba(0,0,0,0.40)';
-      if(li)li.style.zIndex='30';
-    });
-    a.addEventListener('mouseleave',function(){
-      a.style.transform='';a.style.filter='';
-      var lbl=a.querySelector('.sc-hx-label');if(lbl)lbl.style.textShadow='';
-      if(li)li.style.zIndex='';
-    });
-  });
-}
+// ── Görev 7 (revize): Konu hex hover efekti artık tamamen CSS — yalnız renk
+// değişimi + shadow-inset-center animasyonu. JS tilt KALDIRILDI. ──
 // ── Görev 8: Backlinks + Etiketler'i SBB-kutusuna entegre et ──
 // Menüden (sc-bclayers) sonra ince separatör + "Alakalı yazılar:" + backlinks;
 // en altta "Etiketler" dropdown (varsayılan kapalı). Her nav'da yeniden kurulur.
@@ -711,27 +769,27 @@ function ensureFooterWave(){
       ctx.lineTo(W,H);ctx.closePath();
       ctx.fillStyle=cs[i];ctx.fill();
     });
-    // ── Dalgaların üstünde süzülen GERÇEKÇİ yılan: tek parça dolgulu, ipeksi gövde ──
-    var bodyLen=Math.min(210,W*0.36);          // kısa — sayfayı kaplamaz
+    // ── Dalgaların üstünde süzülen EVIL yılan: kara/ipeksi gövde, olivine sırt parıltısı,
+    //    kırmızı yarık göz (cute değil — SERPENTBRAIN'deki mürekkep yılanı gibi). Boy = ekranın 1/3'ü ──
+    var bodyLen=Math.max(160,W/3);             // ekran genişliğinin 1/3'ü
     var spanX=W+bodyLen+40;
-    if(!snakeInit){snakePhase=W*0.28+bodyLen+20;snakeInit=true;}  // ilk karede ekranda başla
+    if(!snakeInit){snakePhase=W*0.22+bodyLen+20;snakeInit=true;}  // ilk karede ekranda başla
     snakePhase+=dt*26;                         // yavaş, akışkan ama görünür
-    var headX=(snakePhase%spanX)-bodyLen-20;   // sol dış → sağ dış, kısa boşluk
+    var headX=(snakePhase%spanX)-bodyLen-20;   // sol dış → sağ dış
     var waveF=0.021, wavePh=snakePhase*0.013;
     var baseY=H*0.42, amp2=Math.min(H*0.19,9);
     function cyAt(x){return baseY+Math.sin(x*waveF+wavePh)*amp2+Math.sin(x*waveF*2.3+wavePh*1.5)*amp2*0.26;}
-    // olivine (#91c66c) paleti — temaya uyumlu
-    var olivine   =dk?'rgba(124,178,86,0.94)':'rgba(145,198,108,0.95)';
-    var olivineHi =dk?'rgba(158,206,124,0.96)':'rgba(184,224,152,0.98)';
-    var olivineD  =dk?'rgba(80,124,52,0.95)':'rgba(104,156,70,0.96)';
-    var olivinePat=dk?'rgba(54,86,34,0.42)':'rgba(78,116,48,0.34)';
-    var demonY    =dk?'rgba(255,224,60,1)':'rgba(255,208,18,1)';
-    var tongueR   ='rgba(200,16,46,0.95)';
-    var NB=50;
-    function radAt(s){var maxR=Math.min(6.2,H*0.15);if(s<0.10)return Math.max(0.5,maxR*(s/0.10));return Math.max(0.6,maxR*(0.82+0.18*Math.sin(s*3.14159)));}
+    // KARANLIK gövde + olivine sırt parıltısı (temaya uyumlu)
+    var snHi  =dk?'rgba(150,196,108,0.95)':'rgba(140,186,100,0.95)';  // olivine sırt
+    var snBody=dk?'rgba(42,52,40,0.96)':'rgba(34,42,32,0.96)';        // kara gövde
+    var snBel =dk?'rgba(14,18,14,0.96)':'rgba(10,12,10,0.96)';        // karın ~ siyah
+    var snPat =dk?'rgba(150,196,108,0.55)':'rgba(140,186,100,0.5)';   // olivine desen
+    var eyeR  =dk?'rgba(255,52,40,1)':'rgba(225,28,28,1)';            // kötücül kırmızı göz
+    var tongueR='rgba(200,16,46,0.95)';
+    var NB=54;
+    function radAt(s){var maxR=Math.min(6.0,H*0.15);if(s<0.10)return Math.max(0.5,maxR*(s/0.10));return Math.max(0.6,maxR*(0.82+0.18*Math.sin(s*3.14159)));}
     // merkez çizgi noktaları (kuyruk s=0 → baş s=1)
     var P=[];for(var i=0;i<=NB;i++){var s=i/NB;var x=headX-bodyLen*(1-s);P.push({x:x,y:cyAt(x),s:s});}
-    // kenar şeritleri (normal yönünde)
     var top=[],bot=[];
     for(var i=0;i<=NB;i++){
       var pa=P[Math.max(0,i-1)],pb=P[Math.min(NB,i+1)];
@@ -740,47 +798,50 @@ function ensureFooterWave(){
       top.push([P[i].x+nx*r,P[i].y+ny*r]);bot.push([P[i].x-nx*r,P[i].y-ny*r]);
     }
     ctx.lineCap='round';ctx.lineJoin='round';
-    // dolgulu gövde (tek parça, yumuşak)
     ctx.beginPath();ctx.moveTo(top[0][0],top[0][1]);
     for(var i=1;i<=NB;i++)ctx.lineTo(top[i][0],top[i][1]);
     for(var i=NB;i>=0;i--)ctx.lineTo(bot[i][0],bot[i][1]);
     ctx.closePath();
     var bgrad=ctx.createLinearGradient(0,baseY-11,0,baseY+11);
-    bgrad.addColorStop(0,olivineHi);bgrad.addColorStop(0.5,olivine);bgrad.addColorStop(1,olivineD);
+    bgrad.addColorStop(0,snHi);bgrad.addColorStop(0.26,snBody);bgrad.addColorStop(1,snBel);
     ctx.fillStyle=bgrad;ctx.fill();
-    // sırt deseni: seyrek, ince eşkenar lekeler (mekanik değil, organik)
-    ctx.fillStyle=olivinePat;
+    // sırt deseni: seyrek olivine eşkenar lekeler
+    ctx.fillStyle=snPat;
     for(var i=6;i<NB-3;i+=3){
-      var p=P[i],rr=radAt(p.s)*0.46;
+      var p=P[i],rr=radAt(p.s)*0.42;
       var pa=P[i-1],pb=P[i+1];var aa=Math.atan2(pb.y-pa.y,pb.x-pa.x);
       ctx.save();ctx.translate(p.x,p.y);ctx.rotate(aa);
-      ctx.beginPath();ctx.moveTo(0,-rr);ctx.lineTo(rr*1.1,0);ctx.lineTo(0,rr);ctx.lineTo(-rr*1.1,0);ctx.closePath();ctx.fill();
+      ctx.beginPath();ctx.moveTo(0,-rr);ctx.lineTo(rr*1.05,0);ctx.lineTo(0,rr);ctx.lineTo(-rr*1.05,0);ctx.closePath();ctx.fill();
       ctx.restore();
     }
-    // ── baş ──
+    // ── baş (sivri, kara) ──
     var hp=P[NB],pa=P[NB-1];
     var ang=Math.atan2(hp.y-pa.y,hp.x-pa.x);
-    var hr=radAt(1)*1.12+1.3;
+    var hr=radAt(1)*1.1+1.3;
     ctx.save();ctx.translate(hp.x,hp.y);ctx.rotate(ang);
     var hgrad=ctx.createLinearGradient(0,-hr,0,hr);
-    hgrad.addColorStop(0,olivineHi);hgrad.addColorStop(1,olivineD);
+    hgrad.addColorStop(0,snHi);hgrad.addColorStop(0.5,snBody);hgrad.addColorStop(1,snBel);
     ctx.fillStyle=hgrad;
-    ctx.beginPath();ctx.ellipse(0,0,hr*1.7,hr,0,0,6.2832);ctx.fill();
-    ctx.lineWidth=0.7;ctx.strokeStyle=olivineD;ctx.stroke();
-    // göz: demon-yellow + dikey yarık göz bebeği + parıltı
-    var ex=hr*0.30,ey=-hr*0.52;
-    ctx.fillStyle=demonY;
-    ctx.beginPath();ctx.ellipse(ex,ey,hr*0.46,hr*0.36,0,0,6.2832);ctx.fill();
-    ctx.fillStyle='rgba(18,14,6,0.92)';
-    ctx.beginPath();ctx.ellipse(ex+hr*0.04,ey,hr*0.11,hr*0.30,0,0,6.2832);ctx.fill();
-    ctx.fillStyle='rgba(255,255,255,0.85)';
-    ctx.beginPath();ctx.arc(ex-hr*0.14,ey-hr*0.12,hr*0.07,0,6.2832);ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(hr*1.85,0);
+    ctx.quadraticCurveTo(hr*0.5,-hr*1.1,-hr*0.9,-hr*0.8);
+    ctx.quadraticCurveTo(-hr*1.15,0,-hr*0.9,hr*0.8);
+    ctx.quadraticCurveTo(hr*0.5,hr*1.1,hr*1.85,0);
+    ctx.closePath();ctx.fill();
+    // göz: küçük, kötücül kırmızı, dikey yarık (parıltılı)
+    var ex=hr*0.25,ey=-hr*0.50;
+    ctx.save();ctx.shadowColor=eyeR;ctx.shadowBlur=4;
+    ctx.fillStyle=eyeR;
+    ctx.beginPath();ctx.ellipse(ex,ey,hr*0.36,hr*0.28,0,0,6.2832);ctx.fill();
+    ctx.restore();
+    ctx.fillStyle='rgba(10,6,4,0.95)';
+    ctx.beginPath();ctx.ellipse(ex+hr*0.04,ey,hr*0.09,hr*0.22,0,0,6.2832);ctx.fill();
     ctx.restore();
     // ── çatal dil (ara sıra titreyerek çıkar) ──
     var flick=Math.sin(snakePhase*0.22);
     if(flick>0.2){
       var f=(flick-0.2)/0.8;
-      var t0=hr*1.6,tlen=hr*(1.0+f*1.6);
+      var t0=hr*1.75,tlen=hr*(1.0+f*1.6);
       var bx=hp.x+Math.cos(ang)*t0,by=hp.y+Math.sin(ang)*t0;
       var ttx=hp.x+Math.cos(ang)*(t0+tlen),tty=hp.y+Math.sin(ang)*(t0+tlen);
       var wob=Math.sin(snakePhase*3)*1.1;
@@ -804,6 +865,18 @@ function scSerpentHr(){
     if(hr.parentNode)hr.parentNode.insertBefore(w,hr);
     hr.style.display='none';
   });
+}
+// ── Görev 4: Footer'a animasyonlu zarf (mailto:cio@sayko.ch), telif satırının üstünde ──
+function scFooterMail(){
+  var ft=document.querySelector('footer');if(!ft)return;
+  if(ft.querySelector('.sc-mail-link'))return;
+  var a=document.createElement('a');
+  a.className='sc-mail-link';a.href='mailto:cio@sayko.ch';a.title='cio@sayko.ch';a.setAttribute('aria-label','E-posta: cio@sayko.ch');
+  a.innerHTML='<span class="sc-mail"><span class="animated-mail">'+
+    '<span class="body"></span><span class="top-fold"></span><span class="back-fold"></span><span class="left-fold"></span>'+
+    '<span class="letter"><span class="letter-border"></span><span class="letter-title"></span><span class="letter-context"></span><span class="letter-stamp"></span></span>'+
+    '</span><span class="shadow"></span></span>';
+  ft.appendChild(a);
 }
 function perNav(){
   // Sayfa değişince SBB kuyruğunu kapat (her sayfaya temiz başla) + sağ kenarı ölç
@@ -900,12 +973,12 @@ function perNav(){
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   scCardTilt();
-  scHexTilt();
   scSerpentHr();
   scSbbExtras();
   initHeaderFx();
   syncFooter();
   ensureFooterWave();
+  scFooterMail();
 }
 function init(){ensure();perNav();}
 document.addEventListener('DOMContentLoaded',init);
