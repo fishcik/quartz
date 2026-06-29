@@ -1,3 +1,3 @@
 ---
-title: Klinik Psikoloji 2
+title: Klinik Psikoloji 1
 ---
