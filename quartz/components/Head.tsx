@@ -36,6 +36,7 @@ function readSvg(rel: string): string {
 
 // Build-time: ikon + logo SVG'lerini oku, JS'e gömülecek veriyi hazırla
 const SC_LOGO_SVG = readSvg("quartz/static/logo-symbol.svg")
+const SC_SB_SVG = readSvg("quartz/static/serpentbrain.svg")
 const SC_GRID_DATA = SC_COURSES.map((c) => ({
   n: c.n,
   name: c.name,
@@ -104,7 +105,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -150,9 +151,118 @@ export default (() => {
 var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
+var SC_SB=${JSON.stringify(SC_SB_SVG)};
+// Gerçekçi yılan ayraç: S-kıvrımlı gövde + oval baş + göz + çatal dil
+var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 260 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 C14 4 24 16 38 10 C52 4 62 16 78 10 C94 4 106 16 124 10 C142 4 154 16 172 10 C188 4 200 16 214 10 C226 5 234 8 238 10" stroke-width="2.2"/><ellipse cx="245" cy="10" rx="7" ry="4.5" stroke-width="1.8"/><circle cx="248" cy="8.5" r="0.9" fill="currentColor" stroke="none"/><path d="M252 10 L257 7.5 M252 10 L257 12.5" stroke-width="1.1"/></svg>';
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
 var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
+// ── Görev 8: Konu hex'lerine Mısır hiyeroglifi — başlık üstünde, soluk ikincil renk ──
+// Eşleştirme başlık metniyle (Türkçe-ASCII fold) yapılır; ardışık konular (I/II/III)
+// aynı glifi tekrarlar. Önce TAM eşleşme, yoksa sondaki sayı ayrılıp temel glif tekrar.
+var SC_GLYPHS=[
+  // Bilimsel Çalışma Yöntemleri
+  ['ARAŞTIRMA DESENLERI I','𓊖'],['ARAŞTIRMA DESENLERI II','𓊖𓊖'],['ARAŞTIRMA ETIĞI','𓆄'],
+  ['ARAŞTIRMA SÜRECI, ARAŞTIRMA SORULARI VE HIPOTEZLER','𓀁'],['BULGULARININ YAYIMLANMASI VE BILIM ETIĞI','𓏞'],
+  ['GIRIŞ — AMPIRIK BIR BILIM OLARAK PSIKOLOJI','𓉐'],['LITERATÜR TARAMASI VE BILIMSEL METIN FORMATLARI','𓏛'],
+  ['VERI TOPLAMA YÖNTEMLERI I','𓎟'],['VERI TOPLAMA YÖNTEMLERI II','𓎟𓎟'],['ÖRNEKLEM SEÇIMI','𓂧'],
+  ['İSTATISTIKSEL VE İÇERIKSEL ANLAMLILIK','𓍝'],
+  // Biliş Psikolojisi 1
+  ['GÖRSEL KORTEKS — NESNELER VE SAHNELER','𓁹'],['DERI DUYULARI VE KIMYASAL DUYULAR','𓂝'],
+  ['GIRIŞ — ALGI, DUYU FIZYOLOJISI, GÖZ VE RETINA','𓉐'],['GÖRSEL DIKKAT VE EYLEM','𓂀'],['HAREKET ALGISI','𓂻'],
+  ['RENK ALGISI, DERINLIK VE BÜYÜKLÜK ALGISI','𓁺'],['İŞITME — ÇEVRE, MÜZIK VE KONUŞMA ALGISI','𓄔'],
+  // Biyolojik Psikoloji 2
+  ['BEYIN HASARI VE NÖROPLASTISITE','𓁶'],['BIYOPSIKOLOJININ DIĞER ARAŞTIRMA YÖNTEMLERI','𓏞'],['DENGE DUYUSU','𓍝'],
+  ['DUYGU, STRES VE SAĞLIĞIN BIYOPSIKOLOJISI','𓄣'],['LATERALIZASYON, DIL VE AYRIK BEYIN','𓄓'],
+  ['MADDE KULLANIMI, BAĞIMLILIK VE ÖDÜL SISTEMI','𓎱'],['NÖROPSIKOLOJIK TESTLER I','𓍼'],['NÖROPSIKOLOJIK TESTLER II','𓍼𓍼'],
+  ['PSIKIYATRIK BOZUKLUKLARIN BIYOPSIKOLOJISI','𓀿'],['UYKU, RÜYA VE SIRKADIYEN RITIMLER','𓇰'],
+  ['ÖĞRENME, BELLEK VE AMNEZI','𓂉'],['İŞITME','𓄕'],
+  // Gelişim Psikolojisi 1
+  ['GIRIŞ','𓉐'],['ALGI','𓁹'],['BILIŞ I','𓀁'],['BILIŞ II','𓀁𓀁'],['BIYOLOJI VE DAVRANIŞ','𓆣'],['DIL GELIŞIMI','𓂋'],
+  ['DOĞUM ÖNCESI GELIŞIM, DOĞUM VE YENIDOĞAN','𓁒'],['GELIŞIM PSIKOLOJISININ KURAMLARI','𓀗'],
+  ['GELIŞIM PSIKOLOJISININ YÖNTEMLERI','𓏞'],['MOTOR GELIŞIM','𓂻'],['OKUL BAŞARISI','𓀋'],['ZEKÂ','𓁶'],
+  // Gelişim Psikolojisi 2
+  ['AHLAK GELIŞIMI','𓆄'],['AILE','𓉐'],['AKRAN İLIŞKILERI','𓀍'],['BAĞLANMA','𓎬'],['CINSIYET GELIŞIMI','𓁐'],
+  ['DUYGUSAL GELIŞIM','𓄣'],['GELIŞIMSEL SAPMALAR','𓀒'],['KIŞILIK VE BENLIK KAVRAMI','𓀀'],
+  ['MOTIVASYON VE EYLEM DÜZENLEMESI','𓀤'],['MÜDAHALE PROGRAMLARI','𓂠'],['SOSYAL GELIŞIM','𓊖'],
+  // İstatistik 1
+  ['BETIMSEL İSTATISTIK I','𓏤'],['BETIMSEL İSTATISTIK II','𓏤𓏤'],['BETIMSEL İSTATISTIK III','𓏤𓏤𓏤'],
+  ['GRUP KARŞILAŞTIRMALARI I','𓂓'],['GRUP KARŞILAŞTIRMALARI II','𓂓𓂓'],
+  ['OLASILIK KURAMI I','𓋳'],['OLASILIK KURAMI II','𓋳𓋳'],['OLASILIK KURAMI III','𓋳𓋳𓋳'],
+  ['ÇIKARIMSAL İSTATISTIK I','𓀞'],['ÇIKARIMSAL İSTATISTIK II','𓀞𓀞'],['İSTATISTIĞE NEDEN İHTIYAÇ DUYARIZ','𓍝'],
+  // Klinik Psikoloji 1
+  ['ARAŞTIRMA YÖNTEMLERI VE KANITA DAYALI TERAPILER','𓏛'],['BENLIK — KAVRAMLAR VE ÖZ-ŞEFKAT','𓀀'],
+  ['BILIŞ — DÜŞÜNCE VE DIL','𓇌'],['DAVRANIŞ — ŞEKILLENDIRME VE KOŞULLU PEKIŞTIRME','𓂻'],
+  ['DEĞERLER VE KABUL VE KARARLILIK TERAPISI (ACT)','𓆄'],['DIKKAT EĞITIMI VE FARKINDALIK','𓂀'],
+  ['MARUZ BIRAKMA VE DUYGULAR','𓀢'],['MOTIVASYON VE MOTIVASYONEL GÖRÜŞME','𓀊'],
+  ['PSIKOTERAPI NEDIR — PSIKOTERAPI EKOLLERI I','𓋹'],['PSIKOTERAPI EKOLLERI II','𓋹𓋹'],
+  ['TERAPININ ZORUNLU VE EKOL ÖTESI BOYUTLARI','𓊪'],
+  // Klinik Psikoloji 2
+  ['BAĞIMLILIKLAR','𓆓'],['BILIM FELSEFESI VE ARAŞTIRMA YAKLAŞIMLARI','𓆄'],['BOYUTSAL YAKLAŞIMLAR','𓏣'],
+  ['CINSEL İŞLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI','𓂸'],['DUYGUDURUM BOZUKLUKLARI','𓀠'],['GIRIŞ','𓉐'],
+  ['KAYGI BOZUKLUKLARI','𓀉'],['KURAMLAR VE KATEGORIK YAKLAŞIMLAR','𓀗'],
+  ['OBSESIF KOMPULSIF BOZUKLUK VE TIKLER','𓀣'],['PSIKOZLAR','𓀡'],
+  ['TRAVMA VE TRAVMA SONRASI STRES BOZUKLUĞU','𓀐'],['YEME BOZUKLUKLARI','𓀁'],
+  // Sağlık Psikolojisi ve Davranışsal Tıp
+  ['SAĞLIK DAVRANIŞLARI','𓋹'],['GERI DÜŞÜŞ','𓀒'],['SAĞLIK MODELLERI; BILMEK NEDEN YETMIYOR?','𓀁'],
+  ['SAĞLIK PSIKOLOJISI NEDIR VE NEDEN VAR?','𓉐'],
+  ['GÜNEŞTEN KORUNMA','𓇳'],['BESLENME PSIKOLOJISI','𓏏'],['FIZIKSEL AKTIVITE','𓂻'],
+  ['SIGARANIN PSIKOLOJISI','𓆑'],['KONDOM KULLANIMI','𓂺'],
+  // Sosyal Psikoloji
+  ['BENLIK','𓀀'],['GIRIŞ VE ARAŞTIRMA YÖNTEMLERI','𓉐'],['GRUP DINAMIĞI VE GRUP PERFORMANSI','𓊖'],
+  ['KIŞILERARASI ÇEKIM VE YAKIN İLIŞKILER','𓎬'],['PROSOSYAL DAVRANIŞ','𓂠'],['SALDIRGANLIK','𓀜'],
+  ['SOSYAL ALGI VE ATIF','𓁷'],['SOSYAL BILIŞ','𓇌'],['SOSYAL ETKI','𓋾'],
+  ['SOSYAL PSIKOLOJI VE KÜLTÜREL FARKLILIKLAR','𓈊'],['TUTUMLAR VE TUTUM DEĞIŞIMI','𓀣'],
+  ['ÖNYARGI VE GRUPLAR ARASI İLIŞKILER','𓈎']
+];
+function scFold(s){
+  s=(s||'').toUpperCase();
+  s=s.replace(/İ/g,'I').replace(/Ş/g,'S').replace(/Ç/g,'C').replace(/Ğ/g,'G').replace(/Ü/g,'U').replace(/Ö/g,'O');
+  return s.replace(/[^A-Z0-9 ]/g,' ').replace(/\\s+/g,' ').trim();
+}
+var SC_GLYPH_FULL={},SC_GLYPH_BASE={};
+SC_GLYPHS.forEach(function(e){
+  var f=scFold(e[0]);if(!SC_GLYPH_FULL[f])SC_GLYPH_FULL[f]=e[1];
+  if(Array.from(e[1]).length===1){var m=f.match(/^(.*?)\\s+(III|II|I|3|2|1)$/);var base=m?m[1]:f;if(!SC_GLYPH_BASE[base])SC_GLYPH_BASE[base]=e[1];}
+});
+function scGlyphFor(title){
+  var f=scFold(title);
+  if(SC_GLYPH_FULL[f])return SC_GLYPH_FULL[f];
+  var m=f.match(/^(.*?)\\s+(III|II|I|3|2|1)$/);
+  if(m){var base=m[1],c=({I:1,II:2,III:3,'1':1,'2':2,'3':3})[m[2]],g=SC_GLYPH_BASE[base];if(g){var o='';for(var i=0;i<c;i++)o+=g;return o;}}
+  return '';
+}
+// ── Otomatik tema: Luzern gün doğumu/batımına göre (manuel seçim oturum boyunca öncelikli) ──
+function scAutoTheme(){
+  try{
+    if(sessionStorage.getItem('sc_theme_manual'))return; // kullanıcı bu oturumda elle seçtiyse dokunma
+  }catch(e){}
+  function setTh(th){
+    if(document.documentElement.getAttribute('saved-theme')===th)return;
+    document.documentElement.setAttribute('saved-theme',th);
+    try{localStorage.setItem('theme',th);}catch(e){}
+    document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:th}}));
+  }
+  function apply(sr,ss){
+    var now=new Date();var dawn=new Date(sr),dusk=new Date(ss);
+    setTh((now<dawn||now>=dusk)?'dark':'light'); // gün batımı→karanlık, gün doğumu→aydınlık
+  }
+  var today='';try{today=new Date().toISOString().slice(0,10);}catch(e){}
+  var cached=null;try{cached=JSON.parse(localStorage.getItem('sc_suntimes')||'null');}catch(e){}
+  if(cached&&cached.date===today){apply(cached.sunrise,cached.sunset);return;}
+  try{
+    fetch('https://api.sunrise-sunset.org/json?lat=47.05&lng=8.31&formatted=0')
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d&&d.status==='OK'&&d.results){
+          var o={date:today,sunrise:d.results.sunrise,sunset:d.results.sunset};
+          try{localStorage.setItem('sc_suntimes',JSON.stringify(o));}catch(e){}
+          try{if(sessionStorage.getItem('sc_theme_manual'))return;}catch(e){}
+          apply(o.sunrise,o.sunset);
+        }
+      }).catch(function(){});
+  }catch(e){}
+}
 function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
@@ -165,10 +275,12 @@ function ensure(){
     var tmo=new MutationObserver(function(){
       de2.classList.add('sc-theme-anim');
       clearTimeout(window.__scThemeT);
-      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},560);
+      window.__scThemeT=setTimeout(function(){de2.classList.remove('sc-theme-anim');},340);
     });
     tmo.observe(de2,{attributes:true,attributeFilter:['saved-theme']});
   }
+  // Otomatik tema (gün doğumu/batımı) — sayfa başına bir kez
+  if(!window.__scAutoTheme){window.__scAutoTheme=1;scAutoTheme();}
   // ── SBB-KUTUSU: tam sağ sütun genişliği, siyah, dikey ──
   var sbb=document.getElementById('sc-sbb');
   if(!sbb){
@@ -177,7 +289,8 @@ function ensure(){
     var sbbHdr=document.createElement('div');sbbHdr.className='sc-sbb-hdr';
     // SBB logo: sabit kompakt font (rotasyon yok — sadece sayfa header'ı döner)
     var lg=document.createElement('a');lg.className='sc-logo-btn';lg.href='/';lg.setAttribute('aria-label','SAYKO.ch');
-    lg.innerHTML='<span class="sc-logo-icon">'+SC_LOGO+'</span><span class="sc-logo-word"><span class="sc-logo-name">SAYKO</span><span class="sc-logo-tld">.ch</span></span>';
+    lg.innerHTML='<span class="sc-logo-icon sc-logo-sb">'+SC_SB+'</span>';
+    lg.classList.add('sc-logo-sb-only');
     // Nöral Ağ toggle (beyin ikonu) — graph view'u aç/kapat
     var gtb=document.createElement('button');gtb.type='button';gtb.id='sc-gtoggle';gtb.className='sc-toolbtn';gtb.title='Nöral Ağ';gtb.setAttribute('aria-label','Nöral Ağ aç/kapat');
     gtb.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.5C10.3 4 8.2 4.3 7 5.8c-.9 1.1-1.1 2.5-.7 3.7C5.3 10 5 11 5 12.1c0 1.4.7 2.6 1.8 3.3-.2.6-.3 1.2-.3 1.8 0 1.8 1.5 3.3 3.3 3.3.3 0 .6 0 .9-.1"/><path d="M12 4.5c1.7-.5 3.8-.2 5 1.3.9 1.1 1.1 2.5.7 3.7.9.5 1.3 1.5 1.3 2.6 0 1.4-.7 2.6-1.8 3.3.2.6.3 1.2.3 1.8 0 1.8-1.5 3.3-3.3 3.3-.3 0-.6 0-.9-.1"/><path d="M9.7 18.3C10.4 19.3 11.2 19.8 12 20c.8-.2 1.6-.7 2.3-1.7"/><line x1="12" y1="4.5" x2="12" y2="19.5"/><path d="M8.5 8.5c.7.9 1.6 1.3 2.8 1.3"/><path d="M8 13c.8.7 1.8 1 2.8.8"/><path d="M15.5 8.5c-.7.9-1.6 1.3-2.8 1.3"/><path d="M16 13c-.8.7-1.8 1-2.8.8"/></svg>';
@@ -208,25 +321,45 @@ function ensure(){
     // Theme
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema';bt.setAttribute('aria-label','Tema');
     bt.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    bt.addEventListener('click',function(){var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
+    bt.addEventListener('click',function(){try{sessionStorage.setItem('sc_theme_manual','1');}catch(e){}var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
     // Focus
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
     bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
-    // Yazdır — temiz baskı görünümü (@media print kenar süsleri gizler)
-    var bpr=document.createElement('button');bpr.type='button';bpr.className='sc-toolbtn sc-printbtn';bpr.title='Yazdır';bpr.setAttribute('aria-label','Yazdır');
-    bpr.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
-    bpr.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');var dk=document.documentElement.getAttribute('saved-theme')==='dark';setTimeout(function(){if(dk){document.documentElement.setAttribute('saved-theme','light');try{localStorage.setItem('theme','light');}catch(e){}}window.print();if(dk){setTimeout(function(){document.documentElement.setAttribute('saved-theme','dark');try{localStorage.setItem('theme','dark');}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:'dark'}}));},80);}},320);});
+    // Geri (tarayıcı geçmişi)
+    var bb=document.createElement('button');bb.type='button';bb.className='sc-toolbtn sc-backbtn';bb.title='Geri';bb.setAttribute('aria-label','Geri');
+    bb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
+    bb.addEventListener('click',function(){if(history.length>1){history.back();}else{location.href='/';}});
     sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
-    sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);sbbTools.appendChild(bpr);
+    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
     sbb.appendChild(sbbTools);
-    // Clock
-    var ticks='';for(var i=0;i<12;i++){var a=i*30*Math.PI/180,x1=50+40*Math.sin(a),y1=50-40*Math.cos(a),x2=50+46*Math.sin(a),y2=50-46*Math.cos(a);ticks+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" class="sc-tick"/>';}
+    // Clock — lüks kasa + Türkçe tarih + saniyeyi gösteren zarif SERPENT ibresi
+    var ticks='';for(var i=0;i<60;i++){var a=i*6*Math.PI/180;var isH=(i%5===0);var r1=isH?38.5:41.5,r2=45;var x1=50+r1*Math.sin(a),y1=50-r1*Math.cos(a),x2=50+r2*Math.sin(a),y2=50-r2*Math.cos(a);ticks+='<line x1="'+x1.toFixed(2)+'" y1="'+y1.toFixed(2)+'" x2="'+x2.toFixed(2)+'" y2="'+y2.toFixed(2)+'" class="sc-tick'+(isH?' sc-tick-h':'')+'"/>';}
     var clkDiv=document.createElement('div');clkDiv.id='sc-clock';
-    var psiTip='<g class="sc-sec-psi" transform="translate(50,20) scale(0.17) translate(-40,-40)"><line x1="40" y1="8" x2="40" y2="76" stroke-width="6" stroke-linecap="round"/><path d="M16,8 C16,8 16,56 40,62" stroke-width="5.5" stroke-linecap="round" fill="none"/><path d="M64,8 C64,8 64,56 40,62" stroke-width="5.5" stroke-linecap="round" fill="none"/><circle cx="16" cy="8" r="6"/><circle cx="40" cy="8" r="6"/><circle cx="64" cy="8" r="6"/></g>';
-    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" class="sc-face"/>'+ticks+'<text x="50" y="35" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text><line id="sc-h" x1="50" y1="50" x2="50" y2="29" class="sc-hand sc-hand-h"/><line id="sc-m" x1="50" y1="50" x2="50" y2="16" class="sc-hand sc-hand-m"/><g id="sc-s"><line x1="50" y1="60" x2="50" y2="18" class="sc-hand-s"/>'+psiTip+'</g><circle cx="50" cy="50" r="3.2" class="sc-cap"/></svg><div id="sc-day"></div>';
+    clkDiv.innerHTML='<svg id="sc-clockface" viewBox="0 0 100 100">'+
+      '<defs>'+
+        '<radialGradient id="sc-faceg" cx="50%" cy="42%" r="62%"><stop offset="0%" class="sc-faceg-0"/><stop offset="100%" class="sc-faceg-1"/></radialGradient>'+
+        '<linearGradient id="sc-bezelg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" class="sc-bezelg-0"/><stop offset="50%" class="sc-bezelg-1"/><stop offset="100%" class="sc-bezelg-2"/></linearGradient>'+
+      '</defs>'+
+      '<circle cx="50" cy="50" r="49" class="sc-bezel"/>'+
+      '<circle cx="50" cy="50" r="46.2" class="sc-face"/>'+ticks+
+      '<text id="sc-date-txt" x="50" y="32" class="sc-date-text" text-anchor="middle" font-size="6.4">—</text>'+
+      '<text x="50" y="74" class="sc-sbb-brand" text-anchor="middle" font-size="7"><tspan class="sc-brand-name">SAYKO</tspan><tspan class="sc-brand-tld">.ch</tspan></text>'+
+      '<line id="sc-h" x1="50" y1="50" x2="50" y2="30" class="sc-hand sc-hand-h"/>'+
+      '<line id="sc-m" x1="50" y1="50" x2="50" y2="17" class="sc-hand sc-hand-m"/>'+
+      '<g id="sc-s">'+
+        '<path d="M50 50 C 49.3 54 50.7 57 50 59.5" class="sc-snake-s-tail"/>'+
+        '<path d="M50 51 C 47.3 44 52.7 37 50 30 C 48.1 25 51.5 20 50 15.5" class="sc-snake-s-body"/>'+
+        '<ellipse cx="50" cy="13.4" rx="2.5" ry="3.1" class="sc-snake-s-head"/>'+
+        '<circle cx="51" cy="12.5" r="0.6" class="sc-snake-s-eye"/>'+
+        '<path d="M50 10.4 L50 7.2" class="sc-snake-s-tongue"/>'+
+        '<path d="M50 7.2 L48.6 5.3 M50 7.2 L51.4 5.3" class="sc-snake-s-tongue"/>'+
+      '</g>'+
+      '<circle cx="50" cy="50" r="2.7" class="sc-cap"/><circle cx="50" cy="50" r="1.05" class="sc-cap-dot"/>'+
+    '</svg>'+
+    '<div id="sc-day-strip" class="sc-day-strip"><span>P</span><span>S</span><span>Ç</span><span>P</span><span>C</span><span>C</span><span>P</span></div>';
     // Masaüstünde saate tıklamak SBB-kutusunu kapatır (kuyruğa döner)
     clkDiv.addEventListener('click',function(){if(window.innerWidth>=1200){document.body.classList.remove('sc-sbb-open');}});
     sbb.appendChild(clkDiv);
@@ -250,7 +383,7 @@ function ensure(){
   var fab=document.getElementById('sc-sbb-fab');
   if(!fab){
     fab=document.createElement('button');fab.type='button';fab.id='sc-sbb-fab';fab.setAttribute('aria-label','SAYKO panelini aç/kapat');
-    fab.innerHTML='<span class="sc-fab-icon">'+SC_LOGO+'</span>';
+    fab.innerHTML='<span class="sc-fab-icon sc-fab-sb">'+SC_SB+'</span>';
     var bd=document.createElement('div');bd.id='sc-sbb-backdrop';bd.setAttribute('aria-hidden','true');
     fab.addEventListener('click',function(){document.body.classList.toggle('sc-sbb-open');});
     bd.addEventListener('click',function(){document.body.classList.remove('sc-sbb-open');});
@@ -286,9 +419,13 @@ function ensure(){
         H.setAttribute('transform','rotate('+((h%12)*30+m*0.5+frac*0.5)+' 50 50)');
         M.setAttribute('transform','rotate('+(m*6+frac*6)+' 50 50)');
         var sa=secMs<58500?(secMs/58500)*360:360;
-        S.setAttribute('transform','rotate('+sa+' 50 50)');}
-      var dn=document.getElementById('sc-day');
-      if(dn){var wd=z.getDay();var day=d.toLocaleDateString('tr-TR',{weekday:'long',timeZone:'Europe/Zurich'});var nt=day.charAt(0).toLocaleUpperCase('tr-TR')+day.slice(1);if(dn.textContent!==nt)dn.textContent=nt;dn.classList.toggle('weekend',wd===0||wd===6);}
+        if(S)S.setAttribute('transform','rotate('+sa+' 50 50)');}
+      // Türkçe tarih penceresi: "27 HAZ"
+      var dt2=document.getElementById('sc-date-txt');
+      if(dt2){var AY=['OCA','ŞUB','MAR','NİS','MAY','HAZ','TEM','AĞU','EYL','EKİ','KAS','ARA'];var ds=z.getDate()+' '+AY[z.getMonth()];if(dt2.textContent!==ds)dt2.textContent=ds;}
+      // Gün şeridi (Pzt→Paz), bugünü cardinal vurgula
+      var strip=document.getElementById('sc-day-strip');
+      if(strip){var wd=z.getDay();var idx=(wd+6)%7;if(strip.__scCur!==idx){strip.__scCur=idx;var sp=strip.children;for(var qi=0;qi<sp.length;qi++){sp[qi].classList.toggle('today',qi===idx);}strip.classList.toggle('weekend',wd===0||wd===6);}}
       requestAnimationFrame(tick);
     };tick();
   }
@@ -348,10 +485,16 @@ function scFitHex(){
   links.forEach(function(a){
     var lbl=a.querySelector('.sc-hx-label');
     if(!lbl){lbl=document.createElement('span');lbl.className='sc-hx-label';lbl.textContent=(a.textContent||'').trim();a.textContent='';a.appendChild(lbl);}
+    // Mısır hiyeroglifi: başlığın üstüne bir kez ekle (başlık metninden eşleştir)
+    if(!a.querySelector('.sc-hx-glyph')){
+      var gl=scGlyphFor(lbl.textContent||'');
+      if(gl){var g=document.createElement('span');g.className='sc-hx-glyph';g.setAttribute('aria-hidden','true');g.textContent=gl;a.insertBefore(g,lbl);}
+    }
     var li=a.closest('.section-li');if(!li)return;
     var H=li.clientHeight||152,W=li.clientWidth||132;
-    var maxH=H*0.52,maxW=W-18;
-    var fs=12;lbl.style.lineHeight='1.18';lbl.style.fontSize=fs+'px';
+    var hasG=!!a.querySelector('.sc-hx-glyph');
+    var maxH=H*(hasG?0.44:0.54),maxW=W-18;
+    var fs=12;lbl.style.lineHeight='1.16';lbl.style.fontSize=fs+'px';
     var guard=0;
     while((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>6.5&&guard<40){fs-=0.5;lbl.style.fontSize=fs+'px';guard++;}
   });
@@ -427,26 +570,54 @@ function scFitHeader(){
 // ── Header Efekt 0: Kromatik sapma — sakin, sürekli salınım; imleç yaklaştıkça artar ──
 function initFx0(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
-  var amp=0,target=0,phase=0,rafId=null;
+  var amp=0,target=0,phase=0,rafId=null,trip=0;
+  var lx=null,ly=null,lt=0,vel=0,dirx=1,diry=0;
   function frame(){
     amp+=(target-amp)*0.08;
     phase+=0.018;
-    if(amp<0.08&&target<0.08){nm.style.textShadow='none';rafId=null;return;}
-    var sx=amp*Math.sin(phase);
-    var sy=amp*0.32*Math.cos(phase*1.3);
-    nm.style.textShadow=
-      sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,0.62),'+
+    vel*=0.9; // hızı yumuşakça söndür
+    // İmleç üstte oyalandıkça (yakın + yavaş) → psychedelic "trip" yavaşça yükselir
+    var dwell=(target>0.8&&vel<2.4);
+    trip+=((dwell?1:0)-trip)*(dwell?0.012:0.06);
+    if(amp<0.08&&target<0.08&&trip<0.02){nm.style.textShadow='none';rafId=null;return;}
+    // İmleç hareket yönüne hizalı RGB kanal kayması
+    var base=amp*(0.55+0.45*Math.sin(phase));
+    var wob=1+trip*2.4*Math.sin(phase*0.7); // trip arttıkça dalgalı, nefes alan genlik
+    var sx=(base*dirx+amp*0.28*Math.sin(phase))*wob;
+    var sy=(base*diry+amp*0.18*Math.cos(phase*1.3))*wob;
+    // Hız > 0.5 px/frame iken cardinal kırmızıyı sine modülasyonuyla harmanla
+    var rA=vel>0.5?(0.62+0.33*Math.abs(Math.sin(phase*2.0))):0.62;
+    var sh=sx.toFixed(2)+'px '+sy.toFixed(2)+'px 0 rgba(200,16,46,'+rA.toFixed(2)+'),'+
       (-sx).toFixed(2)+'px '+(-sy).toFixed(2)+'px 0 rgba(40,80,220,0.52)';
+    if(trip>0.02){
+      // LSD katmanları: gökkuşağı kanalları phase ile döner, kayma trip ile büyür
+      var off=4+trip*18;
+      for(var k=0;k<3;k++){
+        var hue=(phase*55+k*120)%360;
+        var ang=phase*1.25+k*2.094;
+        var ox=Math.cos(ang)*off, oy=Math.sin(ang)*off;
+        sh+=','+ox.toFixed(2)+'px '+oy.toFixed(2)+'px '+(trip*3).toFixed(2)+'px hsla('+hue.toFixed(0)+',95%,56%,'+(0.5*trip).toFixed(2)+')';
+      }
+    }
+    nm.style.textShadow=sh;
     rafId=requestAnimationFrame(frame);
   }
   function onMove(e){
     var r=nm.getBoundingClientRect();
     var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
     var d=Math.sqrt(dx*dx+dy*dy);
-    target=Math.max(0,(260-d)/260)*2.5;
+    target=Math.max(0,(260-d)/260)*2.8;
+    var now=Date.now();
+    if(lx!==null){
+      var mvx=e.clientX-lx,mvy=e.clientY-ly,mag=Math.sqrt(mvx*mvx+mvy*mvy);
+      var dt=Math.max(1,now-lt);
+      vel=mag/dt*16; // ~px/frame (16ms kare)
+      if(mag>0.5){dirx=mvx/mag;diry=mvy/mag;}
+    }
+    lx=e.clientX;ly=e.clientY;lt=now;
     if(!rafId)rafId=requestAnimationFrame(frame);
   }
-  function onLeave(){target=0;}
+  function onLeave(){target=0;vel=0;}
   hdr.addEventListener('mousemove',onMove);
   hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){cancelAnimationFrame(rafId);hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.style.textShadow='';};
@@ -475,38 +646,20 @@ function initFx1(hdr){
   hdr.addEventListener('mousemove',onMove);hdr.addEventListener('mouseleave',onLeave);
   hdr.__scFxClean=function(){hdr.removeEventListener('mousemove',onMove);hdr.removeEventListener('mouseleave',onLeave);nm.innerHTML=txt;nm.removeAttribute('data-sc-mag');};
 }
-// ── Header Efekt 2: Mürekkep damlası — imleç hareket ettikçe yazıdan damla akar ──
+// ── Header Efekt 2: Yarık metin — imleç başlığa değince üst/alt yarı zıt yönde
+// kayar (skew), aralarında cardinal kırmızı bir yarık çizgisi açılır. (CodePen
+// "split menu" efektinin siteye uyarlanmış, font-rotasyonuyla uyumlu hali.) ──
 function initFx2(hdr){
-  var word=hdr.querySelector('.sh-word');if(!word)return;
-  var cnv=document.createElement('canvas');
-  cnv.style.cssText='position:absolute;left:0;top:0;pointer-events:none;z-index:10;';
-  word.style.position='relative';word.style.overflow='visible';
-  word.appendChild(cnv);
-  var drips=[],rafId=null,lastSpawn=0;
-  function resize(){cnv.width=word.clientWidth;cnv.height=word.clientHeight+90;cnv.style.width=word.clientWidth+'px';cnv.style.height=(word.clientHeight+90)+'px';}
-  resize();
-  function dripCol(){var dk=document.documentElement.getAttribute('saved-theme')==='dark';return dk?'rgba(200,16,46,':'rgba(107,74,47,';}
-  function spawn(x){drips.push({x:x+(Math.random()-0.5)*16,y:word.clientHeight*0.85,len:0,max:18+Math.random()*55,w:1.2+Math.random()*2.8,spd:0.35+Math.random()*0.7,alpha:0.55+Math.random()*0.4,blob:3+Math.random()*8});}
-  function frame(){
-    var ctx2=cnv.getContext('2d');ctx2.clearRect(0,0,cnv.width,cnv.height);
-    var col=dripCol();var alive=false;
-    drips=drips.filter(function(d){
-      d.len+=d.spd;if(d.len>=d.max)return false;
-      alive=true;var t=d.len/d.max,a=d.alpha*(1-t*0.55);
-      ctx2.beginPath();ctx2.moveTo(d.x,d.y);ctx2.lineTo(d.x,d.y+d.len);
-      ctx2.strokeStyle=col+a+')';ctx2.lineWidth=d.w*(1-t*0.35);ctx2.stroke();
-      if(t>0.65){var ba=a*(t-0.65)/0.35;ctx2.beginPath();ctx2.arc(d.x,d.y+d.len,d.blob*(t-0.65)/0.35,0,6.2832);ctx2.fillStyle=col+(ba*0.75)+')';ctx2.fill();}
-      return true;
-    });
-    if(alive)rafId=requestAnimationFrame(frame);else rafId=null;
-  }
-  function onMove(e){
-    var r=word.getBoundingClientRect();var mx=e.clientX-r.left;
-    var now=Date.now();if(now-lastSpawn>100+Math.random()*200){lastSpawn=now;spawn(mx);if(Math.random()<0.3)spawn(mx+(Math.random()-0.5)*30);}
-    if(!rafId)rafId=requestAnimationFrame(frame);
-  }
-  hdr.addEventListener('mousemove',onMove);
-  hdr.__scFxClean=function(){cancelAnimationFrame(rafId);rafId=null;drips=[];hdr.removeEventListener('mousemove',onMove);if(cnv.parentNode)cnv.parentNode.removeChild(cnv);if(word){word.style.position='';word.style.overflow='';}};
+  var nm=hdr.querySelector('.sh-name');if(!nm||nm.getAttribute('data-sc-split'))return;
+  nm.setAttribute('data-sc-split','1');
+  var txt=nm.textContent||'';
+  nm.classList.add('sc-split');
+  // İki maske (üst/alt yarı) + sabit boyut için şeffaf taban + yarık çizgisi
+  nm.innerHTML='<span class="sc-split-line" aria-hidden="true"></span>'+
+    '<span class="sc-split-mask sc-split-top" aria-hidden="true"><span>'+txt+'</span></span>'+
+    '<span class="sc-split-mask sc-split-bot" aria-hidden="true"><span>'+txt+'</span></span>'+
+    '<span class="sc-split-base">'+txt+'</span>';
+  hdr.__scFxClean=function(){nm.classList.remove('sc-split');nm.innerHTML=txt;nm.removeAttribute('data-sc-split');};
 }
 // ── Header efekt koordinatörü — her sayfa yükünde efekt sırası döner ──
 function initHeaderFx(){
@@ -516,6 +669,54 @@ function initHeaderFx(){
   var n=0;try{n=parseInt(localStorage.getItem('sayko_fx')||'0');}catch(e){}
   try{localStorage.setItem('sayko_fx',String((n+1)%3));}catch(e){}
   if(n%3===0)initFx0(hdr);else if(n%3===1)initFx1(hdr);else initFx2(hdr);
+}
+// ── Görev 7.2: Ders kartlarına imleç-güdümlü 3D tilt (yalnız masaüstü) ──
+function scCardTilt(){
+  if(window.innerWidth<800)return;
+  document.querySelectorAll('.curriculum-grid .cg-cell').forEach(function(c){
+    if(c.getAttribute('data-sc-tilt'))return;c.setAttribute('data-sc-tilt','1');
+    var ic=c.querySelector('.cg-icon'),nm=c.querySelector('.cg-name');
+    c.addEventListener('mousemove',function(e){
+      var r=c.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width-0.5,py=(e.clientY-r.top)/r.height-0.5;
+      c.style.transform='perspective(1000px) rotateX('+(-py*6).toFixed(2)+'deg) rotateY('+(px*6).toFixed(2)+'deg) scale(1.01)';
+      // İkon parallax: kartın derinliğinde hafifçe öne/yana kayar
+      if(ic)ic.style.transform='translate('+(px*9).toFixed(1)+'px,'+(py*9).toFixed(1)+'px) translateZ(24px)';
+      // İsimde minik kromatik sapma (imleç yönüne göre)
+      if(nm)nm.style.textShadow=(px*3).toFixed(1)+'px 0 0 rgba(200,16,46,0.35),'+(-px*3).toFixed(1)+'px 0 0 rgba(40,80,220,0.30)';
+    });
+    c.addEventListener('mouseleave',function(){c.style.transform='';if(ic)ic.style.transform='';if(nm)nm.style.textShadow='';});
+  });
+}
+// ── Görev 7 (revize): Konu hex hover efekti artık tamamen CSS — yalnız renk
+// değişimi + shadow-inset-center animasyonu. JS tilt KALDIRILDI. ──
+// ── Görev 8: Backlinks + Etiketler'i SBB-kutusuna entegre et ──
+// Menüden (sc-bclayers) sonra ince separatör + "Alakalı yazılar:" + backlinks;
+// en altta "Etiketler" dropdown (varsayılan kapalı). Her nav'da yeniden kurulur.
+function scSbbExtras(){
+  var sbb=document.getElementById('sc-sbb');if(!sbb)return;
+  var extra=sbb.querySelector('.sc-sbb-extra');
+  if(!extra){extra=document.createElement('div');extra.className='sc-sbb-extra';sbb.appendChild(extra);}
+  extra.innerHTML='';
+  // Alakalı yazılar (backlinks)
+  var bl=document.querySelector('.backlinks');
+  if(bl){
+    var sep=document.createElement('div');sep.className='sc-sbb-sep';extra.appendChild(sep);
+    var rt=document.createElement('div');rt.className='sc-sbb-rel-title';rt.textContent='Alakalı yazılar:';extra.appendChild(rt);
+    var oh=bl.querySelector('h3');if(oh)oh.style.display='none';
+    bl.classList.add('sc-sbb-backlinks');
+    extra.appendChild(bl);
+  }
+  // Etiketler dropdown (note-properties) — varsayılan kapalı
+  var np=document.querySelector('.note-properties');
+  if(np){
+    var det=document.createElement('details');det.className='sc-sbb-tags';
+    var sm=document.createElement('summary');sm.textContent='Etiketler';det.appendChild(sm);
+    var npt=np.querySelector('.note-properties-title');if(npt)npt.style.display='none';
+    np.classList.add('sc-sbb-np');
+    det.appendChild(np);
+    extra.appendChild(det);
+  }
 }
 // ── Footer'ı body seviyesine taşı → tüm sayfa enini kaplar; SPA nav'da
 // Quartz yeni footer üretirse onları siler, body-level olanı korur.
@@ -529,28 +730,33 @@ function syncFooter(){
 // ── Footer dalga animasyonu — yalnız <footer> elementini kapsar (yaklaşık 48px) ──
 // IntersectionObserver ile görünür olduğunda çalışır → homepage slowdown yok
 function ensureFooterWave(){
-  if(window.__scFwRaf)return;
   var ft=document.querySelector('footer');if(!ft)return;
-  var cnv=document.createElement('canvas');cnv.id='sc-fw';
-  cnv.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:0;';
-  ft.insertBefore(cnv,ft.firstChild);
-  Array.prototype.slice.call(ft.children).forEach(function(c){if(c!==cnv){c.style.position='relative';c.style.zIndex='1';}});
+  // Canvas yoksa (ilk yük ya da SPA nav'da footer yenilendiyse) ekle → her sayfada garanti
+  if(!ft.querySelector('#sc-fw')){
+    var cnv=document.createElement('canvas');cnv.id='sc-fw';
+    cnv.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:0;';
+    if(getComputedStyle(ft).position==='static')ft.style.position='relative';
+    ft.insertBefore(cnv,ft.firstChild);
+    Array.prototype.slice.call(ft.children).forEach(function(c){if(c.id!=='sc-fw'){c.style.position='relative';c.style.zIndex='1';}});
+  }
+  if(window.__scFwRaf)return; // tek kalıcı döngü; footer + canvas'ı her karede yeniden bulur
   function rnd(a,b){return a+Math.random()*(b-a);}
   function mkH(){var n=Math.floor(rnd(2,5)),h=[];for(var i=0;i<n;i++)h.push([rnd(0.06,0.28),rnd(1,4),rnd(0,6.28)]);return h;}
   function evalW(h,x,W,p){var y=0;h.forEach(function(s){y+=Math.sin(x/W*6.28*s[1]+p+s[2])*s[0];});return y;}
   function lrp(a,b,t){var n=Math.max(a.length,b.length),r=[];for(var i=0;i<n;i++){var ai=a[i]||[0,1,0],bi=b[i]||[0,1,0];r.push([ai[0]+(bi[0]-ai[0])*t,ai[1]+(bi[1]-ai[1])*t,ai[2]+(bi[2]-ai[2])*t]);}return r;}
   var L=[{p:0,v:0.45,a:mkH(),b:mkH(),t:0,d:rnd(6,18)},{p:3.14,v:-0.32,a:mkH(),b:mkH(),t:0,d:rnd(6,18)}];
-  var prev=0,visible=false;
-  if(window.IntersectionObserver){
-    new IntersectionObserver(function(ents){visible=ents[0].isIntersecting;}).observe(ft);
-  } else { visible=true; }
+  var prev=0,snakePhase=0,snakeInit=false;
   function tick(ts){
     window.__scFwRaf=requestAnimationFrame(tick);
-    if(!visible){prev=0;return;}
+    var ftn=document.querySelector('footer');if(!ftn){prev=0;return;}
+    var cv=ftn.querySelector('#sc-fw');if(!cv){prev=0;return;}
+    var rect=ftn.getBoundingClientRect();
+    var vh=window.innerHeight||document.documentElement.clientHeight||0;
+    if(rect.bottom<-40||rect.top>vh+40){prev=0;return;} // ekran dışı → boşuna çizme
     var dt=prev?(ts-prev)/1000:0;if(dt>0.1)dt=0.1;prev=ts;
-    var W=ft.clientWidth||300,H=Math.max(ft.clientHeight,48);
-    if(cnv.width!==W||cnv.height!==H){cnv.width=W;cnv.height=H;}
-    var ctx=cnv.getContext('2d');ctx.clearRect(0,0,W,H);
+    var W=ftn.clientWidth||300,H=Math.max(ftn.clientHeight,48);
+    if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}
+    var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
     var cs=dk?['rgba(50,8,12,0.90)','rgba(22,22,22,0.65)']:['rgba(185,171,150,0.62)','rgba(215,204,187,0.42)'];
     L.forEach(function(l,i){
@@ -567,8 +773,128 @@ function ensureFooterWave(){
       ctx.lineTo(W,H);ctx.closePath();
       ctx.fillStyle=cs[i];ctx.fill();
     });
+    // 404 sayfasında footer yılanı çizilmez (o yılan, oyuna dönüşen yılanın kendisi)
+    if(document.body.getAttribute('data-slug')==='404')return;
+    // ── Dalgaların üstünde süzülen EVIL yılan: kara/ipeksi gövde, olivine sırt parıltısı,
+    //    kırmızı yarık göz (cute değil — SERPENTBRAIN'deki mürekkep yılanı gibi). Boy = ekranın 1/3'ü ──
+    var bodyLen=Math.max(160,W/3);             // ekran genişliğinin 1/3'ü
+    var spanX=W+bodyLen+40;
+    if(!snakeInit){snakePhase=W*0.22+bodyLen+20;snakeInit=true;}  // ilk karede ekranda başla
+    snakePhase+=dt*26;                         // yavaş, akışkan ama görünür
+    var headX=(snakePhase%spanX)-bodyLen-20;   // sol dış → sağ dış
+    var waveF=0.021, wavePh=snakePhase*0.013;
+    var baseY=H*0.42, amp2=Math.min(H*0.19,9);
+    function cyAt(x){return baseY+Math.sin(x*waveF+wavePh)*amp2+Math.sin(x*waveF*2.3+wavePh*1.5)*amp2*0.26;}
+    // KARANLIK gövde + olivine sırt parıltısı (temaya uyumlu)
+    var snHi  =dk?'rgba(150,196,108,0.95)':'rgba(140,186,100,0.95)';  // olivine sırt
+    var snBody=dk?'rgba(42,52,40,0.96)':'rgba(34,42,32,0.96)';        // kara gövde
+    var snBel =dk?'rgba(14,18,14,0.96)':'rgba(10,12,10,0.96)';        // karın ~ siyah
+    var snPat =dk?'rgba(150,196,108,0.55)':'rgba(140,186,100,0.5)';   // olivine desen
+    var eyeR  =dk?'rgba(255,52,40,1)':'rgba(225,28,28,1)';            // kötücül kırmızı göz
+    var tongueR='rgba(200,16,46,0.95)';
+    var NB=54;
+    function radAt(s){var maxR=Math.min(6.0,H*0.15);if(s<0.10)return Math.max(0.5,maxR*(s/0.10));return Math.max(0.6,maxR*(0.82+0.18*Math.sin(s*3.14159)));}
+    // merkez çizgi noktaları (kuyruk s=0 → baş s=1)
+    var P=[];for(var i=0;i<=NB;i++){var s=i/NB;var x=headX-bodyLen*(1-s);P.push({x:x,y:cyAt(x),s:s});}
+    var top=[],bot=[];
+    for(var i=0;i<=NB;i++){
+      var pa=P[Math.max(0,i-1)],pb=P[Math.min(NB,i+1)];
+      var tx=pb.x-pa.x,ty=pb.y-pa.y,tl=Math.sqrt(tx*tx+ty*ty)||1;
+      var nx=-ty/tl,ny=tx/tl,r=radAt(P[i].s);
+      top.push([P[i].x+nx*r,P[i].y+ny*r]);bot.push([P[i].x-nx*r,P[i].y-ny*r]);
+    }
+    ctx.lineCap='round';ctx.lineJoin='round';
+    ctx.beginPath();ctx.moveTo(top[0][0],top[0][1]);
+    for(var i=1;i<=NB;i++)ctx.lineTo(top[i][0],top[i][1]);
+    for(var i=NB;i>=0;i--)ctx.lineTo(bot[i][0],bot[i][1]);
+    ctx.closePath();
+    var bgrad=ctx.createLinearGradient(0,baseY-11,0,baseY+11);
+    bgrad.addColorStop(0,snHi);bgrad.addColorStop(0.26,snBody);bgrad.addColorStop(1,snBel);
+    ctx.fillStyle=bgrad;ctx.fill();
+    // sırt deseni: seyrek olivine eşkenar lekeler
+    ctx.fillStyle=snPat;
+    for(var i=6;i<NB-3;i+=3){
+      var p=P[i],rr=radAt(p.s)*0.42;
+      var pa=P[i-1],pb=P[i+1];var aa=Math.atan2(pb.y-pa.y,pb.x-pa.x);
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(aa);
+      ctx.beginPath();ctx.moveTo(0,-rr);ctx.lineTo(rr*1.05,0);ctx.lineTo(0,rr);ctx.lineTo(-rr*1.05,0);ctx.closePath();ctx.fill();
+      ctx.restore();
+    }
+    // ── baş (sivri, kara) ──
+    var hp=P[NB],pa=P[NB-1];
+    var ang=Math.atan2(hp.y-pa.y,hp.x-pa.x);
+    var hr=radAt(1)*1.1+1.3;
+    ctx.save();ctx.translate(hp.x,hp.y);ctx.rotate(ang);
+    var hgrad=ctx.createLinearGradient(0,-hr,0,hr);
+    hgrad.addColorStop(0,snHi);hgrad.addColorStop(0.5,snBody);hgrad.addColorStop(1,snBel);
+    ctx.fillStyle=hgrad;
+    ctx.beginPath();
+    ctx.moveTo(hr*1.85,0);
+    ctx.quadraticCurveTo(hr*0.5,-hr*1.1,-hr*0.9,-hr*0.8);
+    ctx.quadraticCurveTo(-hr*1.15,0,-hr*0.9,hr*0.8);
+    ctx.quadraticCurveTo(hr*0.5,hr*1.1,hr*1.85,0);
+    ctx.closePath();ctx.fill();
+    // göz: küçük, kötücül kırmızı, dikey yarık (parıltılı)
+    var ex=hr*0.25,ey=-hr*0.50;
+    ctx.save();ctx.shadowColor=eyeR;ctx.shadowBlur=4;
+    ctx.fillStyle=eyeR;
+    ctx.beginPath();ctx.ellipse(ex,ey,hr*0.36,hr*0.28,0,0,6.2832);ctx.fill();
+    ctx.restore();
+    ctx.fillStyle='rgba(10,6,4,0.95)';
+    ctx.beginPath();ctx.ellipse(ex+hr*0.04,ey,hr*0.09,hr*0.22,0,0,6.2832);ctx.fill();
+    ctx.restore();
+    // ── çatal dil (ara sıra titreyerek çıkar) ──
+    var flick=Math.sin(snakePhase*0.22);
+    if(flick>0.2){
+      var f=(flick-0.2)/0.8;
+      var t0=hr*1.75,tlen=hr*(1.0+f*1.6);
+      var bx=hp.x+Math.cos(ang)*t0,by=hp.y+Math.sin(ang)*t0;
+      var ttx=hp.x+Math.cos(ang)*(t0+tlen),tty=hp.y+Math.sin(ang)*(t0+tlen);
+      var wob=Math.sin(snakePhase*3)*1.1;
+      var mx=(bx+ttx)/2+Math.cos(ang+1.57)*wob,my=(by+tty)/2+Math.sin(ang+1.57)*wob;
+      ctx.strokeStyle=tongueR;ctx.lineWidth=0.85;
+      ctx.beginPath();ctx.moveTo(bx,by);ctx.quadraticCurveTo(mx,my,ttx,tty);
+      ctx.lineTo(ttx+Math.cos(ang+0.42)*hr*0.55,tty+Math.sin(ang+0.42)*hr*0.55);
+      ctx.moveTo(ttx,tty);
+      ctx.lineTo(ttx+Math.cos(ang-0.42)*hr*0.55,tty+Math.sin(ang-0.42)*hr*0.55);
+      ctx.stroke();
+    }
   }
   requestAnimationFrame(tick);
+}
+// ── Görev 3: Sitedeki TÜM ayraçlar (<hr>) varsayılan serpent ayracına dönüşür ──
+function scSerpentHr(){
+  document.querySelectorAll('article hr, .center hr, .popover hr').forEach(function(hr){
+    if(hr.getAttribute('data-sc-snake'))return;hr.setAttribute('data-sc-snake','1');
+    var w=document.createElement('div');w.className='sc-hr-serpent';w.setAttribute('aria-hidden','true');
+    w.innerHTML=SC_SERPENT_LINE;
+    if(hr.parentNode)hr.parentNode.insertBefore(w,hr);
+    hr.style.display='none';
+  });
+}
+// ── Görev: Animasyonlu zarf (mailto:cio@sayko.ch) — sol alt köşede sabit minik buton
+// ("sayfa yukarı" butonunun ayna konumu). Body seviyesinde, oturumda bir kez. ──
+function scFooterMail(){
+  if(document.querySelector('.sc-mail-link'))return;
+  var a=document.createElement('a');
+  a.className='sc-mail-link';a.href='mailto:cio@sayko.ch';a.title='cio@sayko.ch';a.setAttribute('aria-label','E-posta: cio@sayko.ch');
+  a.innerHTML='<span class="sc-mail"><span class="animated-mail">'+
+    '<span class="body"></span><span class="top-fold"></span><span class="back-fold"></span><span class="left-fold"></span>'+
+    '<span class="letter"><span class="letter-border"></span><span class="letter-title"></span><span class="letter-context"></span><span class="letter-stamp"></span></span>'+
+    '</span><span class="shadow"></span></span>';
+  document.body.appendChild(a);
+}
+// ── Görev 3b: Konu makalesinde başlığın üstüne büyük, ortalı hiyeroglif ──
+function scArticleGlyph(){
+  var slug=document.body.getAttribute('data-slug')||'';
+  if(/\\/index$/.test(slug)||slug===''||slug==='index'||slug==='404')return; // yalnız yaprak makaleler
+  var h=document.querySelector('.center .article-title, article .article-title');
+  if(!h||h.getAttribute('data-sc-aglyph'))return;
+  var gl=scGlyphFor(h.textContent||'');
+  if(!gl)return;
+  h.setAttribute('data-sc-aglyph','1');
+  var g=document.createElement('div');g.className='sc-article-glyph';g.setAttribute('aria-hidden','true');g.textContent=gl;
+  if(h.parentNode)h.parentNode.insertBefore(g,h);
 }
 function perNav(){
   // Sayfa değişince SBB kuyruğunu kapat (her sayfaya temiz başla) + sağ kenarı ölç
@@ -585,7 +911,7 @@ function perNav(){
   if(ph&&!ph.querySelector('.site-header')){
     var fnt2=SC_FONTS[Math.floor(Math.random()*SC_FONTS.length)];
     var sh=document.createElement('div');sh.className='site-header';
-    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo">'+SC_LOGO+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><span class="sh-divider" aria-hidden="true"></span><p class="site-header-slogan"></p>';
+    sh.innerHTML='<a class="site-header-title" href="/" aria-label="SAYKO.ch"><span class="sh-logo sh-logo-sb">'+SC_SB+'</span><span class="sh-word"><span class="sh-name">SAYKO</span><span class="sh-tld">.ch</span></span></a><span class="sh-divider" aria-hidden="true">'+SC_SERPENT_LINE+'</span><p class="site-header-slogan"></p>';
     sh.querySelector('.sh-name').style.fontFamily=fnt2+',serif';
     sh.querySelector('.site-header-slogan').textContent=slogan;
     ph.insertAdjacentElement('afterbegin',sh);
@@ -664,9 +990,14 @@ function perNav(){
   if(window.__scProg)window.__scProg();
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
+  scCardTilt();
+  scSerpentHr();
+  scArticleGlyph();
+  scSbbExtras();
   initHeaderFx();
   syncFooter();
   ensureFooterWave();
+  scFooterMail();
 }
 function init(){ensure();perNav();}
 document.addEventListener('DOMContentLoaded',init);
