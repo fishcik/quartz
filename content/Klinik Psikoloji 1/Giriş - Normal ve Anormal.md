@@ -258,10 +258,85 @@ Karmaşa maalesef burda da bitmiyor.. Daha "normal/anormal", "ruhsal bozukluk/ha
 Bakış açısına, uygulama alanına, tarihsel bağlama göre her birinin bir haklılık payı var. 
 ***Ama...***
 *Ve bu "ama" çok önemli..*
-Şu ana kadar, ruhsal bozuklukların özünü daha tatmin edici şekilde yakalayan başka yaklaşık ya da model ortaya konmuş değil. 
+Şu ana kadar, ruhsal bozuklukların özünü daha tatmin edici şekilde yakalayan başka yaklaşım ya da model ortaya konmuş değil. 
 ***Eleştirmek kolay, daha iyisini bulmak zor.*** *Şimdilik.*
 
 DSM-5 bu yüzden sadece kategorik yaklaşımla yetinmeyip, boyutsal ve bozukluklar-arası ve gelişimsel yönleri de daha güçlü şekilde hesaba katmayı hedef koymuş. 
 
-*Aslında idealize edilen: mevcut nosolojik bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
+*Aslında idealize edilen: mevcut nozolojik[^1] bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
 
+**Peki DSM-5'te ne değişti?**
+
+Tüm bu eleştirilere karşı DSM ne yaptı? 
+Önceki versiyonları gibi, DSM-5 de ICD-11'e yol gösteren bir pusula olarak konumlandırıldı. 
+Hedefi net: klinik kullanışlılığı, tanı güvenilirliğini ve geçerliliğini artırmak. 
+
+En sert değişim ise çok eksenli yapının tamamen terk edilmesi oldu. 
+
+*Çok eksenli yapı da nedir?*
+
+Şöyle ki, eski sistemde tanı koymak için beş ayrı eksen vardı. Bunlarla bir hastayı beş farklı açıdan değerlendirmek amaçlanıyordu:
+
+- *Eksen 1: Klinik bozukluklar (yani asıl "hastalık" denen şey; depresyon, anksiyete, şizofreni gibi)*
+- *Eksen 2: Kişilik bozuklukları ve zeka geriliği (yani kalıcı ve uzun süreli örüntüler)*
+- *Eksen 3: Bedensel tıbbi durumlar (diyabet, kalp hastalığı, tiroid sorunları gibi)*
+- *Eksen 4: Psikososyal ve çevresel sorunlar (işsizlik, boşanma, evsizlik, travma gibi)*
+- *Eksen 5: Genel işlevsellik düzeyi (kişinin hayatını ne kadar "sürdürebildiğini" 0-100 arası bir puanla belirlemek)*
+
+Yani hasta portresi aşağı yukarı şöyle oluyordu: 
+"
+Eksen 1: Majör depresif bozukluk. 
+Eksen 2: Yok. 
+Eksen 3: Hipertansiyon. 
+Eksen 4: İş kaybı. 
+Eksen 5: 55/100
+"
+Beş katmanlı bir profil. 
+
+
+Bu sistem aslında iyi ilerliyordu, mantığı güzeldi; "*insan tek boyutlu değil, bütüncül bakılmalı*" deniyordu. 
+**Ama**: Bir insanı sadece "depresyon" diye etiketlemek, aynı zamanda tüm bağlamı gösterme çabasıydı. Pratikte bu kaos yarattı; klinisyenler eksenler arasındaki bağlantıları kurmakta zorlandı, zaman tüketti, güvenilirlik düştü. 
+
+Özellikle Eksen 1 ile Eksen 2 arasındaki ayrım yapaydı: 
+kişilik bozukluklarının, "*gerçek*" klinik bozukluklardan (depresyon, anksiyete vb.) temelde bambaşka bir kategori olduğu **varsayılmıştı**.
+
+"Gerçek" bozukluklar genelde epizodik[^2] kabul edilirdi. Yani: gelir, bi süre kalır, sonra iyileşir ya da kronikleşir. 
+
+Fakat araştırmalar ilerledikçe, bu ayrımın bilimsel bi temeli olmadığı ortaya çıktı.. Kişilik bozuklukları da "gerçek" bozukluklar gibi aynı mantıkla işliyordu. 
+Mesela: Borderline kişilik bozukluğu ile depresyon, sık sık iç içe geçiyordu. 
+
+Borderline kişilik bozukluğu olan birini düşündüğümüzde; 
+bu kişi, duygusal dalgalanmalar ve terk edilme korkusu yaşar. 
+Kimlik duygusu zayıftır, öfke patlamaları ve kendine zarar verme davranışları sergiler. 
+
+Aynı zamanda, borderline hastalarının *çok büyük* bir kısmı aynı zamanda majör depresyon da yaşar. Bu da öyle bi kaç günlük bi durum değildir. Bazen haftalar, aylar süren, intihar düşünceleriyle bezenmiş, *işlevsizleştirici* bir depresyondur. 
+
+**Yani:** örnek olarak kullandığımız borderline ile depresyonun bu kadar sık birlikte görülmesi, onları ayrı eksenlere koymak için gerçekten *yapay* ve *keyfi* sebepler bütünü oluşturdu. 
+*Hasta depresyonda olduğu için anti-depresan dayarsın, ama borderline'ın duygusal dengesizliği ilaçla düzelmez, terapi gerektirir.*
+**Ya da** depresyon tedavi edilir, tamam. Ama bu sefer borderline daha da görünür hale gelir, çünkü asıl yapısal sorun zaten oradadır. 
+
+
+*İnsan varlığı o kadar karmaşık ki, onu "geçici epizod" ve "kalıcı kişilik" diye iki ayrı kutuya koymak gerçeği yansıtmıyor.*
+*Depresyon eğer borderline zemininde gelişirse, sadece bir epizod olarak kalmıyor, kişiliğin bir **ifadesi** oluyor. 
+
+**DSM-5**, bu *yapay* ayrımı kaldırarak aslında yanıldığını itiraf etmiş oldu. 
+*"Biz yanıldık... Aslında bu iki eksen zaten tek bir düzlemde, yan yana duruyor..muş.."*
+
+Ama tabi bu itiraftan önce yıllarca bu sistemle *idare* edildi ve milyonlarca kişi, bu yapay ayrımların gölgesinde tanı ve tedavi aldı. 
+
+**Eksenler kalkınca, bozuklukların nasıl sıralanacağına dair yeni bir sistem, yeni bir mantık bulunması gerekiyordu.**
+
+Eski sistemdeki sıralama biraz rastgeleydi. 
+
+Yeni sistemde ise bozukluklar, insanın **yaşam çizgisini** takip ediyor. 
+*Önce* hayatın **en erken** döneminde ortaya çıkan bozukluklar (nöro-gelişimsel, yani; DEHB, otizm gibi çocuklukta *beliren* şeyler), sonrasında da tipik olarak ergenlik sonu/yetişkinlik başında ortaya çıkanlar (şizofreni, bipolar bozukluk), en sona da birincil bir bozukluk *olmayıp* tedavinin bir *yan etkisi* olanlar (ilaca bağlı hareket bozuklukları) yerleştirildi. 
+
+*Yani bir "film şeridi" gibi, baştan sona.*
+Hayatın kendi ritmi içinde ilerliyor. Bozukluklar, insan gelişiminin farklı evrelerinde farklı şekillerde ortaya çıkıyor. 
+**Yani:** bir çocukta otizm neyse, bir gencin şizofrenisi *başka*, bir yaşlının *demansı* apayrı bi şey. Bunları aynı düzleme koyup, hayatın *akışına* göre sıralamak, hem tanıyı hem de anlamayı kolaylaştırıyor. 
+
+
+
+[^1]: nozoloji= hastalıkları sınıflandırma bilimi
+
+[^2]: sürekli olmayan, aralıklı, birbirinden bağımsız meydana gelen durumlar
