@@ -127,12 +127,15 @@ Uzun notlarda (3+ başlık) notun en üstüne, frontmatter'dan hemen sonra eklen
 
 ---
 
-## Akademik Kaynak Formatı
+## Akademik Kaynak Formatı (APA 7)
 
-sayko.ch'de kaynak gövde içinde parantez içi atıf olarak gösterilir:
+sayko.ch'de birincil tercih gövde içi APA 7 standartlarına uygun yazar-yıl atıfıdır:
 ```markdown
 Sheeran ve ark. (1999) 121 çalışmayı inceleyen meta-analizinde...
 ```
+* **Tek yazar:** `Freud (1923)...` veya `(Freud, 1923)`
+* **İki yazar:** `Baumann ve Perrez (2005)...` veya `(Baumann & Perrez, 2005)`
+* **Üç ve daha fazla yazar:** İlk atıftan itibaren doğrudan "ve ark." kullanılır: `Holmes ve ark. (2018)...` veya `(Holmes ve ark., 2018)`
 
 Dipnot tercih edilirse Obsidian footnote syntax'ı:
 ```markdown
@@ -145,6 +148,16 @@ Dipnot tercih edilirse Obsidian footnote syntax'ı:
   ```markdown
   %%EKLENTI — kaynak doğrulanmadı: ...%%
   ```
+
+---
+
+## Sözlük Syntax'ı (Glossary)
+
+Metin içinde geçen kritik terimler için satır içi tooltip ve `/sozluk` altyapısına bağlanan sözlük syntax'ı:
+```markdown
+[[term::Nozoloji|Hastalıkları sınıflandırma ve tanımlama bilimi]]
+```
+* `TermName` terimin adı, `Definition` ise kısa, net tanımıdır.
 
 ---
 
