@@ -335,6 +335,90 @@ Yeni sistemde ise bozukluklar, insanın **yaşam çizgisini** takip ediyor.
 Hayatın kendi ritmi içinde ilerliyor. Bozukluklar, insan gelişiminin farklı evrelerinde farklı şekillerde ortaya çıkıyor. 
 **Yani:** bir çocukta otizm neyse, bir gencin şizofrenisi *başka*, bir yaşlının *demansı* apayrı bi şey. Bunları aynı düzleme koyup, hayatın *akışına* göre sıralamak, hem tanıyı hem de anlamayı kolaylaştırıyor. 
 
+Bu durumda eksenlerin çöpe gitmesinden bahsedebilir miyiz?
+
+Ruhsal bozukluklar, şu an için en iyi şekilde betimsel, çok eksenli bir yaklaşımla tanımlanabilir, şimdilerde kabul gören yaklaşım bu. 
+
+Çok eksenli yaklaşım da ne demek?
+Ruhsal bozukluklara dair çok eksenli sınıflandırma sistemleri, psikolojide yerleşik olan multimodal-multimetodal yaklaşımı yaklaşık olarak hesaba katma girişimidir. 
+Bozulmuş davranışın ortaya çıkış ve gözlemlenme düzlemlerinin karmaşıklığına daha adil davranabilmek için. 
+
+Peki bu ne anlama geliyor?
+
+Bir bozukluğun semptomları tek bir düzlemde değil, birden fazla katmanda tarif ediliyor. Yani, bozukluğun sadece semptomlarını farklı seviyelerde betimlemek değil, aynı zamanda kişinin genel bedensel durumunu, psikolojik ve davranışsal özelliklerini, sosyal faktörlerini ve genel işlevsellik düzeyini de resme dahil edilmesi. 
+Yani, insanı sadece etiketiyle değil, bağlamıyla, bedeniyle, çevresiyle bir bütün olarak görmeye çalışmak. 
+
+***Mesela*** agorafobisi bulunan bir hasta, aynı zamanda agorafobiyle hiç ilgisi olmayan bedensel bir hastalık da ***taşıyor olabilir.***
+
+İkisi bağımsız gibi görünse de, birlikte değerlendirilmelidir. 
+
+Ya da yine bu kişinin ailesiyle, işiyle, evi ve finansal durumuyla ilgili değişkenlerin de hesaba katılması gerekiyor ki, değerlendirme daha kapsayıcı ve anlamlı olabilsin. Alakasız görünen şeyler de, rahatsızlığa bütünsel olarak bakıldığında bir çok anlam ifade edici nokta çıkartabilir. 
+*Hatta, bunların* **hiç** *hesaba katılmamasının neredeyse hiç bi kazancı yok.*
+
+***Ama*** bu daha kapsamlı ve çok eksenli yaklaşım *bile* kusurlu bulunuyor. 
+**Neden?**
+*İki büyük eksiklik var...*
+1) **İşlevsel boyutların ihmal edilmesi**
+*Yani:* bir bozukluğun tanımlanırken, onun **ne** olduğuna odaklanmak ve **nasıl işlediğine** bakmamak. *Kişinin günlük hayatında bu bozukluğun ne anlama geldiğine, hangi durumlarda peydah olduğuna, nasıl değişim gösterdiğine ve ne olunca azalıp/çoğaldığına pek dikkat etmemek...*
+2) **Zaman dinamiği**
+*Yani:* bir bozukluğun zamanla nasıl değiştiğinin pek de hesaba katılmaması.. Bir insanın dünü ile bugünü farklıdır, yarını da. Ama *çok eksenli sistem* bu akışı *yakalamakta* zorlanır. 
+
+---
+
+**Çok katmanlı bakmak ne demek? Daha da iyi anlamak için bir kaç örnek:**
+
+***1. Normal bi kriz mi, yoksa depresyon mu?***
+
+Gerold M., ellisine gelmiş, başarılı bir yönetici.. Para var, ailesi var, sağlığı yerinde, turp gibi...
+Ama son haftalarda bi şeyler epey ters görünüyor. 
+O neşeli Gerold bey gitti, adeta kara bir bulut geldi onun yerine.
+İşletmenin sabah saatlerindeki bir seminerinde, ayan beyan bir şekilde zilzurna sarhoş bir konuşma yapınca durum ciddileşti. 
+İçine kapandı, işten de elini eteğini çekti. 
+Arkadaşları ve ailesiyle de görüşmemeye, zaman geçirmemeye başladı. 
+Çalışma odasına *kapattı* kendini. 
+Orda her gün içmeye başladı. 
+İştahı kapandı, uykusu mahvoldu. 
+Hiçbir şeyden zevk almaz oldu. 
+Giderek hayatın kontrolünü kaybettiğine inandı. 
+Gözleri sık sık evdeki av tüfeğine gitmeye başladı. 
+Ölürse ailesine yeterli maddi güvence bırakıp bırakamayacağını sorguluyordu. 
+
+*Kriz mi? Depresyon mu? İkisi de mi? Sınır nerde?*
+
+
+***2. Çocukluktaki davranış sorunları***
+
+Patrizia, erkek kardeşi doğduğunda 7 yaşındaydı. Kardeşinin doğumundan hemen sonra evde kaos başladı. 
+Ufak şeylere öfke nöbetleri.
+Evde sürekli bir gerginlik hali..
+Öğretmenine karşı son derece asi ve meydan okuyucu bir tavır.
+Halbuki, kardeşinin doğumundan önce hareketli, aktif ve uyumlu bir çocuktu. 
+Artık en ufak provokasyonda diğer çocuklara saldırmaya başladı. 
+Asıl patlama kardeşi 6 aylıkken yaşandı: bir öfke nöbeti sırasında kardeşini öyle sert itti ki,  başı duvara çarptı.
+Ciddi bi yaralanma olmadı ama annesi Patrizia'ya bir tokat patlattı. 
+Babası çıldırdı, karısına bağırdı "Çocuğa el kaldırma!" diye.
+
+*Soru: bu normal bir kardeş kıskançlığının uyum bozukluğuyla birleşmiş hali mi?
+Yoksa daha derinde, davranım bozukluğunun habercisi mi? Sınır?*
+
+***3. Psikoz mu yoksa başka bi şey mi?***
+
+Thomas üniversitenin ikinci yılında, kendi kendine konuşmaya başladı..
+Ev arkadaşları da onu giderek daha sık onu kendi kendine mırıldanırken duyuyordu. 
+Thomas, kız arkadaşıyla telefonda konuşurken iş iyice ortaya çıktı: aslında duyduğunu sandığı seslerle "*konuşuyordu.*"
+Sonraki aylarda da kendini iyice ihmal etmeye başlatı. Ne duş alıyordu ne de kıyafetlerini değiştiriyordu. 
+Sürekli olarak evdeydi. 
+Bi gece, oda arkadaşını bağırıp çağırarak uyandırdı. Arkadaşının üzerine eğilip  vahşi bir şekilde durmaksızın küfürler ediyordu. 
+Arkadaşı, Thomas'ı sakinleştirmeyi başardı ve bir şekilde ikna edip hastanenin acil servisine götürdü. 
+
+*Bu, psikotik bir vaka mıydı? Yoksa genç bir adamın yoğun stres altında yaşadığı geçici, atipik bir kriz miydi? Sesler gerçek miydi? Bunlar bozukluğun bir parçası mı yoksa bozukluğa tepki mi?*
+
+
+**Bu örneklerin hepsi ortak noktası ne?**
+Bir insanın yaşadıklarını *normal* ve *anormal*, *hasta* ve *sağlıklı* diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
+Bu üç vaka, tam da çok eksenli/multimodal yaklaşımın *neden gerekli olduğunu gösteriyor.*
+Çok eksenli sistem, bu hikayeleri kategorilere sığdırmaya çalışıyor. Ama hayat, kategorilerden **hep taşıyor.** 
+*Bu yüzden bu öyküler birer* **uyarı** *"tanı koymadan önce, kişiyi dinle; sadece semptomlarını değil, hikayesini de".*
 
 
 [^1]: nozoloji= hastalıkları sınıflandırma bilimi
