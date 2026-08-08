@@ -3,7 +3,7 @@ title: Beslenme Psikolojisi
 date: 2026-06-17
 tags:
   - sağlık-psikolojisi
-  - bağımlılık-psikolojisi
+  - beslenme
 ---
 
 # Beslenme Psikolojisi
@@ -37,7 +37,7 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 > 
 > *Bu kurallar sağlıklı bireyler içindir; diyabetliler gibi hasta kişiler için tabi ki farklı öneriler geçerlidir.*
 
-> [!check] DGE Önerilen Makro Dağılımı
+> [!success] DGE Önerilen Makro Dağılımı
 > - **52-53% Karbonhidrat:** *Tahıl ürünleri, patates, meyve & sebze*
 > - **28-31% Yağ:** *60-80g, bitkisel*
 > - **16-17% Protein:** *Süt ürünleri, et, balık*
@@ -96,3 +96,5 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 **DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.**
 
 **Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. [[Öz-Yeterlilik|Öz-yeterlilik]] de işte o ağır çantayı taşıyabildiğine duyduğun inanç.**
+
+[^1]: DGE: Deutsche Gesellschaft für Ernährung (Alman Beslenme Derneği).

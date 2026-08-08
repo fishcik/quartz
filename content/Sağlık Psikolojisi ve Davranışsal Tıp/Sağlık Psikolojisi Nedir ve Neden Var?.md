@@ -1,3 +1,11 @@
+---
+title: Sağlık Psikolojisi Nedir ve Neden Var?
+date: 2026-01-15
+tags:
+  - sağlık-psikolojisi
+  - saglik-psikolojisi-nedir
+---
+
 # Sağlık Psikolojisi Nedir ve Neden Var?
 
 >*İnsanlar neden hastalanıyor ve bu süreçte psikolojinin rolü ne?*
@@ -86,3 +94,7 @@ Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla
 
 
 [^1]: Davranış tıbbı, Tıp psikolojisi, Psikosomatik, Konsültasyon psikiyatrisi, Psikiyatri, Klinik psikoloji
+
+[^2]: Biyomedikal model: Hastalığı sadece biyolojik/somatik bir arıza, sağlığı ise arızanın yokluğu olarak gören, psikososyal boyutları dışlayan geleneksel model.
+
+[^3]: Biyopsikososyal model: Sağlık ve hastalığın biyolojik, psikolojik ve sosyal faktörlerin karşılıklı etkileşimiyle belirlendiğini savunan bütüncül paradigma.

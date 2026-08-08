@@ -1,3 +1,11 @@
+---
+title: Görsel Korteks — Nesneler ve Sahneler
+date: 2026-01-15
+tags:
+  - biliş-psikolojisi-1
+  - gorsel-korteks-nesneler
+---
+
 # Görsel Korteks — Nesneler ve Sahneler
 
 ```

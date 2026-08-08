@@ -1,2 +1,10 @@
+---
+title: Çıkarımsal İstatistik II
+date: 2026-01-15
+tags:
+  - istatistik-1
+  - cikarimsal-i-statistik
+---
+
 # Çıkarımsal İstatistik II
 
