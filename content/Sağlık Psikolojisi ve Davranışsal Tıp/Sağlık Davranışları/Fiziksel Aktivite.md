@@ -3,6 +3,7 @@ title: Fiziksel Aktivite
 date: 2026-06-17
 tags:
   - sağlık-psikolojisi
+  - fiziksel-aktivite
 ---
 
 # Fiziksel Aktivite
@@ -32,3 +33,5 @@ Aslında depresyon-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: harek
 *Bu planı yapmadan [[Niyet-Davranış Uçurumu|niyet havada asılı kalıyor.]]*
 
 *Tabi herkes aynı aşamada olmayabilir...*
+
+[^1]: Metabolik risk: İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.

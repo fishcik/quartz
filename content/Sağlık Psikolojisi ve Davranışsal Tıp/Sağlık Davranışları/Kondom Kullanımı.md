@@ -1,19 +1,18 @@
 ---
-title: Kondom Kullanımı 
-date: 2026-06-16 
+title: Kondom Kullanımı
+date: 2026-06-16
 tags:
   - sağlık-psikolojisi
-  - davranışsal-önlem
-  - risk-algısı
+  - kondom-kullanimi
 ---
 
-[[Sağlık Modelleri; Bilmek Negen Yetmiyor?|Kondom kullanımı]] sadece bir HIV/hastalık korkusu ya da soyut bilgi meselesi değildir. Asıl olay, lojistik hazırlık ve partnerle iletişim süreçlerini kapsayan "planlama" ile bireyin [[Sağlık Modelleri; Bilmek Negen Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] algısıdır. *Özellikle gençlerde gebeliği önleme arzusu, hastalıktan korunma motivasyonuna kıyasla kondom kullanımını çok daha güçlü şekilde tetikler.*
+[[Sağlık Modelleri; Bilmek Neden Yetmiyor?|Kondom kullanımı]] sadece bir HIV/hastalık korkusu ya da soyut bilgi meselesi değildir. Asıl olay, lojistik hazırlık ve partnerle iletişim süreçlerini kapsayan "planlama" ile bireyin [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] algısıdır. *Özellikle gençlerde gebeliği önleme arzusu, hastalıktan korunma motivasyonuna kıyasla kondom kullanımını çok daha güçlü şekilde tetikler.*
 
 ---
 
 **Peki kondom kullanımını en çok neler etkiler?**
 
-En başta [[Sağlık Modelleri; Bilmek Negen Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] geliyor. *Kondom kullanabileceğine inanan kişi, kullanıyor. Kendine güven, davranışı öngörüyor.*
+En başta [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] geliyor. *Kondom kullanabileceğine inanan kişi, kullanıyor. Kendine güven, davranışı öngörüyor.*
 
 *Yanında kondom taşımak, partnerle* **önceden** *konuşmak.* **Niyet yetmez, eylem planı lazım.**
 
@@ -26,7 +25,7 @@ En başta [[Sağlık Modelleri; Bilmek Negen Yetmiyor?#Asıl olay Öz-yeterlilik
 Tabi insanı laboratuvardaki _rasyonel_ bir robot gibi kodlarsak: "planlama yaparsa, öz-yeterliliği varsa, o kondomu takar bu adam.." deriz. **Gerçek** hayatta işler pek böyle yürümüyor. Alkol, madde, duygu durumu, redden korkma gibi "irrasyonel" ve durumsal değişkenler bu steril bakış açısında _tamamen_ göz ardı ediliyor.
 
 > [!warning] Kritik Nokta
-> Bilişsel planlama, alkollü (mesela) bir beynin karşısında her zaman ayakta kalamaz. Model bunu görmüyor. Bu da demek oluyor ki "[[Sağlık Modelleri; Bilmek Negen Yetmiyor?#Niyet ve Planlı Davranış Teorisi (TRA/TPB)|iyi planlanmış davranış]]" modelleri durumsal faktörleri _sistematik_ bi şekilde dışarda bırakıyor. Literatür de bunu henüz tam olarak ele almıyor.
+> Bilişsel planlama, alkollü (mesela) bir beynin karşısında her zaman ayakta kalamaz. Model bunu görmüyor. Bu da demek oluyor ki "[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Niyet ve Planlı Davranış Teorisi (TRA/TPB)|iyi planlanmış davranış]]" modelleri durumsal faktörleri _sistematik_ bi şekilde dışarda bırakıyor. Literatür de bunu henüz tam olarak ele almıyor.
 
 Aslında tüm bu bulgular [[Güneşten Korunma|sağlık iletişiminin]] en kör noktalarından birini gösteriyor: **risk üzerine kurulu mesajlar**ın sınırları.
 
@@ -41,3 +40,5 @@ Gebelikle ilgili motivasyonun hastalıktan korunma motivasyonundan daha güçlü
 
 ---
 *İnsan rasyonel bir canlı değildir, estetik bir hayvandır.*
+
+[^sheeran1999]: Sheeran, P., Abraham, C., & Orbell, S. (1999). Psychosocial correlates of heterosexual condom use. *Psychological Bulletin*, 125(1), 90–132.

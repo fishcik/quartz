@@ -1,3 +1,11 @@
+---
+title: Geri Düşüş
+date: 2026-01-15
+tags:
+  - sağlık-psikolojisi
+  - geri-dusus
+---
+
 ### Ortak Düşman: Geri Düşüş (Relapse)
 
 *Tüm modellerin kesiştiği bir konu var:* **insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**
@@ -113,11 +121,4 @@ Yeni **dinamik modelde** her şey birbiriyle anlık etkileşimde:
 
 *Sistem aşırı kompleksleştiği için deneysel olarak kanıtlanması şu an tam bir lojistik cehennem.*
 
-
-
-
-
-
-
-
-
+[^1]: AVE (Perhiz İhlali Etkisi): Marlatt & Gordon tarafından tanımlanan; hedeflenen bir perhizde tek bir hatadan sonra yaşanan suçluluk ve kontrol kaybı hissinin tetiklediği nüks döngüsü.

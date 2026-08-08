@@ -3,7 +3,7 @@ title: Sigaranın Psikolojisi
 date: 2026-06-17
 tags:
   - sağlık-psikolojisi
-  - bağımlılık-psikolojisi
+  - sigara
 ---
 
 # Sigaranın Psikolojisi
@@ -32,7 +32,7 @@ Sonuçlar, sigaranın tam bi ==zaman gecikmeli katil== olduğunu kanıtladı:
 - Ancak son 20 yıla gelindiğinde, ölümlerin arkasındaki temel sebebin *doğrudan* sigara olduğu ortaya çıktı.
 - Özellikle 45-64 yaş grubundaki sigara içenlerin ölüm riski, hiç içmeyenlere kıyasla **3 katına çıktı**.
 
-> [!important] Çıkarım:
+> [!warning] Çıkarım:
 > Sigara hemen öldürmez. Hasarı sinsice biriktirir... ve faturayı orta yaşta önüne koyar.
 > Çalışmanın "iyi" bir bulgusu ise: orta yaşta bile bıraksan, yaşam beklentin içmeye devam edenlere göre anlamlı düzeyde artıyor.
 > **Hiçbir zaman geç değil.**
@@ -96,3 +96,7 @@ Doğru strateji ile.
 
 Evet...
 Beyin zaten napması gerektiğini biliyor. Bazen sadece doğru anda doğru şeyi hatırlaması yeterli.
+
+[^1]: Doll ve ark. (1994): British Doctors Study (İngiliz Hekimler Çalışması). 34.000'den fazla hekimi 40 yıl boyunca izleyerek sigaranın ölüm riskini 3 kat artırdığını kanıtlayan tarihi epidemiyolojik çalışma.
+
+[^2]: Nikotin regülasyon teorisi: Tiryakinin vücudundaki nikotin seviyesini sabit bir fizyolojik eşikte tutmak için içme sıklığını ve nefes derinliğini bilinçsizce ayarladığını öne süren biyolojik model.

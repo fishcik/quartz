@@ -1,4 +1,38 @@
+---
+title: Giriş
+date: 2026-01-15
+tags:
+  - gelişim-psikolojisi-1
+  - giris
+---
+
 # Giriş: Gelişim Psikolojisinin Konusu ve Görevleri
+
+## İçindekiler
+
+- [[#Kısa anlık değişimler gelişim değil, bunu biliyoruz.]]
+- [[#Gelişim döllenmeyle başlar, ölümle biter.]]
+- [[#Nicel vs. Nitel]]
+- [[#Geri dönüş bileti var mı?]]
+- [[#Herkeste mi, sende mi?]]
+- [[#Pencere Açık, Pencere Kapandı]]
+- [[#Stabilite - Ama hangisi?]]
+- [[#Süreklilik - Geçmiş geleceği yazıyor mu?]]
+- [[#Gelişim psikolojisi neye yarıyor?]]
+- [[#Her Şey Her Şeyi Etkiliyor]]
+- [[#Genetik 101 - DNA]]
+- [[#Kalıtım]]
+- [[#Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)]]
+- [[#Aynı Pislik, Farklı Hasar]]
+- [[#Yaşlılık: Gen vs Çevre]]
+- [[#"Ortalama" yeterli mi?]]
+- [[#Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin]]
+- [[#Kendi Hikayenin Ortak Yazarı Olmak]]
+- [[#Çocuğun İcadı ve İlk Günlükler]]
+- [[#Kurumsallaşma ve Teorik Yükseliş]]
+- [[#Çağdaş Paradigma, 4 Trend]]
+
+---
 
 
 >Gelişim nedir? 
@@ -659,14 +693,6 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 
 ***Gelişim psikolojisi bilim olarak 135 yıllık ama insan anlamaya çalıştığından beri bu sorular hep vardı zaten.***
 
+[^1]: ontogenez: Bireyin döllenmeden ölüme kadar kendi bireysel yaşam seyri içindeki gelişimi.
 
-
-
-
-
-
-
-
-
-
-
+[^2]: synaptic pruning: Beynin erken çocuklukta kurduğu aşırı sinaptik bağlantılardan kullanılmayanları budayıp işlevsel olanları güçlendirmesi.

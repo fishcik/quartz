@@ -1,3 +1,11 @@
+---
+title: Sağlık Modelleri; Bilmek Neden Yetmiyor?
+date: 2026-01-15
+tags:
+  - sağlık-psikolojisi
+  - saglik-modelleri-bilmek
+---
+
 # Sağlık Modelleri; Bilmek Neden Yetmiyor?
 
 Sigara öldürür, hareket etmek iyidir, sebze yemek lazım. Bunları herkes biliyor. Bunları bilmek için tıp okumaya da gerek yok. Ambalajların üstünde bile yazıyor. 
@@ -779,6 +787,10 @@ Vahşi ve TAM bir geri düşüş
 
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
 
+[^1]: HBM: Health Belief Model (Sağlık İnanç Modeli). Bireyin bir sağlık tehdidini algılama düzeyi ile eylemin beklenen yararı/maliyeti dengesine dayanan bilişsel model.
 
+[^2]: TPB / TRA: Theory of Planned Behaviour / Theory of Reasoned Action (Planlı Davranış Teorisi). Davranışın doğrudan niyet, tutum, öznel norm ve algılanan davranış kontrolü tarafından belirlendiğini savunan model.
 
+[^3]: HAPA: Health Action Process Approach (Sağlıklı Eylem Süreci Yaklaşımı). Motivasyonel (niyet öncesi) ve volisyonel (eylem/planlama) evreleri birbirinden ayıran hibrit aşama modeli.
 
+[^4]: AVE: Abstinenz-Verletzungs-Effekt (Perhiz İhlali Etkisi). Bağımlılıkta küçük bir tökezlemenin suçluluk duygusuyla tam bir geri düşüşe evrilmesi.

@@ -3,8 +3,7 @@ title: Giriş - Normal ve Anormal
 date: 2026-01-15
 tags:
   - klinik-psikoloji-1
-  - normal-anormal
-  - tani-siniflandirma
+  - giris-normal-ve
 ---
 
 # Giriş
