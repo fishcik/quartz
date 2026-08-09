@@ -7,4 +7,3 @@ tags:
 ---
 
 # Bulgularının Yayımlanması ve Bilim Etiği
-

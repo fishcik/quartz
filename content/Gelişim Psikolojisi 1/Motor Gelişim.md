@@ -7,4 +7,3 @@ tags:
 ---
 
 # Motor Gelişim
-

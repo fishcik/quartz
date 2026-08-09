@@ -7,4 +7,3 @@ tags:
 ---
 
 # Grup Dinamiği ve Grup Performansı
-

@@ -7,4 +7,3 @@ tags:
 ---
 
 # Obsesif Kompulsif Bozukluk ve Tikler
-

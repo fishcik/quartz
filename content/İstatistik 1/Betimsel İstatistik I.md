@@ -7,4 +7,3 @@ tags:
 ---
 
 # Betimsel İstatistik I
-

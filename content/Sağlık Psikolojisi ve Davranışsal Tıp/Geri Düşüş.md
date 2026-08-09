@@ -57,7 +57,7 @@ Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü te
 
 ## 2. Perhiz İhlali Etkisi (AVE)
 
-#### ***Perhiz İhlali Etkisi***
+### ***Perhiz İhlali Etkisi***
 *(AVE - Abstinenz-Verletzungs-Effekt)*
 Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini **kötü** ve **suçlu** hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir: *"Ben iradesizim!"* veya *"Ben alkolik bir hastayım!"*. 
 Bu iki *atıf* da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu *olumsuz duygulardan kaçmak için* yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf *doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
@@ -121,7 +121,7 @@ Aynı zamanda Görünüşte Alakasız Kararlar, ya da orijinal dilinde Apparentl
 *Alkolü bırakan birinin "ya haftaya arkadaşlar falan gelir, ne olur ne olmaz, evde bulunsun...." diyerek eve alkol alması. Görünüşte kankalıktır, misafirperverliktir.. Ama arka planda zihin o maddeyi bir nebze daha kolay **ulaşılabilir** kılarak olası bir kriz anında **bodoslama** geri düşüşün zeminini kendisi hazırlar.
 
 
-#### Sonuç
+### Sonuç
 *Meta-analizler Marlat'ın modeline dayanan terapilerin özellikle alkol ve çoklu madde bağımlılıklarında çok iyi çalıştığını, hastaların refahını uçurduğunu gösteriyor. 
 **İlginç** bir şekilde, sigara bırakma ve kokain senaryolarında etkisi biraz daha zayıf. 
 Model ayrıca depresyon, panik atak ve obezite gibi klinik durumlarda da işe yarıyor ve kullanılıyor.*

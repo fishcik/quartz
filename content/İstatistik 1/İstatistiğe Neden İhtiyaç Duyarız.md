@@ -7,4 +7,3 @@ tags:
 ---
 
 # İstatistiğe Neden İhtiyaç Duyarız
-

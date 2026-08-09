@@ -7,4 +7,3 @@ tags:
 ---
 
 # Denge Duyusu
-

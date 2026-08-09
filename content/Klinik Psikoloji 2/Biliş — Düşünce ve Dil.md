@@ -7,4 +7,3 @@ tags:
 ---
 
 # Biliş — Düşünce ve Dil
-

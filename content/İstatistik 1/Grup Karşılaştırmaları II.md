@@ -7,4 +7,3 @@ tags:
 ---
 
 # Grup Karşılaştırmaları II
-

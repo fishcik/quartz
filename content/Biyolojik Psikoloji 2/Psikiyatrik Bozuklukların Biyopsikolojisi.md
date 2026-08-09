@@ -7,4 +7,3 @@ tags:
 ---
 
 # Psikiyatrik Bozuklukların Biyopsikolojisi
-

@@ -7,4 +7,3 @@ tags:
 ---
 
 # Deri Duyuları ve Kimyasal Duyular
-

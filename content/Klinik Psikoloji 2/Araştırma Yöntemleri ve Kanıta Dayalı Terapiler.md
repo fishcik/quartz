@@ -7,4 +7,3 @@ tags:
 ---
 
 # Araştırma Yöntemleri ve Kanıta Dayalı Terapiler
-

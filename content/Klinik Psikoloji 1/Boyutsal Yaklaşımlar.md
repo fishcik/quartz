@@ -7,4 +7,3 @@ tags:
 ---
 
 # Boyutsal Yaklaşımlar
-

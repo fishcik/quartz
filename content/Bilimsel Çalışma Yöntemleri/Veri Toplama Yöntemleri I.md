@@ -7,4 +7,3 @@ tags:
 ---
 
 # Veri Toplama Yöntemleri I
-

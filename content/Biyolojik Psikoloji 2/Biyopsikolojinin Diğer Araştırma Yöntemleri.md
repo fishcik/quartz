@@ -7,4 +7,3 @@ tags:
 ---
 
 # Biyopsikolojinin Diğer Araştırma Yöntemleri
-

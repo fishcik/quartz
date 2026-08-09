@@ -7,4 +7,3 @@ tags:
 ---
 
 # Gelişim Psikolojisinin Kuramları
-

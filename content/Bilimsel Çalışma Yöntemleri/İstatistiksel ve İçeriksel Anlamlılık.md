@@ -7,4 +7,3 @@ tags:
 ---
 
 # İstatistiksel ve İçeriksel Anlamlılık
-

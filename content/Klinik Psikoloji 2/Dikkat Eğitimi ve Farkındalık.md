@@ -7,4 +7,3 @@ tags:
 ---
 
 # Dikkat Eğitimi ve Farkındalık
-

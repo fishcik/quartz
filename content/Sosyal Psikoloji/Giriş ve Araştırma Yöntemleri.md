@@ -7,4 +7,3 @@ tags:
 ---
 
 # Giriş ve Araştırma Yöntemleri
-

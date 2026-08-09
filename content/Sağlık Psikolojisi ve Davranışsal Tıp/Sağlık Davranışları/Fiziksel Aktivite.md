@@ -10,13 +10,25 @@ tags:
 
 *Hareket neden bu kadar çok şeyi değiştiriyor ve neden hâlâ oturuyoruz?*
 
+## İçindekiler
+
+- [[#1. Hareketin Tanımı ve Koruyucu Rolü]]
+- [[#2. Mekanizma: Fizyoloji vs. Sosyal Temas]]
+- [[#3. Niyetten Eyleme: Planlama ve İnaktivite]]
+
 ---
 
-[[Fiziksel Aktivite|Fiziksel aktiviteden]] kasıt ağır performans sporları değildir. Almanlar (DGK) yetişkinlere günde en az 30 dk. hafif terleten ve nabzı yükselten hareket önerirken, çocuklara 1-2 saat öneriyor.
+## 1. Hareketin Tanımı ve Koruyucu Rolü
 
-> Hareket, metabolik riskleri minimize eden ve [[Klinik Depresyon|klinik depresyonu]] önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
+Fiziksel aktiviteden kasıt ağır performans sporları değildir. Almanlar (DGK) yetişkinlere günde en az 30 dk. hafif terleten ve nabzı yükselten hareket önerirken, çocuklara 1-2 saat öneriyor.
 
-Aslında depresyon-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: hareketin kendisi mi iyileştiriyor, yoksa [[Sosyal İzolasyon|social temas]] mı? Bu soru önemli çünkü cevabı müdaheleyi değiştirir. 
+> Hareket, metabolik riskleri[^1] minimize eden ve klinik depresyonu önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
+
+---
+
+## 2. Mekanizma: Fizyoloji vs. Sosyal Temas
+
+Aslında depresyon-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: hareketin kendisi mi iyileştiriyor, yoksa sosyal temas mı? Bu soru önemli çünkü cevabı müdaheleyi değiştirir. 
 
 > [!info] Yani?
 > Belki de grup sporları bireysel koşudan daha iyi sonuç veriyor.
@@ -26,11 +38,15 @@ Aslında depresyon-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: harek
 
 ==***Yani:*** *Kalp, kanser, osteoporoz, diyabet, depresyon ve bi ton farklı şeyi* **tek** *bir davranışın aynı anda etkilemesi başka* **hiçbir müdahale için geçerli değil.**==
 
+---
+
+## 3. Niyetten Eyleme: Planlama ve İnaktivite
+
 *Neden zor?*
-Çünkü niyet yetmiyor! Yine! 
-"Yapacağım" ile "yaptım" arasına **[[Uygulama Niyeti|planlama]]** giriyor. 
+Because niyet yetmiyor! Yine! 
+"Yapacağım" ile "yaptım" arasına **planlama** giriyor. 
 ***Ne zaman, nerede, nasıl.***
-*Bu planı yapmadan [[Niyet-Davranış Uçurumu|niyet havada asılı kalıyor.]]*
+*Bu planı yapmadan niyet havada asılı kalıyor.*
 
 *Tabi herkes aynı aşamada olmayabilir...*
 

@@ -7,4 +7,3 @@ tags:
 ---
 
 # Kişilerarası Çekim ve Yakın İlişkiler
-

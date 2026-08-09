@@ -7,4 +7,3 @@ tags:
 ---
 
 # Sosyal Biliş
-

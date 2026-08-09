@@ -7,4 +7,3 @@ tags:
 ---
 
 # Motivasyon ve Eylem Düzenlemesi
-

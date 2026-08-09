@@ -7,4 +7,3 @@ tags:
 ---
 
 # Öğrenme, Bellek ve Amnezi
-

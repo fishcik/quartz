@@ -7,4 +7,3 @@ tags:
 ---
 
 # Psikoterapi Nedir — Psikoterapi Ekolleri I
-

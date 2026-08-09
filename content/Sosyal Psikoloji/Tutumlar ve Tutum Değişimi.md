@@ -7,4 +7,3 @@ tags:
 ---
 
 # Tutumlar ve Tutum Değişimi
-

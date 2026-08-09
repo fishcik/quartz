@@ -14,4 +14,3 @@ En sonunda sayko.ch CEO'su ve metin yazarı olarak bu konuyu buraya paylaşcam.
 ```
 
 
-

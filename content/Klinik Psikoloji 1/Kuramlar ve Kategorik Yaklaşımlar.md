@@ -7,4 +7,3 @@ tags:
 ---
 
 # Kuramlar ve Kategorik Yaklaşımlar
-

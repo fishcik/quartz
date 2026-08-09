@@ -7,4 +7,3 @@ tags:
 ---
 
 # Okul Başarısı
-

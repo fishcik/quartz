@@ -7,4 +7,3 @@ tags:
 ---
 
 # Görsel Dikkat ve Eylem
-

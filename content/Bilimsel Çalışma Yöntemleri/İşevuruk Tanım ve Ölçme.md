@@ -7,4 +7,3 @@ tags:
 ---
 
 # İşevuruk Tanım ve Ölçme
-

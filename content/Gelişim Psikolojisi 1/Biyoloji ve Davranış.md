@@ -7,4 +7,3 @@ tags:
 ---
 
 # Biyoloji ve Davranış
-

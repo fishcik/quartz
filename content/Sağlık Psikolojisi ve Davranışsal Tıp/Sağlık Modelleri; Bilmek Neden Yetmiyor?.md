@@ -154,7 +154,7 @@ Sağlık İnanç Modeli (HBM) tam olarak bu *çaresizlikten* doğdu: "bilişsel 
 Yani bir tarafta hissedilen **sağlık tehdidi**, 
 diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inancı, yani **önlemin algılanan yararı**. Bu ikisi yükseldikçe, o davranışı değiştirme olasılığı artıyor.*
 
-###### Tehdit Algısı: *Ne kadar korkuyorsun?*
+### Tehdit Algısı: *Ne kadar korkuyorsun?*
 Tehdit algısını iki bileşen oluşturuyor:
 
 >1) Öznel kırılganlık: "bu hastalık bana da olabilir mi?" sorusunun cevabı.
@@ -184,7 +184,7 @@ Modele sonradan bir ekleme yapıldı çünkü insan sadece korkuyla hareket eden
 *Yani genel olarak, "kendine bakma" "sağlık mevzularını dert etme" bilincini eklediler. 
 Ayrıca tetiği çekecek (davranış değişimini başlatacak) hatırlatıcı uyaranlar entegre edildi. Bu bir **kamu spotu** da olabilir, **sabah öksürük kriziyle** uyanıp "Noluyor aq?!" dediğin anki o ilk fiziksel semptom da.
 
-#### "Bana bi şey olmaz" Kafası
+### "Bana bi şey olmaz" Kafası
 >*Gerçekçi olmayan iyimserlik.*
 
 *Sigara paketlerinin üzerinde bir sürü şey yazıyor ve korkunç görseller var, zararları herkesçe biliniyor. 
@@ -207,7 +207,7 @@ Sonuç? *Herkes kendi riskini ortalamanın altında gördü.*
 ***Bu iyimserlik salaklıktan değil, tamamen korkuyu savuşturma ve kendini koruma mekanizması yüzünden devreye giriyor.***
 *Kanser kötü evet, ama benim genlerim canavar gibi, bana bi şey olmaz* diyerek egoyu koruyoruz. 
 
-#### HBM Neden Çuvalladı?
+### HBM Neden Çuvalladı?
 
 >Gelelim bu modelin neden günümüz sağlık psikolojisinde "antika" olarak kaldığına ve ciddi eleştirilerine. 
 
@@ -393,7 +393,7 @@ Niyet Rubikon'u geçmek, ama nehri geçtikten sonra Roma'ya yürümek ayrı bi h
 
 ***Niyet edersin tamam ama, ettiğin niyeti eyleme dönüştürüp sürdürmek niyet etmekle daha az alakalı ve başka bir durum.***
 
-#### Plan yapmayı denedin mi?
+### Plan yapmayı denedin mi?
 
 Niyet-davranış uçurumunu kapatmanın en kanıtlı yolu somut If/Then (Eğer/O zaman) planları yapmaktır. 
 *"Ne yapacağım" değil, "ne zaman, nerede, nasıl yapacağım" ve "yapamayacak olursam ne yapacağım". 
@@ -479,7 +479,7 @@ Prochaska ve DiClemente şunu fark etti: sigara bırakmaya çalışan insanlara 
 
 ---
 
-#### ***Değişimin 6 Aşaması***
+### ***Değişimin 6 Aşaması***
 
 >1 - *Gaflet Uykusu...*
 
@@ -548,7 +548,7 @@ Prochaska ve DiClemente şunu fark etti: sigara bırakmaya çalışan insanlara 
 
 Tabi TTM sadece aşamalardan ibaret değil.. Aşamaları başlatan ve birbirine bağlayan mekanizma olmadan insan şurdan şuraya gidemez. 
 
-##### Arka Plandaki Motor
+### Arka Plandaki Motor
 
 ***1) "Terazi"***
 "Karar dengesi" de diyebileceğimiz bu terazi, kafamızda sürekli dönen bir "kâr/zarar" simülasyonudur. 
@@ -589,7 +589,7 @@ Yani davranışın değiştirmenin arkasında yatan mental/fiziksel motor budur.
 
 >*Zor bi anda eski alışkanlığa geri dönme isteğinin **şiddeti** (buna TTM'de "ayartma dürtüsü deniyor), aşamalar ilerledikçe azalıyor..*
 
-###### TTM'nin "çatlakları"..
+### TTM'nin "çatlakları"..
 
 Tabi psikolojide neredeyse her şeyde olduğu gibi, bu teoride de akla *tam* olarak yatmayan şeyler **var**:
 
@@ -615,18 +615,18 @@ PAPM, TTM'nin gözden kaçırdığı iki gerçeği modele katar: insanlar bir te
 
 *PAPM*, bir insanın tehlikeyi fark edip önlem alana kadar tam 7 niteliklsel aşamadan i söyler. Burada süre sınırları yok. Zaman ile olmuyor değişimler. Tamamen kafa yapısı (zihniyet) ile oluşan bir süreç:
 
-##### 1) Mutlak Cahillik
+### 1) Mutlak Cahillik
 *Zihniyet:* "O ne demek kanka? İlk defa duyuyorum valla.."
 ***Olayı***: Kişi tehlikenin ve yapması gereken sağlık davranışlarının farkında bile değildir. 
 Mesela evindeki radyoaktif radon gazının kanser yaptığından bihaber olan birisi.
 
 ---
-##### 2) Kulaktan Dolma Bilgi / Kişisel Bağ Kurmama 
+### 2) Kulaktan Dolma Bilgi / Kişisel Bağ Kurmama 
 *Zihniyet:* "Öyle bi şey varmış aynen.. Ama beni bağlamaz."
 ***Olayı:*** Tehlikeyi duymuştur. Ama üzerine hiç düşünmez. Zaman sınırı yoktur.
 
 ---
-###### 3) Karar Masası
+### 3) Karar Masası
 *Zihniyet:* "Hmmmm... Acaba bu konuda bi şey yapsam mı lan?!"
 ***Olayı:*** Mesele artık kişiselleşmiştir. Kişi artık *aktif* olarak bir karar vermeye çalışıyordur.
 **Burası yol ayrımıdır. 
@@ -634,25 +634,25 @@ Mesela evindeki radyoaktif radon gazının kanser yaptığından bihaber olan bi
 Buradan iki farklı aşamaya zıplayabilir:
 
 ---
-###### SOLA DÖNÜŞ
-##### 4) Bilinçli "hayır" kararı 
+### SOLA DÖNÜŞ
+### 4) Bilinçli "hayır" kararı 
 *Zihniyet:* "Düşündüm. Taşındım.. ***VE*** yapmamaya karar verdim..... Konu kilit. Konu kapanmıştır.."
 ***Olayı:*** Eylem sekansı burada biter, durum sabittir. Kişi düşündü ve bilinçli bir karar verdi. 
 
 
-###### SAĞA DÖNÜŞ
-#### 5) Bilinçli "evet" kararı
+### SAĞA DÖNÜŞ
+### 5) Bilinçli "evet" kararı
 *Zihniyet:* "Tamam ya. Bu işi yapıyorum. Kararımı verdim."
 ***Olayı:*** Kişi eyleme geçmeye niyetlenmiştir. Kararsızlık bitmiştir. Şimdi sadece *ilk* adımı atmak (initiation) kalmıştır. 
 
 ---
-#### 6) Savaş Alanı
+### 6) Savaş Alanı
 *Zihniyet:* "Şu an bizzat uyguluyorum. Şu an bu işin İÇİNDEYİM dostum."
 ***Olayı:*** Davranışı ilk defa hayata geçirme anıdır. TTM'deki Action aşamasıyla aynı. 
 
 ---
 
-#### 7) İstikrar
+### 7) İstikrar
 *Zihniyet:* "Bu olay artık hayatımın bir parçası kanka..."
 ***Olayı:*** Davranışın kalıcılaşması ve sürdürülmesi. 
 
@@ -697,7 +697,7 @@ Yani iki farklı müdahale, iki farklı gruba farklı şekilde işledi. Bu da PA
 
 
 
-#### PAPM'ın Çatlakları
+### PAPM'ın Çatlakları
 1) Kanıt eksikliği: Çalışmaların çoğu enine kesitsel. Yani anlık fotoğraf çekiyorlar. Bir insanın 1'den 7'ye gerçekten bu sırayla geçip geçmediğini kanıtlayacak boylamsal tam bir test hala yapılmış değil. 
 2) Uygulama zorluğu: Gerçek hayatta bir sağlık bakanlığının veya kliniğin, toplumdaki her bireyin 7 aşamadan tam olarak neresinde olduğunu tek tek tespit edip ona göre "biçilmiş" reklam/kamu spotu üretmesi lojistik olarak tam bir cehennemdir. 
 *Ama imkansız değildir.*
@@ -777,7 +777,7 @@ Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü te
 
 ---
 
-#### ***Perhiz İhlali Etkisi***
+### ***Perhiz İhlali Etkisi***
 *(AVE - Abstinenz-Verletzungs-Effekt)*
 Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini **kötü** ve **suçlu** hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir: *"Ben iradesizim!"* veya *"Ben alkolik bir hastayım!"*. 
 Bu iki *atıf* da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu *olumsuz duygulardan kaçmak için* yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf *doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."

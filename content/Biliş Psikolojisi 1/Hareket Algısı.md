@@ -7,4 +7,3 @@ tags:
 ---
 
 # Hareket Algısı
-

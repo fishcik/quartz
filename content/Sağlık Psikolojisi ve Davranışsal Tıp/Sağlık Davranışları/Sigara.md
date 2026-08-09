@@ -10,6 +10,16 @@ tags:
 
 Legal ölüm ürünü.
 
+## İçindekiler
+
+- [[#1. Epidemiyoloji ve 40 Yıllık Doktor Çalışması]]
+- [[#2. Bağımlılık Mekanizması: Biyoloji ve Psikoloji]]
+- [[#3. Tiryakilik Mantığı ve Bırakma Paradoksu]]
+
+---
+
+## 1. Epidemiyoloji ve 40 Yıllık Doktor Çalışması
+
 > [!quote] Bu bok neden bırakılamıyor?
 > **Almanya'da yetişkin nüfusun hâlâ 30%'u aktif olarak cigara içiyor.**
 > Erkeklerin 27%'si, kadınların 20%'si her gün içiyor.
@@ -39,64 +49,33 @@ Sonuçlar, sigaranın tam bi ==zaman gecikmeli katil== olduğunu kanıtladı:
 
 ---
 
-### Sigara Bağımlılığı Nasıl Açıklanıyor?
+## 2. Bağımlılık Mekanizması: Biyoloji ve Psikoloji
 
 Olay sadece nikotin mi?
 Bu da başka konularda olduğu gibi farklı modellerle açıklanmaya çalışılıyor.
 
-**[[Nikotin Regülasyon Teorisi]]**, olayın tamamen fizyolojik olduğunu ve kişinin vücudundaki nikotin seviyesi düşünce yoksunluk belirtilerini bitirmek için sigarasını yakar, ve içer.
+**Nikotin Regülasyon Teorisi**[^1], olayın tamamen fizyolojik olduğunu ve kişinin vücudundaki nikotin seviyesi düşünce yoksunluk belirtilerini bitirmek için sigarasını yakar, ve içer.
 
 *Ama*
 
 Eğer olay sadece *biyolojik nikotin ihtiyacı* olsaydı, piyasadaki nikotin sakızları veya bantları herkesi anında sigaradan kurtarırdı. 
-Demek ki işin içinde çok ağır bi **[[Psikolojik Bağımlılık]]** bileşeni var. Bunu ıskalayan tüm tedaviler patlamaya mahkumdur.
+Demek ki işin içinde çok ağır bi **Psikolojik Bağımlılık** bileşeni var. Bunu ıskalayan tüm tedaviler patlamaya mahkumdur.
 
-[[Bağımlılık Psikolojisi|Bağımlılık]] fiziksel bir bileşenin yanı sıra güçlü bir psikolojik bileşen de içeriyor.
-Psikolojik teoriler sigarayı **[[Öğrenilmiş Davranış]]** olarak görüyor; rahatlama, sosyal onay gibi *düzenleyici* işlevler aracılığıyla **[[Pozitif Pekiştirme]]** ile sürdürülüyor. 
+Bağımlılık fiziksel bir bileşenin yanı sıra güçlü bir psikolojik bileşen de içeriyor.
+Psikolojik teoriler sigarayı **Öğrenilmiş Davranış** olarak görüyor; rahatlama, sosyal onay gibi *düzenleyici* işlevler aracılığıyla **Pozitif Pekiştirme** ile sürdürülüyor. 
 
 Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir tiryakinin beyninde o "click" sesinin çıkması için tek bir rasyonel kırılma gerekiyor:
 ==Korkuyla değil, kazançla hareket etmek.==
 
 ---
 
-### Nörolojik Boyut: Olay Nasıl Gerçekleşiyor?
+## 3. Tiryakilik Mantığı ve Bırakma Paradoksu
 
-Bir sigarayı yakar yakmaz nikotin molekülleri akciğerlerden kana karışıyor ve **6-10 saniye içinde** beyne ulaşıyor. 
-Bu, ==eroin enjeksiyonundan bile hızlı.== 
-Bir etki bu kadar hızlı gelirse beyin onu çok güçlü bir şekilde kodluyor ve *"bu şey işe yarıyor ha, tekrar et bunu"* diyor.
+İnsanlar neden bırakmıyor?
+- "Beni rahatlatıyor." (Aslında sadece nikotin çekilmesinin yarattığı stresi sıfırlıyor, net pozitif bir rahatlama yok).
+- "Kilo alırım." (Kilo alma riski var evet, ama sigaranın yarattığı hasarla kıyaslanamaz bile).
+- "Zaten öleceğiz." (Ölüm biçimi ve yaşam kalitesi farkını göz ardı eden rasyonalizasyon).
 
-Sigara beyindeki nikotinik reseptörleri uyarıyor ve **[[Dopamin]]** salgılanıyor.
-Beyin bu uyarıma adapte olmak için daha fazla reseptör üretiyor. Daha fazla reseptörün olunca daha fazla nikotin ihtiyacı doğuyor. Bağımlılık güçleniyor.
+Sonuç olarak sigara sadece kimyasal bir tuzak değil; bilişsel çarpıtmalar ve davranışsal alışkanlıklarla örülü bir zihinsel labirenttir.
 
-Sigara söndürüldüğünde bu reseptörler boş kalıyor ve ==çığlık atıyor==. Bu çığlık = **[[Yoksunluk Sendromu|Yoksunluk]]**. 
-
-Nikotin bantları bu reseptörleri besliyor. Ama ritüel, tetikleyiciler ya da psikolojik bağ ile herhangi bi işi olmuyor. 
-Bant nikotini karşılıyor, tamam. Ama beyin kahveyle sigarayı birlikte öğrenmiş.
-Stresle sigarayı birlikte öğrenmiş. Sohbet, mola, yemek sonrası..
-Bunlar ayrı ayrı **[[Psikolojik Tetikleyiciler|tetikleyiciler]]** ve bandın bunlara dair söyleyecek pek bi şeyi yok. Napsın, bant sonuçta sadece.
-
-> [!warning] İrade Yanılgısı
-> ==Bırakamamanın sebebi iradesizlik değil.== 
-> [[İrade]] yetmez. Çünkü rakip eşit değil.
-> - Bir tarafta bilinçli "bırakayım" kararı var. *Güzel.*
-> - Diğer tarafta yıllarca öğrenilmiş, binlerce defa pekiştirilmiş, beyin devrelerine kazınmış bir refleks.
-
-Yani beyin mağdur değil. Uyum sağlamış. Ve uyum sağlayan bi şey, geri dönebilir.
-Doğru strateji ile.
-
----
-
-### Nöral Plastisite ve İyileşme
-
-> [!check] İyileşme Zaman Çizelgesi
-> İlk 3 ay zor. 2024'te yayınlanan araştırmalar, sigara bırakıldıktan yaklaşık **3 ay** sonra beynin dopamin sisteminin yeniden normale döndüğünü gösteriyor.
-> - **21 günde:** Reseptörlerini temizliyor, normalleştiriyor.
-> - **3 ayda:** Dopaminini düzenliyor, dengeliyor. 
-> - **1 yılda:** Kalp riskini yarıya indiriyor. 
-
-Evet...
-Beyin zaten napması gerektiğini biliyor. Bazen sadece doğru anda doğru şeyi hatırlaması yeterli.
-
-[^1]: Doll ve ark. (1994): British Doctors Study (İngiliz Hekimler Çalışması). 34.000'den fazla hekimi 40 yıl boyunca izleyerek sigaranın ölüm riskini 3 kat artırdığını kanıtlayan tarihi epidemiyolojik çalışma.
-
-[^2]: Nikotin regülasyon teorisi: Tiryakinin vücudundaki nikotin seviyesini sabit bir fizyolojik eşikte tutmak için içme sıklığını ve nefes derinliğini bilinçsizce ayarladığını öne süren biyolojik model.
+[^1]: Nikotin Regülasyon Teorisi: Vücuttaki nikotin seviyesi düştüğünde ortaya çıkan yoksunluk semptomlarını bastırmak için sigara içme sıklığının ayarlandığını öne süren biyolojik model.

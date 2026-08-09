@@ -8,11 +8,19 @@ tags:
 
 # Beslenme Psikolojisi
 
-_Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illüzyonu üzerinden [[Tip 2 Diyabet]] ve [[Kanser]] gibi hastalıklara zemin hazırlar._
+_Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illüzyonu üzerinden Tip 2 Diyabet ve Kanser gibi hastalıklara zemin hazırlar._
+
+## İçindekiler
+
+- [[#1. Sağlıksız Beslenme ve DGE Kuralları]]
+- [[#2. Akademi vs. Sokak: Mitler ve Gerçekler]]
+- [[#3. Niyet-Davranış Uçurumu ve Öz-Yeterlilik]]
 
 ---
 
-**Olay kalorileri ezberlemek değil. [[Niyet-Davranış Uçurumu|Niyetin eyleme dönüşemediği]] o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "[[Öz-Etkililik|bireysel öz-etkililik]]" mekanizmasını koruyabilmektir.**
+## 1. Sağlıksız Beslenme ve DGE Kuralları
+
+**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik" mekanizmasını koruyabilmektir.**
 
 ---
 
@@ -44,19 +52,23 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 ---
 
-**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme [[İrade|iradesini]] gösterip gösterememeni yine [[Öz-Etkililik|öz-etkililik]] belirler.**
+**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.**
 
 *Sonuçta Alman yetişkinlerin sadece ==%45.8'i== günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.*
 
 ---
 
-#### Akademi vs. Sokak
+## 2. Akademi vs. Sokak: Mitler ve Gerçekler
+
+### Şeker ve Aşırı Kilo
 
 > [!quote] "Şeker yemesem zayıflarım" aynen sanki tek sorun şeker.
 
 ==**Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.**==
 
 ---
+
+### Yağ Algısı ve İrade
 
 > [!quote] "Yağ yemek şişmanlatır" yağın türü ve miktarı değil, varlığı sorun gibi algılanır.
 
@@ -66,9 +78,11 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 > [!quote] "Kilolu = tembel", aşırı kilo tamamen irade meselesi sanılır.
 
-==**Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece [[İrade|iradeye]] indirgenmesi bu faktörleri yok etmez.**==
+==**Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yok etmez.**==
 
 ---
+
+### BMI ve Gizli Hasar
 
 > [!quote] "Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
 
@@ -82,19 +96,21 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 ---
 
+## 3. Niyet-Davranış Uçurumu ve Öz-Yeterlilik
+
 > [!quote] "Ben bu sefer sağlıklı beslenmeyi kafaya çok pis koydum. Yürekten niyetliyim. Kesin yaparım."
 
 ==**Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.**==
 
 > [!example] Povey ve ark. (2000)
-> Bunu sayıyla gösterdi: Niyet için ==%57–64== varyans açıklaması. Gerçek davranışa gelince bu oran ==%19–32=='ye çakılıyor. [[Niyet-Davranış Uçurumu]] tam burada.
+> Bunu sayıyla gösterdi: Niyet için ==%57–64== varyans açıklaması. Gerçek davranışa gelince bu oran ==%19–32=='ye çakılıyor. Niyet-Davranış Uçurumu tam burada.
 
 ---
 
-[[Beslenme Psikolojisi|Beslenme psikolojisinde]] kişinin kendi kapasitesine olan rasyonel inancı, teorideki [[Algılanan Davranış Kontrolü|algılanan davranış kontrolünden]] çok daha kritik bir eylem tahmincisidir.
+Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teorideki algılanan davranış kontrolünden çok daha kritik bir eylem tahmincisidir.
 
 **DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.**
 
-**Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. [[Öz-Yeterlilik|Öz-yeterlilik]] de işte o ağır çantayı taşıyabildiğine duyduğun inanç.**
+**Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. Öz-yeterlilik de işte o ağır çantayı taşıyabildiğine duyduğun inanç.**
 
 [^1]: DGE: Deutsche Gesellschaft für Ernährung (Alman Beslenme Derneği).

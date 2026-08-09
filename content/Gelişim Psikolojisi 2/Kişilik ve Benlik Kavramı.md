@@ -7,4 +7,3 @@ tags:
 ---
 
 # Kişilik ve Benlik Kavramı
-

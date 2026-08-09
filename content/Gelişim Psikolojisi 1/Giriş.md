@@ -66,7 +66,7 @@ Bu, gelişimin çok yönlülüğüdür. Yani tek yöne doğru sürekli bir kazan
 Bunun klasik bir örneğini bebekler üzerinden de anlayabiliriz. 
 Bebekler dünyaya geldiğinde tüm insan dillerindeki sesleri ayırt edebiliyorlar. Yani, Japonca'daki r/l farkını, Türkçe'deki ğ'yi, Almanca'daki ch'yı, hepsini duyuyorlar. Ama 6-12. aylar arasında bu kapasite bir nevi daralıyor, kendi ana diline odaklanıyor ve diğer dillerin seslerine olan duyarlılık azalıyor. 
 
-###### *Kazanç: ana dilde uzmanlaşma. Kayıp: evrensel ses algısı.* 
+### *Kazanç: ana dilde uzmanlaşma. Kayıp: evrensel ses algısı.* 
 
 Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüzme benzeri hareketler yapabilmeleri. Bu refleks de birkaç ay içinde kayboluyor ve sonrasında yüzmeyi *tekrar* öğrenmek gerekiyor, bu sefer bilinçli olarak. 
 
@@ -159,10 +159,10 @@ Yaş normları koyuyorlardı: 2 yaşında şunu yapar, 7 yaşında şu olacak. H
 
 **Ama artık soru değişti:** *"aynı yaştaki iki insan neden farklı gelişiyor?"*
 
-###### Evrensel değişim:
+### Evrensel değişim:
 Herkeste olan. İnsan olmanın olayı olan. Bebekler emekler, çocuklar okur. Biyoloji ve çevre (nature/nurture) o kadar güçlü ve standart ki, neredeyse herkes aynı rotayı izliyor. Burada sen özel değilsin, sistem seni taşıyor, sistem seni sürüklüyor. 
 
-###### Diferansiyel değişim
+### Diferansiyel değişim
 Burda yollar ayrılıyor. Yetişkinlikte artık herkesin hep beraber 30 yaşında yaptığı bir şey kalmıyor. Kim hangi hedefi kovalıyor, kim evleniyor, kim işini kaybediyor, bunlar standart değil. 
 
 ***Çocukluk bir tren yolu gibi düşünülebilir. Herkes aynı rayda gidiyor.*** 
@@ -380,7 +380,7 @@ Bunun cevabı, genlerin mi çevrenin mi daha ağır bastığını söylüyor.
 
 Moleküler genetik çalışmaları direkt spesifik alellere bakıp "bu alel şu özellikle ilişkili mi" diye sorabiliyor. 
 
-#### İkiz Çalışmaları
+### İkiz Çalışmaları
 
 İkizler doğanın kontrol grubu gibi. 
 

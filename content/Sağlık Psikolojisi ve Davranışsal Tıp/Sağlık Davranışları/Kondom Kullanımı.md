@@ -3,42 +3,35 @@ title: Kondom Kullanımı
 date: 2026-06-25
 tags:
   - sağlık-psikolojisi
-  - kondom-kullanimi
+  - kondom-kullanımı
 ---
 
-[[Sağlık Modelleri; Bilmek Neden Yetmiyor?|Kondom kullanımı]] sadece bir HIV/hastalık korkusu ya da soyut bilgi meselesi değildir. Asıl olay, lojistik hazırlık ve partnerle iletişim süreçlerini kapsayan "planlama" ile bireyin [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] algısıdır. *Özellikle gençlerde gebeliği önleme arzusu, hastalıktan korunma motivasyonuna kıyasla kondom kullanımını çok daha güçlü şekilde tetikler.*
+# Kondom Kullanımı
+
+*Neden korunmuyoruz ve karar anında akıl nereye gidiyor?*
+
+## İçindekiler
+
+- [[#1. Cinsel Yolla Bulaşan Enfeksiyonlar ve Risk Algısı]]
+- [[#2. Korunma Kararının Sosyokognitif Dinamikleri]]
+- [[#3. Spontanite İllüzyonu ve Eylem Planı]]
 
 ---
 
-**Peki kondom kullanımını en çok neler etkiler?**
+## 1. Cinsel Yolla Bulaşan Enfeksiyonlar ve Risk Algısı
 
-En başta [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Asıl olay Öz-yeterlilik|öz-yeterlilik]] geliyor. *Kondom kullanabileceğine inanan kişi, kullanıyor. Kendine güven, davranışı öngörüyor.*
-
-*Yanında kondom taşımak, partnerle* **önceden** *konuşmak.* **Niyet yetmez, eylem planı lazım.**
-
-> [!info] Yani? 
-> Evden çıkarken yanına o kondomu almadıysan ya da o kritik anda partnerine "korunmamız lazım" diyebilecek o öz-yeterliliğe sahip değilsen, teorik bilgin hiçbir şeye yaramaz.
-
-> [!tip] Örnek?
-> Araştırmalar, cinsel sağlığı koruma niyetinin (özellikle sosyoekonomik düzeyi yüksek bireylerde) eylem planıyla birleştiğinde davranışa dönüştüğünü; planlama eksik kaldığında ise niyetin havada asılı kaldığını bildirmektedir ve sosyal statü kondom kullanımıyla **pozitif** ilişkilidir.
-
-Tabi insanı laboratuvardaki _rasyonel_ bir robot gibi kodlarsak: "planlama yaparsa, öz-yeterliliği varsa, o kondomu takar bu adam.." deriz. **Gerçek** hayatta işler pek böyle yürümüyor. Alkol, madde, duygu durumu, redden korkma gibi "irrasyonel" ve durumsal değişkenler bu steril bakış açısında _tamamen_ göz ardı ediliyor.
-
-> [!warning] Kritik Nokta
-> Bilişsel planlama, alkollü (mesela) bir beynin karşısında her zaman ayakta kalamaz. Model bunu görmüyor. Bu da demek oluyor ki "[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Niyet ve Planlı Davranış Teorisi (TRA/TPB)|iyi planlanmış davranış]]" modelleri durumsal faktörleri _sistematik_ bi şekilde dışarda bırakıyor. Literatür de bunu henüz tam olarak ele almıyor.
-
-Aslında tüm bu bulgular [[Güneşten Korunma|sağlık iletişiminin]] en kör noktalarından birini gösteriyor: **risk üzerine kurulu mesajlar**ın sınırları.
-
-"HIV öldürür" korkusu işe yarıyor. Tamam. Ama ne kadar?
-
-_Tarihsel kampanyalara bakıldığında,_ **dehşet mesajlarının kısa vadede etkili ama uzun vadede tükenmişlik yarattığı görülüyor.**
-
-Gebelikle ilgili motivasyonun hastalıktan korunma motivasyonundan daha güçlü olması da tam olarak bu yüzden.
-
-> [!tip] Analoji
-> Güneş kremini kurşun yelek sanmak.. Yelek, çatışmanın ortasında kalırsan hayatta kalma şansını artırsın diye giyilir. Yeleği giyip makineli tüfeklerin önüne atla diye değil.
+Cinsel sağlıkta kondom kullanımı, HIV ve diğer cinsel yolla bulaşan enfeksiyonlara (CYBE) karşı en birincil bariyerdir. Ancak risk algısı genellikle "bana bir şey olmaz" yanılsamasıyla bastırılır.
 
 ---
-*İnsan rasyonel bir canlı değildir, estetik bir hayvandır.*
 
-[^sheeran1999]: Sheeran, P., Abraham, C., & Orbell, S. (1999). Psychosocial correlates of heterosexual condom use. *Psychological Bulletin*, 125(1), 90–132.
+## 2. Korunma Kararının Sosyokognitif Dinamikleri
+
+Karar anı genellikle rasyonel bir tartımın değil; partner baskısı, alkol/madde etkisi ve anlık haz dürtülerinin çarpıştığı yüksek uyarılma ortamında gerçekleşir. 
+Bu yüzden Sağlık İnanç Modeli gibi salt rasyonel modeller tek başına cinsel davranışları tahmin etmekte zorlanır.
+
+---
+
+## 3. Spontanite İllüzyonu ve Eylem Planı
+
+Kondom taşımak veya kullanımını konuşmak "romantizmi bozuyor" veya "güvensizlik göstergesi" olarak kodlandığında koruyucu davranış düşer. 
+Etkili müdahaleler sadece risk bilgisi vermez; iletişim becerileri ve somut uygulama niyetleri (if-then planları) kazandırmayı hedefler.

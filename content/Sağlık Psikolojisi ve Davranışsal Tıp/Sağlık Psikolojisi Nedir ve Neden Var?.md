@@ -59,7 +59,7 @@ Bağışıklık sistemi duygusal durumlardan etkilenebiliyor ve genetik yatkınl
 Bu bilgiler aslında eskiden de sezgisel düzeyde vardı. 
 Sistematikleşmesi ve sağlık hizmetlerine, özellikle fiziksel hastalıkların tedavi yapısına aktarılması hâlâ devam eden, bitmemiş bir süreç. 
 
-##### İki Model, İki Dünya Görüşü
+### İki Model, İki Dünya Görüşü
 
 >***Biyomedikal model***
 

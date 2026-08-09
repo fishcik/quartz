@@ -7,4 +7,3 @@ tags:
 ---
 
 # Çıkarımsal İstatistik I
-

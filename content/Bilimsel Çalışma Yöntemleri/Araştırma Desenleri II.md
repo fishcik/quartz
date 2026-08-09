@@ -7,4 +7,3 @@ tags:
 ---
 
 # Araştırma Desenleri II
-

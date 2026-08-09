@@ -7,4 +7,3 @@ tags:
 ---
 
 # Terapinin Zorunlu ve Ekol Ötesi Boyutları
-

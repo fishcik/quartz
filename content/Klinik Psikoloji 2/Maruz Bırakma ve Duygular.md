@@ -7,4 +7,3 @@ tags:
 ---
 
 # Maruz Bırakma ve Duygular
-

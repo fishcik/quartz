@@ -7,4 +7,3 @@ tags:
 ---
 
 # Biliş II
-

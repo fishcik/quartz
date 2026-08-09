@@ -7,4 +7,3 @@ tags:
 ---
 
 # Gelişimsel Sapmalar
-
