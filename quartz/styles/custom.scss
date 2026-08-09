@@ -2323,29 +2323,71 @@ html[saved-theme="dark"] .cg-cell,
   border-top: 1px solid var(--br);
   padding-top: 0.75rem;
   margin-top: 0.5rem;
+  text-align: center !important;
 
   > summary {
     cursor: pointer;
     list-style: none;
-    font-family: 'Source Serif 4', serif;
-    font-size: 0.68rem;
+    font-family: 'Source Serif 4', 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 0.76rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: var(--fg-2);
     user-select: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
 
     &::-webkit-details-marker { display: none; }
     &::after { content: " +"; color: var(--fg-3); }
   }
   &[open] > summary::after { content: " −"; }
-  .recent-ul { margin-top: 0.6rem; }
-  // Görev 5: en yeni 4 yazı; en yeni en büyük (cascade)
-  .recent-ul .recent-li:nth-child(n+5) { display: none; }
-  .recent-ul .recent-li:nth-child(1) .desc h3 { font-size: 1.05rem !important; }
-  .recent-ul .recent-li:nth-child(2) .desc h3 { font-size: 0.94rem !important; }
-  .recent-ul .recent-li:nth-child(3) .desc h3 { font-size: 0.85rem !important; }
-  .recent-ul .recent-li:nth-child(4) .desc h3 { font-size: 0.78rem !important; }
+  .recent-ul {
+    margin-top: 0.6rem;
+    padding-left: 0 !important;
+    list-style: none !important;
+    text-align: center !important;
+  }
+  // Son 3 yazı; italik/cursive ve ortalı
+  .recent-ul .recent-li {
+    text-align: center !important;
+    margin-bottom: 0.7rem !important;
+    &:nth-child(n+4) { display: none !important; }
+
+    .desc {
+      text-align: center !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .rp-eyebrow {
+        display: block;
+        text-align: center !important;
+        font-size: 0.62rem;
+        margin-bottom: 0.15rem;
+      }
+
+      h3 {
+        text-align: center !important;
+        font-family: 'Newsreader', 'Playfair Display', 'Source Serif 4', Georgia, serif !important;
+        font-style: italic !important;
+        font-weight: 500 !important;
+        line-height: 1.25 !important;
+
+        a {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+  .recent-ul .recent-li:nth-child(1) .desc h3 { font-size: 1.02rem !important; }
+  .recent-ul .recent-li:nth-child(2) .desc h3 { font-size: 0.92rem !important; }
+  .recent-ul .recent-li:nth-child(3) .desc h3 { font-size: 0.84rem !important; }
 }
 
 // ─── Görev 1: TopicGrid — POINTY-TOP HONEYCOMB konu kutuları ───
