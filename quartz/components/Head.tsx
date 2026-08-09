@@ -218,17 +218,17 @@ var SC_GLYPHS=[
 function scFold(s){
   s=(s||'').toUpperCase();
   s=s.replace(/İ/g,'I').replace(/Ş/g,'S').replace(/Ç/g,'C').replace(/Ğ/g,'G').replace(/Ü/g,'U').replace(/Ö/g,'O');
-  return s.replace(/[^A-Z0-9 ]/g,' ').replace(/\\s+/g,' ').trim();
+  return s.replace(/[^A-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
 }
 var SC_GLYPH_FULL={},SC_GLYPH_BASE={};
 SC_GLYPHS.forEach(function(e){
   var f=scFold(e[0]);if(!SC_GLYPH_FULL[f])SC_GLYPH_FULL[f]=e[1];
-  if(Array.from(e[1]).length===1){var m=f.match(/^(.*?)\\s+(III|II|I|3|2|1)$/);var base=m?m[1]:f;if(!SC_GLYPH_BASE[base])SC_GLYPH_BASE[base]=e[1];}
+  if(Array.from(e[1]).length===1){var m=f.match(/^(.*?)\s+(III|II|I|3|2|1)$/);var base=m?m[1]:f;if(!SC_GLYPH_BASE[base])SC_GLYPH_BASE[base]=e[1];}
 });
 function scGlyphFor(title){
   var f=scFold(title);
   if(SC_GLYPH_FULL[f])return SC_GLYPH_FULL[f];
-  var m=f.match(/^(.*?)\\s+(III|II|I|3|2|1)$/);
+  var m=f.match(/^(.*?)\s+(III|II|I|3|2|1)$/);
   if(m){var base=m[1],c=({I:1,II:2,III:3,'1':1,'2':2,'3':3})[m[2]],g=SC_GLYPH_BASE[base];if(g){var o='';for(var i=0;i<c;i++)o+=g;return o;}}
   return '';
 }
@@ -460,7 +460,7 @@ function updateBcLayers(){
       var bc=document.querySelector('.breadcrumb-container');
       var anchors=bc?Array.prototype.slice.call(bc.querySelectorAll('a')):[];
       for(var ai=0;ai<anchors.length;ai++){
-        var hp=decodeURIComponent(anchors[ai].getAttribute('href')||'').replace(/\\/+$/,'').split('/').filter(Boolean);
+        var hp=decodeURIComponent(anchors[ai].getAttribute('href')||'').replace(/\/+$/,'').split('/').filter(Boolean);
         var last=hp[hp.length-1],prev=hp[hp.length-2];
         if(last===toSlug||(last==='index'&&prev===toSlug)){toName=(anchors[ai].textContent||'').trim();break;}
       }
@@ -765,7 +765,7 @@ function scTagCloud(){
     var max=1,data=[];
     links.forEach(function(a){
       var href=decodeURIComponent(a.getAttribute('href')||'');
-      var m=href.match(/tags\\/([^\\/#?]+)/);
+      var m=href.match(/tags\/([^/#?]+)/);
       if(!m)return;
       var name=m[1].toLowerCase();
       var c=counts[name]||1;
@@ -1123,7 +1123,7 @@ function scFooterMail(){
 // ── Görev 3b: Konu makalesinde başlığın üstüne büyük, ortalı hiyeroglif ──
 function scArticleGlyph(){
   var slug=document.body.getAttribute('data-slug')||'';
-  if(/\\/index$/.test(slug)||slug===''||slug==='index'||slug==='404')return; // yalnız yaprak makaleler
+  if(/\/index$/.test(slug)||slug===''||slug==='index'||slug==='404')return; // yalnız yaprak makaleler
   var h=document.querySelector('.center .article-title, article .article-title');
   if(!h||h.getAttribute('data-sc-aglyph'))return;
   var gl=scGlyphFor(h.textContent||'');
@@ -1186,11 +1186,11 @@ function perNav(){
   document.querySelectorAll('.recent-notes .recent-li').forEach(function(li){
     var a=li.querySelector('.desc h3 a');if(!a)return;
     var t=(a.textContent||'').trim().toLowerCase();
-    var np=decodeURIComponent((a.getAttribute('href')||'')).replace(/^(\\.\\/|\\.\\.\\/)+/,'').replace(/\\/+$/,'');
+    var np=decodeURIComponent((a.getAttribute('href')||'')).replace(/^(\.\/|\.\.\/)+/,'').replace(/\/+$/,'');
     var parts=np.split('/').filter(Boolean);
     var topLevel=parts.length<=1;
     var isCI=parts.length===2&&parts[1]==='index';
-    if(t==='sayko.ch'||np===''||np==='.'||/(^|\\/)index$/.test(np)||isCI||(topLevel&&(SC_MAP[parts[0]]||SC_MAP[np]))||topLevel){li.remove();}
+    if(t==='sayko.ch'||np===''||np==='.'||/(^|\/)index$/.test(np)||isCI||(topLevel&&(SC_MAP[parts[0]]||SC_MAP[np]))||topLevel){li.remove();}
   });
   // Gerçek kronolojiye göre sırala
   scSortRecentNotes();
@@ -1199,7 +1199,7 @@ function perNav(){
     rn.querySelectorAll('.recent-li').forEach(function(li,idx){
       if(li.getAttribute('data-sc-rp'))return;li.setAttribute('data-sc-rp','1');
       var a=li.querySelector('.desc h3 a')||li.querySelector('a');var desc=li.querySelector('.desc')||li;
-      if(a){var href=(a.getAttribute('href')||'').replace(/^\\.\\//,'').replace(/^\\//,'');var seg=decodeURIComponent(href).split('/')[0];var label=SC_MAP[seg];
+      if(a){var href=(a.getAttribute('href')||'').replace(/^\.\//,'').replace(/^\//,'');var seg=decodeURIComponent(href).split('/')[0];var label=SC_MAP[seg];
         if(label){var eb=document.createElement('span');eb.className='rp-eyebrow';eb.textContent=label;desc.insertBefore(eb,desc.firstChild);}}
       if(feed){li.classList.add('rp-'+(idx+1));}
     });
