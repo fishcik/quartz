@@ -62,12 +62,12 @@ Uzun notlarda (3+ başlık) notun en üstüne, frontmatter'dan hemen sonra eklen
 ```markdown
 ## İçindekiler
 
-- [[#Birinci Başlık]]
-- [[#İkinci Başlık]]
-  - [[#Alt Başlık]]
-- [[#Üçüncü Başlık]]
+- [[#1. Birinci Başlık]]
+- [[#2. İkinci Başlık]]
+- [[#3. Üçüncü Başlık]]
 ```
 
+* **Max 7 Kuralı:** TOC **en fazla 7 başlık** içerebilir. Çok detaylı notlar 3–7 ana `##` bölüme ayrıştırılır; alt konular `###` seviyesinde yapılandırılır.
 * TOC başlığının kendisi `##` seviyesinde olur.
 * TOC içindeki linkler her zaman `[[#Başlık]]` formatında — dış link değil.
 

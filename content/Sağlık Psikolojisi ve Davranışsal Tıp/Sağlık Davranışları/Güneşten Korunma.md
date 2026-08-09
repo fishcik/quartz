@@ -1,6 +1,6 @@
 ---
 title: Güneşten Korunma
-date: 2026-06-18
+date: 2026-06-25
 tags:
   - sağlık-psikolojisi
   - gunesten-korunma
@@ -8,9 +8,9 @@ tags:
 
 ## İçindekiler
 
-- [[#Risk Grubu]]
-- [[#Ne İşe Yarıyor?]]
-- [[#Halk vs. Bilim]]
+- [[#1. Risk Grubu]]
+- [[#2. Ne İşe Yarıyor?]]
+- [[#3. Halk vs. Bilim]]
 
 ---
 _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]] doğrudan [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Sağlık davranışı|davranışsal önlemlerle]] nasıl kesiştiğine bakcaz._ _Güneş kremi, plajda sınırsızca takıl diye değil, istesen bile kaçamayacağın ışınlardan_ **korunman** _için tasarlandı._
@@ -20,7 +20,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 > [!bug] İRONİ! 
 > Genelde insanı güneşten koruyan şey siyahileşme korkusu, kırışıklık ve yaşlanma kaygısıdır.
 
-## Risk Grubu
+## 1. Risk Grubu
 
 - Sarışınlar, kızıllar, güneşe çıktığı an ıstakoza dönen açık tenlilier
 - Çil oluşturma eğilimi, çok sayıda ben
@@ -31,7 +31,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 ---
 
-## Ne İşe Yarıyor?
+## 2. Ne İşe Yarıyor?
 
 - **Öğle güneşinden kaçmak** _Yazın ya da sıcak iklimli yerlerde 11-16:00 arası dışarı çıkmamak_
     
@@ -46,7 +46,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 ---
 
-## Halk vs. Bilim
+## 3. Halk vs. Bilim
 
 _"Bulutlu havada güneş çarpmaz yaa, UV yok."_ **UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**
 

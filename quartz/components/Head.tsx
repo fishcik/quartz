@@ -6,7 +6,7 @@ import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/re
 import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
-import { CustomOgImagesEmitterName } from "../../.quartz/plugins"
+const CustomOgImagesEmitterName = "CustomOgImages"
 
 // ── Müfredat verisi: ders adı + GERÇEK Quartz slug'ı + ASCII ikon dosyası ──
 // (Quartz slugify Türkçe karakterleri KORUR; İstatistik → i̇ + U+0307 combining)
@@ -477,10 +477,187 @@ function updateBcLayers(){
     }
   }
 }
+var SC_CURRICULUM = {
+  'bilimsel-calisma-yontemleri': [
+    'GIRIS AMPIRIK BIR BILIM OLARAK PSIKOLOJI',
+    'ARASTIRMA SURECI ARASTIRMA SORULARI VE HIPOTEZLER',
+    'ISEVURUK TANIM VE OLCME',
+    'ARASTIRMA DESENLERI I',
+    'ARASTIRMA DESENLERI II',
+    'VERI TOPLAMA YONTEMLERI I',
+    'VERI TOPLAMA YONTEMLERI II',
+    'ORNEKLEM SECIMI',
+    'ISTATISTIKSEL VE ICERIKSEL ANLAMLILIK',
+    'BULGULARININ YAYIMLANMASI VE BILIM ETIGI',
+    'ARASTIRMA ETIGI',
+    'LITERATUR TARAMASI VE BILIMSEL METIN FORMATLARI'
+  ],
+  'bilis-psikolojisi-1': [
+    'GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA',
+    'GORSEL KORTEKS NESNELER VE SAHNELER',
+    'GORSEL DIKKAT VE EYLEM',
+    'RENK ALGISI DERINLIK VE BUYUKLUK ALGISI',
+    'HAREKET ALGISI',
+    'ISITME CEVRE MUZIK VE KONUSMA ALGISI',
+    'DERI DUYULARI VE KIMYASAL DUYULAR'
+  ],
+  'biyolojik-psikoloji-2': [
+    'BIYOPSIKOLOJININ DIGER ARASTIRMA YONTEMLERI',
+    'NOROPSIKOLOJIK TESTLER I',
+    'NOROPSIKOLOJIK TESTLER II',
+    'LATERALIZASYON DIL VE AYRIK BEYIN',
+    'BEYIN HASARI VE NOROPLASTISITE',
+    'OGRENME BELLEK VE AMNEZI',
+    'UYKU RUYA VE SIRKADIYEN RITIMLER',
+    'MADDE KULLANIMI BAGIMLILIK VE ODUL SISTEMI',
+    'DUYGU STRES VE SAGLIGIN BIYOPSIKOLOJISI',
+    'PSIKIYATRIK BOZUKLUKLARIN BIYOPSIKOLOJISI',
+    'DENGE DUYUSU',
+    'ISITME'
+  ],
+  'gelisim-psikolojisi-1': [
+    'GIRIS GELISIM PSIKOLOJISININ KONUSU VE GOREVLERI',
+    'GIRIS',
+    'GELISIM PSIKOLOJISININ KURAMLARI',
+    'GELISIM PSIKOLOJISININ YONTEMLERI',
+    'BIYOLOJI VE DAVRANIS',
+    'DOGUM ONCESI GELISIM DOGUM VE YENIDOGAN',
+    'ALGI',
+    'MOTOR GELISIM',
+    'BILIS I',
+    'BILIS II',
+    'DIL GELISIMI',
+    'ZEKA',
+    'OKUL BASARISI'
+  ],
+  'gelisim-psikolojisi-2': [
+    'DUYGUSAL GELISIM',
+    'BAGLANMA',
+    'KISILIK VE BENLIK KAVRAMI',
+    'CINSIYET GELISIMI',
+    'SOSYAL GELISIM',
+    'AKRAN ILISKILERI',
+    'AILE',
+    'AHLAK GELISIMI',
+    'MOTIVASYON VE EYLEM DUZENLEMESI',
+    'GELISIMSEL SAPMALAR',
+    'MUDAHALE PROGRAMLARI'
+  ],
+  'istatistik-1': [
+    'ISTATISTIGE NEDEN IHTIYAC DUYARIZ',
+    'BETIMSEL ISTATISTIK I',
+    'BETIMSEL ISTATISTIK II',
+    'BETIMSEL ISTATISTIK III',
+    'OLASILIK KURAMI I',
+    'OLASILIK KURAMI II',
+    'OLASILIK KURAMI III',
+    'CIKARIMSAL ISTATISTIK I',
+    'CIKARIMSAL ISTATISTIK II',
+    'GRUP KARSILASTIRMALARI I',
+    'GRUP KARSILASTIRMALARI II'
+  ],
+  'klinik-psikoloji-1': [
+    'GIRIS NORMAL VE ANORMAL',
+    'KURAMLAR VE KATEGORIK YAKLASIMLAR',
+    'BOYUTSAL YAKLASIMLAR',
+    'KAYGI BOZUKLUKLARI',
+    'OBSESIF KOMPULSIF BOZUKLUK VE TIKLER',
+    'TRAVMA VE TRAVMA SONRASI STRES BOZUKLUGU',
+    'DUYGUDURUM BOZUKLUKLARI',
+    'PSIKOZLAR',
+    'YEME BOZUKLUKLARI',
+    'BAGIMLILIKLAR',
+    'CINSEL ISLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI',
+    'BILIM FELSEFESI VE ARASTIRMA YAKLASIMLARI'
+  ],
+  'klinik-psikoloji-2': [
+    'PSIKOTERAPI NEDIR PSIKOTERAPI EKOLLERI I',
+    'PSIKOTERAPI EKOLLERI II',
+    'TERAPININ ZORUNLU VE EKOL OTESI BOYUTLARI',
+    'DAVRANIS SEKILLENDIRME VE KOSULLU PEKISTIRME',
+    'MARUZ BIRAKMA VE DUYGULAR',
+    'BILIS DUSUNCE VE DIL',
+    'DIKKAT EGITIMI VE FARKINDALIK',
+    'DEGERLER VE KABUL VE KARARLILIK TERAPISI ACT',
+    'BENLIK KAVRAMLAR VE OZ SEFKAT',
+    'MOTIVASYON VE MOTIVASYONEL GORUSME',
+    'ARASTIRMA YONTEMLERI VE KANITA DAYALI TERAPILER'
+  ],
+  'saglik-psikolojisi-ve-davranissal-tip': [
+    'SAGLIK PSIKOLOJISI NEDIR VE NEDEN VAR',
+    'SAGLIK MODELLERI BILMEK NEDEN YETMIYOR',
+    'SAGLIK DAVRANISLARI',
+    'FIZIKSEL AKTIVITE',
+    'BESLENME PSIKOLOJISI',
+    'BESLENME',
+    'GUNESTEN KORUNMA',
+    'KONDOM KULLANIMI',
+    'SIGARANIN PSIKOLOJISI',
+    'SIGARA',
+    'GERI DUSUS'
+  ],
+  'sosyal-psikoloji': [
+    'GIRIS VE ARASTIRMA YONTEMLERI',
+    'SOSYAL BILIS',
+    'SOSYAL ALGI VE ATIF',
+    'BENLIK',
+    'TUTUMLAR VE TUTUM DEGISIMI',
+    'SOSYAL ETKI',
+    'GRUP DINAMIGI VE GRUP PERFORMANSI',
+    'KISILERARASI CEKIM VE YAKIN ILISKILER',
+    'PROSOSYAL DAVRANIS',
+    'SALDIRGANLIK',
+    'ONYARGI VE GRUPLAR ARASI ILISKILER',
+    'SOSYAL PSIKOLOJI VE KULTUREL FARKLILIKLAR'
+  ]
+};
+
+function scSortHoneycombs(){
+  var ul=document.querySelector('.page-listing .section-ul');
+  if(!ul)return;
+  var slug=document.body.getAttribute('data-slug')||'';
+  var folder=slug.replace(/\/index$/,'').replace(/^\//,'');
+  var normFolder=folder.toLowerCase().replace(/[^a-z0-9-]/g,'');
+  var curList=SC_CURRICULUM[normFolder];
+  if(!curList){
+    for(var k in SC_CURRICULUM){
+      if(normFolder.indexOf(k)!==-1||k.indexOf(normFolder)!==-1){
+        curList=SC_CURRICULUM[k];break;
+      }
+    }
+  }
+  if(!curList||!curList.length)return;
+
+  var lis=Array.from(ul.querySelectorAll(':scope > .section-li'));
+  if(!lis.length)return;
+
+  function getOrder(li){
+    var a=li.querySelector('.desc h3 a');
+    var rawText=a?(a.getAttribute('data-title')||a.textContent||'').trim():'';
+    var folded=scFold(rawText);
+    for(var i=0;i<curList.length;i++){
+      var item=curList[i];
+      if(folded===item||folded.indexOf(item)===0||item.indexOf(folded)===0){
+        return i;
+      }
+    }
+    return 999;
+  }
+
+  lis.sort(function(a,b){
+    return getOrder(a)-getOrder(b);
+  });
+
+  lis.forEach(function(li){
+    ul.appendChild(li);
+  });
+}
+
 // Altıgen konu kutuları: yazı, altıgenin geniş orta bandına TAM sığana dek küçülür
 function scFitHex(){
   var slug=document.body.getAttribute('data-slug')||'';
   if(!/\\/index$/.test(slug))return; // yalnız klasör (konu) sayfaları
+  scSortHoneycombs();
   var links=document.querySelectorAll('.page-listing .section-li .desc h3 a');
   links.forEach(function(a){
     var lbl=a.querySelector('.sc-hx-label');

@@ -1,12 +1,22 @@
 ---
 title: Geri Düşüş
-date: 2026-01-15
+date: 2026-06-14
 tags:
   - sağlık-psikolojisi
   - geri-dusus
 ---
 
-### Ortak Düşman: Geri Düşüş (Relapse)
+# Geri Düşüş
+
+## İçindekiler
+
+- [[#1. Ortak Düşman: Geri Düşüş (Relapse)]]
+- [[#2. Perhiz İhlali Etkisi (AVE)]]
+- [[#3. Kısır Döngü ve Önleme Dinamikleri]]
+
+---
+
+## 1. Ortak Düşman: Geri Düşüş (Relapse)
 
 *Tüm modellerin kesiştiği bir konu var:* **insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**
 
@@ -45,12 +55,16 @@ Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü te
 
 ---
 
+## 2. Perhiz İhlali Etkisi (AVE)
+
 #### ***Perhiz İhlali Etkisi***
 *(AVE - Abstinenz-Verletzungs-Effekt)*
 Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini **kötü** ve **suçlu** hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir: *"Ben iradesizim!"* veya *"Ben alkolik bir hastayım!"*. 
 Bu iki *atıf* da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu *olumsuz duygulardan kaçmak için* yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf *doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
 
 >**Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.**
+
+## 3. Kısır Döngü ve Önleme Dinamikleri
 
 ***Bu perhiz ihlali etkisinin mekanizması da tıkır tıkır çalışıyor:***
 

@@ -1,12 +1,25 @@
 ---
 title: Giriş - Normal ve Anormal
-date: 2026-01-15
+date: 2026-08-08
 tags:
   - klinik-psikoloji-1
   - giris-normal-ve
 ---
 
 # Giriş
+
+## İçindekiler
+
+- [[#1. Klinik Psikoloji ve Psikoterapi: Tanım, Ayrım ve Kapsam]]
+- [[#2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları]]
+- [[#3. Ruhsal Bozukluk Nedir? Konstrüktler ve Zihin-Beden İkiliği]]
+- [[#4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski]]
+- [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5'e)]]
+- [[#6. Çok Katmanlı Bakış ve Vaka Örnekleri]]
+
+---
+
+## 1. Klinik Psikoloji ve Psikoterapi: Tanım, Ayrım ve Kapsam
 
 Klinik Psikoloji nedir?
 
@@ -75,6 +88,8 @@ Tamam. Tanımların bir kısmını masaya koyduk.
 Şimdi bu bilimin gerçekte nasıl bölündüğüne bakalım. 
 
 ---
+
+## 2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları
 
 Baumann ve Perrez bu şöyle bir mantık kurmuşlar: *bozukluklar-arası* ortak yönler ile *bozukluğa-özgü* yönler birbirinden ayrılıyor. 
 Bu mantıkta, bozukluklara **özgü** düzeyde, işlevler ve işlev örüntüleri ele alınıyor. 
@@ -158,6 +173,8 @@ Psikoloji içinde bile: davranışsal tıp, sağlık psikolojisi, klinik psikolo
 | *Nöroloji* | Sinir sisteminin organik hastalıkları. |
 
 
+## 3. Ruhsal Bozukluk Nedir? Konstrüktler ve Zihin-Beden İkiliği
+
 ***Peki nedir bu ruhsal bozukluklar?!***
 Bunun cevabı keşke istediğimiz kadar sağlam olsa. Ruhsal bozukluklar bilim açısından net tanımlanmış sabit varlıklar değiller.. Öyle doğada keşfedilmeyi bekleyen katı gerçekler değiller..
 Bilimin mevcut seviyesine göre, belli bi süre için üzerinde mutabıklaşılan, işe yarayan *konstrüktler.*
@@ -224,6 +241,8 @@ Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının
 
 ---
 
+## 4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski
+
 Anlaşılacağı üzere, bu yaklaşım *betimleyici*. Yani durumu *tarif* ediyor. "Neden?" sorusuna pek girmiyor. 
 Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini kolaylaştırır. 
 
@@ -271,6 +290,8 @@ Bakış açısına, uygulama alanına, tarihsel bağlama göre her birinin bir h
 DSM-5 bu yüzden sadece [[Kuramlar ve Kategorik Yaklaşımlar|kategorik yaklaşımla]] yetinmeyip, [[Boyutsal Yaklaşımlar|boyutsal]] ve bozukluklar-arası ve gelişimsel yönleri de daha güçlü şekilde hesaba katmayı hedef koymuş. 
 
 *Aslında idealize edilen: mevcut nozolojik[^1] bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
+
+## 5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5'e)
 
 **Peki DSM-5'te ne değişti?**
 
@@ -371,6 +392,8 @@ Ya da yine bu kişinin ailesiyle, işiyle, evi ve finansal durumuyla ilgili değ
 *Yani:* bir bozukluğun zamanla nasıl değiştiğinin pek de hesaba katılmaması.. Bir insanın dünü ile bugünü farklıdır, yarını da. Ama *çok eksenli sistem* bu akışı *yakalamakta* zorlanır. 
 
 ---
+
+## 6. Çok Katmanlı Bakış ve Vaka Örnekleri
 
 **Çok katmanlı bakmak ne demek? Daha da iyi anlamak için bir kaç örnek:**
 

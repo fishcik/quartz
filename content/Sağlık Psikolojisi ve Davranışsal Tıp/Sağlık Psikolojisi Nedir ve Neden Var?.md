@@ -1,12 +1,20 @@
 ---
 title: Sağlık Psikolojisi Nedir ve Neden Var?
-date: 2026-01-15
+date: 2026-06-07
 tags:
   - sağlık-psikolojisi
   - saglik-psikolojisi-nedir
 ---
 
 # Sağlık Psikolojisi Nedir ve Neden Var?
+
+## İçindekiler
+
+- [[#1. Sağlık Psikolojisinin Doğuşu ve Kapsamı]]
+- [[#2. Beden ve Zihin: İki Model, İki Dünya Görüşü]]
+- [[#3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi]]
+
+---
 
 >*İnsanlar neden hastalanıyor ve bu süreçte psikolojinin rolü ne?*
 
@@ -15,6 +23,8 @@ tags:
 >*Kim iyileşiyor ve neden?*
 
 >*Hastalıklar nasıl önlenebilir?*
+
+## 1. Sağlık Psikolojisinin Doğuşu ve Kapsamı
 
 Grip olduğunda doktora gidiyorsun, ilaç yazıyor, içiyorsun. Sistem bu. 
 Biyomedikal model seni bir arıza olarak görüyor: bozulmuşsa tamir et, sağlamsa dokunma. 
@@ -39,6 +49,8 @@ Sağlık psikolojisi ise **fiziksel** hastalıklara ve onları çevreleten davra
 İnsan bedeni bir makine değil, bağlam içinde yaşayan bir organizma. 
 *Ve o bağlamın büyük bölümü psikolojik.*
 
+
+## 2. Beden ve Zihin: İki Model, İki Dünya Görüşü
 
 ### Beden & Zihin
 Zihin ve bedenin birbirini etkilediği fikri yeni sayılmaz. 
@@ -70,6 +82,8 @@ Hem hastalığın ortaya çıkışında hem de seyrinde psikolojik faktörler de
 
 Sağlık psikolojisi *ikinci* modeli temel alıyor, her şey biyopsikososyal model zemini üzerine kuruluyor. 
 
+
+## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
 ### Alanın oluşması
 

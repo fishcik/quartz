@@ -1,6 +1,6 @@
 ---
 title: Sigaranın Psikolojisi
-date: 2026-06-17
+date: 2026-06-23
 tags:
   - sağlık-psikolojisi
   - sigara
