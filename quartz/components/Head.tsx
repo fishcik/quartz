@@ -613,7 +613,7 @@ var SC_CURRICULUM = {
 };
 
 function scSortHoneycombs(){
-  var ul=document.querySelector('.page-listing .section-ul');
+  var ul=document.querySelector('.page-listing .section-ul, .section-ul');
   if(!ul)return;
   var slug=document.body.getAttribute('data-slug')||'';
   var folder=slug.replace(/\/index$/,'').replace(/^\//,'');
@@ -633,7 +633,7 @@ function scSortHoneycombs(){
 
   function getOrder(li){
     var a=li.querySelector('.desc h3 a');
-    var rawText=a?(a.getAttribute('data-title')||a.textContent||'').trim():'';
+    var rawText=a?(a.getAttribute('data-raw-title')||a.getAttribute('data-title')||a.textContent||'').trim():'';
     var folded=scFold(rawText);
     for(var i=0;i<curList.length;i++){
       var item=curList[i];
@@ -655,18 +655,44 @@ function scSortHoneycombs(){
 
 // Altıgen konu kutuları: yazı, altıgenin geniş orta bandına TAM sığana dek küçülür
 function scFitHex(){
-  var slug=document.body.getAttribute('data-slug')||'';
-  if(!/\\/index$/.test(slug))return; // yalnız klasör (konu) sayfaları
+  var links=document.querySelectorAll('.page-listing .section-li .desc h3 a, .section-ul .section-li .desc h3 a');
+  if(!links.length)return;
   scSortHoneycombs();
-  var links=document.querySelectorAll('.page-listing .section-li .desc h3 a');
+  links=document.querySelectorAll('.page-listing .section-li .desc h3 a, .section-ul .section-li .desc h3 a');
   links.forEach(function(a){
-    var lbl=a.querySelector('.sc-hx-label');
-    if(!lbl){lbl=document.createElement('span');lbl.className='sc-hx-label';lbl.textContent=(a.textContent||'').trim();a.textContent='';a.appendChild(lbl);}
-    // Mısır hiyeroglifi: başlığın üstüne bir kez ekle (başlık metninden eşleştir)
-    if(!a.querySelector('.sc-hx-glyph')){
-      var gl=scGlyphFor(lbl.textContent||'');
-      if(gl){var g=document.createElement('span');g.className='sc-hx-glyph';g.setAttribute('aria-hidden','true');g.textContent=gl;a.insertBefore(g,lbl);}
+    var rawText=(a.getAttribute('data-raw-title')||a.textContent||'').trim();
+    if(!a.getAttribute('data-raw-title')){
+      a.setAttribute('data-raw-title',rawText);
     }
+    var cleanTitle=a.getAttribute('data-raw-title')||rawText;
+    var gl=scGlyphFor(cleanTitle);
+
+    var lbl=a.querySelector('.sc-hx-label');
+    var glyphEl=a.querySelector('.sc-hx-glyph');
+
+    if(!lbl){
+      lbl=document.createElement('span');
+      lbl.className='sc-hx-label';
+      lbl.textContent=cleanTitle;
+      a.innerHTML='';
+      if(gl){
+        glyphEl=document.createElement('span');
+        glyphEl.className='sc-hx-glyph';
+        glyphEl.setAttribute('aria-hidden','true');
+        glyphEl.textContent=gl;
+        a.appendChild(glyphEl);
+      }
+      a.appendChild(lbl);
+    }else{
+      if(gl&&!glyphEl){
+        glyphEl=document.createElement('span');
+        glyphEl.className='sc-hx-glyph';
+        glyphEl.setAttribute('aria-hidden','true');
+        glyphEl.textContent=gl;
+        a.insertBefore(glyphEl,lbl);
+      }
+    }
+
     var li=a.closest('.section-li');if(!li)return;
     var H=li.clientHeight||152,W=li.clientWidth||132;
     var hasG=!!a.querySelector('.sc-hx-glyph');
@@ -674,6 +700,39 @@ function scFitHex(){
     var fs=12;lbl.style.lineHeight='1.16';lbl.style.fontSize=fs+'px';
     var guard=0;
     while((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>6.5&&guard<40){fs-=0.5;lbl.style.fontSize=fs+'px';guard++;}
+  });
+}
+
+function scSortRecentNotes(){
+  var rns=document.querySelectorAll('.recent-notes .recent-ul');
+  var DATE_MAP={
+    'GIRIS NORMAL VE ANORMAL': '2026-08-08',
+    'GUNESTEN KORUNMA': '2026-06-25',
+    'BESLENME PSIKOLOJISI': '2026-06-25',
+    'BESLENME': '2026-06-25',
+    'KONDOM KULLANIMI': '2026-06-25',
+    'FIZIKSEL AKTIVITE': '2026-06-25',
+    'SIGARANIN PSIKOLOJISI': '2026-06-23',
+    'SIGARA': '2026-06-23',
+    'GERI DUSUS': '2026-06-14',
+    'SAGLIK MODELLERI BILMEK NEDEN YETMIYOR': '2026-06-13',
+    'SAGLIK PSIKOLOJISI NEDIR VE NEDEN VAR': '2026-06-07',
+    'GIRIS GELISIM PSIKOLOJISININ KONUSU VE GOREVLERI': '2026-06-04',
+    'GIRIS': '2026-06-04'
+  };
+  rns.forEach(function(ul){
+    var lis=Array.from(ul.querySelectorAll(':scope > .recent-li'));
+    if(!lis.length)return;
+    lis.sort(function(a,b){
+      var aA=a.querySelector('.desc h3 a')||a.querySelector('a');
+      var bA=b.querySelector('.desc h3 a')||b.querySelector('a');
+      var aTitle=scFold(aA?aA.textContent:'');
+      var bTitle=scFold(bA?bA.textContent:'');
+      var aDate=DATE_MAP[aTitle]||'2026-05-30';
+      var bDate=DATE_MAP[bTitle]||'2026-05-30';
+      return bDate.localeCompare(aDate);
+    });
+    lis.forEach(function(li){ul.appendChild(li);});
   });
 }
 // Sayfanın sağ kenarı ile içerik kutusu arası mesafe (scrollbar hariç) → SBB/kuyruk
@@ -1074,15 +1133,19 @@ function scArticleGlyph(){
   if(h.parentNode)h.parentNode.insertBefore(g,h);
 }
 function perNav(){
-  // Sayfa değişince SBB kuyruğunu kapat (her sayfaya temiz başla) + sağ kenarı ölç
-  document.body.classList.remove('sc-sbb-open');
+  // Masaüstünde sağ SBB/saat kutusu daima açık kalır; mobilde sayfa değişince kapanır
+  if(window.innerWidth>=1200){
+    document.body.classList.add('sc-sbb-open');
+  }else{
+    document.body.classList.remove('sc-sbb-open');
+  }
   scREdge();
   // Künye (note-properties) panelini yazının SONUNA taşı + Türkçe etiketle
   scProps();
   // Dinamik etiket bulutu (/tags sayfası)
   scTagCloud();
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
-  var isHome=(document.body.getAttribute('data-slug')==='index');
+  var isHome=(document.body.getAttribute('data-slug')==='index'||document.body.getAttribute('data-slug')==='');
   // Site header with rotating font
   var ph=document.querySelector('.page-header');
   if(ph&&!ph.querySelector('.site-header')){
@@ -1096,17 +1159,19 @@ function perNav(){
     requestAnimationFrame(scFitHeader);
     if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHeader);}
   }
-  // Search: move to body as fixed tail (SBB kutusunun sol kenarından uzanır).
-  // Tıklanınca Quartz container'a .active ekler; biz bunu .sc-search-open olarak
-  // kuyruğa yansıtırız → kuyruk sola doğru genişleyip arama çubuğuna dönüşür.
-  var srchEl=document.querySelector('.search');
-  if(srchEl&&!srchEl.classList.contains('sc-search-tail')){
-    srchEl.classList.add('sc-search-tail');
-    document.body.appendChild(srchEl);
-    var scont=srchEl.querySelector('.search-container');
-    if(scont&&window.MutationObserver){
-      var smo=new MutationObserver(function(){srchEl.classList.toggle('sc-search-open',scont.classList.contains('active'));});
-      smo.observe(scont,{attributes:true,attributeFilter:['class']});
+  // Search: move to body as fixed tail (SBB kutusunun sol kenarından uzanır)
+  var oldTails=document.querySelectorAll('body > .search.sc-search-tail');
+  var curSrch=document.querySelector('.page .search, .center .search, .page-header .search');
+  if(curSrch){
+    oldTails.forEach(function(el){if(el!==curSrch)el.remove();});
+    if(!curSrch.classList.contains('sc-search-tail')){
+      curSrch.classList.add('sc-search-tail');
+      document.body.appendChild(curSrch);
+      var scont=curSrch.querySelector('.search-container');
+      if(scont&&window.MutationObserver){
+        var smo=new MutationObserver(function(){curSrch.classList.toggle('sc-search-open',scont.classList.contains('active'));});
+        smo.observe(scont,{attributes:true,attributeFilter:['class']});
+      }
     }
   }
   if(isHome){
@@ -1127,6 +1192,8 @@ function perNav(){
     var isCI=parts.length===2&&parts[1]==='index';
     if(t==='sayko.ch'||np===''||np==='.'||/(^|\\/)index$/.test(np)||isCI||(topLevel&&(SC_MAP[parts[0]]||SC_MAP[np]))||topLevel){li.remove();}
   });
+  // Gerçek kronolojiye göre sırala
+  scSortRecentNotes();
   document.querySelectorAll('.recent-notes').forEach(function(rn){
     var feed=!!rn.closest('.page-footer');
     rn.querySelectorAll('.recent-li').forEach(function(li,idx){
@@ -1137,14 +1204,20 @@ function perNav(){
       if(feed){li.classList.add('rp-'+(idx+1));}
     });
   });
-  // Sol sütun "Son Yazılar" accordion
+  // Sol sütun "Son Yazılar" accordion — yalnızca son 3 yazı
   var lrn=document.querySelector('.left.sidebar .recent-notes');
-  if(lrn&&!lrn.getAttribute('data-sc-acc')){
-    lrn.setAttribute('data-sc-acc','1');
-    var ttl=lrn.querySelector('h3');var ttltxt=ttl?(ttl.textContent||'Son Yazılar'):'Son Yazılar';
-    var det=document.createElement('details');det.className='rp-accordion';
-    var sum=document.createElement('summary');sum.textContent=ttltxt;det.appendChild(sum);
-    if(ttl)ttl.remove();while(lrn.firstChild){det.appendChild(lrn.firstChild);}lrn.appendChild(det);
+  if(lrn){
+    var rLis=lrn.querySelectorAll('.recent-li');
+    rLis.forEach(function(li,idx){
+      if(idx>=3){li.remove();}
+    });
+    if(!lrn.getAttribute('data-sc-acc')){
+      lrn.setAttribute('data-sc-acc','1');
+      var ttl=lrn.querySelector('h3');var ttltxt=ttl?(ttl.textContent||'Son Yazılar'):'Son Yazılar';
+      var det=document.createElement('details');det.className='rp-accordion';
+      var sum=document.createElement('summary');sum.textContent=ttltxt;det.appendChild(sum);
+      if(ttl)ttl.remove();while(lrn.firstChild){det.appendChild(lrn.firstChild);}lrn.appendChild(det);
+    }
   }
   // Sol sütun perde (curtain) toggle butonu — "Son Yazılar"ın hemen üstünde
   var lsb=document.querySelector('.sidebar.left');
