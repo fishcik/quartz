@@ -1,6 +1,6 @@
 ---
 title: Fiziksel Aktivite
-date: 2026-06-17
+date: 2026-06-25
 tags:
   - sağlık-psikolojisi
   - fiziksel-aktivite

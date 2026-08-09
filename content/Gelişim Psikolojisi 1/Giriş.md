@@ -1,6 +1,6 @@
 ---
 title: Giriş
-date: 2026-01-15
+date: 2026-06-04
 tags:
   - gelişim-psikolojisi-1
   - giris
@@ -10,27 +10,12 @@ tags:
 
 ## İçindekiler
 
-- [[#Kısa anlık değişimler gelişim değil, bunu biliyoruz.]]
-- [[#Gelişim döllenmeyle başlar, ölümle biter.]]
-- [[#Nicel vs. Nitel]]
-- [[#Geri dönüş bileti var mı?]]
-- [[#Herkeste mi, sende mi?]]
-- [[#Pencere Açık, Pencere Kapandı]]
-- [[#Stabilite - Ama hangisi?]]
-- [[#Süreklilik - Geçmiş geleceği yazıyor mu?]]
-- [[#Gelişim psikolojisi neye yarıyor?]]
-- [[#Her Şey Her Şeyi Etkiliyor]]
-- [[#Genetik 101 - DNA]]
-- [[#Kalıtım]]
-- [[#Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)]]
-- [[#Aynı Pislik, Farklı Hasar]]
-- [[#Yaşlılık: Gen vs Çevre]]
-- [[#"Ortalama" yeterli mi?]]
-- [[#Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin]]
-- [[#Kendi Hikayenin Ortak Yazarı Olmak]]
-- [[#Çocuğun İcadı ve İlk Günlükler]]
-- [[#Kurumsallaşma ve Teorik Yükseliş]]
-- [[#Çağdaş Paradigma, 4 Trend]]
+- [[#1. Gelişimin Temel İlkeleri ve Doğası]]
+- [[#2. Zaman Pencereleri: Kritik ve Hassas Dönemler]]
+- [[#3. Gelişim Psikolojisi Neye Yarıyor?]]
+- [[#4. Biyoloji vs. Çevre: Genetik ve Epigenetik]]
+- [[#5. Bağlamsal Sistemler ve Bireysel Eylemlilik]]
+- [[#6. Disiplinin Tarihi ve Çağdaş 4 Trend]]
 
 ---
 
@@ -90,7 +75,9 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 *Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.*
 
 
-## Kısa anlık değişimler gelişim değil, bunu biliyoruz. 
+## 1. Gelişimin Temel İlkeleri ve Doğası
+
+### Kısa anlık değişimler gelişim değil, bunu biliyoruz. 
 
 Ama öte yandan bir şeyin "gelişim" sayılması için ille de ömür boyu sürmesi şart değil. 
 Çünkü pek çok şey sonradan değişebilir, geri alınabilir, modifiye edilebilir. 
@@ -112,7 +99,7 @@ Sonra bi noktada bu mantık çöküyor. Çocuk farkediyor ki bu gerekçe tutmuyo
 
 
 
-## Gelişim döllenmeyle başlar, ölümle biter. 
+### Gelişim döllenmeyle başlar, ölümle biter. 
 
 Eskiden gelişim psikolojisi neredeyse sadece çocukluk ve ergenliğe bakıyordu. Sanki insan 18 yaşına gelince "tamamlanıyordu".
 
@@ -128,7 +115,7 @@ Okul örneği: çocuk okula gittiğinde gelişiyor, ama neden? 6 yaşında oldu�
 
 *Yaş, zamanı gösteriyor, zamanın kendisini değil.* 
 
-## Nicel vs. Nitel
+### Nicel vs. Nitel
 
 Diyelim ki 8 yaşındasın ve sana 20 kelime veriyorum: elma, armut, kel, mahmut, kamyon, bisiklet...
 
@@ -148,7 +135,7 @@ Sadece "daha çok" değil, "farklı şekilde".
 
 *Hem insan olmanın getirdiği yetileri keşfetmek ve onların gelişmesi, hem de bu yetilere uygun olan stratejilerin gelişmesi ve uygulanması.* 
 
-## Geri dönüş bileti var mı? 
+### Geri dönüş bileti var mı? (Plastisite) 
 
 Basamak teorileri geri dönüş yok der. Bir adım attın mı, geri dönemezsin. Piaget'ye göre gelişim tek yönlü bir asansör gibi, sadece yukarı gider, *tekrar aşağı inemezsin.* 
 
@@ -165,7 +152,7 @@ Yetişkin olarak vs. çocuk olarak yabancı dil öğrenmenin farkı da bu.
 
 Buna **plastisite** deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor. *Beyin bir hamur ise, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.* 
 
-## Herkeste mi, sende mi?
+### Herkeste mi, sende mi? (Evrensel vs. Diferansiyel)
 
 Eskiden gelişim psikolojisi şunu soruyordu: "ortalama insan nasıl gelişiyor?"
 Yaş normları koyuyorlardı: 2 yaşında şunu yapar, 7 yaşında şu olacak. Herkes için geçerli bir harita. 
@@ -204,7 +191,9 @@ Yani burda bahsedilen şey *saf olgunlaşma*, çevrenin ve kişinin kendisinin h
 
 Bu yüzden de salt olarak biyolojinin işi diyebileceğimiz örnekler çok az. Biyoloji bir temel kuruyor. Yapının hepsini oluşturmuyor. 
 
-## Pencere Açık, Pencere Kapandı
+## 2. Zaman Pencereleri: Kritik ve Hassas Dönemler
+
+### Pencere Açık, Pencere Kapandı
 
 Davranış psikolojisinin söylediği sert bir kavram bu; bazı öğrenmeler geri alınamaz ve sadece belirli bir zaman diliminde olabilir. 
 
@@ -241,7 +230,7 @@ Bu vakaların 2/3'ü 15 yaşına kadar devam etti.
 
 İki vakadan da çıkan şey aynı: hassas dönemlerde kaçırılan şey, sonradan tam olarak telafi edilemiyor. Plastisite var, evet, ama o da sınırlı. Tamam beyin hamur gibi, ama sonsuza kadar değil. 
 
-## Stabilite - Ama hangisi?
+### Stabilite - Ama hangisi?
 
 Gelişim psikolojisi değişmi inceliyor. Değişimin tam karşısında ne var? Stabilite.  
 Yani bir özellik, bir davranış, bir örüntü zaman içinde *aynı kaldı* mı?
@@ -277,7 +266,7 @@ Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel 
 1c: Ortalama aynı kaldı ama pozisyonlar alt-üst oldu. 
 
 
-## Süreklilik - Geçmiş geleceği yazıyor mu? 
+### Süreklilik - Geçmiş geleceği yazıyor mu? 
 
 İnsanlar arasındaki farklılıklar zaman içinde tutarlı mı kalıyor?
 
@@ -311,7 +300,9 @@ Ama o çocuğun bebek dönemindeki davranışlarından bi şeyler okuyabilirsin.
 Bunun bi sonraki adımı da: o bebek ağlamasından yetişkinlik nevrotikliğine giden ***aradaki adımlar*** ne? Hangi mekanizmalardan geçerek dönüşüyor?
 
 
-## Gelişim psikolojisi neye yarıyor?
+## 3. Gelişim Psikolojisi Neye Yarıyor?
+
+### Betimleme, Açıklama, Tahmin ve Müdahale
 
 4 temel görevi var. 
 
@@ -337,7 +328,9 @@ Müdahale edince ne oluyor? Plastisite nereye kadar gidiyor?
 Pratik boyutta doğrudan istenmeyen bir gelişimi önlemek, bir hasarı geri almak, ya da genel olarak gelişimi desteklemek. 
 
 
-## Her Şey Her Şeyi Etkiliyor
+## 4. Biyoloji vs. Çevre: Genetik ve Epigenetik
+
+### Her Şey Her Şeyi Etkiliyor
 
 *Biyoloji, sosyal çevre, kültür, tarihsel bağlam ve kişinin kendi eylemleri.* 
 Hepsi aynı anda birbirini etkileyen bir ağ içinde çalışıyor. 
@@ -359,7 +352,7 @@ Yani çevre geni *değiştirmiyor* ama geni açıp kapatıyor, yükseltip kısı
 Gen/Çevre, ikisi sürekli birbirini yazıp siliyor. 
 
 
-## Genetik 101 - DNA
+### Genetik 101 - DNA
 
 23 çift kromozomumuz oluyor genelde. 
 Her çiftin biri anadan biri babadan. 
@@ -412,7 +405,7 @@ Aynı evde büyüseler de her ikizin ayrı yaşadığı şeyler var. Biri daha �
 
 
 
-## Kalıtım
+### Kalıtım
 
 Bir popülasyondaki bireysel farklılıkların ne kadarının genden kaynaklandığını gösteren istatistiksel bir tahmin. 
 
@@ -437,7 +430,7 @@ Bu iksinin kesişimi çok daha temiz bi tablo veriyor.
 
 
 
-## Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)
+### Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)
 
 Gen ve çevre sürekli birbirini şekillendiriyor. Bu etkileşimin nasıl olduğuna dair çeşitli mekanizmalar var. 
 
@@ -470,7 +463,7 @@ Gen artık seni *yönlendiriyor*. Sen de çevreyi *ona göre* şekillendiriyorsu
 *Gen kader değil. Ama fırsat garantili de değil. *
 
 
-## Aynı Pislik, Farklı Hasar
+### Aynı Pislik, Farklı Hasar
 
 Kovaryasyonun dediği gibi çevre ve gen'in birbirleriyle olan etkileşimin üstüne *interaksiyon* bambaşka bi şey soruyor:
 ***aynı berbat çevre herkesi aynı şekilde mahvediyor mu?
@@ -507,7 +500,7 @@ Kötü ebeveynlik? >: Derin hasar.
 
 Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf* geçiyor. 
 
-## Yaşlılık: Gen vs Çevre
+### Yaşlılık: Gen vs Çevre
 
 Yaşlandıkça çevre birikir, gen etkisi azalır. Ne kadar çok deneyim, ne kadar çok iş, okul, insan, olay, o kadar çok çevre etkisi. 
 
@@ -535,7 +528,9 @@ Yani gen etkisi artmıyor aslında. Gen artık kendi çevresini de yaratıyor, b
 
 Ayrıca, bazı genler zaten geç devreye giriyor. Ergenlikte, yetişkinlikte aktive oluyor. Bebeklikte istediğin kadar ölç, göremezsin. O yüzden erken dönemde gen etkisi bazı kıstaslar için **hep** düşük çıkıyor olabilir.
 
-## "Ortalama" yeterli mi?
+## 5. Bağlamsal Sistemler ve Bireysel Eylemlilik
+
+### "Ortalama" yeterli mi?
 
 Scarr (1992) zamanında sert bi şekilde sormuş: 
 >***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"***
@@ -554,7 +549,7 @@ Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gö
 
 Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip. 
 
-## Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin
+### Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin
 
 ![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]
 *Bronnfenbrenner'in ekolojik gelişim modeli.*
@@ -580,7 +575,7 @@ Beş katmanlı:
 ***Kronosistem***
 *Tüm bu sistemler zaman içinde değişiyor. Zamanın kendisi bir bağlam. Hem kişinin hayatındaki geçişler hem de tarihsel zaman. Yani: aynı aile yapısı, aynı mahalle, aynı kültür, ama ne zaman yaşandığı da gelişimi belirliyor. 1890'da doğmak ile 2020'de doğmak gibi.*
 
-## Kendi Hikayenin Ortak Yazarı Olmak
+### Kendi Hikayenin Ortak Yazarı Olmak
 
 Gelişim bir otobandan ziyade bir şantiye alanı. Yaş alındıkça amelelikten şefliğe yükseliniyor. 
 Küçükken evebeynler yönetiyor seni. Sonrasında durum değişiyor. Kendi hayatının ortak yapımcısı oluyorsun. 
@@ -607,7 +602,9 @@ Hedefler de değiştiği için zamanla, insan hayatının çeşitli evrelerinde 
 **Yani ne demek bu?**
 Bilinçli bir hedef gütmeden attığın o rastgele adım, yan ürün olarak senin 10 yıl sonraki gerçekliğini inşa edebilir, seçimler niyeti aşar. 
 
-## Çocuğun İcadı ve İlk Günlükler
+## 6. Disiplinin Tarihi ve Çağdaş 4 Trend
+
+### Çocuğun İcadı ve İlk Günlükler
 
 Antik Yunan filozofları hayatı yaş dönemlerine bölüyordu ve her evrenin getirdiği avantaj ve dezavantajları felsefi olarak masaya yatırmışlardı. 
 
@@ -657,7 +654,7 @@ William T. Preyer (1841–1897) de kendi çocuğunu izledi, ama nasıl izlediği
 
 Bu metodolojik disiplin sayesinde çocuk, üzerinde spekülatif bir sürü şeyin söylendiği edebi bir "figür" olmaktan çıkıp, incelenebilen bir özneye dönüşmüştür. 
 
-## Kurumsallaşma ve Teorik Yükseliş
+### Kurumsallaşma ve Teorik Yükseliş
 
 Sadece 1890 ile 1915 yılları arasında 21 tane çocuk psikoljisi dergisi kuruldu ve 26 üniversite enstitüsü açıldı. 20. yüzyılın başlarında kabuğunu kırıp resmen akademik çılgınlığa dönüştüğü dönem tam. 
 Bi tarafta psikanaliz ve davranışçılık gibi genel psikoloji devleri. 
@@ -673,7 +670,7 @@ Bi tarafta psikanaliz ve davranışçılık gibi genel psikoloji devleri.
 İlk başta çocukluk ve ergenliği ölçmek için yola çıkılan çalışmaların orda durmaması ve devam etmesi sonucunda, katılımcıların yetişkinliği de yaşlılığı da çalışmaya dahil oldu. 
 Gelişim psikolojisinin omurgasını oluşturan çalışmalar. 
 
-## Çağdaş Paradigma, 4 Trend
+### Çağdaş Paradigma, 4 Trend
 
 >1) Yaşam Boyu Perspektifi
 >*Sanki insan yetişkinliğe girince donup kalıyor gibi, 1970'lere kadar alan neredeyse sadece çocukluk ve ergenliğe odaklanmıştı. 

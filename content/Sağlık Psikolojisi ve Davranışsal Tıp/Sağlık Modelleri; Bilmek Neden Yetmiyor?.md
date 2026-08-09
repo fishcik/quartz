@@ -1,12 +1,23 @@
 ---
 title: Sağlık Modelleri; Bilmek Neden Yetmiyor?
-date: 2026-01-15
+date: 2026-06-13
 tags:
   - sağlık-psikolojisi
   - saglik-modelleri-bilmek
 ---
 
 # Sağlık Modelleri; Bilmek Neden Yetmiyor?
+
+## İçindekiler
+
+- [[#1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM]]
+- [[#2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)]]
+- [[#3. Korkunun Ecele Faydası (var mı?)]]
+- [[#4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)]]
+- [[#5. PAPM (Önleyici Eylem Süreç Modeli)]]
+- [[#6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE]]
+
+---
 
 Sigara öldürür, hareket etmek iyidir, sebze yemek lazım. Bunları herkes biliyor. Bunları bilmek için tıp okumaya da gerek yok. Ambalajların üstünde bile yazıyor. 
 
@@ -28,7 +39,9 @@ Yani olay sadece "hadi sağlıklı şeyler yapalım, iyi olalım!" değil, "köt
 ***Davranış değişikliği kolay olsaydı bu kadar teoriye ihtiyaç duyulmazdı. Bu süreci etkileyen ve açıklayan en önemli faktörleri tespit etmeye çalışan onlarca teori var. Hepsinin sorusu aynı, açıları farklı: "İnsan davranışı nasıl değişir, ya da neden değişmez?"***
 
 
-#### Süreklilik mi, Aşama mı?
+## 1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM
+
+### Süreklilik mi, Aşama mı?
 
 *Alkolü bırakmayı düşünen biriyle konuştuğunda "bırakcam ama henüz hazır değilim" diyor. 
 Başka biri var, o da bırakmayı düşünüyor, ama bu hafta bıraktı, yarın tekrar aldı, sonraki hafta yine bıraktı.
@@ -224,7 +237,7 @@ Büyük kampanyalarda bunu yapmak zor olduğu için, en azından hedef kitleyi "
 >Ama **niyet ve eylem** arasındaki o devasa uçurumu açıklamakta yetersiz kalıp sınıfta kaldı...*
 
 
-## Niyet ve Planlı Davranış Teorisi (TRA/TPB)
+## 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)
 
 Zamanında sosyal psikoloji dünyasında çok düz bir mantık hakimdi: *Bir insanın bir şeye karşı tutumu neyse, ona göre davranır.
 Spor yapmayı seviyorsa yapar, sevmiyorsa yapmaz.*
@@ -308,7 +321,7 @@ Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olac
 
 
 
-## Korkunun Ecele Faydası (var mı?)
+## 3. Korkunun Ecele Faydası (var mı?)
 *Koruma Motivasyonu Teorisi (PMT - Protection Motivation Theory
 
 >Niyet etmek neden yetmez? 
@@ -406,6 +419,8 @@ Bu da bir Eğer/O zaman planı, engel senaryosu için.
 >planlayan insanlar hem daha sık hem daha hızlı hedeflerine ulaşıyor.**
 
 *Basit bir araç ama pek çok pahalı müdahaleden daha etkili.*
+
+## 4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)
 
 ### HAPA
 *Sağlık Eylem Süreci Yaklaşım Modeli - (Health Action Process Approach)*
@@ -585,6 +600,8 @@ Tabi psikolojide neredeyse her şeyde olduğu gibi, bu teoride de akla *tam* ola
 
 
 
+## 5. PAPM (Önleyici Eylem Süreç Modeli)
+
 ### PAPM 
 *'Bilmiyordum' ile 'biliyorum ve umursamıyorum' arasındaki fark.*
 
@@ -720,6 +737,8 @@ Yani aslında sürekli bir özelliğin yapay olarak aşamalara bölünmesi mi? E
 Eğer bu aşamalar *yalansa*, her aşamaya özel devasa bütçeli kampanyalar yapılması tamamen para ve zaman kaybıdır. 
 
 ---
+## 6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE
+
 ### Ortak Düşman: Geri Düşüş (Relapse)
 *Tüm bu modellerin kesiştiği bir konu var: **insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**
 
