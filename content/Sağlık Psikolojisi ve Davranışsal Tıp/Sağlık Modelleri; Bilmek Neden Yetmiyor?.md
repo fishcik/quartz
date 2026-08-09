@@ -11,9 +11,9 @@ tags:
 ## İçindekiler
 
 - [[#1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM]]
-- [[#2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)]]
+- [[#2. Niyet ve Planlı Davranış Teorisi (TRA/TPB[^3])]]
 - [[#3. Korkunun Ecele Faydası (var mı?)]]
-- [[#4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)]]
+- [[#4. Aşama Modelleri: HAPA[^4] ve TTM (Değişimin 6 Aşaması)]]
 - [[#5. PAPM (Önleyici Eylem Süreç Modeli)]]
 - [[#6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE]]
 
@@ -60,7 +60,7 @@ Kişiyi o çizgide ileriye ya da geriye iten şey bilişsel ve duygusal değişk
 - **sonuç senin için önemli mi?**
 Tüm bu değişkenlerin kombinasyonu davranış *olasılığını* belirliyor. 
 
->*Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
+>*Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli[^1] (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
 
 
 >***2) Aşama modelleri
@@ -212,7 +212,7 @@ Sonuç? *Herkes kendi riskini ortalamanın altında gördü.*
 >Gelelim bu modelin neden günümüz sağlık psikolojisinde "antika" olarak kaldığına ve ciddi eleştirilerine. 
 
 
-Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. 
+Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet[^6], maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. 
 *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?*
 
 Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında *o kadar da* iyi tahmin edemiyor. 
@@ -350,7 +350,7 @@ Bir insanın bir eylemi gerçekleştirip gerçekleştirmemesinde rol oynayan onl
 
 
 
-***Niyet-Davranış Uçurumu için örnek:*** Her yılbaşı verilen sözleri düşün: "bu yıl hiç ekmek yemeyeceğim", "bu yıl her gün spor yapcam".
+***Niyet-Davranış Uçurumu[^5] için örnek:*** Her yılbaşı verilen sözleri düşün: "bu yıl hiç ekmek yemeyeceğim", "bu yıl her gün spor yapcam".
 Motivasyon **tam**. 
 Ama Ocak sonu o motivasyonun çoğu **biter.**
 ***Niyet oluşturmada hiç bi sorun yok. Uygulamada var.***
@@ -540,7 +540,7 @@ Prochaska ve DiClemente şunu fark etti: sigara bırakmaya çalışan insanlara 
 - "Sigara mı? O ne? Yeniyor mu?......."
 
 *Zaman:*
-**5 yıldan uzun süren başarı. Öz-etkililik 100%, eski alışkanlığa dönme dürtüsü 0%. Yeni davranış artık karaktere dönüşmüştür.**
+**5 yıldan uzun süren başarı. Öz-etkililik[^2] 100%, eski alışkanlığa dönme dürtüsü 0%. Yeni davranış artık karaktere dönüşmüştür.**
 
 ---
 > ***Sürecin ille de yukarıdan aşağıya sıralı bi şekilde gitmesine gerek yok. Düşüşler ve sıçramalar normaldir. Bir kişi 4. aşamadan 2. aşamaya düşebilir, ya da tam tersi. Bu başarısızlık değil, sürecin kendisi. 
@@ -806,10 +806,9 @@ Vahşi ve TAM bir geri düşüş
 
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
 
-[^1]: HBM: Health Belief Model (Sağlık İnanç Modeli). Bireyin bir sağlık tehdidini algılama düzeyi ile eylemin beklenen yararı/maliyeti dengesine dayanan bilişsel model.
-
-[^2]: TPB / TRA: Theory of Planned Behaviour / Theory of Reasoned Action (Planlı Davranış Teorisi). Davranışın doğrudan niyet, tutum, öznel norm ve algılanan davranış kontrolü tarafından belirlendiğini savunan model.
-
-[^3]: HAPA: Health Action Process Approach (Sağlıklı Eylem Süreci Yaklaşımı). Motivasyonel (niyet öncesi) ve volisyonel (eylem/planlama) evreleri birbirinden ayıran hibrit aşama modeli.
-
-[^4]: AVE: Abstinenz-Verletzungs-Effekt (Perhiz İhlali Etkisi). Bağımlılıkta küçük bir tökezlemenin suçluluk duygusuyla tam bir geri düşüşe evrilmesi.
+[^1]: Sağlık İnanç Modeli (Health Belief Model): Bireylerin algılanan tehdit, duyarlılık ve kar-zarar dengesi üzerinden sağlık davranışlarına karar verdiğini öne süren bilişsel model.
+[^2]: Öz-Etkililik (Self-Efficacy): Albert Bandura tarafından tanımlanan, bireyin belirli bir davranışı veya görevi başarıyla yerine getirebileceğine yönelik öznel inanç kapasitesi.
+[^3]: Planlanmış Davranış Teorisi (Theory of Planned Behavior): Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.
+[^4]: HAPA Modeli (Health Action Process Approach): Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.
+[^5]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.
+[^6]: Algılanan Ciddiyet (Perceived Severity): Bir hastalığın veya sağlık sorununun bireyin yaşamında yaratacağı fiziksel ve sosyal sonuçların ağırlığına dair değerlendirmesi.

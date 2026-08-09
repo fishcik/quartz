@@ -11,9 +11,9 @@ tags:
 ## İçindekiler
 
 - [[#1. Gelişimin Temel İlkeleri ve Doğası]]
-- [[#2. Zaman Pencereleri: Kritik ve Hassas Dönemler]]
+- [[#2. Zaman Pencereleri: Kritik[^4] ve Hassas Dönem[^5]ler]]
 - [[#3. Gelişim Psikolojisi Neye Yarıyor?]]
-- [[#4. Biyoloji vs. Çevre: Genetik ve Epigenetik]]
+- [[#4. Biyoloji vs. Çevre: Genetik ve Epigenetik[^3]]]
 - [[#5. Bağlamsal Sistemler ve Bireysel Eylemlilik]]
 - [[#6. Disiplinin Tarihi ve Çağdaş 4 Trend]]
 
@@ -32,7 +32,7 @@ Ama en çok mutabık kalınan kısım: "Psikolojik gelişim, bireyin ***tüm ya�
 
 Tanımı parçalarına ayırmak istersek:
 
-Gelişim psikolojisi genelde bireyin kendi gelişimini inceler. Çocukluk, ergenlik, yaşlılık gibi dönemler yani. Bireyin gelişiminin bilimsel ismi ontogenez'dir. 
+Gelişim psikolojisi genelde bireyin kendi gelişimini inceler. Çocukluk, ergenlik, yaşlılık gibi dönemler yani. Bireyin gelişiminin bilimsel ismi ontogenez[^1]'dir. 
 
 Neden her değişime gelişim diyemeyiz?
 Bir adım diğerinin temelini oluşturur. Rastgele atılmamıştır. İkinci bir adımdan önce bir adım atılır. 
@@ -135,7 +135,7 @@ Sadece "daha çok" değil, "farklı şekilde".
 
 *Hem insan olmanın getirdiği yetileri keşfetmek ve onların gelişmesi, hem de bu yetilere uygun olan stratejilerin gelişmesi ve uygulanması.* 
 
-### Geri dönüş bileti var mı? (Plastisite) 
+### Geri dönüş bileti var mı? (Plastisite[^2]) 
 
 Basamak teorileri geri dönüş yok der. Bir adım attın mı, geri dönemezsin. Piaget'ye göre gelişim tek yönlü bir asansör gibi, sadece yukarı gider, *tekrar aşağı inemezsin.* 
 
@@ -690,6 +690,8 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 
 ***Gelişim psikolojisi bilim olarak 135 yıllık ama insan anlamaya çalıştığından beri bu sorular hep vardı zaten.***
 
-[^1]: ontogenez: Bireyin döllenmeden ölüme kadar kendi bireysel yaşam seyri içindeki gelişimi.
-
-[^2]: synaptic pruning: Beynin erken çocuklukta kurduğu aşırı sinaptik bağlantılardan kullanılmayanları budayıp işlevsel olanları güçlendirmesi.
+[^1]: Ontojenez (Ontogeny): Bireysel bir organizmanın döllenmeden ölüme kadar geçen yaşam süresince geçirdiği yapısal, biyolojik ve psikolojik gelişimsel süreç.
+[^2]: Plastisite (Plasticity): Beynin ve bilişsel sistemlerin deneyim, öğrenme ve çevresel uyaranlara bağlı olarak yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.
+[^3]: Epigenetik (Epigenetics): DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.
+[^4]: Kritik Dönem (Critical Period): Belirli bir çevresel uyaranın alınmaması durumunda ilgili biyolojik veya davranışsal fonksiyonun kalıcı olarak kazanılamadığı geri dönüşsüz gelişim penceresi.
+[^5]: Hassas Dönem (Sensitive Period): Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.

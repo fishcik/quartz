@@ -22,7 +22,7 @@ tags:
 
 Fiziksel aktiviteden kasıt ağır performans sporları değildir. Almanlar (DGK) yetişkinlere günde en az 30 dk. hafif terleten ve nabzı yükselten hareket önerirken, çocuklara 1-2 saat öneriyor.
 
-> Hareket, metabolik riskleri[^1] minimize eden ve klinik depresyonu önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
+> Hareket, metabolik risk[^1]leri minimize eden ve klinik depresyonu[^2] önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
 
 ---
 
@@ -32,9 +32,9 @@ Aslında depresyon-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: harek
 
 > [!info] Yani?
 > Belki de grup sporları bireysel koşudan daha iyi sonuç veriyor.
-> Belki de sosyal izolasyonu kırmak asıl işi yapan şey.  
+> Belki de sosyal izolasyon[^4]u kırmak asıl işi yapan şey.  
 
-*Zorluk ise hareketin faydasında değil, popülasyonun yaş ilerledikçe* **inaktif** *yaşama kaymasıdır.*
+*Zorluk ise hareketin faydasında değil, popülasyonun yaş ilerledikçe* **inaktif[^3]** *yaşama kaymasıdır.*
 
 ==***Yani:*** *Kalp, kanser, osteoporoz, diyabet, depresyon ve bi ton farklı şeyi* **tek** *bir davranışın aynı anda etkilemesi başka* **hiçbir müdahale için geçerli değil.**==
 
@@ -50,4 +50,7 @@ Because niyet yetmiyor! Yine!
 
 *Tabi herkes aynı aşamada olmayabilir...*
 
-[^1]: Metabolik risk: İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.
+[^1]: Metabolik Risk (Metabolic Risk): İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.
+[^2]: Klinik Depresyon (Major Depressive Disorder): Sürekli çökkün duygudurum, ilgi kaybı ve enerji azalmasıyla seyreden ve egzersizle nörotransmitter regülasyonu sağlanan duygu durum bozukluğu.
+[^3]: İnaktif Yaşam (Physical Inactivity): Sağlık için önerilen asgari fiziksel hareket eşiğinin altında kalan yaşam tarzı.
+[^4]: Sosyal İzolasyon (Social Isolation): Bireyin sosyal ağlardan ve ilişkisel destek mekanizmalarından yoksun kalması durumu.

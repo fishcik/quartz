@@ -27,7 +27,7 @@ tags:
 ## 1. Sağlık Psikolojisinin Doğuşu ve Kapsamı
 
 Grip olduğunda doktora gidiyorsun, ilaç yazıyor, içiyorsun. Sistem bu. 
-Biyomedikal model seni bir arıza olarak görüyor: bozulmuşsa tamir et, sağlamsa dokunma. 
+Biyomedikal model[^1] seni bir arıza olarak görüyor: bozulmuşsa tamir et, sağlamsa dokunma. 
 Sorun nerede peki?
 Sorun, grip olmandan önce neden her gece 4 saat uyuduğun, neden sigara içtiğin, neden stresin tavana vurduğu. Muayenehanede bunlar pek mevzu olmuyor. 
 Sağlık psikolojisi de işte tam burayı dolduruyor. 
@@ -37,7 +37,7 @@ Sağlığın korunması, hastalığın önlenmesi, sağlık hizmetleri ve rehabi
 
 >Bir insanın davranışları, bilişleri, duyguları, motivasyonu ve kişilği onun sağlığını nasıl etkiliyor?
 
->Hangi davranışlar sağlığı korur? Hastalıkları önlemede neler işe yarar? 
+>Hangi davranışlar sağlığı korur? Hastalıkları önleme[^3]de neler işe yarar? 
 >Hastalık varken yaşam kalitesi nasıl artılır?
 
 ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. 
@@ -74,7 +74,7 @@ Sağlık ise hastalığın "olmayışı", bu kadar.*
 >***Biyopsikososyal model***
 
 *20. yüzyılda biyomedikal modelin yerini aldı. Hastalıkların biyolojik, psikolojik ve sosyal faktörlerin hepsinin etkileşiminden oluştuğunu savunuyor. 
-Hem hastalığın ortaya çıkışında hem de seyrinde psikolojik faktörler devrede: kronik kaygı, depresyon, yas gibi duygusal haller; iyileşme beklentileri, hastalık hakkındaki kişisel teoriler gibi bilişsel süreçler.*
+Hem hastalığın ortaya çıkışında hem de seyrinde psikolojik faktörler devrede: kronik[^2] kaygı, depresyon, yas gibi duygusal haller; iyileşme beklentileri, hastalık hakkındaki kişisel teoriler gibi bilişsel süreçler.*
 
 *Bunların yanında: hastalık davranışına dair beklentiler, finansal destek mekanizmaları, sağlık sistemine erişim gibi sosyal-toplumsal faktörler de var.*
 
@@ -101,14 +101,9 @@ Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyıl�
 
 Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde *Division of Health Psychology* kurularak doğmuş oldu.
 
-Sağlık psikolojisinin diğer bir çok alanla[^1] cevaplamaya çalıştığı soru aynı: psikolojik süreçler sağlık ve hastalıkla nasıl kesişiyor? 
-Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla yapıyor. 
+Sağlık psikolojisinin diğer bir çok alanla cevaplamaya çalıştığı soru aynı: psikolojik süreçler sağlık ve hastalıkla nasıl kesişiyor? 
+Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla yapıyor.
 
-
-
-
-[^1]: Davranış tıbbı, Tıp psikolojisi, Psikosomatik, Konsültasyon psikiyatrisi, Psikiyatri, Klinik psikoloji
-
-[^2]: Biyomedikal model: Hastalığı sadece biyolojik/somatik bir arıza, sağlığı ise arızanın yokluğu olarak gören, psikososyal boyutları dışlayan geleneksel model.
-
-[^3]: Biyopsikososyal model: Sağlık ve hastalığın biyolojik, psikolojik ve sosyal faktörlerin karşılıklı etkileşimiyle belirlendiğini savunan bütüncül paradigma.
+[^1]: Biyomedikal Model (Biomedical Model): Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel tıp yaklaşımı.
+[^2]: Kronik Hastalık (Chronic Illness): Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).
+[^3]: Birincil Koruma (Primary Prevention): Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.

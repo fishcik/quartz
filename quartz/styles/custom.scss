@@ -2638,8 +2638,8 @@ html[saved-theme="dark"] .sc-bcl-article,
 // ─── Görev 8: SBB-kutusu ek bölümü (Alakalı yazılar + Etiketler dropdown) ───
 .sc-sbb-extra {
   width: 100%;
-  margin-top: 2px;             // menünün (sc-bclayers) hemen ardından akar
-  padding: 0 0 26px;           // chevron'a çakışmasın diye alt boşluk
+  margin-top: auto;            // Sütunun EN ALTINA oturur
+  padding: 8px 0 26px;         // chevron ve alt kenar için boşluk
   box-sizing: border-box;
 }
 // İnce separatör (menüden sonra)

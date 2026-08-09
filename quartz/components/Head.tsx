@@ -543,7 +543,7 @@ var SC_CURRICULUM = {
     'GELISIMSEL SAPMALAR',
     'MUDAHALE PROGRAMLARI'
   ],
-  'istatistik-1': [
+  'istatistik1': [
     'ISTATISTIGE NEDEN IHTIYAC DUYARIZ',
     'BETIMSEL ISTATISTIK I',
     'BETIMSEL ISTATISTIK II',
@@ -556,7 +556,7 @@ var SC_CURRICULUM = {
     'GRUP KARSILASTIRMALARI I',
     'GRUP KARSILASTIRMALARI II'
   ],
-  'klinik-psikoloji-1': [
+  'klinikpsikoloji1': [
     'GIRIS NORMAL VE ANORMAL',
     'KURAMLAR VE KATEGORIK YAKLASIMLAR',
     'BOYUTSAL YAKLASIMLAR',
@@ -570,7 +570,7 @@ var SC_CURRICULUM = {
     'CINSEL ISLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI',
     'BILIM FELSEFESI VE ARASTIRMA YAKLASIMLARI'
   ],
-  'klinik-psikoloji-2': [
+  'klinikpsikoloji2': [
     'PSIKOTERAPI NEDIR PSIKOTERAPI EKOLLERI I',
     'PSIKOTERAPI EKOLLERI II',
     'TERAPININ ZORUNLU VE EKOL OTESI BOYUTLARI',
@@ -583,7 +583,7 @@ var SC_CURRICULUM = {
     'MOTIVASYON VE MOTIVASYONEL GORUSME',
     'ARASTIRMA YONTEMLERI VE KANITA DAYALI TERAPILER'
   ],
-  'saglik-psikolojisi-ve-davranissal-tip': [
+  'saglikpsikolojisivedavranissaltip': [
     'SAGLIK PSIKOLOJISI NEDIR VE NEDEN VAR',
     'SAGLIK MODELLERI BILMEK NEDEN YETMIYOR',
     'SAGLIK DAVRANISLARI',
@@ -596,7 +596,7 @@ var SC_CURRICULUM = {
     'SIGARA',
     'GERI DUSUS'
   ],
-  'sosyal-psikoloji': [
+  'sosyalpsikoloji': [
     'GIRIS VE ARASTIRMA YONTEMLERI',
     'SOSYAL BILIS',
     'SOSYAL ALGI VE ATIF',
@@ -612,12 +612,18 @@ var SC_CURRICULUM = {
   ]
 };
 
+function scNormSlug(s){
+  s=(s||'').toLowerCase();
+  s=s.replace(/ı/g,'i').replace(/ş/g,'s').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ö/g,'o').replace(/i̇/g,'i');
+  return s.replace(new RegExp('[^a-z0-9]', 'g'),'');
+}
+
 function scSortHoneycombs(){
   var ul=document.querySelector('.page-listing .section-ul, .section-ul');
   if(!ul)return;
   var slug=document.body.getAttribute('data-slug')||'';
   var folder=slug.replace(/[/]index$/,'').replace(/^[/]/,'');
-  var normFolder=folder.toLowerCase().replace(new RegExp('[^a-z0-9-]', 'g'),'');
+  var normFolder=scNormSlug(folder);
   var curList=SC_CURRICULUM[normFolder];
   if(!curList){
     for(var k in SC_CURRICULUM){

@@ -12,15 +12,15 @@ _Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illü
 
 ## İçindekiler
 
-- [[#1. Sağlıksız Beslenme ve DGE Kuralları]]
+- [[#1. Sağlıksız Beslenme ve DGE[^1] Kuralları]]
 - [[#2. Akademi vs. Sokak: Mitler ve Gerçekler]]
-- [[#3. Niyet-Davranış Uçurumu ve Öz-Yeterlilik]]
+- [[#3. Niyet-Davranış Uçurumu[^4] ve Öz-Yeterlilik]]
 
 ---
 
 ## 1. Sağlıksız Beslenme ve DGE Kuralları
 
-**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik" mekanizmasını koruyabilmektir.**
+**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik[^3]" mekanizmasını koruyabilmektir.**
 
 ---
 
@@ -52,7 +52,7 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 ---
 
-**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.**
+**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite[^5] tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.**
 
 *Sonuçta Alman yetişkinlerin sadece ==%45.8'i== günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.*
 
@@ -86,7 +86,7 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 > [!quote] "Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
 
-==**BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas) resmi olarak hastalık sınıfında.**==
+==**BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas[^2]) resmi olarak hastalık sınıfında.**==
 
 ---
 
@@ -113,4 +113,8 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 
 **Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. Öz-yeterlilik de işte o ağır çantayı taşıyabildiğine duyduğun inanç.**
 
-[^1]: DGE: Deutsche Gesellschaft für Ernährung (Alman Beslenme Derneği).
+[^1]: DGE (Deutsche Gesellschaft für Ernährung): Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.
+[^2]: BMI / Beden Kitle İndeksi (Body Mass Index): Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.
+[^3]: Öz-Etkililik (Self-Efficacy): Bireyin sağlıklı beslenme hedefini zorlu sosyal veya duygusal koşullarda dahi sürdürebileceğine olan inanç düzeyi.
+[^4]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Sağlıklı beslenmeye güçlü niyet edilmesine karşın eylemin alışkanlık ve çevre baskısı nedeniyle başlatılamaması.
+[^5]: İnaktivite (Sedentary Behavior): Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.

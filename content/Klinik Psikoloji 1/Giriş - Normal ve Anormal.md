@@ -14,7 +14,7 @@ tags:
 - [[#2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları]]
 - [[#3. Ruhsal Bozukluk Nedir? Konstrüktler ve Zihin-Beden İkiliği]]
 - [[#4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski]]
-- [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5'e)]]
+- [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5[^3]'e)]]
 - [[#6. Çok Katmanlı Bakış ve Vaka Örnekleri]]
 
 ---
@@ -58,7 +58,7 @@ Burdaki "tuzak" şu: psikoterapi, klinik psikolojinin *tamamı* değil. Sadece b
 Peki bu **alet**in tanımı ne? 
 Baumann'la Perrez (2005) kafayı buna yormuş. 
 Ortaya dört köşeli bir çerçeve atmışlar: 
-- neden oluyor (*etiyoloji*)
+- neden oluyor (*etiyoloji[^2]*)
 - nasıl sınıflandırılıyor (*tanı*)
 - nasıl durduruluyor (*önleme, terapi, rehabilitasyon*)
 - ne kadar yaygın ve sağlık sistemi bu yaygınlığa nasıl cevap veriyor (*epidemiyoloji, değerlendirme*)
@@ -163,7 +163,7 @@ Psikoloji içinde bile: davranışsal tıp, sağlık psikolojisi, klinik psikolo
 | *Sağlık psikolojisi* | Sağlığı korumak, hastalığı önlemek, riski azaltmak. |
 | **Klinik nöropsikoloji** | Beyin hasarının deneyim ve davranışa etkisi. |
 | *Psikanaliz* | Freud'un kavramlarına dayanan psikoterapi ekolü. |
-| **Psikopatoloji** | Anormal deneyim, hal ve davranışı tanımlama öğretisi. |
+| **Psikopatoloji[^1]** | Anormal deneyim, hal ve davranışı tanımlama öğretisi. |
 | *Biyolojik psikiyatri* | Bozuklukları nörobiyolojik yöntemlerle araştırma ve tedavi. |
 | **Psikofarmakoloji** | İlaçların ruhsal süreçler üzerindeki etkisi. |
 | *Sosyal psikiyatri* | Hastalığın epidemiyolojik ve sosyolojik boyutları. |
@@ -233,7 +233,7 @@ Hayatın değişen taleplerine ayak uydurabilen, temel işlevleri yerine getireb
 Ama işler çığrından çıktığında, davranış ve ruhsal sorunlar çekilmez hale gelip, evde, okulda, işte o basit ama hayati işlevleri sekteye uğrattığında; ya da kişi toplumun/kendi normlarının veya kişisel hedeflerinin gerisinde kaldığında, üstüne üstlük bir de üstüne "acı çekmesi" eklenince, bu artık bir "ruhsal bozukluktur". 
 
 Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır: 
-*Ruhsal bozukluk bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal sendrom ya da örüntüdür.
+*Ruhsal bozukluk bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal sendrom[^6] ya da örüntüdür.
 Bu sendrom ya da örüntü, sadece **bir** olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki **olmamalı***. (Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)
 Ayrıca: toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk *sayılmaz.* 
 
@@ -249,7 +249,7 @@ Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini k
 ***Yani:*** DSM, "bu adam niye depresyonda yahu?" diye sormuyor. Sadece "bu adamda şu belirtiler var mı? kaç tanesi? ne zamandır?" diye soruyor. 
 
 *Böylece* farklı klinisyenler aynı hastaya baktıklarında aynı tanıya varma olasılıkları artar. Çünkü kriterler net, gözlemlenebilir **ve** yoruma açık değil. 
-"Hastada şu semptom var mı yok mu hocam?" gibi **somut** sorular. 
+"Hastada şu semptom[^5] var mı yok mu hocam?" gibi **somut** sorular. 
 
 İletişim de buna bağlı olarak kolaylaşıyor. Bir psikolog Zürih'te, diğeri de Lahor'da aynı "[[Psikozlar|şizofreni]]" tanısı koyduğunda, ikisinin de aynı şeyden bahsediyor olması. Çünkü tanı, hangi teoriye yakın oldukları ile değil, gözlemlenebilir bir kriter/semptom listesine dayanır. 
 
@@ -287,16 +287,16 @@ Bakış açısına, uygulama alanına, tarihsel bağlama göre her birinin bir h
 Şu ana kadar, ruhsal bozuklukların özünü daha tatmin edici şekilde yakalayan başka yaklaşım ya da model ortaya konmuş değil. 
 ***Eleştirmek kolay, daha iyisini bulmak zor.*** *Şimdilik.*
 
-DSM-5 bu yüzden sadece [[Kuramlar ve Kategorik Yaklaşımlar|kategorik yaklaşımla]] yetinmeyip, [[Boyutsal Yaklaşımlar|boyutsal]] ve bozukluklar-arası ve gelişimsel yönleri de daha güçlü şekilde hesaba katmayı hedef koymuş. 
+DSM-5 bu yüzden sadece [[Kuramlar ve Kategorik Yaklaşımlar|kategorik yaklaşımla]] yetinmeyip, [[Boyutsal[^7] Yaklaşımlar|boyutsal]] ve bozukluklar-arası ve gelişimsel yönleri de daha güçlü şekilde hesaba katmayı hedef koymuş. 
 
-*Aslında idealize edilen: mevcut nozolojik[^1] bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
+*Aslında idealize edilen: mevcut nozoloji[^8]k bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
 
 ## 5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5'e)
 
 **Peki DSM-5'te ne değişti?**
 
 Tüm bu eleştirilere karşı DSM ne yaptı? 
-Önceki versiyonları gibi, DSM-5 de ICD-11'e yol gösteren bir pusula olarak konumlandırıldı. 
+Önceki versiyonları gibi, DSM-5 de ICD-11[^4]'e yol gösteren bir pusula olarak konumlandırıldı. 
 Hedefi net: klinik kullanışlılığı, tanı güvenilirliğini ve geçerliliğini artırmak. 
 
 En sert değişim ise çok eksenli yapının tamamen terk edilmesi oldu. 
@@ -328,7 +328,7 @@ Bu sistem aslında iyi ilerliyordu, mantığı güzeldi; "*insan tek boyutlu de�
 Özellikle Eksen 1 ile Eksen 2 arasındaki ayrım yapaydı: 
 kişilik bozukluklarının, "*gerçek*" klinik bozukluklardan (depresyon, anksiyete vb.) temelde bambaşka bir kategori olduğu **varsayılmıştı**.
 
-"Gerçek" bozukluklar genelde epizodik[^2] kabul edilirdi. Yani: gelir, bi süre kalır, sonra iyileşir ya da kronikleşir. 
+"Gerçek" bozukluklar genelde epizodik kabul edilirdi. Yani: gelir, bi süre kalır, sonra iyileşir ya da kronikleşir. 
 
 Fakat araştırmalar ilerledikçe, bu ayrımın bilimsel bi temeli olmadığı ortaya çıktı.. Kişilik bozuklukları da "gerçek" bozukluklar gibi aynı mantıkla işliyordu. 
 Mesela: Borderline kişilik bozukluğu ile [[Duygudurum Bozuklukları|depresyon]], sık sık iç içe geçiyordu. 
@@ -450,7 +450,11 @@ Bu üç vaka, tam da [[Boyutsal Yaklaşımlar|çok eksenli/multimodal]] yaklaş�
 [[Kuramlar ve Kategorik Yaklaşımlar|Çok eksenli sistem]], bu hikayeleri [[Kuramlar ve Kategorik Yaklaşımlar|kategorilere]] sığdırmaya çalışıyor. Ama hayat, kategorilerden **hep taşıyor.** 
 *Bu yüzden bu öyküler birer* **uyarı** *"tanı koymadan önce, kişiyi dinle; sadece semptomlarını değil, hikayesini de".*
 
-
-[^1]: nozoloji: hastalıkları sınıflandırma bilimi.
-
-[^2]: sürekli olmayan, aralıklı, birbirinden bağımsız meydana gelen durumlar.
+[^1]: Psikopatoloji (Psychopathology): Ruhsal rahatsızlıkların, anormal davranışların ve zihinsel işlev bozukluklarının doğasını, nedenlerini ve gelişimsel dinamiklerini inceleyen bilim dalı.
+[^2]: Etiyoloji (Etiology): Bir hastalığın, psikolojik bozukluğun veya klinik tablonun altında yatan köken, nedensellik ve tetikleyici faktörler bütünü.
+[^3]: DSM (Diagnostic and Statistical Manual of Mental Disorders): Amerikan Psikiyatri Birliği tarafından yayımlanan, ruhsal bozukluklar için standart tanı kriterlerini belirleyen kılavuz.
+[^4]: ICD (International Classification of Diseases): Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.
+[^5]: Semptom (Symptom): Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.
+[^6]: Sendrom (Syndrome): Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.
+[^7]: Boyutsal Yaklaşım (Dimensional Approach): Psikolojik durumları katı 'sağlıklı / hasta' kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.
+[^8]: Nozoloji (Nosology): Hastalıkların ve psikiyatrik sendromların mantıksal temellere göre adlandırılması, tanımlanması ve hiyerarşik olarak sınıflandırılması.

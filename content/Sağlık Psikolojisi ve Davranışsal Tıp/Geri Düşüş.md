@@ -10,8 +10,8 @@ tags:
 
 ## İçindekiler
 
-- [[#1. Ortak Düşman: Geri Düşüş (Relapse)]]
-- [[#2. Perhiz İhlali Etkisi (AVE)]]
+- [[#1. Ortak Düşman: Geri Düşüş (Relapse[^2][^1])]]
+- [[#2. Perhiz İhlali Etkisi[^3] (AVE)]]
 - [[#3. Kısır Döngü ve Önleme Dinamikleri]]
 
 ---
@@ -60,7 +60,7 @@ Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü te
 ### ***Perhiz İhlali Etkisi***
 *(AVE - Abstinenz-Verletzungs-Effekt)*
 Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini **kötü** ve **suçlu** hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir: *"Ben iradesizim!"* veya *"Ben alkolik bir hastayım!"*. 
-Bu iki *atıf* da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu *olumsuz duygulardan kaçmak için* yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf *doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
+Bu iki *atıf[^4]* da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu *olumsuz duygulardan kaçmak için* yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf *doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
 
 >**Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.**
 
@@ -135,4 +135,7 @@ Yeni **dinamik modelde** her şey birbiriyle anlık etkileşimde:
 
 *Sistem aşırı kompleksleştiği için deneysel olarak kanıtlanması şu an tam bir lojistik cehennem.*
 
-[^1]: AVE (Perhiz İhlali Etkisi): Marlatt & Gordon tarafından tanımlanan; hedeflenen bir perhizde tek bir hatadan sonra yaşanan suçluluk ve kontrol kaybı hissinin tetiklediği nüks döngüsü.
+[^1]: Relaps / Geri Düşüş (Relapse): Bireyin değiştirdiği eski istenmeyen alışkanlığa (ör. sigara, madde kullanımı) tam ölçekli ve kalıcı olarak geri dönmesi.
+[^2]: Laps / Kayma (Lapse): Davranış değişikliği sürecinde meydana gelen tek seferlik, anlık veya kısa süreli kural ihlali.
+[^3]: Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE): Marlatt tarafından tanımlanan; tek bir kaçamak sonrası bireyin suçluluk, yetersizlik ve 'battı balık yan gider' bilişiyle kontrolü tamamen kaybetmesi.
+[^4]: İçsel Atıf (Internal Attribution): Başarısızlığı durumsal faktörler yerine kendi karakterine, iradesizliğine veya yetersizliğine bağlama eğilimi.

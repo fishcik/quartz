@@ -8,7 +8,7 @@ tags:
 
 ## İçindekiler
 
-- [[#1. Risk Grubu]]
+- [[#1. Risk[^3] Grubu]]
 - [[#2. Ne İşe Yarıyor?]]
 - [[#3. Halk vs. Bilim]]
 
@@ -27,7 +27,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 - 18'den önce 2 ya da daha fazla ciddi güneş yanığı geçirmek
 - Güneş yanığına yatkınlık; bronzlaşmadan önce yanma eğilimi
 - Dışarıda çalışma; açık havada uzun süreli güneşe maruz kalmak
-- Ailede deri kanseri öyküsü
+- Ailede deri kanser[^2]i öyküsü
 
 ---
 
@@ -48,7 +48,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 ## 3. Halk vs. Bilim
 
-_"Bulutlu havada güneş çarpmaz yaa, UV yok."_ **UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**
+_"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_ **UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**
 
 _"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_ **Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**
 
@@ -66,3 +66,7 @@ _Kanser korkusu görünüş korkusuna yeniliyor. Bronzlaşmak neden bu kadar gü
 ---
 
 _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
+
+[^1]: UV Radyasyonu (Ultraviolet Radiation): Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.
+[^2]: Melanom (Malignant Melanoma): Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.
+[^3]: İyimserlik Yanılgısı (Optimistic Bias): Bireyin olumsuz sağlık sonuçlarının başkalarının başına geleceğini, kendisine ise bir şey olmayacağını varsayma bilişsel eğilimi.
