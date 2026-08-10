@@ -267,7 +267,16 @@ function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){
     pb=document.createElement('div');pb.id='sc-progress';
-    pb.innerHTML='<div id="sc-progress-head" class="sc-progress-head" title="İlerleme"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8 2 5 5 5 9c0 3.5 2.5 6.5 6 7.8V21c0 .6.4 1 1 1s1-.4 1-1v-4.2c3.5-1.3 6-4.3 6-7.8 0-4-3-7-7-7zm-2 7c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg><span id="sc-progress-badge" class="sc-progress-badge"></span></div>';
+    pb.innerHTML='<div id="sc-progress-head" class="sc-progress-head" title="Okuma İlerlemesi">'+
+      '<svg class="sc-progress-serpent" viewBox="0 0 24 42" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'+
+        '<path d="M12 40 C7 34 17 28 12 22 C7 16 17 10 12 5" stroke-width="2.6"/>'+
+        '<ellipse cx="12" cy="5.5" rx="4.2" ry="5" stroke-width="2"/>'+
+        '<circle cx="10" cy="4.2" r="1.1" fill="#ff3428" stroke="none"/>'+
+        '<circle cx="14" cy="4.2" r="1.1" fill="#ff3428" stroke="none"/>'+
+        '<path d="M12 0.5 L12 -1.5 M12 -1.5 L9.5 -4 M12 -1.5 L14.5 -4" stroke-width="1.2" stroke="#ff3428"/>'+
+      '</svg>'+
+      '<span id="sc-progress-badge" class="sc-progress-badge"></span>'+
+    '</div>';
     document.body.appendChild(pb);
   }
   function prog(){
@@ -681,8 +690,8 @@ function scNormSlug(s){
 function scSortHoneycombs(){
   var ul=document.querySelector('.page-listing .section-ul, .section-ul');
   if(!ul)return;
-  var slug=document.body.getAttribute('data-slug')||'';
-  var folder=slug.replace(/[/]index$/,'').replace(/^[/]/,'');
+  var slug=document.body.getAttribute('data-slug')||window.location.pathname||'';
+  var folder=slug.replace(/[/]index$/,'').replace(/^[/]/,'').split('/')[0];
   var normFolder=scNormSlug(folder);
   var curList=SC_CURRICULUM[normFolder];
   if(!curList){
@@ -698,12 +707,15 @@ function scSortHoneycombs(){
   if(!lis.length)return;
 
   function getOrder(li){
-    var a=li.querySelector('.desc h3 a');
-    var rawText=a?(a.getAttribute('data-raw-title')||a.getAttribute('data-title')||a.textContent||'').trim():'';
-    var folded=scFold(rawText);
+    var a=li.querySelector('.desc h3 a')||li.querySelector('a');
+    if(!a)return 999;
+    var rawText=(a.getAttribute('data-raw-title')||a.getAttribute('data-title')||a.textContent||'').trim();
+    var href=decodeURIComponent(a.getAttribute('href')||'').split('/').pop()||'';
+    var fText=scFold(rawText);
+    var fHref=scFold(href);
     for(var i=0;i<curList.length;i++){
       var item=curList[i];
-      if(folded===item||folded.indexOf(item)===0||item.indexOf(folded)===0){
+      if(fText===item||fText.indexOf(item)===0||item.indexOf(fText)===0||fHref===item||fHref.indexOf(item)===0||item.indexOf(fHref)===0){
         return i;
       }
     }

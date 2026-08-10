@@ -20,41 +20,37 @@ _Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illü
 
 ## 1. Sağlıksız Beslenme ve DGE Kuralları
 
-**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik[^3]" mekanizmasını koruyabilmektir.**
-
----
-
-***Sağlıksız beslenme neden tehlikeli?***
-- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı *aşırı kilo* üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
+**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik[^3]" mekanizmasını koruyabilmektir.**---
+***Sağlıksız beslenme neden tehlikeli?***- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı**aşırı kilo* üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
 
 ---
 
 Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç. 
 
 > [!info] DGE[^1] (Alman Beslenme Derneği) 10 Kuralı
-> 1. **Çeşitli ye:** Yasak besin yok. Çeşitlilik yeterli besini sağlar.
-> 2. **Tam tahıl & patates:** Vitamin, mineral, lif. Düşük yağlı.
-> 3. **Günde 5 porsiyon meyve/sebze:** Her gün 5 avuç dolusu meyve + sebze.
-> 4. **Her gün süt. Haftada 1-2 balık. Sınırlı et & şarküteri:** Et haftada 300-600 gramdan fazla olmamalı. Süt ürünleri de az yağlı tercih edilmeli.
-> 5. **Az yağ ve yağlı gıda:** Günlük max. 60-80 g yağ; tercihen bitkisel.
-> 6. **Şeker ve tuzu insan gibi kullan:** Endüstriyel şekerin besin değeri sıfır. Tuz iyotlu olsun.
-> 7. **Bol sıvı:** Günde en az 1,5 litre kalorisi düşük içecek. Alkol nadiren ve az miktarda.
-> 8. **Lezzetli ve dikkatli pişir:** Sebze ve meyveleri çok pişirmemek besin içeriğini korur ve zararlı bileşiklerin de oluşmasını engeller.
-> 9. **Zaman ayır, tadını çıkar:** Dikkatli yemek tokluk sinyalini fark ettirir und sindirime yardımcı olur.
-> 10. **Kilo kontrolü ve hareket:** Enerji ihtiyacına uygun yemek. Günlük 30-60 dk fiziksel aktivite.
+> 1. **Çeşitli ye:**Yasak besin yok. Çeşitlilik yeterli besini sağlar.
+> 2.**Tam tahıl & patates:**Vitamin, mineral, lif. Düşük yağlı.
+> 3.**Günde 5 porsiyon meyve/sebze:**Her gün 5 avuç dolusu meyve + sebze.
+> 4.**Her gün süt. Haftada 1-2 balık. Sınırlı et & şarküteri:**Et haftada 300-600 gramdan fazla olmamalı. Süt ürünleri de az yağlı tercih edilmeli.
+> 5.**Az yağ ve yağlı gıda:**Günlük max. 60-80 g yağ; tercihen bitkisel.
+> 6.**Şeker ve tuzu insan gibi kullan:**Endüstriyel şekerin besin değeri sıfır. Tuz iyotlu olsun.
+> 7.**Bol sıvı:**Günde en az 1,5 litre kalorisi düşük içecek. Alkol nadiren ve az miktarda.
+> 8.**Lezzetli ve dikkatli pişir:**Sebze ve meyveleri çok pişirmemek besin içeriğini korur ve zararlı bileşiklerin de oluşmasını engeller.
+> 9.**Zaman ayır, tadını çıkar:**Dikkatli yemek tokluk sinyalini fark ettirir und sindirime yardımcı olur.
+> 10.**Kilo kontrolü ve hareket:**Enerji ihtiyacına uygun yemek. Günlük 30-60 dk fiziksel aktivite.
 > 
-> *Bu kurallar sağlıklı bireyler içindir; diyabetliler gibi hasta kişiler için tabi ki farklı öneriler geçerlidir.*
+>**Bu kurallar sağlıklı bireyler içindir; diyabetliler gibi hasta kişiler için tabi ki farklı öneriler geçerlidir.*
 
 > [!success] DGE Önerilen Makro Dağılımı
-> - **52-53% Karbonhidrat:** *Tahıl ürünleri, patates, meyve & sebze*
-> - **28-31% Yağ:** *60-80g, bitkisel*
-> - **16-17% Protein:** *Süt ürünleri, et, balık*
+> - **52-53% Karbonhidrat:** **Tahıl ürünleri, patates, meyve & sebze*
+> - **28-31% Yağ:** **60-80g, bitkisel*
+> - **16-17% Protein:** **Süt ürünleri, et, balık*
 
 ---
 
 **DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite[^4] tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.**
 
-*Sonuçta Alman yetişkinlerin sadece ==%45.8'i== günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.*
+**Sonuçta Alman yetişkinlerin sadece ==%45.8'i== günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.*
 
 ---
 
@@ -112,6 +108,14 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 **DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.**
 
 **Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. Öz-yeterlilik de işte o ağır çantayı taşıyabildiğine duyduğun inanç.**
+
+---
+
+## Kaynaklar
+
+- Deutsche Gesellschaft für Ernährung. (2020). *Vollwertig essen und trinken nach den 10 Regeln der DGE*. DGE e.V. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/10-regeln/
+- Povey, R., Wellens, B., & Conner, M. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of perceived control and self-efficacy. *British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810
+- World Health Organization. (2021). *Obesity and overweight: Key facts*. WHO. https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
 [^1]: DGE (Deutsche Gesellschaft für Ernährung): Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.
 [^2]: BMI / Beden Kitle İndeksi (Body Mass Index): Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.

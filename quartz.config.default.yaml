@@ -135,6 +135,35 @@ plugins:
     layout:
       position: right
       priority: 90
+    options:
+      localGraph:
+        drag: true
+        zoom: true
+        depth: 1
+        scale: 1.1
+        repelForce: 0.6
+        centerForce: 0.3
+        linkDistance: 35
+        fontSize: 0.6
+        opacityScale: 1
+        showTags: true
+        removeTags: []
+        focusOnHover: true
+        enableRadial: false
+      globalGraph:
+        drag: true
+        zoom: true
+        depth: -1
+        scale: 0.95
+        repelForce: 0.8
+        centerForce: 0.15
+        linkDistance: 50
+        fontSize: 0.6
+        opacityScale: 1
+        showTags: true
+        removeTags: []
+        focusOnHover: true
+        enableRadial: false
   - source: github:quartz-community/search
     enabled: true
     layout:
