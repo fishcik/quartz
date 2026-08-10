@@ -12,9 +12,9 @@ _Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illü
 
 ## İçindekiler
 
-- [[#1. Sağlıksız Beslenme ve DGE[^1] Kuralları]]
+- [[#1. Sağlıksız Beslenme ve DGE Kuralları]]
 - [[#2. Akademi vs. Sokak: Mitler ve Gerçekler]]
-- [[#3. Niyet-Davranış Uçurumu[^4] ve Öz-Yeterlilik]]
+- [[#3. Niyet-Davranış Uçurumu ve Öz-Yeterlilik]]
 
 ---
 
@@ -31,7 +31,7 @@ _Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illü
 
 Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç. 
 
-> [!info] DGE (Alman Beslenme Derneği) 10 Kuralı
+> [!info] DGE[^1] (Alman Beslenme Derneği) 10 Kuralı
 > 1. **Çeşitli ye:** Yasak besin yok. Çeşitlilik yeterli besini sağlar.
 > 2. **Tam tahıl & patates:** Vitamin, mineral, lif. Düşük yağlı.
 > 3. **Günde 5 porsiyon meyve/sebze:** Her gün 5 avuç dolusu meyve + sebze.
@@ -52,7 +52,7 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 ---
 
-**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite[^5] tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.**
+**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite[^4] tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.**
 
 *Sonuçta Alman yetişkinlerin sadece ==%45.8'i== günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.*
 
@@ -116,5 +116,4 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 [^1]: DGE (Deutsche Gesellschaft für Ernährung): Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.
 [^2]: BMI / Beden Kitle İndeksi (Body Mass Index): Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.
 [^3]: Öz-Etkililik (Self-Efficacy): Bireyin sağlıklı beslenme hedefini zorlu sosyal veya duygusal koşullarda dahi sürdürebileceğine olan inanç düzeyi.
-[^4]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Sağlıklı beslenmeye güçlü niyet edilmesine karşın eylemin alışkanlık ve çevre baskısı nedeniyle başlatılamaması.
-[^5]: İnaktivite (Sedentary Behavior): Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.
+[^4]: İnaktivite (Sedentary Behavior): Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.

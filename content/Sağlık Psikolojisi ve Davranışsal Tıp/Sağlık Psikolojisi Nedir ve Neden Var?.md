@@ -37,7 +37,7 @@ Sağlığın korunması, hastalığın önlenmesi, sağlık hizmetleri ve rehabi
 
 >Bir insanın davranışları, bilişleri, duyguları, motivasyonu ve kişilği onun sağlığını nasıl etkiliyor?
 
->Hangi davranışlar sağlığı korur? Hastalıkları önleme[^3]de neler işe yarar? 
+>Hangi davranışlar sağlığı korur? Hastalıkları önlemede neler işe yarar? 
 >Hastalık varken yaşam kalitesi nasıl artılır?
 
 ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. 
@@ -96,7 +96,7 @@ Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyıl�
 >Yani **hem** sigara içiyorsun, **hem** hareketsiz yaşıyorsun **hem** de kronik yoğun stres altındasın. Bunlar hastalığı **doğrudan** etkiliyor. Artık *davranış* tedavinin konusu haline geldi.
 
 >3) Sağlık sistemlerindeki maliyet patlaması. 
->Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek** çok daha ucuz. Bu ekonomik gerçeklik, önleme ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
+>Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek** çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
 
 
 Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde *Division of Health Psychology* kurularak doğmuş oldu.

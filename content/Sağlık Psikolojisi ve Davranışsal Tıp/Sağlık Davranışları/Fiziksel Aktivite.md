@@ -22,17 +22,17 @@ tags:
 
 Fiziksel aktiviteden kasıt ağır performans sporları değildir. Almanlar (DGK) yetişkinlere günde en az 30 dk. hafif terleten ve nabzı yükselten hareket önerirken, çocuklara 1-2 saat öneriyor.
 
-> Hareket, metabolik risk[^1]leri minimize eden ve klinik depresyonu[^2] önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
+> Hareket, metabolik[^1] riskleri minimize eden ve klinik depresyonu önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
 
 ---
 
 ## 2. Mekanizma: Fizyoloji vs. Sosyal Temas
 
-Aslında depresyon-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: hareketin kendisi mi iyileştiriyor, yoksa sosyal temas mı? Bu soru önemli çünkü cevabı müdaheleyi değiştirir. 
+Aslında depresyon[^2]-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: hareketin kendisi mi iyileştiriyor, yoksa sosyal temas mı? Bu soru önemli çünkü cevabı müdaheleyi değiştirir. 
 
 > [!info] Yani?
 > Belki de grup sporları bireysel koşudan daha iyi sonuç veriyor.
-> Belki de sosyal izolasyon[^4]u kırmak asıl işi yapan şey.  
+> Belki de sosyal izolasyonu kırmak asıl işi yapan şey.  
 
 *Zorluk ise hareketin faydasında değil, popülasyonun yaş ilerledikçe* **inaktif[^3]** *yaşama kaymasıdır.*
 
@@ -53,4 +53,3 @@ Because niyet yetmiyor! Yine!
 [^1]: Metabolik Risk (Metabolic Risk): İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.
 [^2]: Klinik Depresyon (Major Depressive Disorder): Sürekli çökkün duygudurum, ilgi kaybı ve enerji azalmasıyla seyreden ve egzersizle nörotransmitter regülasyonu sağlanan duygu durum bozukluğu.
 [^3]: İnaktif Yaşam (Physical Inactivity): Sağlık için önerilen asgari fiziksel hareket eşiğinin altında kalan yaşam tarzı.
-[^4]: Sosyal İzolasyon (Social Isolation): Bireyin sosyal ağlardan ve ilişkisel destek mekanizmalarından yoksun kalması durumu.

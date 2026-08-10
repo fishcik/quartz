@@ -11,9 +11,9 @@ tags:
 ## İçindekiler
 
 - [[#1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM]]
-- [[#2. Niyet ve Planlı Davranış Teorisi (TRA/TPB[^3])]]
+- [[#2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)]]
 - [[#3. Korkunun Ecele Faydası (var mı?)]]
-- [[#4. Aşama Modelleri: HAPA[^4] ve TTM (Değişimin 6 Aşaması)]]
+- [[#4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)]]
 - [[#5. PAPM (Önleyici Eylem Süreç Modeli)]]
 - [[#6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE]]
 
@@ -212,7 +212,7 @@ Sonuç? *Herkes kendi riskini ortalamanın altında gördü.*
 >Gelelim bu modelin neden günümüz sağlık psikolojisinde "antika" olarak kaldığına ve ciddi eleştirilerine. 
 
 
-Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet[^6], maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. 
+Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. 
 *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?*
 
 Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında *o kadar da* iyi tahmin edemiyor. 
@@ -250,7 +250,7 @@ O halde ***tutum*** ile ***davranış*** arasında başka bir şey olmalı.
 
 Fishbein ve Ajzen bu "başka şey"i niyet olarak tanımladı ve *Gerekçeli Eylem Teorisi'ni* (TRA - Theory of reasoned action) kurdu. 
 
->*Ajzen daha sonra bunu Planlı Davranış Teorisi'ne (TPB - Theory of planned behavior) genişletti.*
+>*Ajzen daha sonra bunu Planlı Davranış Teorisi'ne (TPB[^3] - Theory of planned behavior) genişletti.*
 
 Niyet, kişinin belirli bir davranışı gerçekleştirmeye ya da belirli bir sonuca varmaya dair *bilinçli* kararı. 
 Her iki teoride de niyet davranışın en güçlü öngörücüsü/tahmincisi.
@@ -425,7 +425,7 @@ Bu da bir Eğer/O zaman planı, engel senaryosu için.
 ### HAPA
 *Sağlık Eylem Süreci Yaklaşım Modeli - (Health Action Process Approach)*
 
-HAPA, sağlık davranışlarını "niyet oluşturma" ile *bitmiş* bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
+HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş* bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
 
 Yani iş niyetten sonra başlıyor. Ve o "sonrası" tek bir blok değil, *her aşamanın kendi dinamiği var.*
 
@@ -811,4 +811,3 @@ Vahşi ve TAM bir geri düşüş
 [^3]: Planlanmış Davranış Teorisi (Theory of Planned Behavior): Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.
 [^4]: HAPA Modeli (Health Action Process Approach): Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.
 [^5]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.
-[^6]: Algılanan Ciddiyet (Perceived Severity): Bir hastalığın veya sağlık sorununun bireyin yaşamında yaratacağı fiziksel ve sosyal sonuçların ağırlığına dair değerlendirmesi.

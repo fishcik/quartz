@@ -8,7 +8,7 @@ tags:
 
 ## İçindekiler
 
-- [[#1. Risk[^3] Grubu]]
+- [[#1. Risk Grubu]]
 - [[#2. Ne İşe Yarıyor?]]
 - [[#3. Halk vs. Bilim]]
 
@@ -27,7 +27,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 - 18'den önce 2 ya da daha fazla ciddi güneş yanığı geçirmek
 - Güneş yanığına yatkınlık; bronzlaşmadan önce yanma eğilimi
 - Dışarıda çalışma; açık havada uzun süreli güneşe maruz kalmak
-- Ailede deri kanser[^2]i öyküsü
+- Ailede deri kanseri öyküsü
 
 ---
 
@@ -52,7 +52,7 @@ _"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_ **UV ışınları bulut, s
 
 _"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_ **Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**
 
-_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_ **[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**
+_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser[^2] riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_ **[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**
 
 ---
 
@@ -69,4 +69,3 @@ _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
 
 [^1]: UV Radyasyonu (Ultraviolet Radiation): Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.
 [^2]: Melanom (Malignant Melanoma): Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.
-[^3]: İyimserlik Yanılgısı (Optimistic Bias): Bireyin olumsuz sağlık sonuçlarının başkalarının başına geleceğini, kendisine ise bir şey olmayacağını varsayma bilişsel eğilimi.

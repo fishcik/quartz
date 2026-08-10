@@ -11,9 +11,9 @@ tags:
 ## İçindekiler
 
 - [[#1. Gelişimin Temel İlkeleri ve Doğası]]
-- [[#2. Zaman Pencereleri: Kritik[^4] ve Hassas Dönem[^5]ler]]
+- [[#2. Zaman Pencereleri: Kritik ve Hassas Dönemler]]
 - [[#3. Gelişim Psikolojisi Neye Yarıyor?]]
-- [[#4. Biyoloji vs. Çevre: Genetik ve Epigenetik[^3]]]
+- [[#4. Biyoloji vs. Çevre: Genetik ve Epigenetik]]
 - [[#5. Bağlamsal Sistemler ve Bireysel Eylemlilik]]
 - [[#6. Disiplinin Tarihi ve Çağdaş 4 Trend]]
 
@@ -135,7 +135,7 @@ Sadece "daha çok" değil, "farklı şekilde".
 
 *Hem insan olmanın getirdiği yetileri keşfetmek ve onların gelişmesi, hem de bu yetilere uygun olan stratejilerin gelişmesi ve uygulanması.* 
 
-### Geri dönüş bileti var mı? (Plastisite[^2]) 
+### Geri dönüş bileti var mı? (Plastisite) 
 
 Basamak teorileri geri dönüş yok der. Bir adım attın mı, geri dönemezsin. Piaget'ye göre gelişim tek yönlü bir asansör gibi, sadece yukarı gider, *tekrar aşağı inemezsin.* 
 
@@ -150,7 +150,7 @@ Kaybetti mi? Evet.
 Geri alınabilir mi? Kolay değil. 
 Yetişkin olarak vs. çocuk olarak yabancı dil öğrenmenin farkı da bu. 
 
-Buna **plastisite** deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor. *Beyin bir hamur ise, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.* 
+Buna **plastisite[^2]** deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor. *Beyin bir hamur ise, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.* 
 
 ### Herkeste mi, sende mi? (Evrensel vs. Diferansiyel)
 
@@ -199,7 +199,7 @@ Davranış psikolojisinin söylediği sert bir kavram bu; bazı öğrenmeler ger
 
 *Yani treni kaçırırsan bi daha tren falan yok. Ya da yanlış trene binersen bi daha inmek neredeyse imkansız.* 
 
-Hassas dönemler yani. Genetik olarak programlanmış kısa süreli bir pencere. O pencere açıkken doğru uyaran gelirse, değişim kalıcı oluyor. Pencere kapandıktan sonra ne yaparsan yap, o değişim artık o olması gerektiği şekilde olmuyor. 
+Hassas[^4] dönemler yani. Genetik olarak programlanmış kısa süreli bir pencere. O pencere açıkken doğru uyaran gelirse, değişim kalıcı oluyor. Pencere kapandıktan sonra ne yaparsan yap, o değişim artık o olması gerektiği şekilde olmuyor. 
 Ya da tam tersi, pencere açıkken gerekli deneyim gelmezse, buna yoksunluk deniyor, gelişim sekiyor. Ve bu sekme sonradan telafi edilemiyor, ya da çok zor ediliyor. 
 
 Bunu daha iyi anlamak için bazı örnekler: 
@@ -337,7 +337,7 @@ Hepsi aynı anda birbirini etkileyen bir ağ içinde çalışıyor.
 
 Ergenlik biyolojik ama evebeyn beklentileri sosyal ama kültürün ergenliğe bakışı kültürel ama gencin bunlara nasıl tepki verdiği kişisel... 
 
-İşin ilginç kısmı ***epigenetik***. 
+İşin ilginç kısmı ***epigenetik[^3]***. 
 
 Gen = yazılmış kader değil. 
 Çevre, genlerin nasıl ifade edildiğini değiştirebiliyor. 
@@ -693,5 +693,4 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 [^1]: Ontojenez (Ontogeny): Bireysel bir organizmanın döllenmeden ölüme kadar geçen yaşam süresince geçirdiği yapısal, biyolojik ve psikolojik gelişimsel süreç.
 [^2]: Plastisite (Plasticity): Beynin ve bilişsel sistemlerin deneyim, öğrenme ve çevresel uyaranlara bağlı olarak yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.
 [^3]: Epigenetik (Epigenetics): DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.
-[^4]: Kritik Dönem (Critical Period): Belirli bir çevresel uyaranın alınmaması durumunda ilgili biyolojik veya davranışsal fonksiyonun kalıcı olarak kazanılamadığı geri dönüşsüz gelişim penceresi.
-[^5]: Hassas Dönem (Sensitive Period): Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.
+[^4]: Hassas Dönem (Sensitive Period): Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.

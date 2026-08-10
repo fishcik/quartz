@@ -265,8 +265,24 @@ function scAutoTheme(){
 }
 function ensure(){
   var pb=document.getElementById('sc-progress');
-  if(!pb){pb=document.createElement('div');pb.id='sc-progress';document.body.appendChild(pb);}
-  function prog(){var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;pb.style.height=(p*100)+'%';}
+  if(!pb){
+    pb=document.createElement('div');pb.id='sc-progress';
+    pb.innerHTML='<div id="sc-progress-head" class="sc-progress-head" title="İlerleme"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8 2 5 5 5 9c0 3.5 2.5 6.5 6 7.8V21c0 .6.4 1 1 1s1-.4 1-1v-4.2c3.5-1.3 6-4.3 6-7.8 0-4-3-7-7-7zm-2 7c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm4 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg><span id="sc-progress-badge" class="sc-progress-badge"></span></div>';
+    document.body.appendChild(pb);
+  }
+  function prog(){
+    var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;
+    pb.style.height=(p*100)+'%';
+    var badge=document.getElementById('sc-progress-badge');
+    if(badge){
+      var pct=Math.round(p*100);
+      var art=document.querySelector('article, .center');
+      var wc=art?(art.textContent||'').split(new RegExp('[\\\\s]+')).length:600;
+      var totalMin=Math.ceil(wc/180);
+      var remMin=Math.max(1, Math.ceil(totalMin*(1-p)));
+      badge.textContent='%'+pct+(p<0.95?' • ~'+remMin+' dk':' • Bitti');
+    }
+  }
   window.__scProg=prog;prog();
   // ── Tema geçişi: saved-theme değişince 300ms yumuşak cross-fade ──
   if(!window.__scThemeObs){
@@ -472,8 +488,52 @@ function updateBcLayers(){
     var h1=document.querySelector('.center .article-title, article .article-title');
     var artTitle=h1?(h1.textContent||'').trim():'';
     if(artTitle){
-      var l3=document.createElement('span');l3.className='sc-bclayer sc-bcl-article';l3.textContent=artTitle;
+      var l3=document.createElement('a');l3.className='sc-bclayer sc-bcl-article';l3.href=window.location.pathname;l3.textContent=artTitle;
       bl.appendChild(l3);setTimeout(function(){l3.classList.add('sc-bcl-in');},150);
+      
+      var tocLinks=document.querySelectorAll('article a[href^="#"], .center a[href^="#"]');
+      var tocItems=[];
+      var seenIds={};
+      tocLinks.forEach(function(ta){
+        var href=ta.getAttribute('href')||'';
+        if(href.length>1&&!seenIds[href]){
+          var txt=(ta.textContent||'').trim();
+          if(txt&&txt!=='İçindekiler'&&txt!=='#'&&txt.length>2){
+            seenIds[href]=true;
+            tocItems.push({href:href,text:txt});
+          }
+        }
+      });
+      if(!tocItems.length){
+        document.querySelectorAll('article h2, .center article h2').forEach(function(h2){
+          var txt=(h2.textContent||'').trim();
+          if(txt&&txt!=='İçindekiler'){
+            var id=h2.id||scFold(txt).toLowerCase().replace(new RegExp('[^a-z0-9]', 'g'),'-');
+            if(!h2.id)h2.id=id;
+            tocItems.push({href:'#'+id,text:txt});
+          }
+        });
+      }
+      if(tocItems.length>0){
+        var tocWrap=document.createElement('div');tocWrap.className='sc-bclayer-toc';
+        tocItems.slice(0,7).forEach(function(item,tIdx){
+          var ta=document.createElement('a');
+          ta.className='sc-bctoc-item';
+          ta.href=item.href;
+          ta.textContent=item.text;
+          ta.addEventListener('click',function(e){
+            e.preventDefault();
+            var targetEl=document.querySelector(item.href)||document.getElementById(item.href.slice(1));
+            if(targetEl){
+              targetEl.scrollIntoView({behavior:'smooth',block:'start'});
+              history.pushState(null,'',item.href);
+            }
+          });
+          tocWrap.appendChild(ta);
+          setTimeout(function(){ta.classList.add('sc-bcl-in');},180+tIdx*25);
+        });
+        bl.appendChild(tocWrap);
+      }
     }
   }
 }
@@ -560,15 +620,15 @@ var SC_CURRICULUM = {
     'GIRIS NORMAL VE ANORMAL',
     'KURAMLAR VE KATEGORIK YAKLASIMLAR',
     'BOYUTSAL YAKLASIMLAR',
+    'BILIM FELSEFESI VE ARASTIRMA YAKLASIMLARI',
     'KAYGI BOZUKLUKLARI',
     'OBSESIF KOMPULSIF BOZUKLUK VE TIKLER',
     'TRAVMA VE TRAVMA SONRASI STRES BOZUKLUGU',
     'DUYGUDURUM BOZUKLUKLARI',
+    'BAGIMLILIKLAR',
     'PSIKOZLAR',
     'YEME BOZUKLUKLARI',
-    'BAGIMLILIKLAR',
-    'CINSEL ISLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI',
-    'BILIM FELSEFESI VE ARASTIRMA YAKLASIMLARI'
+    'CINSEL ISLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI'
   ],
   'klinikpsikoloji2': [
     'PSIKOTERAPI NEDIR PSIKOTERAPI EKOLLERI I',

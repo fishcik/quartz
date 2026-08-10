@@ -62,7 +62,7 @@ Eğer olay sadece *biyolojik nikotin ihtiyacı* olsaydı, piyasadaki nikotin sak
 Demek ki işin içinde çok ağır bi **Psikolojik Bağımlılık[^3]** bileşeni var. Bunu ıskalayan tüm tedaviler patlamaya mahkumdur.
 
 Bağımlılık fiziksel bir bileşenin yanı sıra güçlü bir psikolojik bileşen de içeriyor.
-Psikolojik teoriler sigarayı **Öğrenilmiş Davranış[^4]** olarak görüyor; rahatlama, sosyal onay gibi *düzenleyici* işlevler aracılığıyla **Pozitif Pekiştirme[^2]** ile sürdürülüyor. 
+Psikolojik teoriler sigarayı **Öğrenilmiş Davranış** olarak görüyor; rahatlama, sosyal onay gibi *düzenleyici* işlevler aracılığıyla **Pozitif Pekiştirme[^2]** ile sürdürülüyor. 
 
 Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir tiryakinin beyninde o "click" sesinin çıkması için tek bir rasyonel kırılma gerekiyor:
 ==Korkuyla değil, kazançla hareket etmek.==
@@ -81,4 +81,3 @@ Sonuç olarak sigara sadece kimyasal bir tuzak değil; bilişsel çarpıtmalar v
 [^1]: Nikotin Regülasyon Teorisi (Nicotine Regulation Theory): Vücuttaki nikotin seviyesi düştüğünde ortaya çıkan yoksunluk semptomlarını bastırmak için sigara içme sıklığının ayarlandığını öne süren biyolojik model.
 [^2]: Pozitif Pekiştirme (Positive Reinforcement): Bir davranışın ardından haz verici veya ödüllendirici bir uyaranın gelmesi sonucu o davranışın tekrarlanma sıklığının artması.
 [^3]: Psikolojik Bağımlılık (Psychological Dependence): Madde veya davranışın duygu düzenleme, rahatlama veya kimlik parçası olarak algılanması sonucu gelişen zihinsel bağımlılık örüntüsü.
-[^4]: Öğrenilmiş Davranış (Learned Behavior): Deneyim, koşullanma ve çevresel pekiştireçler yoluyla otomatikleşen davranış kalıbı.

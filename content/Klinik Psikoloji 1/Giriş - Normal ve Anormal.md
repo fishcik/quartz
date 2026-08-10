@@ -14,7 +14,7 @@ tags:
 - [[#2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları]]
 - [[#3. Ruhsal Bozukluk Nedir? Konstrüktler ve Zihin-Beden İkiliği]]
 - [[#4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski]]
-- [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5[^3]'e)]]
+- [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5'e)]]
 - [[#6. Çok Katmanlı Bakış ve Vaka Örnekleri]]
 
 ---
@@ -101,7 +101,7 @@ Ve bu hep çift taraflı bir mercek:
 "Bozulmuş işlev örüntüleri"ne dar anlamda "ruhsal bozukluk" diyoruz. Burda klinik psikoloji yalnız çalışmıyor. *Tanı sınıflandırma sistemlerine yaslanıyor.* 
 Bunlar tıbbın, psikiyatrinin ve diğer sağlık mesleklerinin de paylaştığı sistemler. 
 
-*DSM-5 ve ICD-10*
+*DSM-5[^3] ve ICD-10*
 *Bozuklukları tanımlamak için kullanılan iki resmi "kural kitabı". ICD dünya çapında geçerli, hastaneler ve sigortalar onu kullanmak zorunda. 
 DSM ise araştırma ve eğitimde olmazsa olmaz.*
 
@@ -289,7 +289,7 @@ Bakış açısına, uygulama alanına, tarihsel bağlama göre her birinin bir h
 
 DSM-5 bu yüzden sadece [[Kuramlar ve Kategorik Yaklaşımlar|kategorik yaklaşımla]] yetinmeyip, [[Boyutsal[^7] Yaklaşımlar|boyutsal]] ve bozukluklar-arası ve gelişimsel yönleri de daha güçlü şekilde hesaba katmayı hedef koymuş. 
 
-*Aslında idealize edilen: mevcut nozoloji[^8]k bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
+*Aslında idealize edilen: mevcut nozolojik bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani "doğayı eklem yerlerinden ayırmak" gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.*
 
 ## 5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV'ten DSM-5'e)
 
@@ -457,4 +457,3 @@ Bu üç vaka, tam da [[Boyutsal Yaklaşımlar|çok eksenli/multimodal]] yaklaş�
 [^5]: Semptom (Symptom): Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.
 [^6]: Sendrom (Syndrome): Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.
 [^7]: Boyutsal Yaklaşım (Dimensional Approach): Psikolojik durumları katı 'sağlıklı / hasta' kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.
-[^8]: Nozoloji (Nosology): Hastalıkların ve psikiyatrik sendromların mantıksal temellere göre adlandırılması, tanımlanması ve hiyerarşik olarak sınıflandırılması.
