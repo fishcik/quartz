@@ -3384,16 +3384,19 @@ body[data-slug="tags/index"] .page-listing > p {
     font-family: var(--bodyFont, 'Source Serif 4', Georgia, serif) !important;
     
     // Smooth snake-like curved lines
-    .edgePath path, .flowchart-link {
-      stroke-width: 1.8px !important;
-      stroke: var(--secondary) !important;
+    .edgePath path, .flowchart-link, path.path {
+      stroke-width: 1.6px !important;
+      stroke: var(--secondary, #c79a6d) !important;
       transition: stroke 0.2s ease;
     }
     
-    // Markers / Arrowheads
-    marker path, marker polygon {
-      fill: var(--secondary) !important;
-      stroke: var(--secondary) !important;
+    // Markers / Arrowheads (Enforce Warm Beige/Sepia across all engines)
+    marker, marker path, marker polygon, marker circle,
+    [id*="pointEnd"] path, [id*="pointStart"] path, [id*="flowchart"] path,
+    .arrowMarkerPath, .arrowheadPath, path[marker-end] {
+      fill: var(--secondary, #c79a6d) !important;
+      stroke: var(--secondary, #c79a6d) !important;
+      stroke-width: 1.2px !important;
     }
 
     // Node labels font & color
@@ -3415,4 +3418,6 @@ body[data-slug="tags/index"] .page-listing > p {
     }
   }
 }
+
+
 
