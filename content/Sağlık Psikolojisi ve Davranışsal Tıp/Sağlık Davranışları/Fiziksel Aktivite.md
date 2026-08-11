@@ -28,6 +28,22 @@ Fiziksel aktiviteden kasıt ağır performans sporları değildir. Almanlar (DGK
 
 #
 
+> [!abstract] 📜 Fiziksel Aktivite Doz-Yanıt ve Mortalite Riski Modeli (Kesäniemi ve ark., 2001; US DHHS, 2018)
+> *Kaynak: Kesäniemi, Y. A., et al. (2001). Dose-response issues concerning physical activity and health. Medicine & Science in Sports & Exercise, 33(6), S351–S358.*
+>
+> ```mermaid
+> flowchart LR
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Sedanter((Sedanter / Hareketsiz)):::cardinal ==>|En Büyük Sağlık Sıçraması| Hafif([Hafif-Orta Aktivite: 150 dk/hf]):::sepia
+>   Hafif ==>|Ekstra Kazanım| Duzenli([Düzenli Egzersiz: 300 dk/hf]):::sepia
+>   Duzenli -.->|Plato Evresi| Elit([Aşırı Yüksek Hacim: Marjinal Fayda Azalır])
+> ```
+>
+> **Açıklama:** *Hareketsizlikten haftalık 150 dakikalık orta tempolu yürüyüşe geçişin mortaliteyi en dramatik şekilde düşürdüğünü, sonrasındaki hacim artışlarının ise azalan marjinal fayda sağladığını gösteren klinik doz-yanıt akışıdır.*
+
 # 2. Mekanizma: Fizyoloji vs. Sosyal Temas
 
 Aslında depresyon[^2]-hareket ilişkisindeki mekanizma biraz belirsiz hâlâ: hareketin kendisi mi iyileştiriyor, yoksa sosyal temas mı? Bu soru önemli çünkü cevabı müdaheleyi değiştirir. 

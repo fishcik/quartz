@@ -91,6 +91,26 @@ Sağlık psikolojisi**ikinci** modeli temel alıyor, her şey biyopsikososyal mo
 
 #
 
+> [!abstract] 📜 Biyopsikososyal Sağlık Modeli (Engel, 1977)
+> *Kaynak: Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196(4286), 129–136.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Bio([Biyolojik Sistemler: Genetik, Fizyoloji, İmmünoloji]):::sepia --> Saglik((Sağlık & Hastalık)):::cardinal
+>   Psy([Psikolojik Süreçler: Biliş, Duygu, Başa Çıkma]):::cardinal --> Saglik
+>   Soc([Sosyal Çevre: Kültür, Sosyoekonomik Düzey, Aile]):::sepia --> Saglik
+>   
+>   Bio <--> Psy
+>   Psy <--> Soc
+>   Bio <--> Soc
+> ```
+>
+> **Açıklama:** *Hastalık ve iyilik halinin yalnızca hücresel/biyolojik kusurlarla değil, biyoloji, psikoloji ve sosyal bağlamın kesişiminde dinamik olarak belirlendiğini modeller.*
+
 # 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
 #

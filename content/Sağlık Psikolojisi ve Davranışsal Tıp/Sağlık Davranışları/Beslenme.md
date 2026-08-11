@@ -114,6 +114,28 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 
 ---
 
+> [!abstract] 📜 Beslenmede Niyet-Davranış Uçurumu ve Eylem Planlama Modeli (Povey ve ark., 2000; Gollwitzer, 1999)
+> *Kaynak: Povey, R., et al. (2000). The theory of planned behaviour and healthy eating. Psychology & Health, 15(4), 443–457.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Niyet([Sağlıklı Beslenme Niyeti]):::cardinal --> Plan{{Uygulama Niyeti Var mı?}}:::sepia
+>   
+>   Plan -.->|Eğer-O Zaman Planı Var| EylemPlan([Somut Durum & Yemek Planı]):::sepia
+>   EylemPlan -.-> EngelAsma([Engelleri Önceden Çözme]):::sepia
+>   EngelAsma ==> Basari((Sağlıklı Diyet İdamesi))
+>   
+>   Plan ==>|Sadece Soyut İstek| Bosluk([Niyet-Davranış Uçurumu]):::cardinal
+>   Bosluk ==> OtomatikTetik([Çevresel Tetikleyiciler & Alışkanlık]):::cardinal
+>   OtomatikTetik ==> Basarisizlik((Eski Yeme Rutinine Dönüş)):::cardinal
+> ```
+>
+> **Açıklama:** *Sağlıklı beslenmeye yönelik soyut niyetlerin, "Ne zaman, nerede, ne yiyeceğim?" şeklinde somut uygulama niyetlerine (Implementation Intentions) dökülmediğinde neden çöktüğünü modeller.*
+
 ## Kaynaklar
 
 * Deutsche Gesellschaft für Ernährung. (2020). *Vollwertig essen und trinken nach den 10 Regeln der DGE*. DGE e.V. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/10-regeln/

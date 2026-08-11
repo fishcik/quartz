@@ -68,6 +68,25 @@ Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir ti
 
 #
 
+> [!abstract] 📜 Bağımlılıkta Karşıt-Süreç Teorisi / Opponent-Process (Solomon & Corbit, 1974)
+> *Kaynak: Solomon, R. L., & Corbit, J. D. (1974). An opponent-process theory of motivation. Psychological Review, 81(2), 119–145.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Madde([Nikotin Alımı]):::cardinal --> A_Sureci([A-Süreci: Hızlı Dopamin & Anlık Haz]):::sepia
+>   A_Sureci --> Dengeleme{{Homeostatik Karşı Tepki}}:::sepia
+>   Dengeleme ==> B_Sureci([B-Süreci: Gecikmeli Çekilme & Disfori]):::cardinal
+>   
+>   B_Sureci -.->|Zamanla Derinleşir| Tolerans((Tiryakilik & Tolerans)):::cardinal
+>   Tolerans ==>|Yoksunluğu Dindirmek İçin| Madde
+> ```
+>
+> **Açıklama:** *İlk dönemde keyif almak için içilen sigaranın, zamanla A sürecinin sönmesi ve B sürecinin (yoksunluk stresi) derinleşmesiyle sadece "normale dönmek ve yoksunluk acısını dindirmek" için içilme tuzağını açıklar.*
+
 # 3. Tiryakilik Mantığı ve Bırakma Paradoksu
 
 İnsanlar neden bırakmıyor?

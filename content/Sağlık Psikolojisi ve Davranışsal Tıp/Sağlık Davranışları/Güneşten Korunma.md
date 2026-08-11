@@ -52,6 +52,26 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 #
 
+> [!abstract] 📜 Güneşten Korunmada Karar Dinamikleri Modeli (Prentice-Dunn & Rogers, 1986)
+> *Kaynak: Prentice-Dunn, S., & Rogers, R. W. (1986). Protection Motivation Theory and preventive health: Sun protection behavior.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   UV([UV Radyasyonu & Cilt Kanseri Tehdidi]):::cardinal --> TehditAlgisi{{Tehdit Değerlendirmesi}}:::cardinal
+>   TehditAlgisi -.->|Duyarlılık + Ciddiyet Yüksek| BasaCikma{{Başa Çıkma Değerlendirmesi}}:::sepia
+>   
+>   BasaCikma -.->|Krem & Gölge Etkili| Motivasyon([Koruma Motivasyonu]):::sepia
+>   Motivasyon ==> Eylem((Güneşten Korunma Davranışı))
+>   
+>   BasaCikma ==>|Bronzlaşma Ödülü & Zahmet Ağır Basarsa| Maladaptif((Korumasız Güneşe Maruz Kalma)):::cardinal
+> ```
+>
+> **Açıklama:** *Güneşten korunma kararının, cilt hasarı korkusu ile bronzlaşmanın getirdiği anlık sosyal/estetik ödül ve kremin zahmeti arasındaki bilişsel çatışmayı nasıl çözdüğünü modeller.*
+
 # 3. Halk vs. Bilim
 
 _"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_** Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser[^2] riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_**[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**---

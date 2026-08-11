@@ -79,6 +79,29 @@ Bu iki *atıf*[^3]da tam olarak bir geri düşüş olasılığını artırıyor.
 
 #
 
+> [!abstract] 📜 Bilişsel-Davranışçı Geri Düşüş Modeli (Marlatt & Gordon, 1985)
+> *Kaynak: Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). Relapse Prevention: Maintenance Strategies in the Treatment of Addictive Behaviors. Guilford Press.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Risk((Yüksek Riskli Kriz)):::cardinal --> Karar{{Baş Etme Tepkisi?}}:::sepia
+>   
+>   Karar -.->|Coping Var| Coping([Etkili Baş Etme Davranışı]):::sepia
+>   Coping -.-> OE([Artan Öz-Etkililik]):::sepia
+>   OE ==> Abstinans((Abstinans Sürdürülür))
+>   
+>   Karar ==>|Coping Yok| NoCoping([Baş Edememe & Pozitif Beklenti]):::cardinal
+>   NoCoping ==> Lapse{{İlk Kaçamak / Lapse}}:::cardinal
+>   Lapse ==> AVE([Yoksunluk İhlali Etkisi - AVE]):::cardinal
+>   AVE ==> Relapse((Tam Geri Düşüş / Relapse)):::cardinal
+> ```
+>
+> **Açıklama:** *Kriz anındaki bilişsel baş etmenin; öz-etkililik, ilk kayma (lapse) ve yoksunluk ihlali etkisi (AVE) üzerinden tam geri düşüşe (relapse) giden karar dinamiklerini betimler.*
+
 ## Geri Düşüşün Anatomisi
 >**Bağımlılık genetik bir ceza değil. Yanlış öğrenilmiş bir alışkanlıktır. Ve her alışkanlık gibi, doğru stratejiyle hacklenebilir.** Marlatt diyor ki:*"Seni geriye düşüren şey zayıf karakterin değil, karşına çıkan "Yüksek Risk Durumu" (Hochrisikosituation) karşısında verdiğin tepkidir."*Bağımlılık = öğrenilmiş, alışkanlık haline gelmiş bir davranış.
 O halde, öğrenilmiş bi şey yine bir öğrenme süreci ile*değiştirilebilir*.

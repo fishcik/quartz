@@ -37,6 +37,27 @@ Bu yüzden Sağlık İnanç Modeli[^2] gibi salt rasyonel modeller tek başına 
 
 #
 
+> [!abstract] 📜 IMB Korunma Davranışı Modeli (Fisher & Fisher, 1992, 2000)
+> *Kaynak: Fisher, J. D., & Fisher, W. A. (1992). Changing AIDS-risk behavior. Psychological Bulletin, 111(3), 455–474.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Bilgi([CYBE & Bulaş Bilgisi]):::sepia --> Beceriler{{Davranışsal Beceriler}}:::cardinal
+>   Motivasyon([Kişisel Tutum & Sosyal Norm]):::sepia --> Beceriler
+>   
+>   Beceriler --> Muzakere([Partnerle Korunma Müzakeresi]):::sepia
+>   Beceriler --> Erisim([Önceden Temin & Hazır Bulundurma]):::sepia
+>   
+>   Muzakere ==> Korunma((Tutarlı Kondom Kullanımı)):::cardinal
+>   Erisim ==> Korunma
+> ```
+>
+> **Açıklama:** *Kondom kullanımının sadece bilgiyle değil; partnerle müzakere edebilme ve anlık spontanite baskısına direnme gibi kritik davranışsal becerilerle eyleme dönüştüğünü modeller.*
+
 # 3. Spontanite İllüzyonu ve Eylem Planı
 
 Kondom taşımak veya kullanımını konuşmak "romantizmi bozuyor" veya "güvensizlik göstergesi" olarak kodlandığında koruyucu davranış düşer. 

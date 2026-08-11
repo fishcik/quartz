@@ -185,6 +185,30 @@ Büyük kampanyalarda bunu yapmak zor olduğu için, en azından hedef kitleyi "
 
 #
 
+> [!abstract] 📜 Sağlık İnanç Modeli / HBM (Rosenstock, 1974; Becker, 1974)
+> *Kaynak: Rosenstock, I. M. (1974). Historical origins of the health belief model. Health Education Monographs, 2(4), 328–335.*
+>
+> ```mermaid
+> flowchart TD
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Duyarlilik([Algılanan Duyarlılık]):::sepia --> Tehdit{{Algılanan Tehdit}}:::cardinal
+>   Ciddiyet([Algılanan Ciddiyet]):::sepia --> Tehdit
+>   
+>   Tehdit --> Eylem((Sağlık Davranışı Eylemi)):::cardinal
+>   
+>   Faydalar([Algılanan Faydalar]):::sepia --> NetFayda{{Maliyet-Fayda Dengesi}}:::sepia
+>   Engeller([Algılanan Engeller]):::cardinal --> NetFayda
+>   NetFayda --> Eylem
+>   
+>   Ipucu([Harekete Geçirici İpuçları]):::sepia --> Eylem
+>   Ozetkililik([Bireysel Öz-Etkililik]):::cardinal --> Eylem
+> ```
+>
+> **Açıklama:** *Bir insanın sağlık tehdidi algısı ile maliyet-fayda dengesinin birleşerek gerçek bir koruyucu sağlık eylemine dönüşme sürecini bilişsel basamaklarla modeller.*
+
 # 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)
 
 Zamanında sosyal psikoloji dünyasında çok düz bir mantık hakimdi: *Bir insanın bir şeye karşı tutumu neyse, ona göre davranır.
@@ -240,6 +264,25 @@ Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olac
 
 
 >**"Theories don’t have to be correct – only facts do." - Hans Selye"**
+
+> [!abstract] 📜 Planlı Davranış Teorisi / TPB (Ajzen, 1991)
+> *Kaynak: Ajzen, I. (1991). The theory of planned behavior. Organizational Behavior and Human Decision Processes, 50(2), 179–211.*
+>
+> ```mermaid
+> flowchart LR
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+>
+>   Tutum([Davranışa Yönelik Tutum]):::sepia --> Niyet{{Davranışsal Niyet}}:::cardinal
+>   Norm([Öznel Normlar / Sosyal Baskı]):::sepia --> Niyet
+>   Kontrol([Algılanan Davranışsal Kontrol]):::sepia --> Niyet
+>   
+>   Niyet ==> Davranis((Gerçekleşen Davranış)):::cardinal
+>   Kontrol -.->|Doğrudan Etki| Davranis
+> ```
+>
+> **Açıklama:** *İnsan eylemlerinin doğrudan tutumlardan değil, tutum ve sosyal baskıların süzülerek oluşturduğu "niyet" üzerinden davranışa döküldüğünü betimler.*
 
 ## 3. Korkunun Ecele Faydası (var mı?)*Koruma Motivasyonu Teorisi (PMT - Protection Motivation Theory
 
