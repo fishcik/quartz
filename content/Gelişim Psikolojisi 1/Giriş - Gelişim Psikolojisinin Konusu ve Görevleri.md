@@ -6,8 +6,6 @@ tags:
   - giris
 ---
 
-# Giriş: Gelişim Psikolojisinin Konusu ve Görevleri
-
 ## İçindekiler
 
 - [[#1. Gelişimin Temel İlkeleri ve Doğası]]
@@ -62,11 +60,14 @@ Bu, gelişimin çok yönlülüğüdür. Yani tek yöne doğru sürekli bir kazan
 Bunun klasik bir örneğini bebekler üzerinden de anlayabiliriz. 
 Bebekler dünyaya geldiğinde tüm insan dillerindeki sesleri ayırt edebiliyorlar. Yani, Japonca'daki r/l farkını, Türkçe'deki ğ'yi, Almanca'daki ch'yı, hepsini duyuyorlar. Ama 6-12. aylar arasında bu kapasite bir nevi daralıyor, kendi ana diline odaklanıyor ve diğer dillerin seslerine olan duyarlılık azalıyor.
 
-### *Kazanç: ana dilde uzmanlaşma. Kayıp: evrensel ses algısı.* Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüzme benzeri hareketler yapabilmeleri. Bu refleks de birkaç ay içinde kayboluyor ve sonrasında yüzmeyi*tekrar* öğrenmek gerekiyor, bu sefer bilinçli olarak. 
+### *Kazanç: ana dilde uzmanlaşma.* 
+*Kayıp: evrensel ses algısı.* 
+
+Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüzme benzeri hareketler yapabilmeleri. Bu refleks de birkaç ay içinde kayboluyor ve sonrasında yüzmeyi*tekrar* öğrenmek gerekiyor, bu sefer bilinçli olarak. 
 
 >**Genel mantık şu: uzmanlaşma her zaman bir daralmayla geliyor.**
 
-**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.*
+**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
 
 ## 1. Gelişimin Temel İlkeleri ve Doğası
 
@@ -85,7 +86,9 @@ Sonra bi noktada bu mantık çöküyor. Çocuk farkediyor ki bu gerekçe tutmuyo
 
 İşte orda tam garip bi şey oluyor. 
 Çocuk iki mantık arasında asılı kalıyor. 
-*O yüzden bazı çocuklar "evet etek giyersen cinsiyetin değişir" diyor, çünkü ellerinde başka bi açıklama yok o an.*>Bu geçici bir aşama ve uzun vadeli bir gelişimin tam ortasında, yani cinsiyet kavramının zihinsel olarak oturmasının bir parçası. O yüzden bu da gelişim psikolojisinin ilgi alanına girer.
+*O yüzden bazı çocuklar "evet etek giyersen cinsiyetin değişir" diyor, çünkü ellerinde başka bi açıklama yok o an.* 
+
+>Bu geçici bir aşama ve uzun vadeli bir gelişimin tam ortasında, yani cinsiyet kavramının zihinsel olarak oturmasının bir parçası. O yüzden bu da gelişim psikolojisinin ilgi alanına girer.
 
 ### Gelişim döllenmeyle başlar, ölümle biter. 
 
@@ -160,7 +163,7 @@ Yani; her seferinde o gelişime bakıp soruyorsun:
 
 "Bu spesifik durumda hangisi geçerli?"
 
-Gelişim oldu tamam, ama**neden* oldu sorusu açık.*Olgunlaşma* ise neden sorusuna cevap oluyor. Topu biyolojiye atıyor. Sen bi şey yapmadın, çevren de. Olan şey genetik programın çalışması ve bir şeylerin değişmesi. 
+Gelişim oldu tamam, ama **neden** oldu sorusu açık.*Olgunlaşma* ise neden sorusuna cevap oluyor. Topu biyolojiye atıyor. Sen bi şey yapmadın, çevren de. Olan şey genetik programın çalışması ve bir şeylerin değişmesi. 
 
 Mesela, bebek doğduğunda bir sürü refleksi var; emme, tutunma, irkilme refleksleri. Bunlar programlanmış bi şekilde geliyor, ekstra bunları öğrenmiyorsun, ve bunlar yine programlanmış bir şekilde kayboluyor. Bebek "öğrenmiyor", ya da sen öğretmiyorsun. Olgunlaşma sırası gelince bazı şeyleri siliyor, otomatik. 
 
@@ -225,7 +228,14 @@ Hepsi farklı sorular, farklı cevaplar.
 
 Değişmeyen şeyler var. Neyin değişmediğine göre tamamen farklı şeyler kastediliyor. Bu yüzden "stabilite" tek bir şey değil. 
 
-**Grup ortalaması sabit mi?** Bir sınıftaki herkesin matematik notu zamanla değişmedi. Ortalama aynı kaldı. Ama kim iyi kim kötü değişmiş olabilir, önemli değil, pozisyonlar sabit.** Sıralama sabit mi?** Ali her zaman en iyiydi, Abdülrezzakhan hep ortalama, Fatımavesvese hep sonda. Sayılar değişmiş olabilir ama sıra hiç bozulmadı. Ortalama değişmiş olabilir, önemli değil, pozisyonlar sabit.** İkisi birden** Hem ortalama değişmedi, hem sıralama değişmedi. En katı stabilite bu.** Kişinin kendi içindeki sıralama sabit mi?**"Para, insan ilişkileri, teknoloji. Sence en önemlisi hangisi?" diye sordun birine. Kişi her seferinde aynı önem sıralaması verdi.** İç yapı sabit mi?** Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel zeka" var. Ama büyüdükçe bu ilişki zayıflıyor, testler birbirinden ayrışıyor. Yani yapı değişiyor. Artık tek bir "genel zeka"yı ölçmüyorlar, farklı şeyleri ölçüyorlar.** Bunla ilgili düşünce deneyi:**
+**Grup ortalaması sabit mi?** Bir sınıftaki herkesin matematik notu zamanla değişmedi. Ortalama aynı kaldı. Ama kim iyi kim kötü değişmiş olabilir, önemli değil, pozisyonlar sabit.
+**Sıralama sabit mi?** 
+Ali her zaman en iyiydi, Abdülrezzakhan hep ortalama, Fatımavesvese hep sonda. Sayılar değişmiş olabilir ama sıra hiç bozulmadı. Ortalama değişmiş olabilir, önemli değil, pozisyonlar sabit.
+**İkisi birden** Hem ortalama değişmedi, hem sıralama değişmedi. En katı stabilite bu.
+Kişinin kendi içindeki sıralama sabit mi? 
+**"Para, insan ilişkileri, teknoloji. Sence en önemlisi hangisi?" diye sordun birine. Kişi her seferinde aynı önem sıralaması verdi.** 
+
+**İç yapı sabit mi?** Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel zeka" var. Ama büyüdükçe bu ilişki zayıflıyor, testler birbirinden ayrışıyor. Yani yapı değişiyor. Artık tek bir "genel zeka"yı ölçmüyorlar, farklı şeyleri ölçüyorlar.**Bunla ilgili düşünce deneyi:**
 
 Üç kişi.
 İki zaman noktası.
@@ -416,19 +426,23 @@ Yani gen direkt çevreyi değiştirmiyor. Davranış üzerinden dolaylı etkiliy
 Gen artık seni*yönlendiriyor*. Sen de çevreyi* ona göre* şekillendiriyorsun. 
 
 
->**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. **
+>**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. 
 
 ### Aynı Pislik, Farklı Hasar
 
-Kovaryasyonun dediği gibi çevre ve gen'in birbirleriyle olan etkileşimin üstüne*interaksiyon* bambaşka bi şey soruyor:
-***aynı berbat çevre herkesi aynı şekilde mahvediyor mu?** Spoiler: etmiyor.** İnsanlar çevreye olan biyolojik duyarlılıkları açısından birbirinden* köklü* biçimde farklı. 
+Kovaryasyonun dediği gibi çevre ve gen'in birbirleriyle olan etkileşimin üstüne *interaksiyon* bambaşka bi şey soruyor:
+***aynı berbat çevre herkesi aynı şekilde mahvediyor mu?***
+*Spoiler: etmiyor.*
+İnsanlar çevreye olan biyolojik duyarlılıkları açısından birbirinden *köklü* biçimde farklı. 
 
 Bu farkı anlamak için şu metafor işimize yarayabilir:
 
 >**Karahindiba çocuklar:**
-Kaldırım taşı altından bile çıkar karahindiba. Bahçe güzel mi çirkin mi çok sallamaz. Yine de büyür. Çevre ne olursa olsun ortalama bir gelişim, ne çok iyi ne çok kötü. Sisteme duyarsız, dayanıklı, esnek. 
+>>Kaldırım taşı altından bile çıkar karahindiba. Bahçe güzel mi çirkin mi çok sallamaz. Yine de büyür. 
+>Çevre ne olursa olsun ortalama bir gelişim, ne çok iyi ne çok kötü. Sisteme duyarsız, dayanıklı, esnek. 
 
->**Orkide çocuklar:**>Doğru toprağa, doğru ışığa, doğru neme ihtiyaçları var. Bu koşullar sağlanırsa inanılmaz açarlar. Karahindibanın asla ulaşamayacağı yerlere gidebilirler. 
+>**Orkide çocuklar:**
+>>Doğru toprağa, doğru ışığa, doğru neme ihtiyaçları var. Bu koşullar sağlanırsa inanılmaz açarlar. Karahindibanın asla ulaşamayacağı yerlere gidebilirler. 
 >Ama koşullar bozuksa, solar, hasar görür, çöker, çürür. 
 
 Zaten evrimsel mantığa göre her ikisi de bir strateji. 
@@ -542,7 +556,9 @@ Hedefler de değiştiği için zamanla, insan hayatının çeşitli evrelerinde 
 
 #
 
-## Kelebek Etkisi*Bazen gelişimi kasıtlı olarak değil, yan ürün olarak etkiliyorsun. Günlük hayattaki plansız, anlık ortaya çıkan bir davranış, çevre üzerinde bir reaksiyon zinciri tetikler. Çevre öyle bir geri bildirim verir ki, dönüp dolaşıp senin gelişim şartlarını baştan aşağı değiştirir.
+## Kelebek Etkisi
+
+Bazen gelişimi kasıtlı olarak değil, yan ürün olarak etkiliyorsun. Günlük hayattaki plansız, anlık ortaya çıkan bir davranış, çevre üzerinde bir reaksiyon zinciri tetikler. Çevre öyle bir geri bildirim verir ki, dönüp dolaşıp senin gelişim şartlarını baştan aşağı değiştirir.
 
 **Yani ne demek bu?** Bilinçli bir hedef gütmeden attığın o rastgele adım, yan ürün olarak senin 10 yıl sonraki gerçekliğini inşa edebilir, seçimler niyeti aşar.
 
@@ -563,7 +579,7 @@ Antik Yunan filozofları hayatı yaş dönemlerine bölüyordu ve her evrenin ge
 
 **Philippe Ariès (1975), antik dönemdeki gelişim bilincinin Orta Çağ'da yokoldu. Tablolarda çocuklar küçük yetişkinler gibi çizilmiş, aynı kıyafetler, aynı yüz ifadeleri. 5 yaşındaki çocuk madende çalışıyor. Hukukta çocuk ile yetişkin arasında pek fark yok. Roma hukukunun aksine, Orta Çağ mahkemelerinde çocuklara yetişkinlerle tamamen aynı cezai ehliyet uygulanıyordu.
 Sanki "çocukluk" diye bir kavram daha icat edilmemiş. 
-Çocuklar biyolojik olarak sütten kesildikten hemen sonra yetişkin dünyasına salınıyordu.*
+Çocuklar biyolojik olarak sütten kesildikten hemen sonra yetişkin dünyasına salınıyordu.
 
 Ariès'in bu radikal tablosu tartışmalı ama çarpıcı. 
 
