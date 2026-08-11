@@ -3372,11 +3372,32 @@ body[data-slug="tags/index"] .page-listing > p {
 
 // ─── SAYKO.CH MERMAID & DIAGRAM SIGNATURE STYLING ────────────────────────
 .mermaid, pre:has(> code.mermaid), div.mermaid {
+  position: relative;
   background: transparent !important;
   border: none !important;
   display: flex;
   justify-content: center;
-  margin: 1.5rem 0;
+  margin: 1.8rem 0;
+
+  // 𓆙 Subtle top-left serpentbrain watermark
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 26px;
+    height: 20px;
+    background-image: url("/static/serpentbrain.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.22;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover::before {
+    opacity: 0.55;
+  }
 
   svg {
     max-width: 100%;
