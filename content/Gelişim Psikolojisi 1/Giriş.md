@@ -26,7 +26,7 @@ tags:
 
 Konuya dalmadan önce "psikolojik gelişim" ne demek, altında yatan mekanizmalar nedir, ve hangi faktörler bu süreci nasıl şekillendiriyor?
 
-Bir çok başka şey gibi, bu sorulara dair de bir çok farklı teorik yaklaşım var. Dönem dönem değişiyor, bazıları eleniyor, bazıları sağlamlaşıyor. **Öyle genelgeçer, net ve tek bir anlatı yok.**Ama en çok mutabık kalınan kısım: "Psikolojik gelişim, bireyin***tüm yaşamı boyunca** devam eden**, düzenli, yönelimli ve uzun değişimdir."
+Bir çok başka şey gibi, bu sorulara dair de bir çok farklı teorik yaklaşım var. Dönem dönem değişiyor, bazıları eleniyor, bazıları sağlamlaşıyor. **Öyle genelgeçer, net ve tek bir anlatı yok.** Ama en çok mutabık kalınan kısım: "Psikolojik gelişim, bireyin ***tüm yaşamı boyunca*** devam eden, düzenli, yönelimli ve uzun değişimdir."
 
 Tanımı parçalarına ayırmak istersek:
 
@@ -50,19 +50,19 @@ Bir önceki basamakta çözülen ya da çözülmeyen sorunlar ve başarımlar bi
 
 Rastlantı gelişimi bozmuyor, gelişimin üzerine oturuyor, onu "test" ediyor. 
 
->***Yani ilk adım; değişim, düzenli/"kurallı" ise gelişimdir; "şunu anlamadan bunu anlayamazsın".***Gelişimin bir**yönü*var. Ama o yönün ne olduğu, tarihte çokça tartışıldı. 
+>***Yani ilk adım; değişim, düzenli/"kurallı" ise gelişimdir; "şunu anlamadan bunu anlayamazsın".*** Gelişimin bir**yönü* var. Ama o yönün ne olduğu, tarihte çokça tartışıldı. 
 Uzun süre "gelişim = yukarı gitmek" sanıldı. Yani hep kazanç, hep ilerleme, hep daha fazla beceri. Oh, ne alâ. 
 
 Ama artık tablo daha karmaşık görülüyor: gelişim hem kazanç hem kayıp içeriyor, aynı anda. 
 
-En klasik örneklerden biri: yaşlandıkça*kristalize zeka*denilen bilgi/deneyim/kelime haznesi gelişiyor. Ama aynı zamanda yaşlandıkça*akışkan zeka*, yani yeni problemleri hızlı çözme kapasitesi gerilemeye başlıyor. 
+En klasik örneklerden biri: yaşlandıkça*kristalize zeka* denilen bilgi/deneyim/kelime haznesi gelişiyor. Ama aynı zamanda yaşlandıkça*akışkan zeka*, yani yeni problemleri hızlı çözme kapasitesi gerilemeye başlıyor. 
 
 Bu, gelişimin çok yönlülüğüdür. Yani tek yöne doğru sürekli bir kazanç ya da tam tersi, kayıp yaşanmaz, kazanç da kayıp da aynı anda olur. 
 
 Bunun klasik bir örneğini bebekler üzerinden de anlayabiliriz. 
 Bebekler dünyaya geldiğinde tüm insan dillerindeki sesleri ayırt edebiliyorlar. Yani, Japonca'daki r/l farkını, Türkçe'deki ğ'yi, Almanca'daki ch'yı, hepsini duyuyorlar. Ama 6-12. aylar arasında bu kapasite bir nevi daralıyor, kendi ana diline odaklanıyor ve diğer dillerin seslerine olan duyarlılık azalıyor.
 
-### *Kazanç: ana dilde uzmanlaşma. Kayıp: evrensel ses algısı.*Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüzme benzeri hareketler yapabilmeleri. Bu refleks de birkaç ay içinde kayboluyor ve sonrasında yüzmeyi*tekrar* öğrenmek gerekiyor, bu sefer bilinçli olarak. 
+### *Kazanç: ana dilde uzmanlaşma. Kayıp: evrensel ses algısı.* Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüzme benzeri hareketler yapabilmeleri. Bu refleks de birkaç ay içinde kayboluyor ve sonrasında yüzmeyi*tekrar* öğrenmek gerekiyor, bu sefer bilinçli olarak. 
 
 >**Genel mantık şu: uzmanlaşma her zaman bir daralmayla geliyor.**
 
@@ -136,14 +136,14 @@ Kaybetti mi? Evet.
 Geri alınabilir mi? Kolay değil. 
 Yetişkin olarak vs. çocuk olarak yabancı dil öğrenmenin farkı da bu. 
 
-Buna **plastisite[^2]**deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor.**Beyin bir hamur ise, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.*
+Buna **plastisite**[^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor.** Beyin bir hamur ise, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.*
 
 ### Herkeste mi, sende mi? (Evrensel vs. Diferansiyel)
 
 Eskiden gelişim psikolojisi şunu soruyordu: "ortalama insan nasıl gelişiyor?"
 Yaş normları koyuyorlardı: 2 yaşında şunu yapar, 7 yaşında şu olacak. Herkes için geçerli bir harita. 
 
-**Ama artık soru değişti:** **"aynı yaştaki iki insan neden farklı gelişiyor?"*
+**Ama artık soru değişti: "aynı yaştaki iki insan neden farklı gelişiyor?"**
 
 ### Evrensel değişim:
 Herkeste olan. İnsan olmanın olayı olan. Bebekler emekler, çocuklar okur. Biyoloji ve çevre (nature/nurture) o kadar güçlü ve standart ki, neredeyse herkes aynı rotayı izliyor. Burada sen özel değilsin, sistem seni taşıyor, sistem seni sürüklüyor.
@@ -151,8 +151,7 @@ Herkeste olan. İnsan olmanın olayı olan. Bebekler emekler, çocuklar okur. Bi
 ### Diferansiyel değişim
 Burda yollar ayrılıyor. Yetişkinlikte artık herkesin hep beraber 30 yaşında yaptığı bir şey kalmıyor. Kim hangi hedefi kovalıyor, kim evleniyor, kim işini kaybediyor, bunlar standart değil. 
 
-***Çocukluk bir tren yolu gibi düşünülebilir. Herkes aynı rayda gidiyor.*** 
-***Yetişkinlik açık arazı, artık ray yok, kim nereye giderse oraya.***Bu yüzden de gelişim psikolojisi giderek daha çok "bu spesifik kişi neden/nasıl böyle gelişti" sorusuna kayıyor. Ortalamaya, genele değil, sana bakıyor. 
+***Çocukluk bir tren yolu gibi düşünülebilir. Herkes aynı rayda gidiyor.*** *** Yetişkinlik açık arazı, artık ray yok, kim nereye giderse oraya.***Bu yüzden de gelişim psikolojisi giderek daha çok "bu spesifik kişi neden/nasıl böyle gelişti" sorusuna kayıyor. Ortalamaya, genele değil, sana bakıyor. 
 
 Yani; her seferinde o gelişime bakıp soruyorsun:
 - Niceliksel mi / Niteliksel mi
@@ -161,8 +160,7 @@ Yani; her seferinde o gelişime bakıp soruyorsun:
 
 "Bu spesifik durumda hangisi geçerli?"
 
-Gelişim oldu tamam, ama**neden*oldu sorusu açık. 
-*Olgunlaşma*ise neden sorusuna cevap oluyor. Topu biyolojiye atıyor. Sen bi şey yapmadın, çevren de. Olan şey genetik programın çalışması ve bir şeylerin değişmesi. 
+Gelişim oldu tamam, ama**neden* oldu sorusu açık.*Olgunlaşma* ise neden sorusuna cevap oluyor. Topu biyolojiye atıyor. Sen bi şey yapmadın, çevren de. Olan şey genetik programın çalışması ve bir şeylerin değişmesi. 
 
 Mesela, bebek doğduğunda bir sürü refleksi var; emme, tutunma, irkilme refleksleri. Bunlar programlanmış bi şekilde geliyor, ekstra bunları öğrenmiyorsun, ve bunlar yine programlanmış bir şekilde kayboluyor. Bebek "öğrenmiyor", ya da sen öğretmiyorsun. Olgunlaşma sırası gelince bazı şeyleri siliyor, otomatik. 
 
@@ -219,7 +217,7 @@ Bu vakaların 2/3'ü 15 yaşına kadar devam etti.
 ## Stabilite - Ama hangisi?
 
 Gelişim psikolojisi değişmi inceliyor. Değişimin tam karşısında ne var? Stabilite.  
-Yani bir özellik, bir davranış, bir örüntü zaman içinde**aynı kaldı** mı?
+Yani bir özellik, bir davranış, bir örüntü zaman içinde **aynı kaldı** mı?
 
 Bir çocuğun saldırganlığı değişmedi mi? Tamam ama grubun ortalaması mı sabit kaldı? O çocuğun gruptaki yeri mi sabit kaldı? O çocuğun kendi içindeki öncelikleri mi sabit kaldı?
 
@@ -227,12 +225,7 @@ Hepsi farklı sorular, farklı cevaplar.
 
 Değişmeyen şeyler var. Neyin değişmediğine göre tamamen farklı şeyler kastediliyor. Bu yüzden "stabilite" tek bir şey değil. 
 
-**Grup ortalaması sabit mi?** Bir sınıftaki herkesin matematik notu zamanla değişmedi. Ortalama aynı kaldı. Ama kim iyi kim kötü değişmiş olabilir, önemli değil, pozisyonlar sabit. 
-**Sıralama sabit mi?** Ali her zaman en iyiydi, Abdülrezzakhan hep ortalama, Fatımavesvese hep sonda. Sayılar değişmiş olabilir ama sıra hiç bozulmadı. Ortalama değişmiş olabilir, önemli değil, pozisyonlar sabit. 
-**İkisi birden** Hem ortalama değişmedi, hem sıralama değişmedi. En katı stabilite bu. 
-**Kişinin kendi içindeki sıralama sabit mi?**"Para, insan ilişkileri, teknoloji. Sence en önemlisi hangisi?" diye sordun birine. Kişi her seferinde aynı önem sıralaması verdi. 
-**İç yapı sabit mi?** Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel zeka" var. Ama büyüdükçe bu ilişki zayıflıyor, testler birbirinden ayrışıyor. Yani yapı değişiyor. Artık tek bir "genel zeka"yı ölçmüyorlar, farklı şeyleri ölçüyorlar. 
-**Bunla ilgili düşünce deneyi:**
+**Grup ortalaması sabit mi?** Bir sınıftaki herkesin matematik notu zamanla değişmedi. Ortalama aynı kaldı. Ama kim iyi kim kötü değişmiş olabilir, önemli değil, pozisyonlar sabit.** Sıralama sabit mi?** Ali her zaman en iyiydi, Abdülrezzakhan hep ortalama, Fatımavesvese hep sonda. Sayılar değişmiş olabilir ama sıra hiç bozulmadı. Ortalama değişmiş olabilir, önemli değil, pozisyonlar sabit.** İkisi birden** Hem ortalama değişmedi, hem sıralama değişmedi. En katı stabilite bu.** Kişinin kendi içindeki sıralama sabit mi?**"Para, insan ilişkileri, teknoloji. Sence en önemlisi hangisi?" diye sordun birine. Kişi her seferinde aynı önem sıralaması verdi.** İç yapı sabit mi?** Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel zeka" var. Ama büyüdükçe bu ilişki zayıflıyor, testler birbirinden ayrışıyor. Yani yapı değişiyor. Artık tek bir "genel zeka"yı ölçmüyorlar, farklı şeyleri ölçüyorlar.** Bunla ilgili düşünce deneyi:**
 
 Üç kişi.
 İki zaman noktası.
@@ -257,7 +250,7 @@ Yani bugün en kaygılı olan çocuk, 20 yıl sonra da en kaygılı yetişkin mi
 Aynı özellik, aynı ölçüm, farklı zaman. 
 Sıralama korunuyorsa eştipli süreklilik vardır deriz. 
 
-**Karşıtipli Süreklilik** Burda ilginç bi soru daha ekleniyor:**farklı yaşlarda farklı görünen şeyler aslında aynı şeyin farklı formları mı?** Bebek sürekli ağlıyor, sakinleştirilemiyor. 
+**Karşıtipli Süreklilik** Burda ilginç bi soru daha ekleniyor: **farklı yaşlarda farklı görünen şeyler aslında aynı şeyin farklı formları mı?** Bebek sürekli ağlıyor, sakinleştirilemiyor. 
 30 yaşında duygusalak olarak dengesiz, sinirli, nevrotik. 
 
 Bunlar aynı ölçüm değil, biri bebek davranışı, diğeri yetişkin kişilik özelliği. 
@@ -320,7 +313,7 @@ Gen = yazılmış kader değil.
 Mesela, stresli bir ortamda büyümek stres hormonlarını düzenleyen genlerin aktivasyonunu değiştiriyor. 
 **Yani aynı gen, stresli çevrede farklı çalışıyor.** Bu da ilerleyen yaşamda strese verilen fiziksel ve psikolojik tepkileri şekillendiriyor. 
 
-Yani çevre geni*değiştirmiyor*ama geni açıp kapatıyor, yükseltip kısıyor.
+Yani çevre geni*değiştirmiyor* ama geni açıp kapatıyor, yükseltip kısıyor.
 
 Gen/Çevre, ikisi sürekli birbirini yazıp siliyor.
 
@@ -387,7 +380,7 @@ Yani "kim olduğunun" yarısı genden geliyor gibi**görünüyor**..
 Ama şunu düşünelim: tek yumurta ikizleri, çift yumurtaya göre sosyal çevreden de daha benzer bir muamele görebiliyor. 
 Aynı yüz, aynı ses, aynı her şey. İnsanlar onlara identik yani "aynı" davranıyor. Bu da gen etkisini daha da şişiriyor olabilir. 
 
-Evlat edinme çalışmalarının sorunu ise farklı: evlat edinilen çocuklar genelde *"iyi"*ailelere gidiyor. 
+Evlat edinme çalışmalarının sorunu ise farklı: evlat edinilen çocuklar genelde *"iyi"* ailelere gidiyor. 
 Sistem öyle zaten. 
 Kötü çevre örnekleri az, bu da paylaşılmayan çevre etkisini olduğundan az gösteriyor. 
 
@@ -412,8 +405,7 @@ Müzisyen evebeynlerin evinde muhtemelen enstrüman olur. Kendileri için. Ve bu
 
 Çocuk hiçbir şey yapmadı (pasif), oraya doğdu. Gen ve çevre zaten uyumluydu. 
 
->***Çağrıştırıcı Kovaryasyon***
-Sen bi şeyler yaptın, çevre cevap verdi**Çocuk çizimle ilgilenmeye başlıyor. Genlerinden gelen bir yönelim bu. 
+>***Çağrıştırıcı Kovaryasyon*** Sen bi şeyler yaptın, çevre cevap verdi**Çocuk çizimle ilgilenmeye başlıyor. Genlerinden gelen bir yönelim bu. 
 Çevre bunu farkediyor. Ona tuval, boya alıyor, kursa gönderiyor. 
 Gen davranışı tetikledi > davranış çevreyi 
 
@@ -421,19 +413,15 @@ Yani gen direkt çevreyi değiştirmiyor. Davranış üzerinden dolaylı etkiliy
 
 
 >***Aktif Kovaryasyon***>*** Artık sen seçiyorsun**Büyüdükçe kendi çevremizi kendimizin inşa etmesi. Müzik konservatuvarına başvurmak, o grubu kurmak, o insanları bulmak. 
-Gen artık seni*yönlendiriyor*. Sen de çevreyi *ona göre* şekillendiriyorsun. 
+Gen artık seni*yönlendiriyor*. Sen de çevreyi* ona göre* şekillendiriyorsun. 
 
 
->**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor. 
-
-**Gen kader değil. Ama fırsat garantili de değil. **
+>**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. **
 
 ### Aynı Pislik, Farklı Hasar
 
 Kovaryasyonun dediği gibi çevre ve gen'in birbirleriyle olan etkileşimin üstüne*interaksiyon* bambaşka bi şey soruyor:
-***aynı berbat çevre herkesi aynı şekilde mahvediyor mu?
-
-**Spoiler: etmiyor.** İnsanlar çevreye olan biyolojik duyarlılıkları açısından birbirinden*köklü* biçimde farklı. 
+***aynı berbat çevre herkesi aynı şekilde mahvediyor mu?** Spoiler: etmiyor.** İnsanlar çevreye olan biyolojik duyarlılıkları açısından birbirinden* köklü* biçimde farklı. 
 
 Bu farkı anlamak için şu metafor işimize yarayabilir:
 
@@ -444,7 +432,7 @@ Kaldırım taşı altından bile çıkar karahindiba. Bahçe güzel mi çirkin m
 >Ama koşullar bozuksa, solar, hasar görür, çöker, çürür. 
 
 Zaten evrimsel mantığa göre her ikisi de bir strateji. 
-Karahindiba olmak kötü çevrelerde**hayatta kalmayı garantiliyor.** Orkide olmak iyi çevrelerde*maksimum potansiyeli açıyor. 
+Karahindiba olmak kötü çevrelerde **hayatta kalmayı garantiliyor.** Orkide olmak iyi çevrelerde* maksimum potansiyeli açıyor. 
 İkisi de farklı ortamlarda işe yarıyor. 
 
 
@@ -459,7 +447,7 @@ Orkide çocuklar yüksek wattlı amfiler. Çevreden gelen her şeyi içine çeki
 İyi evebeynlik? > Muhteşem gelişim.
 Kötü ebeveynlik? >: Derin hasar.
 
-Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf*geçiyor.
+Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf* geçiyor.
 
 #
 
@@ -470,13 +458,13 @@ Yaşlandıkça çevre birikir, gen etkisi azalır. Ne kadar çok deneyim, ne kad
 Kısmen doğru bu. Kişilik, mizaç gibi şeyler için tam da böyle zaten. Duygusal istikrarın kalıtsallığı bebeklikte %70, 15 yaşında ise %59'a düşüyor. Çevre pay alıyor. 
 
 Zeka için tam tersi oluyor. Gen etkisi artıyor. 
-*Nasıl acaba?*Küçük çocukken çevre sana dayatılıyor. Aynı okul, aynı sınıf, aynı kitap, aynı öğretmen. Genlerinin ne dediği çok da önemli değil. Sistem herkese aynı şeyi veriyor. 
+*Nasıl acaba?* Küçük çocukken çevre sana dayatılıyor. Aynı okul, aynı sınıf, aynı kitap, aynı öğretmen. Genlerinin ne dediği çok da önemli değil. Sistem herkese aynı şeyi veriyor. 
 Pasif kovaryasyon var, sen seçemiyorsun. 
 
-Büyüdükçe kendi çevreni*kendin*inşa etmeye başlıyorsun. Hangi okul, hangi kitap, hangi arkadaş. 
+Büyüdükçe kendi çevreni*kendin* inşa etmeye başlıyorsun. Hangi okul, hangi kitap, hangi arkadaş. 
 Bunlar genin seni yönlendirdiği seçimler. 
 Aktif kovaryasyon devreye giriyor. 
-*Ve gen giderek daha fazla "kendine uygun" çevreyi seçtiriyor sana.*Yani gen etkisi artmıyor aslında. Gen artık kendi çevresini de yaratıyor, bu yüzden ölçümde daha*güçlü* görünüyor. 
+*Ve gen giderek daha fazla "kendine uygun" çevreyi seçtiriyor sana.* Yani gen etkisi artmıyor aslında. Gen artık kendi çevresini de yaratıyor, bu yüzden ölçümde daha*güçlü* görünüyor. 
 
 
 >Metodolojik uyarı: bebeklerdeki ölçümler ebeveyn değerlendirmesine dayanıyor. Çocuğun duygusal, öfkeli, dikkatsiz olup olmadığını anne baba cevaplıyor.
@@ -494,23 +482,25 @@ Ayrıca, bazı genler zaten geç devreye giriyor. Ergenlikte, yetişkinlikte akt
 ## "Ortalama" yeterli mi?
 
 Scarr (1992) zamanında sert bi şekilde sormuş: 
->***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"*** Genler işini yapar. Eğer çevre en azından ortalama ise. Çocuk genetik olarak sağlıklıysa ve***aşırı** kötü bir ortamda büyümüyorsa zaten gelişir. Genler işini yapacak, çocuk kültürel normlara*uygun*bir şekilde büyüyecek. 
+>***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"*** Genler işini yapar. Eğer çevre en azından ortalama ise. Çocuk genetik olarak sağlıklıysa ve***aşırı** kötü bir ortamda büyümüyorsa zaten gelişir. Genler işini yapacak, çocuk kültürel normlara* uygun*bir şekilde büyüyecek. 
 Ebeveynlerinin ne kadar ilgilendiği, hangi kitabı okuduğu, hangi yöntemi bilip bilmediğinin büyük etkisi yok. 
 
 >Sadece "olması gerektiği kadar" ol, gerisini gen halleder.
 
 Uç durumlar, fiziksel istismar, ağır ihmal, gelişimi ciddi biçimde sektirir.*Normal sınırlar içindeki her şey? Çok da fark etmiyor. 
 
-Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gösteriyor ki ebeveyn davranışının kalitesi **önemli**. Sıcaklık, tutarlılık, ilgi, uyaran zenginliği. Bunlar fark yaratıyor. Ortalama çevre "kötü gelişimi" önlüyor olabilir, ama ***mümkün olan en iyi gelişimi*** *** garantileyemiyor**.
+Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gösteriyor ki ebeveyn davranışının kalitesi **önemli**. Sıcaklık, tutarlılık, ilgi, uyaran zenginliği. Bunlar fark yaratıyor. Ortalama çevre "kötü gelişimi" önlüyor olabilir, ama***mümkün olan en iyi gelişimi*** ***garantileyemiyor***.
 
 İkisinin gerçek uzlaşma noktasına şöyle bakabiliriz ama: 
->**Ebeveynlerin etkisi genler tarafından sınırlandırılıyor. O sınırlar içinde hareket alanı var. O alanda iyi ebeveynlik fark yaratıyor.** Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip.
+> **Ebeveynlerin etkisi genler tarafından sınırlandırılıyor. O sınırlar içinde hareket alanı var. O alanda iyi ebeveynlik fark yaratıyor.** Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip.
 
 #
 
 ## Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin
 
-![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]**Bronnfenbrenner'in ekolojik gelişim modeli.** Bronnfenbrenner diyor ki: insan iç içe geçmiş sistemlerin tam "ortasında" büyüyor. İnsanı anlamak için*sadece* insana bakmak bu yüzden yetersiz
+![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]
+
+**Bronnfenbrenner'in ekolojik gelişim modeli.** Bronnfenbrenner diyor ki: insan iç içe geçmiş sistemlerin tam "ortasında" büyüyor. İnsanı anlamak için* sadece* insana bakmak bu yüzden yetersiz
 
 Soğan gibi. 
 
@@ -546,7 +536,7 @@ Küçükken evebeynler yönetiyor seni. Sonrasında durum değişiyor. Kendi hay
 Sadece niyet yerine bu üç adım da şart. 
 
 Tabi her şey "hallolsa" bile realite duvarı devreye girer. 
-*Hayatı tek başına inşa edemezsin, sadece ona ortak olabilirsin.*Bu yüzden psikoloji, sınırları belirli bir "kendi kendini yaratma" kavramı yerine, ortak-gelişim/gelişimin ortağı olma kavramını kullanır. 
+*Hayatı tek başına inşa edemezsin, sadece ona ortak olabilirsin.* Bu yüzden psikoloji, sınırları belirli bir "kendi kendini yaratma" kavramı yerine, ortak-gelişim/gelişimin ortağı olma kavramını kullanır. 
 
 Hedefler de değiştiği için zamanla, insan hayatının çeşitli evrelerinde çeşitli şekillerde inşa ediyor kendini.
 
@@ -594,12 +584,12 @@ Ayrıca daha bi ton çocuk var gözlemlemediğin.
 
 Tiedemann günlük tuttu, Rousseau roman yazdı. Değerli ama bilim denmiyor. 
 
-1800'lerin ortasına doğru tablo değişmeye başladı ve artık sadece gözlemlemek yetmiyordu. Gözlemin*nasıl*yapıldığı da önem kazandı. 
+1800'lerin ortasına doğru tablo değişmeye başladı ve artık sadece gözlemlemek yetmiyordu. Gözlemin*nasıl* yapıldığı da önem kazandı. 
 
 1882'de çıkan "Die Seele des Kindes" (Çocuğun Ruhu) kitabı, gelişim psikolojisinin doğuşu kabul edilebilir. 
 William T. Preyer (1841–1897) de kendi çocuğunu izledi, ama nasıl izlediğini belirledi:
--*Gördüğünü hemen yaz, bekleme. Anında dokümentasyon. Hafızanın manipülasyonuna izin verilmeden kaydetmek.*-*Kendi gözlemini başkasına doğrulat. 
-- *Tek anlık bir kesit alma. Rastlantısal verilerden kaçınmak için sistematik olarak tekrarlanan gözlemler.*Bu metodolojik disiplin sayesinde çocuk, üzerinde spekülatif bir sürü şeyin söylendiği edebi bir "figür" olmaktan çıkıp, incelenebilen bir özneye dönüşmüştür.
+-*Gördüğünü hemen yaz, bekleme. Anında dokümentasyon. Hafızanın manipülasyonuna izin verilmeden kaydetmek.*-* Kendi gözlemini başkasına doğrulat. 
+- *Tek anlık bir kesit alma. Rastlantısal verilerden kaçınmak için sistematik olarak tekrarlanan gözlemler.* Bu metodolojik disiplin sayesinde çocuk, üzerinde spekülatif bir sürü şeyin söylendiği edebi bir "figür" olmaktan çıkıp, incelenebilen bir özneye dönüşmüştür.
 
 #
 

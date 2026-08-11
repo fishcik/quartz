@@ -1740,9 +1740,15 @@ body.sc-scrolled .site-header-slogan {
   left: 0;
   bottom: 0;
   top: auto;
-  width: 4px;
+  width: 16px;
   height: 0;
   background: var(--progress, #C8102E) !important;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32"><path d="M8 0 C4 8 12 8 8 16 C4 24 12 24 8 32" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/></svg>');
+  -webkit-mask-size: 16px 32px;
+  -webkit-mask-repeat: repeat-y;
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32"><path d="M8 0 C4 8 12 8 8 16 C4 24 12 24 8 32" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/></svg>');
+  mask-size: 16px 32px;
+  mask-repeat: repeat-y;
   z-index: 9999;
   opacity: 1;
   transition: height 60ms linear;
@@ -1752,7 +1758,7 @@ body.sc-scrolled .site-header-slogan {
 .sc-progress-head {
   position: absolute;
   top: -110px;
-  left: -8px;
+  left: -2px;
   width: 20px;
   height: 120px;
   color: var(--accent, #C8102E);

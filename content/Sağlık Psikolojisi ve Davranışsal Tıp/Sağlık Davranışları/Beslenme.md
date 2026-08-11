@@ -22,31 +22,32 @@ _Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illü
 
 # 1. Sağlıksız Beslenme ve DGE Kuralları
 
-**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik[^3]" mekanizmasını koruyabilmektir.**---
-***Sağlıksız beslenme neden tehlikeli?***- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı*** aşırı kilo** üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
+**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-etkililik[^3]" mekanizmasını koruyabilmektir.**---***Sağlıksız beslenme neden tehlikeli?*** -  Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı **aşırı kilo** üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
 
 ---
 
 Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç. 
 
 > [!info] DGE[^1] (Alman Beslenme Derneği) 10 Kuralı
-> 1. **Çeşitli ye:** Yasak besin yok. Çeşitlilik yeterli besini sağlar.
-> 2.**Tam tahıl & patates:** Vitamin, mineral, lif. Düşük yağlı.
-> 3.**Günde 5 porsiyon meyve/sebze:** Her gün 5 avuç dolusu meyve + sebze.
-> 4.**Her gün süt. Haftada 1-2 balık. Sınırlı et & şarküteri:** Et haftada 300-600 gramdan fazla olmamalı. Süt ürünleri de az yağlı tercih edilmeli.
-> 5.**Az yağ ve yağlı gıda:** Günlük max. 60-80 g yağ; tercihen bitkisel.
-> 6.**Şeker ve tuzu insan gibi kullan:** Endüstriyel şekerin besin değeri sıfır. Tuz iyotlu olsun.
-> 7.**Bol sıvı:** Günde en az 1,5 litre kalorisi düşük içecek. Alkol nadiren ve az miktarda.
-> 8.**Lezzetli ve dikkatli pişir:** Sebze ve meyveleri çok pişirmemek besin içeriğini korur ve zararlı bileşiklerin de oluşmasını engeller.
-> 9.**Zaman ayır, tadını çıkar:** Dikkatli yemek tokluk sinyalini fark ettirir und sindirime yardımcı olur.
-> 10.**Kilo kontrolü ve hareket:** Enerji ihtiyacına uygun yemek. Günlük 30-60 dk fiziksel aktivite.
 > 
->**Bu kurallar sağlıklı bireyler içindir; diyabetliler gibi hasta kişiler için tabi ki farklı öneriler geçerlidir.**
+> | Simge | Temel Kural | Öneri ve Detaylar |
+> | :---: | :--- | :--- |
+> | 🌈 | **1. Çeşitli Tüketin** | Yasak besin yoktur. Çeşitlilik, ihtiyacınız olan tüm besin ögelerini sağlar. |
+> | 🌾 | **2. Tam Tahıl & Patates** | Vitamin, mineral ve lif deposudur. Düşük yağlı olanları tercih edin. |
+> | 🥦 | **3. Günde 5 Porsiyon** | Her gün 3 porsiyon sebze ve 2 porsiyon meyve (toplam 5 avuç) tüketin. |
+> | 🥛 | **4. Süt, Balık ve Sınırlı Et** | Günlük süt ürünleri, haftada 1-2 porsiyon balık; et ise haftada max. 300-600g. |
+> | 🥑 | **5. Sağlıklı Yağlar** | Günlük max. 60-80g yağ (tercihen bitkisel yağlar) tercih edilmelidir. |
+> | 🧂 | **6. Şeker ve Tuzu Azaltın** | Endüstriyel şekeri sınırlayın. Tuzu az ve mutlaka iyotlu kullanın. |
+> | 💧 | **7. Bol Sıvı Tüketin** | Günde en az 1.5 litre su veya şekersiz içecek. Alkolü minimumda tutun. |
+> | 🍳 | **8. Hassas Pişirin** | Besin değerini korumak için az suyla ve kısa süreli pişirmeyi tercih edin. |
+> | 🧘‍♂️ | **9. Bilinçli Yemek Yiyin** | Yemeğe zaman ayırın, iyi çiğneyin; bu sayede tokluk sinyallerini fark edersiniz. |
+> | 🏃‍♂️ | **10. Hareket Edin** | Dengeli beslenmeyi günlük 30-60 dakika fiziksel aktivite ile destekleyin. |
+> 
+> *Bu kurallar sağlıklı bireyler içindir; diyabet veya metabolik rahatsızlıkları olan kişiler için özel diyetler geçerlidir.*
 
 > [!success] DGE Önerilen Makro Dağılımı
-> - **52-53% Karbonhidrat:** ** Tahıl ürünleri, patates, meyve & sebze**
-> - **28-31% Yağ:** **60-80g, bitkisel**
-> - **16-17% Protein:** ** Süt ürünleri, et, balık**
+> - **52-53% Karbonhidrat:** **Tahıl ürünleri, patates, meyve & sebze**
+> - **28-31% Yağ:** **60-80g, bitkisel**> -**16-17% Protein:** ** Süt ürünleri, et, balık**
 
 ---
 

@@ -207,3 +207,10 @@ Her sayko.ch notu vault'ta bir düğümdür. Graph view'ın çalışması için:
 4. **Callout tipleri** — semantik uyum var mı? (10 onaylı tip)
 5. **`---` fazlalığı** — gereksiz olanları kaldır.
 6. **DUR.** İçeriğe, tona, noktalamaya dokunma.
+
+---
+
+## Geliştirme Takvimi ve Sınırlar
+
+* **Geliştirme Son Tarihi (15 Ağustos):** Sitenin genel görünümü, tasarımı, yerleşimi (layout), CSS ayarları, işlevselliği (fonksiyonalite) ve teknik geliştirmeleri en geç **15 Ağustos 2026** tarihine kadar yapılabilir.
+* **Yazım Dönemi (16 Ağustos ve sonrası):** 16 Ağustos 2026 itibarıyla site üzerinde hiçbir teknik geliştirme, tasarım/layout editi veya CSS düzenlemesi yapılmayacaktır. Analiz felcine (analysis paralysis) kapılmamak adına tüm süreç sadece yeni psikoloji yazılarının yazılmasına ve içerik üretimine ayrılacaktır.
