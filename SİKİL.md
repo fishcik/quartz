@@ -210,6 +210,33 @@ Her sayko.ch notu vault'ta bir düğümdür. Graph view'ın çalışması için:
 
 ---
 
+## Mermaid Diyagramları ve Tasarım Kimliği (CD/CI)
+
+Tüm şemalar ve akış diyagramları, sitenin aydınlık/karanlık tema geçişlerine uyumlu olmalı ve sade (2D) kalmalıdır. Renkler doğrudan CSS değişkenleri üzerinden verilerek tasarım tutarlılığı korunur.
+
+### Standart Stil Şablonu
+
+Her Mermaid diyagramının sonuna veya başına aşağıdaki CSS sınıfları eklenmeli ve düğümler bu sınıflarla işaretlenmelidir:
+
+```markdown
+```mermaid
+graph TD
+  %% Sınıf Tanımlamaları %%
+  classDef default fill:none,stroke:var(--lightgray),stroke-width:1.5px,color:var(--darkgray),font-family:Source Serif 4, Georgia, serif;
+  classDef accent fill:none,stroke:var(--accent),stroke-width:2px,color:var(--accent),font-weight:bold,font-family:Source Serif 4, Georgia, serif;
+  classDef highlight fill:none,stroke:var(--secondary),stroke-width:1.5px,color:var(--secondary),font-family:Source Serif 4, Georgia, serif;
+
+  A[Kritik Başlangıç]:::accent --> B[Önemli Ara Aşama]:::highlight
+  B --> C[Sıradan Düğüm]
+```
+```
+
+*   `:::accent` (Kırmızı/Altın): Başlangıç, odak veya tetikleyici düğümler için kullanılır.
+*   `:::highlight` (İkincil Tema Rengi): Önemli kararlar veya geçiş durumları için kullanılır.
+*   Diyagramlar karmaşık görseller yerine, teorik akışları ve süreç şemalarını sade bir biçimde yansıtmalıdır.
+
+---
+
 ## Geliştirme Takvimi ve Sınırlar
 
 * **Geliştirme Son Tarihi (15 Ağustos):** Sitenin genel görünümü, tasarımı, yerleşimi (layout), CSS ayarları, işlevselliği (fonksiyonalite) ve teknik geliştirmeleri en geç **15 Ağustos 2026** tarihine kadar yapılabilir.
