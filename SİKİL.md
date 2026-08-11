@@ -212,28 +212,38 @@ Her sayko.ch notu vault'ta bir düğümdür. Graph view'ın çalışması için:
 
 ## Mermaid Diyagramları ve Tasarım Kimliği (CD/CI)
 
-Tüm şemalar ve akış diyagramları, sitenin aydınlık/karanlık tema geçişlerine uyumlu olmalı ve sade (2D) kalmalıdır. Renkler doğrudan CSS değişkenleri üzerinden verilerek tasarım tutarlılığı korunur.
+SAYKO.ch diyagramları sade (2D), estetik ve doğrudan bilimsel içeriği aktaran bir "SAYKO İmzası" taşır.
 
-### Standart Stil Şablonu
+### 1. Renk ve Biçim Standartları
+* **Ana Odak (Cardinal Red):** `#C8102E` — Kritik başlangıçlar, kriz düğümleri, tetikleyiciler veya ana kavramlar (`:::accent` / `:::cardinal`).
+* **İkincil Odak (Sepia):** Açık modda sıcak sepya (`#704214`), koyu modda amber/bronz sepya (`#c79a6d`) — Kuramsal süreçler, mekanizmalar ve karar düğümleri (`:::sepia` / `:::highlight`).
+* **Üçüncü Renk (Tema Uyumu):** Açık modda koyu antrasit/siyah (`#1a1712`), koyu modda krem beyaz/parşömen (`#f4efe6`) — Standart düğümler ve metinler.
+* **Yılan Akışı Oklar (Serpent Flow):** Oklar keskin/köşeli robotik 90° çizgiler yerine, yılan gibi organik kıvrılan `curve: 'basis'` veya `curve: 'natural'` parametresiyle çizilmelidir.
 
-Her Mermaid diyagramının sonuna veya başına aşağıdaki CSS sınıfları eklenmeli ve düğümler bu sınıflarla işaretlenmelidir:
+### 2. Zorunlu Bilimsellik ve Metadata Kuralı
+* **%100 Kanıt Temelli:** Hiçbir şema uydurma olamaz. Şemalar yalnızca literatürde kabul görmüş, ders kitaplarında yer alan ampirik kuram ve modelleri betimler.
+* **Akademik Metadata Çerçevesi:** Her diyagram bir `[!abstract]` kutusu içinde, kuramın adı, teorisyeni, yılı ve kısa açıklamasıyla birlikte sunulmalıdır.
+
+### 3. Standart SAYKO Şablonu
 
 ```markdown
-```mermaid
-graph TD
-  %% Sınıf Tanımlamaları %%
-  classDef default fill:none,stroke:var(--lightgray),stroke-width:1.5px,color:var(--darkgray),font-family:Source Serif 4, Georgia, serif;
-  classDef accent fill:none,stroke:var(--accent),stroke-width:2px,color:var(--accent),font-weight:bold,font-family:Source Serif 4, Georgia, serif;
-  classDef highlight fill:none,stroke:var(--secondary),stroke-width:1.5px,color:var(--secondary),font-family:Source Serif 4, Georgia, serif;
-
-  A[Kritik Başlangıç]:::accent --> B[Önemli Ara Aşama]:::highlight
-  B --> C[Sıradan Düğüm]
+> [!abstract] 📜 Model / Kuram Adı (Yazar & Yıl)
+> *Kaynak: Yazar, A. (Yıl). Makale/Kitap Başlığı. Yayınevi/Dergi.*
+>
+> ```mermaid
+> %%{init: {'theme': 'base', 'flowchart': {'curve': 'basis'}}}%%
+> graph TD
+>   %% SAYKO CD/CI Sınıf Tanımları %%
+>   classDef default fill:none,stroke:var(--lightgray),stroke-width:1.5px,color:var(--darkgray),font-family:Source Serif 4, Georgia, serif;
+>   classDef accent fill:none,stroke:#C8102E,stroke-width:2px,color:#C8102E,font-weight:bold,font-family:Source Serif 4, Georgia, serif;
+>   classDef sepia fill:none,stroke:var(--secondary),stroke-width:1.8px,color:var(--secondary),font-family:Source Serif 4, Georgia, serif;
+>
+>   A[Tetikleyici / Başlangıç]:::accent --> B[Bilişsel / Davranışsal Süreç]:::sepia
+>   B --> C[Sonuç / Durum]
+> ```
+>
+> **Açıklama:** *Modelin neyi betimlediğine dair 1-2 cümlelik net özet.*
 ```
-```
-
-*   `:::accent` (Kırmızı/Altın): Başlangıç, odak veya tetikleyici düğümler için kullanılır.
-*   `:::highlight` (İkincil Tema Rengi): Önemli kararlar veya geçiş durumları için kullanılır.
-*   Diyagramlar karmaşık görseller yerine, teorik akışları ve süreç şemalarını sade bir biçimde yansıtmalıdır.
 
 ---
 
