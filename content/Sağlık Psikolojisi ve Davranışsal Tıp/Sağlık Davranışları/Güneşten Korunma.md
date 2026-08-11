@@ -20,7 +20,9 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 > [!bug] İRONİ! 
 > Genelde insanı güneşten koruyan şey siyahileşme korkusu, kırışıklık ve yaşlanma kaygısıdır.
 
-## 1. Risk Grubu
+#
+
+# 1. Risk Grubu
 
 - Sarışınlar, kızıllar, güneşe çıktığı an ıstakoza dönen açık tenlilier
 - Çil oluşturma eğilimi, çok sayıda ben
@@ -31,7 +33,9 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 ---
 
-## 2. Ne İşe Yarıyor?
+#
+
+# 2. Ne İşe Yarıyor?
 
 -**Öğle güneşinden kaçmak**_Yazın ya da sıcak iklimli yerlerde 11-16:00 arası dışarı çıkmamak_
     
@@ -46,9 +50,11 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 ---
 
-## 3. Halk vs. Bilim
+#
 
-_"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_**Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser[^2] riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_**[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**---
+# 3. Halk vs. Bilim
+
+_"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_** Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser[^2] riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_**[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**---
 
 _Klasik sağlık iletişimi "riski anlat, insan değişsin" der. Ama bu ve bundan önceki bölümlerde de gördüğümüz üzere insan pek de laftan anlamıyor aslında._**Jones ve Leary** _bunu test etmiş; adamlara [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Korkunun Ecele Faydası (var mı?)|kanser olacaksın]] demek niyetlerini bozmamış ama "sıfatın kayacak, buruşacaksın" demek direkt frene bastırmış..._
 
@@ -63,7 +69,9 @@ _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
 
 ---
 
-## Kaynaklar
+#
+
+# Kaynaklar
 
 - Armstrong, B. K., & Kricker, A. (2001). The epidemiology of UV induced skin cancer. *Journal of Photochemistry and Photobiology B: Biology*, 63(1–3), 8–18. https://doi.org/10.1016/S1011-1344(01)00198-1
 - Weinstein, N. D. (1980). Unrealistic optimism about future life events. *Journal of Personality and Social Psychology*, 39(5), 806–820. https://doi.org/10.1037/0022-3514.39.5.806

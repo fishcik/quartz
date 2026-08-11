@@ -18,27 +18,35 @@ tags:
 
 ---
 
-## 1. Cinsel Yolla Bulaşan Enfeksiyonlar ve Risk Algısı
+#
+
+# 1. Cinsel Yolla Bulaşan Enfeksiyonlar ve Risk Algısı
 
 Cinsel sağlıkta kondom kullanımı, HIV ve diğer cinsel yolla bulaşan enfeksiyonlara (CYBE[^1]) karşı en birincil bariyerdir. Ancak risk algısı genellikle "bana bir şey olmaz" yanılsamasıyla bastırılır.
 
 ---
 
-## 2. Korunma Kararının Sosyokognitif Dinamikleri
+#
+
+# 2. Korunma Kararının Sosyokognitif Dinamikleri
 
 Karar anı genellikle rasyonel bir tartımın değil; partner baskısı, alkol/madde etkisi ve anlık haz dürtülerinin çarpıştığı yüksek uyarılma ortamında gerçekleşir. 
 Bu yüzden Sağlık İnanç Modeli[^2] gibi salt rasyonel modeller tek başına cinsel davranışları tahmin etmekte zorlanır.
 
 ---
 
-## 3. Spontanite İllüzyonu ve Eylem Planı
+#
+
+# 3. Spontanite İllüzyonu ve Eylem Planı
 
 Kondom taşımak veya kullanımını konuşmak "romantizmi bozuyor" veya "güvensizlik göstergesi" olarak kodlandığında koruyucu davranış düşer. 
 Etkili müdahaleler sadece risk bilgisi vermez; iletişim becerileri ve somut uygulama niyetleri[^3] (if-then planları) kazandırmayı hedefler.
 
 ---
 
-## Kaynaklar
+#
+
+# Kaynaklar
 
 - Albarracín, D., Gillette, J. C., Earl, A. N., Glasman, L. R., Durantini, M. R., & Ho, M. H. (2005). A test of major assumptions about behavior change: A comprehensive meta-analysis of effects of AIDS-prevention interventions on behavior, cognition, and influence. *Psychological Bulletin*, 131(6), 856–897. https://doi.org/10.1037/0033-2909.131.6.856
 - Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. *Advances in Experimental Social Psychology*, 38, 69–119. https://doi.org/10.1016/S0065-2601(06)38002-1

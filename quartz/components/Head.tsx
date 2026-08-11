@@ -268,12 +268,11 @@ function ensure(){
   if(!pb){
     pb=document.createElement('div');pb.id='sc-progress';
     pb.innerHTML='<div id="sc-progress-head" class="sc-progress-head" title="Okuma İlerlemesi">'+
-      '<svg class="sc-progress-serpent" viewBox="0 0 24 42" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'+
-        '<path d="M12 40 C7 34 17 28 12 22 C7 16 17 10 12 5" stroke-width="2.6"/>'+
-        '<ellipse cx="12" cy="5.5" rx="4.2" ry="5" stroke-width="2"/>'+
-        '<circle cx="10" cy="4.2" r="1.1" fill="#ff3428" stroke="none"/>'+
-        '<circle cx="14" cy="4.2" r="1.1" fill="#ff3428" stroke="none"/>'+
-        '<path d="M12 0.5 L12 -1.5 M12 -1.5 L9.5 -4 M12 -1.5 L14.5 -4" stroke-width="1.2" stroke="#ff3428"/>'+
+      '<svg class="sc-progress-serpent" viewBox="0 0 260 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'+
+        '<path d="M4 10 C14 4 24 16 38 10 C52 4 62 16 78 10 C94 4 106 16 124 10 C142 4 154 16 172 10 C188 4 200 16 214 10 C226 5 234 8 238 10" stroke-width="2.2"/>'+
+        '<ellipse cx="245" cy="10" rx="7" ry="4.5" stroke-width="1.8"/>'+
+        '<circle cx="248" cy="8.5" r="0.9" fill="currentColor" stroke="none"/>'+
+        '<path d="M252 10 L257 7.5 M252 10 L257 12.5" stroke-width="1.1"/>'+
       '</svg>'+
       '<span id="sc-progress-badge" class="sc-progress-badge"></span>'+
     '</div>';
@@ -693,10 +692,10 @@ function scSortHoneycombs(){
   var slug=document.body.getAttribute('data-slug')||window.location.pathname||'';
   var folder=slug.replace(/[/]index$/,'').replace(/^[/]/,'').split('/')[0];
   var normFolder=scNormSlug(folder);
-  var curList=SC_CURRICULUM[normFolder];
+  var curList=SC_CURRICULUM[folder]||SC_CURRICULUM[normFolder];
   if(!curList){
     for(var k in SC_CURRICULUM){
-      if(normFolder.indexOf(k)!==-1||k.indexOf(normFolder)!==-1){
+      if(scNormSlug(k)===normFolder||normFolder.indexOf(scNormSlug(k))!==-1||scNormSlug(k).indexOf(normFolder)!==-1){
         curList=SC_CURRICULUM[k];break;
       }
     }
@@ -709,15 +708,37 @@ function scSortHoneycombs(){
   function getOrder(li){
     var a=li.querySelector('.desc h3 a')||li.querySelector('a');
     if(!a)return 999;
-    var rawText=(a.getAttribute('data-raw-title')||a.getAttribute('data-title')||a.textContent||'').trim();
-    var href=decodeURIComponent(a.getAttribute('href')||'').split('/').pop()||'';
+    // Try multiple text sources
+    var rawText=(a.getAttribute('data-raw-title')||'').trim();
+    if(!rawText){
+      var lbl=a.querySelector('.sc-hx-label');
+      rawText=lbl?(lbl.textContent||'').trim():(a.textContent||'').trim();
+    }
+    var href=decodeURIComponent(a.getAttribute('href')||'');
+    var lastSeg=href.split('/').pop()||'';
     var fText=scFold(rawText);
-    var fHref=scFold(href);
+    var fHref=scFold(lastSeg);
+
+    // Strategy 1: Exact or prefix match
     for(var i=0;i<curList.length;i++){
       var item=curList[i];
-      if(fText===item||fText.indexOf(item)===0||item.indexOf(fText)===0||fHref===item||fHref.indexOf(item)===0||item.indexOf(fHref)===0){
-        return i;
+      if(fText===item||fHref===item){return i;}
+    }
+    // Strategy 2: Prefix/contains match
+    for(var i=0;i<curList.length;i++){
+      var item=curList[i];
+      if(fText.indexOf(item)===0||item.indexOf(fText)===0||fHref.indexOf(item)===0||item.indexOf(fHref)===0){return i;}
+    }
+    // Strategy 3: Substring match (at least 3 words overlap)
+    var fWords=fText.split(' ');
+    for(var i=0;i<curList.length;i++){
+      var item=curList[i];
+      var iWords=item.split(' ');
+      var overlap=0;
+      for(var w=0;w<fWords.length;w++){
+        if(iWords.indexOf(fWords[w])!==-1)overlap++;
       }
+      if(overlap>=Math.min(3,iWords.length)){return i;}
     }
     return 999;
   }
@@ -729,6 +750,7 @@ function scSortHoneycombs(){
   lis.forEach(function(li){
     ul.appendChild(li);
   });
+  ul.setAttribute('data-sc-sorted','1');
 }
 
 // Altıgen konu kutuları: yazı, altıgenin geniş orta bandına TAM sığana dek küçülür

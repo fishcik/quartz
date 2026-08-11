@@ -18,7 +18,9 @@ Legal ölüm ürünü.
 
 ---
 
-## 1. Epidemiyoloji ve 40 Yıllık Doktor Çalışması
+#
+
+# 1. Epidemiyoloji ve 40 Yıllık Doktor Çalışması
 
 > [!quote] Bu bok neden bırakılamıyor?
 > **Almanya'da yetişkin nüfusun hâlâ 30%'u aktif olarak cigara içiyor.**> Erkeklerin 27%'si, kadınların 20%'si her gün içiyor.
@@ -26,14 +28,16 @@ Legal ölüm ürünü.
 Peki insanlar bile bile kendilerini neden öldürüyor?
 
 Sigara ve kanser ilişkisi 1930'lu yıllarda istatistiksel olarak gösterildi. 
-Akciğer, gırtlak, yemek borusu, rahim ağzı, mide, pankreas, mesane ve böbrek kanseri başta olmak üzere**çok sayıda* kanser türüne önemli ölçüde katkıda bulunuyor.
+Akciğer, gırtlak, yemek borusu, rahim ağzı, mide, pankreas, mesane ve böbrek kanseri başta olmak üzere**çok sayıda** kanser türüne önemli ölçüde katkıda bulunuyor.
 
-Pasif içicilik de tehlikeli tabi. Sigara içen eşle yaşayan sigara içmeyenlerde koroner kalp hastalığı riski **23%**daha yüksek. 
+Pasif içicilik de tehlikeli tabi. Sigara içen eşle yaşayan sigara içmeyenlerde koroner kalp hastalığı riski **23%** daha yüksek. 
 
 ---
 
-### 40 Yıllık Doktor Çalışması (Doll ve ark. 1994)
-**Sigara içme üzerine yapılmış gelmiş geçmiş en uzun ve en saygın çalışma tam 34.439 erkek İngiliz hekim üzerinde yapıldı.*Sonuçlar, sigaranın tam bi ==zaman gecikmeli katil== olduğunu kanıtladı:
+#
+
+## 40 Yıllık Doktor Çalışması (Doll ve ark. 1994)
+**Sigara içme üzerine yapılmış gelmiş geçmiş en uzun ve en saygın çalışma tam 34.439 erkek İngiliz hekim üzerinde yapıldı.** Sonuçlar, sigaranın tam bi ==zaman gecikmeli katil== olduğunu kanıtladı:
 - Araştırmanın ilk 20 yılındaki ölüm sayıları ile sonraki 20 yılındaki ölüm sayıları neredeyse aynıydı. Her dönem yaklaşık 10.000 ölüm.
 - Ancak son 20 yıla gelindiğinde, ölümlerin arkasındaki temel sebebin*doğrudan* sigara olduğu ortaya çıktı.
 - Özellikle 45-64 yaş grubundaki sigara içenlerin ölüm riski, hiç içmeyenlere kıyasla **3 katına çıktı**.
@@ -43,24 +47,28 @@ Pasif içicilik de tehlikeli tabi. Sigara içen eşle yaşayan sigara içmeyenle
 > Çalışmanın "iyi" bir bulgusu ise: orta yaşta bile bıraksan, yaşam beklentin içmeye devam edenlere göre anlamlı düzeyde artıyor.
 > **Hiçbir zaman geç değil.**---
 
-## 2. Bağımlılık Mekanizması: Biyoloji ve Psikoloji
+#
+
+# 2. Bağımlılık Mekanizması: Biyoloji ve Psikoloji
 
 Olay sadece nikotin mi?
 Bu da başka konularda olduğu gibi farklı modellerle açıklanmaya çalışılıyor.
-**Nikotin Regülasyon Teorisi[^1]**, olayın tamamen fizyolojik olduğunu ve kişinin vücudundaki nikotin seviyesi düşünce yoksunluk belirtilerini bitirmek için sigarasını yakar, ve içer.
+**Nikotin Regülasyon Teorisi**[^1], olayın tamamen fizyolojik olduğunu ve kişinin vücudundaki nikotin seviyesi düşünce yoksunluk belirtilerini bitirmek için sigarasını yakar, ve içer.
 
-**Ama*Eğer olay sadece*biyolojik nikotin ihtiyacı* olsaydı, piyasadaki nikotin sakızları veya bantları herkesi anında sigaradan kurtarırdı. 
-Demek ki işin içinde çok ağır bi **Psikolojik Bağımlılık[^3]**bileşeni var. Bunu ıskalayan tüm tedaviler patlamaya mahkumdur.
+**Ama** Eğer olay sadece*biyolojik nikotin ihtiyacı* olsaydı, piyasadaki nikotin sakızları veya bantları herkesi anında sigaradan kurtarırdı. 
+Demek ki işin içinde çok ağır bi **Psikolojik Bağımlılık**[^3]bileşeni var. Bunu ıskalayan tüm tedaviler patlamaya mahkumdur.
 
 Bağımlılık fiziksel bir bileşenin yanı sıra güçlü bir psikolojik bileşen de içeriyor.
-Psikolojik teoriler sigarayı**Öğrenilmiş Davranış**olarak görüyor; rahatlama, sosyal onay gibi**düzenleyici* işlevler aracılığıyla **Pozitif Pekiştirme[^2]** ile sürdürülüyor. 
+Psikolojik teoriler sigarayı**Öğrenilmiş Davranış** olarak görüyor; rahatlama, sosyal onay gibi**düzenleyici** işlevler aracılığıyla ** Pozitif Pekiştirme**[^2] ile sürdürülüyor. 
 
 Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir tiryakinin beyninde o "click" sesinin çıkması için tek bir rasyonel kırılma gerekiyor:
 ==Korkuyla değil, kazançla hareket etmek.==
 
 ---
 
-## 3. Tiryakilik Mantığı ve Bırakma Paradoksu
+#
+
+# 3. Tiryakilik Mantığı ve Bırakma Paradoksu
 
 İnsanlar neden bırakmıyor?
 - "Beni rahatlatıyor." (Aslında sadece nikotin çekilmesinin yarattığı stresi sıfırlıyor, net pozitif bir rahatlama yok).
@@ -71,7 +79,9 @@ Sonuç olarak sigara sadece kimyasal bir tuzak değil; bilişsel çarpıtmalar v
 
 ---
 
-## Kaynaklar
+#
+
+# Kaynaklar
 
 - Doll, R., Peto, R., Wheatley, K., Gray, R., & Sutherland, I. (1994). Mortality in relation to smoking: 40 years' observations on male British doctors. *BMJ*, 309(6959), 901–911. https://doi.org/10.1136/bmj.309.6959.901
 - Leventhal, H., & Cleary, P. D. (1980). The smoking problem: A review of the research and theory in behavioral risk modification. *Psychological Bulletin*, 88(2), 370–405. https://doi.org/10.1037/0033-2909.88.2.370

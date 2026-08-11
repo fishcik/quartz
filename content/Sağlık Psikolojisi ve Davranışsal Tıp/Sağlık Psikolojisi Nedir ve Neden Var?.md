@@ -24,7 +24,9 @@ tags:
 
 >*Hastalıklar nasıl önlenebilir?*
 
-## 1. Sağlık Psikolojisinin Doğuşu ve Kapsamı
+#
+
+# 1. Sağlık Psikolojisinin Doğuşu ve Kapsamı
 
 Grip olduğunda doktora gidiyorsun, ilaç yazıyor, içiyorsun. Sistem bu. 
 Biyomedikal model[^1] seni bir arıza olarak görüyor: bozulmuşsa tamir et, sağlamsa dokunma. 
@@ -43,23 +45,28 @@ Sağlığın korunması, hastalığın önlenmesi, sağlık hizmetleri ve rehabi
 ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. 
 Laboratuvardan çıkıp sahaya inen bir alan.***
 
-**Klinik psikolojiden farkı ise, klinik psikolojinin **zihinsel bozukluklar**ve**davranış**sapmaları üzerine yoğunlaşır, zemini psikopatolojidir.
+**Klinik psikolojiden farkı ise, klinik psikolojinin ** zihinsel bozukluklar**ve** davranış**sapmaları üzerine yoğunlaşır, zemini psikopatolojidir.
 Sağlık psikolojisi ise**fiziksel** hastalıklara ve onları çevreleten davranış, duygu, biliş sarmalına bakıyor.**
 
 İnsan bedeni bir makine değil, bağlam içinde yaşayan bir organizma. 
 *Ve o bağlamın büyük bölümü psikolojik.*
 
+#
 
-## 2. Beden ve Zihin: İki Model, İki Dünya Görüşü
+# 2. Beden ve Zihin: İki Model, İki Dünya Görüşü
 
-### Beden & Zihin
+#
+
+## Beden & Zihin
 Zihin ve bedenin birbirini etkilediği fikri yeni sayılmaz. 
 Bağışıklık sistemi duygusal durumlardan etkilenebiliyor ve genetik yatkınlıklar davranış biçimleriyle etkileşime girerek hastalığı şekillendiriyor. 
 
 Bu bilgiler aslında eskiden de sezgisel düzeyde vardı. 
-Sistematikleşmesi ve sağlık hizmetlerine, özellikle fiziksel hastalıkların tedavi yapısına aktarılması hâlâ devam eden, bitmemiş bir süreç. 
+Sistematikleşmesi ve sağlık hizmetlerine, özellikle fiziksel hastalıkların tedavi yapısına aktarılması hâlâ devam eden, bitmemiş bir süreç.
 
-### İki Model, İki Dünya Görüşü
+#
+
+## İki Model, İki Dünya Görüşü
 
 >***Biyomedikal model***
 
@@ -78,33 +85,38 @@ Hem hastalığın ortaya çıkışında hem de seyrinde psikolojik faktörler de
 
 *Bunların yanında: hastalık davranışına dair beklentiler, finansal destek mekanizmaları, sağlık sistemine erişim gibi sosyal-toplumsal faktörler de var.*
 
->***Fark:***biyomedikal model sana "sen bozuksun, tamir olacaksın" diyor. Biyopsikososyal model ise "sen bağlam içinde yaşayan bir insansın ve bağlamın her katmanı hastalığına ya da sağlığına katkıda bulunur" diyor. 
+>***Fark:*** biyomedikal model sana "sen bozuksun, tamir olacaksın" diyor. Biyopsikososyal model ise "sen bağlam içinde yaşayan bir insansın ve bağlamın her katmanı hastalığına ya da sağlığına katkıda bulunur" diyor. 
 
-Sağlık psikolojisi**ikinci* modeli temel alıyor, her şey biyopsikososyal model zemini üzerine kuruluyor. 
+Sağlık psikolojisi**ikinci** modeli temel alıyor, her şey biyopsikososyal model zemini üzerine kuruluyor.
 
+#
 
-## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
+# 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
-### Alanın oluşması
+#
+
+## Alanın oluşması
 
 Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında iç içe geçen üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
 
 >1) Kronik-dejeneratif hastalıkların aşırı artışı. 
 >Tüberküloz gibi bulaşıcı hastalıklar artık birinci katil değil. Yerlerini kalp hastalıkları, kanser, diyabet gibi yavaş ilerleyen ve uzun soluklu olan hastalıklar aldı. **Bunlar, bakterileri öldürerek çözülmüyor.**>2) Risk davranışları.
->Yani**hem**sigara içiyorsun,**hem**hareketsiz yaşıyorsun**hem**de kronik yoğun stres altındasın. Bunlar hastalığı**doğrudan**etkiliyor. Artık**davranış* tedavinin konusu haline geldi.
+>Yani**hem** sigara içiyorsun,**hem** hareketsiz yaşıyorsun**hem** de kronik yoğun stres altındasın. Bunlar hastalığı**doğrudan** etkiliyor. Artık**davranış** tedavinin konusu haline geldi.
 
 >3) Sağlık sistemlerindeki maliyet patlaması. 
->Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek**çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
+>Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek** çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
 
 
-Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde**Division of Health Psychology* kurularak doğmuş oldu.
+Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde**Division of Health Psychology** kurularak doğmuş oldu.
 
 Sağlık psikolojisinin diğer bir çok alanla cevaplamaya çalıştığı soru aynı: psikolojik süreçler sağlık ve hastalıkla nasıl kesişiyor? 
 Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla yapıyor.
 
 ---
 
-## Kaynaklar
+#
+
+# Kaynaklar
 
 - Engel, G. L. (1980). The clinical application of the biopsychosocial model. *American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
 - Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology. *American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
