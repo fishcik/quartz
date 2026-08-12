@@ -1386,8 +1386,7 @@ function scInitGlossary(){
       '  <div class="sc-glossary-letters" id="sc-glossary-letters"></div>',
       '  <div class="sc-glossary-list" id="sc-glossary-list"></div>',
       '</div>'
-    ].join('
-');
+    ].join('');
     document.body.appendChild(gm);
 
     gm.querySelector('.sc-modal-close').addEventListener('click', scCloseGlossary);
@@ -1505,8 +1504,7 @@ function scInitDiagramModal(){
       '  </div>',
       '  <div class="sc-diagram-modal-content" id="sc-diagram-modal-content"></div>',
       '</div>'
-    ].join('
-');
+    ].join('');
     document.body.appendChild(dm);
 
     dm.querySelector('.sc-modal-close').addEventListener('click', scCloseDiagramModal);
