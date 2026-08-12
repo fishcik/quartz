@@ -19,9 +19,6 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 
 > [!bug] İRONİ! 
 > Genelde insanı güneşten koruyan şey siyahileşme korkusu, kırışıklık ve yaşlanma kaygısıdır.
-
-#
-
 # 1. Risk Grubu
 
 - Sarışınlar, kızıllar, güneşe çıktığı an ıstakoza dönen açık tenlilier
@@ -32,26 +29,20 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 - Ailede deri kanseri öyküsü
 
 ---
-
-#
-
 # 2. Ne İşe Yarıyor?
 
--**Öğle güneşinden kaçmak**_Yazın ya da sıcak iklimli yerlerde 11-16:00 arası dışarı çıkmamak_
+- **Öğle güneşinden kaçmak**_Yazın ya da sıcak iklimli yerlerde 11-16:00 arası dışarı çıkmamak_
     
--**Koruyucu giysi**_Uzun kollu gömlek,uzun pantolon, şapka, güneş gözlüğü._
+- **Koruyucu giysi**_Uzun kollu gömlek,uzun pantolon, şapka, güneş gözlüğü._
     
--**Güneş kremi**_Düzenli ve erken uygulama. Kaçınılmaz güneş maruziyetinden korunmak içindir._
+- **Güneş kremi**_Düzenli ve erken uygulama. Kaçınılmaz güneş maruziyetinden korunmak içindir._
     
--**Gölge**_Güneş altında kavrulmak yerine gölge aramak_
+- **Gölge**_Güneş altında kavrulmak yerine gölge aramak_
     
--**Çocuklar ve bebeler**_Genel kural: güneşte bırakılmamalı._ _Eğer ille de güneşte kalacaklarsa krem yerine giysi tercih etmeli._
+- **Çocuklar ve bebeler**_Genel kural: güneşte bırakılmamalı._ _Eğer ille de güneşte kalacaklarsa krem yerine giysi tercih etmeli._
     
 
 ---
-
-#
-
 > [!abstract] 📜 Güneşten Korunmada Karar Dinamikleri Modeli (Prentice-Dunn & Rogers, 1986)
 > *Kaynak: Prentice-Dunn, S., & Rogers, R. W. (1986). Protection Motivation Theory and preventive health: Sun protection behavior.*
 >
@@ -70,7 +61,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 >   BasaCikma ==>|Bronzlaşma Ödülü & Zahmet Ağır Basarsa| Maladaptif((Korumasız Güneşe Maruz Kalma)):::cardinal
 > ```
 >
-> **Açıklama:** *Güneşten korunma kararının, cilt hasarı korkusu ile bronzlaşmanın getirdiği anlık sosyal/estetik ödül ve kremin zahmeti arasındaki bilişsel çatışmayı nasıl çözdüğünü modeller.*
+> **Açıklama:** * Güneşten korunma kararının, cilt hasarı korkusu ile bronzlaşmanın getirdiği anlık sosyal/estetik ödül ve kremin zahmeti arasındaki bilişsel çatışmayı nasıl çözdüğünü modeller.*
 
 # 3. Halk vs. Bilim
 
@@ -88,14 +79,10 @@ _Kanser korkusu görünüş korkusuna yeniliyor. Bronzlaşmak neden bu kadar gü
 _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
 
 ---
-
-#
-
 ---
 
 [^1]: UV Radyasyonu (Ultraviolet Radiation): Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.
 [^2]: Melanom (Malignant Melanoma): Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.
-
 
 ---
 

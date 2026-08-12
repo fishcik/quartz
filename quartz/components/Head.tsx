@@ -105,7 +105,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -1345,7 +1345,8 @@ function perNav(){
   requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   
-// ─── KAVRAMLAR & KELİMELER (SÖZLÜK) & DİYAGRAM MODAL SİSTEMİ ───────────
+
+// ─── KAVRAMLAR & KELİMELER (SÖZLÜK) & AKORDİYON SİSTEMİ ───────────
 var SC_GLOSSARY = [];
 function scFetchGlossary(cb){
   if(SC_GLOSSARY.length > 0){ if(cb) cb(SC_GLOSSARY); return; }
@@ -1355,19 +1356,97 @@ function scFetchGlossary(cb){
     .catch(function(){ if(cb) cb([]); });
 }
 
-function scInitGlossary(){
+function scInitAccordions(){
+  // 1. KAVRAMLAR & KELİMELER (Footnotes Accordion - Default Closed)
   document.querySelectorAll('.footnotes, section[data-footnotes]').forEach(function(fnSec){
-    if(fnSec.getAttribute('data-sc-fn-init')) return;
-    fnSec.setAttribute('data-sc-fn-init', '1');
-    
-    var hdr = document.createElement('div');
-    hdr.className = 'sc-footnotes-header';
-    hdr.innerHTML = '<span class="sc-fn-title">Kavramlar & Kelimeler</span><span class="sc-fn-badge">Tüm Sözlüğü Aç</span>';
-    hdr.title = 'Kavramlar & Kelimeler sözlüğünü aç';
-    hdr.addEventListener('click', function(){ scOpenGlossary(); });
-    fnSec.insertBefore(hdr, fnSec.firstChild);
+    if(fnSec.getAttribute('data-sc-fn-acc')) return;
+    fnSec.setAttribute('data-sc-fn-acc', '1');
+
+    var lis = fnSec.querySelectorAll('ol > li, ul > li, li');
+    var countText = lis.length ? ' (' + lis.length + ' Kavram)' : '';
+
+    var det = document.createElement('details');
+    det.className = 'sc-acc sc-footnotes-acc';
+
+    var sum = document.createElement('summary');
+    sum.className = 'sc-acc-header';
+    sum.innerHTML = '<span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
+    det.appendChild(sum);
+
+    var bodyDiv = document.createElement('div');
+    bodyDiv.className = 'sc-acc-body';
+
+    while(fnSec.firstChild){
+      bodyDiv.appendChild(fnSec.firstChild);
+    }
+
+    var moreDiv = document.createElement('div');
+    moreDiv.className = 'sc-glossary-more-wrap';
+    var moreBtn = document.createElement('button');
+    moreBtn.type = 'button';
+    moreBtn.className = 'sc-open-all-btn';
+    moreBtn.innerHTML = 'Tüm Kavramlar & Kelimeler (Sözlük) &rarr;';
+    moreBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      scOpenGlossary();
+    });
+    moreDiv.appendChild(moreBtn);
+    bodyDiv.appendChild(moreDiv);
+
+    det.appendChild(bodyDiv);
+    fnSec.appendChild(det);
   });
 
+  // 2. KAYNAKLAR (Kaynakça Accordion - Default Closed & Elegant Red Dividers)
+  document.querySelectorAll('article, .center article').forEach(function(art){
+    var h2s = art.querySelectorAll('h2, h3');
+    h2s.forEach(function(h2){
+      var t = (h2.textContent || '').trim().toLowerCase();
+      if((t === 'kaynaklar' || t === 'kaynakça' || t === 'kaynak') && !h2.getAttribute('data-sc-ref-acc')){
+        h2.setAttribute('data-sc-ref-acc', '1');
+
+        var refList = null;
+        var next = h2.nextElementSibling;
+        while(next){
+          if(next.tagName === 'UL' || next.tagName === 'OL'){
+            refList = next;
+            break;
+          }
+          if(next.tagName && next.tagName.match(/^H[1-6]$/)) break;
+          next = next.nextElementSibling;
+        }
+
+        if(refList){
+          var rLis = refList.querySelectorAll('li');
+          var countText = rLis.length ? ' (' + rLis.length + ' Kaynak)' : '';
+
+          var det = document.createElement('details');
+          det.className = 'sc-acc sc-references-acc';
+
+          var sum = document.createElement('summary');
+          sum.className = 'sc-acc-header';
+          sum.innerHTML = '<span class="sc-acc-title">Kaynaklar</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
+          det.appendChild(sum);
+
+          var bodyDiv = document.createElement('div');
+          bodyDiv.className = 'sc-acc-body';
+          bodyDiv.appendChild(refList);
+          det.appendChild(bodyDiv);
+
+          if(h2.parentNode){
+            h2.parentNode.insertBefore(det, h2);
+            h2.remove();
+          }
+
+          // Move to the very bottom of the article
+          art.appendChild(det);
+        }
+      }
+    });
+  });
+
+  // Modal setup
   var gm = document.getElementById('sc-glossary-modal');
   if(!gm){
     gm = document.createElement('div');
@@ -1401,6 +1480,55 @@ function scInitGlossary(){
       });
     }
   }
+
+  // 3. SEARCH INTEGRATION (Sitedeki arama kutusu sözlük terimlerini de bulur)
+  scInitSearchGlossary();
+}
+
+function scInitSearchGlossary(){
+  scFetchGlossary(function(terms){
+    var searchBars = document.querySelectorAll('.search-bar, input[name="search"]');
+    searchBars.forEach(function(sb){
+      if(sb.getAttribute('data-sc-gsearch')) return;
+      sb.setAttribute('data-sc-gsearch', '1');
+
+      sb.addEventListener('input', function(){
+        var q = sb.value.trim().toLowerCase();
+        if(q.length < 2) return;
+
+        var matches = terms.filter(function(item){
+          return (item.term || '').toLowerCase().indexOf(q) !== -1 || (item.desc || '').toLowerCase().indexOf(q) !== -1;
+        });
+
+        if(matches.length > 0){
+          setTimeout(function(){
+            var layout = document.querySelector('.search-layout');
+            if(layout && !layout.querySelector('.sc-search-glossary-group')){
+              var gGroup = document.createElement('div');
+              gGroup.className = 'sc-search-glossary-group';
+              var gHdr = document.createElement('div');
+              gHdr.className = 'sc-search-g-title';
+              gHdr.textContent = 'Kavramlar & Kelimeler (' + matches.length + ')';
+              gGroup.appendChild(gHdr);
+
+              matches.slice(0, 4).forEach(function(m){
+                var itemEl = document.createElement('div');
+                itemEl.className = 'sc-search-g-item';
+                itemEl.innerHTML = '<strong>' + m.term + '</strong>: ' + (m.desc.length > 70 ? m.desc.slice(0, 70) + '...' : m.desc);
+                itemEl.addEventListener('click', function(e){
+                  e.preventDefault();
+                  scOpenGlossary(m.term);
+                });
+                gGroup.appendChild(itemEl);
+              });
+
+              layout.insertBefore(gGroup, layout.firstChild);
+            }
+          }, 120);
+        }
+      });
+    });
+  });
 }
 
 function scRenderGlossaryList(query){
@@ -1468,7 +1596,7 @@ function scRenderGlossaryList(query){
 }
 
 function scOpenGlossary(searchTerm){
-  scInitGlossary();
+  scInitAccordions();
   var gm = document.getElementById('sc-glossary-modal');
   if(!gm) return;
   var sInput = gm.querySelector('#sc-glossary-search');
@@ -1566,7 +1694,7 @@ document.addEventListener('keydown', function(e){
   }
 });
 
-  scInitGlossary();
+  scInitAccordions();
   scInitDiagramModal();
   scCardTilt();
   scSerpentHr();

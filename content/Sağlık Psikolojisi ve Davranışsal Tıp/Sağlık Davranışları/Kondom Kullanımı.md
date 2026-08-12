@@ -17,26 +17,17 @@ tags:
 - [[#3. Spontanite İllüzyonu ve Eylem Planı]]
 
 ---
-
-#
-
 # 1. Cinsel Yolla Bulaşan Enfeksiyonlar ve Risk Algısı
 
 Cinsel sağlıkta kondom kullanımı, HIV ve diğer cinsel yolla bulaşan enfeksiyonlara (CYBE[^1]) karşı en birincil bariyerdir. Ancak risk algısı genellikle "bana bir şey olmaz" yanılsamasıyla bastırılır.
 
 ---
-
-#
-
 # 2. Korunma Kararının Sosyokognitif Dinamikleri
 
 Karar anı genellikle rasyonel bir tartımın değil; partner baskısı, alkol/madde etkisi ve anlık haz dürtülerinin çarpıştığı yüksek uyarılma ortamında gerçekleşir. 
 Bu yüzden Sağlık İnanç Modeli[^2] gibi salt rasyonel modeller tek başına cinsel davranışları tahmin etmekte zorlanır.
 
 ---
-
-#
-
 > [!abstract] 📜 IMB Korunma Davranışı Modeli (Fisher & Fisher, 1992, 2000)
 > *Kaynak: Fisher, J. D., & Fisher, W. A. (1992). Changing AIDS-risk behavior. Psychological Bulletin, 111(3), 455–474.*
 >
@@ -56,7 +47,7 @@ Bu yüzden Sağlık İnanç Modeli[^2] gibi salt rasyonel modeller tek başına 
 >   Erisim ==> Korunma
 > ```
 >
-> **Açıklama:** *Kondom kullanımının sadece bilgiyle değil; partnerle müzakere edebilme ve anlık spontanite baskısına direnme gibi kritik davranışsal becerilerle eyleme dönüştüğünü modeller.*
+> **Açıklama:** * Kondom kullanımının sadece bilgiyle değil; partnerle müzakere edebilme ve anlık spontanite baskısına direnme gibi kritik davranışsal becerilerle eyleme dönüştüğünü modeller.*
 
 # 3. Spontanite İllüzyonu ve Eylem Planı
 
@@ -64,15 +55,11 @@ Kondom taşımak veya kullanımını konuşmak "romantizmi bozuyor" veya "güven
 Etkili müdahaleler sadece risk bilgisi vermez; iletişim becerileri ve somut uygulama niyetleri[^3] (if-then planları) kazandırmayı hedefler.
 
 ---
-
-#
-
 ---
 
 [^1]: CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar): Korunmasız cinsel temas yoluyla bulaşan patojenlerin neden olduğu viral veya bakteriyel enfeksiyonlar.
 [^2]: Sağlık İnanç Modeli: Risk algısı ve yarar-engel dengesi üzerinden sağlık kararlarını açıklayan model.
 [^3]: Uygulama Niyetleri (If-Then Plans): Karar anında dürtüsel davranışı engelleyen 'durum X olduğunda Y yapacağım' formatındaki somut ön anlaşmalar.
-
 
 ---
 
