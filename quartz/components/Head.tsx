@@ -1346,409 +1346,14 @@ function perNav(){
   if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
   
 // ─── KAVRAMLAR & KELİMELER (SÖZLÜK) & DİYAGRAM MODAL SİSTEMİ ───────────
-var SC_GLOSSARY = [
-  {
-    "term": "Birincil Koruma (Primary Prevention)",
-    "desc": "Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.",
-    "sources": [
-      {
-        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
-      }
-    ]
-  },
-  {
-    "term": "Biyomedikal Model (Biomedical Model)",
-    "desc": "Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel tıp yaklaşımı.",
-    "sources": [
-      {
-        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
-      }
-    ]
-  },
-  {
-    "term": "BMI / Beden Kitle İndeksi (Body Mass Index)",
-    "desc": "Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.",
-    "sources": [
-      {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
-      }
-    ]
-  },
-  {
-    "term": "Boyutsal Yaklaşım (Dimensional Approach)",
-    "desc": "Psikolojik durumları katı \"sağlıklı / hasta\" kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar)",
-    "desc": "Korunmasız cinsel temas yoluyla bulaşan patojenlerin neden olduğu viral veya bakteriyel enfeksiyonlar.",
-    "sources": [
-      {
-        "title": "Kondom Kullanımı",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
-      }
-    ]
-  },
-  {
-    "term": "DGE (Deutsche Gesellschaft für Ernährung)",
-    "desc": "Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.",
-    "sources": [
-      {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
-      }
-    ]
-  },
-  {
-    "term": "DSM (Diagnostic and Statistical Manual of Mental Disorders)",
-    "desc": "Amerikan Psikiyatri Birliği tarafından yayımlanan, ruhsal bozukluklar için standart tanı kriterlerini belirleyen kılavuz.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "Epigenetik (Epigenetics)",
-    "desc": "DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.",
-    "sources": [
-      {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
-      }
-    ]
-  },
-  {
-    "term": "Etiyoloji (Etiology)",
-    "desc": "Bir hastalığın, psikolojik bozukluğun veya klinik tablonun altında yatan köken, nedensellik ve tetikleyici faktörler bütünü.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "HAPA Modeli (Health Action Process Approach)",
-    "desc": "Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.",
-    "sources": [
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  },
-  {
-    "term": "Hassas Dönem (Sensitive Period)",
-    "desc": "Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.",
-    "sources": [
-      {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
-      }
-    ]
-  },
-  {
-    "term": "ICD (International Classification of Diseases)",
-    "desc": "Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "İnaktif Yaşam (Physical Inactivity)",
-    "desc": "Sağlık için önerilen asgari fiziksel hareket eşiğinin altında kalan yaşam tarzı.",
-    "sources": [
-      {
-        "title": "Fiziksel Aktivite",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
-      }
-    ]
-  },
-  {
-    "term": "İnaktivite (Sedentary Behavior)",
-    "desc": "Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.",
-    "sources": [
-      {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
-      }
-    ]
-  },
-  {
-    "term": "İçsel Atıf (Internal Attribution)",
-    "desc": "Başarısızlığı durumsal faktörler yerine kendi karakterine, iradesizliğine veya yetersizliğine bağlama eğilimi.",
-    "sources": [
-      {
-        "title": "Geri Düşüş",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
-      }
-    ]
-  },
-  {
-    "term": "Klinik Depresyon (Major Depressive Disorder)",
-    "desc": "Sürekli çökkün duygudurum, ilgi kaybı ve enerji azalmasıyla seyreden ve egzersizle nörotransmitter regülasyonu sağlanan duygu durum bozukluğu.",
-    "sources": [
-      {
-        "title": "Fiziksel Aktivite",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
-      }
-    ]
-  },
-  {
-    "term": "Kronik Hastalık (Chronic Illness)",
-    "desc": "Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).",
-    "sources": [
-      {
-        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
-      }
-    ]
-  },
-  {
-    "term": "Melanom (Malignant Melanoma)",
-    "desc": "Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.",
-    "sources": [
-      {
-        "title": "Güneşten Korunma",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
-      }
-    ]
-  },
-  {
-    "term": "Metabolik Risk (Metabolic Risk)",
-    "desc": "İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.",
-    "sources": [
-      {
-        "title": "Fiziksel Aktivite",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
-      }
-    ]
-  },
-  {
-    "term": "Nikotin Regülasyon Teorisi (Nicotine Regulation Theory)",
-    "desc": "Vücuttaki nikotin seviyesi düştüğünde ortaya çıkan yoksunluk semptomlarını bastırmak için sigara içme sıklığının ayarlandığını öne süren biyolojik model.",
-    "sources": [
-      {
-        "title": "Sigaranın Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
-      }
-    ]
-  },
-  {
-    "term": "Niyet-Davranış Uçurumu (Intention-Behavior Gap)",
-    "desc": "Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.",
-    "sources": [
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  },
-  {
-    "term": "Ontojenez (Ontogeny)",
-    "desc": "Bireysel bir organizmanın döllenmeden ölüme kadar geçen yaşam süresince geçirdiği yapısal, biyolojik ve psikolojik gelişimsel süreç.",
-    "sources": [
-      {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
-      }
-    ]
-  },
-  {
-    "term": "Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE)",
-    "desc": "Marlatt tarafından tanımlanan; tek bir kaçamak sonrası bireyin suçluluk, yetersizlik ve 'battı balık yan gider' bilişiyle kontrolü tamamen kaybetmesi.",
-    "sources": [
-      {
-        "title": "Geri Düşüş",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
-      }
-    ]
-  },
-  {
-    "term": "Planlanmış Davranış Teorisi (Theory of Planned Behavior)",
-    "desc": "Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.",
-    "sources": [
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  },
-  {
-    "term": "Plastisite (Plasticity)",
-    "desc": "Beynin ve bilişsel sistemlerin deneyim, öğrenme ve çevresel uyaranlara bağlı olarak yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.",
-    "sources": [
-      {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
-      }
-    ]
-  },
-  {
-    "term": "Pozitif Pekiştirme (Positive Reinforcement)",
-    "desc": "Bir davranışın ardından haz verici veya ödüllendirici bir uyaranın gelmesi sonucu o davranışın tekrarlanma sıklığının artması.",
-    "sources": [
-      {
-        "title": "Sigaranın Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
-      }
-    ]
-  },
-  {
-    "term": "Psikolojik Bağımlılık (Psychological Dependence)",
-    "desc": "Madde veya davranışın duygu düzenleme, rahatlama veya kimlik parçası olarak algılanması sonucu gelişen zihinsel bağımlılık örüntüsü.",
-    "sources": [
-      {
-        "title": "Sigaranın Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
-      }
-    ]
-  },
-  {
-    "term": "Psikopatoloji (Psychopathology)",
-    "desc": "Ruhsal rahatsızlıkların, anormal davranışların ve zihinsel işlev bozukluklarının doğasını, nedenlerini ve gelişimsel dinamiklerini inceleyen bilim dalı.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "Relaps / Geri Düşüş (Relapse)",
-    "desc": "Bireyin değiştirdiği eski istenmeyen alışkanlığa (ör. sigara, madde kullanımı) tam ölçekli ve kalıcı olarak geri dönmesi.",
-    "sources": [
-      {
-        "title": "Geri Düşüş",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
-      }
-    ]
-  },
-  {
-    "term": "Sağlık İnanç Modeli",
-    "desc": "Risk algısı ve yarar-engel dengesi üzerinden sağlık kararlarını açıklayan model.",
-    "sources": [
-      {
-        "title": "Kondom Kullanımı",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
-      }
-    ]
-  },
-  {
-    "term": "Sağlık İnanç Modeli (Health Belief Model)",
-    "desc": "Bireylerin algılanan tehdit, duyarlılık ve kar-zarar dengesi üzerinden sağlık davranışlarına karar verdiğini öne süren bilişsel model.",
-    "sources": [
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  },
-  {
-    "term": "Semptom (Symptom)",
-    "desc": "Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "Sendrom (Syndrome)",
-    "desc": "Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "UV Radyasyonu (Ultraviolet Radiation)",
-    "desc": "Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.",
-    "sources": [
-      {
-        "title": "Güneşten Korunma",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
-      }
-    ]
-  },
-  {
-    "term": "Uygulama Niyetleri (If-Then Plans)",
-    "desc": "Karar anında dürtüsel davranışı engelleyen 'durum X olduğunda Y yapacağım' formatındaki somut ön anlaşmalar.",
-    "sources": [
-      {
-        "title": "Kondom Kullanımı",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
-      }
-    ]
-  },
-  {
-    "term": "Öz-Etkililik (Self-Efficacy)",
-    "desc": "Bireyin sağlıklı beslenme hedefini zorlu sosyal veya duygusal koşullarda dahi sürdürebileceğine olan inanç düzeyi.",
-    "sources": [
-      {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
-      },
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  }
-];
+var SC_GLOSSARY = [];
+function scFetchGlossary(cb){
+  if(SC_GLOSSARY.length > 0){ if(cb) cb(SC_GLOSSARY); return; }
+  fetch('/static/sc-glossary.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){ SC_GLOSSARY = data || []; if(cb) cb(SC_GLOSSARY); })
+    .catch(function(){ if(cb) cb([]); });
+}
 
 function scInitGlossary(){
   document.querySelectorAll('.footnotes, section[data-footnotes]').forEach(function(fnSec){
@@ -1773,7 +1378,7 @@ function scInitGlossary(){
       '  <div class="sc-modal-header">',
       '    <div class="sc-modal-title-group">',
       '      <span class="sc-modal-title">𓆙 Kavramlar & Kelimeler</span>',
-      '      <span class="sc-modal-subtitle">' + SC_GLOSSARY.length + ' Psikoloji Terimi</span>',
+      '      <span class="sc-modal-subtitle" id="sc-glossary-count">Sözlük Yükleniyor...</span>',
       '    </div>',
       '    <input type="text" id="sc-glossary-search" placeholder="Kavram veya terim ara..." autocomplete="off">',
       '    <button type="button" class="sc-modal-close" title="Kapat (ESC)">✕</button>',
@@ -1781,7 +1386,8 @@ function scInitGlossary(){
       '  <div class="sc-glossary-letters" id="sc-glossary-letters"></div>',
       '  <div class="sc-glossary-list" id="sc-glossary-list"></div>',
       '</div>'
-    ].join('\n');
+    ].join('
+');
     document.body.appendChild(gm);
 
     gm.querySelector('.sc-modal-close').addEventListener('click', scCloseGlossary);
@@ -1803,11 +1409,16 @@ function scRenderGlossaryList(query){
   if(!gm) return;
   var list = gm.querySelector('#sc-glossary-list');
   var lettersBar = gm.querySelector('#sc-glossary-letters');
+  var countEl = gm.querySelector('#sc-glossary-count');
   if(!list) return;
+
+  if(countEl){
+    countEl.textContent = SC_GLOSSARY.length + ' Psikoloji Terimi';
+  }
 
   var filtered = SC_GLOSSARY.filter(function(item){
     if(!query) return true;
-    return item.term.toLowerCase().indexOf(query) !== -1 || item.desc.toLowerCase().indexOf(query) !== -1;
+    return (item.term || '').toLowerCase().indexOf(query) !== -1 || (item.desc || '').toLowerCase().indexOf(query) !== -1;
   });
 
   list.innerHTML = '';
@@ -1818,8 +1429,8 @@ function scRenderGlossaryList(query){
 
   var letterSet = {};
   filtered.forEach(function(item){
-    var firstChar = item.term.charAt(0).toUpperCase();
-    letterSet[firstChar] = true;
+    var firstChar = (item.term || '').charAt(0).toUpperCase();
+    if(firstChar) letterSet[firstChar] = true;
   });
 
   if(lettersBar && !query){
@@ -1832,7 +1443,7 @@ function scRenderGlossaryList(query){
 
   var currentLetter = '';
   filtered.forEach(function(item){
-    var firstChar = item.term.charAt(0).toUpperCase();
+    var firstChar = (item.term || '').charAt(0).toUpperCase();
     if(firstChar !== currentLetter && !query){
       currentLetter = firstChar;
       var lHdr = document.createElement('div');
@@ -1844,7 +1455,7 @@ function scRenderGlossaryList(query){
 
     var card = document.createElement('div');
     card.className = 'sc-glossary-card';
-    var sourcesHtml = item.sources.map(function(src){
+    var sourcesHtml = (item.sources || []).map(function(src){
       return '<a href="' + src.url + '" class="sc-term-source-badge" data-no-popover="true">' + src.title + '</a>';
     }).join('');
 
@@ -1865,7 +1476,9 @@ function scOpenGlossary(searchTerm){
   if(sInput){
     sInput.value = searchTerm || '';
   }
-  scRenderGlossaryList(searchTerm ? searchTerm.toLowerCase() : '');
+  scFetchGlossary(function(){
+    scRenderGlossaryList(searchTerm ? searchTerm.toLowerCase() : '');
+  });
   gm.classList.add('sc-active');
   document.body.classList.add('sc-modal-open');
   if(sInput && !searchTerm) setTimeout(function(){ sInput.focus(); }, 100);
@@ -1892,7 +1505,8 @@ function scInitDiagramModal(){
       '  </div>',
       '  <div class="sc-diagram-modal-content" id="sc-diagram-modal-content"></div>',
       '</div>'
-    ].join('\n');
+    ].join('
+');
     document.body.appendChild(dm);
 
     dm.querySelector('.sc-modal-close').addEventListener('click', scCloseDiagramModal);
