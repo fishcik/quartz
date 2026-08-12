@@ -3444,12 +3444,13 @@ body[data-slug="tags/index"] .page-listing > p {
 }
 
 // ─── POPOVER / HOVER PREVIEW TAMAMEN KAPALI ────────────────────────────
-.popover, .popover-inner, [data-popover], .active-popover, .popover-hint {
+.popover, .popover-inner, [data-popover], .active-popover {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
   visibility: hidden !important;
 }
+
 
 
 

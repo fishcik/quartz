@@ -1362,7 +1362,7 @@ function scInitGlossary(){
     
     var hdr = document.createElement('div');
     hdr.className = 'sc-footnotes-header';
-    hdr.innerHTML = '<span class="sc-fn-title">𓆙 Kavramlar & Kelimeler</span><span class="sc-fn-badge">Tüm Sözlüğü Aç</span>';
+    hdr.innerHTML = '<span class="sc-fn-title">Kavramlar & Kelimeler</span><span class="sc-fn-badge">Tüm Sözlüğü Aç</span>';
     hdr.title = 'Kavramlar & Kelimeler sözlüğünü aç';
     hdr.addEventListener('click', function(){ scOpenGlossary(); });
     fnSec.insertBefore(hdr, fnSec.firstChild);
@@ -1377,7 +1377,7 @@ function scInitGlossary(){
       '<div class="sc-modal-box sc-glossary-box">',
       '  <div class="sc-modal-header">',
       '    <div class="sc-modal-title-group">',
-      '      <span class="sc-modal-title">𓆙 Kavramlar & Kelimeler</span>',
+      '      <span class="sc-modal-title">Kavramlar & Kelimeler</span>',
       '      <span class="sc-modal-subtitle" id="sc-glossary-count">Sözlük Yükleniyor...</span>',
       '    </div>',
       '    <input type="text" id="sc-glossary-search" placeholder="Kavram veya terim ara..." autocomplete="off">',
@@ -1499,7 +1499,7 @@ function scInitDiagramModal(){
     dm.innerHTML = [
       '<div class="sc-modal-box sc-diagram-box">',
       '  <div class="sc-modal-header">',
-      '    <div class="sc-modal-title">𓆙 Diyagram Görünümü</div>',
+      '    <div class="sc-modal-title">Diyagram Görünümü</div>',
       '    <button type="button" class="sc-modal-close" title="Kapat (ESC)">✕</button>',
       '  </div>',
       '  <div class="sc-diagram-modal-content" id="sc-diagram-modal-content"></div>',
