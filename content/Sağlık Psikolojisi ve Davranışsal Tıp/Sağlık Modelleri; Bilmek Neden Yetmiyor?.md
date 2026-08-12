@@ -48,7 +48,6 @@ Kişiyi o çizgide ileriye ya da geriye iten şey bilişsel ve duygusal değişk
 
 >*Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli[^1] (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
 
-
 >***2) Aşama modelleri
 
 Bunlar "hayır, öyle çizgi üzerinde ileri-geri falan olmaz" diyor. 
@@ -56,8 +55,6 @@ Davranış değişikliği sırasında insan niceliksel olarak değil, niteliksel
 Düşünmeme evresi ile düşünme evresi arasında sadece bir bakış açısı farkı yok, **o evreler psikolojik olarak birbirinden temelden farklı.**Yani bir süreklilik üzerinde ilerlemiyorsun,***bambaşka*** bi evreye atlıyorsun ve her evrenin yapısı kendine göre. 
 
 >**Sağlıklı Eylem Süreci Yaklaşımı (Health Action Process Approach), Transteorik Model (Transtheoretical Model) ve Önleyici Eylem Süreç Modeli (Precaution Adoption Process Model) bu aileden. 
-
-
 
 **Bu ayrımlar sadece akademik sınıflandırma olsun diye değil,**müdahale tasarımı açısından gerçek sonuçları var.  **Süreklilikciler herkese aynı müdahaleyi uygulayabilir, çünkü herkes zaten aynı çizgi üzerinde ve sadece farklı noktalarında.*
 *Aşamacılar da her model için ayrı o evrenin ihtiyaçlarına özel müdahaleler (tailored interventions) tasarlıyor, çünkü onlara göre yanlış evreye yönelik müdahale işe yaramaz ve hatta de geri tepebilir.*
@@ -162,7 +159,6 @@ Sonuç?**Herkes kendi riskini ortalamanın altında gördü.*
 
 >Gelelim bu modelin neden günümüz sağlık psikolojisinde "antika" olarak kaldığına ve ciddi eleştirilerine. 
 
-
 Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?*Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında*o kadar da* iyi tahmin edemiyor. 
 **Neden?**Çünkü HBM'de "niyet" (intention) kavramı yok. 
 Modern psikolojide en güçlü davranış öngörücüsü olan niyet, HBM'de**hiç**yer almıyor. 
@@ -251,7 +247,6 @@ Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan, **sağlıklı beslen
 ***Algılanan davranış kontrolü, niyeti etkilemenin yanı sıra davranışı da direkt olarak etkiliyor. Çünkü en iyi niyetle bile, fırsatın ya da kapasitenin olmadığı yerde davranış gerçekleşmez.***-
 **Algılanan davranış kontrolü direkt Bandrua'nın öz-yeterliliğini "hatırlatıyor". Ajzen de sonradan bunu kabul etti ve yeniden tanımladı.**
 
-
 >***Peki bu kadar anlattık da ne oldu?***
 >**Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki ** niyeti**canavar gibi tahmin ediyor. 
 >Ama iş o niyetin**davranışa** dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü yerlerde sürünüyor. 
@@ -259,9 +254,6 @@ Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan, **sağlıklı beslen
 
 **Yani, bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
 Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olacak ***daha canavar modellere ihtiyacımız var.***
-
-
-
 
 >**"Theories don’t have to be correct – only facts do." - Hans Selye"**
 
@@ -300,7 +292,6 @@ Yani, "***bu şey ne kadar ciddi ve ben ne kadar risk altındayım"*** ile***"bu
 
 >Bu yüzden korku mesajları tek başına pek bi işe yaramıyor. Kişinin "***ben bunu yapabilirim***" demesi *** şart.***Araştırmalara göre niyet, o davranışın gerçekten sergilenmesini sağlamaya yetmiyor. 
 Bir insanın bir eylemi gerçekleştirip gerçekleştirmemesinde rol oynayan onlarca farklı faktör vardır ve**niyet** bu faktörlerin sadece 20-30% kısmını kapsıyor. 
-
 
 ***Niyet-Davranış Uçurumu[^5] için örnek:*** Her yılbaşı verilen sözleri düşün: "bu yıl hiç ekmek yemeyeceğim", "bu yıl her gün spor yapcam".
 Motivasyon**tam**. 
@@ -481,7 +472,6 @@ Seni eski alışkanlığa dair tetikleyen ne varsa hayatından temizlersin veya 
 
 Ayrıca kendini başarılı adımların için ödüllendirirsin. Mesela 3 gün içmezsem gidip kendime elit lüks ve premium diye tabir edilen bir kahve alcam. Ödül. 
 
-
 ***Yani*** Yazılımsal kaldıraçları çalıştırmaya başladıkça, kafandaki "terazi" yön değiştirmeya başlıyor. 
 Bi noktadan sonra terazi "artılar daha fazla" dediği an, özgüven/öz-yeterlilik ibren yukarı fırlar ve seni**eylem** aşamasına taşır. 
 
@@ -570,8 +560,6 @@ Buradan iki farklı aşamaya zıplayabilir:
 ## 7) İstikrar**Zihniyet:** "Bu olay artık hayatımın bir parçası kanka..."
 ***Olayı:*** Davranışın kalıcılaşması ve sürdürülmesi. 
 
-
-
 ```
 Geri düşüş (relapse) kuralı:
 
@@ -604,8 +592,6 @@ katılımcıların 71%'i zaten "yapacağım" kararını vermiş durumdaydı, 5. 
 Yani iki farklı müdahale, iki farklı gruba farklı şekilde işledi. Bu da PAPM'ın temel iddiasını destekliyor: insanların değişim sürecinin neresinde olduğunu bilmeden yapılan müdahale boşuna gidiyor...
 
 ```
-
-
 
 #
 
@@ -692,8 +678,6 @@ Kısırdöngü
 ↓
 Vahşi ve TAM bir geri düşüş
 
-
-
 **Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek**tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.**Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.**
 
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
@@ -702,16 +686,21 @@ Vahşi ve TAM bir geri düşüş
 
 #
 
-# Kaynaklar
-
-- Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T
-- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. *Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
-- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. *American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
-- Rosenstock, I. M. (1974). Historical origins of the health belief model. *Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
-- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. *Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x
+---
 
 [^1]: Sağlık İnanç Modeli (Health Belief Model): Bireylerin algılanan tehdit, duyarlılık ve kar-zarar dengesi üzerinden sağlık davranışlarına karar verdiğini öne süren bilişsel model.
 [^2]: Öz-Etkililik (Self-Efficacy): Albert Bandura tarafından tanımlanan, bireyin belirli bir davranışı veya görevi başarıyla yerine getirebileceğine yönelik öznel inanç kapasitesi.
 [^3]: Planlanmış Davranış Teorisi (Theory of Planned Behavior): Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.
 [^4]: HAPA Modeli (Health Action Process Approach): Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.
 [^5]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.
+
+
+---
+
+## Kaynakça
+
+- Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T
+- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. *Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
+- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. *American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
+- Rosenstock, I. M. (1974). Historical origins of the health belief model. *Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
+- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. *Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x

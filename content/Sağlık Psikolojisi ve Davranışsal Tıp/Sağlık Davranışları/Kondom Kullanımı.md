@@ -67,12 +67,17 @@ Etkili müdahaleler sadece risk bilgisi vermez; iletişim becerileri ve somut uy
 
 #
 
-# Kaynaklar
-
-- Albarracín, D., Gillette, J. C., Earl, A. N., Glasman, L. R., Durantini, M. R., & Ho, M. H. (2005). A test of major assumptions about behavior change: A comprehensive meta-analysis of effects of AIDS-prevention interventions on behavior, cognition, and influence. *Psychological Bulletin*, 131(6), 856–897. https://doi.org/10.1037/0033-2909.131.6.856
-- Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. *Advances in Experimental Social Psychology*, 38, 69–119. https://doi.org/10.1016/S0065-2601(06)38002-1
-- UNAIDS. (2021). *Global AIDS Strategy 2021-2026: End Inequalities, End AIDS*. UNAIDS. https://www.unaids.org/en/resources/documents/2021/2021-2026-global-AIDS-strategy
+---
 
 [^1]: CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar): Korunmasız cinsel temas yoluyla bulaşan patojenlerin neden olduğu viral veya bakteriyel enfeksiyonlar.
 [^2]: Sağlık İnanç Modeli: Risk algısı ve yarar-engel dengesi üzerinden sağlık kararlarını açıklayan model.
 [^3]: Uygulama Niyetleri (If-Then Plans): Karar anında dürtüsel davranışı engelleyen 'durum X olduğunda Y yapacağım' formatındaki somut ön anlaşmalar.
+
+
+---
+
+## Kaynakça
+
+- Albarracín, D., Gillette, J. C., Earl, A. N., Glasman, L. R., Durantini, M. R., & Ho, M. H. (2005). A test of major assumptions about behavior change: A comprehensive meta-analysis of effects of AIDS-prevention interventions on behavior, cognition, and influence. *Psychological Bulletin*, 131(6), 856–897. https://doi.org/10.1037/0033-2909.131.6.856
+- Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. *Advances in Experimental Social Psychology*, 38, 69–119. https://doi.org/10.1016/S0065-2601(06)38002-1
+- UNAIDS. (2021). *Global AIDS Strategy 2021-2026: End Inequalities, End AIDS*. UNAIDS. https://www.unaids.org/en/resources/documents/2021/2021-2026-global-AIDS-strategy

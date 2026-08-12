@@ -91,11 +91,16 @@ _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
 
 #
 
-# Kaynaklar
+---
+
+[^1]: UV Radyasyonu (Ultraviolet Radiation): Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.
+[^2]: Melanom (Malignant Melanoma): Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.
+
+
+---
+
+## Kaynakça
 
 - Armstrong, B. K., & Kricker, A. (2001). The epidemiology of UV induced skin cancer. *Journal of Photochemistry and Photobiology B: Biology*, 63(1–3), 8–18. https://doi.org/10.1016/S1011-1344(01)00198-1
 - Weinstein, N. D. (1980). Unrealistic optimism about future life events. *Journal of Personality and Social Psychology*, 39(5), 806–820. https://doi.org/10.1037/0022-3514.39.5.806
 - World Health Organization. (2022). *Ultraviolet radiation and health*. WHO. https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation
-
-[^1]: UV Radyasyonu (Ultraviolet Radiation): Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.
-[^2]: Melanom (Malignant Melanoma): Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.

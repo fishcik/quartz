@@ -77,7 +77,6 @@ Sebeplere bakıldığında sadece genetik ya da dışsal kaynaklar görülüyor:
 Hastalık psikolojiyi bozabilir, ama tersi mümkün değil der. 
 Sağlık ise hastalığın "olmayışı", bu kadar.*
 
-
 >***Biyopsikososyal model***
 
 **20. yüzyılda biyomedikal modelin yerini aldı. Hastalıkların biyolojik, psikolojik ve sosyal faktörlerin hepsinin etkileşiminden oluştuğunu savunuyor. 
@@ -126,7 +125,6 @@ Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyıl�
 >3) Sağlık sistemlerindeki maliyet patlaması. 
 >Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek** çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
 
-
 Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde**Division of Health Psychology** kurularak doğmuş oldu.
 
 Sağlık psikolojisinin diğer bir çok alanla cevaplamaya çalıştığı soru aynı: psikolojik süreçler sağlık ve hastalıkla nasıl kesişiyor? 
@@ -136,12 +134,17 @@ Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla
 
 #
 
-# Kaynaklar
-
-- Engel, G. L. (1980). The clinical application of the biopsychosocial model. *American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
-- Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology. *American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
-- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition. *Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660
+---
 
 [^1]: Biyomedikal Model (Biomedical Model): Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel tıp yaklaşımı.
 [^2]: Kronik Hastalık (Chronic Illness): Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).
 [^3]: Birincil Koruma (Primary Prevention): Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.
+
+
+---
+
+## Kaynakça
+
+- Engel, G. L. (1980). The clinical application of the biopsychosocial model. *American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
+- Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology. *American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
+- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition. *Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660

@@ -1,186 +1,179 @@
-# SİKİL — sayko.ch Obsidian Markdown Kuralları
-
-> **name:** sayko-obsidian-markdown  
-> **description:** sayko.ch vault'u için Obsidian Flavored Markdown formatlaması. Wikilink, callout, frontmatter, TOC, akademik kaynak formatı ve graph view uyumu için kullan.  
-> **DOKUNULMAZ:** yazının edebi tonu, noktalama tercihleri, cümle yapısı, anlatım biçimi, kelime seçimi.
-
----
+# SİKİL v2 — sayko.ch Obsidian Markdown Kuralları
 
 ## İçindekiler
-- [[#DOKUNULMAZ ALAN — Yazının Sesi]]
-- [[#Frontmatter]]
-- [[#TOC — İçindekiler]]
-- [[#Wikilinks]]
-- [[#Callouts]]
-- [[#Akademik Kaynak Formatı]]
-- [[#Highlight ve Vurgu]]
-- [[#Ayırıcılar]]
-- [[#Embeds]]
-- [[#Graph View Uyumu]]
+
+- [[#DOKUNULMAZ ALAN — Yazının Sesi ve Ruhu]]
+- [[#Frontmatter Standardı]]
+- [[#TOC — İçindekiler Yapısı]]
+- [[#Graph View ve Wikilink Ağı]]
+- [[#Görsel Estetik, Vurgular ve Callout Haritası]]
+- [[#Footnotes — Kavram Sözlüğü ve Derinlik]]
+- [[#Akademik Kaynakça — APA 7 Standardı]]
+- [[#Ayırıcılar ve Embeds]]
 - [[#Formatlama Workflow]]
+- [[#Geliştirme Takvimi ve Sınırlar]]
 
 ---
 
-## DOKUNULMAZ ALAN — Yazının Sesi
+## DOKUNULMAZ ALAN — Yazının Sesi ve Ruhu
 
-Formatlama yaparken aşağıdakilere hiç müdahale edilmez:
-* **Noktalama tercihleri:** `......`, `—`, virgülsüz akış, kesik cümleler — hepsi kasıtlıdır.
-* **Kelime seçimi ve sıralaması**
-* **İtalik / bold dengeleri** — yazar koymuşsa, orada durur.
-* **Cümle uzunluğu ve ritmi**
-* **Kişisel ses:** `"tabi"`, `"bi"`, `"yani:"`, sokak dili, akademik kayma — hepsi korunur.
-* **Paragraf sınırları** — yazar nerede bölmüşse orada kalır.
+Formatlama yapılırken metnin **özüne, üslubuna, edebi ritmine ve sesine kesinlikle müdahale edilmez:**
 
-> **Tek kural:** Eğer bir değişiklik içeriğe/metne dokunuyorsa, **yapılmaz**.
+- **Noktalama Özgürlüğü:** `......`, `—`, virgülsüz akış, kesik cümleler — hepsi kasıtlıdır; düzeltilmez.
+- **Kelime Seçimi ve Sıralaması:** Sokak dili, akademik kaymalar, "tabi", "bi", "yani:" gibi samimi ve otantik ifadeler aynen korunur.
+- **Cümle ve Paragraf Yapısı:** Yazar nerede nefes almış, nerede bölmüşse orada kalır. Cümleler birleştirilmez veya bölünmez.
+- **Mevcut Vurgular:** Yazarın koyduğu `==highlight==`, `*italik*` veya `**bold**` dengelerine dokunulmaz.
+- **Sadece Sentaks Temizliği:** Hatalı veya yapışık yazılan Markdown kodları düzeltilir (Örn: `ben**bugün**` yerine `ben **bugün**`). Kelimeler ve cümle yapısı değişmez.
+
+> [!danger] Altın Kural
+> Eğer bir değişiklik yazının içeriğine, tona, söz dizimine veya kelime seçimine dokunuyorsa **ASLA YAPILMAZ**. Sadece formatlama ve görsel düzenleme yapılır.
 
 ---
 
-## Frontmatter
+## Frontmatter Standardı
 
-Sadece üç alan. Fazlası yok:
+Vault veri düzenini ve filtrelemeyi temiz tutmak için sadece üç alan kullanılır:
 
 ```yaml
 ---
 title: Notun Başlığı
-date: 2026-01-15
+date: 2026-08-12
 tags:
   - ders-adı
   - konu-etiketi
 ---
 ```
 
-* `date` her zaman ISO 8601: `YYYY-MM-DD`
-* `tags` YAML list formatı — tek satırda değil, her etiket ayrı satırda `- etiket`
-* `aliases`, `cssclasses`, `status` gibi alanlar **eklenmez**.
+- `date`: Her zaman ISO 8601 formatında (`YYYY-MM-DD`). Yazının gerçek yazım tarihi kesinlikle korunur!
+- `tags`: YAML list formatında — tek satırda değil, her etiket ayrı satırda `- etiket` şeklinde.
+- `aliases`, `cssclasses`, `status` gibi ekstra kalabalık alanlar eklenmez.
 
 ---
 
-## TOC — İçindekiler
+## TOC — İçindekiler Yapısı
 
-Uzun notlarda (3+ başlık) notun en üstüne, frontmatter'dan hemen sonra eklenir. Obsidian'ın same-note heading link syntax'ıyla:
+Uzun notlarda (3 veya daha fazla başlık içeren) frontmatter'dan hemen sonra eklenir:
 
 ```markdown
 ## İçindekiler
 
-- [[#1. Birinci Başlık]]
-- [[#2. İkinci Başlık]]
-- [[#3. Üçüncü Başlık]]
+- [[#Birinci Başlık]]
+- [[#İkinci Başlık]]
+  - [[#Alt Başlık]]
+- [[#Üçüncü Başlık]]
 ```
 
-* **Max 7 Kuralı:** TOC **en fazla 7 başlık** içerebilir. Çok detaylı notlar 3–7 ana `##` bölüme ayrıştırılır; alt konular `###` seviyesinde yapılandırılır.
-* TOC başlığının kendisi `##` seviyesinde olur.
-* TOC içindeki linkler her zaman `[[#Başlık]]` formatında — dış link değil.
+- TOC başlığının kendisi `##` seviyesinde olur.
+- TOC içindeki linkler her zaman aynı not içi syntax olan `[[#Başlık]]` formatındadır.
 
 ---
 
-## Wikilinks
+## Graph View ve Wikilink Ağı
 
+`sayko.ch` vault'u yaşayan bir nöral ağdır. Graph View'ın tam kapasite çalışması, ilişkisel ağın beslenmesi ve kopuk düğüm oluşmaması için:
+
+### Wikilink Kullanımı
 ```markdown
-[[Not Adı]]                        Vault içi link
-[[Not Adı|Görünen Metin]]          Özel görünen metin
-[[Not Adı#Başlık]]                 Başlığa link
-[[Not Adı#^blok-id]]               Bloğa link
-[[#Aynı notta başlık]]             Aynı not içi link
+[[Not Adı]]                        Vault içi doğrudan link
+[[Not Adı|Görünen Metin]]          Özel görünen metin ile bağlamsal link
+[[Not Adı#Başlık]]                 Spesifik başlığa yönlendirme
+[[Not Adı#^blok-id]]               Spesifik bloğa yönlendirme
+[[#Aynı notta başlık]]             Aynı not içi başlık linki
 ```
 
-* **Kritik:** Wikilink hedefi vault'taki gerçek dosya adıyla birebir eşleşmeli. Tek karakter farkı = broken link = graph view'da kopuk düğüm.
-* Emin olunmayan linkleri değiştirme — Obsidian yorumunun içine al:
-  ```markdown
-  %%KONTROL: bu dosya vault'ta var mı?%%
-  [[Sağlık Modelleri; Bilmek Neden Yetmiyor?]]
-  ```
+### Kurallar
+1. **Birebir Eşleşme:** Wikilink hedefi vault'taki gerçek dosya adıyla harfi harfine eşleşmelidir. Tek karakter farkı graph view'da kopuk düğüm (broken link) yaratır.
+2. **Çifte Linkleme Stratejisi:** Hem kavramların ham halleri (`[[Bilişsel Dissonans]]`) hem de cümle akışındaki bağlamsal ifadeler (`[[Sağlık Modelleri|modellere yaklaşımımız]]`) wikilink ile beslenir.
+3. **Şüphe Durumu:** Vault'ta karşılığı olup olmadığından emin olunmayan linkler Obsidian yorumu içine alınır:
+
+```markdown
+%%KONTROL: bu dosya vault'ta var mı?%%
+[[Klinik Psikolojide Metotlar]]
+```
 
 ---
 
-## Callouts
+## Görsel Estetik, Vurgular ve Callout Haritası
 
-### Syntax
-```markdown
-> [!tip] Başlık
-> İçerik.
+Yazının "dümdüz bir blok metin" gibi görünmesini engellemek, okuma ritmini artırmak ve otantik `sayko.ch` ruhunu yansıtmak için Obsidian görsel ögeleri dengeli bir şekilde kullanılır.
 
-> [!note]
-> Başlıksız callout.
+### Callout Haritası
 
-> [!warning]- Varsayılan kapalı
-> Foldable callout (- = kapalı, + = açık).
-```
-
-### sayko.ch Callout Haritası
-| Tip | Ne zaman |
+| Callout Tipi | Ne Zaman Kullanılır? |
 | :--- | :--- |
-| `[!info]` | Bağlamsal açıklama — "yani şu demek", tanım genişletme |
-| `[!note]` | Yan gözlem — parantez gibi, akışı kesmeden |
-| `[!tip]` | Pratik çıkarım, uygulama önerisi — soyut gözlem için değil |
-| `[!example]` | Somut örnek, analoji, senaryo |
-| `[!warning]` | Gerçek uyarı — metodolojik tuzak, yaygın yanlış anlama |
-| `[!quote]` | Dışarıdan alıntı ya da özet yargı |
-| `[!abstract]` | Bölüm özeti, süperözet |
-| `[!question]` | Açık soru, tartışmaya davet |
-| `[!danger]` | Kritik hata riski, ciddi uyarı |
-| `[!success]` | Doğru yaklaşım, iyi uygulama örneği |
+| `[!info]` | Bağlamsal açıklama — "yani şu demek", tanım genişletme. |
+| `[!note]` | Yan gözlem — parantez içi parlamaları dışarı alma, akışı kesmeyen notlar. |
+| `[!tip]` | Pratik çıkarım, uygulama önerisi — soyut gözlem için değil. |
+| `[!example]` | Somut örnek, analoji, senaryo. |
+| `[!warning]` | Metodolojik tuzak, yaygın yanlış anlama, dikkat edilmesi gereken nokta. |
+| `[!quote]` | Dışarıdan alıntı ya da yazarın vurucu özet yargısı. |
+| `[!abstract]` | Bölüm özeti, süperözet. |
+| `[!question]` | Açık soru, okuyucuyu kışkırtan düşünce, tartışmaya davet. |
+| `[!danger]` | Kritik hata riski, ciddi uyarı. |
+| `[!success]` | Doğru yaklaşım, iyi uygulama örneği. |
 
-**İlkeler:**
-* Callout tipi içerikle semantik olarak eşleşmeli — rastgele seçilmez.
-* Başlık kısa ve işlevsel; soru işareti zorunlu değil.
-* Callout içindeki ses de yazarın sesi — ton değiştirilmez.
+### Callout İlkeleri
+- Callout tipi içerikle semantik olarak birebir eşleşmelidir.
+- Başlık kısa, öz ve işlevsel olmalıdır.
+- Callout içindeki dil de yazarın özgün sesidir; ton değiştirilmez.
 
----
-
-## Akademik Kaynak Formatı (APA 7)
-
-sayko.ch'de birincil tercih gövde içi APA 7 standartlarına uygun yazar-yıl atıfıdır:
-```markdown
-Sheeran ve ark. (1999) 121 çalışmayı inceleyen meta-analizinde...
-```
-* **Tek yazar:** `Freud (1923)...` veya `(Freud, 1923)`
-* **İki yazar:** `Baumann ve Perrez (2005)...` veya `(Baumann & Perrez, 2005)`
-* **Üç ve daha fazla yazar:** İlk atıftan itibaren doğrudan "ve ark." kullanılır: `Holmes ve ark. (2018)...` veya `(Holmes ve ark., 2018)`
-
-Dipnot tercih edilirse Obsidian footnote syntax'ı:
-```markdown
-...kondom kullanımıyla pozitif ilişkilidir.[^sheeran1999]
-
-[^sheeran1999]: Sheeran, P., Abraham, C., & Orbell, S. (1999). Psychosocial correlates of heterosexual condom use. *Psychological Bulletin*, 125(1), 90–132.
-```
-
-* **Kural:** Kaynaksız iddia eklenmez. Metinde olmayan bir bulgu eklenecekse açıkça işaretlenir:
-  ```markdown
-  %%EKLENTI — kaynak doğrulanmadı: ...%%
-  ```
+### Highlight ve Vurgu
+- `==vurgulanan metin==`: Yazarın doğrudan altını çizdiği kilit fikirler.
+- Var olan highlight ve bold/italik tercihlerine dokunulmaz, ekstra aşırı vurgu eklenerek metin çöplüğüne dönüştürülmez.
 
 ---
 
-## Sözlük Syntax'ı (Glossary)
+## Footnotes — Kavram Sözlüğü ve Derinlik
 
-Metin içinde geçen kritik terimler için satır içi tooltip ve `/sozluk` altyapısına bağlanan sözlük syntax'ı:
-```markdown
-[[term::Nozoloji|Hastalıkları sınıflandırma ve tanımlama bilimi]]
-```
-* `TermName` terimin adı, `Definition` ise kısa, net tanımıdır.
+Her yazının içinde geçen; genel okuyucunun veya psikolojiye/ilgili alana daha az aşina olanların tam bilemeyeceği, kafa karıştırma ihtimali olan kavramlar, tanılar, terimler ve jargonlar dipnot (footnote) olarak işaretlenir.
 
----
-
-## Highlight ve Vurgu
+### Kurallar
+- **Sayı Dengesi:** Yazının uzunluğuna, yoğunluğuna ve durumuna göre **en az 3, en fazla 7-8 civarı** kavram seçilir.
+- **Konum:** Metin içinde kavramın hemen ardına `[^kavram]` eklenir. Açıklamalar ise yazının sonunda, **Kaynakça bölümünden hemen önce** yer alır.
+- **İçerik:** Kuru bir ansiklopedi tanımı değil; kısa, net, `sayko.ch` diline uyumlu akademik/profesyonel açıklama.
 
 ```markdown
-==vurgulanan metin==
+Metin içerisinde geçen anhedoni[^anhedoni] durumu ve alexithymia[^alexithymia] tablosu...
+
+---
+
+[^anhedoni]: **Anhedoni**: Kişinin eskiden keyif aldığı aktivitelerden zevk alamama, haz duyusunun körelmesi durumu.
+[^alexithymia]: **Aleksitimi**: Kendi duygularını tanıma, tanımlama ve ifade etmede yaşanan güçlük; duygu körlüğü.
 ```
-* `==...==` yazara aittir — ekleme yapılmaz, silinmez. Formatlama sırasında mevcut highlight'lara dokunulmaz.
 
 ---
 
-## Ayırıcılar
+## Akademik Kaynakça — APA 7 Standardı
 
-* `---` tematik geçişler için. Fazla kullanım yazının nefesini keser.
-* Konu değişiyorsa → `---` uygun.
-* Sadece "bir şey bitti" hissi → gerekmez, boş satır yeter.
-* Arka arkaya iki `---` neredeyse hiçbir zaman doğru değildir.
+`sayko.ch`'nin bilimsel omurgası ve akademik doğruluğudur. Yazının dokunduğu, işaret ettiği, anlattığı, dayandığı veya tartıştığı tüm teorik/akademik altyapı metnin **en sonuna (Footnotes bölümünün de altına)** eklenir.
+
+### Kurallar
+- **Hard Limit Yok:** Min/max sınırı yoktur. Yazının ihtiyacı neyse (1 kaynak da olabilir, 15 kaynak da) tam doğrulukla eklenir.
+- **Tam Örtüşme:** Verilen kaynak ile metinde bağlanan kısım birebir akademik olarak örtüşmelidir. Bilimsellik ve doğruluk esastır.
+- **Format:** Bütün kaynaklar **APA 7** formatında yazılır.
+- **Metin İçi Atıf:** Metin içinde ihtiyaç duyulduğunda `Sheeran ve ark. (1999)` veya `(Beck, 1979)` şeklinde referans verilebilir.
+
+```markdown
+## Kaynakça
+
+* Beck, A. T. (1979). *Cognitive therapy of depression*. Guilford Press.
+* Sheeran, P., Abraham, C., & Orbell, S. (1999). Psychosocial correlates of heterosexual condom use. *Psychological Bulletin*, 125(1), 90–132.
+```
+
+> [!warning] Doğrulanmayan Kaynak
+> Metinde geçen fakat kaynağı henüz tam doğrulanmamış bulgular/iddialar için şu yorum eklenir:
+> `%%EKLENTI — kaynak doğrulanmadı: ...%%`
 
 ---
 
-## Embeds
+## Ayırıcılar ve Embeds
 
+### Ayırıcılar (`---`)
+- Tematik geçişlerde kullanılır.
+- Arka arkaya iki `---` kullanılmaz.
+- Sadece konu değiştiğinde veya büyük bölüm sonlarında (örneğin Footnotes ve Kaynakça öncesinde) eklenir.
+
+### Embeds
 ```markdown
 ![[Not Adı]]                       Tam not embed
 ![[Not Adı#Başlık]]                Bölüm embed
@@ -190,60 +183,18 @@ Metin içinde geçen kritik terimler için satır içi tooltip ve `/sozluk` alty
 
 ---
 
-## Graph View Uyumu
-
-Her sayko.ch notu vault'ta bir düğümdür. Graph view'ın çalışması için:
-1. Wikilink hedefleri gerçek vault dosyalarına işaret etmeli.
-2. `tags` dolu olmalı — graph filtreleme için.
-3. Broken link bırakılmaz — şüpheli linkler `%%KONTROL%%` ile işaretlenir.
-
----
-
 ## Formatlama Workflow
 
-1. **Frontmatter** — sadece `title`, `date`, `tags` var mı?
-2. **TOC** — 3+ başlık varsa ekle (`## İçindekiler` + `[[#Başlık]]`).
-3. **Wikilink'ler** — yazım hatası var mı, vault'ta karşılığı var mı?
-4. **Callout tipleri** — semantik uyum var mı? (10 onaylı tip)
-5. **`---` fazlalığı** — gereksiz olanları kaldır.
-6. **DUR.** İçeriğe, tona, noktalamaya dokunma.
+Bir yazı düzenlenirken adım adım şu rehber izlenir:
 
----
-
-## Mermaid Diyagramları ve Tasarım Kimliği (CD/CI)
-
-SAYKO.ch diyagramları sade (2D), estetik ve doğrudan bilimsel içeriği aktaran bir "SAYKO İmzası" taşır.
-
-### 1. Renk ve Biçim Standartları
-* **Ana Odak (Cardinal Red):** `#C8102E` — Kritik başlangıçlar, kriz düğümleri, tetikleyiciler veya ana kavramlar (`:::accent` / `:::cardinal`).
-* **İkincil Odak (Sepia):** Açık modda sıcak sepya (`#704214`), koyu modda amber/bronz sepya (`#c79a6d`) — Kuramsal süreçler, mekanizmalar ve karar düğümleri (`:::sepia` / `:::highlight`).
-* **Üçüncü Renk (Tema Uyumu):** Açık modda koyu antrasit/siyah (`#1a1712`), koyu modda krem beyaz/parşömen (`#f4efe6`) — Standart düğümler ve metinler.
-* **Yılan Akışı Oklar (Serpent Flow):** Oklar keskin/köşeli robotik 90° çizgiler yerine, yılan gibi organik kıvrılan `curve: 'basis'` veya `curve: 'natural'` parametresiyle çizilmelidir.
-
-### 2. Zorunlu Bilimsellik ve Metadata Kuralı
-* **%100 Kanıt Temelli:** Hiçbir şema uydurma olamaz. Şemalar yalnızca literatürde kabul görmüş, ders kitaplarında yer alan ampirik kuram ve modelleri betimler.
-* **Akademik Metadata Çerçevesi:** Her diyagram bir `[!abstract]` kutusu içinde, kuramın adı, teorisyeni, yılı ve kısa açıklamasıyla birlikte sunulmalıdır.
-
-### 3. Standart SAYKO Şablonu
-
-```markdown
-> [!abstract] 📜 Model / Kuram Adı (Yazar & Yıl)
-> *Kaynak: Yazar, A. (Yıl). Makale/Kitap Başlığı. Yayınevi/Dergi.*
->
-> ```mermaid
-> %%{init: {'theme': 'base', 'flowchart': {'curve': 'basis'}}}%%
-> graph TD
->   %% SAYKO CD/CI Sınıf Tanımları %%
->   classDef default fill:none,stroke:var(--lightgray),stroke-width:1.5px,color:var(--darkgray),font-family:Source Serif 4, Georgia, serif;
->   classDef accent fill:none,stroke:#C8102E,stroke-width:2px,color:#C8102E,font-weight:bold,font-family:Source Serif 4, Georgia, serif;
->   classDef sepia fill:none,stroke:var(--secondary),stroke-width:1.8px,color:var(--secondary),font-family:Source Serif 4, Georgia, serif;
->
->   A[Tetikleyici / Başlangıç]:::accent --> B[Bilişsel / Davranışsal Süreç]:::sepia
->   B --> C[Sonuç / Durum]
-> ```
->
-> **Açıklama:** *Modelin neyi betimlediğine dair 1-2 cümlelik net özet.*
-```
+1. **Frontmatter Check:** `title`, `date` (ISO 8601 - orijinal tarih kesinlikle korunur) ve `tags` alanları doğru formatta mı?
+2. **TOC Ekleme:** 3 veya daha fazla başlık varsa frontmatter altına TOC ekle.
+3. **MD Sentaks Temizliği:** Hatalı bitişik bold/italik/boşluk kodlarını düzelt. Kelimelere, noktalara, tona KESİNLİKLE DOKUNMA.
+4. **Graph View & Wikilinks:** Metindeki terimleri ve ilişkili kavramları `[[Not Adı]]` veya `[[Not Adı|Metin]]` şeklinde bağla. Emin olmadıklarını `%%KONTROL%%` içine al.
+5. **Görsel Estetik & Callout:** Blok görünümü kırmak için uygun yerlere `[!note]`, `[!quote]`, `[!tip]` vb. ekle.
+6. **Footnotes (Kavram Sözlüğü):** Metinden 3-8 kritik terim tespit et; metin içinde `[^kavram]` ekle, açıklamalarını yazının sonuna koy.
+7. **Kaynakça (APA 7):** Yazının dayandığı akademik kaynakları tam APA 7 formatında en alt bölüme `## Kaynakça` olarak yerleştir.
+8. **Son Kontrol:** Yazının edebi sesi, üslubu veya özgün kelimeleri değişti mi? Cevap HAYIR ise işlem tamamlanmıştır!
 
 ---
 

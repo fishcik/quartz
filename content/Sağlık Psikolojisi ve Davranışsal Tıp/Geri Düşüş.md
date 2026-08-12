@@ -71,8 +71,6 @@ Bu iki *atıf*[^3]da tam olarak bir geri düşüş olasılığını artırıyor.
 - ↓
 - Vahşi ve TAM bir geri düşüş
 
-
-
 **Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek**tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.**Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.**
 
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
@@ -135,12 +133,17 @@ Yeni**dinamik modelde** her şey birbiriyle anlık etkileşimde:
 
 #
 
-# Kaynaklar
-
-- Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). *Relapse prevention: Maintenance strategies in the treatment of addictive behaviors*. Guilford Press. https://psycnet.apa.org/record/1985-97621-000
-- Weiner, B. (1985). An attributional theory of achievement motivation and emotion. *Psychological Review*, 92(4), 548–573. https://doi.org/10.1037/0033-295X.92.4.548
-- Witkiewitz, K., & Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. *American Psychologist*, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224
+---
 
 [^1]: Relaps / Geri Düşüş (Relapse): Bireyin değiştirdiği eski istenmeyen alışkanlığa (ör. sigara, madde kullanımı) tam ölçekli ve kalıcı olarak geri dönmesi.
 [^2]: Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE): Marlatt tarafından tanımlanan; tek bir kaçamak sonrası bireyin suçluluk, yetersizlik ve 'battı balık yan gider' bilişiyle kontrolü tamamen kaybetmesi.
 [^3]: İçsel Atıf (Internal Attribution): Başarısızlığı durumsal faktörler yerine kendi karakterine, iradesizliğine veya yetersizliğine bağlama eğilimi.
+
+
+---
+
+## Kaynakça
+
+- Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). *Relapse prevention: Maintenance strategies in the treatment of addictive behaviors*. Guilford Press. https://psycnet.apa.org/record/1985-97621-000
+- Weiner, B. (1985). An attributional theory of achievement motivation and emotion. *Psychological Review*, 92(4), 548–573. https://doi.org/10.1037/0033-295X.92.4.548
+- Witkiewitz, K., & Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. *American Psychologist*, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224

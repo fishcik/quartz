@@ -17,7 +17,6 @@ tags:
 
 ---
 
-
 >Gelişim nedir? 
 >Nasıl oluşur? 
 >Her değişim gelişim midir?
@@ -421,10 +420,8 @@ Gen davranışı tetikledi > davranış çevreyi
 
 Yani gen direkt çevreyi değiştirmiyor. Davranış üzerinden dolaylı etkiliyor. 
 
-
 >***Aktif Kovaryasyon***>*** Artık sen seçiyorsun**Büyüdükçe kendi çevremizi kendimizin inşa etmesi. Müzik konservatuvarına başvurmak, o grubu kurmak, o insanları bulmak. 
 Gen artık seni*yönlendiriyor*. Sen de çevreyi* ona göre* şekillendiriyorsun. 
-
 
 >**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. 
 
@@ -448,7 +445,6 @@ Bu farkı anlamak için şu metafor işimize yarayabilir:
 Zaten evrimsel mantığa göre her ikisi de bir strateji. 
 Karahindiba olmak kötü çevrelerde **hayatta kalmayı garantiliyor.** Orkide olmak iyi çevrelerde* maksimum potansiyeli açıyor. 
 İkisi de farklı ortamlarda işe yarıyor. 
-
 
 Peki bu soyut bir metafor mu? Değil. 
 
@@ -479,7 +475,6 @@ Büyüdükçe kendi çevreni*kendin* inşa etmeye başlıyorsun. Hangi okul, han
 Bunlar genin seni yönlendirdiği seçimler. 
 Aktif kovaryasyon devreye giriyor. 
 *Ve gen giderek daha fazla "kendine uygun" çevreyi seçtiriyor sana.* Yani gen etkisi artmıyor aslında. Gen artık kendi çevresini de yaratıyor, bu yüzden ölçümde daha*güçlü* görünüyor. 
-
 
 >Metodolojik uyarı: bebeklerdeki ölçümler ebeveyn değerlendirmesine dayanıyor. Çocuğun duygusal, öfkeli, dikkatsiz olup olmadığını anne baba cevaplıyor.
 >Gençlerde ise kişinin kendi değerlendirmesi kullanılıyor. 
@@ -643,21 +638,25 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 >4) Uygulama
 >Bilimsel bulgular artık doğrudan politikaya, eğitime, kliniğe giriyor. Alan sadece anlamakla kalmayıp değiştiriyor da. 
 
-
 ***Gelişim psikolojisi bilim olarak 135 yıllık ama insan anlamaya çalıştığından beri bu sorular hep vardı zaten.***
 
 ---
 
 #
 
-# Kaynaklar
-
-- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
-- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
-- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. *Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
-- Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000
+---
 
 [^1]: Ontojenez (Ontogeny): Bireysel bir organizmanın döllenmeden ölüme kadar geçen yaşam süresince geçirdiği yapısal, biyolojik ve psikolojik gelişimsel süreç.
 [^2]: Plastisite (Plasticity): Beynin ve bilişsel sistemlerin deneyim, öğrenme ve çevresel uyaranlara bağlı olarak yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.
 [^3]: Epigenetik (Epigenetics): DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.
 [^4]: Hassas Dönem (Sensitive Period): Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.
+
+
+---
+
+## Kaynakça
+
+- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
+- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
+- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. *Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
+- Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000
