@@ -2078,48 +2078,66 @@ html[saved-theme="dark"] .sc-date-text { fill: #b9a98f; }
 html[saved-theme="dark"] .sc-day-strip span { color: #6a635a; }
 html[saved-theme="dark"] .sc-day-strip span.today { color: #fff; }
 
-// SBB kutusu içindeki toolbar tuşları: küçük, SBB renklerine uyumlu
+// SBB kutusu içindeki toolbar tuşları: eşit boyut, SBB renklerine uyumlu
 .sc-toolbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   border: none;
   background: none;
-  color: rgba(43, 40, 38, 0.55);
+  color: rgba(43, 40, 38, 0.60);
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: color 150ms ease, background 150ms ease;
   flex-shrink: 0;
 
-  & svg { display: block; }
-
-  &:hover {
-    color: #2b2826;
-    background: rgba(0,0,0,0.07);
+  & svg {
+    width: 17px;
+    height: 17px;
+    display: block;
   }
 
-  &.sc-active { color: var(--accent) !important; }
+  .sc-sbb-glyph {
+    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
+    font-size: 1.25rem;
+    line-height: 1;
+    display: inline-block;
+    color: inherit;
+    transition: color 150ms ease;
+  }
+
+  &:hover {
+    color: var(--accent, #C8102E) !important;
+    background: rgba(200, 16, 46, 0.08);
+
+    .sc-sbb-glyph {
+      color: var(--accent, #C8102E) !important;
+    }
+  }
+
+  &.sc-active {
+    color: var(--accent, #C8102E) !important;
+
+    .sc-sbb-glyph {
+      color: var(--accent, #C8102E) !important;
+    }
+  }
 }
 
 html[saved-theme="dark"] .sc-toolbtn,
 [saved-theme="dark"] .sc-toolbtn {
-  color: rgba(236, 231, 221, 0.6);
-  &:hover { background: rgba(255,255,255,0.1); color: #ece7dd; }
+  color: rgba(236, 231, 221, 0.65);
+  &:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--accent, #C8102E) !important;
+  }
 }
 
 // Tema tuşu: aktif modda kırmızı vurgulu
 #sc-sbb .sc-themebtn { color: var(--accent) !important; }
-
-.sc-sbb-glyph {
-  font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
-  font-size: 1.15rem;
-  line-height: 1;
-  display: inline-block;
-  color: var(--accent, #C8102E) !important;
-}
 
 // Quartz darkmode buton — sidebarlarda gizli (SBB kutusu devraldı)
 .sidebar.right .darkmode { display: none !important; }
@@ -2531,24 +2549,16 @@ body[data-slug$="/index"] {
     inset: 0 !important;
     isolation: isolate;
     display: flex !important;
-    flex-direction: column !important;     // hiyeroglif ÜSTTE, başlık ALTTA
+    flex-direction: column !important;     // Tepe: Numara, Orta: Hiyeroglif, Alt: Başlık
     align-items: center !important;
     justify-content: center !important;
-    gap: 2px;
-    padding: 0 9px !important;
+    gap: 0 !important;
+    padding: 22px 10px 8px 10px !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background: var(--accent);            // ── cardinal kırmızı outline (her iki mod) ──
+    background: var(--accent);            // cardinal kırmızı outline
     color: #3a3026 !important;
     border: none !important;
     border-bottom: none !important;
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 0.66rem;                   // JS auto-fit yoksa makul varsayılan
-    font-weight: 600;
-    font-style: normal !important;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    text-align: center !important;
-    line-height: 1.18;
     overflow: hidden;
     transform-origin: center center;
     will-change: transform;
@@ -2563,44 +2573,55 @@ body[data-slug$="/index"] {
     z-index: -1;
     transition: background 180ms ease;
   }
+  // Ders/Konu Numarası: Hexagonun TAM TEPE AÇISINDA
+  .page-listing .section-li .desc h3 a .sc-hx-num {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue', 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent, #C8102E);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 3;
+  }
+  // Hiyeroglif İkonu: Hexagonun TAM ORTASINDA, BÜYÜTÜLMÜŞ
+  .page-listing .section-li .desc h3 a .sc-hx-glyph {
+    position: static !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
+    font-size: 2.2rem !important;
+    line-height: 1 !important;
+    margin: 2px 0 3px 0 !important;
+    color: rgba(58, 48, 38, 0.52);
+    pointer-events: none;
+    transition: color 180ms ease, transform 180ms ease;
+  }
+  // Konu Başlığı: Glifin ALTINDA, TEK SEFER
   .page-listing .section-li .desc h3 a .sc-hx-label {
     display: block;
     max-width: 100%;
     overflow: hidden;
     color: inherit;
-  }
-  // Mısır hiyeroglifi: altıgenin TEPE noktasına yakın, ortalı, daha belirgin ve estetik
-  .page-listing .section-li .desc h3 a .sc-hx-glyph {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', 'Source Serif 4', serif;
-    font-size: 1.7rem;
-    line-height: 1;
-    letter-spacing: 0.02em;
-    color: rgba(58, 48, 38, 0.48);
-    transition: color 180ms ease;
-    pointer-events: none;
-  }
-  // Konu numarası: sağ üst açıda, kare grid ile uyumlu
-  .page-listing .section-li .desc h3 a .sc-hx-num {
-    position: absolute;
-    top: 14%;
-    right: 18%;
-    font-family: 'Bebas Neue', 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.64rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    color: var(--accent, #C8102E);
-    pointer-events: none;
-    z-index: 2;
+    font-style: normal !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center !important;
+    line-height: 1.15;
   }
-  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.85); }
+  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.95); transform: scale(1.1); }
   .page-listing .section-li .desc h3 a:hover .sc-hx-num { color: #ffffff !important; }
   // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
   .page-listing .section-li:hover { z-index: 10; }
-  // Hover: yalnız renk değişimi + içeri-vuran gölge (shadow-inset-center). Tilt yok.
   .page-listing .section-li .desc h3 a:hover {
     color: #fff !important;
     animation: shadow-inset-center .4s cubic-bezier(.25,.46,.45,.94) both;
@@ -2614,7 +2635,7 @@ body[data-slug$="/index"] {
 
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a {
-  background: var(--accent);            // outline yine cardinal
+  background: var(--accent);
   color: #d8cdb8 !important;
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a::before,
@@ -2631,11 +2652,11 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph {
-  color: rgba(216, 205, 184, 0.45);
+  color: rgba(216, 205, 184, 0.48);
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph {
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.95);
 }
 
 // ─── SBB breadcrumb katmanları + chevron (bottom-right) ───

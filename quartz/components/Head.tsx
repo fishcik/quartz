@@ -526,6 +526,14 @@ function updateBcLayers(){
           }
         });
       }
+function scGetElByHref(href){
+  if(!href) return null;
+  var rawId = href.replace(/^#/, '');
+  var decodedId = '';
+  try { decodedId = decodeURIComponent(rawId); } catch(e){ decodedId = rawId; }
+  return document.getElementById(decodedId) || document.getElementById(rawId);
+}
+
       if(tocItems.length>0){
         var tocWrap=document.createElement('div');tocWrap.className='sc-bclayer-toc';
         var tocElements=[];
@@ -536,7 +544,7 @@ function updateBcLayers(){
           ta.textContent=item.text;
           ta.addEventListener('click',function(e){
             e.preventDefault();
-            var targetEl=document.querySelector(item.href)||document.getElementById(item.href.slice(1));
+            var targetEl=scGetElByHref(item.href);
             if(targetEl){
               targetEl.scrollIntoView({behavior:'smooth',block:'start'});
               history.pushState(null,'',item.href);
@@ -549,20 +557,18 @@ function updateBcLayers(){
         bl.appendChild(tocWrap);
 
         // Scroll spy for active TOC highlight
-        var spyHeadings=[];
-        tocElements.forEach(function(te){
-          var tNode=document.querySelector(te.href)||document.getElementById(te.href.slice(1));
-          if(tNode) spyHeadings.push({node:tNode,a:te.a});
-        });
         function highlightToc(){
-          var activeA=null;
-          for(var si=0;si<spyHeadings.length;si++){
-            var r=spyHeadings[si].node.getBoundingClientRect();
-            if(r.top<=180){activeA=spyHeadings[si].a;}
+          var activeHref=null;
+          for(var si=0;si<tocElements.length;si++){
+            var el=scGetElByHref(tocElements[si].href);
+            if(el){
+              var r=el.getBoundingClientRect();
+              if(r.top<=240){ activeHref=tocElements[si].href; }
+            }
           }
-          if(!activeA&&spyHeadings.length)activeA=spyHeadings[0].a;
+          if(!activeHref&&tocElements.length) activeHref=tocElements[0].href;
           tocElements.forEach(function(te){
-            if(te.a===activeA){te.a.classList.add('sc-active');}
+            if(te.href===activeHref){te.a.classList.add('sc-active');}
             else{te.a.classList.remove('sc-active');}
           });
         }
@@ -796,48 +802,36 @@ function scFitHex(){
     var cleanTitle=a.getAttribute('data-raw-title')||rawText;
     var gl=scGlyphFor(cleanTitle);
 
-    var lbl=a.querySelector('.sc-hx-label');
-    var glyphEl=a.querySelector('.sc-hx-glyph');
-    var numEl=a.querySelector('.sc-hx-num');
+    // Tekrar eden isimleri engellemek için a içeriğini tamamen sıfırla
+    a.innerHTML='';
 
-    if(!numEl){
-      numEl=document.createElement('span');
-      numEl.className='sc-hx-num';
-      numEl.setAttribute('aria-hidden','true');
-      numEl.textContent=String(idx+1);
-      a.appendChild(numEl);
-    }else{
-      numEl.textContent=String(idx+1);
+    // 1. Ders Numarası (tam tepe açısı)
+    var numEl=document.createElement('span');
+    numEl.className='sc-hx-num';
+    numEl.setAttribute('aria-hidden','true');
+    numEl.textContent=String(idx+1);
+    a.appendChild(numEl);
+
+    // 2. Hiyeroglif İkonu (tam ortada, büyük)
+    if(gl){
+      var glyphEl=document.createElement('span');
+      glyphEl.className='sc-hx-glyph';
+      glyphEl.setAttribute('aria-hidden','true');
+      glyphEl.textContent=gl;
+      a.appendChild(glyphEl);
     }
 
-    if(!lbl){
-      lbl=document.createElement('span');
-      lbl.className='sc-hx-label';
-      lbl.textContent=cleanTitle;
-      if(gl){
-        glyphEl=document.createElement('span');
-        glyphEl.className='sc-hx-glyph';
-        glyphEl.setAttribute('aria-hidden','true');
-        glyphEl.textContent=gl;
-        a.appendChild(glyphEl);
-      }
-      a.appendChild(lbl);
-    }else{
-      if(gl&&!glyphEl){
-        glyphEl=document.createElement('span');
-        glyphEl.className='sc-hx-glyph';
-        glyphEl.setAttribute('aria-hidden','true');
-        glyphEl.textContent=gl;
-        a.insertBefore(glyphEl,lbl);
-      }
-    }
+    // 3. Konu Başlığı (glifin altında tek sefer)
+    var lbl=document.createElement('span');
+    lbl.className='sc-hx-label';
+    lbl.textContent=cleanTitle;
+    a.appendChild(lbl);
 
     var li=a.closest('.section-li');if(!li)return;
     var H=li.clientHeight||152,W=li.clientWidth||132;
-    var hasG=!!a.querySelector('.sc-hx-glyph');
-    var maxH=H*(hasG?0.44:0.54),maxW=W-18;
+    var maxH=H*0.38,maxW=W-18;
     var len=cleanTitle.length;
-    var fs=(len>35)?7.5:(len>25)?8.5:(len>15)?10:11.5;
+    var fs=(len>35)?7.5:(len>25)?8.5:(len>15)?9.5:11;
     lbl.style.lineHeight='1.16';lbl.style.fontSize=fs+'px';
     if((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>7){
       lbl.style.fontSize=(fs-1.5)+'px';
