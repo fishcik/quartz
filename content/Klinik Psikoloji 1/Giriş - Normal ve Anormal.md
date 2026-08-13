@@ -26,7 +26,7 @@ Mesela:
 * **Bilişsel psikoloji:** Zihnin ham bilgiyi nasıl işlediğini...
 * **Gelişim psikolojisi:** Zaman içindeki değişimi... inceler.
 
-[[Klinik Psikoloji]] ise bu dallardan biri ama farkı şu: Sadece *"insan nasıl davranır"* diye merak etmiyor,*"bu davranış bozulduğunda ne yapılır?"* sorusuna da cevap arıyor. Diğerleri betimlerken, klinik müdahale etme amacı taşır. Yani **teori + müdahale**.
+[[Klinik Psikoloji]] ise bu dallardan biri ama farkı şu: Sadece *"insan nasıl davranır"*diye merak etmiyor,*"bu davranış bozulduğunda ne yapılır?"* sorusuna da cevap arıyor. Diğerleri betimlerken, klinik müdahale etme amacı taşır. Yani **teori + müdahale**.
 
 Yeni paradigmaların ve yöntemlerin sonucunda, klinik psikoloji son 100 yılda ciddi gelişmeler ve farklılaşmalar yaşadı.
 
@@ -46,9 +46,7 @@ Yani:
 1. Her klinik psikolog psikoterapist değil.
 2. Her psikoterapist de klinik psikolog değil.
 
-Yani özetle: **Psikoterapi, klinik psikolojinin elinde tuttuğu bir alet. Alet eli kapsamıyor.**
-
-Peki bu aletin tanımı ne? Baumann’la Perrez (2005) kafayı buna yormuş. Ortaya bir çerçeve atmışlar:
+Yani özetle:** Psikoterapi, klinik psikolojinin elinde tuttuğu bir alet. Alet eli kapsamıyor.** Peki bu aletin tanımı ne? Baumann’la Perrez (2005) kafayı buna yormuş. Ortaya bir çerçeve atmışlar:
 1. Neden oluyor ([[Etiyoloji|etiyoloji]][^1])
 2. Nasıl sınıflandırılıyor (tanı)
 3. Nasıl durduruluyor (önleme, terapi, rehabilitasyon)
@@ -62,7 +60,7 @@ Ve klinik psikoloji yalnız değil! Psikiyatriyle, sosyolojiyle, genetikle, psik
 
 Strotzka 1969’da psikoterapiyi bütün ekolleri kapsayan tek bir tanımla çerçevelemeye kalkmış. Öyle sağlam bi tanım olmuş ki bu, 1991’de Almanya’nın federal hükümeti için hazırlanan bir araştırma raporunun temeli olmuş, o da 1998’de yürürlüğe giren Psikoterapistler Yasası’nın temelini oluşturmuş. Bir tanım 29 yıl sonra yasalaşmış yani.
 
-Ve bu tanım başından beri tek bi şeyi bağırıyor: **Psikoterapi ile klinik psikoloji aynı şey değil!** Büyük resmin küçük ama can alıcı bir parçası. Bütünün kendisi değil.
+Ve bu tanım başından beri tek bi şeyi bağırıyor:**Psikoterapi ile klinik psikoloji aynı şey değil!** Büyük resmin küçük ama can alıcı bir parçası. Bütünün kendisi değil.
 
 2020 Eylül’ünden beri aynı tartışma yeniden alevlenmiş durumda. Bu sefer de eğitim müfredatı üzerinden: Yeni müfredat, klinik ve psikoterapi derslerini körüklerken, temel bilim derslerini (yöntem, istatistik, metodoloji) kenara mı itiyor?
 
@@ -78,7 +76,7 @@ Tamam. Tanımların bir kısmını masaya koyduk. Şimdi bu bilimin gerçekte na
 
 Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönler ile bozukluğa-özgü yönler birbirinden ayrılıyor. Bu mantıkta, bozukluklara **özgü** düzeyde, işlevler ve işlev örüntüleri ele alınıyor. Ve bu hep çift taraflı bir mercek:**içsel (intra) ve kişilerarası (inter) perspektif.**
 
-**Bozulmuş işlevler** dediğimizde, genel psikolojiden, biyopsikolojiden ve nöropsikolojiden aşina olduğumuz temel süreçlere gönderme yaparız: algı, öğrenme, düşünme… Bunlar bozulduğunda devreye klinik psikoloji giriyor.
+**Bozulmuş işlevler **dediğimizde, genel psikolojiden, biyopsikolojiden ve nöropsikolojiden aşina olduğumuz temel süreçlere gönderme yaparız: algı, öğrenme, düşünme… Bunlar bozulduğunda devreye klinik psikoloji giriyor.
 
 "Bozulmuş işlev örüntüleri"ne dar anlamda "ruhsal bozukluk" diyoruz. Burda klinik psikoloji yalnız çalışmıyor. Tanı sınıflandırma sistemlerine yaslanıyor. Bunlar tıbbın, psikiyatrinin ve diğer sağlık mesleklerinin de paylaştığı sistemler.
 
@@ -89,7 +87,7 @@ Mesela, ICD-10’un V (F) bölümünde kodlanmış tanı kurallarının zayıf y
 
 İşin aslı: Klinik psikoloji ve psikoterapide, aynı psikiyatride olduğu gibi, gözümüz asıl DSM-5’te. ICD-10 ile uyumludur evet, ama her bir bozukluk kategorisi için kuralları çok daha spesifik, çok daha ayrıntılı bi şekilde tanımlar. Ayrıca tıp dışı bilimler için de daha güvenilir uygulanabiliyor.
 
-Aslında klinik psikoloji neredeyse hayatın her kırılma noktasına dokunuyor; DSM ve ICD’nin ruhsal bozukluk tanımlarıyla sınırlı kalmıyor. Çünkü, sadece "hastalık" denen o dar kategoriyle yetinmez; insanın ve kurumların başına gelebilecek **tüm** bozulmuş işlev, davranış ve gelişim örüntülerini kendine mesele edinir.
+Aslında klinik psikoloji neredeyse hayatın her kırılma noktasına dokunuyor; DSM ve ICD’nin ruhsal bozukluk tanımlarıyla sınırlı kalmıyor. Çünkü, sadece "hastalık" denen o dar kategoriyle yetinmez; insanın ve kurumların başına gelebilecek** tüm** bozulmuş işlev, davranış ve gelişim örüntülerini kendine mesele edinir.
 
 Yani: İş yerinde çöken sistemler, aile içinde kilitlenen ilişkiler, örgütsel yapılardaki aksaklıklar; hepsi klinik psikolojinin ilgi alanına dahildir.
 
@@ -108,32 +106,32 @@ Bu geniş ilgi alanı, kaçınılmaz olarak psikolojinin diğer alt dallarıyla 
 * **Davranışsal tıp:** Psikolojik faktörlerin kalp hastalıkları gibi bedensel rahatsızlıklarla nasıl iç içe geçtiği.
 * **Ortopedi:** Kronik kas/kemik ağrılarının döngüsünü kırmak.
 
-Mesela sigarayı ele alalım. Aynı "sigara" örneği hem sağlık psikolojisinde, hem de davranışsal tıpta çıkıyor. Çünkü aynı durum iki farklı disiplinin perspektifinden inceleniyor: biri toplum sağlığı açısından, biri kalp hastalığı riski açısından. **Klinik psikoloji** ikisinin tam kesiştiği yerde, ortasında duruyor.
+Mesela sigarayı ele alalım. Aynı "sigara" örneği hem sağlık psikolojisinde, hem de davranışsal tıpta çıkıyor. Çünkü aynı durum iki farklı disiplinin perspektifinden inceleniyor: biri toplum sağlığı açısından, biri kalp hastalığı riski açısından.** Klinik psikoloji **ikisinin tam kesiştiği yerde, ortasında duruyor.
 
-Peki bu kesişimler tesadüf mü? **Hayır.** Burda klinik psikolojinin en temel özelliklerinden birine geliyoruz:**Disiplinlerarası bir temel yönelim taşıması.** Bu klinik psikolojinin en belirleyici özelliği belki de.
+Peki bu kesişimler tesadüf mü?** Hayır.**Burda klinik psikolojinin en temel özelliklerinden birine geliyoruz:** Disiplinlerarası bir temel yönelim taşıması.**Bu klinik psikolojinin en belirleyici özelliği belki de.
 
 Hem bu kadar konu varken hem de alan bu kadar katmanlıyken, diğer disiplinlerle sıkı fıkı olmaması garip olurdu zaten. Amaç bozulmuş ruhsal işlevleri ve bozukluk örüntülerini daha iyi ve derinlemesine anlamaktır. Bu yüzden, başka alanların modellerinden, paradigmalarından, yöntemlerinden ve tekniklerinden beslenir. Bu da nihayetinde daha isabetli teşhislere ve daha etkili müdahale yollarına ulaştırmaktadır.
 
 Bu yakın temas, uzmanlaşmanın da temelini oluşturuyor. Belli yöntemlerle ya da belli hasta gruplarına optimize olmuş çalışma alanları doğuyor böylece.
 
-Ancak bu yakın temasın bir bedeli de var… **İsim kalabalığı.** Terminolojik çeşitlilik neredeyse kaosa dönüşüyor. Alanların sınırları birbirine o kadar karışır ki, artık net ayrımlar yapmak neredeyse imkansız hale geliyor. Psikoloji içinde bile: Davranışsal tıp, sağlık psikolojisi, klinik psikoloji, tıbbi psikoloji.. Hepsi hem kulağa aynı şey gibi geliyor, hem değil gibi.
+Ancak bu yakın temasın bir bedeli de var…** İsim kalabalığı.**Terminolojik çeşitlilik neredeyse kaosa dönüşüyor. Alanların sınırları birbirine o kadar karışır ki, artık net ayrımlar yapmak neredeyse imkansız hale geliyor. Psikoloji içinde bile: Davranışsal tıp, sağlık psikolojisi, klinik psikoloji, tıbbi psikoloji.. Hepsi hem kulağa aynı şey gibi geliyor, hem değil gibi.
 
 ### Klinik Psikolojinin Komşuları
 
 | Alan | Ne iş yapar |
 | :--- | :--- |
-| **Davranışsal tıp** | Davranış bilimini biyotıpla birleştiren alan. |
-| **Sağlık psikolojisi** | Sağlığı korumak, hastalığı önlemek, riski azaltmak. |
-| **Klinik nöropsikoloji** | Beyin hasarının deneyim ve davranışa etkisi. |
-| **Psikanaliz** | Freud’un kavramlarına dayanan psikoterapi ekolü. |
-| **[[Psikopatoloji]]**[^3] | Anormal deneyim, hal ve davranışı tanımlama öğretisi. |
-| **Biyolojik psikiyatri** | Bozuklukları nörobiyolojik yöntemlerle araştırma ve tedavi. |
-| **Psikofarmakoloji** | İlaçların ruhsal süreçler üzerindeki etkisi. |
-| **Sosyal psikiyatri** | Hastalığın epidemiyolojik ve sosyolojik boyutları. |
-| **Adli psikiyatri** | Ruh hastalarını ilgilendiren tüm hukuki soru(n)lar. |
-| **Çocuk ve ergen psikiyatrisi** | Bebeklikten ergenliğe ruhsal bozukluklar. |
-| **Psikosomatik tıp** | Ruhsal kökenli, bedensel görünen hastalıklar. |
-| **Nöroloji** | Sinir sisteminin organik hastalıkları. |
+|** Davranışsal tıp **| Davranış bilimini biyotıpla birleştiren alan. |
+|** Sağlık psikolojisi **| Sağlığı korumak, hastalığı önlemek, riski azaltmak. |
+|** Klinik nöropsikoloji **| Beyin hasarının deneyim ve davranışa etkisi. |
+|** Psikanaliz **| Freud’un kavramlarına dayanan psikoterapi ekolü. |
+|** [[Psikopatoloji]]**[^3] | Anormal deneyim, hal ve davranışı tanımlama öğretisi. |
+|** Biyolojik psikiyatri** | Bozuklukları nörobiyolojik yöntemlerle araştırma ve tedavi. |
+|**Psikofarmakoloji** | İlaçların ruhsal süreçler üzerindeki etkisi. |
+|**Sosyal psikiyatri** | Hastalığın epidemiyolojik ve sosyolojik boyutları. |
+|**Adli psikiyatri** | Ruh hastalarını ilgilendiren tüm hukuki soru(n)lar. |
+|**Çocuk ve ergen psikiyatrisi** | Bebeklikten ergenliğe ruhsal bozukluklar. |
+|**Psikosomatik tıp** | Ruhsal kökenli, bedensel görünen hastalıklar. |
+|**Nöroloji** | Sinir sisteminin organik hastalıkları. |
 
 ---
 
@@ -141,9 +139,7 @@ Ancak bu yakın temasın bir bedeli de var… **İsim kalabalığı.** Terminolo
 
 Peki nedir bu ruhsal bozukluklar?! Bunun cevabı keşke istediğimiz kadar sağlam olsa. Ruhsal bozukluklar bilim açısından net tanımlanmış sabit varlıklar değiller.. Öyle doğada keşfedilmeyi bekleyen katı gerçekler değiller.. Bilimin mevcut seviyesine göre, belli bi süre için üzerinde mutabıklaşılan, işe yarayan **konstrüktler**. Sabit değişmez gerçeklikten ziyade, geçici uzlaşılar. 
 
-Bu da ne demektir? Yeni bilimsel bulgular ışığında, bu tanımlar ve hatta tüm sınıflandırma sistemi değişebilir.** Zaten değişebilmelidir.** 
-
-Net örnek: 1980. O zamana kadar kullanılan "anksiyete nevrozu" tanısı rafa kaldırıldı. Yerine, daha güvenilir ve geçerli iki tanı geldi: [[Panik Bozukluk]] ve [[Yaygın Anksiyete Bozukluğu]]. Update gibi yani. Böyle updateler yaklaşık bi 10 yılda bir yapılıyor.
+Bu da ne demektir? Yeni bilimsel bulgular ışığında, bu tanımlar ve hatta tüm sınıflandırma sistemi değişebilir.** Zaten değişebilmelidir.** Net örnek: 1980. O zamana kadar kullanılan "anksiyete nevrozu" tanısı rafa kaldırıldı. Yerine, daha güvenilir ve geçerli iki tanı geldi: [[Panik Bozukluk]] ve [[Yaygın Anksiyete Bozukluğu]]. Update gibi yani. Böyle updateler yaklaşık bi 10 yılda bir yapılıyor.
 
 > [!note] Tanılar Geçici Konstrüktlerdir
 > Ruhsal bozuklukların tanıları, *o anki* bilimsel seviyeye göre belirlenmiş geçici yapılar olarak görülmelidir.
@@ -154,10 +150,10 @@ Peki… "Ruhsal bozukluk" neye denir? Bu şemsiyenin altına ne giriyor? Şizofr
 
 > [!question] Tartışma Malzemesi
 > "Ruhsal" ile "bedensel" bozukluk arasındaki ayrım, ruh-beden ikiliğinin bir kalıntısı mı? Ayrımı nasıl ve neden yapıyoruz?
-> **Zihin, beyni etkileyebilir mi yoksa sadece beyin zihni mi etkiler?**
+>**Zihin, beyni etkileyebilir mi yoksa sadece beyin zihni mi etkiler?**
 
 * **Churchland tarafı (tek yönlü):** Bu tarafa göre neden-sonuç ilişkisi tek yönlü işliyor: `beyin -> zihin`. Yani düşündüğün, hissettiğin her şey beyninde olup biten kimyasal/elektriksel sürecin bir sonucu. Zihin, beynin ürettiği bir "görüntü". Şöyle düşünebiliriz: Bir filmi izlerken, film seni ağlatabilir ama sen filmi değiştiremezsin. Sadece izleyip ağlarsın.
-* **Popper-Eccles tarafı (çift yönlü):** Bunlar da diyor ki:*"Tamam, beyin zihni etkiler, ama zihin de kendi başına bir gerçeklik; o da beyne sinyaller gönderir, etkileşim çift taraflıdır."* Yani: Beyin ile zihin birbirine karışıyor.
+* **Popper-Eccles tarafı (çift yönlü):** Bunlar da diyor ki: *"Tamam, beyin zihni etkiler, ama zihin de kendi başına bir gerçeklik; o da beyne sinyaller gönderir, etkileşim çift taraflıdır."* Yani: Beyin ile zihin birbirine karışıyor.
 
 Araştırmalar, ruhsal bozukluklarda çokça "bedensel", bedensel bozukluklarda da "ruhsal" sebep olduğunu gösteriyor. Belki de sorun terminolojiktir ve bunla ilgili henüz tatmin edici bir çözüm bulunmuş değil.
 
@@ -175,9 +171,9 @@ Ama işler çığrından çıktığında, davranış ve ruhsal sorunlar çekilme
 Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır:
 
 > [!important] DSM Tanımı
-> **Ruhsal bozukluk** bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal [[Semptom|sendrom]][^4] ya da örüntüdür. 
+>**Ruhsal bozukluk** bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal [[Semptom|sendrom]][^4] ya da örüntüdür. 
 > 
-> Bu sendrom ya da örüntü, sadece *bir*  olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki olmamalı. *(Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)* Ayrıca: Toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk sayılmaz. 
+> Bu sendrom ya da örüntü, sadece *bir* olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki olmamalı. *(Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)* Ayrıca: Toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk sayılmaz. 
 
 Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının bütününe, sosyokültürel bağlama ve biyolojik boyuta uzanan çok sayıda gösterge, süreç ve etkileşimi kapsıyor.
 
@@ -187,28 +183,28 @@ Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının
 
 Anlaşılacağı üzere, bu yaklaşım **betimleyici**. Yani durumu * tarif  *ediyor.*"Neden?"* sorusuna pek girmiyor. 
 
-Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini kolaylaştırır. Yani: DSM,*"bu adam niye depresyonda yahu?"* diye sormuyor. Sadece *"bu adamda şu belirtiler var mı? kaç tanesi? ne zamandır?"* diye soruyor. Böylece farklı klinisyenler aynı hastaya baktıklarında aynı tanıya varma olasılıkları artar. Çünkü kriterler net, gözlemlenebilir ve yoruma açık değil.*"Hastada şu [[Semptom|semptom]][^5] var mı yok mu hocam?"* gibi somut sorular.
+Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini kolaylaştırır. Yani: DSM,*"bu adam niye depresyonda yahu?"* diye sormuyor. Sadece *"bu adamda şu belirtiler var mı? kaç tanesi? ne zamandır?"*diye soruyor. Böylece farklı klinisyenler aynı hastaya baktıklarında aynı tanıya varma olasılıkları artar. Çünkü kriterler net, gözlemlenebilir ve yoruma açık değil.*"Hastada şu [[Semptom|semptom]][^5] var mı yok mu hocam?"* gibi somut sorular.
 
 İletişim de buna bağlı olarak kolaylaşıyor. Bir psikolog Zürih’te, diğeri de Lahor’da aynı "şizofreni" tanısı koyduğunda, ikisinin de aynı şeyden bahsediyor olması. Çünkü tanı, hangi teoriye yakın oldukları ile değil, gözlemlenebilir bir kriter/semptom listesine dayanır.
 
 Ortak bir **"dil"**, farklı ekollerden insanların aynı rahatsızlıktan bahsedebilmesini sağlıyor.
 
-*Örneğin,*"araba" kelimesi. Sen de ben de "araba" kelimesini kullanırken aynı şeyi anlıyoruz. "Araba" tekerlekli, motorlu bir taşıt diye kodlanmış.* Araba neden var?* demiyoruz, DSM de böyle çalışıyor.
+*Örneğin,*"araba" kelimesi. Sen de ben de "araba" kelimesini kullanırken aynı şeyi anlıyoruz. "Araba" tekerlekli, motorlu bir taşıt diye kodlanmış.*Araba neden var?* demiyoruz, DSM de böyle çalışıyor.
 
-Ama bunun **dezavantajı** da tam burda zaten. Derinliği kaybediyoruz. Bu adam depresyonda, tamam, ama * neden  *depresyonda?* Travma? Genetik? Yopluk/Yoksulluk? Yalnızlık?* 
+Ama bunun **dezavantajı** da tam burda zaten. Derinliği kaybediyoruz. Bu adam depresyonda, tamam, ama * neden  *depresyonda?*Travma? Genetik? Yopluk/Yoksulluk? Yalnızlık?* 
 
 Çünkü:
 * Kategoriler, semptom kriterleri keskin çizgilerle belirtilmiş gibi görünse de, gerçek hayatta bozukluklar birbirine girer, keskin çizgiler bulanıklaşır.
 *Kültürel farklılıkları, toplumların dayattığı normal-anormal tanımlarını sorgulamadan içselleştirir.*(Kültürel normların patolojiye karışması: DSM’in eski versiyonlarında eşcinsellik bozukluk olarak geçiyordu mesela)*
-*Etiketleme riski var. Kişi, aldığı tanıya "dönüşebilir".*"Ben çok depresifim yaa.."* derken, kendini o kalıba hapseder.
+*Etiketleme riski var. Kişi, aldığı tanıya "dönüşebilir".*"Ben çok depresifim yaa.."*derken, kendini o kalıba hapseder.
 
 Yani: Bu mükemmel bir sistem değil. Ama, şu ana kadar bulduğumuz en işlevsel çözüm. Bu, bilimin ilerleyişinin de bir örneği aslında; kusursuzu beklemek yerine, elindekinin en iyisi ile devam etmek.
 
-Bir tanı almak bazen toplumsal bir dezavantaj da getiriyor. Şizofreni ya da madde bağımlılığı gibi **damgalayıcı** tanılar, kişiyi zora sokabiliyor. Bunların bazen toplumdan dışlanma/yaftalanma gibi sonuçları olabilirken, bazen de direkt somut sonuçları olabiliyor *(örnek: hayat sigortasına kabul edilmemek)*. Buna da damgalanma/etiketlenme diyoruz. Yani teşhis, bazen tedaviden önce gelen bir ceza olabiliyor.
+Bir tanı almak bazen toplumsal bir dezavantaj da getiriyor. Şizofreni ya da madde bağımlılığı gibi*damgalayıcı** tanılar, kişiyi zora sokabiliyor. Bunların bazen toplumdan dışlanma/yaftalanma gibi sonuçları olabilirken, bazen de direkt somut sonuçları olabiliyor *(örnek: hayat sigortasına kabul edilmemek)*. Buna da damgalanma/etiketlenme diyoruz. Yani teşhis, bazen tedaviden önce gelen bir ceza olabiliyor.
 
 Karmaşa maalesef burda da bitmiyor.. Daha "normal/anormal", "ruhsal bozukluk/hastalık" terimleri, farklı yerlerde farklı isimlerle dolaşıyor.
 
-Şimdi burda durup şunu sormak lazım: Tüm bu eleştiriler haksız mı? **Hayır.** Bakış açısına, uygulama alanına, tarihsel bağlama göre her birinin bir haklılık payı var.
+Şimdi burda durup şunu sormak lazım: Tüm bu eleştiriler haksız mı?**Hayır.** Bakış açısına, uygulama alanına, tarihsel bağlama göre her birinin bir haklılık payı var.
 
 Ama… Ve bu "ama" çok önemli.. Şu ana kadar, ruhsal bozuklukların özünü daha tatmin edici şekilde yakalayan başka yaklaşım ya da model ortaya konmuş değil. Eleştirmek kolay, daha iyisini bulmak zor. ***Şimdilik.***
 
@@ -247,20 +243,20 @@ Ama: Bir insanı sadece "depresyon" diye etiketlemek, aynı zamanda tüm bağlam
 
 Fakat araştırmalar ilerledikçe, bu ayrımın bilimsel bi temeli olmadığı ortaya çıktı.. Kişilik bozuklukları da "gerçek" bozukluklar gibi aynı mantıkla işliyordu. Mesela: [[Borderline Kişilik Bozukluğu]] ile majör depresyon, sık sık iç içe geçiyordu.
 
-Borderline kişilik bozukluğu olan birini düşündüğümüzde; bu kişi, duygusal dalgalanmalar ve terk edilme korkusu yaşar. Kimlik duygusu zayıftır, öfke patlamaları ve kendine zarar verme davranışları sergiler. Same time, borderline hastalarının** çok büyük** bir kısmı aynı zamanda majör depresyon da yaşar. Bu da öyle bi kaç günlük bi durum değildir. Bazen haftalar, aylar süren, intihar düşünceleriyle bezenmiş, işlevsizleştirici bir depresyondur.
+Borderline kişilik bozukluğu olan birini düşündüğümüzde; bu kişi, duygusal dalgalanmalar ve terk edilme korkusu yaşar. Kimlik duygusu zayıftır, öfke patlamaları ve kendine zarar verme davranışları sergiler. Same time, borderline hastalarının **çok büyük** bir kısmı aynı zamanda majör depresyon da yaşar. Bu da öyle bi kaç günlük bi durum değildir. Bazen haftalar, aylar süren, intihar düşünceleriyle bezenmiş, işlevsizleştirici bir depresyondur.
 
 Yani: Örnek olarak kullandığımız borderline ile depresyonun bu kadar sık birlikte görülmesi, onları ayrı eksenlere koymak için gerçekten yapay ve keyfi sebepler bütünü oluşturdu. 
 
 *Hasta depresyonda olduğu için anti-depresan dayarsın, ama borderline’ın duygusal dengesizliği ilaçla düzelmez, terapi gerektirir.* Ya da  *depresyon tedavi edilir, tamam. Ama bu sefer borderline daha da görünür hale gelir, çünkü asıl yapısal sorun zaten oradadır.* **İnsan varlığı o kadar karmaşık ki, onu "geçici epizod" ve "kalıcı kişilik" diye iki ayrı kutuya koymak gerçeği yansıtmıyor.** Depresyon eğer borderline zemininde gelişirse, sadece bir epizod olarak kalmıyor, kişiliğin bir ifadesi oluyor.
 
-DSM-5, bu **yapay** ayrımı kaldırarak aslında yanıldığını itiraf etmiş oldu.*"Biz yanıldık… Aslında bu iki eksen zaten tek bir düzlemde, yan yana duruyormuş.."* Ama tabi bu itiraftan önce yıllarca bu sistemle idare edildi ve milyonlarca kişi, bu yapay ayrımların gölgesinde tanı ve tedavi aldı.
+DSM-5, bu** yapay** ayrımı kaldırarak aslında yanıldığını itiraf etmiş oldu.*"Biz yanıldık… Aslında bu iki eksen zaten tek bir düzlemde, yan yana duruyormuş.."* Ama tabi bu itiraftan önce yıllarca bu sistemle idare edildi ve milyonlarca kişi, bu yapay ayrımların gölgesinde tanı ve tedavi aldı.
 
 Eksenler kalkınca, bozuklukların nasıl sıralanacağına dair yeni bir sistem, yeni bir mantık bulunması gerekiyordu. Eski sistemdeki sıralama biraz rastgeleydi.
 
 Yeni sistemde ise bozukluklar, insanın **yaşam çizgisini** takip ediyor:
 1. Önce hayatın **en erken** döneminde ortaya çıkan bozukluklar *(nöro-gelişimsel, yani; DEHB, otizm gibi çocuklukta beliren şeyler)*,
-2. Sonrasında tipik olarak ergenlik sonu/yetişkinlik başında ortaya çıkanlar* (şizofreni, bipolar bozukluk)*,
-3. En sona da birincil bir bozukluk olmayıp tedavinin bir yan etkisi olanlar* (ilaca bağlı hareket bozuklukları)* yerleştirildi.
+2. Sonrasında tipik olarak ergenlik sonu/yetişkinlik başında ortaya çıkanlar (şizofreni, bipolar bozukluk)*,
+3. En sona da birincil bir bozukluk olmayıp tedavinin bir yan etkisi olanlar (ilaca bağlı hareket bozuklukları)ozuklukları)* yerleştirildi.
 
 Yani bir "film şeridi" gibi, baştan sona. Hayatın kendi ritmi içinde ilerliyor. Bozukluklar, insan gelişiminin farklı evrelerinde farklı şekillerde ortaya çıkıyor. Yani: Bir çocukta otizm neyse, bir gencin şizofrenisi başka, bir yaşlının demansı apayrı bi şey. Bunları aynı düzleme koyup, hayatın akışına göre sıralamak, hem tanıyı hem de anlamayı kolaylaştırıyor.
 
@@ -279,8 +275,8 @@ Ya da yine bu kişinin ailesiyle, işiyle, evi ve finansal durumuyla ilgili değ
 
 Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile** kusurlu bulunuyor.**Neden?** İki büyük eksiklik var…
 
-1. **İşlevsel boyutların ihmal edilmesi:** Bir bozukluğun tanımlanırken, onun * ne * olduğuna odaklanmak ve  *nasıl işlediğine* bakmamak. Kişinin günlük hayatında bu bozukluğun ne anlama geldiğine, hangi durumlarda peydah olduğuna, nasıl değişim gösterdiğine ve ne olunca azalıp/çoğaldığına pek dikkat etmemek…
-2. **Zaman dinamiği:** Bir bozukluğun zamanla nasıl değiştiğinin pek de hesaba katılmaması.. Bir insanın dünü ile bugünü farklıdır, yarını da. Ama çok eksenli sistem bu akışı yakalamakta zorlanır.
+1.**İşlevsel boyutların ihmal edilmesi:** Bir bozukluğun tanımlanırken, onun *ne* olduğuna odaklanmak ve  *nasıl işlediğine* bakmamak. Kişinin günlük hayatında bu bozukluğun ne anlama geldiğine, hangi durumlarda peydah olduğuna, nasıl değişim gösterdiğine ve ne olunca azalıp/çoğaldığına pek dikkat etmemek…
+2.**Zaman dinamiği:** Bir bozukluğun zamanla nasıl değiştiğinin pek de hesaba katılmaması.. Bir insanın dünü ile bugünü farklıdır, yarını da. Ama çok eksenli sistem bu akışı yakalamakta zorlanır.
 
 ---
 
@@ -303,25 +299,23 @@ Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile** kusurlu bulunuyor.**Ne
 > 
 > *Bu, psikotik bir vaka mıydı? Yoksa genç bir adamın yoğun stres altında yaşadığı geçici, atipik bir kriz miydi? Sesler gerçek miydi? Bunlar bozukluğun bir parçası mı yoksa bozukluğa tepki mi?*
 
-Bu örneklerin hepsi ortak noktası ne? Bir insanın yaşadıklarını **normal** ve**anormal** ,** hasta **ve** sağlıklı** diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
+Bu örneklerin hepsi ortak noktası ne? Bir insanın yaşadıklarını **normal** ve **anormal**,** hasta***ve **sağlıklı** diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
 
 Bu üç vaka, tam da **multimodal** yaklaşımın neden gerekli olduğunu gösteriyor. Çok eksenli sistem, bu hikayeleri kategorilere sığdırmaya çalışıyor. Ama hayat, kategorilerden hep taşıyor.
 
 > [!warning] Sonuç ve Uyarı
-> **Tanı koymadan önce, kişiyi dinle; sadece semptomlarını değil, hikayesini de.**
-
-[^1]: **Etiyoloji (Etiology):** Bir hastalığın, psikolojik bozukluğun veya klinik tablonun altında yatan köken, nedensellik ve tetikleyici faktörler bütünü.
-[^2]: **DSM (Diagnostic and Statistical Manual of Mental Disorders):** Amerikan Psikiyatri Birliği tarafından yayımlanan, ruhsal bozukluklar için standart tanı kriterlerini belirleyen kılavuz.
-[^3]: **Psikopatoloji (Psychopathology):** Ruhsal rahatsızlıkların, anormal davranışların ve zihinsel işlev bozukluklarının doğasını, nedenlerini ve gelişimsel dinamiklerini inceleyen bilim dalı.
-[^4]: **Sendrom (Syndrome):** Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.
-[^5]: **Semptom (Symptom):** Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.
-[^6]: **Boyutsal Yaklaşım (Dimensional Approach):** Psikolojik durumları katı "sağlıklı / hasta" kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.
-[^7]: **ICD (International Classification of Diseases):** Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.
+>**Tanı koymadan önce, kişiyi dinle; sadece semptomlarını değil, hikayesini de.** [^1]:**Etiyoloji (Etiology):** Bir hastalığın, psikolojik bozukluğun veya klinik tablonun altında yatan köken, nedensellik ve tetikleyici faktörler bütünü.
+[^2]:**DSM (Diagnostic and Statistical Manual of Mental Disorders):** Amerikan Psikiyatri Birliği tarafından yayımlanan, ruhsal bozukluklar için standart tanı kriterlerini belirleyen kılavuz.
+[^3]:**Psikopatoloji (Psychopathology):** Ruhsal rahatsızlıkların, anormal davranışların ve zihinsel işlev bozukluklarının doğasını, nedenlerini ve gelişimsel dinamiklerini inceleyen bilim dalı.
+[^4]:**Sendrom (Syndrome):** Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.
+[^5]:**Semptom (Symptom):** Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.
+[^6]:**Boyutsal Yaklaşım (Dimensional Approach):** Psikolojik durumları katı "sağlıklı / hasta" kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.
+[^7]:**ICD (International Classification of Diseases):** Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.
 
 ## Kaynaklar
 
 - American Psychiatric Association. (2013). *Diagnostic and statistical manual of mental disorders* (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596
 - Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. *Science*, 196(4286), 129–136. https://doi.org/10.1126/science.847460
-- Kotov, R., Krueger, R. F., Watson, D., Achenbach, T. M., Althoff, R. R., Bagby, R. M., … & Zimmerman, M. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to empirical psychiatric classification. *Journal of Abnormal Psychology*, 126(4), 454–477. https://doi.org/10.1037/abn0000258
-- Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. *American Psychologist*, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373
-- World Health Organization. (2019). *International statistical classification of diseases and related health problems* (11th ed.). WHO. https://icd.who.int/
+- Kotov, R., Krueger, R. F., Watson, D., Achenbach, T. M., Althoff, R. R., Bagby, R. M., … & Zimmerman, M. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to empirical psychiatric classification.*Journal of Abnormal Psychology*, 126(4), 454–477. https://doi.org/10.1037/abn0000258
+- Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values.*American Psychologist*, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373
+- World Health Organization. (2019).*International statistical classification of diseases and related health problems* (11th ed.). WHO. https://icd.who.int/

@@ -2551,7 +2551,7 @@ body[data-slug$="/index"] {
     position: absolute;
     inset: 1.5px;                         // outline kalınlığı
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background: #e6dcc6;                  // dolgu (light)
+    background: var(--bg-2, #ece8e1);     // dolgu (light) - anasayfa kare grid ile tam aynı
     z-index: -1;
     transition: background 180ms ease;
   }
@@ -2561,21 +2561,35 @@ body[data-slug$="/index"] {
     overflow: hidden;
     color: inherit;
   }
-  // Mısır hiyeroglifi: altıgenin TEPE noktasına yakın, ortalı, soluk ikincil renk
+  // Mısır hiyeroglifi: altıgenin TEPE noktasına yakın, ortalı, daha belirgin ve estetik
   .page-listing .section-li .desc h3 a .sc-hx-glyph {
     position: absolute;
-    top: 11%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', 'Source Serif 4', serif;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     line-height: 1;
     letter-spacing: 0.02em;
-    color: rgba(58, 48, 38, 0.42);
+    color: rgba(58, 48, 38, 0.48);
     transition: color 180ms ease;
     pointer-events: none;
   }
-  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.82); }
+  // Konu numarası: sağ üst açıda, kare grid ile uyumlu
+  .page-listing .section-li .desc h3 a .sc-hx-num {
+    position: absolute;
+    top: 14%;
+    right: 18%;
+    font-family: 'Bebas Neue', 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--accent, #C8102E);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.85); }
+  .page-listing .section-li .desc h3 a:hover .sc-hx-num { color: #ffffff !important; }
   // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
   .page-listing .section-li:hover { z-index: 10; }
   // Hover: yalnız renk değişimi + içeri-vuran gölge (shadow-inset-center). Tilt yok.
@@ -2597,7 +2611,7 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a::before,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a::before {
-  background: #1b1813;                  // dolgu (dark)
+  background: #0a0a0a;                  // dolgu (dark) - anasayfa kare grid ile tam aynı
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover {
@@ -2609,11 +2623,11 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph {
-  color: rgba(216, 205, 184, 0.40);
+  color: rgba(216, 205, 184, 0.45);
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.88);
 }
 
 // ─── SBB breadcrumb katmanları + chevron (bottom-right) ───
@@ -2728,11 +2742,22 @@ html[saved-theme="dark"] .sc-bcl-article,
   display: block;
   opacity: 0;
   transform: translateX(-4px);
-  transition: opacity 220ms ease, transform 220ms ease, color 150ms ease;
+  transition: opacity 220ms ease, transform 220ms ease, color 150ms ease, background 150ms ease;
   
   &.sc-bcl-in { opacity: 1; transform: translateX(0); }
   &:hover {
     color: var(--accent, #C8102E) !important;
+    transform: translateX(2px);
+  }
+
+  &.sc-active {
+    color: var(--accent, #C8102E) !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    border-left: 2px solid var(--accent, #C8102E);
+    padding-left: 8px;
+    background: rgba(200, 16, 46, 0.08);
+    border-radius: 2px;
     transform: translateX(2px);
   }
 }
@@ -2740,6 +2765,10 @@ html[saved-theme="dark"] .sc-bcl-article,
 html[saved-theme="dark"] .sc-bctoc-item {
   color: rgba(236, 231, 221, 0.65);
   &:hover { color: var(--accent, #C8102E) !important; }
+  &.sc-active {
+    color: var(--accent, #C8102E) !important;
+    background: rgba(200, 16, 46, 0.18);
+  }
 }
 
 // ─── Görev 8: SBB-kutusu ek bölümü (Alakalı yazılar + Etiketler dropdown) ───

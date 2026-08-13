@@ -346,6 +346,10 @@ function ensure(){
     var bt=document.createElement('button');bt.type='button';bt.className='sc-toolbtn sc-themebtn';bt.title='Tema';bt.setAttribute('aria-label','Tema');
     bt.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
     bt.addEventListener('click',function(){try{sessionStorage.setItem('sc_theme_manual','1');}catch(e){}var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
+    // Sözlük / K&K Tuşu (𓅔) - Nöral ağın hemen sağına
+    var bg=document.createElement('button');bg.type='button';bg.className='sc-toolbtn sc-glossarybtn';bg.title='Kavramlar & Kelimeler (Sözlük)';bg.setAttribute('aria-label','Kavramlar & Kelimeler (Sözlük)');
+    bg.innerHTML='<span style="font-family:\'Noto Sans Egyptian Hieroglyphs\',\'Segoe UI Historic\',sans-serif;font-size:1.15rem;line-height:1;display:inline-block;">𓅔</span>';
+    bg.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();scOpenGlossary();});
     // Focus
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
@@ -357,7 +361,7 @@ function ensure(){
     sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
-    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
+    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bg);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
     sbb.appendChild(sbbTools);
     // Clock — lüks kasa + Türkçe tarih + saniyeyi gösteren zarif SERPENT ibresi
     var ticks='';for(var i=0;i<60;i++){var a=i*6*Math.PI/180;var isH=(i%5===0);var r1=isH?38.5:41.5,r2=45;var x1=50+r1*Math.sin(a),y1=50-r1*Math.cos(a),x2=50+r2*Math.sin(a),y2=50-r2*Math.cos(a);ticks+='<line x1="'+x1.toFixed(2)+'" y1="'+y1.toFixed(2)+'" x2="'+x2.toFixed(2)+'" y2="'+y2.toFixed(2)+'" class="sc-tick'+(isH?' sc-tick-h':'')+'"/>';}
@@ -524,6 +528,7 @@ function updateBcLayers(){
       }
       if(tocItems.length>0){
         var tocWrap=document.createElement('div');tocWrap.className='sc-bclayer-toc';
+        var tocElements=[];
         tocItems.slice(0,7).forEach(function(item,tIdx){
           var ta=document.createElement('a');
           ta.className='sc-bctoc-item';
@@ -538,9 +543,33 @@ function updateBcLayers(){
             }
           });
           tocWrap.appendChild(ta);
+          tocElements.push({a:ta,href:item.href});
           setTimeout(function(){ta.classList.add('sc-bcl-in');},180+tIdx*25);
         });
         bl.appendChild(tocWrap);
+
+        // Scroll spy for active TOC highlight
+        var spyHeadings=[];
+        tocElements.forEach(function(te){
+          var tNode=document.querySelector(te.href)||document.getElementById(te.href.slice(1));
+          if(tNode) spyHeadings.push({node:tNode,a:te.a});
+        });
+        function highlightToc(){
+          var activeA=null;
+          for(var si=0;si<spyHeadings.length;si++){
+            var r=spyHeadings[si].node.getBoundingClientRect();
+            if(r.top<=180){activeA=spyHeadings[si].a;}
+          }
+          if(!activeA&&spyHeadings.length)activeA=spyHeadings[0].a;
+          tocElements.forEach(function(te){
+            if(te.a===activeA){te.a.classList.add('sc-active');}
+            else{te.a.classList.remove('sc-active');}
+          });
+        }
+        window.removeEventListener('scroll',window.__scTocSpy);
+        window.__scTocSpy=highlightToc;
+        window.addEventListener('scroll',highlightToc,{passive:true});
+        setTimeout(highlightToc,220);
       }
     }
   }
@@ -759,7 +788,7 @@ function scFitHex(){
   if(!links.length)return;
   scSortHoneycombs();
   links=document.querySelectorAll('.page-listing .section-li .desc h3 a, .section-ul .section-li .desc h3 a');
-  links.forEach(function(a){
+  links.forEach(function(a, idx){
     var rawText=(a.getAttribute('data-raw-title')||a.textContent||'').trim();
     if(!a.getAttribute('data-raw-title')){
       a.setAttribute('data-raw-title',rawText);
@@ -769,12 +798,22 @@ function scFitHex(){
 
     var lbl=a.querySelector('.sc-hx-label');
     var glyphEl=a.querySelector('.sc-hx-glyph');
+    var numEl=a.querySelector('.sc-hx-num');
+
+    if(!numEl){
+      numEl=document.createElement('span');
+      numEl.className='sc-hx-num';
+      numEl.setAttribute('aria-hidden','true');
+      numEl.textContent=String(idx+1);
+      a.appendChild(numEl);
+    }else{
+      numEl.textContent=String(idx+1);
+    }
 
     if(!lbl){
       lbl=document.createElement('span');
       lbl.className='sc-hx-label';
       lbl.textContent=cleanTitle;
-      a.innerHTML='';
       if(gl){
         glyphEl=document.createElement('span');
         glyphEl.className='sc-hx-glyph';
@@ -1398,7 +1437,7 @@ function scInitAccordions(){
 
       var sum = document.createElement('summary');
       sum.className = 'sc-acc-header';
-      sum.innerHTML = '<span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
+      sum.innerHTML = '<span class="sc-acc-glyph" style="font-family:\'Noto Sans Egyptian Hieroglyphs\',\'Segoe UI Historic\',sans-serif;margin-right:8px;font-size:1.15rem;vertical-align:middle;color:var(--accent,#C8102E);">𓅔</span><span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
       fnDet.appendChild(sum);
 
       var bodyDiv = document.createElement('div');

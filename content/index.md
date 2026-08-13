@@ -1,7 +1,8 @@
 ---
-title: SAYKO Atlası
+title: Home
+---
+
 list: false
 index: true
----
 
 # SAYKO Atlası

@@ -26,16 +26,14 @@ Sigara öldürür, hareket etmek iyidir, sebze yemek lazım. Bunları herkes bil
 ***Sağlık davranışı:*** Sağlık psikolojisi içinde ***sağlık davranışı*** araştırması tam da bu soruyu ciddiye alıyor.
 
 - **Tanımı:** Sağlığın korunması, yeniden kazanılması ya da iyileştirilmesiyle bağlantılı her türlü davranış, davranış kalıbı, eylem ya da alışkanlık sağlık davranışı sayılıyor.
-Düzenli spor, dengeli beslenme, check-up'lar, güneş kremi, prezervatif kullanımı. Bunlar hep sağlık davranışı işte..**Diğer yandan bir de**  risk davranışları **var tabii.** Sigara, alkol, metamfetamin, eroin, dezomorfin, fentanil.. 
-Sağlığı potansiyel olarak **tehdit eden** ya da **kanıtlanmış** bir biçimde zarar veren davranışlar.**Burda ince bi nokta var: fentanil kullanmamak, yani bir risk davranışını** yapmamak da başlı başına bir sağlık davranışı sayılabiliyor. 
+Düzenli spor, dengeli beslenme, check-up'lar, güneş kremi, prezervatif kullanımı. Bunlar hep sağlık davranışı işte..**Diğer yandan bir de **risk davranışları** var tabii.**Sigara, alkol, metamfetamin, eroin, dezomorfin, fentanil.. 
+Sağlığı potansiyel olarak** tehdit eden **ya da** kanıtlanmış **bir biçimde zarar veren davranışlar.** Burda ince bi nokta var: fentanil kullanmamak, yani bir risk davranışını** yapmamak da başlı başına bir sağlık davranışı sayılabiliyor. 
 Yani olay sadece "hadi sağlıklı şeyler yapalım, iyi olalım!" değil, "kötü şeylerden kaçın!" da aynı kategoriye giriyor, işi kolaylaştırıyor biraz. 
 ***Davranış değişikliği kolay olsaydı bu kadar teoriye ihtiyaç duyulmazdı. Bu süreci etkileyen ve açıklayan en önemli faktörleri tespit etmeye çalışan onlarca teori var. Hepsinin sorusu aynı, açıları farklı: "İnsan davranışı nasıl değişir, ya da neden değişmez?"***
 
 ## 1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM
 
-### Süreklilik mi, Aşama mı?
-
-**Alkolü bırakmayı düşünen biriyle konuştuğunda "bırakcam ama henüz hazır değilim" diyor. 
+### Süreklilik mi, Aşama mı?** Alkolü bırakmayı düşünen biriyle konuştuğunda "bırakcam ama henüz hazır değilim" diyor. 
 Başka biri var, o da bırakmayı düşünüyor, ama bu hafta bıraktı, yarın tekrar aldı, sonraki hafta yine bıraktı.
 Üçüncüsü on yıldır tek damla içmemiş ve artık aklına bile gelmiyor. 
 
@@ -45,7 +43,7 @@ Bu durumu açıklayan 2 model ailesi var.
 
 > ***1) Süreklilik modelleri:*** Bu modele göre herkes aynı lineer çizgi üzerinde bi yerlerde. Çizginin bir ucunda "aklıma **hiç** gelmiyor" diğer uçta "yıllardır yapıyorum".
 Kişiyi o çizgide ileriye ya da geriye iten şey bilişsel ve duygusal değişkenler: 
-- **riski ne kadar ciddiye alıyorsun?**- **başarabileceğine inanıyor musun?**- **sonuç senin için önemli mi?**Tüm bu değişkenlerin kombinasyonu davranış** olasılığını** belirliyor. 
+- **riski ne kadar ciddiye alıyorsun?**-**başarabileceğine inanıyor musun?**-**sonuç senin için önemli mi?** Tüm bu değişkenlerin kombinasyonu davranış **olasılığını** belirliyor. 
 
 > *Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli[^1] (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
 
@@ -53,9 +51,9 @@ Kişiyi o çizgide ileriye ya da geriye iten şey bilişsel ve duygusal değişk
 
 Bunlar "hayır, öyle çizgi üzerinde ileri-geri falan olmaz" diyor. 
 Davranış değişikliği sırasında insan niceliksel olarak değil, niteliksel olarak farklı evreler geçiriyor. 
-Düşünmeme evresi ile düşünme evresi arasında sadece bir bakış açısı farkı yok,** o evreler psikolojik olarak birbirinden temelden farklı. **Yani bir süreklilik üzerinde ilerlemiyorsun,***bambaşka*** bi evreye atlıyorsun ve her evrenin yapısı kendine göre. 
+Düşünmeme evresi ile düşünme evresi arasında sadece bir bakış açısı farkı yok,** o evreler psikolojik olarak birbirinden temelden farklı.** Yani bir süreklilik üzerinde ilerlemiyorsun,***bambaşka*** bi evreye atlıyorsun ve her evrenin yapısı kendine göre. 
 
-> **Sağlıklı Eylem Süreci Yaklaşımı (Health Action Process Approach), Transteorik Model (Transtheoretical Model) ve Önleyici Eylem Süreç Modeli (Precaution Adoption Process Model) bu aileden.** Bu ayrımlar sadece akademik sınıflandırma olsun diye değil,** müdahale tasarımı açısından gerçek sonuçları var. *Süreklilikciler herkese aynı müdahaleyi uygulayabilir, çünkü herkes zaten aynı çizgi üzerinde ve sadece farklı noktalarında.*
+>**Sağlıklı Eylem Süreci Yaklaşımı (Health Action Process Approach), Transteorik Model (Transtheoretical Model) ve Önleyici Eylem Süreç Modeli (Precaution Adoption Process Model) bu aileden.** Bu ayrımlar sadece akademik sınıflandırma olsun diye değil,** müdahale tasarımı açısından gerçek sonuçları var. *Süreklilikciler herkese aynı müdahaleyi uygulayabilir, çünkü herkes zaten aynı çizgi üzerinde ve sadece farklı noktalarında.*
 *Aşamacılar da her model için ayrı o evrenin ihtiyaçlarına özel müdahaleler (tailored interventions) tasarlıyor, çünkü onlara göre yanlış evreye yönelik müdahale işe yaramaz ve hatta de geri tepebilir.*
 
 ***Teorin ne diyorsa müdahalen de ona göre şekilleniyor.***
@@ -98,7 +96,7 @@ En güçlü kaynak bu. Bir davranışı başarıyla tekrar tekrar gerçekleştir
 > ***3) Sembolik deneyim***
 > Özellikle sözlü ikna. Güvendiğin birinden "sen halledersin" "sen bunu yaparsın aslanım" demesi, kendi kapasitene olan inancını besleyebilir. Dışarıdan gelen güven içeriye işleyebilir. 
 
-> ***4) Duygusal uyarılma***>En ince/zayıf kaynak da bu. İnsanlar duygusal durumlarını kendi yetkinliklerinin** göstergesi** olarak yorumlar. Koşu öncesi aşırı gerilen biri "bu kadar heyecan yaptıysam kesin beceremicem" diyebilir ve bu çıkarım öz-yeterliliği aşağı çeker. 
+> ***4) Duygusal uyarılma***>En ince/zayıf kaynak da bu. İnsanlar duygusal durumlarını kendi yetkinliklerinin **göstergesi** olarak yorumlar. Koşu öncesi aşırı gerilen biri "bu kadar heyecan yaptıysam kesin beceremicem" diyebilir ve bu çıkarım öz-yeterliliği aşağı çeker. 
 
  *Bandura'nın bu modeli sağlık psikolojisinde neden bu kadar merkezi?*
 Çünkü müdahale tasarımına doğrudan bağlanıyor. Birinin diyabetini kontrol etmesini, sigarayı bırakmasını, ilaçlarını içmesini istiyorsan, önce öz-yeterliliğini ne besliyor, ne kırıyor, bunu anlamak zorundasın. 
@@ -114,9 +112,7 @@ E insanların yaşını geri alamayacağımıza göre, etki edilebilecek, manip�
 Sağlık İnanç Modeli (HBM) tam olarak bu *çaresizlikten* doğdu: "bilişsel olarak neyi değiştirebiliriz" arayışından. 
 *Modelin temel iddiası: bir davranışı değiştirme olasılığın, algıladığın sağlık tehdidinin büyüklüğü ve o tehdide karşı önlemin işe yarayacağına dair inancınla doğru orantılı olarak artar. 
 Yani bir tarafta hissedilen **sağlık tehdidi**, 
-diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inancı, yani** önlemin algılanan yararı **. Bu ikisi yükseldikçe, o davranışı değiştirme olasılığı artıyor.**
-
-### Tehdit Algısı: *Ne kadar korkuyorsun?* Tehdit algısını iki bileşen oluşturuyor:
+diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inancı, yani **önlemin algılanan yararı** . Bu ikisi yükseldikçe, o davranışı değiştirme olasılığı artıyor.** ### Tehdit Algısı: *Ne kadar korkuyorsun?* Tehdit algısını iki bileşen oluşturuyor:
 
 > 1) Öznel kırılganlık: "bu hastalık bana da olabilir mi?" sorusunun cevabı.
 *Sigara içen biri kendini akciğer kanserine karşı ne kadar savunmasız hissediyor?* Bu sonuçta öznel bir değerlendirme, gerçek riskle bire bir örtüşmüyor. 
@@ -130,7 +126,7 @@ diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inanc�
  *Sigara bırakmak kanser riskini düşürür, bu fayda. 
 Ama kilo alabilirsin, sindirim sorunları yaşayabilirsin, bunlar maliyet.*
 
-*Eylem sonucu beklentileri.* Modele sonradan bir ekleme yapıldı çünkü insan sadece korkuyla hareket eden bir hayvan değil.*Sağlık motivasyonu.*
+*Eylem sonucu beklentileri.*Modele sonradan bir ekleme yapıldı çünkü insan sadece korkuyla hareket eden bir hayvan değil.*Sağlık motivasyonu.*
 *Yani genel olarak, "kendine bakma" "sağlık mevzularını dert etme" bilincini eklediler. 
 Ayrıca tetiği çekecek (davranış değişimini başlatacak) hatırlatıcı uyaranlar entegre edildi. Bu bir **kamu spotu** da olabilir,**sabah öksürük kriziyle** uyanıp "Noluyor aq?!" dediğin anki o ilk fiziksel semptom da.
 
@@ -150,7 +146,7 @@ Sonuç? *Herkes kendi riskini ortalamanın altında gördü.*
 > *Kendimizi soyut bir **"ortalama insan"** ile karşılaştırdığımızda bu yanılgı en güçlü.
 > Karşılaştırma kişisi ne kadar somutsa, "günde 2 paket sigara içen 20 yaşında bir genco" gibi, yanılgı o kadar **zayıflıyor**.
 
-İlginç nokta: sigara içenler, içmeyenlere göre kalp krizi ya da kanser risklerinin daha yüksek olduğunu biliyorlar, ama** tatsız ** gerçek risklerini yine de olması gerekenin **çok altında** hesaplıyorlar. 
+İlginç nokta: sigara içenler, içmeyenlere göre kalp krizi ya da kanser risklerinin daha yüksek olduğunu biliyorlar, ama **tatsız** gerçek risklerini yine de olması gerekenin **çok altında** hesaplıyorlar. 
 ***Bu iyimserlik salaklıktan değil, tamamen korkuyu savuşturma ve kendini koruma mekanizması yüzünden devreye giriyor.***
  *Kanser kötü evet, ama benim genlerim canavar gibi, bana bi şey olmaz* diyerek egoyu koruyoruz.
 
@@ -158,8 +154,7 @@ Sonuç? *Herkes kendi riskini ortalamanın altında gördü.*
 
 > Gelelim bu modelin neden günümüz sağlık psikolojisinde "antika" olarak kaldığına ve ciddi eleştirilerine. 
 
-Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?* Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında *o kadar da* iyi tahmin edemiyor. 
-**Neden?** Çünkü HBM'de "niyet" (intention) kavramı yok. 
+Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?* Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında *o kadar da* iyi tahmin edemiyor.**Neden?** Çünkü HBM'de "niyet" (intention) kavramı yok. 
 Modern psikolojide en güçlü davranış öngörücüsü olan niyet, HBM'de **hiç** yer almıyor. 
 Yani bir şeyi yapmayı "hedefleme ve niyet etme" aşaması bu modelde tamamen *pas geçilmiş.*
 
@@ -167,16 +162,15 @@ Yani bir şeyi yapmayı "hedefleme ve niyet etme" aşaması bu modelde tamamen *
 
 > ***Korku ve bilgi, insanı değiştirmeye yetmiyor.***
 
-**Kampanyalarda da, sadece korku pompalayıp jenerik uyarılar yapmak bu yüzden** işe yaramıyor**.
+**Kampanyalarda da, sadece korku pompalayıp jenerik uyarılar yapmak bu yüzden **işe yaramıyor**.
 
-Eğer birinin bu optimist kalkanının kırılması gerekiyorsa, ona öyle genel istatistikler falan sunmayacaksın.** "Senin şu değerlerine, şu yaşam tarzına ve şu davranışlarına göre riskin tam olarak budur"** diyerek kişiselleştirilmiş bir geri bildirim vereceksin. 
+Eğer birinin bu optimist kalkanının kırılması gerekiyorsa, ona öyle genel istatistikler falan sunmayacaksın.**"Senin şu değerlerine, şu yaşam tarzına ve şu davranışlarına göre riskin tam olarak budur"** diyerek kişiselleştirilmiş bir geri bildirim vereceksin. 
 
 Büyük kampanyalarda bunu yapmak zor olduğu için, en azından hedef kitleyi "temsil edebilecek", onlara tıpatıp benzeyen somut örnek karakterler üzerinden o **vulnerabiliteyi** hissettirmek gerekiyor. 
 
 > ***Özetle:*** 
-> **HBM sağlık psikolojisinin emekle dönemi için güzel bir denemeydi. Çok fazla araştırmayı tetikledi. 
-> Ama** niyet ve eylem  **arasındaki o devasa uçurumu açıklamakta yetersiz kalıp sınıfta kaldı...**
-> [!abstract] 📜 Sağlık İnanç Modeli / HBM (Rosenstock, 1974; Becker, 1974)
+>**HBM sağlık psikolojisinin emekle dönemi için güzel bir denemeydi. Çok fazla araştırmayı tetikledi. 
+> Ama** niyet ve eylem **arasındaki o devasa uçurumu açıklamakta yetersiz kalıp sınıfta kaldı...** > [!abstract] 📜 Sağlık İnanç Modeli / HBM (Rosenstock, 1974; Becker, 1974)
 > *Kaynak: Rosenstock, I. M. (1974). Historical origins of the health belief model. Health Education Monographs, 2(4), 328–335.*
 >
 > ```mermaid
@@ -198,14 +192,14 @@ Büyük kampanyalarda bunu yapmak zor olduğu için, en azından hedef kitleyi "
 >   Ozetkililik([Bireysel Öz-Etkililik]):::cardinal --> Eylem
 > ```
 >
-> **Açıklama:**  *Bir insanın sağlık tehdidi algısı ile maliyet-fayda dengesinin birleşerek gerçek bir koruyucu sağlık eylemine dönüşme sürecini bilişsel basamaklarla modeller.*
+>**Açıklama:**  *Bir insanın sağlık tehdidi algısı ile maliyet-fayda dengesinin birleşerek gerçek bir koruyucu sağlık eylemine dönüşme sürecini bilişsel basamaklarla modeller.*
 
 # 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)
 
 Zamanında sosyal psikoloji dünyasında çok düz bir mantık hakimdi: *Bir insanın bir şeye karşı tutumu neyse, ona göre davranır.
 Spor yapmayı seviyorsa yapar, sevmiyorsa yapmaz.*
 
-***Fishbein ve Ajzen isimli iki kafadar çıkıp verileri inceleyince*** acı *  *gerçek ortaya çıktı***:** Tutum dediğin şey, davranışı tahmin etmede **berbat**.**
+***Fishbein ve Ajzen isimli iki kafadar çıkıp verileri inceleyince*** acı *  *gerçek ortaya çıktı***:**Tutum dediğin şey, davranışı tahmin etmede** berbat**.**
 ***İnsanlar sporun iyi bi şey olduğunu düşünüp yine de tüm gün koltukta pinekleyebiliyor.
 Ya da "sağlıklı beslenmek önemli yaa" diyen biri buna göre davranmıyor.*** O halde ***tutum*** ile ***davranış*** arasında başka bir şey olmalı. 
 
@@ -219,7 +213,7 @@ Her iki teoride de niyet davranışın en güçlü öngörücüsü/tahmincisi.
 --
 > ***Tutum ***Fishbein ve Ajzen'e göre tutum, bir davranışa karşı duygulanımsal değerlendirme.*** Bu davranış iyi mi? Kötü mü? Aptalca mı? Hoş mu? 
 Doğrudan sorulabiliyor.
-*"Günde 5 porsiyon turp yemek benim için yararlı/zararlı."* Tutum şöyle de hesaplanabilir: önce davranışın sonuçlarına dair inançlar ölçülür, sonra bu sonuçların değerlendirilmesiyle çarpılır ve tutum hesaplanır.*Yani, "Düzenli koşarsam iyi hissederim" = **(büyük ihtimalle) x "Kendimi iyi hissetmek "iyi" bir şeydir"**.
+*"Günde 5 porsiyon turp yemek benim için yararlı/zararlı."*Tutum şöyle de hesaplanabilir: önce davranışın sonuçlarına dair inançlar ölçülür, sonra bu sonuçların değerlendirilmesiyle çarpılır ve tutum hesaplanır.*Yani, "Düzenli koşarsam iyi hissederim" =**(büyük ihtimalle) x "Kendimi iyi hissetmek "iyi" bir şeydir"**.
 
 > ***Subjektif norm*** Yani mahalle baskısının psikolojideki ismi. 
 Kişinin, hayatındaki **önemli** insanların ondan ne beklediğini  *yorumlama* biçimidir. 
@@ -229,8 +223,7 @@ Kişinin, hayatındaki **önemli** insanların ondan ne beklediğini  *yorumlama
 "Kankam Abidin daha çok spor yapmamı istiyor"
 X
 "Kankam Abidin'i ne kadar kaale alırım?"
-```
-**Sosyal etkinin bu kadar açık ele alınması, bu teorinin ortaya çıktığı dönem için bir özgünlüktü. İşin tuhaf tarafı, sosyal etkileri bu kadar açıkça hesaba katsalar da, yapılan çalışmalarda subjektif norm niyetin hep** en zayıf tahminci** si çıkar.
+```**Sosyal etkinin bu kadar açık ele alınması, bu teorinin ortaya çıktığı dönem için bir özgünlüktü. İşin tuhaf tarafı, sosyal etkileri bu kadar açıkça hesaba katsalar da, yapılan çalışmalarda subjektif norm niyetin hep** en zayıf tahminci** si çıkar.
 
 Sebebi ise araştırmacıların bu ***devasa*** sosyal etkiyi anketlerde tek bi soruyla geçiştirdiler, bu da ölçümün güvenilirliğinin dibine kibrit suyu döker.
 
@@ -238,21 +231,14 @@ Sebebi ise araştırmacıların bu ***devasa*** sosyal etkiyi anketlerde tek bi 
 **TRA'dan TPB'ye geçişte eklenen üçüncü unsur.** Adamın niyeti kapı gibi sağlam olsa bile, kayak yapmaya niyetlendiğinde dışarıda kar yoksa o davranış gerçekleşmez. *İrade dışı engeller çıktığında TRA çuvallıyordu.*
 
 Yani bu kavram, kişinin bir davranışı gerçekleştirirken ne kadar zorlanacağına veya ne kadar kolay yapacağına dair subjektif tahmindir. 
-Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan, **sağlıklı beslenme niyetin** de o kantinin lojistiğine kurban gider. 
-***Algılanan davranış kontrolü, niyeti etkilemenin yanı sıra davranışı da direkt olarak etkiliyor. Çünkü en iyi niyetle bile, fırsatın ya da kapasitenin olmadığı yerde davranış gerçekleşmez.***-
-**Algılanan davranış kontrolü direkt Bandrua'nın öz-yeterliliğini "hatırlatıyor". Ajzen de sonradan bunu kabul etti ve yeniden tanımladı.**
-
-> ***Peki bu kadar anlattık da ne oldu?***
-> **Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki** niyeti** canavar gibi tahmin ediyor. 
-> Ama iş o niyetin **davranışa** dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü yerlerde sürünüyor. 
-***Yani:*** İnsanın kafasında niyet oluşturmasını çok iyi çözdük ama niyet ile o davranışı gerçekten sergilemek arasındaki uçurumu sadece niyet ve kontrol algısıyla ***ölçemiyoruz.*** Adam niyet ediyor ama hareket geç(e)miyor. Bu fiyaskoya da literatürde ***Niyet-Davranış Boşluğu*** deniyor. 
-
-**Yani, bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
+Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan,**sağlıklı beslenme niyetin** de o kantinin lojistiğine kurban gider. 
+***Algılanan davranış kontrolü, niyeti etkilemenin yanı sıra davranışı da direkt olarak etkiliyor. Çünkü en iyi niyetle bile, fırsatın ya da kapasitenin olmadığı yerde davranış gerçekleşmez.***-**Algılanan davranış kontrolü direkt Bandrua'nın öz-yeterliliğini "hatırlatıyor". Ajzen de sonradan bunu kabul etti ve yeniden tanımladı.** > ***Peki bu kadar anlattık da ne oldu?***
+>**Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki** niyeti **canavar gibi tahmin ediyor. 
+> Ama iş o niyetin** davranışa** dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü yerlerde sürünüyor. 
+***Yani:*** İnsanın kafasında niyet oluşturmasını çok iyi çözdük ama niyet ile o davranışı gerçekten sergilemek arasındaki uçurumu sadece niyet ve kontrol algısıyla ***ölçemiyoruz.*** Adam niyet ediyor ama hareket geç(e)miyor. Bu fiyaskoya da literatürde ***Niyet-Davranış Boşluğu*** deniyor.** Yani, bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
 Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olacak ***daha canavar modellere ihtiyacımız var.***
 
-> **"Theories don’t have to be correct – only facts do." - Hans Selye"**
-
-> [!abstract] 📜 Planlı Davranış Teorisi / TPB (Ajzen, 1991)
+>**"Theories don’t have to be correct – only facts do." - Hans Selye"** > [!abstract] 📜 Planlı Davranış Teorisi / TPB (Ajzen, 1991)
 > *Kaynak: Ajzen, I. (1991). The theory of planned behavior. Organizational Behavior and Human Decision Processes, 50(2), 179–211.*
 >
 > ```mermaid
@@ -269,30 +255,24 @@ Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olac
 >   Kontrol -.->|Doğrudan Etki| Davranis
 > ```
 >
-> **Açıklama:**  *İnsan eylemlerinin doğrudan tutumlardan değil, tutum ve sosyal baskıların süzülerek oluşturduğu "niyet" üzerinden davranışa döküldüğünü betimler.*
-
-## 3. Korkunun Ecele Faydası (var mı?)*Koruma Motivasyonu Teorisi (PMT - Protection Motivation Theory
+>**Açıklama:**  *İnsan eylemlerinin doğrudan tutumlardan değil, tutum ve sosyal baskıların süzülerek oluşturduğu "niyet" üzerinden davranışa döküldüğünü betimler.*## 3. Korkunun Ecele Faydası (var mı?)*Koruma Motivasyonu Teorisi (PMT - Protection Motivation Theory
 
 > Niyet etmek neden yetmez? 
-> Korku mesajları gerçekten işe yarıyor mu?* PMT korku mesajlarının etkisin incelemek için geliştirildi.* 1975'de Rogers, şunu merak etti: sigara paketlerine "Bu ürün sizi öldürür" yazsan, insanlara yeterince korkunç görüntüler göstersen, bu gerçekten de davranışı değiştirir mi? 
-*Sigara paketindeki fotoğraf sizi korkutabilir, ama "zaten bırakamam" diyorsanız, o korku sadece kaygı üretiyor,* niyet  **üretmiyor.**
+> Korku mesajları gerçekten işe yarıyor mu?*PMT korku mesajlarının etkisin incelemek için geliştirildi.* 1975'de Rogers, şunu merak etti: sigara paketlerine "Bu ürün sizi öldürür" yazsan, insanlara yeterince korkunç görüntüler göstersen, bu gerçekten de davranışı değiştirir mi? 
+*Sigara paketindeki fotoğraf sizi korkutabilir, ama "zaten bırakamam" diyorsanız, o korku sadece kaygı üretiyor,* niyet **üretmiyor.** Kişi sağlıkla ilgili bir bilgiyle karşılaştığında iki paralel değerlendirme başlatır: *tehdit değerlendirmesi **ve** başa çıkma değerlendirmesi.** Yani, "***bu şey ne kadar ciddi ve ben ne kadar risk altındayım"*** ile ***"bunu atlatabilir miyim ve beni ne kadar zorlar?"*** Bu iki süreç koruyucu niyeti oluşturur. 
 
-Kişi sağlıkla ilgili bir bilgiyle karşılaştığında iki paralel değerlendirme başlatır: *tehdit değerlendirmesi **ve** başa çıkma değerlendirmesi.**
-
-Yani, "***bu şey ne kadar ciddi ve ben ne kadar risk altındayım"*** ile ***"bunu atlatabilir miyim ve beni ne kadar zorlar?"*** Bu iki süreç koruyucu niyeti oluşturur. 
-
-***Yani: Sigara paketinde rezalet bi enfekte olmuş ayak fotoğrafı görünce, beyin 2 şeyi aynı anda soruyor: "bu beni ne kadar etkiler?" ve "bırakmak ne kadar mümkün?".*** Eğer ikinci soruya "yapabilirim" cevabı gelmiyorsa, ilk sorunun cevabı ***ne kadar yüksek olursa olsun***,** sigarayı bırakmak için niyet oluşmuyor **. 
+***Yani: Sigara paketinde rezalet bi enfekte olmuş ayak fotoğrafı görünce, beyin 2 şeyi aynı anda soruyor: "bu beni ne kadar etkiler?" ve "bırakmak ne kadar mümkün?".*** Eğer ikinci soruya "yapabilirim" cevabı gelmiyorsa, ilk sorunun cevabı ***ne kadar yüksek olursa olsun***,**sigarayı bırakmak için niyet oluşmuyor** . 
 
 > Bu yüzden korku mesajları tek başına pek bi işe yaramıyor. Kişinin "** ben bunu yapabilirim ***" demesi*** şart.***Araştırmalara göre niyet, o davranışın gerçekten sergilenmesini sağlamaya yetmiyor. 
-Bir insanın bir eylemi gerçekleştirip gerçekleştirmemesinde rol oynayan onlarca farklı faktör vardır ve** niyet** bu faktörlerin sadece 20-30% kısmını kapsıyor. 
+Bir insanın bir eylemi gerçekleştirip gerçekleştirmemesinde rol oynayan onlarca farklı faktör vardır ve **niyet** bu faktörlerin sadece 20-30% kısmını kapsıyor. 
 
 ***Niyet-Davranış Uçurumu[^5] için örnek:*** Her yılbaşı verilen sözleri düşün: "bu yıl hiç ekmek yemeyeceğim", "bu yıl her gün spor yapcam".
 Motivasyon **tam**. 
-Ama Ocak sonu o motivasyonun çoğu** biter.**
+Ama Ocak sonu o motivasyonun çoğu **biter.**
 ***Niyet oluşturmada hiç bi sorun yok. Uygulamada var.***
-**Bir tehdidin ciddiyeti ve kişinin savunmasızlığı, bunlar işin "maliyet" tarafı. *"Maliyet" kalemlerinin karşısında da,* mevcut davranışın sağladığı içsel (örn. sigaranın rahatlatıcı etkisi) ve dışsal (örn. arkadaş grubunun onayı)"ödüller" var.*Kişi bunların arasında bilinçli ya da bilinçsiz bir denge kurar. 
+**Bir tehdidin ciddiyeti ve kişinin savunmasızlığı, bunlar işin "maliyet" tarafı. *"Maliyet" kalemlerinin karşısında da,*mevcut davranışın sağladığı içsel (örn. sigaranın rahatlatıcı etkisi) ve dışsal (örn. arkadaş grubunun onayı)"ödüller" var.*Kişi bunların arasında bilinçli ya da bilinçsiz bir denge kurar. 
 
-Heckhausen'e motivasyon, niyet oluşana kadar süren* süreçtir.*
+Heckhausen'e motivasyon, niyet oluşana kadar süren*süreçtir.*
 Niyet oluştuğunda ***volisyon ***fazı başlar.*** Artık soru "Yapacak mıyım?" değil, "Nasıl yapacağım?"dır. 
 
 Bunu Julius Sezar'ın Rubikon nehrini geçmesine benzetti. 
@@ -319,7 +299,7 @@ Niyet Rubikon'u geçmek, ama nehri geçtikten sonra Roma'ya yürümek ayrı bi h
 
 ### Plan yapmayı denedin mi?
 
-Niyet-davranış uçurumunu kapatmanın en kanıtlı yolu somut If/Then (Eğer/O zaman) planları yapmaktır. **"Ne yapacağım" değil, "ne zaman, nerede, nasıl yapacağım" ve "yapamayacak olursam ne yapacağım". 
+Niyet-davranış uçurumunu kapatmanın en kanıtlı yolu somut If/Then (Eğer/O zaman) planları yapmaktır.** "Ne yapacağım" değil, "ne zaman, nerede, nasıl yapacağım" ve "yapamayacak olursam ne yapacağım". 
 Bu hem harekete geçişi hem de sürekliliği güçlendiriyor. 
 
 > "Düzenli spor yapacağım!"
@@ -336,15 +316,11 @@ Buna bir katman daha Sniehotta ve ark. ekledi. Engeller.
 Yorgunsundur, hava berbattır, canın istemez..
 "**Başa etme planlaması**" bunlar için önceden plan yapmaktır. 
 *"Eğer gitmek istemiyorsam, sadece 20 dakika giderim."*
-Bu da bir Eğer/O zaman planı, engel senaryosu için. 
-
-**94 araştırmayı kapsayan bir meta-analiz boş söylemiyor: 
+Bu da bir Eğer/O zaman planı, engel senaryosu için.**94 araştırmayı kapsayan bir meta-analiz boş söylemiyor: 
 > planlayan insanlar hem daha sık hem daha hızlı hedeflerine ulaşıyor.**
 
-**Basit bir araç ama pek çok pahalı müdahaleden daha etkili.**
-
-## 4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)
-## HAPA *Sağlık Eylem Süreci Yaklaşım Modeli - (Health Action Process Approach)* HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş* bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
+**Basit bir araç ama pek çok pahalı müdahaleden daha etkili.** ## 4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)
+## HAPA *Sağlık Eylem Süreci Yaklaşım Modeli - (Health Action Process Approach)* HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş*bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
 
 Yani iş niyetten sonra başlıyor. Ve o "sonrası" tek bir blok değil,*her aşamanın kendi dinamiği var.* Diğer modellerin büyük çoğunluğu motivasyon, yani niyet, ile ilgilenirken, HAPA volisyonla ilgilenir ve niyeti davranışa dönüştürme sürecini ele alır. 
 
@@ -355,19 +331,15 @@ Yani iş niyetten sonra başlıyor. Ve o "sonrası" tek bir blok değil,*her aş
 **2) Kasıt sonrası - eylem anı**
 **Davranış başladı ve sürdürülüyor.** 3) Kasıt sonrası - eylem sonrası**
 **Olası geri düşüşlerden sonra davranışı yeniden kazanma ya da hedeften tamamen vazgeçme.**
-**Aynı zamanda motivasyon da kişinin kendi savunmasızlığını ve hastalığının ciddiyetini değerlendirmesi, davranışın değişikliğinin olası sonuçlarının tartılması ve davranışı gerçekleştirebileceğine dair özgüvene bağlıdır.**
-
-HAPA'ya göre engel senaryolarına hazırlıklı olmak (her akşam spora giderim ve bu akşam fırtına olması), kendi gözlemlerinle niyetinin farkında olmak ve çeşitli öz-yeterlilik türleri, davranışın sürdürülmesini sağlıyor. 
+**Aynı zamanda motivasyon da kişinin kendi savunmasızlığını ve hastalığının ciddiyetini değerlendirmesi, davranışın değişikliğinin olası sonuçlarının tartılması ve davranışı gerçekleştirebileceğine dair özgüvene bağlıdır.** HAPA'ya göre engel senaryolarına hazırlıklı olmak (her akşam spora giderim ve bu akşam fırtına olması), kendi gözlemlerinle niyetinin farkında olmak ve çeşitli öz-yeterlilik türleri, davranışın sürdürülmesini sağlıyor. 
 
 ***Yani:***
 **Doktor sana "kolesterolün çıldırmış vaziyette, beslenme alışlkanlıklarını gözden geçirmenin vakti geldi"** diyor. 
 Risk algısı devreye girdi. 
-Sonuçları tartıyorsun ve "yapabilirim" diyorsun. Niyet oluştu. 
-
-**Hapa burada bitmez. Sonraki sorular:** -plan var mı?**
+Sonuçları tartıyorsun ve "yapabilirim" diyorsun. Niyet oluştu.** Hapa burada bitmez. Sonraki sorular:**-plan var mı?**
 **- Zor günlerde ne yapacaksın?**
 **- Aksatırsan nasıl geri döneceksin?** Niyet ettin, hatta başladın bile, tamam. Ama başlamak bir adım ise, başladıktan sonraki gelen her devam etme durumu da bir adım atmaktır. Daha yeni başlıyoruz.
-## "Haftaya sigarayı bırakıyorum" Yalanının Arkasındaki **6 ** Aşama *(Transteorik Model - TTM - Transtheoretical Model)*
+## "Haftaya sigarayı bırakıyorum" Yalanının Arkasındaki** 6** Aşama *(Transteorik Model - TTM - Transtheoretical Model)*
 
 > *"Değişmek bir eylem değil, bir bayrak yarışıdır."*
 
@@ -376,10 +348,7 @@ Birinin bilerek ve isteyerek kendine zarar vermeye devam etmesi (o son sigarayı
 Prochaska ve DiClemente "Sakin ol ***champ***, sadece doğru aşamada değilsin" diyor. 
 
 1983 yılında ilk önce sigara bırakma alanı için geliştirilen TTM kullanılan en yaygın aşamalı/adımlı modeldir. 
-Birden fazla teorinin yapıları entegre.** Yani  **TTM, davranışın değişimini tek bir "yapacak mısın/yapmayacak mısın" kararı olarak değil de, 6 niteliksel olarak farklı aşamadan geçen ve geri düşüşlerle ilerlenen bir süreç olarak ele alır.**Etkili müdahalenin anahtarı kişinin hangi aşamada olduğunu doğru tespit etmek ve o aşamaya uygun stratejiyle yaklaşmaktır.**
-
-Prochaska ve DiClemente şunu fark etti: sigara bırakmaya çalışan insanlara bakıldığında, hepsinin aynı noktada olmadığını görüyorsun. Biri "sorun yok, devam" diyorken, başka biri bir yıldır içmiyor. 
-**Bunları aynı müdahaleyle hedeflemek anlamsız. TTM bu gözlemden doğdu: değişim bir "an" değil, bir süreç . Ve o sürecin**  tanımlanabilir **aşamaları var.**---
+Birden fazla teorinin yapıları entegre.** Yani** TTM, davranışın değişimini tek bir "yapacak mısın/yapmayacak mısın" kararı olarak değil de, 6 niteliksel olarak farklı aşamadan geçen ve geri düşüşlerle ilerlenen bir süreç olarak ele alır.**Etkili müdahalenin anahtarı kişinin hangi aşamada olduğunu doğru tespit etmek ve o aşamaya uygun stratejiyle yaklaşmaktır.** Prochaska ve DiClemente şunu fark etti: sigara bırakmaya çalışan insanlara bakıldığında, hepsinin aynı noktada olmadığını görüyorsun. Biri "sorun yok, devam" diyorken, başka biri bir yıldır içmiyor.** Bunları aynı müdahaleyle hedeflemek anlamsız. TTM bu gözlemden doğdu: değişim bir "an" değil, bir süreç . Ve o sürecin **tanımlanabilir** aşamaları var.**---
 
 ### ***Değişimin 6 Aşaması ***>1 -*** Gaflet Uykusu...***
 
@@ -390,32 +359,32 @@ Prochaska ve DiClemente şunu fark etti: sigara bırakmaya çalışan insanlara 
 ***>2 -*** Flört Aşaması***
 
 *Zihniyet:*- "Ya aslında bıraksam fena olmaz.."
-- "Bi ara bırakmam lazım.."* Zaman:*
+- "Bi ara bırakmam lazım.."*Zaman:*
 **Gelecek 6 ay içinde değişimi düşünüyor. Ama önündeki 30 gün için niyet yok. 
 
 ---
 
 > 3 -** Savaş Hazırlığı**
 
-*Zihniyet:*-*"Tamam ya, bu iş bu ay bitiyor."*- "Geçen sene 3 hafta bırakmıştım.. Önümüzdeki ay tekrar denicem."* Zaman:*
+*Zihniyet:*-*"Tamam ya, bu iş bu ay bitiyor."*- "Geçen sene 3 hafta bırakmıştım.. Önümüzdeki ay tekrar denicem."*Zaman:*
 **Niyet var, gelecek 30 gün içinde harekete geçmeye kesin niyetli. Mikro adımlar bu evrede başlar.**
 
 ***> 4 -*** Savaş Alanı***
 
 *Zihniyet:*- "Olm ciddi ciddi 3 ay içmiyorum!"
-- "Yapıyorum ulan!"* Zaman:*
-**Hedef davranışı aktif olarak uyguladığı ilk 6 ay.** En tehlikeli, iradenin en çok kırıldığı ve tetiklenme seviyesinin pik yaptığı yer... **---
+- "Yapıyorum ulan!"*Zaman:*
+**Hedef davranışı aktif olarak uyguladığı ilk 6 ay.** En tehlikeli, iradenin en çok kırıldığı ve tetiklenme seviyesinin pik yaptığı yer...** ---
 
-> 5 -** Kaleyi Koruma**
+> 5 -**Kaleyi Koruma**
 
 *Zihniyet:*- "Artık zorlamıyor, ama tetikteyim."
-- "2 yıldır içmiyorum, ama bazen canım çekmiyor değil..."* Zaman:*
+- "2 yıldır içmiyorum, ama bazen canım çekmiyor değil..."*Zaman:*
 **Başarılı eylemin 6. ayından 5. yılına kadar olan süreç. İlk başlardaki o yırtıcı çaba azalmıştır ama geri düşüşü engellemek için defans devam eder. Daha az çaba.
 
 ***> 6 -*** Mutlak Alışkanlık (Terminasyon)***
 
 *Zihniyet:*- "Eski ben kimdi hatırlamıyorum bile.."
-- "Sigara mı? O ne? Yeniyor mu?......."* Zaman:*
+- "Sigara mı? O ne? Yeniyor mu?......."*Zaman:*
 **5 yıldan uzun süren başarı. Öz-etkililik[^2] 100%, eski alışkanlığa dönme dürtüsü 0%. Yeni davranış artık karaktere dönüşmüştür.**---
 > ***Sürecin ille de yukarıdan aşağıya sıralı bi şekilde gitmesine gerek yok. Düşüşler ve sıçramalar normaldir. Bir kişi 4. aşamadan 2. aşamaya düşebilir, ya da tam tersi. Bu başarısızlık değil, sürecin kendisi. 
 ---
@@ -441,9 +410,7 @@ Yani bir nevi cephaneye hem bilgi hem de duyguları alırız ki neyle ve nasıl 
 2) Donanımsal kaldıraçlar (Davranışsal/Fiziksel)
 Değişimin **son** 3 aşamasında devreye girerler. Fizikseller.
 
-Seni eski alışkanlığa dair tetikleyen ne varsa hayatından temizlersin veya başka bi şeyle değiştirirsin. Mesela masaya oturmadan önce küllüğü, çakmağı çöpe atmak.. **Böylece seni uyaran şeyleri kontrol altına almış olursun.**
-
-Ayrıca kendini başarılı adımların için ödüllendirirsin. Mesela 3 gün içmezsem gidip kendime elit lüks ve premium diye tabir edilen bir kahve alcam. Ödül. 
+Seni eski alışkanlığa dair tetikleyen ne varsa hayatından temizlersin veya başka bi şeyle değiştirirsin. Mesela masaya oturmadan önce küllüğü, çakmağı çöpe atmak..**Böylece seni uyaran şeyleri kontrol altına almış olursun.** Ayrıca kendini başarılı adımların için ödüllendirirsin. Mesela 3 gün içmezsem gidip kendime elit lüks ve premium diye tabir edilen bir kahve alcam. Ödül. 
 
 ***Yani*** Yazılımsal kaldıraçları çalıştırmaya başladıkça, kafandaki "terazi" yön değiştirmeya başlıyor. 
 Bi noktadan sonra terazi "artılar daha fazla" dediği an, özgüven/öz-yeterlilik ibren yukarı fırlar ve seni **eylem** aşamasına taşır. 
@@ -451,13 +418,11 @@ Bi noktadan sonra terazi "artılar daha fazla" dediği an, özgüven/öz-yeterli
 Eyleme geçtiğin an ise donanımsal/davranışsal süreçleri devreye sokarsın. Bu da hem kaleyi korumanı sağlar hem de son aşama olan terminasyon/mutlak alışkanlık noktasına kadar götürür. 
 Yani davranışın değiştirmenin arkasında yatan mental/fiziksel motor budur. 
 
-> *Zor bi anda eski alışkanlığa geri dönme isteğinin **şiddeti** (buna TTM'de "ayartma dürtüsü deniyor), aşamalar ilerledikçe azalıyor..**
-## TTM'nin "çatlakları"..
+> *Zor bi anda eski alışkanlığa geri dönme isteğinin **şiddeti** (buna TTM'de "ayartma dürtüsü deniyor), aşamalar ilerledikçe azalıyor..** ## TTM'nin "çatlakları"..
 
 Tabi psikolojide neredeyse her şeyde olduğu gibi, bu teoride de akla *tam*  olarak yatmayan şeyler **var**:
 
-- Neden 6 ay?** İnsan psikoljisi İsviçre saati mi ki tam 6. ayda vites değiştirsin? Bu sürelerin bilimsel bir temeli yok. Zaman konusunda biraz sakat.**-** Sigarayı bırakmak için tıkır tıkır çalışan bu model, spor ve beslenmeye falan gelince patlıyor. Çünkü insanlar spor yaparken **her** aşamada **tüm** stretejileri **aynı anda** kullanıyor.**
-# 5. PAPM (Önleyici Eylem Süreç Modeli)
+- Neden 6 ay?** İnsan psikoljisi İsviçre saati mi ki tam 6. ayda vites değiştirsin? Bu sürelerin bilimsel bir temeli yok. Zaman konusunda biraz sakat.**-**Sigarayı bırakmak için tıkır tıkır çalışan bu model, spor ve beslenmeye falan gelince patlıyor. Çünkü insanlar spor yaparken** her **aşamada** tüm **stretejileri** aynı anda **kullanıyor.** # 5. PAPM (Önleyici Eylem Süreç Modeli)
 ## PAPM 
 *'Bilmiyordum' ile 'biliyorum ve umursamıyorum' arasındaki fark.*
 
@@ -473,19 +438,18 @@ PAPM, TTM'nin gözden kaçırdığı iki gerçeği modele katar: insanlar bir te
 Mesela evindeki radyoaktif radon gazının kanser yaptığından bihaber olan birisi.
 
 ---
-## 2) Kulaktan Dolma Bilgi / Kişisel Bağ Kurmama** Zihniyet:** "Öyle bi şey varmış aynen.. Ama beni bağlamaz."
+## 2) Kulaktan Dolma Bilgi / Kişisel Bağ Kurmama **Zihniyet:** "Öyle bi şey varmış aynen.. Ama beni bağlamaz."
 ***Olayı:*** Tehlikeyi duymuştur. Ama üzerine hiç düşünmez. Zaman sınırı yoktur.
 
 ---
 ## 3) Karar Masası **Zihniyet:** "Hmmmm... Acaba bu konuda bi şey yapsam mı lan?!"
-***Olayı:*** Mesele artık kişiselleşmiştir. Kişi artık ***aktif*** olarak bir karar vermeye çalışıyordur.
-**Burası yol ayrımıdır. 
+***Olayı:*** Mesele artık kişiselleşmiştir. Kişi artık ***aktif*** olarak bir karar vermeye çalışıyordur.**Burası yol ayrımıdır. 
 
 Buradan iki farklı aşamaya zıplayabilir:
 
 ---
 ## SOLA DÖNÜŞ
-## 4) Bilinçli "hayır" kararı** Zihniyet: **"Düşündüm. Taşındım..***VE ***yapmamaya karar verdim..... Konu kilit. Konu kapanmıştır.."*** Olayı:*** Eylem sekansı burada biter, durum sabittir. Kişi düşündü ve bilinçli bir karar verdi.
+## 4) Bilinçli "hayır" kararı** Zihniyet:** "Düşündüm. Taşındım..***VE ***yapmamaya karar verdim..... Konu kilit. Konu kapanmıştır.."*** Olayı:*** Eylem sekansı burada biter, durum sabittir. Kişi düşündü ve bilinçli bir karar verdi.
 ## SAĞA DÖNÜŞ
 ## 5) Bilinçli "evet" kararı **Zihniyet:** "Tamam ya. Bu işi yapıyorum. Kararımı verdim."
 ***Olayı:*** Kişi eyleme geçmeye niyetlenmiştir. Kararsızlık bitmiştir. Şimdi sadece ***ilk*** adımı atmak (initiation) kalmıştır. 
@@ -507,7 +471,7 @@ Ama ASLA 1. adım olan MUTLAK CAHİLLİĞE geri düşemezler. Bir kere duyup ö�
 
 ***Altın Kural:  Kişiye Özel Müdahale ***PAPM'in en büyük iddiası şudur:***"Her aşamadaki insana aynı yaklaşımı uygulayamazsın."***
 
-> **Radon Çalışması**```
+>**Radon Çalışması **```
 1897 katılımcıyla yapılan randomize, boylamsal çalışmada iki müdahale test edildi:** Yüksek risk bilgisi ve düşük efor**. 
 
 Radon, toprakta doğal olarak bulunan uranyumun bozunmasıyla oluşan radyoaktif bir gazdır. Sigaradan sonra akciğer kanserinin ikinci en yaygın nedeni. 
@@ -537,56 +501,53 @@ Yani iki farklı müdahale, iki farklı gruba farklı şekilde işledi. Bu da PA
 ## Kavga konusu: Gerçekten "Aşama" Diye Bir Şey Var mı?
 > *İnsan zihni bir merdiven midir, yoksa sürekli akan bir nehir mi? Yoksa tüm hepsi uydurma bir illüzyondan mı ibaret?!*
 
-*Buraya kadar sağlık psikolojisinin iki kampını tanıdık:* süreklilik  **modelleri ve**aşamalı** modeller.** İki taraf da insan davranışını çözdüğünü iddia ediyor ve birbirinin açığını yakalıyor:
+*Buraya kadar sağlık psikolojisinin iki kampını tanıdık:* süreklilik **modelleri ve** aşamalı **modeller.** İki taraf da insan davranışını çözdüğünü iddia ediyor ve birbirinin açığını yakalıyor:
 
----**Süreklilik** modellerinin en büyük derdi şuydu:***"Niyeti harika ölçüyoruz ama eylemi tahmin edemiyoruz."***
+---
+
+**Süreklilik** modellerinin en büyük derdi şuydu:***"Niyeti harika ölçüyoruz ama eylemi tahmin edemiyoruz."***
 
  *Bu niyet-eylem-boşluğunu ne ile doldurdular? 
 Volisyon ile.*
 
 ***Çelişki:*** Bir modeli "niyet öncesi" (motivasyonel) ve "niyet sonrası" (volisyonel) diye iki ayrı faza ayırırsan, o model artık "sürekli/doğrusal" bir model olmaktan çıkar...
-2 ayrı evreye bölünmüş olur. **Yani sürekli modelciler, sırf eylemi açıklayabilmek için kendi ilkelerine ihanet edip modeli aşamalıya dönüştürdüler...**
+2 ayrı evreye bölünmüş olur.**Yani sürekli modelciler, sırf eylemi açıklayabilmek için kendi ilkelerine ihanet edip modeli aşamalıya dönüştürdüler...** ---
 
----
-**Aşamalı** modellerin illüzyonu: Gelelim TTM ve PAPM modellerine.. Sutton (2001) başta olmak üzere şüpheci bilim insanları bu modellere sordukları şu soru sistemi sallıyor:**"Ya bu aşamalar gerçekte yoksa?"** Yani aslında sürekli bir özelliğin yapay olarak aşamalara bölünmesi mi? Eğer aşamlar gerçekte sürekli bir özellikse, *kişiye özel*(kişiselleştirilmiş) müdahalelere gerek kalmaz.* Örnek:* İnsan boyunu "kısa, orta, uzun" diye üçe bölmek. Boy aslında *sürekli* bir değişken. Ama biz onu kategoriye koyuyoruz. Bu kategoriler doğada "gerçek" sınırlar değil, bizim çizdiğimiz sınırlar.*Soru şu* :***davranış değişim aşamaları da böyle mi, yoksa gerçekten birbirinden niteliksel olarak*** ayrı *  *durumlar mı?***
+**Aşamalı **modellerin illüzyonu: Gelelim TTM ve PAPM modellerine.. Sutton (2001) başta olmak üzere şüpheci bilim insanları bu modellere sordukları şu soru sistemi sallıyor:**"Ya bu aşamalar gerçekte yoksa?"** Yani aslında sürekli bir özelliğin yapay olarak aşamalara bölünmesi mi? Eğer aşamlar gerçekte sürekli bir özellikse, *kişiye özel*(kişiselleştirilmiş) müdahalelere gerek kalmaz.*Örnek:* İnsan boyunu "kısa, orta, uzun" diye üçe bölmek. Boy aslında *sürekli*bir değişken. Ama biz onu kategoriye koyuyoruz. Bu kategoriler doğada "gerçek" sınırlar değil, bizim çizdiğimiz sınırlar.*Soru şu* :***davranış değişim aşamaları da böyle mi, yoksa gerçekten birbirinden niteliksel olarak*** ayrı *  *durumlar mı?***
 
-> ***Eleştiri:***>Alerji ilacını almaya giden Ahmet, spora başlayan Mehmet ya da meyve yiyen Larissa aslında "niteliksel olarak farklı" aşamalarda olmayabilirler. Belki de sadece davranış motivasyonları kesintisiz bir çizgi üzerine azalıp artıyordur ve ***biz onlara yapay olarak "Action", "Contemplation" falan gibi havalı isimler veriyoruzdur?!*** Eğer bu aşamalar  **yalansa**, her aşamaya özel devasa bütçeli kampanyalar yapılması tamamen para ve zaman kaybıdır. 
+> ***Eleştiri:***>Alerji ilacını almaya giden Ahmet, spora başlayan Mehmet ya da meyve yiyen Larissa aslında "niteliksel olarak farklı" aşamalarda olmayabilirler. Belki de sadece davranış motivasyonları kesintisiz bir çizgi üzerine azalıp artıyordur ve ***biz onlara yapay olarak "Action", "Contemplation" falan gibi havalı isimler veriyoruzdur?!*** Eğer bu aşamalar **yalansa**, her aşamaya özel devasa bütçeli kampanyalar yapılması tamamen para ve zaman kaybıdır. 
 
 ---
 # 6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE
 ## Ortak Düşman: Geri Düşüş (Relapse)
-*Tüm bu modellerin kesiştiği bir konu var:* insanlar kazandıkları davranışı neden ve nasıl kaybediyor?** Geri Düşüş, bir insanın yeni edindiği sağlıklı davranışı (sigarayı bırakmak, düzenli spor...)
-aniden kesip, o eski konforlu ve tehlikeli **riske geri dönmesi** durumudur. 
+*Tüm bu modellerin kesiştiği bir konu var:* insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**Geri Düşüş, bir insanın yeni edindiği sağlıklı davranışı (sigarayı bırakmak, düzenli spor...)
+aniden kesip, o eski konforlu ve tehlikeli** riske geri dönmesi **durumudur. 
 
-Sağlık psikolojisi modellerinin en çok zorlandığı, çünkü insan iradesinin en **irrasyonel ve kaotik** olduğu yer burasıdır. 
+Sağlık psikolojisi modellerinin en çok zorlandığı, çünkü insan iradesinin en** irrasyonel ve kaotik** olduğu yer burasıdır. 
 
 Bir modeli ***"gerçek"*** yapan şey, insanı yukarı taşımaktan ziyade,***düştüğünde*** sistemin bunu nasıl modellediğidir. 
-*Yani: sağlık davranışı kazanmak bir şey. Onu korumak başka bir şey.* Geri düşüş, relapse, kelimesinin hangi modele göre ne anlama geldiğinin değişmesi:*1 yudum alkol bazı modellere göre tam bir geri düşüş, bazılarına göre sadece bir* "ayak kayması/denge kaybı"*. 
+*Yani: sağlık davranışı kazanmak bir şey. Onu korumak başka bir şey.*Geri düşüş, relapse, kelimesinin hangi modele göre ne anlama geldiğinin değişmesi:*1 yudum alkol bazı modellere göre tam bir geri düşüş, bazılarına göre sadece bir*"ayak kayması/denge kaybı"*. 
 
-Bu yüzden rol oynayan şey, kullanılan bozukluk modeli.* Hastalık modeli sadece iki durum tanır:* tamamen uzak ** veya geri **düşmüş.** Marlatt ve Gordon (1985) ise sosyal-kognitif pencereden bakarak süreci detaylandırır: "ayak kayması" öğrenme sürecinin **normal** bir hatasıdır ve henüz gerçek anlamda **Geri Düşüş** sayılmaz. 
+Bu yüzden rol oynayan şey, kullanılan bozukluk modeli.*Hastalık modeli sadece iki durum tanır:* tamamen uzak **veya geri** düşmüş.**Marlatt ve Gordon (1985) ise sosyal-kognitif pencereden bakarak süreci detaylandırır: "ayak kayması" öğrenme sürecinin** normal **bir hatasıdır ve henüz gerçek anlamda** Geri Düşüş** sayılmaz. 
 Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü temsil eder. 
 ***Sosyal-kognitif perspektif temsilcileri, alkolizmin bir hastalık olduğu düşüncesinin kişinin sadece sorumluluğunu değil, aynı zamanda kontrolünü de elinden aldığını savunuyor.***
 
-> **20. yüzyıl başında popüler olan "ahlaki model"e göre çok içen kişiler iradesiz ve karakter zayıflığına sahip insanlardı....
+>** 20. yüzyıl başında popüler olan "ahlaki model"e göre çok içen kişiler iradesiz ve karakter zayıflığına sahip insanlardı....
 
 > 1960'da Jellinek bağımlılığı bir hastalık olarak ele alana kadar bunu tamamen kişinin kontrolünde olduğu inancı hakimdi. 
 
-*Paradigmadaki bu değişim, dönemin etkilenen kişileri (dönemin bağımlıları) için **iradesizlik** damgasından kurtulma anlamına geldiği için büyük bir rahatlama sağladı.**
+*Paradigmadaki bu değişim, dönemin etkilenen kişileri (dönemin bağımlıları) için **iradesizlik** damgasından kurtulma anlamına geldiği için büyük bir rahatlama sağladı.**---
 
----
-
-> **AA (Anonim Alkolikler) gibi Hastalık Modeli temsilcilerine göre kişi ömür boyu alkoliktir ve tek çözüm tam perhizidr, "iyileşme" diye bi şey yoktur. Bi kere alkoliksen ömür boyu alkoliksin ve tek kadeh şarap = "Geri Düşüş"tür.**
-> **"Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez "hastalandıysan" hayatın boyunca hastasındır ve ASLA iyileşmezsin."
+>** AA (Anonim Alkolikler) gibi Hastalık Modeli temsilcilerine göre kişi ömür boyu alkoliktir ve tek çözüm tam perhizidr, "iyileşme" diye bi şey yoktur. Bi kere alkoliksen ömür boyu alkoliksin ve tek kadeh şarap = "Geri Düşüş"tür.** >** "Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez "hastalandıysan" hayatın boyunca hastasındır ve ASLA iyileşmezsin."
 >
 > *Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değil. 
 
 ---
 ## ***Perhiz İhlali Etkisi***
-**(AVE - Abstinenz-Verletzungs-Effekt)**
-Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini **kötü** ve**suçlu** hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir:**"Ben iradesizim!"** veya *"Ben alkolik bir hastayım!"*. 
-Bu iki* atıf  *da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu*olumsuz duygulardan kaçmak için* yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf*doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
+**(AVE - Abstinenz-Verletzungs-Effekt)** Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini** kötü **ve** suçlu **hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir:**"Ben iradesizim!"** veya *"Ben alkolik bir hastayım!"*. 
+Bu iki* atıf  *da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu*olumsuz duygulardan kaçmak için*yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf*doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
 
-> **Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.**
+>**Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.**
 
 ***Bu perhiz ihlali etkisinin mekanizması da tıkır tıkır çalışıyor:*** Anlık bir hata / İlk yudum
 ↓
@@ -598,9 +559,7 @@ Kontrolün tam kaybı "E madem kontrol da edemiyorum, zaten değiştiremem!"
 ↓
 Kısırdöngü
 ↓
-Vahşi ve TAM bir geri düşüş
-
-**Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek **tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.**Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.**
+Vahşi ve TAM bir geri düşüş **Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek **tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.**Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.**
 
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
 
@@ -613,9 +572,9 @@ Vahşi ve TAM bir geri düşüş
 
 ## Kaynaklar
 
-- Ajzen, I. (1991). The theory of planned behavior. **Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020
+- Ajzen, I. (1991). The theory of planned behavior.** Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020
 - T
-- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. **Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
-- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. *American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
-- Rosenstock, I. M. (1974). Historical origins of the health belief model. **Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
-- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. **Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x
+- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change.** Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
+- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans.*American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
+- Rosenstock, I. M. (1974). Historical origins of the health belief model.** Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
+- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors.** Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x

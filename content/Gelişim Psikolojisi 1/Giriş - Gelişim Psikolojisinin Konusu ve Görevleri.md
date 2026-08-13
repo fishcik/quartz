@@ -23,7 +23,7 @@ tags:
 
 Konuya dalmadan önce "psikolojik gelişim" ne demek, altında yatan mekanizmalar nedir, ve hangi faktörler bu süreci nasıl şekillendiriyor?
 
-Bir çok başka şey gibi, bu sorulara dair de bir çok farklı teorik yaklaşım var. Dönem dönem değişiyor, bazıları eleniyor, bazıları sağlamlaşıyor. **Öyle genelgeçer, net ve tek bir anlatı yok.** Ama en çok mutabık kalınan kısım: "Psikolojik gelişim, bireyin ***tüm yaşamı boyunca*** devam eden, düzenli, yönelimli ve uzun değişimdir."
+Bir çok başka şey gibi, bu sorulara dair de bir çok farklı teorik yaklaşım var. Dönem dönem değişiyor, bazıları eleniyor, bazıları sağlamlaşıyor.**Öyle genelgeçer, net ve tek bir anlatı yok.** Ama en çok mutabık kalınan kısım: "Psikolojik gelişim, bireyin ***tüm yaşamı boyunca*** devam eden, düzenli, yönelimli ve uzun değişimdir."
 
 Tanımı parçalarına ayırmak istersek:
 
@@ -37,7 +37,7 @@ Bu ilk bakışta biraz fazla determinist ve sanki "her şey belirlenmiş mi?" so
 
 Tabi hayat öyle dümdüz akan ve her yerde aynı gelişimi gösteren bir şey değil. Bi gün bi kaza, başka bi gün bir sürpriz ve bir başka bir gün bir heyecan yaşayabilirsiniz ve bunlar da gelişimimizi etkiler. 
 
-*İşte asıl nokta da burda: o beklenmedik olayların seni nasıl etkilediği,***daha önce ne geliştirdiğine bağlı.***
+**İşte asıl nokta da burda:* o beklenmedik olayların seni nasıl etkilediği,***daha önce ne geliştirdiğine bağlı.***
 
 Mesela bir kaza geçiriyorsun, o kazayı nasıl karşıladığın, o ana kadar ne öğrenidğine, ne kadar dayanıklıklık inşa ettiğine göre şekilleniyor. 
 
@@ -59,16 +59,14 @@ Bu, gelişimin çok yönlülüğüdür. Yani tek yöne doğru sürekli bir kazan
 Bunun klasik bir örneğini bebekler üzerinden de anlayabiliriz. 
 Bebekler dünyaya geldiğinde tüm insan dillerindeki sesleri ayırt edebiliyorlar. Yani, Japonca'daki r/l farkını, Türkçe'deki ğ'yi, Almanca'daki ch'yı, hepsini duyuyorlar. Ama 6-12. aylar arasında bu kapasite bir nevi daralıyor, kendi ana diline odaklanıyor ve diğer dillerin seslerine olan duyarlılık azalıyor.
 
-###* Kazanç: ana dilde uzmanlaşma.* 
+###*Kazanç: ana dilde uzmanlaşma.* 
 *Kayıp: evrensel ses algısı.* 
 
 Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüzme benzeri hareketler yapabilmeleri. Bu refleks de birkaç ay içinde kayboluyor ve sonrasında yüzmeyi *tekrar* öğrenmek gerekiyor, bu sefer bilinçli olarak. 
 
-> **Genel mantık şu: uzmanlaşma her zaman bir daralmayla geliyor.**
+>**Genel mantık şu: uzmanlaşma her zaman bir daralmayla geliyor.**
 
-**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
-
-## 1. Gelişimin Temel İlkeleri ve Doğası
+**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.** ## 1. Gelişimin Temel İlkeleri ve Doğası
 
 ### Kısa anlık değişimler gelişim değil, bunu biliyoruz. 
 
@@ -121,7 +119,7 @@ Sonuç: daha fazla kelime hatırlıyor.
 Sadece "daha çok" değil, "farklı şekilde". 
 
 İşte bu yüzden nicelik ve nitelik iç içe düşünülmeli. 
-*Hem insan olmanın getirdiği yetileri keşfetmek ve onların gelişmesi, hem de bu yetilere uygun olan stratejilerin gelişmesi ve uygulanması.* ### Geri dönüş bileti var mı? (Plastisite) 
+*Hem insan olmanın getirdiği yetileri keşfetmek ve onların gelişmesi, hem de bu yetilere uygun olan stratejilerin gelişmesi ve uygulanması.*### Geri dönüş bileti var mı? (Plastisite) 
 
 Basamak teorileri geri dönüş yok der. Bir adım attın mı, geri dönemezsin. Piaget'ye göre gelişim tek yönlü bir asansör gibi, sadece yukarı gider,*tekrar aşağı inemezsin.* 
 
@@ -136,14 +134,12 @@ Kaybetti mi? Evet.
 Geri alınabilir mi? Kolay değil. 
 Yetişkin olarak vs. çocuk olarak yabancı dil öğrenmenin farkı da bu. 
 
-Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor. **Beyin bir hamur ise**, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.*
+Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor.**Beyin bir hamur ise**, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.*
 
 ### Herkeste mi, sende mi? (Evrensel vs. Diferansiyel)
 
 Eskiden gelişim psikolojisi şunu soruyordu: "ortalama insan nasıl gelişiyor?"
-Yaş normları koyuyorlardı: 2 yaşında şunu yapar, 7 yaşında şu olacak. Herkes için geçerli bir harita. 
-
-**Ama artık soru değişti: "aynı yaştaki iki insan neden farklı gelişiyor?"**
+Yaş normları koyuyorlardı: 2 yaşında şunu yapar, 7 yaşında şu olacak. Herkes için geçerli bir harita. **Ama artık soru değişti: "aynı yaştaki iki insan neden farklı gelişiyor?"**
 
 ### Evrensel değişim:
 Herkeste olan. İnsan olmanın olayı olan. Bebekler emekler, çocuklar okur. Biyoloji ve çevre (nature/nurture) o kadar güçlü ve standart ki, neredeyse herkes aynı rotayı izliyor. Burada sen özel değilsin, sistem seni taşıyor, sistem seni sürüklüyor.
@@ -151,7 +147,7 @@ Herkeste olan. İnsan olmanın olayı olan. Bebekler emekler, çocuklar okur. Bi
 ### Diferansiyel değişim
 Burda yollar ayrılıyor. Yetişkinlikte artık herkesin hep beraber 30 yaşında yaptığı bir şey kalmıyor. Kim hangi hedefi kovalıyor, kim evleniyor, kim işini kaybediyor, bunlar standart değil. 
 
-***Çocukluk bir tren yolu gibi düşünülebilir. Herkes aynı rayda gidiyor.*  *Yetişkinlik açık arazı, artık ray yok, kim nereye giderse oraya.***Bu yüzden de gelişim psikolojisi giderek daha çok "bu spesifik kişi neden/nasıl böyle gelişti" sorusuna kayıyor. Ortalamaya, genele değil, sana bakıyor. 
+*Çocukluk bir tren yolu gibi düşünülebilir. Herkes aynı rayda gidiyor. Yetişkinlik açık arazi, artık ray yok, kim nereye giderse oraya.* Bu yüzden de gelişim psikolojisi giderek daha çok "bu spesifik kişi neden/nasıl böyle gelişti" sorusuna kayıyor. Ortalamaya, genele değil, sana bakıyor. 
 
 Yani; her seferinde o gelişime bakıp soruyorsun:
 - Niceliksel mi / Niteliksel mi
@@ -160,7 +156,7 @@ Yani; her seferinde o gelişime bakıp soruyorsun:
 
 "Bu spesifik durumda hangisi geçerli?"
 
-Gelişim oldu tamam, ama** neden** oldu sorusu açık. *Olgunlaşma* ise neden sorusuna cevap oluyor. Topu biyolojiye atıyor. Sen bi şey yapmadın, çevren de. Olan şey genetik programın çalışması ve bir şeylerin değişmesi. 
+Gelişim oldu tamam, ama **neden** oldu sorusu açık. *Olgunlaşma* ise neden sorusuna cevap oluyor. Topu biyolojiye atıyor. Sen bi şey yapmadın, çevren de. Olan şey genetik programın çalışması ve bir şeylerin değişmesi. 
 
 Mesela, bebek doğduğunda bir sürü refleksi var; emme, tutunma, irkilme refleksleri. Bunlar programlanmış bi şekilde geliyor, ekstra bunları öğrenmiyorsun, ve bunlar yine programlanmış bir şekilde kayboluyor. Bebek "öğrenmiyor", ya da sen öğretmiyorsun. Olgunlaşma sırası gelince bazı şeyleri siliyor, otomatik. 
 
@@ -174,7 +170,7 @@ Bu yüzden de salt olarak biyolojinin işi diyebileceğimiz örnekler çok az. B
 # 2. Zaman Pencereleri: Kritik ve Hassas Dönemler
 ## Pencere Açık, Pencere Kapandı
 
-Davranış psikolojisinin söylediği sert bir kavram bu; bazı öğrenmeler geri alınamaz ve sadece belirli bir zaman diliminde olabilir.* Yani treni kaçırırsan bi daha tren falan yok. Ya da yanlış trene binersen bi daha inmek neredeyse imkansız.* 
+Davranış psikolojisinin söylediği sert bir kavram bu; bazı öğrenmeler geri alınamaz ve sadece belirli bir zaman diliminde olabilir.*Yani treni kaçırırsan bi daha tren falan yok. Ya da yanlış trene binersen bi daha inmek neredeyse imkansız.* 
 
 Hassas[^4] dönemler yani. Genetik olarak programlanmış kısa süreli bir pencere. O pencere açıkken doğru uyaran gelirse, değişim kalıcı oluyor. Pencere kapandıktan sonra ne yaparsan yap, o değişim artık o olması gerektiği şekilde olmuyor. 
 Ya da tam tersi, pencere açıkken gerekli deneyim gelmezse, buna yoksunluk deniyor, gelişim sekiyor. Ve bu sekme sonradan telafi edilemiyor, ya da çok zor ediliyor. 
@@ -212,18 +208,10 @@ Bir çocuğun saldırganlığı değişmedi mi? Tamam ama grubun ortalaması mı
 
 Hepsi farklı sorular, farklı cevaplar. 
 
-Değişmeyen şeyler var. Neyin değişmediğine göre tamamen farklı şeyler kastediliyor. Bu yüzden "stabilite" tek bir şey değil. 
+Değişmeyen şeyler var. Neyin değişmediğine göre tamamen farklı şeyler kastediliyor. Bu yüzden "stabilite" tek bir şey değil.**Grup ortalaması sabit mi?** Bir sınıftaki herkesin matematik notu zamanla değişmedi. Ortalama aynı kaldı. Ama kim iyi kim kötü değişmiş olabilir, önemli değil, pozisyonlar sabit.**Sıralama sabit mi?** Ali her zaman en iyiydi, Abdülrezzakhan hep ortalama, Fatımavesvese hep sonda. Sayılar değişmiş olabilir ama sıra hiç bozulmadı. Ortalama değişmiş olabilir, önemli değil, pozisyonlar sabit.**İkisi birden** Hem ortalama değişmedi, hem sıralama değişmedi. En katı stabilite bu.
+Kişinin kendi içindeki sıralama sabit mi?**"Para, insan ilişkileri, teknoloji. Sence en önemlisi hangisi?" diye sordun birine. Kişi her seferinde aynı önem sıralaması verdi.** 
 
-**Grup ortalaması sabit mi?** Bir sınıftaki herkesin matematik notu zamanla değişmedi. Ortalama aynı kaldı. Ama kim iyi kim kötü değişmiş olabilir, önemli değil, pozisyonlar sabit.
-**Sıralama sabit mi?** 
-Ali her zaman en iyiydi, Abdülrezzakhan hep ortalama, Fatımavesvese hep sonda. Sayılar değişmiş olabilir ama sıra hiç bozulmadı. Ortalama değişmiş olabilir, önemli değil, pozisyonlar sabit.
-**İkisi birden** Hem ortalama değişmedi, hem sıralama değişmedi. En katı stabilite bu.
-Kişinin kendi içindeki sıralama sabit mi? 
-**"Para, insan ilişkileri, teknoloji. Sence en önemlisi hangisi?" diye sordun birine. Kişi her seferinde aynı önem sıralaması verdi.** 
-
-**İç yapı sabit mi?** Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel zeka" var. Ama büyüdükçe bu ilişki zayıflıyor, testler birbirinden ayrışıyor. Yani yapı değişiyor. Artık tek bir "genel zeka"yı ölçmüyorlar, farklı şeyleri ölçüyorlar.**Bunla ilgili düşünce deneyi:**
-
-Üç kişi.
+**İç yapı sabit mi?** Zeka testlerinin birbiriyle ilişkisi çocuklukta yüksek. Sanki tek bir "genel zeka" var. Ama büyüdükçe bu ilişki zayıflıyor, testler birbirinden ayrışıyor. Yani yapı değişiyor. Artık tek bir "genel zeka"yı ölçmüyorlar, farklı şeyleri ölçüyorlar.**Bunla ilgili düşünce deneyi:** Üç kişi.
 İki zaman noktası.
 
 1a: Herkes aynı kaldı. Donmuş tablo. 
@@ -235,15 +223,11 @@ Kişinin kendi içindeki sıralama sabit mi?
 
 Yani bugün en kaygılı olan çocuk, 20 yıl sonra da en kaygılı yetişkin mi oluyor?
 
-İki şekilde olabiliyor:
+İki şekilde olabiliyor:** Eştipli Süreklilik **Aynı şeyi, aynı soruyla ölçüyorsun. Sadece zaman değişiyor. 
 
-**Eştipli Süreklilik** Aynı şeyi, aynı soruyla ölçüyorsun. Sadece zaman değişiyor. 
-
-5 yaşındaki en kudurmuş kural tanımaz arsız saldırgan çocuk 15 yaşında da yine **en** mi? 
+5 yaşındaki en kudurmuş kural tanımaz arsız saldırgan çocuk 15 yaşında da yine** en **mi? 
 Aynı özellik, aynı ölçüm, farklı zaman. 
-Sıralama korunuyorsa eştipli süreklilik vardır deriz. 
-
-**Karşıtipli Süreklilik** Burda ilginç bi soru daha ekleniyor:**farklı yaşlarda farklı görünen şeyler aslında aynı şeyin farklı formları mı?** Bebek sürekli ağlıyor, sakinleştirilemiyor. 
+Sıralama korunuyorsa eştipli süreklilik vardır deriz.** Karşıtipli Süreklilik **Burda ilginç bi soru daha ekleniyor:** farklı yaşlarda farklı görünen şeyler aslında aynı şeyin farklı formları mı?** Bebek sürekli ağlıyor, sakinleştirilemiyor. 
 30 yaşında duygusalak olarak dengesiz, sinirli, nevrotik. 
 
 Bunlar aynı ölçüm değil, biri bebek davranışı, diğeri yetişkin kişilik özelliği. 
@@ -261,22 +245,16 @@ Bunun bi sonraki adımı da: o bebek ağlamasından yetişkinlik nevrotikliğine
 
 4 temel görevi var. 
 
-> **Betimleme**
-**Ne oluyor?**
+>**Betimleme**
+**Ne oluyor?** Olabildiğince objektif, güvenilir ve geçerli bir şekilde değişimleri kayıt altına almak. Yaş normları, gelişim temaları. 
 
-Olabildiğince objektif, güvenilir ve geçerli bir şekilde değişimleri kayıt altına almak. Yaş normları, gelişim temaları. 
+>** Açıklama**
+**Neden oluyor?** Hangi koşullar hangi gelişimi tetikliyor? Buradaki önemli nüans: nedensellik kurmak çok zor. Çoğunlukla "şu koşul varsa bu gelişim daha olası" diyebiliyorız. Ama "şu koşul olduğu için bu oldu" demek başka bir şey. Değişimler çok, etkileşimler karmaşık. 
 
-> **Açıklama**
-**Neden oluyor?**
+>** Tahmin etme**
+**Ne olacak?** Kesin değil olasılıksal. Ya geçmişteki koşullardan geleceği  ya da bir özelliğin geçmişteki düzeyinden gelecekteki düzeyini tahmin etmeye çalışabiliriz. Bebeğin çok ağlamasının yetişkinliğindeki nevrotiklik olasılığı hakkında tahmin payımız. 
 
-Hangi koşullar hangi gelişimi tetikliyor? Buradaki önemli nüans: nedensellik kurmak çok zor. Çoğunlukla "şu koşul varsa bu gelişim daha olası" diyebiliyorız. Ama "şu koşul olduğu için bu oldu" demek başka bir şey. Değişimler çok, etkileşimler karmaşık. 
-
-> **Tahmin etme**
-**Ne olacak?**
-
-Kesin değil olasılıksal. Ya geçmişteki koşullardan geleceği  ya da bir özelliğin geçmişteki düzeyinden gelecekteki düzeyini tahmin etmeye çalışabiliriz. Bebeğin çok ağlamasının yetişkinliğindeki nevrotiklik olasılığı hakkında tahmin payımız. 
-
-> **Etkileme**
+>** Etkileme**
 **Değiştirebilir miyiz?** Müdahale edince ne oluyor? Plastisite nereye kadar gidiyor? 
 Pratik boyutta doğrudan istenmeyen bir gelişimi önlemek, bir hasarı geri almak, ya da genel olarak gelişimi desteklemek.
 # 4. Biyoloji vs. Çevre: Genetik ve Epigenetik
@@ -315,9 +293,7 @@ Tek yumurta ikizleri genetik olarak identik, çift yumurta ikizleri ise %50 ört
 Çevrenin etkisini. 
 
 İkisi arasındaki benzerlikle neyi gösteriyor?
-Genin etkisini. 
-**Farklı ailelere verilen biyolojik kardeşler. Birbirlerine mi benziyolar yoksa evlat edinen ailelerine mi "çekiyorlar"?**
-Bunun cevabı, genlerin mi çevrenin mi daha ağır bastığını söylüyor. 
+Genin etkisini.**Farklı ailelere verilen biyolojik kardeşler. Birbirlerine mi benziyolar yoksa evlat edinen ailelerine mi "çekiyorlar"?** Bunun cevabı, genlerin mi çevrenin mi daha ağır bastığını söylüyor. 
 
 Moleküler genetik çalışmaları direkt spesifik alellere bakıp "bu alel şu özellikle ilişkili mi" diye sorabiliyor.
 ## İkiz Çalışmaları
@@ -346,7 +322,7 @@ Bir popülasyondaki bireysel farklılıkların ne kadarının genden kaynakland�
 
 Sonuçlar da aşağı yukarı tahmin edebileceğimiz gibi: zeka için yaklaşık %50. Big Five kişilik özellikleri için 35-50% arası.
 
-Yani "kim olduğunun" yarısı genden geliyor gibi** görünüyor**.. 
+Yani "kim olduğunun" yarısı genden geliyor gibi **görünüyor**.. 
 
 Ama şunu düşünelim: tek yumurta ikizleri, çift yumurtaya göre sosyal çevreden de daha benzer bir muamele görebiliyor. 
 Aynı yüz, aynı ses, aynı her şey. İnsanlar onlara identik yani "aynı" davranıyor. Bu da gen etkisini daha da şişiriyor olabilir. 
@@ -382,7 +358,7 @@ Yani gen direkt çevreyi değiştirmiyor. Davranış üzerinden dolaylı etkiliy
 > ***Aktif Kovaryasyon***>***Artık sen seçiyorsun*** Büyüdükçe kendi çevremizi kendimizin inşa etmesi. Müzik konservatuvarına başvurmak, o grubu kurmak, o insanları bulmak. 
 Gen artık seni *yönlendiriyor* . Sen de çevreyi *ona göre* şekillendiriyorsun. 
 
-> **Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. 
+>**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. 
 
 ### Aynı Pislik, Farklı Hasar
 
@@ -393,12 +369,10 @@ Kovaryasyonun dediği gibi çevre ve gen'in birbirleriyle olan etkileşimin üst
 
 Bu farkı anlamak için şu metafor işimize yarayabilir:
 
-> **Karahindiba çocuklar:**
->>Kaldırım taşı altından bile çıkar karahindiba. Bahçe güzel mi çirkin mi çok sallamaz. Yine de büyür. 
+>**Karahindiba çocuklar:** >>Kaldırım taşı altından bile çıkar karahindiba. Bahçe güzel mi çirkin mi çok sallamaz. Yine de büyür. 
 > Çevre ne olursa olsun ortalama bir gelişim, ne çok iyi ne çok kötü. Sisteme duyarsız, dayanıklı, esnek. 
 
-> **Orkide çocuklar:**
->>Doğru toprağa, doğru ışığa, doğru neme ihtiyaçları var. Bu koşullar sağlanırsa inanılmaz açarlar. Karahindibanın asla ulaşamayacağı yerlere gidebilirler. 
+>**Orkide çocuklar:** >>Doğru toprağa, doğru ışığa, doğru neme ihtiyaçları var. Bu koşullar sağlanırsa inanılmaz açarlar. Karahindibanın asla ulaşamayacağı yerlere gidebilirler. 
 > Ama koşullar bozuksa, solar, hasar görür, çöker, çürür. 
 
 Zaten evrimsel mantığa göre her ikisi de bir strateji. 
@@ -441,7 +415,7 @@ Ayrıca, bazı genler zaten geç devreye giriyor. Ergenlikte, yetişkinlikte akt
 ## "Ortalama" yeterli mi?
 
 Scarr (1992) zamanında sert bi şekilde sormuş: 
-> ***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"*** Genler işini yapar. Eğer çevre en azından ortalama ise. Çocuk genetik olarak sağlıklıysa ve ***aşırı*** kötü bir ortamda büyümüyorsa zaten gelişir. Genler işini yapacak, çocuk kültürel normlara  *uygun* bir şekilde büyüyecek. 
+> ***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"*** Genler işini yapar. Eğer çevre en azından ortalama ise. Çocuk genetik olarak sağlıklıysa ve ***aşırı*** kötü bir ortamda büyümüyorsa zaten gelişir. Genler işini yapacak, çocuk kültürel normlara  *uygun*bir şekilde büyüyecek. 
 Ebeveynlerinin ne kadar ilgilendiği, hangi kitabı okuduğu, hangi yöntemi bilip bilmediğinin büyük etkisi yok. 
 
 > Sadece "olması gerektiği kadar" ol, gerisini gen halleder.
@@ -454,9 +428,7 @@ Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gö
 >** Ebeveynlerin etkisi genler tarafından sınırlandırılıyor. O sınırlar içinde hareket alanı var. O alanda iyi ebeveynlik fark yaratıyor.** Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip.
 ## Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin
 
-![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]
-
-**Bronnfenbrenner'in ekolojik gelişim modeli.** Bronnfenbrenner diyor ki: insan iç içe geçmiş sistemlerin tam "ortasında" büyüyor. İnsanı anlamak için  *sadece* insana bakmak bu yüzden yetersiz
+![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]**Bronnfenbrenner'in ekolojik gelişim modeli.** Bronnfenbrenner diyor ki: insan iç içe geçmiş sistemlerin tam "ortasında" büyüyor. İnsanı anlamak için  *sadece* insana bakmak bu yüzden yetersiz
 
 Soğan gibi. 
 
@@ -475,9 +447,7 @@ Beş katmanlı:
 **Kültür, yasalar, ekonomi, ideoloji. Hava gibi, görünmüyor ama içinde nefes alıyorsun. Devlet ne sunuyor, toplum ne bekliyor, hangi kimlikler eleniyor.. Bunlar kişiyi doğrudan değil ama diğer tüm katmanlar üzerinden şekillendiriyor.**
 
 ***Kronosistem***
-**Tüm bu sistemler zaman içinde değişiyor. Zamanın kendisi bir bağlam. Hem kişinin hayatındaki geçişler hem de tarihsel zaman. Yani: aynı aile yapısı, aynı mahalle, aynı kültür, ama ne zaman yaşandığı da gelişimi belirliyor. 1890'da doğmak ile 2020'de doğmak gibi.**
-
-### Kendi Hikayenin Ortak Yazarı Olmak
+**Tüm bu sistemler zaman içinde değişiyor. Zamanın kendisi bir bağlam. Hem kişinin hayatındaki geçişler hem de tarihsel zaman. Yani: aynı aile yapısı, aynı mahalle, aynı kültür, ama ne zaman yaşandığı da gelişimi belirliyor. 1890'da doğmak ile 2020'de doğmak gibi.** ### Kendi Hikayenin Ortak Yazarı Olmak
 
 Gelişim bir otobandan ziyade bir şantiye alanı. Yaş alındıkça amelelikten şefliğe yükseliniyor. 
 Küçükken evebeynler yönetiyor seni. Sonrasında durum değişiyor. Kendi hayatının ortak yapımcısı oluyorsun. 
@@ -497,16 +467,13 @@ Tabi her şey "hallolsa" bile realite duvarı devreye girer.
 Hedefler de değiştiği için zamanla, insan hayatının çeşitli evrelerinde çeşitli şekillerde inşa ediyor kendini.
 ## Kelebek Etkisi
 
-Bazen gelişimi kasıtlı olarak değil, yan ürün olarak etkiliyorsun. Günlük hayattaki plansız, anlık ortaya çıkan bir davranış, çevre üzerinde bir reaksiyon zinciri tetikler. Çevre öyle bir geri bildirim verir ki, dönüp dolaşıp senin gelişim şartlarını baştan aşağı değiştirir.
-
-**Yani ne demek bu?** Bilinçli bir hedef gütmeden attığın o rastgele adım, yan ürün olarak senin 10 yıl sonraki gerçekliğini inşa edebilir, seçimler niyeti aşar.
+Bazen gelişimi kasıtlı olarak değil, yan ürün olarak etkiliyorsun. Günlük hayattaki plansız, anlık ortaya çıkan bir davranış, çevre üzerinde bir reaksiyon zinciri tetikler. Çevre öyle bir geri bildirim verir ki, dönüp dolaşıp senin gelişim şartlarını baştan aşağı değiştirir.**Yani ne demek bu?** Bilinçli bir hedef gütmeden attığın o rastgele adım, yan ürün olarak senin 10 yıl sonraki gerçekliğini inşa edebilir, seçimler niyeti aşar.
 # 6. Disiplinin Tarihi ve Çağdaş 4 Trend
 ## Çocuğun İcadı ve İlk Günlükler
 
 Antik Yunan filozofları hayatı yaş dönemlerine bölüyordu ve her evrenin getirdiği avantaj ve dezavantajları felsefi olarak masaya yatırmışlardı. 
 
-İnsanın doğumdan ölüme değiştiği o kadar bariz bir şey ki, bunu fark etmek için filozof olmak gerekmiyor. 
-**Çocuk, evrimsel olarak her zaman vardı; ancak psikoljik bir özne olarak geç icat edildi.**
+İnsanın doğumdan ölüme değiştiği o kadar bariz bir şey ki, bunu fark etmek için filozof olmak gerekmiyor.**Çocuk, evrimsel olarak her zaman vardı; ancak psikoljik bir özne olarak geç icat edildi.**
 
 ***"Küçük Yetişkinler" İllüzyonu***
 
@@ -526,14 +493,11 @@ Tiedemann defteri aldı, çocuğunu izledi, yazdı. Çocuğun ilk iki buçuk yı
 Literatürdeki ilk sistematik ve gözleme dayalı boylamsal çalışma. Metodolojik temeli budur gelişim psikolojisinin.  
 
 Burda da sorun var tabi: sen babasın ve kendi çocuğu izliyorsun. Neyi görmek istiyorsan, farkında olmadan, onu görüyorsun. 
-Ayrıca daha bi ton çocuk var gözlemlemediğin. 
-**Yani ilk adım atıldı ama bilim değildi henüz.**
-
-### Bilim Olmak İçin Kural Lazım
+Ayrıca daha bi ton çocuk var gözlemlemediğin.**Yani ilk adım atıldı ama bilim değildi henüz.** ### Bilim Olmak İçin Kural Lazım
 
 Tiedemann günlük tuttu, Rousseau roman yazdı. Değerli ama bilim denmiyor. 
 
-1800'lerin ortasına doğru tablo değişmeye başladı ve artık sadece gözlemlemek yetmiyordu. Gözlemin *nasıl* yapıldığı da önem kazandı. 
+1800'lerin ortasına doğru tablo değişmeye başladı ve artık sadece gözlemlemek yetmiyordu. Gözlemin *nasıl*yapıldığı da önem kazandı. 
 
 1882'de çıkan "Die Seele des Kindes" (Çocuğun Ruhu) kitabı, gelişim psikolojisinin doğuşu kabul edilebilir. 
 William T. Preyer (1841–1897) de kendi çocuğunu izledi, ama nasıl izlediğini belirledi:
@@ -580,7 +544,7 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 
 ## Kaynaklar
 
-- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. **Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
-- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
-- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. **Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
-- Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000
+- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline.** Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
+- Bronfenbrenner, U. (1979).*The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
+- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions.** Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
+- Piaget, J. (1952).*The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000

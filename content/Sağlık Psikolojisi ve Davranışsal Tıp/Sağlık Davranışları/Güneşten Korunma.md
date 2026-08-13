@@ -13,7 +13,7 @@ tags:
 - [[#3. Halk vs. Bilim]]
 
 ---
-_Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]] doğrudan [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Sağlık davranışı|davranışsal önlemlerle]] nasıl kesiştiğine bakcaz._ _Güneş kremi, plajda sınırsızca takıl diye değil, istesen bile kaçamayacağın ışınlardan_ **korunman**_için tasarlandı._
+_Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]] doğrudan [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Sağlık davranışı|davranışsal önlemlerle]] nasıl kesiştiğine bakcaz._ _Güneş kremi, plajda sınırsızca takıl diye değil, istesen bile kaçamayacağın ışınlardan_**korunman **_için tasarlandı._
 
 ---
 
@@ -31,7 +31,7 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 ---
 # 2. Ne İşe Yarıyor?
 
-- **Öğle güneşinden kaçmak:** _Yazın ya da sıcak iklimli yerlerde 11-16:00 arası dışarı çıkmamak_
+-** Öğle güneşinden kaçmak:** _Yazın ya da sıcak iklimli yerlerde 11-16:00 arası dışarı çıkmamak_
     
 - **Koruyucu giysi:** _Uzun kollu gömlek,uzun pantolon, şapka, güneş gözlüğü._
     
@@ -61,15 +61,13 @@ _Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin
 >   BasaCikma ==>|Bronzlaşma Ödülü & Zahmet Ağır Basarsa| Maladaptif((Korumasız Güneşe Maruz Kalma)):::cardinal
 > ```
 >
-> - **Açıklama:** *Güneşten korunma kararının, cilt hasarı korkusu ile bronzlaşmanın getirdiği anlık sosyal/estetik ödül ve kremin zahmeti arasındaki bilişsel çatışmayı nasıl çözdüğünü modeller.*
+> -**Açıklama:** *Güneşten korunma kararının, cilt hasarı korkusu ile bronzlaşmanın getirdiği anlık sosyal/estetik ödül ve kremin zahmeti arasındaki bilişsel çatışmayı nasıl çözdüğünü modeller.*
 
 # 3. Halk vs. Bilim
 
-_"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_
+_"Bulutlu havada güneş çarpmaz yaa, UV[^1] yok."_**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_** Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser[^2] riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_**[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.**---
 
-**UV ışınları bulut, sis veya pus içinden geçer; görünür güneş ışığı ile aynı şey değil.**_"Güneş kremi sürünce kafana göre istediğin kadar güneşte durabilirsin."_ _"50 faktörü çaktım kanka, sabaha kadar güneşe bakcam. ~~İçsem hatta biraz da... Güneşi yemek istiyorum..~~"_** Güneş kremi koruma için kullanılır, süreyi uzatmak için değil.**_"[[Sağlık Modelleri; Bilmek Neden Yetmiyor?#"Bana bi şey olmaz" Kafası|Kanser[^2] riskini biliyorum]], azıcık güneşlencem, bi şey olmaz."_**[[Sigara|Risk birikimlidir]]; 18 yaş öncesi yanıklar kritiktir. Kümülatif olarak eklenir riskler, yaralar unutulmaz.** ---
-
-_Klasik sağlık iletişimi "riski anlat, insan değişsin" der. Ama bu ve bundan önceki bölümlerde de gördüğümüz üzere insan pek de laftan anlamıyor aslında._**Jones ve Leary** _bunu test etmiş; adamlara [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Korkunun Ecele Faydası (var mı?)|kanser olacaksın]] demek niyetlerini bozmamış ama "sıfatın kayacak, buruşacaksın" demek direkt frene bastırmış..._
+_Klasik sağlık iletişimi "riski anlat, insan değişsin" der. Ama bu ve bundan önceki bölümlerde de gördüğümüz üzere insan pek de laftan anlamıyor aslında._** Jones ve Leary** _bunu test etmiş; adamlara [[Sağlık Modelleri; Bilmek Neden Yetmiyor?#Korkunun Ecele Faydası (var mı?)|kanser olacaksın]] demek niyetlerini bozmamış ama "sıfatın kayacak, buruşacaksın" demek direkt frene bastırmış..._
 
 _Kanser korkusu görünüş korkusuna yeniliyor. Bronzlaşmak neden bu kadar güçlü bir çekim? Çünkü anında görünen sosyal ödülü var. Kanser ise soyut, uzak, belki._
 
@@ -86,6 +84,6 @@ _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
 
 ## Kaynaklar
 
-- Armstrong, B. K., & Kricker, A. (2001). The epidemiology of UV induced skin cancer. *Journal of Photochemistry and Photobiology B: *Biology*, 63(1–3), 8–18. https://doi.org/10.1016/S1011-1344(01)00198-1
-- Weinstein, N. D. (1980). Unrealistic optimism about future life events. *Journal of Personality and Social Psychology*, 39(5), 806–820. https://doi.org/10.1037/0022-3514.39.5.806
-- World Health Organization. (2022). *Ultraviolet radiation and health*. WHO. https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation
+- Armstrong, B. K., & Kricker, A. (2001). The epidemiology of UV induced skin cancer. *Journal of Photochemistry and Photobiology B:*Biology*, 63(1–3), 8–18. https://doi.org/10.1016/S1011-1344(01)00198-1
+- Weinstein, N. D. (1980). Unrealistic optimism about future life events.*Journal of Personality and Social Psychology*, 39(5), 806–820. https://doi.org/10.1037/0022-3514.39.5.806
+- World Health Organization. (2022).*Ultraviolet radiation and health*. WHO. https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation

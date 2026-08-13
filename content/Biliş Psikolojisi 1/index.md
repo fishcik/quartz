@@ -1,3 +1,3 @@
 ---
-title: Biliş Psikolojisi 1
-
+title: Biliş Psikolojisi 1
+---

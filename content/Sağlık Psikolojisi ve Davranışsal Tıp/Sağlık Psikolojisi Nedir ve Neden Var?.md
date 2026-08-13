@@ -92,7 +92,7 @@ Sağlık psikolojisi **ikinci** modeli temel alıyor, her şey biyopsikososyal m
 >   Bio <--> Soc
 > ```
 >
-> **Açıklama:**  *Hastalık ve iyilik halinin yalnızca hücresel/biyolojik kusurlarla değil, biyoloji, psikoloji ve sosyal bağlamın kesişiminde dinamik olarak belirlendiğini modeller.*
+>**Açıklama:**  *Hastalık ve iyilik halinin yalnızca hücresel/biyolojik kusurlarla değil, biyoloji, psikoloji ve sosyal bağlamın kesişiminde dinamik olarak belirlendiğini modeller.*
 
 # 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 ## Alanın oluşması
@@ -100,13 +100,13 @@ Sağlık psikolojisi **ikinci** modeli temel alıyor, her şey biyopsikososyal m
 Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında iç içe geçen üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
 
 > 1) Kronik-dejeneratif hastalıkların aşırı artışı. 
-> Tüberküloz gibi bulaşıcı hastalıklar artık birinci katil değil. Yerlerini kalp hastalıkları, kanser, diyabet gibi yavaş ilerleyen ve uzun soluklu olan hastalıklar aldı. **Bunlar, bakterileri öldürerek çözülmüyor.**>2) Risk davranışları.
-> Yani** hem  **sigara içiyorsun,**hem** hareketsiz yaşıyorsun**hem** de kronik yoğun stres altındasın. Bunlar hastalığı**doğrudan**  etkiliyor. Artık **davranış** tedavinin konusu haline geldi.
+> Tüberküloz gibi bulaşıcı hastalıklar artık birinci katil değil. Yerlerini kalp hastalıkları, kanser, diyabet gibi yavaş ilerleyen ve uzun soluklu olan hastalıklar aldı.**Bunlar, bakterileri öldürerek çözülmüyor.**>2) Risk davranışları.
+> Yani **hem** sigara içiyorsun,**hem **hareketsiz yaşıyorsun** hem **de kronik yoğun stres altındasın. Bunlar hastalığı** doğrudan **etkiliyor. Artık** davranış **tedavinin konusu haline geldi.
 
 > 3) Sağlık sistemlerindeki maliyet patlaması. 
-> Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek** çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
+> Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama** önlemek **çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
 
-Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde **Division of Health Psychology** kurularak doğmuş oldu.
+Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde** Division of Health Psychology **kurularak doğmuş oldu.
 
 Sağlık psikolojisinin diğer bir çok alanla cevaplamaya çalıştığı soru aynı: psikolojik süreçler sağlık ve hastalıkla nasıl kesişiyor? 
 Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla yapıyor.
@@ -118,6 +118,6 @@ Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla
 
 ## Kaynaklar
 
-- Engel, G. L. (1980). The clinical application of the biopsychosocial model. **American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
-- Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology. *American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
-- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition. **Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660
+- Engel, G. L. (1980). The clinical application of the biopsychosocial model.** American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
+- Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology.*American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
+- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition.** Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660
