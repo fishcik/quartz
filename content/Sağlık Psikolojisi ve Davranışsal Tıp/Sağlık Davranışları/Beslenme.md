@@ -66,7 +66,7 @@ Sonuçta Alman yetişkinlerin sadece **%45.8'i** günlük düzenli sebze tüketi
 > "Şeker yemesem zayıflarım"
 
 * Aynen sanki tek sorun şeker...
-*Aşırı kilo çok faktörlü bir şey:**genetik + sağlıksız beslenme + hareketsizlik + alkol**.
+*Aşırı kilo çok faktörlü bir şey:* genetik + sağlıksız beslenme + hareketsizlik + alkol**.
 
 ### Yağ Algısı ve İrade
 > [!quote] Mit
@@ -103,7 +103,7 @@ Sonuçta Alman yetişkinlerin sadece **%45.8'i** günlük düzenli sebze tüketi
 Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.
 
 ### Povey ve ark. (2000)
-Bunu sayıyla gösterdi: Niyet için **%57–64 ** varyans açıklaması. Gerçek davranışa gelince bu oran**%19–32'ye** çakılıyor. Niyet-Davranış Uçurumu tam burada.
+Bunu sayıyla gösterdi: Niyet için **%57–64**  varyans açıklaması. Gerçek davranışa gelince bu oran **%19–32'ye** çakılıyor. Niyet-Davranış Uçurumu tam burada.
 
 Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teorideki algılanan davranış kontrolünden çok daha kritik bir eylem tahmincisidir.
 
@@ -134,7 +134,7 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 >   OtomatikTetik ==> Basarisizlik((Eski Yeme Rutinine Dönüş)):::cardinal
 > ```
 >
-> **Açıklama:** * Sağlıklı beslenmeye yönelik soyut niyetlerin, "Ne zaman, nerede, ne yiyeceğim?" şeklinde somut uygulama niyetlerine (Implementation Intentions) dökülmediğinde neden çöktüğünü modeller.*
+> **Açıklama:**  *Sağlıklı beslenmeye yönelik soyut niyetlerin, "Ne zaman, nerede, ne yiyeceğim?" şeklinde somut uygulama niyetlerine (Implementation Intentions) dökülmediğinde neden çöktüğünü modeller.*
 
 ## Kavramlar ve Dipnotlar
 
@@ -147,10 +147,10 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 
 ---
 
-## Kaynakça
+## Kaynaklar
 
 *Deutsche Gesellschaft für Ernährung. (2020).* Vollwertig essen und trinken nach den 10 Regeln der DGE*. DGE e.V. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/10-regeln/
-*Povey, R., Wellens, B., & Conner, M. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of perceived control and self-efficacy.* British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810
-*World Health Organization. (2021).* Obesity and overweight: Key facts*. WHO. https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
+
+- Povey, R., Wellens, B., & Conner, M. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of perceived control and self-efficacy. *British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810* World Health Organization. (2021). *Obesity and overweight: Key facts*. WHO. https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
 ---

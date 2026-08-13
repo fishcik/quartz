@@ -1357,93 +1357,144 @@ function scFetchGlossary(cb){
 }
 
 function scInitAccordions(){
-  // 1. KAVRAMLAR & KELİMELER (Footnotes Accordion - Default Closed)
-  document.querySelectorAll('.footnotes, section[data-footnotes]').forEach(function(fnSec){
-    if(fnSec.getAttribute('data-sc-fn-acc')) return;
-    fnSec.setAttribute('data-sc-fn-acc', '1');
+  // Process articles
+  document.querySelectorAll('article, .center article').forEach(function(art){
+    // 1. KAVRAMLAR & KELİMELER (Footnotes Accordion - Default Closed)
+    var fnSec = art.querySelector('.footnotes, section[data-footnotes]');
+    var fnDet = null;
+    if(fnSec && !fnSec.getAttribute('data-sc-fn-acc')){
+      fnSec.setAttribute('data-sc-fn-acc', '1');
 
-    var lis = fnSec.querySelectorAll('ol > li, ul > li, li');
-    var countText = lis.length ? ' (' + lis.length + ' Kavram)' : '';
+      // Remove internal Footnotes / Dipnotlar headings
+      fnSec.querySelectorAll('h2, h3, h4, #footnote-label, .sr-only').forEach(function(h){
+        h.remove();
+      });
 
-    var det = document.createElement('details');
-    det.className = 'sc-acc sc-footnotes-acc';
+      // Remove preceding dividers (hr / serpent lines)
+      var prev = fnSec.previousElementSibling;
+      while(prev && (prev.tagName === 'HR' || (prev.classList && (prev.classList.contains('sc-hr-serpent') || prev.classList.contains('sc-serpent-div'))))){
+        var toDel = prev;
+        prev = prev.previousElementSibling;
+        toDel.remove();
+      }
 
-    var sum = document.createElement('summary');
-    sum.className = 'sc-acc-header';
-    sum.innerHTML = '<span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
-    det.appendChild(sum);
+      var lis = fnSec.querySelectorAll('ol > li, ul > li, li');
+      var countText = lis.length ? ' (' + lis.length + ' Kavram)' : '';
 
-    var bodyDiv = document.createElement('div');
-    bodyDiv.className = 'sc-acc-body';
+      fnDet = document.createElement('details');
+      fnDet.className = 'sc-acc sc-footnotes-acc';
 
-    while(fnSec.firstChild){
-      bodyDiv.appendChild(fnSec.firstChild);
+      var sum = document.createElement('summary');
+      sum.className = 'sc-acc-header';
+      sum.innerHTML = '<span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
+      fnDet.appendChild(sum);
+
+      var bodyDiv = document.createElement('div');
+      bodyDiv.className = 'sc-acc-body';
+
+      while(fnSec.firstChild){
+        bodyDiv.appendChild(fnSec.firstChild);
+      }
+
+      var moreDiv = document.createElement('div');
+      moreDiv.className = 'sc-glossary-more-wrap';
+      var moreBtn = document.createElement('button');
+      moreBtn.type = 'button';
+      moreBtn.className = 'sc-open-all-btn';
+      moreBtn.innerHTML = 'Tüm Kavramlar & Kelimeler (Sözlük) &rarr;';
+      moreBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        scOpenGlossary();
+      });
+      moreDiv.appendChild(moreBtn);
+      bodyDiv.appendChild(moreDiv);
+
+      fnDet.appendChild(bodyDiv);
+      fnSec.appendChild(fnDet);
+    } else if(art.querySelector('.sc-footnotes-acc')){
+      fnDet = art.querySelector('.sc-footnotes-acc');
     }
 
-    var moreDiv = document.createElement('div');
-    moreDiv.className = 'sc-glossary-more-wrap';
-    var moreBtn = document.createElement('button');
-    moreBtn.type = 'button';
-    moreBtn.className = 'sc-open-all-btn';
-    moreBtn.innerHTML = 'Tüm Kavramlar & Kelimeler (Sözlük) &rarr;';
-    moreBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      scOpenGlossary();
-    });
-    moreDiv.appendChild(moreBtn);
-    bodyDiv.appendChild(moreDiv);
-
-    det.appendChild(bodyDiv);
-    fnSec.appendChild(det);
-  });
-
-  // 2. KAYNAKLAR (Kaynakça Accordion - Default Closed & Elegant Red Dividers)
-  document.querySelectorAll('article, .center article').forEach(function(art){
-    var h2s = art.querySelectorAll('h2, h3');
+    // 2. KAYNAKLAR (Kaynakça Accordion - Default Closed & Thin Red Dividers)
+    var refDet = null;
+    var h2s = art.querySelectorAll('h2, h3, h4');
     h2s.forEach(function(h2){
       var t = (h2.textContent || '').trim().toLowerCase();
       if((t === 'kaynaklar' || t === 'kaynakça' || t === 'kaynak') && !h2.getAttribute('data-sc-ref-acc')){
         h2.setAttribute('data-sc-ref-acc', '1');
 
-        var refList = null;
+        var refItems = [];
+        var nodesToRemove = [h2];
         var next = h2.nextElementSibling;
         while(next){
-          if(next.tagName === 'UL' || next.tagName === 'OL'){
-            refList = next;
-            break;
-          }
           if(next.tagName && next.tagName.match(/^H[1-6]$/)) break;
+          if(next.classList && (next.classList.contains('footnotes') || next.classList.contains('sc-footnotes-acc') || next.classList.contains('sc-acc'))) break;
+          
+          if(next.tagName === 'UL' || next.tagName === 'OL'){
+            next.querySelectorAll('li').forEach(function(li){
+              refItems.push(li.innerHTML);
+            });
+            nodesToRemove.push(next);
+          } else if(next.tagName === 'P'){
+            var pText = next.innerHTML.trim();
+            if(pText){
+              refItems.push(pText);
+            }
+            nodesToRemove.push(next);
+          } else if(next.tagName === 'HR' || (next.classList && (next.classList.contains('sc-hr-serpent') || next.classList.contains('sc-serpent-div')))){
+            nodesToRemove.push(next);
+          }
           next = next.nextElementSibling;
         }
 
-        if(refList){
-          var rLis = refList.querySelectorAll('li');
-          var countText = rLis.length ? ' (' + rLis.length + ' Kaynak)' : '';
-
-          var det = document.createElement('details');
-          det.className = 'sc-acc sc-references-acc';
+        if(refItems.length > 0){
+          var countText = ' (' + refItems.length + ' Kaynak)';
+          refDet = document.createElement('details');
+          refDet.className = 'sc-acc sc-references-acc';
 
           var sum = document.createElement('summary');
           sum.className = 'sc-acc-header';
           sum.innerHTML = '<span class="sc-acc-title">Kaynaklar</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
-          det.appendChild(sum);
+          refDet.appendChild(sum);
 
           var bodyDiv = document.createElement('div');
           bodyDiv.className = 'sc-acc-body';
-          bodyDiv.appendChild(refList);
-          det.appendChild(bodyDiv);
+          var ul = document.createElement('ul');
+          refItems.forEach(function(html){
+            var li = document.createElement('li');
+            li.innerHTML = html;
+            ul.appendChild(li);
+          });
+          bodyDiv.appendChild(ul);
+          refDet.appendChild(bodyDiv);
 
-          if(h2.parentNode){
-            h2.parentNode.insertBefore(det, h2);
-            h2.remove();
-          }
-
-          // Move to the very bottom of the article
-          art.appendChild(det);
+          nodesToRemove.forEach(function(node){
+            node.remove();
+          });
         }
       }
     });
+
+    if(!refDet && art.querySelector('.sc-references-acc')){
+      refDet = art.querySelector('.sc-references-acc');
+    }
+
+    // 3. STRICT BOTTOM PLACEMENT: 1. Kavramlar & Kelimeler -> 2. Kaynaklar (EN ALTA)
+    if(fnDet){
+      var p = fnDet.previousElementSibling;
+      while(p && (p.tagName === 'HR' || (p.classList && (p.classList.contains('sc-hr-serpent') || p.classList.contains('sc-serpent-div'))))){
+        var d = p; p = p.previousElementSibling; d.remove();
+      }
+      if(fnSec && fnSec.parentNode === art){
+        art.appendChild(fnSec);
+      } else {
+        art.appendChild(fnDet);
+      }
+    }
+    if(refDet){
+      art.appendChild(refDet);
+    }
   });
 
   // Modal setup

@@ -66,7 +66,7 @@ Ve bu tanım başından beri tek bi şeyi bağırıyor: **Psikoterapi ile klinik
 
 2020 Eylül’ünden beri aynı tartışma yeniden alevlenmiş durumda. Bu sefer de eğitim müfredatı üzerinden: Yeni müfredat, klinik ve psikoterapi derslerini körüklerken, temel bilim derslerini (yöntem, istatistik, metodoloji) kenara mı itiyor?
 
-Hatta yoksa ironik bir şekilde, psikoterapinin anası konumundaki klinik psikoloji gölgede mi kalıyor? Acaba *nasıl * terapi yapılacağı öğreniliyor ama * neden* işe yaradığını bilimsel olarak pek de kavramanmadan mezun mu oluyorlar?
+Hatta yoksa ironik bir şekilde, psikoterapinin anası konumundaki klinik psikoloji gölgede mi kalıyor? Acaba *nasıl*  terapi yapılacağı öğreniliyor ama  *neden* işe yaradığını bilimsel olarak pek de kavramanmadan mezun mu oluyorlar?
 
 Psikoloji biliminin bütünlüğü belki de tehlikede olan; sosyal, bilişsel, gelişim, klinik bakış açılarının hepsini tek çatı altında tutarken, bu kırılgan birlikteliğin çatlaklarının arasında parçalanma tehlikesi.
 
@@ -76,7 +76,7 @@ Tamam. Tanımların bir kısmını masaya koyduk. Şimdi bu bilimin gerçekte na
 
 ## 2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları
 
-Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönler ile bozukluğa-özgü yönler birbirinden ayrılıyor. Bu mantıkta, bozukluklara **özgü ** düzeyde, işlevler ve işlev örüntüleri ele alınıyor. Ve bu hep çift taraflı bir mercek:**içsel (intra) ve kişilerarası (inter) perspektif.**
+Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönler ile bozukluğa-özgü yönler birbirinden ayrılıyor. Bu mantıkta, bozukluklara **özgü** düzeyde, işlevler ve işlev örüntüleri ele alınıyor. Ve bu hep çift taraflı bir mercek:**içsel (intra) ve kişilerarası (inter) perspektif.**
 
 **Bozulmuş işlevler** dediğimizde, genel psikolojiden, biyopsikolojiden ve nöropsikolojiden aşina olduğumuz temel süreçlere gönderme yaparız: algı, öğrenme, düşünme… Bunlar bozulduğunda devreye klinik psikoloji giriyor.
 
@@ -141,7 +141,7 @@ Ancak bu yakın temasın bir bedeli de var… **İsim kalabalığı.** Terminolo
 
 Peki nedir bu ruhsal bozukluklar?! Bunun cevabı keşke istediğimiz kadar sağlam olsa. Ruhsal bozukluklar bilim açısından net tanımlanmış sabit varlıklar değiller.. Öyle doğada keşfedilmeyi bekleyen katı gerçekler değiller.. Bilimin mevcut seviyesine göre, belli bi süre için üzerinde mutabıklaşılan, işe yarayan **konstrüktler**. Sabit değişmez gerçeklikten ziyade, geçici uzlaşılar. 
 
-Bu da ne demektir? Yeni bilimsel bulgular ışığında, bu tanımlar ve hatta tüm sınıflandırma sistemi değişebilir. **Zaten değişebilmelidir.** 
+Bu da ne demektir? Yeni bilimsel bulgular ışığında, bu tanımlar ve hatta tüm sınıflandırma sistemi değişebilir.** Zaten değişebilmelidir.** 
 
 Net örnek: 1980. O zamana kadar kullanılan "anksiyete nevrozu" tanısı rafa kaldırıldı. Yerine, daha güvenilir ve geçerli iki tanı geldi: [[Panik Bozukluk]] ve [[Yaygın Anksiyete Bozukluğu]]. Update gibi yani. Böyle updateler yaklaşık bi 10 yılda bir yapılıyor.
 
@@ -163,7 +163,7 @@ Araştırmalar, ruhsal bozukluklarda çokça "bedensel", bedensel bozukluklarda 
 
 Ruhsal bozuklukların görünüm biçimlerini, teşhis yöntemleri ve sınıflandırmaları hakkında sağlam bilgi sahibi olmak, hemen hemen tüm psikolojik uygulama alanları için olmazsa olmaz (**Conditio sine qua non**).
 
-Bu sebeple; *"ruhsal bozuklukları bilmek klinikçilerin işi aga"* düşüncesi yaygın ama **yanlış**. İş yerinde, danışmanlık merkezinde, okul psikolojisi alanında çalışanlardan da genel olarak ruhsal bozuklukları * tanıyabilmeleri* bekleniyor. En azından tanıyabilmek. Burda kastedilen şey, kesin bir teşhis konup tedavi planı oluşturmak anlamına gelmiyor; mesele, genel olarak bir ruhsal bozukluğun varlığını sezip, kişiyi daha ileri, daha ayrıntılı bir incelemeye yönlendirebilmektir. Yani; kapıyı aralamak beklenir en azından, içeri girilmesi değil.
+Bu sebeple; *"ruhsal bozuklukları bilmek klinikçilerin işi aga"* düşüncesi yaygın ama **yanlış**. İş yerinde, danışmanlık merkezinde, okul psikolojisi alanında çalışanlardan da genel olarak ruhsal bozuklukları  *tanıyabilmeleri* bekleniyor. En azından tanıyabilmek. Burda kastedilen şey, kesin bir teşhis konup tedavi planı oluşturmak anlamına gelmiyor; mesele, genel olarak bir ruhsal bozukluğun varlığını sezip, kişiyi daha ileri, daha ayrıntılı bir incelemeye yönlendirebilmektir. Yani; kapıyı aralamak beklenir en azından, içeri girilmesi değil.
 
 ### Ruhsal Bozukluklar Nasıl Tanımlanıyor?
 Hayatta hepimiz farklıyız. Herkesin bu akışın içinde; krizlerle, yüklerle başa çıkma kapasitesi farklı. Kimisi bardağın taşmasına ramak kalana kadar yürümeye devam edebilir, kimisi ise daha ilk damlada diz çökebilir. Üstelik, kişinin kendi kapasitesi de yaşam boyunca evrelere göre değişiyor. Ergenlikte kolay/zor gelen bir şey, otuzlarında farklı.
@@ -177,7 +177,7 @@ Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır:
 > [!important] DSM Tanımı
 > **Ruhsal bozukluk** bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal [[Semptom|sendrom]][^4] ya da örüntüdür. 
 > 
-> Bu sendrom ya da örüntü, sadece *bir * olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki olmamalı. *(Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)* Ayrıca: Toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk sayılmaz. 
+> Bu sendrom ya da örüntü, sadece *bir*  olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki olmamalı. *(Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)* Ayrıca: Toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk sayılmaz. 
 
 Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının bütününe, sosyokültürel bağlama ve biyolojik boyuta uzanan çok sayıda gösterge, süreç ve etkileşimi kapsıyor.
 
@@ -185,7 +185,7 @@ Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının
 
 ## 4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski
 
-Anlaşılacağı üzere, bu yaklaşım **betimleyici**. Yani durumu * tarif * ediyor.*"Neden?"* sorusuna pek girmiyor. 
+Anlaşılacağı üzere, bu yaklaşım **betimleyici**. Yani durumu * tarif  *ediyor.*"Neden?"* sorusuna pek girmiyor. 
 
 Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini kolaylaştırır. Yani: DSM,*"bu adam niye depresyonda yahu?"* diye sormuyor. Sadece *"bu adamda şu belirtiler var mı? kaç tanesi? ne zamandır?"* diye soruyor. Böylece farklı klinisyenler aynı hastaya baktıklarında aynı tanıya varma olasılıkları artar. Çünkü kriterler net, gözlemlenebilir ve yoruma açık değil.*"Hastada şu [[Semptom|semptom]][^5] var mı yok mu hocam?"* gibi somut sorular.
 
@@ -195,7 +195,7 @@ Ortak bir **"dil"**, farklı ekollerden insanların aynı rahatsızlıktan bahse
 
 *Örneğin,*"araba" kelimesi. Sen de ben de "araba" kelimesini kullanırken aynı şeyi anlıyoruz. "Araba" tekerlekli, motorlu bir taşıt diye kodlanmış.* Araba neden var?* demiyoruz, DSM de böyle çalışıyor.
 
-Ama bunun **dezavantajı** da tam burda zaten. Derinliği kaybediyoruz. Bu adam depresyonda, tamam, ama * neden * depresyonda?* Travma? Genetik? Yopluk/Yoksulluk? Yalnızlık?* 
+Ama bunun **dezavantajı** da tam burda zaten. Derinliği kaybediyoruz. Bu adam depresyonda, tamam, ama * neden  *depresyonda?* Travma? Genetik? Yopluk/Yoksulluk? Yalnızlık?* 
 
 Çünkü:
 * Kategoriler, semptom kriterleri keskin çizgilerle belirtilmiş gibi görünse de, gerçek hayatta bozukluklar birbirine girer, keskin çizgiler bulanıklaşır.
@@ -247,11 +247,11 @@ Ama: Bir insanı sadece "depresyon" diye etiketlemek, aynı zamanda tüm bağlam
 
 Fakat araştırmalar ilerledikçe, bu ayrımın bilimsel bi temeli olmadığı ortaya çıktı.. Kişilik bozuklukları da "gerçek" bozukluklar gibi aynı mantıkla işliyordu. Mesela: [[Borderline Kişilik Bozukluğu]] ile majör depresyon, sık sık iç içe geçiyordu.
 
-Borderline kişilik bozukluğu olan birini düşündüğümüzde; bu kişi, duygusal dalgalanmalar ve terk edilme korkusu yaşar. Kimlik duygusu zayıftır, öfke patlamaları ve kendine zarar verme davranışları sergiler. Same time, borderline hastalarının **çok büyük** bir kısmı aynı zamanda majör depresyon da yaşar. Bu da öyle bi kaç günlük bi durum değildir. Bazen haftalar, aylar süren, intihar düşünceleriyle bezenmiş, işlevsizleştirici bir depresyondur.
+Borderline kişilik bozukluğu olan birini düşündüğümüzde; bu kişi, duygusal dalgalanmalar ve terk edilme korkusu yaşar. Kimlik duygusu zayıftır, öfke patlamaları ve kendine zarar verme davranışları sergiler. Same time, borderline hastalarının** çok büyük** bir kısmı aynı zamanda majör depresyon da yaşar. Bu da öyle bi kaç günlük bi durum değildir. Bazen haftalar, aylar süren, intihar düşünceleriyle bezenmiş, işlevsizleştirici bir depresyondur.
 
 Yani: Örnek olarak kullandığımız borderline ile depresyonun bu kadar sık birlikte görülmesi, onları ayrı eksenlere koymak için gerçekten yapay ve keyfi sebepler bütünü oluşturdu. 
 
-*Hasta depresyonda olduğu için anti-depresan dayarsın, ama borderline’ın duygusal dengesizliği ilaçla düzelmez, terapi gerektirir.* Ya da * depresyon tedavi edilir, tamam. Ama bu sefer borderline daha da görünür hale gelir, çünkü asıl yapısal sorun zaten oradadır.* **İnsan varlığı o kadar karmaşık ki, onu "geçici epizod" ve "kalıcı kişilik" diye iki ayrı kutuya koymak gerçeği yansıtmıyor.** Depresyon eğer borderline zemininde gelişirse, sadece bir epizod olarak kalmıyor, kişiliğin bir ifadesi oluyor.
+*Hasta depresyonda olduğu için anti-depresan dayarsın, ama borderline’ın duygusal dengesizliği ilaçla düzelmez, terapi gerektirir.* Ya da  *depresyon tedavi edilir, tamam. Ama bu sefer borderline daha da görünür hale gelir, çünkü asıl yapısal sorun zaten oradadır.* **İnsan varlığı o kadar karmaşık ki, onu "geçici epizod" ve "kalıcı kişilik" diye iki ayrı kutuya koymak gerçeği yansıtmıyor.** Depresyon eğer borderline zemininde gelişirse, sadece bir epizod olarak kalmıyor, kişiliğin bir ifadesi oluyor.
 
 DSM-5, bu **yapay** ayrımı kaldırarak aslında yanıldığını itiraf etmiş oldu.*"Biz yanıldık… Aslında bu iki eksen zaten tek bir düzlemde, yan yana duruyormuş.."* Ama tabi bu itiraftan önce yıllarca bu sistemle idare edildi ve milyonlarca kişi, bu yapay ayrımların gölgesinde tanı ve tedavi aldı.
 
@@ -259,8 +259,8 @@ Eksenler kalkınca, bozuklukların nasıl sıralanacağına dair yeni bir sistem
 
 Yeni sistemde ise bozukluklar, insanın **yaşam çizgisini** takip ediyor:
 1. Önce hayatın **en erken** döneminde ortaya çıkan bozukluklar *(nöro-gelişimsel, yani; DEHB, otizm gibi çocuklukta beliren şeyler)*,
-2. Sonrasında tipik olarak ergenlik sonu/yetişkinlik başında ortaya çıkanlar *(şizofreni, bipolar bozukluk)*,
-3. En sona da birincil bir bozukluk olmayıp tedavinin bir yan etkisi olanlar *(ilaca bağlı hareket bozuklukları)* yerleştirildi.
+2. Sonrasında tipik olarak ergenlik sonu/yetişkinlik başında ortaya çıkanlar* (şizofreni, bipolar bozukluk)*,
+3. En sona da birincil bir bozukluk olmayıp tedavinin bir yan etkisi olanlar* (ilaca bağlı hareket bozuklukları)* yerleştirildi.
 
 Yani bir "film şeridi" gibi, baştan sona. Hayatın kendi ritmi içinde ilerliyor. Bozukluklar, insan gelişiminin farklı evrelerinde farklı şekillerde ortaya çıkıyor. Yani: Bir çocukta otizm neyse, bir gencin şizofrenisi başka, bir yaşlının demansı apayrı bi şey. Bunları aynı düzleme koyup, hayatın akışına göre sıralamak, hem tanıyı hem de anlamayı kolaylaştırıyor.
 
@@ -277,9 +277,9 @@ Mesela agorafobisi bulunan bir hasta, aynı zamanda agorafobiyle hiç ilgisi olm
 
 Ya da yine bu kişinin ailesiyle, işiyle, evi ve finansal durumuyla ilgili değişkenlerin de hesaba katılması gerekiyor ki, değerlendirme daha kapsayıcı ve anlamlı olabilsin. Alakasız görünen şeyler de, rahatsızlığa bütünsel olarak bakıldığında bir çok anlam ifade edici nokta çıkartabilir. Hatta, bunların hiç hesaba katılmamasının neredeyse hiçbir kazancı yok.
 
-Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile ** kusurlu bulunuyor.**Neden?** İki büyük eksiklik var…
+Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile** kusurlu bulunuyor.**Neden?** İki büyük eksiklik var…
 
-1. **İşlevsel boyutların ihmal edilmesi:** Bir bozukluğun tanımlanırken, onun * ne * olduğuna odaklanmak ve * nasıl işlediğine* bakmamak. Kişinin günlük hayatında bu bozukluğun ne anlama geldiğine, hangi durumlarda peydah olduğuna, nasıl değişim gösterdiğine ve ne olunca azalıp/çoğaldığına pek dikkat etmemek…
+1. **İşlevsel boyutların ihmal edilmesi:** Bir bozukluğun tanımlanırken, onun * ne * olduğuna odaklanmak ve  *nasıl işlediğine* bakmamak. Kişinin günlük hayatında bu bozukluğun ne anlama geldiğine, hangi durumlarda peydah olduğuna, nasıl değişim gösterdiğine ve ne olunca azalıp/çoğaldığına pek dikkat etmemek…
 2. **Zaman dinamiği:** Bir bozukluğun zamanla nasıl değiştiğinin pek de hesaba katılmaması.. Bir insanın dünü ile bugünü farklıdır, yarını da. Ama çok eksenli sistem bu akışı yakalamakta zorlanır.
 
 ---
@@ -303,7 +303,7 @@ Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile ** kusurlu bulunuyor.**N
 > 
 > *Bu, psikotik bir vaka mıydı? Yoksa genç bir adamın yoğun stres altında yaşadığı geçici, atipik bir kriz miydi? Sesler gerçek miydi? Bunlar bozukluğun bir parçası mı yoksa bozukluğa tepki mi?*
 
-Bu örneklerin hepsi ortak noktası ne? Bir insanın yaşadıklarını **normal ** ve**anormal **,** hasta **ve** sağlıklı** diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
+Bu örneklerin hepsi ortak noktası ne? Bir insanın yaşadıklarını **normal** ve**anormal** ,** hasta **ve** sağlıklı** diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
 
 Bu üç vaka, tam da **multimodal** yaklaşımın neden gerekli olduğunu gösteriyor. Çok eksenli sistem, bu hikayeleri kategorilere sığdırmaya çalışıyor. Ama hayat, kategorilerden hep taşıyor.
 
@@ -326,12 +326,9 @@ Bu üç vaka, tam da **multimodal** yaklaşımın neden gerekli olduğunu göste
 
 ---
 
-## Kaynakça
+## Kaynaklar
 
 *American Psychiatric Association. (2013).* Diagnostic and statistical manual of mental disorders* (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596
-*Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine.* Science*, 196(4286), 129–136. https://doi.org/10.1126/science.847460
-*Kotov, R., Krueger, R. F., Watson, D., Achenbach, T. M., Althoff, R. R., Bagby, R. M., … & Zimmerman, M. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to empirical psychiatric classification.* Journal of Abnormal Psychology*, 126(4), 454–477. https://doi.org/10.1037/abn0000258
-*Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values.* American Psychologist*, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373
-*World Health Organization. (2019).* International statistical classification of diseases and related health problems* (11th ed.). WHO. https://icd.who.int/
+*Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine.* Science*, 196(4286), 129–136. https://doi.org/10.1126/science.847460* Kotov, R., Krueger, R. F., Watson, D., Achenbach, T. M., Althoff, R. R., Bagby, R. M., … & Zimmerman, M. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to empirical psychiatric classification. *Journal of Abnormal Psychology*, 126(4), 454–477. https://doi.org/10.1037/abn0000258* Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. *American Psychologist*, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373* World Health Organization. (2019). *International statistical classification of diseases and related health problems* (11th ed.). WHO. https://icd.who.int/
 
 ---

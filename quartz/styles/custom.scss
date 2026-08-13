@@ -3554,10 +3554,10 @@ body.sc-modal-open {
   }
 
   .sc-modal-title {
-    font-family: var(--headerFont, 'Playfair Display', Georgia, serif);
+    font-family: 'Libre Baskerville', Georgia, serif !important;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--accent, #C8102E);
+    color: var(--accent, #C8102E) !important;
   }
 
   .sc-modal-subtitle {
@@ -3807,9 +3807,20 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
   }
 }
 
+// Hide any internal Footnotes / Dipnotlar header
+#footnote-label,
+.footnotes > h2,
+.footnotes > h3,
+.sc-footnotes-acc h2,
+.sc-footnotes-acc h3,
+.sc-footnotes-acc .sr-only {
+  display: none !important;
+}
+
 // References Accordion Specific Styling
 .sc-references-acc {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
 
   .sc-acc-body ul, .sc-acc-body ol {
     list-style: none;
@@ -3817,10 +3828,10 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
     margin: 0;
 
     li {
-      padding: 0.85rem 0;
-      border-bottom: 1px solid rgba(200, 16, 46, 0.2);
-      font-size: 0.88rem;
-      line-height: 1.6;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(200, 16, 46, 0.22);
+      font-size: 0.92rem;
+      line-height: 1.65;
       color: var(--darkgray, #4a433a);
 
       &:last-child {
@@ -3838,6 +3849,9 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
 
 // Footnotes Accordion Specific Styling
 .sc-footnotes-acc {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
   .sc-glossary-more-wrap {
     margin-top: 1.2rem;
     padding-top: 0.8rem;
