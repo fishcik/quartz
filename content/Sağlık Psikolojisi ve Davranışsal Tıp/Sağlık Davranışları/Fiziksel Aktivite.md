@@ -56,13 +56,10 @@ Because niyet yetmiyor! Yine!
 *Tabi herkes aynı aşamada olmayabilir...*
 
 ---
----
-
 [^1]: Metabolik Risk (Metabolic Risk): İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.
 [^2]: Klinik Depresyon (Major Depressive Disorder): Sürekli çökkün duygudurum, ilgi kaybı ve enerji azalmasıyla seyreden ve egzersizle nörotransmitter regülasyonu sağlanan duygu durum bozukluğu.
 [^3]: İnaktif Yaşam (Physical Inactivity): Sağlık için önerilen asgari fiziksel hareket eşiğinin altında kalan yaşam tarzı.
 
----
 
 ## Kaynaklar
 

@@ -55,13 +55,10 @@ Kondom taşımak veya kullanımını konuşmak "romantizmi bozuyor" veya "güven
 Etkili müdahaleler sadece risk bilgisi vermez; iletişim becerileri ve somut uygulama niyetleri[^3] (if-then planları) kazandırmayı hedefler.
 
 ---
----
-
 [^1]: CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar): Korunmasız cinsel temas yoluyla bulaşan patojenlerin neden olduğu viral veya bakteriyel enfeksiyonlar.
 [^2]: Sağlık İnanç Modeli: Risk algısı ve yarar-engel dengesi üzerinden sağlık kararlarını açıklayan model.
 [^3]: Uygulama Niyetleri (If-Then Plans): Karar anında dürtüsel davranışı engelleyen 'durum X olduğunda Y yapacağım' formatındaki somut ön anlaşmalar.
 
----
 
 ## Kaynaklar
 

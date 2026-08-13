@@ -81,12 +81,9 @@ _Kanser korkusu görünüş korkusuna yeniliyor. Bronzlaşmak neden bu kadar gü
 _İnsan rasyonel bir canlı değildir, estetik bir hayvandır._
 
 ---
----
-
 [^1]: UV Radyasyonu (Ultraviolet Radiation): Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.
 [^2]: Melanom (Malignant Melanoma): Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.
 
----
 
 ## Kaynaklar
 

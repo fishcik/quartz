@@ -86,13 +86,10 @@ Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir ti
 Sonuç olarak sigara sadece kimyasal bir tuzak değil; bilişsel çarpıtmalar ve davranışsal alışkanlıklarla örülü bir zihinsel labirenttir.
 
 ---
----
-
 [^1]: Nikotin Regülasyon Teorisi (Nicotine Regulation Theory): Vücuttaki nikotin seviyesi düştüğünde ortaya çıkan yoksunluk semptomlarını bastırmak için sigara içme sıklığının ayarlandığını öne süren biyolojik model.
 [^2]: Pozitif Pekiştirme (Positive Reinforcement): Bir davranışın ardından haz verici veya ödüllendirici bir uyaranın gelmesi sonucu o davranışın tekrarlanma sıklığının artması.
 [^3]: Psikolojik Bağımlılık (Psychological Dependence): Madde veya davranışın duygu düzenleme, rahatlama veya kimlik parçası olarak algılanması sonucu gelişen zihinsel bağımlılık örüntüsü.
 
----
 
 ## Kaynaklar
 

@@ -112,13 +112,10 @@ Yeni** dinamik modelde** her şey birbiriyle anlık etkileşimde:
 **Sistem aşırı kompleksleştiği için deneysel olarak kanıtlanması şu an tam bir lojistik cehennem.**
 
 ---
----
-
 [^1]: Relaps / Geri Düşüş (Relapse): Bireyin değiştirdiği eski istenmeyen alışkanlığa (ör. sigara, madde kullanımı) tam ölçekli ve kalıcı olarak geri dönmesi.
 [^2]: Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE): Marlatt tarafından tanımlanan; tek bir kaçamak sonrası bireyin suçluluk, yetersizlik ve 'battı balık yan gider' bilişiyle kontrolü tamamen kaybetmesi.
 [^3]: İçsel Atıf (Internal Attribution): Başarısızlığı durumsal faktörler yerine kendi karakterine, iradesizliğine veya yetersizliğine bağlama eğilimi.
 
----
 
 ## Kaynaklar
 

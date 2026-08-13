@@ -12,5 +12,3 @@ tags:
 Yarın bu konuyu ilk önce tek başıma öğrencem. Görsel Korteks ne sikimdir? Ne bok yemeye beynimize tünemiştir? Bunları öğrencem. Sonrasında ders notlarım, slaytlarım ve kaynak kitap ile öğrendiğimi hem pekiştircem hem de kıyaslıcam. 
 En sonunda sayko.ch CEO'su ve metin yazarı olarak bu konuyu buraya paylaşcam. 
 ```
-
-

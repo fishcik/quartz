@@ -605,15 +605,12 @@ Vahşi ve TAM bir geri düşüş
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
 
 ---
----
-
 [^1]: Sağlık İnanç Modeli (Health Belief Model): Bireylerin algılanan tehdit, duyarlılık ve kar-zarar dengesi üzerinden sağlık davranışlarına karar verdiğini öne süren bilişsel model.
 [^2]: Öz-Etkililik (Self-Efficacy): Albert Bandura tarafından tanımlanan, bireyin belirli bir davranışı veya görevi başarıyla yerine getirebileceğine yönelik öznel inanç kapasitesi.
 [^3]: Planlanmış Davranış Teorisi (Theory of Planned Behavior): Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.
 [^4]: HAPA Modeli (Health Action Process Approach): Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.
 [^5]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.
 
----
 
 ## Kaynaklar
 

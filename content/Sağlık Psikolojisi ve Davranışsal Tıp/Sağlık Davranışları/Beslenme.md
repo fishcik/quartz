@@ -136,16 +136,11 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 >
 > **Açıklama:**  *Sağlıklı beslenmeye yönelik soyut niyetlerin, "Ne zaman, nerede, ne yiyeceğim?" şeklinde somut uygulama niyetlerine (Implementation Intentions) dökülmediğinde neden çöktüğünü modeller.*
 
-## Kavramlar ve Dipnotlar
-
----
-
 [^1]: **Öz-Etkililik (Self-Efficacy):** Bireyin sağlıklı beslenme hedefini zorlu sosyal veya duygusal koşullarda dahi sürdürebileceğine olan inanç düzeyi.
 [^2]: **DGE (Deutsche Gesellschaft für Ernährung):** Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.
 [^3]: **İnaktivite (Sedentary Behavior):** Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.
 [^4]: **BMI / Beden Kitle İndeksi (Body Mass Index):** Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.
 
----
 
 ## Kaynaklar
 
@@ -153,4 +148,4 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 
 - Povey, R., Wellens, B., & Conner, M. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of perceived control and self-efficacy. *British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810* World Health Organization. (2021). *Obesity and overweight: Key facts*. WHO. https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
----
+

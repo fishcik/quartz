@@ -1359,6 +1359,18 @@ function scFetchGlossary(cb){
 function scInitAccordions(){
   // Process articles
   document.querySelectorAll('article, .center article').forEach(function(art){
+    // Remove any legacy "Kavramlar ve Dipnotlar" headings and their surrounding dividers
+    art.querySelectorAll('h2, h3, h4').forEach(function(h){
+      var txt = (h.textContent || '').trim().toLowerCase();
+      if(txt === 'kavramlar ve dipnotlar' || txt === 'dipnotlar' || txt === 'kavramlar & dipnotlar'){
+        var p = h.previousElementSibling;
+        if(p && (p.tagName === 'HR' || (p.classList && (p.classList.contains('sc-hr-serpent') || p.classList.contains('sc-serpent-div'))))) p.remove();
+        var n = h.nextElementSibling;
+        if(n && (n.tagName === 'HR' || (n.classList && (n.classList.contains('sc-hr-serpent') || n.classList.contains('sc-serpent-div'))))) n.remove();
+        h.remove();
+      }
+    });
+
     // 1. KAVRAMLAR & KELİMELER (Footnotes Accordion - Default Closed)
     var fnSec = art.querySelector('.footnotes, section[data-footnotes]');
     var fnDet = null;

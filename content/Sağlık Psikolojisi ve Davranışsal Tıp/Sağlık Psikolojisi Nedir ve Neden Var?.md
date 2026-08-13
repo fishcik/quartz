@@ -112,13 +112,10 @@ Sağlık psikolojisinin diğer bir çok alanla cevaplamaya çalıştığı soru 
 Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla yapıyor.
 
 ---
----
-
 [^1]: Biyomedikal Model (Biomedical Model): Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel tıp yaklaşımı.
 [^2]: Kronik Hastalık (Chronic Illness): Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).
 [^3]: Birincil Koruma (Primary Prevention): Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.
 
----
 
 ## Kaynaklar
 
