@@ -2083,8 +2083,8 @@ html[saved-theme="dark"] .sc-day-strip span.today { color: #fff; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border: none;
   background: none;
@@ -2095,17 +2095,22 @@ html[saved-theme="dark"] .sc-day-strip span.today { color: #fff; }
   flex-shrink: 0;
 
   & svg {
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
     display: block;
   }
 
   .sc-sbb-glyph {
     font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     line-height: 1;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: inherit;
+    font-style: normal !important;
+    font-weight: normal !important;
+    transform: translateY(-1px);
     transition: color 150ms ease;
   }
 
@@ -2489,10 +2494,10 @@ html[saved-theme="dark"] .cg-cell,
 // Sivri-tepe altıgenler dikey kenarlarından temas eder (sıfır boşluk, dolu
 // balpeteği); çift sıralar yarım hücre kayar, sıralar dikey 1/4H örtüşür.
 // Geometri: W (yatay düz kenar) / H (dikey sivri) ≈ 0.866 oranı → regular hex.
-$sc-hx-w: 158px;            // hücre genişliği (büyütüldü → uzun başlıklar 4-5 satır olmasın)
-$sc-hx-h: 182px;            // hücre yüksekliği (sivri-sivri)
-$sc-hx-over: 45px;          // dikey örtüşme (H/4) → satır adımı 0.75H
-$sc-hx-off: 79px;           // çift sıra yatay kayma (W/2)
+$sc-hx-w: 172px;            // hücre genişliği (büyütüldü)
+$sc-hx-h: 198px;            // hücre yüksekliği (sivri-sivri)
+$sc-hx-over: 49px;          // dikey örtüşme (H/4) → satır adımı 0.75H
+$sc-hx-off: 86px;           // çift sıra yatay kayma (W/2)
 $sc-hx-per: 5;              // satır başına altıgen (kendiliğinden sarar)
 
 body[data-slug$="/index"] {
@@ -2502,14 +2507,12 @@ body[data-slug$="/index"] {
   .page-listing .section-ul {
     display: flex !important;
     flex-wrap: wrap !important;
-    // flex-start: kısmi son sıra da soldan hizalanır → boşluk/kopukluk olmaz;
-    // blok, max-width + margin auto ile yine ortalanır.
     justify-content: center !important;
     align-items: flex-start;
     gap: 0 !important;
     list-style: none !important;
     padding: 0 !important;
-    margin: 1.1rem auto 2.2rem !important;
+    margin: 1.2rem auto 2.4rem !important;
     width: #{$sc-hx-w * $sc-hx-per + $sc-hx-off};
     max-width: 100%;
   }
@@ -2540,10 +2543,7 @@ body[data-slug$="/index"] {
     margin: 0 !important; padding: 0 !important; border: none !important;
     position: static !important; font-size: inherit !important;
   }
-  // Asıl altıgen: a etiketi hücreyi tam kaplar. clip-path kenarlığı kırptığı
-  // için ~1.5px cardinal kırmızı çerçeve şöyle kurulur:
-  //   a'nın zemini = çerçeve rengi (cardinal),  ::before 1.5px içeride = dolgu.
-  // isolation:isolate → ::before(z-index:-1) yalnız a'nın zemini üstünde kalır.
+  // Asıl altıgen: a etiketi hücreyi tam kaplar
   .page-listing .section-li .desc h3 a {
     position: absolute !important;
     inset: 0 !important;
@@ -2553,7 +2553,7 @@ body[data-slug$="/index"] {
     align-items: center !important;
     justify-content: center !important;
     gap: 0 !important;
-    padding: 22px 10px 8px 10px !important;
+    padding: 24px 10px 10px 10px !important;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     background: var(--accent);            // cardinal kırmızı outline
     color: #3a3026 !important;
@@ -2588,17 +2588,19 @@ body[data-slug$="/index"] {
     pointer-events: none;
     z-index: 3;
   }
-  // Hiyeroglif İkonu: Hexagonun TAM ORTASINDA, BÜYÜTÜLMÜŞ
+  // Hiyeroglif İkonu: Hexagonun TAM ORTASINDA, DİK/NORMAL
   .page-listing .section-li .desc h3 a .sc-hx-glyph {
     position: static !important;
-    transform: none !important;
+    transform: translateY(-2px) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
     font-size: 2.2rem !important;
+    font-style: normal !important;         // KESİNLİKLE DİK / NORMAL
+    font-weight: 400 !important;
     line-height: 1 !important;
-    margin: 2px 0 3px 0 !important;
+    margin: 0 0 2px 0 !important;
     color: rgba(58, 48, 38, 0.52);
     pointer-events: none;
     transition: color 180ms ease, transform 180ms ease;
@@ -2610,15 +2612,18 @@ body[data-slug$="/index"] {
     overflow: hidden;
     color: inherit;
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 0.64rem;
+    font-size: 0.68rem;
     font-weight: 600;
     font-style: normal !important;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     text-align: center !important;
-    line-height: 1.15;
+    line-height: 1.18;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
-  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.95); transform: scale(1.1); }
+  .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: rgba(255,255,255,0.95); transform: translateY(-2px) scale(1.1); }
   .page-listing .section-li .desc h3 a:hover .sc-hx-num { color: #ffffff !important; }
   // Hover: altıgen smooth büyür + dolgu cardinal + yazı beyaz
   .page-listing .section-li:hover { z-index: 10; }
@@ -2653,6 +2658,7 @@ html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .de
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a .sc-hx-glyph {
   color: rgba(216, 205, 184, 0.48);
+  font-style: normal !important;
 }
 html[saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph,
 [saved-theme="dark"] body[data-slug$="/index"] .page-listing .section-li .desc h3 a:hover .sc-hx-glyph {
@@ -3612,10 +3618,21 @@ body.sc-modal-open {
   }
 
   .sc-modal-title {
-    font-family: 'Manufacturing Consent', 'Playfair Display', Georgia, serif !important;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-family: 'Manufacturing Consent', serif !important;
+    font-size: 1.55rem;
+    font-weight: 400;
     color: var(--accent, #C8102E) !important;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .sc-modal-glyph {
+    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
+    font-size: 1.4rem;
+    font-style: normal !important;
+    margin-right: 8px;
+    color: var(--accent, #C8102E);
+    vertical-align: middle;
   }
 
   .sc-modal-subtitle {
@@ -3834,16 +3851,17 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
       font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
       margin-right: 8px;
       font-size: 1.25rem;
+      font-style: normal !important;
       vertical-align: middle;
       color: var(--accent, #C8102E) !important;
     }
 
     .sc-acc-title {
-      font-family: 'Manufacturing Consent', 'Playfair Display', Georgia, serif !important;
-      font-size: 1.22rem;
-      font-weight: 700;
+      font-family: 'Manufacturing Consent', serif !important;
+      font-size: 1.35rem;
+      font-weight: 400;
       color: var(--accent, #C8102E) !important;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
     }
 
     .sc-acc-meta {
@@ -3873,7 +3891,7 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
       font-family: 'Libre Baskerville', Georgia, serif !important;
     }
 
-    p, li, span, a {
+    p, li, span {
       font-family: 'Libre Baskerville', Georgia, serif !important;
     }
 
@@ -3905,8 +3923,8 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
     margin: 0;
 
     li {
-      padding: 0.95rem 0;
-      border-bottom: 1px solid rgba(200, 16, 46, 0.22);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(200, 16, 46, 0.20);
       font-family: 'Libre Baskerville', Georgia, serif !important;
       font-size: 0.92rem;
       line-height: 1.7;
@@ -3917,10 +3935,15 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
       }
 
       a {
+        display: block !important;
+        margin-top: 0.45rem !important;
         color: var(--secondary, #c79a6d);
         text-decoration: underline;
         text-underline-offset: 3px;
         word-break: break-all;
+        font-family: 'JetBrains Mono', monospace, sans-serif !important;
+        font-size: 0.78rem !important;
+        text-align: left !important;
       }
 
       em, i {

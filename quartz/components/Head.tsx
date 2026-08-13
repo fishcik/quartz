@@ -105,7 +105,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -349,7 +349,12 @@ function ensure(){
     // Sözlük / K&K Tuşu (𓅔) - Nöral ağın hemen sağına
     var bg=document.createElement('button');bg.type='button';bg.className='sc-toolbtn sc-glossarybtn';bg.title='Kavramlar & Kelimeler (Sözlük)';bg.setAttribute('aria-label','Kavramlar & Kelimeler (Sözlük)');
     bg.innerHTML='<span class="sc-sbb-glyph">𓅔</span>';
-    bg.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();scOpenGlossary();});
+    bg.addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      if(typeof window.scOpenGlossary==='function') window.scOpenGlossary();
+      else if(typeof scOpenGlossary==='function') scOpenGlossary();
+    });
     // Focus
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
@@ -828,12 +833,12 @@ function scFitHex(){
     a.appendChild(lbl);
 
     var li=a.closest('.section-li');if(!li)return;
-    var H=li.clientHeight||152,W=li.clientWidth||132;
-    var maxH=H*0.38,maxW=W-18;
+    var H=li.clientHeight||198,W=li.clientWidth||172;
+    var maxH=H*0.42,maxW=W-22;
     var len=cleanTitle.length;
-    var fs=(len>35)?7.5:(len>25)?8.5:(len>15)?9.5:11;
-    lbl.style.lineHeight='1.16';lbl.style.fontSize=fs+'px';
-    if((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>7){
+    var fs=(len>40)?8.5:(len>28)?9.8:(len>18)?11.2:12.5;
+    lbl.style.lineHeight='1.18';lbl.style.fontSize=fs+'px';
+    if((lbl.scrollHeight>maxH||lbl.scrollWidth>maxW)&&fs>7.5){
       lbl.style.fontSize=(fs-1.5)+'px';
     }
   });
@@ -1552,7 +1557,7 @@ function scInitAccordions(){
       '<div class="sc-modal-box sc-glossary-box">',
       '  <div class="sc-modal-header">',
       '    <div class="sc-modal-title-group">',
-      '      <span class="sc-modal-title">Kavramlar & Kelimeler</span>',
+      '      <span class="sc-modal-title"><span class="sc-modal-glyph">𓅔</span> Kavramlar & Kelimeler</span>',
       '      <span class="sc-modal-subtitle" id="sc-glossary-count">Sözlük Yükleniyor...</span>',
       '    </div>',
       '    <input type="text" id="sc-glossary-search" placeholder="Kavram veya terim ara..." autocomplete="off">',
@@ -1706,12 +1711,14 @@ function scOpenGlossary(searchTerm){
   document.body.classList.add('sc-modal-open');
   if(sInput && !searchTerm) setTimeout(function(){ sInput.focus(); }, 100);
 }
+window.scOpenGlossary = scOpenGlossary;
 
 function scCloseGlossary(){
   var gm = document.getElementById('sc-glossary-modal');
   if(gm) gm.classList.remove('sc-active');
   document.body.classList.remove('sc-modal-open');
 }
+window.scCloseGlossary = scCloseGlossary;
 
 // ─── SYNAPTIC HIVE FULLSCREEN MODAL SİSTEMİ ───────────────────────────
 function scInitDiagramModal(){
