@@ -116,9 +116,8 @@ Yeni** dinamik modelde** her şey birbiriyle anlık etkileşimde:
 [^2]: Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE): Marlatt tarafından tanımlanan; tek bir kaçamak sonrası bireyin suçluluk, yetersizlik ve 'battı balık yan gider' bilişiyle kontrolü tamamen kaybetmesi.
 [^3]: İçsel Atıf (Internal Attribution): Başarısızlığı durumsal faktörler yerine kendi karakterine, iradesizliğine veya yetersizliğine bağlama eğilimi.
 
-
 ## Kaynaklar
 
 - Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). *Relapse prevention: Maintenance strategies in the treatment of addictive behaviors*. Guilford Press. https://psycnet.apa.org/record/1985-97621-000
-- Weiner, B. (1985). An attributional theory of achievement motivation and emotion.* Psychological Review*, 92(4), 548–573. https://doi.org/10.1037/0033-295X.92.4.548
-- Witkiewitz, K., & Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao.* American Psychologist*, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224
+- Weiner, B. (1985). An attributional theory of achievement motivation and emotion. **Psychological Review*, 92(4), 548–573. https://doi.org/10.1037/0033-295X.92.4.548
+- Witkiewitz, K., & Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. *American Psychologist*, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224

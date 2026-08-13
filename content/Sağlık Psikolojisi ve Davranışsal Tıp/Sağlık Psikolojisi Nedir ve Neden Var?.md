@@ -116,9 +116,8 @@ Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla
 [^2]: Kronik Hastalık (Chronic Illness): Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).
 [^3]: Birincil Koruma (Primary Prevention): Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.
 
-
 ## Kaynaklar
 
-- Engel, G. L. (1980). The clinical application of the biopsychosocial model. *American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
-- Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology.* American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
-- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition.* Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660
+- Engel, G. L. (1980). The clinical application of the biopsychosocial model. **American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
+- Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology. *American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
+- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition. **Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660

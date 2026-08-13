@@ -3554,8 +3554,8 @@ body.sc-modal-open {
   }
 
   .sc-modal-title {
-    font-family: 'Libre Baskerville', Georgia, serif !important;
-    font-size: 1.2rem;
+    font-family: 'Manufacturing Consent', 'Playfair Display', Georgia, serif !important;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--accent, #C8102E) !important;
   }
@@ -3773,11 +3773,11 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
     }
 
     .sc-acc-title {
-      font-family: 'Libre Baskerville', 'Playfair Display', Georgia, serif !important;
-      font-size: 1.15rem;
+      font-family: 'Manufacturing Consent', 'Playfair Display', Georgia, serif !important;
+      font-size: 1.22rem;
       font-weight: 700;
       color: var(--accent, #C8102E) !important;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
     }
 
     .sc-acc-meta {
@@ -3799,10 +3799,21 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
     padding: 1.2rem 1.6rem;
     border-top: 1px solid var(--lightgray, #ece8e1);
     background: rgba(200, 16, 46, 0.015);
+    font-family: 'Libre Baskerville', Georgia, serif !important;
 
     ol, ul {
       margin: 0;
       padding-left: 1.2rem;
+      font-family: 'Libre Baskerville', Georgia, serif !important;
+    }
+
+    p, li, span, a {
+      font-family: 'Libre Baskerville', Georgia, serif !important;
+    }
+
+    em, i {
+      font-family: 'Libre Baskerville', Georgia, serif !important;
+      font-style: italic !important;
     }
   }
 }
@@ -3828,10 +3839,11 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
     margin: 0;
 
     li {
-      padding: 0.9rem 0;
+      padding: 0.95rem 0;
       border-bottom: 1px solid rgba(200, 16, 46, 0.22);
+      font-family: 'Libre Baskerville', Georgia, serif !important;
       font-size: 0.92rem;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--darkgray, #4a433a);
 
       &:last-child {
@@ -3842,6 +3854,12 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
         color: var(--secondary, #c79a6d);
         text-decoration: underline;
         text-underline-offset: 3px;
+        word-break: break-all;
+      }
+
+      em, i {
+        font-family: 'Libre Baskerville', Georgia, serif !important;
+        font-style: italic !important;
       }
     }
   }
@@ -3851,6 +3869,21 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
 .sc-footnotes-acc {
   margin-top: 2rem;
   margin-bottom: 1rem;
+
+  .sc-acc-body ol {
+    li {
+      font-family: 'Libre Baskerville', Georgia, serif !important;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 0.65rem;
+      color: var(--darkgray, #4a433a);
+
+      em, i {
+        font-family: 'Libre Baskerville', Georgia, serif !important;
+        font-style: italic !important;
+      }
+    }
+  }
 
   .sc-glossary-more-wrap {
     margin-top: 1.2rem;

@@ -90,10 +90,9 @@ Sonuç olarak sigara sadece kimyasal bir tuzak değil; bilişsel çarpıtmalar v
 [^2]: Pozitif Pekiştirme (Positive Reinforcement): Bir davranışın ardından haz verici veya ödüllendirici bir uyaranın gelmesi sonucu o davranışın tekrarlanma sıklığının artması.
 [^3]: Psikolojik Bağımlılık (Psychological Dependence): Madde veya davranışın duygu düzenleme, rahatlama veya kimlik parçası olarak algılanması sonucu gelişen zihinsel bağımlılık örüntüsü.
 
-
 ## Kaynaklar
 
-- Doll, R., Peto, R., Wheatley, K., Gray, R., & Sutherland, I. (1994). Mortality in relation to smoking: 40 years' observations on male British doctors. *BMJ*, 309(6959), 901–911. https://doi.org/10.1136/bmj.309.6959.901
-- Leventhal, H., & Cleary, P. D. (1980). The smoking problem: A review of the research and theory in behavioral risk modification.* Psychological Bulletin*, 88(2), 370–405. https://doi.org/10.1037/0033-2909.88.2.370
-- Skinner, B. F. (1953).* Science and human behavior*. Macmillan. https://doi.org/10.1037/11197-000
-- West, R. (2006).* Theory of addiction*. Blackwell Publishing / Addiction Press. https://doi.org/10.1002/9780470774113
+- Doll, R., Peto, R., Wheatley, K., Gray, R., & Sutherland, I. (1994). Mortality in relation to smoking: 40 years' observations on male British doctors. **BMJ*, 309(6959), 901–911. https://doi.org/10.1136/bmj.309.6959.901
+- Leventhal, H., & Cleary, P. D. (1980). The smoking problem: A review of the research and theory in behavioral risk modification. *Psychological Bulletin*, 88(2), 370–405. https://doi.org/10.1037/0033-2909.88.2.370
+- Skinner, B. F. (1953). *Science and human behavior*. Macmillan. https://doi.org/10.1037/11197-000
+- West, R. (2006). *Theory of addiction*. Blackwell Publishing / Addiction Press. https://doi.org/10.1002/9780470774113

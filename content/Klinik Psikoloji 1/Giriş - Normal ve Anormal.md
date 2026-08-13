@@ -318,10 +318,10 @@ Bu üç vaka, tam da **multimodal** yaklaşımın neden gerekli olduğunu göste
 [^6]: **Boyutsal Yaklaşım (Dimensional Approach):** Psikolojik durumları katı "sağlıklı / hasta" kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.
 [^7]: **ICD (International Classification of Diseases):** Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.
 
-
 ## Kaynaklar
 
-*American Psychiatric Association. (2013).* Diagnostic and statistical manual of mental disorders* (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596
-*Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine.* Science*, 196(4286), 129–136. https://doi.org/10.1126/science.847460* Kotov, R., Krueger, R. F., Watson, D., Achenbach, T. M., Althoff, R. R., Bagby, R. M., … & Zimmerman, M. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to empirical psychiatric classification. *Journal of Abnormal Psychology*, 126(4), 454–477. https://doi.org/10.1037/abn0000258* Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. *American Psychologist*, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373* World Health Organization. (2019). *International statistical classification of diseases and related health problems* (11th ed.). WHO. https://icd.who.int/
-
-
+- American Psychiatric Association. (2013). *Diagnostic and statistical manual of mental disorders* (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596
+- Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. *Science*, 196(4286), 129–136. https://doi.org/10.1126/science.847460
+- Kotov, R., Krueger, R. F., Watson, D., Achenbach, T. M., Althoff, R. R., Bagby, R. M., … & Zimmerman, M. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP): A dimensional alternative to empirical psychiatric classification. *Journal of Abnormal Psychology*, 126(4), 454–477. https://doi.org/10.1037/abn0000258
+- Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. *American Psychologist*, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373
+- World Health Organization. (2019). *International statistical classification of diseases and related health problems* (11th ed.). WHO. https://icd.who.int/

@@ -611,11 +611,11 @@ Vahşi ve TAM bir geri düşüş
 [^4]: HAPA Modeli (Health Action Process Approach): Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.
 [^5]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.
 
-
 ## Kaynaklar
 
-- Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T
-- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change.* Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
-- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans.* American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
-- Rosenstock, I. M. (1974). Historical origins of the health belief model.* Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
-- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors.* Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x
+- Ajzen, I. (1991). The theory of planned behavior. **Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020
+- T
+- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. **Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
+- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. *American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
+- Rosenstock, I. M. (1974). Historical origins of the health belief model. **Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
+- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. **Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x

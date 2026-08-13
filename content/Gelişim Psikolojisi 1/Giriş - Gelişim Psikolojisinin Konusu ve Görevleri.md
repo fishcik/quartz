@@ -578,10 +578,9 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 [^3]: Epigenetik (Epigenetics): DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.
 [^4]: Hassas Dönem (Sensitive Period): Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.
 
-
 ## Kaynaklar
 
-- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
-- Bronfenbrenner, U. (1979).* The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
-- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions.* Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
-- Piaget, J. (1952).* The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000
+- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. **Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
+- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
+- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. **Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
+- Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000

@@ -60,9 +60,8 @@ Because niyet yetmiyor! Yine!
 [^2]: Klinik Depresyon (Major Depressive Disorder): Sürekli çökkün duygudurum, ilgi kaybı ve enerji azalmasıyla seyreden ve egzersizle nörotransmitter regülasyonu sağlanan duygu durum bozukluğu.
 [^3]: İnaktif Yaşam (Physical Inactivity): Sağlık için önerilen asgari fiziksel hareket eşiğinin altında kalan yaşam tarzı.
 
-
 ## Kaynaklar
 
-- Bull, F. C., Al-Ansari, S. S., Biddle, S., Borodulin, K., Buman, M. P., Cardon, G., ... & Willumsen, J. F. (2020). World Health Organization 2020 guidelines on physical activity and sedentary behaviour. *British Journal of Sports Medicine*, 54(24), 1451–1462. https://doi.org/10.1136/bjsports-2020-102955
-- Deutsche Gesellschaft für Kardiologie (DGK). (2020).* Leitlinien zu Sport- und Bewegungstherapie bei kardiovaskulären Erkrankungen*. DGK. https://leitlinien.dgk.org/
-- Schuch, F. B., Vancampfort, D., Richards, J., Rosenbaum, S., Ward, P. B., & Stubbs, B. (2016). Exercise as a treatment for depression: A meta-analysis adjusting for publication bias.* Journal of Psychiatric Research*, 77, 42–51. https://doi.org/10.1016/j.jpsychires.2016.02.023
+- Bull, F. C., Al-Ansari, S. S., Biddle, S., Borodulin, K., Buman, M. P., Cardon, G., ... & Willumsen, J. F. (2020). World Health Organization 2020 guidelines on physical activity and sedentary behaviour. **British Journal of Sports Medicine*, 54(24), 1451–1462. https://doi.org/10.1136/bjsports-2020-102955
+- Deutsche Gesellschaft für Kardiologie (DGK). (2020). *Leitlinien zu Sport- und Bewegungstherapie bei kardiovaskulären Erkrankungen*. DGK. https://leitlinien.dgk.org/
+- Schuch, F. B., Vancampfort, D., Richards, J., Rosenbaum, S., Ward, P. B., & Stubbs, B. (2016). Exercise as a treatment for depression: A meta-analysis adjusting for publication bias. **Journal of Psychiatric Research*, 77, 42–51. https://doi.org/10.1016/j.jpsychires.2016.02.023

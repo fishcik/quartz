@@ -141,11 +141,8 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 [^3]: **İnaktivite (Sedentary Behavior):** Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.
 [^4]: **BMI / Beden Kitle İndeksi (Body Mass Index):** Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.
 
-
 ## Kaynaklar
 
-*Deutsche Gesellschaft für Ernährung. (2020).* Vollwertig essen und trinken nach den 10 Regeln der DGE*. DGE e.V. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/10-regeln/
-
-- Povey, R., Wellens, B., & Conner, M. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of perceived control and self-efficacy. *British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810* World Health Organization. (2021). *Obesity and overweight: Key facts*. WHO. https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
-
-
+- Deutsche Gesellschaft für Ernährung. (2020). *Vollwertig essen und trinken nach den 10 Regeln der DGE*. DGE e.V. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/10-regeln/
+- Povey, R., Wellens, B., & Conner, M. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of perceived control and self-efficacy. *British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810
+- World Health Organization. (2021). *Obesity and overweight: Key facts*. WHO. https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
