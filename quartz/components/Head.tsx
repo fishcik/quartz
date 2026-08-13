@@ -348,7 +348,7 @@ function ensure(){
     bt.addEventListener('click',function(){try{sessionStorage.setItem('sc_theme_manual','1');}catch(e){}var nt=document.documentElement.getAttribute('saved-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('saved-theme',nt);try{localStorage.setItem('theme',nt);}catch(e){}document.dispatchEvent(new CustomEvent('themechange',{detail:{theme:nt}}));});
     // Sözlük / K&K Tuşu (𓅔) - Nöral ağın hemen sağına
     var bg=document.createElement('button');bg.type='button';bg.className='sc-toolbtn sc-glossarybtn';bg.title='Kavramlar & Kelimeler (Sözlük)';bg.setAttribute('aria-label','Kavramlar & Kelimeler (Sözlük)');
-    bg.innerHTML='<span style="font-family:\'Noto Sans Egyptian Hieroglyphs\',\'Segoe UI Historic\',sans-serif;font-size:1.15rem;line-height:1;display:inline-block;">𓅔</span>';
+    bg.innerHTML='<span class="sc-sbb-glyph">𓅔</span>';
     bg.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();scOpenGlossary();});
     // Focus
     var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
@@ -1437,7 +1437,7 @@ function scInitAccordions(){
 
       var sum = document.createElement('summary');
       sum.className = 'sc-acc-header';
-      sum.innerHTML = '<span class="sc-acc-glyph" style="font-family:\'Noto Sans Egyptian Hieroglyphs\',\'Segoe UI Historic\',sans-serif;margin-right:8px;font-size:1.15rem;vertical-align:middle;color:var(--accent,#C8102E);">𓅔</span><span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
+      sum.innerHTML = '<span class="sc-acc-glyph">𓅔</span><span class="sc-acc-title">Kavramlar & Kelimeler</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
       fnDet.appendChild(sum);
 
       var bodyDiv = document.createElement('div');

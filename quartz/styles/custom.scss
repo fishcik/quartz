@@ -2113,6 +2113,14 @@ html[saved-theme="dark"] .sc-toolbtn,
 // Tema tuşu: aktif modda kırmızı vurgulu
 #sc-sbb .sc-themebtn { color: var(--accent) !important; }
 
+.sc-sbb-glyph {
+  font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
+  font-size: 1.15rem;
+  line-height: 1;
+  display: inline-block;
+  color: var(--accent, #C8102E) !important;
+}
+
 // Quartz darkmode buton — sidebarlarda gizli (SBB kutusu devraldı)
 .sidebar.right .darkmode { display: none !important; }
 .sidebar.left  .darkmode { display: none !important; }
@@ -3799,6 +3807,14 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
 
     &::-webkit-details-marker {
       display: none;
+    }
+
+    .sc-acc-glyph {
+      font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
+      margin-right: 8px;
+      font-size: 1.25rem;
+      vertical-align: middle;
+      color: var(--accent, #C8102E) !important;
     }
 
     .sc-acc-title {
