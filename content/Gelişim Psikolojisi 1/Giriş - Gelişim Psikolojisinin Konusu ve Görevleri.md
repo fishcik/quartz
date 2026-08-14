@@ -17,6 +17,8 @@ tags:
 
 ---
 
+## 1. Gelişimin Temel İlkeleri ve Doğası
+
 > Gelişim nedir? 
 > Nasıl oluşur? 
 > Her değişim gelişim midir?
@@ -70,7 +72,27 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 
 >**Genel mantık şu: uzmanlaşma her zaman bir daralmayla geliyor.**
 
-**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.** ## 1. Gelişimin Temel İlkeleri ve Doğası
+**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
+
+> [!abstract] 📜 Yaşam Boyu Gelişimde Kazanç ve Kayıp Dinamiği (Baltes, 1987)
+> *Kaynak: Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. Developmental Psychology, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611*
+>
+> <div style="display:flex; justify-content:center; margin: 1.5rem 0;">
+>   <svg viewBox="0 0 540 300" width="100%" style="max-width: 520px; height: auto;">
+>     <line x1="60" y1="240" x2="490" y2="240" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
+>     <line x1="60" y1="240" x2="60" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
+>     <text x="275" y="275" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle">Yaşam Evresi (Doğum ➔ Yaşlılık)</text>
+>     <text x="25" y="140" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle" transform="rotate(-90 25 140)">Kaynak Tahsisi (%)</text>
+>     <path d="M 70 60 Q 250 120 480 220" fill="none" stroke="#96c46c" stroke-width="2.5"/>
+>     <text x="140" y="75" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Büyüme & Kazanç (Akışkan Zekâ)</text>
+>     <path d="M 70 230 Q 280 180 480 70" fill="none" stroke="#C8102E" stroke-width="2.5"/>
+>     <text x="340" y="65" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Kayıpların Telafisi (Kristalize Zekâ)</text>
+>     <circle cx="275" cy="155" r="4" fill="#c79a6d"/>
+>     <text x="275" y="145" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Dönüm Noktası (Yetişkinlik)</text>
+>   </svg>
+> </div>
+>
+> **Açıklama:** *Gelişim tek yönlü bir yukarı tırmanış değildir; çocuklukta biyolojik kaynakların neredeyse tamamı yeni yetiler kazanmaya ve büyümeye harcanırken, yaşlandıkça kaynaklar kaçınılmaz kayıpları telafi etmeye ve eldekini korumaya yönlendirilir.*
 
 ### Kısa anlık değişimler gelişim değil, bunu biliyoruz. 
 
@@ -409,6 +431,29 @@ Orkide çocuklar yüksek wattlı amfiler. Çevreden gelen her şeyi içine çeki
 Kötü ebeveynlik? >: Derin hasar.
 
 Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf* geçiyor.
+
+> [!abstract] 📜 Diferansiyel Duyarlılık ve Biyolojik Hassasiyet Modeli (Boyce & Ellis, 2005)
+> *Kaynak: Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. Development and Psychopathology, 17(2), 271–301. https://doi.org/10.1017/s0954579405050145*
+>
+> <div style="display:flex; justify-content:center; margin: 1.5rem 0;">
+>   <svg viewBox="0 0 540 320" width="100%" style="max-width: 520px; height: auto;">
+>     <line x1="70" y1="260" x2="490" y2="260" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
+>     <line x1="70" y1="260" x2="70" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
+>     <text x="280" y="295" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle">Çevre Koşulları (Ağır İhmal/Stres ➔ Zengin/Destekleyici)</text>
+>     <text x="30" y="150" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle" transform="rotate(-90 30 150)">Gelişimsel Çıktı / Sağlık</text>
+>     <line x1="80" y1="160" x2="480" y2="150" stroke="#8a8275" stroke-width="2.5" stroke-dasharray="5"/>
+>     <text x="380" y="140" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Karahindiba (Düşük Watt / Dayanıklı)</text>
+>     <line x1="80" y1="240" x2="480" y2="60" stroke="#C8102E" stroke-width="2.8"/>
+>     <text x="360" y="52" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Orkide (Yüksek Watt / Aşırı Duyarlı)</text>
+>     <circle cx="95" cy="233" r="5" fill="#C8102E"/>
+>     <text x="105" y="248" fill="#C8102E" font-family="var(--bodyFont)" font-size="10">Kötü Çevrede Derin Hasar</text>
+>     <circle cx="465" cy="67" r="5" fill="#96c46c"/>
+>     <text x="380" y="80" fill="#96c46c" font-family="var(--bodyFont)" font-size="10">İyi Çevrede Zirve Gelişim</text>
+>   </svg>
+> </div>
+>
+> **Açıklama:** *Karahindiba çocuklar düşük wattlı bir amfi gibidir; çevre ne kadar bozuk ya da mükemmel olursa olsun ortalama bir çizgide kalırlar. Orkide çocuklar ise yüksek wattlı bir amfidir; kötü çevre koşullarında derin bir çöküş yaşarken, destekleyici bir ortamda diğer tüm çocuklardan çok daha üstün bir gelişim gösterirler.*
+
 ### Yaşlılık: Gen vs. Çevre
 
 Yaşlandıkça çevre birikir, gen etkisi azalır. Ne kadar çok deneyim, ne kadar çok iş, okul, insan, olay, o kadar çok çevre etkisi. 
@@ -448,7 +493,27 @@ Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gö
 >** Ebeveynlerin etkisi genler tarafından sınırlandırılıyor. O sınırlar içinde hareket alanı var. O alanda iyi ebeveynlik fark yaratıyor.** Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip.
 ### Bronfenbrenner'in Ekolojik Gelişim Modeli
 
-![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]
+> [!abstract] 📜 Bronfenbrenner'in Biyoekolojik Gelişim Modeli (Bronfenbrenner, 1979)
+> *Kaynak: Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press. https://doi.org/10.2307/j.ctv2607144*
+>
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+>   <svg viewBox="0 0 520 520" width="100%" style="max-width: 480px; height: auto;">
+>     <circle cx="260" cy="260" r="245" fill="rgba(138, 130, 117, 0.04)" stroke="#8a8275" stroke-width="1.5" stroke-dasharray="6,4"/>
+>     <text x="260" y="32" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">KRONOSİSTEM (Zaman, Tarihsel Dönem & Yaşam Geçişleri)</text>
+>     <circle cx="260" cy="260" r="195" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.8"/>
+>     <text x="260" y="82" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">MAKROSİSTEM (Kültür, Yasalar, İdeoloji & Toplumsal Değerler)</text>
+>     <circle cx="260" cy="260" r="145" fill="rgba(199, 154, 109, 0.10)" stroke="#c79a6d" stroke-width="1.8"/>
+>     <text x="260" y="132" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">EKZOSİSTEM (Ebeveyn İşyeri, Medya, Sosyal Kurumlar)</text>
+>     <circle cx="260" cy="260" r="95" fill="rgba(150, 196, 108, 0.12)" stroke="#96c46c" stroke-width="2"/>
+>     <text x="260" y="182" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">MİKROSİSTEM & MEZOSİSTEM</text>
+>     <text x="260" y="198" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">(Aile, Okul, Akranlar ve Aralarındaki Etkileşim)</text>
+>     <circle cx="260" cy="260" r="45" fill="rgba(200, 16, 46, 0.16)" stroke="#C8102E" stroke-width="2.5"/>
+>     <text x="260" y="256" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">BİREY</text>
+>     <text x="260" y="272" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Biyoloji & Mizaç</text>
+>   </svg>
+> </div>
+>
+> **Açıklama:** *İnsan gelişimi tek başına genlerden veya izole bir aileden ibaret değildir; bir soğan gibi içten dışa doğru genişleyen, bireyi saran ve zamanla birlikte dönüşen beş iç içe ekolojik katmanın bileşkesidir.*
 
 **Bronfenbrenner'in ekolojik gelişim modeli.** Bronfenbrenner diyor ki: insan iç içe geçmiş sistemlerin tam "ortasında" büyüyor. İnsanı anlamak için  *sadece* insana bakmak bu yüzden yetersiz
 
@@ -573,6 +638,7 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 ## Kaynaklar
 
 - Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
+- Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. *Development and Psychopathology*, 17(2), 271–301. https://doi.org/10.1017/s0954579405050145
 - Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
 - Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. *Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
 - Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000

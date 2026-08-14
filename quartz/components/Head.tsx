@@ -1730,7 +1730,7 @@ function scInitDiagramModal(){
     dm.innerHTML = [
       '<div class="sc-modal-box sc-diagram-box">',
       '  <div class="sc-modal-header">',
-      '    <div class="sc-modal-title">Diyagram Görünümü</div>',
+      '    <div class="sc-modal-title" id="sc-diag-modal-title">Diyagram Görünümü</div>',
       '    <button type="button" class="sc-modal-close" title="Kapat (ESC)">✕</button>',
       '  </div>',
       '  <div class="sc-diagram-modal-content" id="sc-diagram-modal-content"></div>',
@@ -1744,42 +1744,60 @@ function scInitDiagramModal(){
     });
   }
 
-  document.querySelectorAll('.expand-button').forEach(function(btn){
-    if(btn.getAttribute('data-sc-exp')) return;
-    btn.setAttribute('data-sc-exp', '1');
+  // Attach bespoke zoom buttons to all mermaid containers
+  document.querySelectorAll('.mermaid, div.mermaid, pre:has(> code.mermaid)').forEach(function(wrap){
+    if(wrap.getAttribute('data-sc-diag-ready')) return;
+    wrap.setAttribute('data-sc-diag-ready', '1');
+    wrap.style.position = 'relative';
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'sc-diag-zoom-btn';
+    btn.innerHTML = '🔍 İncele';
+    btn.title = 'Tam Ekran Görünüm';
     btn.addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
-      var pre = btn.closest('pre');
-      var svg = pre ? pre.querySelector('svg') : null;
-      if(svg) scOpenDiagramModal(svg);
+      var svg = wrap.querySelector('svg');
+      var callout = wrap.closest('.callout');
+      var title = callout ? (callout.querySelector('.callout-title-inner, .callout-title') || {}).textContent : 'Diyagram Görünümü';
+      if(svg) scOpenDiagramModal(svg, title);
     });
-  });
+    wrap.appendChild(btn);
 
-  document.querySelectorAll('.mermaid svg').forEach(function(svg){
-    if(svg.getAttribute('data-sc-dbl')) return;
-    svg.setAttribute('data-sc-dbl', '1');
-    svg.style.cursor = 'zoom-in';
-    svg.addEventListener('dblclick', function(e){
-      e.preventDefault();
-      scOpenDiagramModal(svg);
+    wrap.addEventListener('dblclick', function(e){
+      var svg = wrap.querySelector('svg');
+      if(svg){
+        e.preventDefault();
+        var callout = wrap.closest('.callout');
+        var title = callout ? (callout.querySelector('.callout-title-inner, .callout-title') || {}).textContent : 'Diyagram Görünümü';
+        scOpenDiagramModal(svg, title);
+      }
     });
   });
 }
 
-function scOpenDiagramModal(svgEl){
+function scOpenDiagramModal(svgEl, titleText){
   scInitDiagramModal();
   var dm = document.getElementById('sc-diagram-modal');
   if(!dm) return;
   var cont = dm.querySelector('#sc-diagram-modal-content');
+  var titleEl = dm.querySelector('#sc-diag-modal-title');
+  if(titleEl && titleText) titleEl.textContent = titleText.trim();
   if(!cont) return;
   cont.innerHTML = '';
+  
   var cloned = svgEl.cloneNode(true);
-  cloned.style.maxWidth = '100%';
-  cloned.style.maxHeight = '76vh';
-  cloned.style.width = 'auto';
+  cloned.removeAttribute('width');
+  cloned.removeAttribute('height');
+  cloned.style.width = '100%';
+  cloned.style.maxWidth = '1000px';
+  cloned.style.maxHeight = '72vh';
   cloned.style.height = 'auto';
+  cloned.style.display = 'block';
+  cloned.style.margin = 'auto';
   cont.appendChild(cloned);
+  
   dm.classList.add('sc-active');
   document.body.classList.add('sc-modal-open');
 }

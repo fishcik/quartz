@@ -3473,27 +3473,33 @@ body[data-slug="tags/index"] .page-listing > p {
     max-width: 100%;
     height: auto;
     font-family: var(--bodyFont, 'Source Serif 4', Georgia, serif) !important;
+    overflow: visible !important;
     
-    // Smooth snake-like curved lines
-    .edgePath path, .flowchart-link, path.path {
-      stroke-width: 1.6px !important;
+    // Connection lines: NEVER fill, always stroke
+    .edgePath path, .flowchart-link, path.path, path.edge-thickness-normal, path.edge-thickness-thick {
+      fill: none !important;
+      stroke-width: 1.8px !important;
       stroke: var(--secondary, #c79a6d) !important;
       transition: stroke 0.2s ease;
     }
+
+    path.edge-thickness-thick {
+      stroke-width: 2.6px !important;
+    }
     
-    // Markers / Arrowheads (Enforce Warm Beige/Sepia across all engines)
-    marker, marker path, marker polygon, marker circle,
-    [id*="pointEnd"] path, [id*="pointStart"] path, [id*="flowchart"] path,
-    .arrowMarkerPath, .arrowheadPath, path[marker-end] {
+    // Arrowheads & Markers ONLY (Do not target path[marker-end])
+    marker path, marker polygon, marker circle,
+    .arrowMarkerPath, .arrowheadPath,
+    [id*="flowchart-pointEnd"] path, [id*="flowchart-pointStart"] path {
       fill: var(--secondary, #c79a6d) !important;
       stroke: var(--secondary, #c79a6d) !important;
-      stroke-width: 1.2px !important;
+      stroke-width: 1px !important;
     }
 
-    // Node labels font, wrap & color (No text overflow)
-    .nodeLabel, .label, foreignObject div {
-      color: var(--darkgray) !important;
-      fill: var(--darkgray) !important;
+    // Node labels & Text
+    .nodeLabel, .label, foreignObject div, text {
+      color: var(--dark, #2c2523) !important;
+      fill: var(--dark, #2c2523) !important;
       font-family: var(--bodyFont, 'Source Serif 4', Georgia, serif) !important;
       font-size: 0.88rem !important;
       white-space: normal !important;
@@ -3503,12 +3509,38 @@ body[data-slug="tags/index"] .page-listing > p {
 
     // Edge Labels
     .edgeLabel {
-      background-color: var(--light) !important;
-      color: var(--tertiary) !important;
+      background-color: var(--light, #f9f8f6) !important;
+      color: var(--secondary, #c79a6d) !important;
       font-size: 0.78rem !important;
       font-style: italic;
       padding: 2px 6px;
       border-radius: 4px;
+      border: 1px solid rgba(199, 154, 109, 0.25);
+    }
+  }
+
+  .sc-diag-zoom-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--light, #f9f8f6);
+    border: 1px solid var(--lightgray, #ece8e1);
+    color: var(--secondary, #c79a6d);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.75;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+      border-color: var(--accent, #C8102E);
+      color: var(--accent, #C8102E);
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(200, 16, 46, 0.15);
     }
   }
 }
