@@ -197,11 +197,11 @@ classDef charcoal fill:none,stroke:#8a8275,stroke-width:1.2px,color:#d8cfc0;
 
 ## 6. Standart Çerçeve (Kapsayıcı Callout ve Çifte Anlatı)
 
-Her görsel metin içinde mutlaka `> [!abstract]` çağrı kutusu ile çerçevelenir:
+Her görsel metin içinde mutlaka `> [!abstract]` çağrı kutusu ile çerçevelenir. Başlıklarda kesinlikle emoji (`📜`, `📊` vb.) kullanılmaz; başlık düz, temiz ve Cardinal Kırmızı renkte render edilir. Sol üst köşesinde otomatik olarak %50 şeffaf `serpentbrain.svg` filigranı ve sağ üst köşesinde `🔍 İncele` butonu yer alır.
 
 ```markdown
-> [!abstract] 📜 [Modelin Tam Adı] ([Yazar], [Yıl])
-> *Kaynak: [APA 7 formatında tam makale/kitap referansı ve DOI linki]*
+> [!abstract] [Modelin Tam Adı] ([Yazar], [Yıl])
+> *Kaynak: [APA 7 formatında tam makale/kitap referansı ve çalışan resmî DOI / URL linki]*
 >
 > ```mermaid
 > %% veya <svg ...>

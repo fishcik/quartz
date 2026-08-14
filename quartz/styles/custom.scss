@@ -3545,6 +3545,89 @@ body[data-slug="tags/index"] .page-listing > p {
   }
 }
 
+// ─── ABSTRACT CALLOUT (SAYKO DİYAGRAM & MODEL ÇERÇEVESİ) ─────────────
+.callout[data-callout="abstract"] {
+  position: relative !important;
+  background: var(--light, #f9f8f6) !important;
+  border: 1px solid var(--lightgray, #ece8e1) !important;
+  border-left: 4px solid var(--accent, #C8102E) !important;
+  border-radius: 8px !important;
+  padding: 1.4rem 1.6rem !important;
+  margin: 2.4rem 0 !important;
+
+  // 𓆙 50% opacity serpentbrain watermark in top-left
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 28px;
+    height: 22px;
+    background-image: url("/static/serpentbrain.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.50 !important;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover::before {
+    opacity: 0.85 !important;
+  }
+
+  .callout-title {
+    padding-left: 34px;
+    padding-right: 75px;
+    font-family: var(--headerFont, 'Playfair Display', Georgia, serif) !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    color: var(--accent, #C8102E) !important;
+    margin-bottom: 0.8rem !important;
+    display: flex;
+    align-items: center;
+
+    .callout-icon {
+      display: none !important;
+    }
+
+    .callout-title-inner {
+      font-weight: 600 !important;
+      font-style: normal !important;
+    }
+  }
+
+  .sc-diag-zoom-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: var(--light, #f9f8f6);
+    border: 1px solid var(--lightgray, #ece8e1);
+    color: var(--secondary, #c79a6d);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+      border-color: var(--accent, #C8102E);
+      color: var(--accent, #C8102E);
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(200, 16, 46, 0.15);
+    }
+  }
+
+  svg {
+    cursor: zoom-in;
+  }
+}
+
 // ─── POPOVER / HOVER PREVIEW TAMAMEN KAPALI ────────────────────────────
 .popover, .popover-inner, [data-popover], .active-popover {
   display: none !important;

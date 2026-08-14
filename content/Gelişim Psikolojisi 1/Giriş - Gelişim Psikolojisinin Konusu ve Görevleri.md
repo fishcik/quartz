@@ -74,11 +74,11 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 
 **Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
 
-> [!abstract] 📜 Yaşam Boyu Gelişimde Kazanç ve Kayıp Dinamiği (Baltes, 1987)
+> [!abstract] Yaşam Boyu Gelişimde Kazanç ve Kayıp Dinamiği (Baltes, 1987)
 > *Kaynak: Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. Developmental Psychology, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611*
 >
-> <div style="display:flex; justify-content:center; margin: 1.5rem 0;">
->   <svg viewBox="0 0 540 300" width="100%" style="max-width: 520px; height: auto;">
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+>   <svg viewBox="0 0 540 300" width="100%" style="max-width: 680px; height: auto;">
 >     <line x1="60" y1="240" x2="490" y2="240" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <line x1="60" y1="240" x2="60" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <text x="275" y="275" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle">Yaşam Evresi (Doğum ➔ Yaşlılık)</text>
@@ -163,6 +163,39 @@ Geri alınabilir mi? Kolay değil.
 Yetişkin olarak vs. çocuk olarak yabancı dil öğrenmenin farkı da bu. 
 
 Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor.**Beyin bir hamur ise**, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.*
+
+> [!abstract] Nöral Plastisite ve Zihinsel Hamur Pişme Skalası (Hensch, 2005)
+> *Kaynak: Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. Nature Reviews Neuroscience, 6(11), 877–888. https://doi.org/10.1038/nrn1787*
+>
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+>   <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
+>     <rect x="20" y="30" width="170" height="180" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
+>     <text x="105" y="58" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Cıvık Hamur (0-3 Yaş)</text>
+>     <circle cx="105" cy="95" r="22" fill="none" stroke="#96c46c" stroke-width="2" stroke-dasharray="3,3"/>
+>     <text x="105" y="100" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Yüksek Plastisite</text>
+>     <text x="105" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Evrensel ses duyarlılığı.</text>
+>     <text x="105" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sonsuz şekil alma.</text>
+>     <text x="105" y="180" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Maksimum Esneklik</text>
+>     
+>     <rect x="215" y="30" width="170" height="180" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+>     <text x="300" y="58" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">2. Kıvam Alma (4-15 Yaş)</text>
+>     <circle cx="300" cy="95" r="22" fill="none" stroke="#c79a6d" stroke-width="2"/>
+>     <text x="300" y="100" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Hassas Dönem</text>
+>     <text x="300" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Ana dil uzmanlaşması.</text>
+>     <text x="300" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sinaptik budanma (Pruning).</text>
+>     <text x="300" y="180" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Fırın Isınıyor</text>
+>     
+>     <rect x="410" y="30" width="170" height="180" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
+>     <text x="495" y="58" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">3. Pişmiş Ekmek (20+ Yaş)</text>
+>     <rect x="473" y="73" width="44" height="44" rx="4" fill="none" stroke="#C8102E" stroke-width="2"/>
+>     <text x="495" y="100" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Stabilite</text>
+>     <text x="495" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Kristalize zekâ ve yapı.</text>
+>     <text x="495" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Değişim yoğun çaba ister.</text>
+>     <text x="495" y="180" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Katılaşmış Form</text>
+>   </svg>
+> </div>
+>
+> **Açıklama:** *Beyin erken çocuklukta her yöne bükülebilen cıvık bir hamur gibidir; yaş ilerledikçe fırında pişer, katılaşır ve o ilk şekil alabilirliği kaybolsa da dayanıklı, yapısal bir kimlik kazanır.*
 
 ### Herkeste mi, sende mi? (Evrensel vs. Diferansiyel)
 
@@ -432,11 +465,11 @@ Kötü ebeveynlik? >: Derin hasar.
 
 Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf* geçiyor.
 
-> [!abstract] 📜 Diferansiyel Duyarlılık ve Biyolojik Hassasiyet Modeli (Boyce & Ellis, 2005)
-> *Kaynak: Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. Development and Psychopathology, 17(2), 271–301. https://doi.org/10.1017/s0954579405050145*
+> [!abstract] Diferansiyel Duyarlılık ve Biyolojik Hassasiyet Modeli (Boyce & Ellis, 2005)
+> *Kaynak: Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. Development and Psychopathology, 17(2), 271–301. https://doi.org/10.1017/S0954579405050145*
 >
-> <div style="display:flex; justify-content:center; margin: 1.5rem 0;">
->   <svg viewBox="0 0 540 320" width="100%" style="max-width: 520px; height: auto;">
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+>   <svg viewBox="0 0 540 320" width="100%" style="max-width: 680px; height: auto;">
 >     <line x1="70" y1="260" x2="490" y2="260" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <line x1="70" y1="260" x2="70" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <text x="280" y="295" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle">Çevre Koşulları (Ağır İhmal/Stres ➔ Zengin/Destekleyici)</text>
@@ -493,11 +526,11 @@ Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gö
 >** Ebeveynlerin etkisi genler tarafından sınırlandırılıyor. O sınırlar içinde hareket alanı var. O alanda iyi ebeveynlik fark yaratıyor.** Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip.
 ### Bronfenbrenner'in Ekolojik Gelişim Modeli
 
-> [!abstract] 📜 Bronfenbrenner'in Biyoekolojik Gelişim Modeli (Bronfenbrenner, 1979)
-> *Kaynak: Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press. https://doi.org/10.2307/j.ctv2607144*
+> [!abstract] Bronfenbrenner'in Biyoekolojik Gelişim Modeli (Bronfenbrenner, 1979)
+> *Kaynak: Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press. https://www.jstor.org/stable/j.ctv2607144*
 >
 > <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
->   <svg viewBox="0 0 520 520" width="100%" style="max-width: 480px; height: auto;">
+>   <svg viewBox="0 0 520 520" width="100%" style="max-width: 620px; height: auto;">
 >     <circle cx="260" cy="260" r="245" fill="rgba(138, 130, 117, 0.04)" stroke="#8a8275" stroke-width="1.5" stroke-dasharray="6,4"/>
 >     <text x="260" y="32" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">KRONOSİSTEM (Zaman, Tarihsel Dönem & Yaşam Geçişleri)</text>
 >     <circle cx="260" cy="260" r="195" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.8"/>
@@ -549,6 +582,38 @@ Küçükken evebeynler yönetiyor seni. Sonrasında durum değişiyor. Kendi hay
 > - Öz-düzenleme becerileri
 
 Sadece niyet yerine bu üç adım da şart. 
+
+> [!abstract] Yaşam Boyu Eylemlilik: Gelişim Şantiyesinde Rol Değişimi (Brandtstädter, 1999)
+> *Kaynak: Brandtstädter, J. (1999). The self in action and development. In J. Brandtstädter & R. M. Lerner (Eds.), Action & self-development (pp. 3–34). SAGE Publications. https://doi.org/10.4135/9781452204802.n1*
+>
+> ```mermaid
+> flowchart LR
+>   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
+>   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
+>   classDef sage fill:none,stroke:#96c46c,stroke-width:1.8px,color:#96c46c;
+>   classDef charcoal fill:none,stroke:#8a8275,stroke-width:1.2px,color:#d8cfc0;
+>
+>   subgraph Faz1 [1. Çocukluk: Çıraklık & Pasif Taşıma]
+>     Amele[Dış Çevre & Ebeveyn İnşa Eder]:::charcoal
+>     PasifKov[Pasif Gen-Çevre Uyumu]:::charcoal
+>   end
+>
+>   Faz1 ==>|Farkındalık & Hedef Koyma| Faz2
+>
+>   subgraph Faz2 [2. Ergenlik: Ortak Yapımcılık]
+>     OzYet[Öz-Yeterlilik & Öz-Düzenleme]:::sepia
+>     Cagrisi[Çağrıştırıcı Seçimler]:::sepia
+>   end
+>
+>   Faz2 ==>|Realite Duvarı & Strateji| Faz3
+>
+>   subgraph Faz3 [3. Yetişkinlik: Şantiye Şefliği]
+>     Sef([Kasıtlı Öz-Gelişim & Aktif Çevre İnşası]):::cardinal
+>     Limit{{Genetik Tavan & Realite Sınırları}}:::sage
+>   end
+> ```
+>
+> **Açıklama:** *Gelişim hazır bir otoban değil, bir şantiyedir; birey çocuklukta sistemin taşıdığı bir amele iken, yaş aldıkça kendi hedeflerini koyan ve çevresini inşa eden şantiye şefine terfi eder.*
 
 Tabi her şey "hallolsa" bile realite duvarı devreye girer. 
 *Hayatı tek başına inşa edemezsin, sadece ona ortak olabilirsin.* Bu yüzden psikoloji, sınırları belirli bir "kendi kendini yaratma" kavramı yerine, ortak-gelişim/gelişimin ortağı olma kavramını kullanır. 
@@ -638,7 +703,9 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 ## Kaynaklar
 
 - Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
-- Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. *Development and Psychopathology*, 17(2), 271–301. https://doi.org/10.1017/s0954579405050145
-- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
+- Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. *Development and Psychopathology*, 17(2), 271–301. https://doi.org/10.1017/S0954579405050145
+- Brandtstädter, J. (1999). The self in action and development: Cultural, biosocial, and ontogenetic perspectives. In J. Brandtstädter & R. M. Lerner (Eds.), *Action & self-development: Theory and research through the life span* (pp. 3–34). SAGE Publications. https://doi.org/10.4135/9781452204802.n1
+- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://www.jstor.org/stable/j.ctv2607144
+- Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. *Nature Reviews Neuroscience*, 6(11), 877–888. https://doi.org/10.1038/nrn1787
 - Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. *Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
 - Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000

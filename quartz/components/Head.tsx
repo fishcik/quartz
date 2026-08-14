@@ -1744,8 +1744,10 @@ function scInitDiagramModal(){
     });
   }
 
-  // Attach bespoke zoom buttons to all mermaid containers
-  document.querySelectorAll('.mermaid, div.mermaid, pre:has(> code.mermaid)').forEach(function(wrap){
+  // Attach bespoke zoom buttons to all callout diagrams & mermaid containers
+  document.querySelectorAll('.callout[data-callout="abstract"], .mermaid, div.mermaid, pre:has(> code.mermaid)').forEach(function(wrap){
+    var svg = wrap.querySelector('svg');
+    if(!svg && !wrap.classList.contains('mermaid')) return;
     if(wrap.getAttribute('data-sc-diag-ready')) return;
     wrap.setAttribute('data-sc-diag-ready', '1');
     wrap.style.position = 'relative';
@@ -1754,24 +1756,22 @@ function scInitDiagramModal(){
     btn.type = 'button';
     btn.className = 'sc-diag-zoom-btn';
     btn.innerHTML = '🔍 İncele';
-    btn.title = 'Tam Ekran Görünüm';
+    btn.title = 'Tam Ekran Görünüm (Çift Tıklama)';
     btn.addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
-      var svg = wrap.querySelector('svg');
-      var callout = wrap.closest('.callout');
-      var title = callout ? (callout.querySelector('.callout-title-inner, .callout-title') || {}).textContent : 'Diyagram Görünümü';
-      if(svg) scOpenDiagramModal(svg, title);
+      var targetSvg = wrap.querySelector('svg');
+      var title = (wrap.querySelector('.callout-title-inner, .callout-title') || {}).textContent || 'Diyagram Görünümü';
+      if(targetSvg) scOpenDiagramModal(targetSvg, title);
     });
     wrap.appendChild(btn);
 
     wrap.addEventListener('dblclick', function(e){
-      var svg = wrap.querySelector('svg');
-      if(svg){
+      var targetSvg = wrap.querySelector('svg');
+      if(targetSvg){
         e.preventDefault();
-        var callout = wrap.closest('.callout');
-        var title = callout ? (callout.querySelector('.callout-title-inner, .callout-title') || {}).textContent : 'Diyagram Görünümü';
-        scOpenDiagramModal(svg, title);
+        var title = (wrap.querySelector('.callout-title-inner, .callout-title') || {}).textContent || 'Diyagram Görünümü';
+        scOpenDiagramModal(targetSvg, title);
       }
     });
   });
@@ -1783,7 +1783,7 @@ function scOpenDiagramModal(svgEl, titleText){
   if(!dm) return;
   var cont = dm.querySelector('#sc-diagram-modal-content');
   var titleEl = dm.querySelector('#sc-diag-modal-title');
-  if(titleEl && titleText) titleEl.textContent = titleText.trim();
+  if(titleEl && titleText) titleEl.textContent = titleText.replace(/^[\s\u200B-\u200D\uFEFF]+/, '').trim();
   if(!cont) return;
   cont.innerHTML = '';
   
@@ -1791,8 +1791,8 @@ function scOpenDiagramModal(svgEl, titleText){
   cloned.removeAttribute('width');
   cloned.removeAttribute('height');
   cloned.style.width = '100%';
-  cloned.style.maxWidth = '1000px';
-  cloned.style.maxHeight = '72vh';
+  cloned.style.maxWidth = '1100px';
+  cloned.style.maxHeight = '78vh';
   cloned.style.height = 'auto';
   cloned.style.display = 'block';
   cloned.style.margin = 'auto';
