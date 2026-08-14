@@ -160,31 +160,30 @@ Peki… "Ruhsal bozukluk" neye denir? Bu şemsiyenin altına ne giriyor? Şizofr
 > *Kaynak: Popper, K. R., & Eccles, J. C. (1977). The self and its brain. Springer. https://doi.org/10.1007/978-3-642-61891-8*
 >
 > <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
->   <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
->     <rect x="20" y="30" width="260" height="180" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.2"/>
->     <text x="150" y="55" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Churchland: İndirgemeci Materyalizm</text>
->     <rect x="40" y="80" width="90" height="45" rx="5" fill="none" stroke="#C8102E" stroke-width="2"/>
->     <text x="85" y="107" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Beyin (Madde)</text>
->     <line x1="135" y1="102" x2="175" y2="102" stroke="#8a8275" stroke-width="2"/>
->     <polygon points="175,98 185,102 175,106" fill="#8a8275"/>
->     <rect x="190" y="80" width="75" height="45" rx="5" fill="none" stroke="#8a8275" stroke-width="1.5" stroke-dasharray="3"/>
->     <text x="227" y="107" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Zihin (Gölge)</text>
->     <text x="150" y="160" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Tek yönlü nedensellik.</text>
->     <text x="150" y="178" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">"Film seni ağlatır ama filmi değiştiremezsin."</text>
->     
->     <rect x="320" y="30" width="260" height="180" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
->     <text x="450" y="55" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">2. Popper-Eccles: Çift Yönlü Etkileşim</text>
->     <rect x="340" y="80" width="85" height="45" rx="5" fill="none" stroke="#C8102E" stroke-width="2"/>
->     <text x="382" y="107" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Beyin</text>
->     <line x1="430" y1="95" x2="465" y2="95" stroke="#c79a6d" stroke-width="2"/>
->     <polygon points="465,92 473,95 465,98" fill="#c79a6d"/>
->     <line x1="470" y1="110" x2="435" y2="110" stroke="#96c46c" stroke-width="2"/>
->     <polygon points="435,107 427,110 435,113" fill="#96c46c"/>
->     <rect x="478" y="80" width="85" height="45" rx="5" fill="none" stroke="#96c46c" stroke-width="2"/>
->     <text x="520" y="107" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Zihin</text>
->     <text x="450" y="160" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Karşılıklı nöroplastik döngü.</text>
->     <text x="450" y="178" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Zihinsel anlam beyin yapısını yeniden yazar.</text>
->   </svg>
+> <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="20" y="30" width="260" height="180" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="150" y="55" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Churchland: İndirgemeci Materyalizm</text>
+>   <rect x="40" y="80" width="90" height="45" rx="5" fill="none" stroke="#C8102E" stroke-width="2"/>
+>   <text x="85" y="107" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Beyin (Madde)</text>
+>   <line x1="135" y1="102" x2="175" y2="102" stroke="#8a8275" stroke-width="2"/>
+>   <polygon points="175,98 185,102 175,106" fill="#8a8275"/>
+>   <rect x="190" y="80" width="75" height="45" rx="5" fill="none" stroke="#8a8275" stroke-width="1.5" stroke-dasharray="3"/>
+>   <text x="227" y="107" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Zihin (Gölge)</text>
+>   <text x="150" y="160" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Tek yönlü nedensellik.</text>
+>   <text x="150" y="178" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">"Film seni ağlatır ama filmi değiştiremezsin."</text>
+>   <rect x="320" y="30" width="260" height="180" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
+>   <text x="450" y="55" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">2. Popper-Eccles: Çift Yönlü Etkileşim</text>
+>   <rect x="340" y="80" width="85" height="45" rx="5" fill="none" stroke="#C8102E" stroke-width="2"/>
+>   <text x="382" y="107" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Beyin</text>
+>   <line x1="430" y1="95" x2="465" y2="95" stroke="#c79a6d" stroke-width="2"/>
+>   <polygon points="465,92 473,95 465,98" fill="#c79a6d"/>
+>   <line x1="470" y1="110" x2="435" y2="110" stroke="#96c46c" stroke-width="2"/>
+>   <polygon points="435,107 427,110 435,113" fill="#96c46c"/>
+>   <rect x="478" y="80" width="85" height="45" rx="5" fill="none" stroke="#96c46c" stroke-width="2"/>
+>   <text x="520" y="107" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Zihin</text>
+>   <text x="450" y="160" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Karşılıklı nöroplastik döngü.</text>
+>   <text x="450" y="178" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Zihinsel anlam beyin yapısını yeniden yazar.</text>
+> </svg>
 > </div>
 >
 > **Açıklama:** *Ruhsal bozukluklar sadece 'bozuk bir beyin kimyası' mıdır yoksa zihinsel deneyim beynin biyolojisini bizzat dönüştürebilir mi sorusunun iki dev felsefi cevabını karşılaştırır.*
@@ -381,39 +380,33 @@ Yani bir "film şeridi" gibi, baştan sona. Hayatın kendi ritmi içinde ilerliy
 > *Kaynak: American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596*
 >
 > <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
->   <svg viewBox="0 0 600 280" width="100%" style="max-width: 680px; height: auto;">
->     <rect x="20" y="20" width="240" height="240" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.2" stroke-dasharray="4"/>
->     <text x="140" y="48" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">ESKİ: DSM-IV (Yapay 5 Eksen)</text>
->     <rect x="40" y="70" width="200" height="32" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
->     <text x="140" y="91" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Eksen 1: Klinik Bozukluk (Depresyon)</text>
->     <text x="140" y="118" fill="#C8102E" font-family="var(--bodyFont)" font-size="13" font-weight="bold" text-anchor="middle">≠ (Yapay Ayrım)</text>
->     <rect x="40" y="130" width="200" height="32" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
->     <text x="140" y="151" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Eksen 2: Kişilik Bozukluğu (Borderline)</text>
->     <rect x="40" y="180" width="200" height="60" rx="4" fill="none" stroke="#8a8275" stroke-width="1" stroke-dasharray="2"/>
->     <text x="140" y="202" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Eksen 3: Tıbbi | Eksen 4: Çevresel</text>
->     <text x="140" y="222" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Eksen 5: GAF İşlevsellik Skoru</text>
->     
->     <rect x="300" y="20" width="280" height="240" rx="8" fill="rgba(200, 16, 46, 0.05)" stroke="#C8102E" stroke-width="1.6"/>
->     <text x="440" y="48" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">YENİ: DSM-5 (Yaşam Çizgisi Akışı)</text>
->     
->     <rect x="320" y="70" width="240" height="38" rx="4" fill="none" stroke="#c79a6d" stroke-width="1.8"/>
->     <text x="440" y="87" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">1. Erken Çocukluk (Nörogelişimsel)</text>
->     <text x="440" y="101" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Otizm Spektrum, DEHB</text>
->     
->     <line x1="440" y1="108" x2="440" y2="122" stroke="#C8102E" stroke-width="1.8"/>
->     <polygon points="437,120 440,126 443,120" fill="#C8102E"/>
->     
->     <rect x="320" y="126" width="240" height="38" rx="4" fill="none" stroke="#C8102E" stroke-width="1.8"/>
->     <text x="440" y="143" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">2. Ergenlik & Yetişkinlik (Epizod + Kişilik)</text>
->     <text x="440" y="157" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Duygudurum, Şizofreni, Borderline (Birlikte)</text>
->     
->     <line x1="440" y1="164" x2="440" y2="178" stroke="#C8102E" stroke-width="1.8"/>
->     <polygon points="437,176 440,182 443,176" fill="#C8102E"/>
->     
->     <rect x="320" y="182" width="240" height="38" rx="4" fill="none" stroke="#96c46c" stroke-width="1.8"/>
->     <text x="440" y="199" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">3. İleri Yaş (Nörobilişsel)</text>
->     <text x="440" y="213" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Demans, Alzheimer, Tedaviye Bağlı</text>
->   </svg>
+> <svg viewBox="0 0 600 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="20" y="20" width="240" height="240" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.2" stroke-dasharray="4"/>
+>   <text x="140" y="48" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">ESKİ: DSM-IV (Yapay 5 Eksen)</text>
+>   <rect x="40" y="70" width="200" height="32" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="140" y="91" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Eksen 1: Klinik Bozukluk (Depresyon)</text>
+>   <text x="140" y="118" fill="#C8102E" font-family="var(--bodyFont)" font-size="13" font-weight="bold" text-anchor="middle">≠ (Yapay Ayrım)</text>
+>   <rect x="40" y="130" width="200" height="32" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="140" y="151" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Eksen 2: Kişilik Bozukluğu (Borderline)</text>
+>   <rect x="40" y="180" width="200" height="60" rx="4" fill="none" stroke="#8a8275" stroke-width="1" stroke-dasharray="2"/>
+>   <text x="140" y="202" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Eksen 3: Tıbbi | Eksen 4: Çevresel</text>
+>   <text x="140" y="222" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Eksen 5: GAF İşlevsellik Skoru</text>
+>   <rect x="300" y="20" width="280" height="240" rx="8" fill="rgba(200, 16, 46, 0.05)" stroke="#C8102E" stroke-width="1.6"/>
+>   <text x="440" y="48" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">YENİ: DSM-5 (Yaşam Çizgisi Akışı)</text>
+>   <rect x="320" y="70" width="240" height="38" rx="4" fill="none" stroke="#c79a6d" stroke-width="1.8"/>
+>   <text x="440" y="87" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">1. Erken Çocukluk (Nörogelişimsel)</text>
+>   <text x="440" y="101" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Otizm Spektrum, DEHB</text>
+>   <line x1="440" y1="108" x2="440" y2="122" stroke="#C8102E" stroke-width="1.8"/>
+>   <polygon points="437,120 440,126 443,120" fill="#C8102E"/>
+>   <rect x="320" y="126" width="240" height="38" rx="4" fill="none" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="440" y="143" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">2. Ergenlik & Yetişkinlik (Epizod + Kişilik)</text>
+>   <text x="440" y="157" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Duygudurum, Şizofreni, Borderline (Birlikte)</text>
+>   <line x1="440" y1="164" x2="440" y2="178" stroke="#C8102E" stroke-width="1.8"/>
+>   <polygon points="437,176 440,182 443,176" fill="#C8102E"/>
+>   <rect x="320" y="182" width="240" height="38" rx="4" fill="none" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="440" y="199" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">3. İleri Yaş (Nörobilişsel)</text>
+>   <text x="440" y="213" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Demans, Alzheimer, Tedaviye Bağlı</text>
+> </svg>
 > </div>
 >
 > **Açıklama:** *DSM-5, Eksen 1 ve Eksen 2 arasındaki yapay ayrımı kaldırarak insan gelişimini bir film şeridi gibi doğumdan yaşlılığa doğru akan yaşam çizgisi sıralamasıyla organize etmiştir.*
