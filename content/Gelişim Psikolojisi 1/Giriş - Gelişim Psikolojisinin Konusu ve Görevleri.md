@@ -75,9 +75,7 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 **Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
 
 > [!abstract] Yaşam Boyu Gelişimde Kazanç ve Kayıp Dinamiği (Baltes, 1987)
-> *Kaynak: Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. Developmental Psychology, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 >   <svg viewBox="0 0 540 300" width="100%" style="max-width: 680px; height: auto;">
 >     <line x1="60" y1="240" x2="490" y2="240" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <line x1="60" y1="240" x2="60" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
@@ -93,6 +91,8 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 > </div>
 >
 > **Açıklama:** *Gelişim tek yönlü bir yukarı tırmanış değildir; çocuklukta biyolojik kaynakların neredeyse tamamı yeni yetiler kazanmaya ve büyümeye harcanırken, yaşlandıkça kaynaklar kaçınılmaz kayıpları telafi etmeye ve eldekini korumaya yönlendirilir.*
+>
+> *Kaynak: Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. Developmental Psychology, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611*
 
 ### Kısa anlık değişimler gelişim değil, bunu biliyoruz. 
 
@@ -165,9 +165,7 @@ Yetişkin olarak vs. çocuk olarak yabancı dil öğrenmenin farkı da bu.
 Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir. Ama bu esneklik sınırsız değil ve zamanla daralıyor.**Beyin bir hamur ise**, zamanla pişiyor. Tamamen katılaşmıyor ama artık o ilk yumuşaklık/şekil alabilirlik de yok.*
 
 > [!abstract] Nöral Plastisite ve Zihinsel Hamur Pişme Skalası (Hensch, 2005)
-> *Kaynak: Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. Nature Reviews Neuroscience, 6(11), 877–888. https://doi.org/10.1038/nrn1787*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 > <svg viewBox="0 0 600 245" width="100%" style="max-width: 680px; height: auto;">
 > <rect x="20" y="25" width="170" height="190" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
 > <text x="105" y="52" fill="#96c46c" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">1. Cıvık Hamur (0-3 Yaş)</text>
@@ -201,6 +199,8 @@ Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir.
 > </div>
 >
 > **Açıklama:** *Beyin erken çocuklukta her yöne bükülebilen cıvık bir hamur gibidir; yaş ilerledikçe fırında pişer, katılaşır ve o ilk şekil alabilirliği kaybolsa da dayanıklı, yapısal bir kimlik kazanır.*
+>
+> *Kaynak: Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. Nature Reviews Neuroscience, 6(11), 877–888. https://doi.org/10.1038/nrn1787*
 
 ### Herkeste mi, sende mi? (Evrensel vs. Diferansiyel)
 
@@ -471,9 +471,7 @@ Kötü ebeveynlik? >: Derin hasar.
 Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf* geçiyor.
 
 > [!abstract] Diferansiyel Duyarlılık ve Biyolojik Hassasiyet Modeli (Boyce & Ellis, 2005)
-> *Kaynak: Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. Development and Psychopathology, 17(2), 271–301. https://doi.org/10.1017/S0954579405050145*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 >   <svg viewBox="0 0 540 320" width="100%" style="max-width: 680px; height: auto;">
 >     <line x1="70" y1="260" x2="490" y2="260" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <line x1="70" y1="260" x2="70" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
@@ -491,6 +489,8 @@ Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor
 > </div>
 >
 > **Açıklama:** *Karahindiba çocuklar düşük wattlı bir amfi gibidir; çevre ne kadar bozuk ya da mükemmel olursa olsun ortalama bir çizgide kalırlar. Orkide çocuklar ise yüksek wattlı bir amfidir; kötü çevre koşullarında derin bir çöküş yaşarken, destekleyici bir ortamda diğer tüm çocuklardan çok daha üstün bir gelişim gösterirler.*
+>
+> *Kaynak: Boyce, W. T., & Ellis, B. J. (2005). Biological sensitivity to context: I. An evolutionary-developmental theory of the origins and functions of stress reactivity. Development and Psychopathology, 17(2), 271–301. https://doi.org/10.1017/S0954579405050145*
 
 ### Yaşlılık: Gen vs. Çevre
 
@@ -532,26 +532,26 @@ Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gö
 ### Bronfenbrenner'in Ekolojik Gelişim Modeli
 
 > [!abstract] Bronfenbrenner'in Biyoekolojik Gelişim Modeli (Bronfenbrenner, 1979)
-> *Kaynak: Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press. https://www.jstor.org/stable/j.ctv2607144*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 >   <svg viewBox="0 0 520 520" width="100%" style="max-width: 620px; height: auto;">
 >     <circle cx="260" cy="260" r="245" fill="rgba(138, 130, 117, 0.04)" stroke="#8a8275" stroke-width="1.5" stroke-dasharray="6,4"/>
->     <text x="260" y="32" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">KRONOSİSTEM (Zaman, Tarihsel Dönem & Yaşam Geçişleri)</text>
+>     <text x="260" y="32" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">KRONOSİSTEM (Zaman, Tarihsel Dönem &amp; Yaşam Geçişleri)</text>
 >     <circle cx="260" cy="260" r="195" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.8"/>
->     <text x="260" y="82" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">MAKROSİSTEM (Kültür, Yasalar, İdeoloji & Toplumsal Değerler)</text>
+>     <text x="260" y="82" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">MAKROSİSTEM (Kültür, Yasalar, İdeoloji &amp; Toplumsal Değerler)</text>
 >     <circle cx="260" cy="260" r="145" fill="rgba(199, 154, 109, 0.10)" stroke="#c79a6d" stroke-width="1.8"/>
 >     <text x="260" y="132" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">EKZOSİSTEM (Ebeveyn İşyeri, Medya, Sosyal Kurumlar)</text>
 >     <circle cx="260" cy="260" r="95" fill="rgba(150, 196, 108, 0.12)" stroke="#96c46c" stroke-width="2"/>
->     <text x="260" y="182" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">MİKROSİSTEM & MEZOSİSTEM</text>
+>     <text x="260" y="182" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">MİKROSİSTEM &amp; MEZOSİSTEM</text>
 >     <text x="260" y="198" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">(Aile, Okul, Akranlar ve Aralarındaki Etkileşim)</text>
 >     <circle cx="260" cy="260" r="45" fill="rgba(200, 16, 46, 0.16)" stroke="#C8102E" stroke-width="2.5"/>
 >     <text x="260" y="256" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">BİREY</text>
->     <text x="260" y="272" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Biyoloji & Mizaç</text>
+>     <text x="260" y="272" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Biyoloji &amp; Mizaç</text>
 >   </svg>
 > </div>
 >
 > **Açıklama:** *İnsan gelişimi tek başına genlerden veya izole bir aileden ibaret değildir; bir soğan gibi içten dışa doğru genişleyen, bireyi saran ve zamanla birlikte dönüşen beş iç içe ekolojik katmanın bileşkesidir.*
+>
+> *Kaynak: Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press. https://www.jstor.org/stable/j.ctv2607144*
 
 **Bronfenbrenner'in ekolojik gelişim modeli.** Bronfenbrenner diyor ki: insan iç içe geçmiş sistemlerin tam "ortasında" büyüyor. İnsanı anlamak için  *sadece* insana bakmak bu yüzden yetersiz
 
@@ -589,9 +589,7 @@ Küçükken evebeynler yönetiyor seni. Sonrasında durum değişiyor. Kendi hay
 Sadece niyet yerine bu üç adım da şart. 
 
 > [!abstract] Yaşam Boyu Eylemlilik: Gelişim Şantiyesinde Rol Değişimi (Brandtstädter, 1999)
-> *Kaynak: Brandtstädter, J. (1999). The self in action and development. In J. Brandtstädter & R. M. Lerner (Eds.), Action & self-development (pp. 3–34). SAGE Publications. https://doi.org/10.4135/9781452204802.n1*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 > <svg viewBox="0 0 600 220" width="100%" style="max-width: 680px; height: auto;">
 >   <rect x="15" y="20" width="170" height="175" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.4"/>
 >   <text x="100" y="45" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Çocukluk: Çıraklık</text>
@@ -623,6 +621,8 @@ Sadece niyet yerine bu üç adım da şart.
 > </div>
 >
 > **Açıklama:** *Gelişim hazır bir otoban değil, bir şantiyedir; birey çocuklukta sistemin taşıdığı bir amele iken, yaş aldıkça kendi hedeflerini koyan ve çevresini inşa eden şantiye şefine terfi eder.*
+>
+> *Kaynak: Brandtstädter, J. (1999). The self in action and development. In J. Brandtstädter & R. M. Lerner (Eds.), Action & self-development (pp. 3–34). SAGE Publications. https://doi.org/10.4135/9781452204802.n1*
 
 Tabi her şey "hallolsa" bile realite duvarı devreye girer. 
 *Hayatı tek başına inşa edemezsin, sadece ona ortak olabilirsin.* Bu yüzden psikoloji, sınırları belirli bir "kendi kendini yaratma" kavramı yerine, ortak-gelişim/gelişimin ortağı olma kavramını kullanır. 

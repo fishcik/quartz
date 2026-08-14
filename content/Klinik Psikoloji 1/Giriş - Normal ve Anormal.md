@@ -157,9 +157,7 @@ Peki… "Ruhsal bozukluk" neye denir? Bu şemsiyenin altına ne giriyor? Şizofr
 * **Popper-Eccles tarafı (çift yönlü):** Bunlar da diyor ki: *"Tamam, beyin zihni etkiler, ama zihin de kendi başına bir gerçeklik; o da beyne sinyaller gönderir, etkileşim çift taraflıdır."* Yani: Beyin ile zihin birbirine karışıyor.
 
 > [!abstract] Zihin-Beden İlişkisinde İki Temel Paradigma (Churchland, 1986; Popper & Eccles, 1977)
-> *Kaynak: Popper, K. R., & Eccles, J. C. (1977). The self and its brain. Springer. https://doi.org/10.1007/978-3-642-61891-8*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 > <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
 >   <rect x="20" y="30" width="260" height="180" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.2"/>
 >   <text x="150" y="55" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Churchland: İndirgemeci Materyalizm</text>
@@ -187,6 +185,8 @@ Peki… "Ruhsal bozukluk" neye denir? Bu şemsiyenin altına ne giriyor? Şizofr
 > </div>
 >
 > **Açıklama:** *Ruhsal bozukluklar sadece 'bozuk bir beyin kimyası' mıdır yoksa zihinsel deneyim beynin biyolojisini bizzat dönüştürebilir mi sorusunun iki dev felsefi cevabını karşılaştırır.*
+>
+> *Kaynak: Popper, K. R., & Eccles, J. C. (1977). The self and its brain. Springer. https://doi.org/10.1007/978-3-642-61891-8*
 
 Araştırmalar, ruhsal bozukluklarda çokça "bedensel", bedensel bozukluklarda da "ruhsal" sebep olduğunu gösteriyor. Belki de sorun terminolojiktir ve bunla ilgili henüz tatmin edici bir çözüm bulunmuş değil.
 
@@ -209,9 +209,7 @@ Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır:
 > Bu sendrom ya da örüntü, sadece *bir* olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki olmamalı. *(Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)* Ayrıca: Toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk sayılmaz. 
 
 > [!abstract] Ruhsal Belirti Değerlendirme ve Ayırıcı Tanı Karar Matrisi (Wakefield, 1992)
-> *Kaynak: Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. American Psychologist, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 > <svg viewBox="0 0 620 380" width="100%" style="max-width: 680px; height: auto;">
 >   <rect x="190" y="15" width="240" height="38" rx="19" fill="none" stroke="#c79a6d" stroke-width="2"/>
 >   <text x="310" y="39" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">Belirti / Yoğun Stres Yaşantısı</text>
@@ -254,6 +252,8 @@ Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır:
 > </div>
 >
 > **Açıklama:** *Her duygusal acının veya toplumsal uyumsuzluğun bir bozukluk olmadığını; tanı koyabilmek için kültürel bağlam, işlev kaybı ve içsel mekanizma yetersizliğinin adım adım filtrelenmesi gerektiğini ortaya koyar.*
+>
+> *Kaynak: Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. American Psychologist, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373*
 
 Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının bütününe, sosyokültürel bağlama ve biyolojik boyuta uzanan çok sayıda gösterge, süreç ve etkileşimi kapsıyor.
 
@@ -283,9 +283,7 @@ Yani: Bu mükemmel bir sistem değil. Ama, şu ana kadar bulduğumuz en işlevse
 Bir tanı almak bazen toplumsal bir dezavantaj da getiriyor. Şizofreni ya da madde bağımlılığı gibi*damgalayıcı* tanılar, kişiyi zora sokabiliyor. Bunların bazen toplumdan dışlanma/yaftalanma gibi sonuçları olabilirken, bazen de direkt somut sonuçları olabiliyor *(örnek: hayat sigortasına kabul edilmemek)*. Buna da damgalanma/etiketlenme diyoruz. Yani teşhis, bazen tedaviden önce gelen bir ceza olabiliyor.
 
 > [!abstract] Teşhis Etiketi ve Öz-Kehanet Kısırdöngüsü (Link & Phelan, 2001)
-> *Kaynak: Link, B. G., & Phelan, J. C. (2001). Conceptualizing stigma. Annual Review of Sociology, 27(1), 363–385. https://doi.org/10.1146/annurev.soc.27.1.363*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 > <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
 >   <rect x="15" y="25" width="165" height="60" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
 >   <text x="97" y="50" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Akut Yaşam Krizi</text>
@@ -317,6 +315,8 @@ Bir tanı almak bazen toplumsal bir dezavantaj da getiriyor. Şizofreni ya da ma
 > </div>
 >
 > **Açıklama:** *Tanı koymanın iletişimi kolaylaştıran faydasının yanında, bazen kişiyi 'aldığı tanıya dönüştüren' ve tedaviden önce gelen bir cezaya dönüşebilen etiketleme döngüsünü resmeder.*
+>
+> *Kaynak: Link, B. G., & Phelan, J. C. (2001). Conceptualizing stigma. Annual Review of Sociology, 27(1), 363–385. https://doi.org/10.1146/annurev.soc.27.1.363*
 
 Karmaşa maalesef burda da bitmiyor.. Daha "normal/anormal", "ruhsal bozukluk/hastalık" terimleri, farklı yerlerde farklı isimlerle dolaşıyor.
 
@@ -377,9 +377,7 @@ Yeni sistemde ise bozukluklar, insanın **yaşam çizgisini** takip ediyor:
 Yani bir "film şeridi" gibi, baştan sona. Hayatın kendi ritmi içinde ilerliyor. Bozukluklar, insan gelişiminin farklı evrelerinde farklı şekillerde ortaya çıkıyor. Yani: Bir çocukta otizm neyse, bir gencin şizofrenisi başka, bir yaşlının demansı apayrı bi şey. Bunları aynı düzleme koyup, hayatın akışına göre sıralamak, hem tanıyı hem de anlamayı kolaylaştırıyor.
 
 > [!abstract] Çok Eksenli Yapay Ayrımın Çöküşü ve Yaşam Çizgisi Modeli (APA, 2013)
-> *Kaynak: American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596*
->
-> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <div style="display:flex; justify-content:center; margin: 0.6rem 0 1rem 0;">
 > <svg viewBox="0 0 600 280" width="100%" style="max-width: 680px; height: auto;">
 >   <rect x="20" y="20" width="240" height="240" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.2" stroke-dasharray="4"/>
 >   <text x="140" y="48" fill="#8a8275" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">ESKİ: DSM-IV (Yapay 5 Eksen)</text>
@@ -399,7 +397,7 @@ Yani bir "film şeridi" gibi, baştan sona. Hayatın kendi ritmi içinde ilerliy
 >   <line x1="440" y1="108" x2="440" y2="122" stroke="#C8102E" stroke-width="1.8"/>
 >   <polygon points="437,120 440,126 443,120" fill="#C8102E"/>
 >   <rect x="320" y="126" width="240" height="38" rx="4" fill="none" stroke="#C8102E" stroke-width="1.8"/>
->   <text x="440" y="143" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">2. Ergenlik & Yetişkinlik (Epizod + Kişilik)</text>
+>   <text x="440" y="143" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">2. Ergenlik &amp; Yetişkinlik (Epizod + Kişilik)</text>
 >   <text x="440" y="157" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Duygudurum, Şizofreni, Borderline (Birlikte)</text>
 >   <line x1="440" y1="164" x2="440" y2="178" stroke="#C8102E" stroke-width="1.8"/>
 >   <polygon points="437,176 440,182 443,176" fill="#C8102E"/>
@@ -410,6 +408,8 @@ Yani bir "film şeridi" gibi, baştan sona. Hayatın kendi ritmi içinde ilerliy
 > </div>
 >
 > **Açıklama:** *DSM-5, Eksen 1 ve Eksen 2 arasındaki yapay ayrımı kaldırarak insan gelişimini bir film şeridi gibi doğumdan yaşlılığa doğru akan yaşam çizgisi sıralamasıyla organize etmiştir.*
+>
+> *Kaynak: American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). American Psychiatric Publishing. https://doi.org/10.1176/appi.books.9780890425596*
 
 ### Bu Durumda Eksenlerin Çöpe Gitmesinden Bahsedebilir miyiz?
 Ruhsal bozukluklar, şu an için en iyi şekilde betimsel, çok eksenli bir yaklaşımla tanımlanabilir, şimdilerde kabul gören yaklaşım bu.

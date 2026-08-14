@@ -869,11 +869,19 @@ function scSortRecentNotes(){
       var bA=b.querySelector('.desc h3 a')||b.querySelector('a');
       var aTitle=scFold(aA?aA.textContent:'');
       var bTitle=scFold(bA?bA.textContent:'');
-      var aDate=DATE_MAP[aTitle]||'2026-05-30';
-      var bDate=DATE_MAP[bTitle]||'2026-05-30';
       return bDate.localeCompare(aDate);
     });
-    lis.forEach(function(li){ul.appendChild(li);});
+    lis.forEach(function(li){
+      var a=li.querySelector('.desc h3 a')||li.querySelector('a');
+      var timeEl=li.querySelector('.meta time, time');
+      if(a && timeEl){
+        var aTitle=scFold(a.textContent);
+        if(aTitle==='GIRIS NORMAL VE ANORMAL'){
+          timeEl.textContent='14 Ağu 2026';
+        }
+      }
+      ul.appendChild(li);
+    });
   });
 }
 // Sayfanın sağ kenarı ile içerik kutusu arası mesafe (scrollbar hariç) → SBB/kuyruk
