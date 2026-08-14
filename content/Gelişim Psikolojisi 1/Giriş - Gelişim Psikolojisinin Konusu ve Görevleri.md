@@ -83,12 +83,12 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 >     <line x1="60" y1="240" x2="60" y2="40" stroke="var(--darkgray, #5c5549)" stroke-width="1.5"/>
 >     <text x="275" y="275" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle">Yaşam Evresi (Doğum ➔ Yaşlılık)</text>
 >     <text x="25" y="140" fill="var(--dark)" font-family="var(--bodyFont)" font-size="12" text-anchor="middle" transform="rotate(-90 25 140)">Kaynak Tahsisi (%)</text>
->     <path d="M 70 60 Q 250 120 480 220" fill="none" stroke="#96c46c" stroke-width="2.5"/>
->     <text x="140" y="75" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Büyüme & Kazanç (Akışkan Zekâ)</text>
->     <path d="M 70 230 Q 280 180 480 70" fill="none" stroke="#C8102E" stroke-width="2.5"/>
+>     <path d="M 70 65 Q 275 140 480 225" fill="none" stroke="#96c46c" stroke-width="2.5"/>
+>     <text x="140" y="75" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Büyüme &amp; Kazanç (Akışkan Zekâ)</text>
+>     <path d="M 70 225 Q 275 140 480 65" fill="none" stroke="#C8102E" stroke-width="2.5"/>
 >     <text x="340" y="65" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold">Kayıpların Telafisi (Kristalize Zekâ)</text>
->     <circle cx="275" cy="155" r="4" fill="#c79a6d"/>
->     <text x="275" y="145" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Dönüm Noktası (Yetişkinlik)</text>
+>     <circle cx="275" cy="142.5" r="5" fill="#c79a6d"/>
+>     <text x="275" y="128" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Dönüm Noktası (Yetişkinlik)</text>
 >   </svg>
 > </div>
 >
@@ -168,28 +168,35 @@ Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir.
 > *Kaynak: Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. Nature Reviews Neuroscience, 6(11), 877–888. https://doi.org/10.1038/nrn1787*
 >
 > <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
-> <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
-> <rect x="20" y="30" width="170" height="180" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
-> <text x="105" y="58" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Cıvık Hamur (0-3 Yaş)</text>
-> <circle cx="105" cy="95" r="22" fill="none" stroke="#96c46c" stroke-width="2" stroke-dasharray="3,3"/>
-> <text x="105" y="100" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Yüksek Plastisite</text>
-> <text x="105" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Evrensel ses duyarlılığı.</text>
-> <text x="105" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sonsuz şekil alma.</text>
-> <text x="105" y="180" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Maksimum Esneklik</text>
-> <rect x="215" y="30" width="170" height="180" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
-> <text x="300" y="58" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">2. Kıvam Alma (4-15 Yaş)</text>
-> <circle cx="300" cy="95" r="22" fill="none" stroke="#c79a6d" stroke-width="2"/>
-> <text x="300" y="100" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Hassas Dönem</text>
-> <text x="300" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Ana dil uzmanlaşması.</text>
-> <text x="300" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sinaptik budanma (Pruning).</text>
-> <text x="300" y="180" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Fırın Isınıyor</text>
-> <rect x="410" y="30" width="170" height="180" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
-> <text x="495" y="58" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">3. Pişmiş Ekmek (20+ Yaş)</text>
-> <rect x="473" y="73" width="44" height="44" rx="4" fill="none" stroke="#C8102E" stroke-width="2"/>
-> <text x="495" y="100" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Stabilite</text>
-> <text x="495" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Kristalize zekâ ve yapı.</text>
-> <text x="495" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Değişim yoğun çaba ister.</text>
-> <text x="495" y="180" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Katılaşmış Form</text>
+> <svg viewBox="0 0 600 245" width="100%" style="max-width: 680px; height: auto;">
+> <rect x="20" y="25" width="170" height="190" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
+> <text x="105" y="52" fill="#96c46c" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">1. Cıvık Hamur (0-3 Yaş)</text>
+> <path d="M 85 92 C 75 84, 90 72, 105 72 C 122 72, 132 84, 126 94 C 120 102, 92 102, 85 92 Z" fill="rgba(150, 196, 108, 0.14)" stroke="#96c46c" stroke-width="1.8" stroke-dasharray="3 2"/>
+> <circle cx="90" cy="80" r="1.5" fill="#96c46c"/><circle cx="120" cy="90" r="1.5" fill="#96c46c"/><circle cx="102" cy="98" r="1.2" fill="#96c46c"/>
+> <text x="105" y="125" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Yüksek Plastisite</text>
+> <text x="105" y="145" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Evrensel ses duyarlılığı.</text>
+> <text x="105" y="162" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Sonsuz şekil alma.</text>
+> <text x="105" y="195" fill="#96c46c" font-family="var(--bodyFont)" font-size="9.5" font-style="italic" text-anchor="middle">Maksimum Esneklik</text>
+> <rect x="215" y="25" width="170" height="190" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+> <text x="300" y="52" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">2. Kıvam Alma (4-15 Yaş)</text>
+> <ellipse cx="300" cy="88" rx="28" ry="16" fill="rgba(199, 154, 109, 0.14)" stroke="#c79a6d" stroke-width="1.8"/>
+> <path d="M 286 84 Q 300 90 314 84" fill="none" stroke="#c79a6d" stroke-width="1.6"/>
+> <path d="M 284 92 Q 300 98 316 92" fill="none" stroke="#c79a6d" stroke-width="1.6"/>
+> <text x="300" y="125" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Hassas Dönem</text>
+> <text x="300" y="145" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Ana dil uzmanlaşması.</text>
+> <text x="300" y="162" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Sinaptik budanma (Pruning).</text>
+> <text x="300" y="195" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9.5" font-style="italic" text-anchor="middle">Fırın Isınıyor</text>
+> <rect x="410" y="25" width="170" height="190" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
+> <text x="495" y="52" fill="#C8102E" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">3. Pişmiş Ekmek (20+ Yaş)</text>
+> <path d="M 466 90 C 466 77, 524 77, 524 90 C 524 99, 466 99, 466 90 Z" fill="rgba(200, 16, 46, 0.14)" stroke="#C8102E" stroke-width="2"/>
+> <line x1="482" y1="82" x2="492" y2="89" stroke="#C8102E" stroke-width="1.6"/>
+> <line x1="498" y1="82" x2="508" y2="89" stroke="#C8102E" stroke-width="1.6"/>
+> <path d="M 488 71 Q 484 65 488 59" fill="none" stroke="#c79a6d" stroke-width="1.4" stroke-linecap="round"/>
+> <path d="M 502 71 Q 506 65 502 59" fill="none" stroke="#c79a6d" stroke-width="1.4" stroke-linecap="round"/>
+> <text x="495" y="125" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Stabilite &amp; Form</text>
+> <text x="495" y="145" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Kristalize zekâ ve yapı.</text>
+> <text x="495" y="162" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Değişim yoğun çaba ister.</text>
+> <text x="495" y="195" fill="#C8102E" font-family="var(--bodyFont)" font-size="9.5" font-style="italic" text-anchor="middle">Fırından Çıkmış Ekmek</text>
 > </svg>
 > </div>
 >

@@ -847,7 +847,7 @@ function scFitHex(){
 function scSortRecentNotes(){
   var rns=document.querySelectorAll('.recent-notes .recent-ul');
   var DATE_MAP={
-    'GIRIS NORMAL VE ANORMAL': '2026-08-08',
+    'GIRIS NORMAL VE ANORMAL': '2026-08-14',
     'GUNESTEN KORUNMA': '2026-06-25',
     'BESLENME PSIKOLOJISI': '2026-06-25',
     'BESLENME': '2026-06-25',
