@@ -1505,7 +1505,7 @@ function scInitAccordions(){
 
           var sum = document.createElement('summary');
           sum.className = 'sc-acc-header';
-          sum.innerHTML = '<span class="sc-acc-title">Kaynaklar</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
+          sum.innerHTML = '<span class="sc-acc-glyph">𓆄</span><span class="sc-acc-title">Kaynaklar</span><span class="sc-acc-meta">' + countText + '</span><span class="sc-acc-chevron">▼</span>';
           refDet.appendChild(sum);
 
           var bodyDiv = document.createElement('div');
