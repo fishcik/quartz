@@ -197,17 +197,26 @@ classDef charcoal fill:none,stroke:#8a8275,stroke-width:1.2px,color:#d8cfc0;
 
 ## 6. Standart Çerçeve (Kapsayıcı Callout ve Çifte Anlatı)
 
-Her görsel metin içinde mutlaka `> [!abstract]` çağrı kutusu ile çerçevelenir. Başlıklarda kesinlikle emoji (`📜`, `📊` vb.) kullanılmaz; başlık düz, temiz ve Cardinal Kırmızı renkte render edilir. Sol üst köşesinde otomatik olarak %50 şeffaf `serpentbrain.svg` filigranı ve sağ üst köşesinde `🔍 İncele` butonu yer alır.
+Her görsel metin içinde mutlaka `> [!abstract]` çağrı kutusu ile çerçevelenir. Başlıklarda kesinlikle emoji (`📜`, `📊` vb.) kullanılmaz; başlık düz, temiz ve ortalı render edilir. 
+
+### Standart Blok Anatomisi:
+1. **Modül Başlığı (`.callout-title`):** Ortalı, net ve sade.
+2. **Yazar & Yıl Alt Başlığı (`.sc-diag-author`):** Başlığın hemen bir satır altında, ortalı, Cardinal Kırmızı (`#C8102E`) ve kaynak makale bağlantılı: `<div class="sc-diag-author"><a href="DOI_LINK" target="_blank" rel="noopener noreferrer">([Yazar], [Yıl])</a></div>`.
+3. **Grafik / Vektör (SVG veya Mermaid):** Başlığa yakın (`margin-top: 0.2rem`), geniş ve etkileyici (`max-width: 780px`).
+4. **Açıklama Metni:** "Açıklama:" ibaresi OLMADAN doğrudan italik açıklama metni.
+5. **Minimal Kaynak Künyesi:** "Kaynak:" ibaresi OLMADAN, en altta ince kesikli ayraç üstünde, küçük puntolarla (`font-size: 0.72rem`), hafif transparan (`opacity: 0.72`) ve Cardinal Kırmızı tıklanabilir bağlantılı APA künyesi.
 
 ```markdown
-> [!abstract] [Modelin Tam Adı] ([Yazar], [Yıl])
-> *Kaynak: [APA 7 formatında tam makale/kitap referansı ve çalışan resmî DOI / URL linki]*
+> [!abstract] [Modelin Tam Adı]
+> <div class="sc-diag-author"><a href="[DOI_VEYA_URL_LINKI]" target="_blank" rel="noopener noreferrer">([Yazar], [Yıl])</a></div>
 >
-> ```mermaid
-> %% veya <svg ...>
-> ```
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <!-- <svg viewBox="..."> veya ```mermaid -->
+> </div>
 >
-> **Açıklama:** *[1. Cümle: Sistemin teorik / bilimsel mekanizmasının özeti]. [2. Cümle: Sokak diliyle / sezgisel olarak günlük hayattaki karşılığı ve ana çıkarım].*
+> *[1. Cümle: Sistemin teorik / bilimsel mekanizmasının özeti]. [2. Cümle: Sokak diliyle / sezgisel olarak günlük hayattaki karşılığı ve ana çıkarım].*
+>
+> *[Yazar], [A.]. ([Yıl]). [Makale/Kitap Başlığı]. [Yayıncı/Dergi], [Cilt](Sayı), [Sayfalar]. [DOI_LINK]*
 ```
 
 ---
@@ -218,8 +227,8 @@ Her görsel metin içinde mutlaka `> [!abstract]` çağrı kutusu ile çerçevel
 *Kullanım Alanı: Bağımlılık döngüsü, anksiyete sarmalı, öfke patlamaları, uyku-stres kısırdöngüsü.*
 
 ```markdown
-> [!abstract] 📜 Bağımlılıkta Karşıt-Süreç Teorisi (Solomon & Corbit, 1974)
-> *Kaynak: Solomon, R. L., & Corbit, J. D. (1974). An opponent-process theory of motivation. Psychological Review, 81(2), 119–145.*
+> [!abstract] Bağımlılıkta Karşıt-Süreç Teorisi
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/h0036128" target="_blank" rel="noopener noreferrer">(Solomon &amp; Corbit, 1974)</a></div>
 >
 > ```mermaid
 > flowchart TD
@@ -235,7 +244,9 @@ Her görsel metin içinde mutlaka `> [!abstract]` çağrı kutusu ile çerçevel
 >   Tolerans ==>|Yoksunluğu Dindirmek İçin| Madde
 > ```
 >
-> **Açıklama:** *İlk dönemde keyif almak için yapılan eylemin, zihnin homeostatik dengelenmesi sonucu zamanla sadece yoksunluk acısını dindirmek için bir zorunluluğa dönüşmesini açıklar.*
+> *İlk dönemde keyif almak için yapılan eylemin, zihnin homeostatik dengelenmesi sonucu zamanla sadece yoksunluk acısını dindirmek için bir zorunluluğa dönüşmesini açıklar.*
+>
+> *Solomon, R. L., &amp; Corbit, J. D. (1974). An opponent-process theory of motivation. Psychological Review, 81(2), 119–145. https://doi.org/10.1037/h0036128*
 ```
 
 ---

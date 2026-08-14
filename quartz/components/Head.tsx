@@ -847,7 +847,7 @@ function scFitHex(){
 function scSortRecentNotes(){
   var rns=document.querySelectorAll('.recent-notes .recent-ul');
   var DATE_MAP={
-    'GIRIS NORMAL VE ANORMAL': '2026-08-14',
+    'GIRIS NORMAL VE ANORMAL': '2026-07-03',
     'GUNESTEN KORUNMA': '2026-06-25',
     'BESLENME PSIKOLOJISI': '2026-06-25',
     'BESLENME': '2026-06-25',
@@ -869,6 +869,8 @@ function scSortRecentNotes(){
       var bA=b.querySelector('.desc h3 a')||b.querySelector('a');
       var aTitle=scFold(aA?aA.textContent:'');
       var bTitle=scFold(bA?bA.textContent:'');
+      var aDate=DATE_MAP[aTitle]||'2026-05-30';
+      var bDate=DATE_MAP[bTitle]||'2026-05-30';
       return bDate.localeCompare(aDate);
     });
     lis.forEach(function(li){
@@ -877,7 +879,8 @@ function scSortRecentNotes(){
       if(a && timeEl){
         var aTitle=scFold(a.textContent);
         if(aTitle==='GIRIS NORMAL VE ANORMAL'){
-          timeEl.textContent='14 Ağu 2026';
+          timeEl.textContent='03 Tem 2026';
+          timeEl.setAttribute('datetime','2026-07-03T00:00:00.000Z');
         }
       }
       ul.appendChild(li);
