@@ -4,6 +4,7 @@
 
 - [[#DOKUNULMAZ ALAN — Yazının Sesi ve Ruhu]]
 - [[#Frontmatter Standardı]]
+- [[#Tipografi ve Başlık Hiyerarşisi]]
 - [[#TOC — İçindekiler Yapısı]]
 - [[#Graph View ve Wikilink Ağı]]
 - [[#Görsel Estetik, Vurgular ve Callout Haritası]]
@@ -50,6 +51,21 @@ tags:
 
 ---
 
+## Tipografi ve Başlık Hiyerarşisi
+
+Sitedeki tüm yazılar otantik bir edebi/akademik kimlikle render edilir:
+
+| Öğe / Seviye | Font Ailesi | Renk & Stil | Açıklama |
+| :--- | :--- | :--- | :--- |
+| **`h1` (Sayfa Başlığı)** | `Playfair Display` | Normal Metin Rengi | Büyük, ağırbaşlı ana makale başlığı |
+| **`h2` (Ana Bölümler & TOC)** | `Manufacturing Consent` | Cardinal Kırmızı (`#C8102E`) | Gotik/blackletter asil bölüm durakları (`## 1. Konu...`, `## İçindekiler`) |
+| **`h3` / `h4` (Alt Başlıklar)** | `Source Serif 4` / `Libre Baskerville` | İtalik / Yarı-Kalın | Akışı kesmeyen okunaklı alt konu başlıkları |
+| **Gövde Metni & Tanımlar** | `Libre Baskerville` | Nötr Gövde Rengi | Yüksek okunurluklu klasik serif gövde |
+| **K&K ve Kaynakça Başlıkları** | `Manufacturing Consent` | Cardinal Kırmızı (`#C8102E`) | Akordiyon ve modal başlıkları |
+| **Metin İçi Vurgu & Renkler** | Inline HTML / CSS | İsteğe Bağlı | İhtiyaç halinde `<span style="color:#C8102E">...</span>` serbesttir |
+
+---
+
 ## TOC — İçindekiler Yapısı
 
 Uzun notlarda (3 veya daha fazla başlık içeren) frontmatter'dan hemen sonra eklenir:
@@ -63,7 +79,7 @@ Uzun notlarda (3 veya daha fazla başlık içeren) frontmatter'dan hemen sonra e
 - [[#Üçüncü Başlık]]
 ```
 
-- TOC başlığının kendisi `##` seviyesinde olur.
+- TOC başlığının kendisi `##` seviyesinde olur ve otomatik olarak **Manufacturing Consent + Cardinal Kırmızı** ile stillendirilir.
 - TOC içindeki linkler her zaman aynı not içi syntax olan `[[#Başlık]]` formatındadır.
 
 ---

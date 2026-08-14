@@ -26,14 +26,16 @@ Sigara öldürür, hareket etmek iyidir, sebze yemek lazım. Bunları herkes bil
 ***Sağlık davranışı:*** Sağlık psikolojisi içinde ***sağlık davranışı*** araştırması tam da bu soruyu ciddiye alıyor.
 
 - **Tanımı:** Sağlığın korunması, yeniden kazanılması ya da iyileştirilmesiyle bağlantılı her türlü davranış, davranış kalıbı, eylem ya da alışkanlık sağlık davranışı sayılıyor.
-Düzenli spor, dengeli beslenme, check-up'lar, güneş kremi, prezervatif kullanımı. Bunlar hep sağlık davranışı işte..**Diğer yandan bir de **risk davranışları** var tabii.**Sigara, alkol, metamfetamin, eroin, dezomorfin, fentanil.. 
-Sağlığı potansiyel olarak** tehdit eden **ya da** kanıtlanmış **bir biçimde zarar veren davranışlar.** Burda ince bi nokta var: fentanil kullanmamak, yani bir risk davranışını** yapmamak da başlı başına bir sağlık davranışı sayılabiliyor. 
+Düzenli spor, dengeli beslenme, check-up'lar, güneş kremi, prezervatif kullanımı. Bunlar hep sağlık davranışı işte..Diğer yandan bir de **risk davranışları** var tabii. Sigara, alkol, metamfetamin, eroin, dezomorfin, fentanil.. 
+Sağlığı potansiyel olarak **tehdit eden** ya da **kanıtlanmış** bir biçimde zarar veren davranışlar. Burda ince bi nokta var: fentanil kullanmamak, yani bir risk davranışını yapmamak da başlı başına bir sağlık davranışı sayılabiliyor. 
 Yani olay sadece "hadi sağlıklı şeyler yapalım, iyi olalım!" değil, "kötü şeylerden kaçın!" da aynı kategoriye giriyor, işi kolaylaştırıyor biraz. 
 ***Davranış değişikliği kolay olsaydı bu kadar teoriye ihtiyaç duyulmazdı. Bu süreci etkileyen ve açıklayan en önemli faktörleri tespit etmeye çalışan onlarca teori var. Hepsinin sorusu aynı, açıları farklı: "İnsan davranışı nasıl değişir, ya da neden değişmez?"***
 
 ## 1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM
 
-### Süreklilik mi, Aşama mı?** Alkolü bırakmayı düşünen biriyle konuştuğunda "bırakcam ama henüz hazır değilim" diyor. 
+### Süreklilik mi, Aşama mı?
+
+Alkolü bırakmayı düşünen biriyle konuştuğunda "bırakcam ama henüz hazır değilim" diyor. 
 Başka biri var, o da bırakmayı düşünüyor, ama bu hafta bıraktı, yarın tekrar aldı, sonraki hafta yine bıraktı.
 Üçüncüsü on yıldır tek damla içmemiş ve artık aklına bile gelmiyor. 
 
@@ -47,7 +49,7 @@ Kişiyi o çizgide ileriye ya da geriye iten şey bilişsel ve duygusal değişk
 
 > *Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli[^1] (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
 
-> ***2) Aşama modelleri
+> ***2) Aşama modelleri:***
 
 Bunlar "hayır, öyle çizgi üzerinde ileri-geri falan olmaz" diyor. 
 Davranış değişikliği sırasında insan niceliksel olarak değil, niteliksel olarak farklı evreler geçiriyor. 
@@ -112,7 +114,11 @@ E insanların yaşını geri alamayacağımıza göre, etki edilebilecek, manip�
 Sağlık İnanç Modeli (HBM) tam olarak bu *çaresizlikten* doğdu: "bilişsel olarak neyi değiştirebiliriz" arayışından. 
 *Modelin temel iddiası: bir davranışı değiştirme olasılığın, algıladığın sağlık tehdidinin büyüklüğü ve o tehdide karşı önlemin işe yarayacağına dair inancınla doğru orantılı olarak artar. 
 Yani bir tarafta hissedilen **sağlık tehdidi**, 
-diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inancı, yani **önlemin algılanan yararı** . Bu ikisi yükseldikçe, o davranışı değiştirme olasılığı artıyor.** ### Tehdit Algısı: *Ne kadar korkuyorsun?* Tehdit algısını iki bileşen oluşturuyor:
+diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inancı, yani **önlemin algılanan yararı** . Bu ikisi yükseldikçe, o davranışı değiştirme olasılığı artıyor.*
+
+### Tehdit Algısı: Ne kadar korkuyorsun?
+
+Tehdit algısını iki bileşen oluşturuyor:
 
 > 1) Öznel kırılganlık: "bu hastalık bana da olabilir mi?" sorusunun cevabı.
 *Sigara içen biri kendini akciğer kanserine karşı ne kadar savunmasız hissediyor?* Bu sonuçta öznel bir değerlendirme, gerçek riskle bire bir örtüşmüyor. 
@@ -122,7 +128,9 @@ diğer tarafta ise yapacağın şeyin o tehdidi ne kadar savuşturacağı inanc�
 
 Özetle, öznel kırılganlık ile hastalığın ağırlığı algısı birleşince algılanan sağlık tehdidi oluşuyor. *Ama tehdit tek başına yeterli değil...*
 
-***Tehdidi görüyorsun, peki önlem almaya değer mi?***---
+### Tehdidi görüyorsun, peki önlem almaya değer mi?
+
+
  *Sigara bırakmak kanser riskini düşürür, bu fayda. 
 Ama kilo alabilirsin, sindirim sorunları yaşayabilirsin, bunlar maliyet.*
 
@@ -194,7 +202,7 @@ Büyük kampanyalarda bunu yapmak zor olduğu için, en azından hedef kitleyi "
 >
 >**Açıklama:**  *Bir insanın sağlık tehdidi algısı ile maliyet-fayda dengesinin birleşerek gerçek bir koruyucu sağlık eylemine dönüşme sürecini bilişsel basamaklarla modeller.*
 
-# 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)
+## 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)
 
 Zamanında sosyal psikoloji dünyasında çok düz bir mantık hakimdi: *Bir insanın bir şeye karşı tutumu neyse, ona göre davranır.
 Spor yapmayı seviyorsa yapar, sevmiyorsa yapmaz.*
@@ -320,7 +328,10 @@ Bu da bir Eğer/O zaman planı, engel senaryosu için.**94 araştırmayı kapsay
 > planlayan insanlar hem daha sık hem daha hızlı hedeflerine ulaşıyor.**
 
 **Basit bir araç ama pek çok pahalı müdahaleden daha etkili.** ## 4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)
-## HAPA *Sağlık Eylem Süreci Yaklaşım Modeli - (Health Action Process Approach)* HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş*bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
+
+### HAPA (Health Action Process Approach)
+
+HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş*bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
 
 Yani iş niyetten sonra başlıyor. Ve o "sonrası" tek bir blok değil,*her aşamanın kendi dinamiği var.* Diğer modellerin büyük çoğunluğu motivasyon, yani niyet, ile ilgilenirken, HAPA volisyonla ilgilenir ve niyeti davranışa dönüştürme sürecini ele alır. 
 
@@ -339,7 +350,7 @@ Risk algısı devreye girdi.
 Sonuçları tartıyorsun ve "yapabilirim" diyorsun. Niyet oluştu.** Hapa burada bitmez. Sonraki sorular:**-plan var mı?**
 **- Zor günlerde ne yapacaksın?**
 **- Aksatırsan nasıl geri döneceksin?** Niyet ettin, hatta başladın bile, tamam. Ama başlamak bir adım ise, başladıktan sonraki gelen her devam etme durumu da bir adım atmaktır. Daha yeni başlıyoruz.
-## "Haftaya sigarayı bırakıyorum" Yalanının Arkasındaki** 6** Aşama *(Transteorik Model - TTM - Transtheoretical Model)*
+### Transteorik Model (TTM): Değişimin 6 Aşaması
 
 > *"Değişmek bir eylem değil, bir bayrak yarışıdır."*
 
@@ -422,8 +433,9 @@ Yani davranışın değiştirmenin arkasında yatan mental/fiziksel motor budur.
 
 Tabi psikolojide neredeyse her şeyde olduğu gibi, bu teoride de akla *tam*  olarak yatmayan şeyler **var**:
 
-- Neden 6 ay?** İnsan psikoljisi İsviçre saati mi ki tam 6. ayda vites değiştirsin? Bu sürelerin bilimsel bir temeli yok. Zaman konusunda biraz sakat.**-**Sigarayı bırakmak için tıkır tıkır çalışan bu model, spor ve beslenmeye falan gelince patlıyor. Çünkü insanlar spor yaparken** her **aşamada** tüm **stretejileri** aynı anda **kullanıyor.** # 5. PAPM (Önleyici Eylem Süreç Modeli)
-## PAPM 
+- Neden 6 ay?** İnsan psikoljisi İsviçre saati mi ki tam 6. ayda vites değiştirsin? Bu sürelerin bilimsel bir temeli yok. Zaman konusunda biraz sakat.**-**Sigarayı bırakmak için tıkır tıkır çalışan bu model, spor ve beslenmeye falan gelince patlıyor. Çünkü insanlar spor yaparken** her **aşamada** tüm **stretejileri** aynı anda **kullanıyor.** ## 5. PAPM (Önleyici Eylem Süreç Modeli)
+### Bilmiyordum ile Biliyorum ve Umursamıyorum Arasındaki Fark
+
 *'Bilmiyordum' ile 'biliyorum ve umursamıyorum' arasındaki fark.*
 
 PAPM, yani, Precaution Adoption Process Model, yani, Önleyici Eylem Süreç Modeli, Weinstein ve Sandman tarafından, sağlık tehlikesinin bireysel önemi yeterince teorize edilmediği gerekçesiyle geliştirildi. 
@@ -432,34 +444,44 @@ PAPM, TTM'nin gözden kaçırdığı iki gerçeği modele katar: insanlar bir te
 > Bu iki grup farklı müdahale gerektirir ve TTM'deki gibi hepsini aynı sepete koymaz. 
 
 ***Yani TTM'nin görmezden geldiği tamamen cahil olmak ve "yapmıyorum ulan!" restini ciddiye alıyor ve aynı zamanda TTM'nin katı kriterlerindeki zaman değişkenini kaldırıyor ve yerine tamamen psikolojik dönüm noktalarını koyuyor.** PAPM**, bir insanın tehlikeyi fark edip önlem alana kadar tam 7 niteliklsel aşamadan i söyler. Burada süre sınırları yok. Zaman ile olmuyor değişimler. Tamamen kafa yapısı (zihniyet) ile oluşan bir süreç:
-## 1) Mutlak Cahillik
+### 1. Mutlak Cahillik
 *Zihniyet:* "O ne demek kanka? İlk defa duyuyorum valla.."
 ***Olayı***: Kişi tehlikenin ve yapması gereken sağlık davranışlarının farkında bile değildir. 
 Mesela evindeki radyoaktif radon gazının kanser yaptığından bihaber olan birisi.
 
 ---
-## 2) Kulaktan Dolma Bilgi / Kişisel Bağ Kurmama **Zihniyet:** "Öyle bi şey varmış aynen.. Ama beni bağlamaz."
+### 2. Kulaktan Dolma Bilgi / Kişisel Bağ Kurmama
+
+*Zihniyet:* "Öyle bi şey varmış aynen.. Ama beni bağlamaz."
 ***Olayı:*** Tehlikeyi duymuştur. Ama üzerine hiç düşünmez. Zaman sınırı yoktur.
 
 ---
-## 3) Karar Masası **Zihniyet:** "Hmmmm... Acaba bu konuda bi şey yapsam mı lan?!"
+### 3. Karar Masası
+
+*Zihniyet:* "Hmmmm... Acaba bu konuda bi şey yapsam mı lan?!"
 ***Olayı:*** Mesele artık kişiselleşmiştir. Kişi artık ***aktif*** olarak bir karar vermeye çalışıyordur.**Burası yol ayrımıdır. 
 
 Buradan iki farklı aşamaya zıplayabilir:
 
 ---
-## SOLA DÖNÜŞ
-## 4) Bilinçli "hayır" kararı** Zihniyet:** "Düşündüm. Taşındım..***VE ***yapmamaya karar verdim..... Konu kilit. Konu kapanmıştır.."*** Olayı:*** Eylem sekansı burada biter, durum sabittir. Kişi düşündü ve bilinçli bir karar verdi.
-## SAĞA DÖNÜŞ
-## 5) Bilinçli "evet" kararı **Zihniyet:** "Tamam ya. Bu işi yapıyorum. Kararımı verdim."
+### 4. Bilinçli "Hayır" Kararı (Sola Dönüş)
+
+*Zihniyet:* "Düşündüm. Taşındım..***VE ***yapmamaya karar verdim..... Konu kilit. Konu kapanmıştır.."*** Olayı:*** Eylem sekansı burada biter, durum sabittir. Kişi düşündü ve bilinçli bir karar verdi.
+### 5. Bilinçli "Evet" Kararı (Sağa Dönüş)
+
+*Zihniyet:* "Tamam ya. Bu işi yapıyorum. Kararımı verdim."
 ***Olayı:*** Kişi eyleme geçmeye niyetlenmiştir. Kararsızlık bitmiştir. Şimdi sadece ***ilk*** adımı atmak (initiation) kalmıştır. 
 
 ---
-## 6) Savaş Alanı *Zihniyet:* "Şu an bizzat uyguluyorum. Şu an bu işin İÇİNDEYİM dostum."
+### 6. Savaş Alanı
+
+*Zihniyet:* "Şu an bizzat uyguluyorum. Şu an bu işin İÇİNDEYİM dostum."
 ***Olayı:*** Davranışı ilk defa hayata geçirme anıdır. TTM'deki Action aşamasıyla aynı. 
 
 ---
-## 7) İstikrar **Zihniyet:** "Bu olay artık hayatımın bir parçası kanka..."
+### 7. İstikrar
+
+*Zihniyet:* "Bu olay artık hayatımın bir parçası kanka..."
 ***Olayı:*** Davranışın kalıcılaşması ve sürdürülmesi. 
 
 ```
@@ -518,8 +540,8 @@ Volisyon ile.*
 > ***Eleştiri:***>Alerji ilacını almaya giden Ahmet, spora başlayan Mehmet ya da meyve yiyen Larissa aslında "niteliksel olarak farklı" aşamalarda olmayabilirler. Belki de sadece davranış motivasyonları kesintisiz bir çizgi üzerine azalıp artıyordur ve ***biz onlara yapay olarak "Action", "Contemplation" falan gibi havalı isimler veriyoruzdur?!*** Eğer bu aşamalar **yalansa**, her aşamaya özel devasa bütçeli kampanyalar yapılması tamamen para ve zaman kaybıdır. 
 
 ---
-# 6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE
-## Ortak Düşman: Geri Düşüş (Relapse)
+## 6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE
+### Ortak Düşman: Geri Düşüş (Relapse)
 *Tüm bu modellerin kesiştiği bir konu var:* insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**Geri Düşüş, bir insanın yeni edindiği sağlıklı davranışı (sigarayı bırakmak, düzenli spor...)
 aniden kesip, o eski konforlu ve tehlikeli** riske geri dönmesi **durumudur. 
 
@@ -543,8 +565,7 @@ Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü te
 > *Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değil. 
 
 ---
-## ***Perhiz İhlali Etkisi***
-**(AVE - Abstinenz-Verletzungs-Effekt)** Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini** kötü **ve** suçlu **hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir:**"Ben iradesizim!"** veya *"Ben alkolik bir hastayım!"*. 
+### Perhiz İhlali Etkisi (AVE - Abstinenz-Verletzungs-Effekt) Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini** kötü **ve** suçlu **hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir:**"Ben iradesizim!"** veya *"Ben alkolik bir hastayım!"*. 
 Bu iki* atıf  *da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu*olumsuz duygulardan kaçmak için*yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf*doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
 
 >**Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.**
@@ -564,17 +585,16 @@ Vahşi ve TAM bir geri düşüş **Yani:** hastalık modelinin o katı ve dogmat
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
 
 ---
-[^1]: Sağlık İnanç Modeli (Health Belief Model): Bireylerin algılanan tehdit, duyarlılık ve kar-zarar dengesi üzerinden sağlık davranışlarına karar verdiğini öne süren bilişsel model.
-[^2]: Öz-Etkililik (Self-Efficacy): Albert Bandura tarafından tanımlanan, bireyin belirli bir davranışı veya görevi başarıyla yerine getirebileceğine yönelik öznel inanç kapasitesi.
-[^3]: Planlanmış Davranış Teorisi (Theory of Planned Behavior): Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.
-[^4]: HAPA Modeli (Health Action Process Approach): Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.
-[^5]: Niyet-Davranış Uçurumu (Intention-Behavior Gap): Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.
+[^1]: **Sağlık İnanç Modeli (Health Belief Model):** 
+[^2]: **Öz-Etkililik (Self-Efficacy):** 
+[^3]: **Planlanmış Davranış Teorisi (Theory of Planned Behavior):** 
+[^4]: **HAPA Modeli (Health Action Process Approach):** 
+[^5]: **Niyet-Davranış Uçurumu (Intention-Behavior Gap):** 
 
 ## Kaynaklar
 
-- Ajzen, I. (1991). The theory of planned behavior.** Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020
-- T
-- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change.** Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
+- Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T
+- Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. *Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
 - Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans.*American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
-- Rosenstock, I. M. (1974). Historical origins of the health belief model.** Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
-- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors.** Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x
+- Rosenstock, I. M. (1974). Historical origins of the health belief model. *Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
+- Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. *Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x
