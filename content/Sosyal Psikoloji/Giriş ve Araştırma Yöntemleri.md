@@ -6,4 +6,3 @@ tags:
   - giris-ve-arastirma
 ---
 
-# Giriş ve Araştırma Yöntemleri

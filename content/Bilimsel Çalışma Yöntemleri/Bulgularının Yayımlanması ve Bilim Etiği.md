@@ -6,4 +6,3 @@ tags:
   - bulgularinin-yayimlanmasi-ve
 ---
 
-# Bulgularının Yayımlanması ve Bilim Etiği

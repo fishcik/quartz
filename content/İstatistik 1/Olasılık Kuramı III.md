@@ -6,4 +6,3 @@ tags:
   - olasilik-kurami-iii
 ---
 
-# Olasılık Kuramı III

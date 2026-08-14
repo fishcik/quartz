@@ -6,4 +6,3 @@ tags:
   - benlik-kavramlar-ve
 ---
 
-# Benlik — Kavramlar ve Öz-Şefkat

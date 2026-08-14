@@ -6,8 +6,6 @@ tags:
   - saglik-psikolojisi-nedir
 ---
 
-# Sağlık Psikolojisi Nedir ve Neden Var?
-
 ## İçindekiler
 
 - [[#1. Sağlık Psikolojisinin Doğuşu ve Kapsamı]]

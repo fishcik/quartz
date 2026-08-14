@@ -6,4 +6,3 @@ tags:
   - arastirma-sureci-arastirma
 ---
 
-# Araştırma Süreci, Araştırma Soruları ve Hipotezler

@@ -6,4 +6,3 @@ tags:
   - terapinin-zorunlu-ve
 ---
 
-# Terapinin Zorunlu ve Ekol Ötesi Boyutları

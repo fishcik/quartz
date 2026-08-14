@@ -6,4 +6,3 @@ tags:
   - lateralizasyon-dil-ve
 ---
 
-# Lateralizasyon, Dil ve Ayrık Beyin

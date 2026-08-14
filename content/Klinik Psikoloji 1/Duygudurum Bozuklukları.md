@@ -6,4 +6,3 @@ tags:
   - duygudurum-bozukluklari
 ---
 
-# Duygudurum Bozuklukları

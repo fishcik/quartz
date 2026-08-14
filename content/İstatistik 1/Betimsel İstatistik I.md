@@ -6,4 +6,3 @@ tags:
   - betimsel-i-statistik
 ---
 
-# Betimsel İstatistik I

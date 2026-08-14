@@ -6,4 +6,3 @@ tags:
   - gelisim-psikolojisinin-kuramlari
 ---
 
-# Gelişim Psikolojisinin Kuramları

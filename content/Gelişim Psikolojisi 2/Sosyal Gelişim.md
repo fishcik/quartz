@@ -6,4 +6,3 @@ tags:
   - sosyal-gelisim
 ---
 
-# Sosyal Gelişim

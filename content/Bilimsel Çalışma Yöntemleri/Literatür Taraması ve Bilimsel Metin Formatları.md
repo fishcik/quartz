@@ -6,4 +6,3 @@ tags:
   - literatur-taramasi-ve
 ---
 
-# Literatür Taraması ve Bilimsel Metin Formatları

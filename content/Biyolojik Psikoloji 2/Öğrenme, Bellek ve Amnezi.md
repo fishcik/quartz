@@ -6,4 +6,3 @@ tags:
   - ogrenme-bellek-ve
 ---
 
-# Öğrenme, Bellek ve Amnezi

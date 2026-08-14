@@ -6,4 +6,3 @@ tags:
   - i-sitme-cevre
 ---
 
-# İşitme — Çevre, Müzik ve Konuşma Algısı

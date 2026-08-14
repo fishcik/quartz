@@ -6,8 +6,6 @@ tags:
   - giris
 ---
 
-# Giriş - Gelişim Psikolojisinin Konusu ve Görevleri
-
 ## İçindekiler
 
 - [[#1. Gelişimin Temel İlkeleri ve Doğası]]

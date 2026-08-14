@@ -6,4 +6,3 @@ tags:
   - dikkat-egitimi-ve
 ---
 
-# Dikkat Eğitimi ve Farkındalık

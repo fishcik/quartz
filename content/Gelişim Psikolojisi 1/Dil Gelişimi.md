@@ -6,4 +6,3 @@ tags:
   - dil-gelisimi
 ---
 
-# Dil Gelişimi

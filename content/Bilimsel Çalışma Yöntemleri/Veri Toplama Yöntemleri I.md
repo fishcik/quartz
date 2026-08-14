@@ -6,4 +6,3 @@ tags:
   - veri-toplama-yontemleri
 ---
 
-# Veri Toplama Yöntemleri I

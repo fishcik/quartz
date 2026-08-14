@@ -6,4 +6,3 @@ tags:
   - madde-kullanimi-bagimlilik
 ---
 
-# Madde Kullanımı, Bağımlılık ve Ödül Sistemi

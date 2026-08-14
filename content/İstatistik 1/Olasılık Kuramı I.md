@@ -6,4 +6,3 @@ tags:
   - olasilik-kurami-i
 ---
 
-# Olasılık Kuramı I

@@ -6,4 +6,3 @@ tags:
   - okul-basarisi
 ---
 
-# Okul Başarısı

@@ -6,4 +6,3 @@ tags:
   - motor-gelisim
 ---
 
-# Motor Gelişim

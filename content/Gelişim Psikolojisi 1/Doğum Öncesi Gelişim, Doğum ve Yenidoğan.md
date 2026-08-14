@@ -6,4 +6,3 @@ tags:
   - dogum-oncesi-gelisim
 ---
 
-# Doğum Öncesi Gelişim, Doğum ve Yenidoğan

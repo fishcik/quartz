@@ -6,4 +6,3 @@ tags:
   - giris-algi-duyu
 ---
 
-# Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina

@@ -6,4 +6,3 @@ tags:
   - deri-duyulari-ve
 ---
 
-# Deri Duyuları ve Kimyasal Duyular

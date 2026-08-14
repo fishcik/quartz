@@ -638,12 +638,12 @@ article {
 
 .article-title,
 h1.article-title {
-  font-family: 'Playfair Display', serif !important;
+  font-family: 'Manufacturing Consent', serif !important;
   font-size: 2.8rem !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-style: normal !important;
-  letter-spacing: -0.015em;
-  line-height: 1.12;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
   color: var(--dark) !important;
   margin-bottom: 0.4rem;
   text-align: center !important;   // en tepe başlık header'a göre ortalı
@@ -877,21 +877,21 @@ article h2#i-indekiler {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Manufacturing Consent', serif !important;
-  font-size: 1.45rem !important;
-  font-weight: 400 !important;
-  text-transform: none;
-  letter-spacing: 0.02em;
-  color: var(--accent, #C8102E) !important;
+  font-family: var(--font-header, 'Playfair Display', Georgia, serif) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--secondary, #c79a6d) !important;
   margin: 1.8rem 0 0.5rem 0 !important;
   padding: 0 0 0.35rem 0;
-  border-bottom: 1px dashed rgba(200, 16, 46, 0.30);
+  border-bottom: 1px dashed var(--br, rgba(255, 255, 255, 0.18));
 
   &::before {
     content: "𓏛";
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 1;
-    color: var(--accent, #C8102E);
+    color: var(--secondary, #c79a6d);
     opacity: 0.9;
   }
 }
@@ -3625,19 +3625,20 @@ body.sc-modal-open {
 
   .sc-modal-title {
     font-family: 'Manufacturing Consent', serif !important;
-    font-size: 1.85rem;
+    font-size: 2.45rem;
     font-weight: 400;
     color: var(--accent, #C8102E) !important;
     display: inline-flex;
     align-items: center;
     letter-spacing: 0.02em;
+    line-height: 1.05;
   }
 
   .sc-modal-glyph {
     font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
-    font-size: 1.65rem;
+    font-size: 2.1rem;
     font-style: normal !important;
-    margin-right: 10px;
+    margin-right: 12px;
     color: var(--accent, #C8102E);
     vertical-align: middle;
   }
@@ -3843,7 +3844,7 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.9rem 1.4rem;
+    padding: 1.15rem 1.6rem;
     cursor: pointer;
     user-select: none;
     list-style: none;
@@ -3856,8 +3857,8 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
 
     .sc-acc-glyph {
       font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
-      margin-right: 10px;
-      font-size: 1.55rem;
+      margin-right: 12px;
+      font-size: 2.1rem;
       font-style: normal !important;
       vertical-align: middle;
       color: var(--accent, #C8102E) !important;
@@ -3865,22 +3866,23 @@ html[saved-theme="dark"] .sc-diagram-modal-content {
 
     .sc-acc-title {
       font-family: 'Manufacturing Consent', serif !important;
-      font-size: 1.75rem;
+      font-size: 2.45rem;
       font-weight: 400;
       color: var(--accent, #C8102E) !important;
       letter-spacing: 0.02em;
+      line-height: 1.05;
     }
 
     .sc-acc-meta {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.76rem;
+      font-size: 0.82rem;
       color: var(--secondary, #c79a6d);
       margin-left: auto;
-      margin-right: 0.8rem;
+      margin-right: 1rem;
     }
 
     .sc-acc-chevron {
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       color: var(--accent, #C8102E);
       transition: transform 0.25s ease;
     }

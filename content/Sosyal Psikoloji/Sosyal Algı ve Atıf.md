@@ -6,4 +6,3 @@ tags:
   - sosyal-algi-ve
 ---
 
-# Sosyal Algı ve Atıf

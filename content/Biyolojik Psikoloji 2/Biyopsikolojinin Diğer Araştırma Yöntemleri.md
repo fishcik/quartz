@@ -6,4 +6,3 @@ tags:
   - biyopsikolojinin-diger-arastirma
 ---
 
-# Biyopsikolojinin Diğer Araştırma Yöntemleri

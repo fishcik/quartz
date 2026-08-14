@@ -6,4 +6,3 @@ tags:
   - i-sitme
 ---
 
-# İşitme

@@ -6,4 +6,3 @@ tags:
   - hareket-algisi
 ---
 
-# Hareket Algısı

@@ -6,8 +6,6 @@ tags:
   - gunesten-korunma
 ---
 
-# Güneşten Korunma
-
 ## İçindekiler
 
 - [[#1. Risk Grubu]]

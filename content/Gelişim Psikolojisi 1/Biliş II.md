@@ -6,4 +6,3 @@ tags:
   - bilis-ii
 ---
 
-# Biliş II

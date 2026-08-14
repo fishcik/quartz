@@ -57,8 +57,9 @@ Sitedeki tüm yazılar otantik bir edebi/akademik kimlikle render edilir:
 
 | Öğe / Seviye | Font Ailesi | Renk & Stil | Açıklama |
 | :--- | :--- | :--- | :--- |
-| **`h1` (Sayfa Başlığı)** | `Playfair Display` | Normal Metin Rengi | Büyük, ağırbaşlı ana makale başlığı |
-| **`h2` (Ana Bölümler & TOC)** | `Manufacturing Consent` | Cardinal Kırmızı (`#C8102E`) | Gotik/blackletter asil bölüm durakları (`## 1. Konu...`, `## İçindekiler`) |
+| **Hero Başlık (`h1.article-title`)** | `Manufacturing Consent` | Normal Koyu Başlık | Glifin hemen altındaki asil sayfa başlığı (Markdown gövdesinde `#` tekrar yazılmaz) |
+| **`h2` (Ana Bölüm Başlıkları)** | `Manufacturing Consent` | Cardinal Kırmızı (`#C8102E`) | Gotik/blackletter asil bölüm durakları (`## 1. Konu...`, `## 2. Konu...`) |
+| **`## İçindekiler` (TOC Başlığı)** | `Playfair Display` | Sepia / Altın Vurgu | Zarif, küçük ve büyük harfli temiz içindekiler göstergesi |
 | **`h3` / `h4` (Alt Başlıklar)** | `Source Serif 4` / `Libre Baskerville` | İtalik / Yarı-Kalın | Akışı kesmeyen okunaklı alt konu başlıkları |
 | **Gövde Metni & Tanımlar** | `Libre Baskerville` | Nötr Gövde Rengi | Yüksek okunurluklu klasik serif gövde |
 | **K&K ve Kaynakça Başlıkları** | `Manufacturing Consent` | Cardinal Kırmızı (`#C8102E`) | Akordiyon ve modal başlıkları |
@@ -73,13 +74,14 @@ Uzun notlarda (3 veya daha fazla başlık içeren) frontmatter'dan hemen sonra e
 ```markdown
 ## İçindekiler
 
-- [[#Birinci Başlık]]
-- [[#İkinci Başlık]]
+- [[#1. Birinci Başlık]]
+- [[#2. İkinci Başlık]]
   - [[#Alt Başlık]]
-- [[#Üçüncü Başlık]]
+- [[#3. Üçüncü Başlık]]
 ```
 
-- TOC başlığının kendisi `##` seviyesinde olur ve otomatik olarak **Manufacturing Consent + Cardinal Kırmızı** ile stillendirilir.
+- Mükerrer sayfa başlığı (`# Başlık`) gövdeye yazılmaz; Quartz doğrudan frontmatter'daki `title` alanını hero başlık olarak derler.
+- TOC listesinde `1. [[#1. ...]]` yerine madde imi `- [[#1. ...]]` kullanılır (sayıların mükerrer `1. 1.` olmasını engeller).
 - TOC içindeki linkler her zaman aynı not içi syntax olan `[[#Başlık]]` formatındadır.
 
 ---

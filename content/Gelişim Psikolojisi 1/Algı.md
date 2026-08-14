@@ -6,6 +6,4 @@ tags:
   - algi
 ---
 
-# Algı
-
 Algı operasyonu yapanın bacısını sikerim.

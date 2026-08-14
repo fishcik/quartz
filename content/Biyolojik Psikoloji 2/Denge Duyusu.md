@@ -6,4 +6,3 @@ tags:
   - denge-duyusu
 ---
 
-# Denge Duyusu

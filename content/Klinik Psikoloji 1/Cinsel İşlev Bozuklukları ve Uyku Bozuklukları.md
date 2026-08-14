@@ -6,4 +6,3 @@ tags:
   - cinsel-i-slev
 ---
 
-# Cinsel İşlev Bozuklukları ve Uyku Bozuklukları

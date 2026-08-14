@@ -6,4 +6,3 @@ tags:
   - beyin-hasari-ve
 ---
 
-# Beyin Hasarı ve Nöroplastisite

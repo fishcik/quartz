@@ -6,4 +6,3 @@ tags:
   - obsesif-kompulsif-bozukluk
 ---
 
-# Obsesif Kompulsif Bozukluk ve Tikler

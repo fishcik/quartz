@@ -6,4 +6,3 @@ tags:
   - boyutsal-yaklasimlar
 ---
 
-# Boyutsal Yaklaşımlar

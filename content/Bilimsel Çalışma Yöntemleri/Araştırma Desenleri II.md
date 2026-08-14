@@ -6,4 +6,3 @@ tags:
   - arastirma-desenleri-ii
 ---
 
-# Araştırma Desenleri II

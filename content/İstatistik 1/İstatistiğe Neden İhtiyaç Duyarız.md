@@ -6,4 +6,3 @@ tags:
   - i-statistige-neden
 ---
 
-# İstatistiğe Neden İhtiyaç Duyarız

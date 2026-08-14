@@ -6,4 +6,3 @@ tags:
   - cinsiyet-gelisimi
 ---
 
-# Cinsiyet Gelişimi

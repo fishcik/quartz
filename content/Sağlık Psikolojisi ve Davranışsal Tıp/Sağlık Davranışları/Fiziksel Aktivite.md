@@ -6,8 +6,6 @@ tags:
   - fiziksel-aktivite
 ---
 
-# Fiziksel Aktivite
-
 *Hareket neden bu kadar çok şeyi değiştiriyor ve neden hâlâ oturuyoruz?*
 
 ---

@@ -6,4 +6,3 @@ tags:
   - bilim-felsefesi-ve
 ---
 
-# Bilim Felsefesi ve Araştırma Yaklaşımları

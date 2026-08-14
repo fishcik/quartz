@@ -6,4 +6,3 @@ tags:
   - bilis-dusunce-ve
 ---
 
-# Biliş — Düşünce ve Dil

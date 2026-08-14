@@ -6,4 +6,3 @@ tags:
   - davranis-sekillendirme-ve
 ---
 
-# Davranış — Şekillendirme ve Koşullu Pekiştirme

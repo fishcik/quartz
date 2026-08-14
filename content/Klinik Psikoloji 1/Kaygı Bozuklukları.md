@@ -6,4 +6,3 @@ tags:
   - kaygi-bozukluklari
 ---
 
-# Kaygı Bozuklukları

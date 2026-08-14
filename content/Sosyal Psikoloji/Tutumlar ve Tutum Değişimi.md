@@ -6,4 +6,3 @@ tags:
   - tutumlar-ve-tutum
 ---
 
-# Tutumlar ve Tutum Değişimi

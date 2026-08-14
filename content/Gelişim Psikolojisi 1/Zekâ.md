@@ -6,4 +6,3 @@ tags:
   - zek
 ---
 
-# Zekâ

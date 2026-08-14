@@ -6,4 +6,3 @@ tags:
   - arastirma-etigi
 ---
 
-# Araştırma Etiği

@@ -6,4 +6,3 @@ tags:
   - cikarimsal-i-statistik
 ---
 
-# Çıkarımsal İstatistik I

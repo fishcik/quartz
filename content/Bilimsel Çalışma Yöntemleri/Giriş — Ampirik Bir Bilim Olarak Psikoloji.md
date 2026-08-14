@@ -6,4 +6,3 @@ tags:
   - giris-ampirik-bir
 ---
 
-# Giriş — Ampirik Bir Bilim Olarak Psikoloji

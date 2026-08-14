@@ -6,4 +6,3 @@ tags:
   - arastirma-yontemleri-ve
 ---
 
-# Araştırma Yöntemleri ve Kanıta Dayalı Terapiler

@@ -6,4 +6,3 @@ tags:
   - prososyal-davranis
 ---
 
-# Prososyal Davranış

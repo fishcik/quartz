@@ -6,4 +6,3 @@ tags:
   - gorsel-dikkat-ve
 ---
 
-# Görsel Dikkat ve Eylem

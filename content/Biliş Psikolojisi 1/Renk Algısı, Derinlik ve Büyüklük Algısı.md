@@ -6,4 +6,3 @@ tags:
   - renk-algisi-derinlik
 ---
 
-# Renk Algısı, Derinlik ve Büyüklük Algısı

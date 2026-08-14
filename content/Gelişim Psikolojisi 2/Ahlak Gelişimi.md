@@ -6,4 +6,3 @@ tags:
   - ahlak-gelisimi
 ---
 
-# Ahlak Gelişimi

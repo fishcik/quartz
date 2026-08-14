@@ -6,4 +6,3 @@ tags:
   - bilis-i
 ---
 
-# Biliş I

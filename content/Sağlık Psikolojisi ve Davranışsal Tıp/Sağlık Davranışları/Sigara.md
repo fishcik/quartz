@@ -6,8 +6,6 @@ tags:
   - sigara
 ---
 
-# Sigaranın Psikolojisi
-
 Legal ölüm ürünü.
 
 ---

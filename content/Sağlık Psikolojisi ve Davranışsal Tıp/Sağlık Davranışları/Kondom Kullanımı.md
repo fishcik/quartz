@@ -6,8 +6,6 @@ tags:
   - kondom-kullanımı
 ---
 
-# Kondom Kullanımı
-
 *Neden korunmuyoruz ve karar anında akıl nereye gidiyor?*
 
 ---

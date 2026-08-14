@@ -6,4 +6,3 @@ tags:
   - noropsikolojik-testler-i
 ---
 
-# Nöropsikolojik Testler I

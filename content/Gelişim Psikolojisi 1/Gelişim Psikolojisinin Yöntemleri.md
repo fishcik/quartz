@@ -6,4 +6,3 @@ tags:
   - gelisim-psikolojisinin-yontemleri
 ---
 
-# Gelişim Psikolojisinin Yöntemleri

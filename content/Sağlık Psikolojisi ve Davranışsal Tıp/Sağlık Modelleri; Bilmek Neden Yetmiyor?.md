@@ -6,8 +6,6 @@ tags:
   - saglik-modelleri-bilmek
 ---
 
-# Sağlık Modelleri; Bilmek Neden Yetmiyor?
-
 ## İçindekiler
 
 - [[#1. Süreklilik Modelleri: Sosyal Bilişsel Teori ve HBM]]

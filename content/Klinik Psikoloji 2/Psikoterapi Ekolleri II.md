@@ -6,4 +6,3 @@ tags:
   - psikoterapi-ekolleri-ii
 ---
 
-# Psikoterapi Ekolleri II

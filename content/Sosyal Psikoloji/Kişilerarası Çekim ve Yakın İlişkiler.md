@@ -6,4 +6,3 @@ tags:
   - kisilerarasi-cekim-ve
 ---
 
-# Kişilerarası Çekim ve Yakın İlişkiler

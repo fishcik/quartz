@@ -6,4 +6,3 @@ tags:
   - kuramlar-ve-kategorik
 ---
 
-# Kuramlar ve Kategorik Yaklaşımlar

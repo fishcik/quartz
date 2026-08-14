@@ -6,15 +6,14 @@ tags:
   - giris-normal-ve
 ---
 
-# Giriş - Normal ve Anormal
-
 ## İçindekiler
-1. [[#1. Klinik Psikoloji ve Psikoterapi: Tanım, Ayrım ve Kapsam]]
-2. [[#2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları]]
-3. [[#3. Ruhsal Bozukluk Nedir? Konstrüktler ve Zihin-Beden İkiliği]]
-4. [[#4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski]]
-5. [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV’ten DSM-5’e)]]
-6. [[#6. Çok Katmanlı Bakış ve Vaka Örnekleri]]
+
+- [[#1. Klinik Psikoloji ve Psikoterapi: Tanım, Ayrım ve Kapsam]]
+- [[#2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları]]
+- [[#3. Ruhsal Bozukluk Nedir? Konstrüktler ve Zihin-Beden İkiliği]]
+- [[#4. Betimleyici Yaklaşım: Avantajlar ve Etiketleme Riski]]
+- [[#5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV’ten DSM-5’e)]]
+- [[#6. Çok Katmanlı Bakış ve Vaka Örnekleri]]
 
 ---
 

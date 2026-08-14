@@ -6,4 +6,3 @@ tags:
   - i-statistiksel-ve
 ---
 
-# İstatistiksel ve İçeriksel Anlamlılık

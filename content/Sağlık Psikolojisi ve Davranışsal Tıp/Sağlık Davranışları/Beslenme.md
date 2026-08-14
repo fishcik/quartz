@@ -6,17 +6,15 @@ tags:
   - beslenme
 ---
 
-# Beslenme Psikolojisi
-
 > Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo hastalıklara zemin hazırlar.
 
 ---
 
 ## İçindekiler
 
-1. [[#1. Sağlıksız Beslenme ve DGE Kuralları]]
-2. [[#2. Akademi vs. Sokak: Mitler ve Gerçekler]]
-3. [[#3. Niyet-Davranış Uçurumu ve Öz-Yeterlilik]]
+- [[#1. Sağlıksız Beslenme ve DGE Kuralları]]
+- [[#2. Akademi vs. Sokak: Mitler ve Gerçekler]]
+- [[#3. Niyet-Davranış Uçurumu ve Öz-Yeterlilik]]
 
 ---
 

@@ -6,4 +6,3 @@ tags:
   - yeme-bozukluklari
 ---
 
-# Yeme Bozuklukları

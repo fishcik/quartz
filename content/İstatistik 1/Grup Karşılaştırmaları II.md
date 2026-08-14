@@ -6,4 +6,3 @@ tags:
   - grup-karsilastirmalari-ii
 ---
 
-# Grup Karşılaştırmaları II

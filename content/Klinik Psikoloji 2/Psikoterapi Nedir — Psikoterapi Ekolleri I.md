@@ -6,4 +6,3 @@ tags:
   - psikoterapi-nedir-psikoterapi
 ---
 
-# Psikoterapi Nedir — Psikoterapi Ekolleri I

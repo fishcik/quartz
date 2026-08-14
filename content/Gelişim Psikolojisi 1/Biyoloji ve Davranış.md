@@ -6,4 +6,3 @@ tags:
   - biyoloji-ve-davranis
 ---
 
-# Biyoloji ve Davranış

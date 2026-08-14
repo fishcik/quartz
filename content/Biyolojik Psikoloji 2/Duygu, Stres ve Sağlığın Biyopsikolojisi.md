@@ -6,4 +6,3 @@ tags:
   - duygu-stres-ve
 ---
 
-# Duygu, Stres ve Sağlığın Biyopsikolojisi

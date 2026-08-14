@@ -6,4 +6,3 @@ tags:
   - sosyal-bilis
 ---
 
-# Sosyal Biliş

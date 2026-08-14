@@ -6,4 +6,3 @@ tags:
   - motivasyon-ve-eylem
 ---
 
-# Motivasyon ve Eylem Düzenlemesi

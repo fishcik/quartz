@@ -6,4 +6,3 @@ tags:
   - mudahale-programlari
 ---
 
-# Müdahale Programları

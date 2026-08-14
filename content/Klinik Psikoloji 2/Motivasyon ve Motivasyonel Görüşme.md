@@ -6,4 +6,3 @@ tags:
   - motivasyon-ve-motivasyonel
 ---
 
-# Motivasyon ve Motivasyonel Görüşme

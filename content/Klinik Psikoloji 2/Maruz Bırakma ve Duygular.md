@@ -6,4 +6,3 @@ tags:
   - maruz-birakma-ve
 ---
 
-# Maruz Bırakma ve Duygular

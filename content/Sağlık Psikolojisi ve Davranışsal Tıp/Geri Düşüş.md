@@ -6,8 +6,6 @@ tags:
   - geri-dusus
 ---
 
-# Geri Düşüş
-
 ## İçindekiler
 
 - [[#1. Ortak Düşman: Geri Düşüş (Relapse)]]

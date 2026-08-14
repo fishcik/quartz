@@ -6,4 +6,3 @@ tags:
   - grup-dinamigi-ve
 ---
 
-# Grup Dinamiği ve Grup Performansı

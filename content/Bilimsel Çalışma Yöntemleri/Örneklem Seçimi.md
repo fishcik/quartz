@@ -6,4 +6,3 @@ tags:
   - orneklem-secimi
 ---
 
-# Örneklem Seçimi

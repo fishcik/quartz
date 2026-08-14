@@ -6,4 +6,3 @@ tags:
   - onyargi-ve-gruplar
 ---
 
-# Önyargı ve Gruplar Arası İlişkiler

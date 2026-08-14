@@ -6,4 +6,3 @@ tags:
   - i-sevuruk-tanim
 ---
 
-# İşevuruk Tanım ve Ölçme

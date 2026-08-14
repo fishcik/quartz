@@ -6,4 +6,3 @@ tags:
   - psikiyatrik-bozukluklarin-biyopsikolojisi
 ---
 
-# Psikiyatrik Bozuklukların Biyopsikolojisi

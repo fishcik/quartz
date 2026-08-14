@@ -6,4 +6,3 @@ tags:
   - travma-ve-travma
 ---
 
-# Travma ve Travma Sonrası Stres Bozukluğu

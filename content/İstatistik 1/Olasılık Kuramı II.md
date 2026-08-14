@@ -6,4 +6,3 @@ tags:
   - olasilik-kurami-ii
 ---
 
-# Olasılık Kuramı II

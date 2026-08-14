@@ -6,4 +6,3 @@ tags:
   - sosyal-psikoloji-ve
 ---
 
-# Sosyal Psikoloji ve Kültürel Farklılıklar

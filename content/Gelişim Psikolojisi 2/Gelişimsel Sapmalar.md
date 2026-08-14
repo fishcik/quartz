@@ -6,4 +6,3 @@ tags:
   - gelisimsel-sapmalar
 ---
 
-# Gelişimsel Sapmalar

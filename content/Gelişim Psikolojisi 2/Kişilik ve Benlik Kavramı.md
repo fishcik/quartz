@@ -6,4 +6,3 @@ tags:
   - kisilik-ve-benlik
 ---
 
-# Kişilik ve Benlik Kavramı

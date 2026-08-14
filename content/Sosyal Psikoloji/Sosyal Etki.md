@@ -6,4 +6,3 @@ tags:
   - sosyal-etki
 ---
 
-# Sosyal Etki
