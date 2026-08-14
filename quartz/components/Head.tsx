@@ -1721,6 +1721,20 @@ function scCloseGlossary(){
 window.scCloseGlossary = scCloseGlossary;
 
 // ─── SYNAPTIC HIVE FULLSCREEN MODAL SİSTEMİ ───────────────────────────
+function scFindDiagramSvg(wrap){
+  if(!wrap) return null;
+  var mSvg = wrap.querySelector('.mermaid svg, svg[id^="mermaid-"]');
+  if(mSvg) return mSvg;
+  var svgs = wrap.querySelectorAll('svg');
+  for(var i=0; i<svgs.length; i++){
+    var s = svgs[i];
+    if(s.classList && (s.classList.contains('external-icon') || s.classList.contains('sc-progress-serpent') || s.classList.contains('sc-serpent-div'))) continue;
+    if(s.closest('a.external, a.external-link, .callout-title, .sc-diag-zoom-btn')) continue;
+    return s;
+  }
+  return null;
+}
+
 function scInitDiagramModal(){
   var dm = document.getElementById('sc-diagram-modal');
   if(!dm){
@@ -1746,8 +1760,8 @@ function scInitDiagramModal(){
 
   // Attach bespoke zoom buttons to all callout diagrams & mermaid containers
   document.querySelectorAll('.callout[data-callout="abstract"], .mermaid, div.mermaid, pre:has(> code.mermaid)').forEach(function(wrap){
-    var svg = wrap.querySelector('svg');
-    if(!svg && !wrap.classList.contains('mermaid')) return;
+    var svg = scFindDiagramSvg(wrap);
+    if(!svg && !wrap.classList.contains('mermaid') && !wrap.querySelector('pre > code.mermaid')) return;
     if(wrap.getAttribute('data-sc-diag-ready')) return;
     wrap.setAttribute('data-sc-diag-ready', '1');
     wrap.style.position = 'relative';
@@ -1760,14 +1774,14 @@ function scInitDiagramModal(){
     btn.addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
-      var targetSvg = wrap.querySelector('svg');
+      var targetSvg = scFindDiagramSvg(wrap);
       var title = (wrap.querySelector('.callout-title-inner, .callout-title') || {}).textContent || 'Diyagram Görünümü';
       if(targetSvg) scOpenDiagramModal(targetSvg, title);
     });
     wrap.appendChild(btn);
 
     wrap.addEventListener('dblclick', function(e){
-      var targetSvg = wrap.querySelector('svg');
+      var targetSvg = scFindDiagramSvg(wrap);
       if(targetSvg){
         e.preventDefault();
         var title = (wrap.querySelector('.callout-title-inner, .callout-title') || {}).textContent || 'Diyagram Görünümü';

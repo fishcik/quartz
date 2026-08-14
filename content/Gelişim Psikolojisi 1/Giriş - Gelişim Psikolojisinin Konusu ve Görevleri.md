@@ -168,31 +168,29 @@ Buna **plastisite** [^2]deniyor. Beyin esnektir, şekil alabilir, değişebilir.
 > *Kaynak: Hensch, T. K. (2005). Critical period plasticity in local cortical circuits. Nature Reviews Neuroscience, 6(11), 877–888. https://doi.org/10.1038/nrn1787*
 >
 > <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
->   <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
->     <rect x="20" y="30" width="170" height="180" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
->     <text x="105" y="58" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Cıvık Hamur (0-3 Yaş)</text>
->     <circle cx="105" cy="95" r="22" fill="none" stroke="#96c46c" stroke-width="2" stroke-dasharray="3,3"/>
->     <text x="105" y="100" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Yüksek Plastisite</text>
->     <text x="105" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Evrensel ses duyarlılığı.</text>
->     <text x="105" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sonsuz şekil alma.</text>
->     <text x="105" y="180" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Maksimum Esneklik</text>
->     
->     <rect x="215" y="30" width="170" height="180" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
->     <text x="300" y="58" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">2. Kıvam Alma (4-15 Yaş)</text>
->     <circle cx="300" cy="95" r="22" fill="none" stroke="#c79a6d" stroke-width="2"/>
->     <text x="300" y="100" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Hassas Dönem</text>
->     <text x="300" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Ana dil uzmanlaşması.</text>
->     <text x="300" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sinaptik budanma (Pruning).</text>
->     <text x="300" y="180" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Fırın Isınıyor</text>
->     
->     <rect x="410" y="30" width="170" height="180" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
->     <text x="495" y="58" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">3. Pişmiş Ekmek (20+ Yaş)</text>
->     <rect x="473" y="73" width="44" height="44" rx="4" fill="none" stroke="#C8102E" stroke-width="2"/>
->     <text x="495" y="100" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Stabilite</text>
->     <text x="495" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Kristalize zekâ ve yapı.</text>
->     <text x="495" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Değişim yoğun çaba ister.</text>
->     <text x="495" y="180" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Katılaşmış Form</text>
->   </svg>
+> <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
+> <rect x="20" y="30" width="170" height="180" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
+> <text x="105" y="58" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">1. Cıvık Hamur (0-3 Yaş)</text>
+> <circle cx="105" cy="95" r="22" fill="none" stroke="#96c46c" stroke-width="2" stroke-dasharray="3,3"/>
+> <text x="105" y="100" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Yüksek Plastisite</text>
+> <text x="105" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Evrensel ses duyarlılığı.</text>
+> <text x="105" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sonsuz şekil alma.</text>
+> <text x="105" y="180" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Maksimum Esneklik</text>
+> <rect x="215" y="30" width="170" height="180" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+> <text x="300" y="58" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">2. Kıvam Alma (4-15 Yaş)</text>
+> <circle cx="300" cy="95" r="22" fill="none" stroke="#c79a6d" stroke-width="2"/>
+> <text x="300" y="100" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Hassas Dönem</text>
+> <text x="300" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Ana dil uzmanlaşması.</text>
+> <text x="300" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Sinaptik budanma (Pruning).</text>
+> <text x="300" y="180" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Fırın Isınıyor</text>
+> <rect x="410" y="30" width="170" height="180" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
+> <text x="495" y="58" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">3. Pişmiş Ekmek (20+ Yaş)</text>
+> <rect x="473" y="73" width="44" height="44" rx="4" fill="none" stroke="#C8102E" stroke-width="2"/>
+> <text x="495" y="100" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" text-anchor="middle">Stabilite</text>
+> <text x="495" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Kristalize zekâ ve yapı.</text>
+> <text x="495" y="152" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Değişim yoğun çaba ister.</text>
+> <text x="495" y="180" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">Katılaşmış Form</text>
+> </svg>
 > </div>
 >
 > **Açıklama:** *Beyin erken çocuklukta her yöne bükülebilen cıvık bir hamur gibidir; yaş ilerledikçe fırında pişer, katılaşır ve o ilk şekil alabilirliği kaybolsa da dayanıklı, yapısal bir kimlik kazanır.*
@@ -586,32 +584,36 @@ Sadece niyet yerine bu üç adım da şart.
 > [!abstract] Yaşam Boyu Eylemlilik: Gelişim Şantiyesinde Rol Değişimi (Brandtstädter, 1999)
 > *Kaynak: Brandtstädter, J. (1999). The self in action and development. In J. Brandtstädter & R. M. Lerner (Eds.), Action & self-development (pp. 3–34). SAGE Publications. https://doi.org/10.4135/9781452204802.n1*
 >
-> ```mermaid
-> flowchart LR
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef sage fill:none,stroke:#96c46c,stroke-width:1.8px,color:#96c46c;
->   classDef charcoal fill:none,stroke:#8a8275,stroke-width:1.2px,color:#d8cfc0;
->
->   subgraph Faz1 [1. Çocukluk: Çıraklık & Pasif Taşıma]
->     Amele[Dış Çevre & Ebeveyn İnşa Eder]:::charcoal
->     PasifKov[Pasif Gen-Çevre Uyumu]:::charcoal
->   end
->
->   Faz1 ==>|Farkındalık & Hedef Koyma| Faz2
->
->   subgraph Faz2 [2. Ergenlik: Ortak Yapımcılık]
->     OzYet[Öz-Yeterlilik & Öz-Düzenleme]:::sepia
->     Cagrisi[Çağrıştırıcı Seçimler]:::sepia
->   end
->
->   Faz2 ==>|Realite Duvarı & Strateji| Faz3
->
->   subgraph Faz3 [3. Yetişkinlik: Şantiye Şefliği]
->     Sef([Kasıtlı Öz-Gelişim & Aktif Çevre İnşası]):::cardinal
->     Limit{{Genetik Tavan & Realite Sınırları}}:::sage
->   end
-> ```
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <svg viewBox="0 0 600 220" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="20" width="170" height="175" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.4"/>
+>   <text x="100" y="45" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Çocukluk: Çıraklık</text>
+>   <rect x="25" y="60" width="150" height="42" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="100" y="85" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Dış Çevre ve Ebeveyn</text>
+>   <rect x="25" y="115" width="150" height="42" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="100" y="140" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Pasif Gen-Çevre Uyumu</text>
+>   <text x="100" y="180" fill="#8a8275" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Amelelik Evresi"</text>
+>   <line x1="185" y1="105" x2="210" y2="105" stroke="#c79a6d" stroke-width="2"/>
+>   <polygon points="208,101 216,105 208,109" fill="#c79a6d"/>
+>   <rect x="215" y="20" width="170" height="175" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+>   <text x="300" y="45" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">2. Ergenlik: Ortak Yapım</text>
+>   <rect x="225" y="60" width="150" height="42" rx="4" fill="none" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="300" y="85" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Öz-Yeterlilik İnancı</text>
+>   <rect x="225" y="115" width="150" height="42" rx="4" fill="none" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="300" y="140" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Çağrıştırıcı Seçimler</text>
+>   <text x="300" y="180" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Kalıp Oluşumu"</text>
+>   <line x1="385" y1="105" x2="410" y2="105" stroke="#C8102E" stroke-width="2.2"/>
+>   <polygon points="408,101 416,105 408,109" fill="#C8102E"/>
+>   <rect x="415" y="20" width="170" height="175" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="500" y="45" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">3. Yetişkinlik: Mimarlık</text>
+>   <rect x="425" y="60" width="150" height="42" rx="4" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="500" y="85" fill="#C8102E" font-family="var(--bodyFont)" font-size="9.5" font-weight="bold" text-anchor="middle">Kasıtlı Öz-Gelişim</text>
+>   <rect x="425" y="115" width="150" height="42" rx="4" fill="none" stroke="#96c46c" stroke-width="1.4"/>
+>   <text x="500" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Realite Duvarı ve</text>
+>   <text x="500" y="148" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Genetik Limitler</text>
+>   <text x="500" y="180" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Şantiye Şefliği"</text>
+> </svg>
+> </div>
 >
 > **Açıklama:** *Gelişim hazır bir otoban değil, bir şantiyedir; birey çocuklukta sistemin taşıdığı bir amele iken, yaş aldıkça kendi hedeflerini koyan ve çevresini inşa eden şantiye şefine terfi eder.*
 

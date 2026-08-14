@@ -212,24 +212,47 @@ Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır:
 > [!abstract] Ruhsal Belirti Değerlendirme ve Ayırıcı Tanı Karar Matrisi (Wakefield, 1992)
 > *Kaynak: Wakefield, J. C. (1992). The concept of mental disorder: On the boundary between biological facts and social values. American Psychologist, 47(3), 373–388. https://doi.org/10.1037/0003-066X.47.3.373*
 >
-> ```mermaid
-> flowchart TD
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef sage fill:none,stroke:#96c46c,stroke-width:1.8px,color:#96c46c;
->   classDef charcoal fill:none,stroke:#8a8275,stroke-width:1.2px,color:#d8cfc0;
->
->   Girdi([Belirti / Yoğun Stres Yaşantısı]):::sepia --> Soru1{Kültürel & Durumsal Olarak Kabul Gören Bir Tepki mi?}
->   
->   Soru1 -- EVET --> Normal[Normal Uyum Tepkisi / Anlaşılabilir Yas]:::sage
->   Soru1 -- HAYIR --> Soru2{Belirgin İşlev Kaybı ve Acı / Distres Var mı?}
->   
->   Soru2 -- HAYIR --> Subklinik[Subklinik Zorlanma / Takip]:::charcoal
->   Soru2 -- EVET --> Soru3{Salt Toplumsal/Politik Bir Norm Çatışması mı?}
->   
->   Soru3 -- EVET --> NormSapmasi[Sosyal/Kültürel Çatışma - Bozukluk Değil]:::sepia
->   Soru3 -- HAYIR ==> Bozukluk([Klinik Ruhsal Bozukluk / Zararlı İşlev Bozukluğu]):::cardinal
-> ```
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <svg viewBox="0 0 620 380" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="190" y="15" width="240" height="38" rx="19" fill="none" stroke="#c79a6d" stroke-width="2"/>
+>   <text x="310" y="39" fill="#c79a6d" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">Belirti / Yoğun Stres Yaşantısı</text>
+>   <line x1="310" y1="53" x2="310" y2="75" stroke="#8a8275" stroke-width="1.6"/>
+>   <polygon points="307,73 310,79 313,73" fill="#8a8275"/>
+>   <polygon points="310,79 470,115 310,151 150,115" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.5"/>
+>   <text x="310" y="110" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Kültürel ve Durumsal Olarak</text>
+>   <text x="310" y="125" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Beklenen Normal Tepki mi? (Örn. Yas)</text>
+>   <line x1="470" y1="115" x2="510" y2="115" stroke="#96c46c" stroke-width="1.8"/>
+>   <polygon points="508,112 516,115 508,118" fill="#96c46c"/>
+>   <rect x="518" y="96" width="95" height="38" rx="5" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="565" y="113" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">Normal Uyum</text>
+>   <text x="565" y="126" fill="#96c46c" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">(Klinik Dışı)</text>
+>   <line x1="310" y1="151" x2="310" y2="175" stroke="#8a8275" stroke-width="1.6"/>
+>   <polygon points="307,173 310,179 313,173" fill="#8a8275"/>
+>   <polygon points="310,179 470,215 310,251 150,215" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.5"/>
+>   <text x="310" y="210" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Belirgin İşlev Kaybı ve</text>
+>   <text x="310" y="225" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Sübjektif Acı / Distres Var mı?</text>
+>   <line x1="150" y1="215" x2="110" y2="215" stroke="#8a8275" stroke-width="1.8"/>
+>   <polygon points="112,212 104,215 112,218" fill="#8a8275"/>
+>   <rect x="7" y="196" width="95" height="38" rx="5" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.5"/>
+>   <text x="54" y="213" fill="#8a8275" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">Subklinik</text>
+>   <text x="54" y="226" fill="#8a8275" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">(Takip / Destek)</text>
+>   <line x1="310" y1="251" x2="310" y2="275" stroke="#C8102E" stroke-width="1.8"/>
+>   <polygon points="307,273 310,279 313,273" fill="#C8102E"/>
+>   <polygon points="310,279 470,315 310,351 150,315" fill="rgba(200, 16, 46, 0.05)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="310" y="310" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Salt Toplumsal / Politik Bir</text>
+>   <text x="310" y="325" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Norm Çatışması veya Sapma mı?</text>
+>   <line x1="150" y1="315" x2="110" y2="315" stroke="#c79a6d" stroke-width="1.8"/>
+>   <polygon points="112,312 104,315 112,318" fill="#c79a6d"/>
+>   <rect x="7" y="296" width="95" height="38" rx="5" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
+>   <text x="54" y="313" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">Norm Sapması</text>
+>   <text x="54" y="326" fill="#c79a6d" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">(Bozukluk Değil)</text>
+>   <line x1="470" y1="315" x2="505" y2="315" stroke="#C8102E" stroke-width="2.2"/>
+>   <polygon points="503,311 513,315 503,319" fill="#C8102E"/>
+>   <rect x="515" y="296" width="100" height="38" rx="6" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2.2"/>
+>   <text x="565" y="312" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">Klinik Bozukluk</text>
+>   <text x="565" y="326" fill="#C8102E" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">Zararlı İşlev Bozukluğu</text>
+> </svg>
+> </div>
 >
 > **Açıklama:** *Her duygusal acının veya toplumsal uyumsuzluğun bir bozukluk olmadığını; tanı koyabilmek için kültürel bağlam, işlev kaybı ve içsel mekanizma yetersizliğinin adım adım filtrelenmesi gerektiğini ortaya koyar.*
 
@@ -263,19 +286,36 @@ Bir tanı almak bazen toplumsal bir dezavantaj da getiriyor. Şizofreni ya da ma
 > [!abstract] Teşhis Etiketi ve Öz-Kehanet Kısırdöngüsü (Link & Phelan, 2001)
 > *Kaynak: Link, B. G., & Phelan, J. C. (2001). Conceptualizing stigma. Annual Review of Sociology, 27(1), 363–385. https://doi.org/10.1146/annurev.soc.27.1.363*
 >
-> ```mermaid
-> flowchart TD
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef charcoal fill:none,stroke:#8a8275,stroke-width:1.2px,color:#d8cfc0;
->
->   GeciciSıkıntı([Akut Yaşam Krizi & Semptom]):::sepia ==> Teshis[DSM Kategori Etiketi Alma]:::cardinal
->   Teshis --> Damgalanma[Toplumsal / Kurumsal Damgalanma]:::charcoal
->   Damgalanma ==> Icselleştirme{{'Ben Artık Depresif / Hastayım' İnancı}}:::cardinal
->   Icselleştirme --> RolBenimseme([Hasta Rolünün ve Çaresizliğin Benimsenmesi]):::sepia
->   RolBenimseme -.->|Tedavi Öncesi Ceza| Kroniklesme((Kronikleşmiş Kimlik & İşlev Kaybı)):::cardinal
->   Kroniklesme ==> Teshis
-> ```
+> <div style="display:flex; justify-content:center; margin: 1.8rem 0;">
+> <svg viewBox="0 0 600 240" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="25" width="165" height="60" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+>   <text x="97" y="50" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Akut Yaşam Krizi</text>
+>   <text x="97" y="68" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Geçici Semptom &amp; Acı</text>
+>   <line x1="180" y1="55" x2="220" y2="55" stroke="#C8102E" stroke-width="2"/>
+>   <polygon points="218,51 226,55 218,59" fill="#C8102E"/>
+>   <rect x="228" y="25" width="165" height="60" rx="6" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="310" y="50" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">2. DSM Tanı Etiketi</text>
+>   <text x="310" y="68" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Kategoriye Hapsedilme</text>
+>   <line x1="393" y1="55" x2="433" y2="55" stroke="#8a8275" stroke-width="1.8"/>
+>   <polygon points="431,51 439,55 431,59" fill="#8a8275"/>
+>   <rect x="441" y="25" width="145" height="60" rx="6" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.5"/>
+>   <text x="513" y="50" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">3. Damgalanma</text>
+>   <text x="513" y="68" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Sosyal/Kurumsal Dışlanma</text>
+>   <path d="M 513 85 L 513 140 L 415 140" fill="none" stroke="#C8102E" stroke-width="2"/>
+>   <polygon points="417,136 409,140 417,144" fill="#C8102E"/>
+>   <rect x="238" y="115" width="170" height="60" rx="6" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="323" y="140" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">4. Öz-Kehanet İnancı</text>
+>   <text x="323" y="158" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">"Ben Artık Hastayım"</text>
+>   <line x1="238" y1="145" x2="190" y2="145" stroke="#c79a6d" stroke-width="1.8"/>
+>   <polygon points="192,141 184,145 192,149" fill="#c79a6d"/>
+>   <rect x="15" y="115" width="168" height="60" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+>   <text x="99" y="140" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">5. Rolü Benimseme</text>
+>   <text x="99" y="158" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Kronikleşmiş Kimlik &amp; Çaresizlik</text>
+>   <path d="M 99 175 L 99 210 L 310 210 L 310 88" fill="none" stroke="#C8102E" stroke-width="1.8" stroke-dasharray="4 3"/>
+>   <polygon points="307,90 310,84 313,90" fill="#C8102E"/>
+>   <text x="204" y="204" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">Kısırdöngü: Tanı Kimliğe Dönüşür</text>
+> </svg>
+> </div>
 >
 > **Açıklama:** *Tanı koymanın iletişimi kolaylaştıran faydasının yanında, bazen kişiyi 'aldığı tanıya dönüştüren' ve tedaviden önce gelen bir cezaya dönüşebilen etiketleme döngüsünü resmeder.*
 

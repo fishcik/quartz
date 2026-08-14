@@ -3449,24 +3449,19 @@ body[data-slug="tags/index"] .page-listing > p {
   justify-content: center;
   margin: 1.8rem 0;
 
-  // 𓆙 Subtle top-left serpentbrain watermark
-  &::before {
+  // 𓆙 Standalone Mermaid Watermark (ONLY when NOT inside a callout)
+  &:not(.callout .mermaid):not(.callout[data-callout="abstract"] *)::before {
     content: "";
     position: absolute;
     top: 4px;
     left: 8px;
-    width: 26px;
-    height: 20px;
+    width: 24px;
+    height: 18px;
     background-image: url("/static/serpentbrain.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 0.22;
+    opacity: 0.35 !important;
     pointer-events: none;
-    transition: opacity 0.25s ease;
-  }
-
-  &:hover::before {
-    opacity: 0.55;
   }
 
   svg {
@@ -3501,7 +3496,7 @@ body[data-slug="tags/index"] .page-listing > p {
       color: var(--dark, #2c2523) !important;
       fill: var(--dark, #2c2523) !important;
       font-family: var(--bodyFont, 'Source Serif 4', Georgia, serif) !important;
-      font-size: 0.88rem !important;
+      font-size: 0.92rem !important;
       white-space: normal !important;
       word-wrap: break-word !important;
       line-height: 1.35 !important;
@@ -3511,7 +3506,7 @@ body[data-slug="tags/index"] .page-listing > p {
     .edgeLabel {
       background-color: var(--light, #f9f8f6) !important;
       color: var(--secondary, #c79a6d) !important;
-      font-size: 0.78rem !important;
+      font-size: 0.80rem !important;
       font-style: italic;
       padding: 2px 6px;
       border-radius: 4px;
@@ -3552,39 +3547,47 @@ body[data-slug="tags/index"] .page-listing > p {
   border: 1px solid var(--lightgray, #ece8e1) !important;
   border-left: 4px solid var(--accent, #C8102E) !important;
   border-radius: 8px !important;
-  padding: 1.4rem 1.6rem !important;
-  margin: 2.4rem 0 !important;
+  padding: 1.5rem 1.8rem !important;
+  margin: 2.5rem 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 
-  // 𓆙 50% opacity serpentbrain watermark in top-left
+  // Single subtle 35% opacity serpentbrain watermark in top-left
   &::before {
     content: "";
     position: absolute;
     top: 14px;
     left: 14px;
-    width: 28px;
-    height: 22px;
+    width: 26px;
+    height: 20px;
     background-image: url("/static/serpentbrain.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 0.50 !important;
+    opacity: 0.35 !important;
     pointer-events: none;
     z-index: 2;
     transition: opacity 0.25s ease;
   }
 
   &:hover::before {
-    opacity: 0.85 !important;
+    opacity: 0.70 !important;
+  }
+
+  // Prevent any nested watermarks inside abstract callouts
+  .mermaid::before, pre::before, div::before {
+    content: none !important;
+    display: none !important;
   }
 
   .callout-title {
     padding-left: 34px;
     padding-right: 75px;
     font-family: var(--headerFont, 'Playfair Display', Georgia, serif) !important;
-    font-size: 1.15rem !important;
+    font-size: 1.20rem !important;
     font-weight: 600 !important;
     font-style: normal !important;
     color: var(--accent, #C8102E) !important;
-    margin-bottom: 0.8rem !important;
+    margin-bottom: 0.9rem !important;
     display: flex;
     align-items: center;
 
@@ -3595,6 +3598,30 @@ body[data-slug="tags/index"] .page-listing > p {
     .callout-title-inner {
       font-weight: 600 !important;
       font-style: normal !important;
+    }
+  }
+
+  .callout-content {
+    width: 100% !important;
+
+    svg {
+      width: 100% !important;
+      max-width: 760px !important;
+      height: auto !important;
+      display: block;
+      margin: 0 auto;
+      cursor: zoom-in;
+    }
+
+    .mermaid, div.mermaid {
+      width: 100% !important;
+      max-width: 760px !important;
+      margin: 1.2rem auto !important;
+
+      svg {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
   }
 
@@ -3621,10 +3648,6 @@ body[data-slug="tags/index"] .page-listing > p {
       background: #fff;
       box-shadow: 0 2px 8px rgba(200, 16, 46, 0.15);
     }
-  }
-
-  svg {
-    cursor: zoom-in;
   }
 }
 
