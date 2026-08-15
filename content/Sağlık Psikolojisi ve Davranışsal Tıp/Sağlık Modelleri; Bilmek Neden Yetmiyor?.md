@@ -49,10 +49,10 @@ Bu durumu açıklayan 2 model ailesi var:
    - Riski ne kadar ciddiye alıyorsun?
    - Başarabileceğine inanıyor musun?
    - Sonuç senin için önemli mi?
-   - *Sosyal Bilişsel Teori, Sağlık İnanç Modeli (HBM[^hbm]), Gerekçeli Eylem Teorisi (TRA) ve Planlı Davranış Teorisi (TPB[^tpb]) bu aileye aittir.*
+   - *Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
 
 2. **Aşama Modelleri (Stage Models):** *"Hayır, öyle çizgi üzerinde ileri-geri kaymak olmaz"* der. Davranış değişikliği sırasında insan niceliksel değil, **niteliksel olarak farklı evrelerden** geçer. Düşünmeme evresi ile düşünme evresi psikolojik olarak birbirinden temelden farklıdır.
-   - *Sağlık Eylemi Süreci Yaklaşımı (HAPA[^hapa]), Transteorik Model (TTM[^ttm]) ve Önleyici Eylem Süreç Modeli (PAPM) bu aileye aittir.*
+   - *Sağlık Eylemi Süreci Yaklaşımı (HAPA), Transteorik Model (TTM) ve Önleyici Eylem Süreç Modeli (PAPM) bu aileye aittir.*
 
 > *"Nothing is so practical as a good theory." — Kurt Lewin (1945)*
 
@@ -462,13 +462,11 @@ Bu kısırdöngü insanı elleriyle tam bir geri düşüşe sürükler. Çözüm
 
 ---
 
-[^hbm]: **Sağlık İnanç Modeli (Health Belief Model):** Bireyin bir sağlık davranışını sergileme olasılığını; algılanan tehdit (kırılganlık ve ciddiyet) ile eylemin algılanan fayda ve engellerinin tartılmasıyla açıklayan bilişsel süreklilik modeli.
-[^oz-yeterlilik]: **Öz-Yeterlilik (Self-Efficacy):** Albert Bandura tarafından tanımlanan; bireyin zorlu koşullar ve engeller altında dahi belirli bir hedef davranışı başarıyla organize edip sürdürebileceğine olan inanç düzeyi.
-[^tpb]: **Planlı Davranış Teorisi (Theory of Planned Behavior):** İnsan eylemlerinin doğrudan tutumlardan değil; tutum, sübjektif normlar (sosyal baskı) ve algılanan davranış kontrolünün oluşturduğu niyet üzerinden şekillendiğini savunan model.
-[^hapa]: **HAPA Modeli (Health Action Process Approach):** Sağlık davranışını motivasyonel (niyet öncesi) ve volisyonel (planlama, eylem, toparlanma) fazlara ayıran, niyet-davranış boşluğunu Eğer/O Zaman planlarıyla kapatan hibrit aşama modeli.
-[^niyet-davranis-ucurumu]: **Niyet-Davranış Uçurumu (Intention-Behavior Gap):** Bireyin sağlıklı bir eylemi gerçekleştirmeye güçlü biçimde niyet etmesine rağmen, somut uygulama planları ve öz-düzenleme stratejileri olmaksızın eyleme geçememesi durumu.
-[^ttm]: **Transteorik Model (TTM):** Değişimi anlık bir olay değil; farkındalık öncesinden mutlak alışkanlığa (terminasyon) kadar uzanan 6 niteliksel aşamalı ve nükslerle ilerleyen dinamik bir süreç olarak ele alan model.
-[^ave]: **Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE):** Bireyin küçük bir tökezleme (lapse) sonrası yoğun suçluluk ve yetersizlik duygusuna kapılarak "battı balık yan gider" mantığıyla tam bir geri düşüşe (relapse) teslim olması psikolojik mekanizması.
+[^optimistik-onyargi]: **Optimistik Önyargı (Unrealistic Optimism):** Bireyin olumsuz yaşam olaylarının (hastalık, kaza) kendi başına gelme olasılığını akranlarına ve ortalamaya kıyasla sistematik olarak daha düşük tahmin etmesi bilişsel eğilimi.
+[^volisyon]: **Volisyon (Volition):** Hedef niyetinin oluşmasından sonra devreye giren; eylemin başlatılması, sürdürülmesi ve engeller karşısında iradenin korunmasını sağlayan yürütücü kontrol süreçleri.
+[^meta-analiz]: **Meta-Analiz (Meta-Analysis):** Belirli bir araştırma sorusuna dair yapılmış çok sayıda bağımsız ampirik çalışmanın bulgularını istatistiksel olarak birleştirip genel etki büyüklüğünü hesaplayan üst düzey kanıt yöntemi.
+[^radon-gazi]: **Radon Gazı (Radon):** Topraktaki uranyumun doğal bozunmasıyla açığa çıkan, renksiz, kokusuz ve sigaradan sonra akciğer kanserinin en yaygın ikinci nedeni olan radyoaktif soy gaz.
+[^bilissel-uyumsuzluk]: **Bilişsel Uyumsuzluk (Cognitive Dissonance):** Bireyin inançları, değerleri ve eylemleri arasındaki tutarsızlıktan doğan ve kişiyi kaçamak sonrası ağır suçluluk krizine sürükleyen içsel psikolojik gerilim hali.
 
 ## Kaynaklar
 

@@ -32,28 +32,54 @@ Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
 ### DGE[^dge] (Alman Beslenme Derneği) 10 Kuralı
 
-| Temel Kural | Öneri ve Detaylar |
-| :--- | :--- |
-| **1. Çeşitli Tüketin** | Yasak besin yoktur. Çeşitlilik, ihtiyacınız olan tüm besin ögelerini sağlar. |
-| **2. Tam Tahıl & Patates** | Vitamin, mineral ve lif deposudur. Düşük yağlı olanları tercih edin. |
-| **3. Günde 5 Porsiyon** | Her gün 3 porsiyon sebze ve 2 porsiyon meyve (toplam 5 avuç) tüketin. |
-| **4. Süt, Balık ve Sınırlı Et** | Günlük süt ürünleri, haftada 1-2 porsiyon balık; et ise haftada max. 300-600g. |
-| **5. Sağlıklı Yağlar** | Günlük max. 60-80g yağ (tercihen bitkisel yağlar) tercih edilmelidir. |
-| **6. Şeker ve Tuzu Azaltın** | Endüstriyel şekeri sınırlayın. Tuzu az ve mutlaka iyotlu kullanın. |
-| **7. Bol Sıvı Tüketin** | Günde en az 1.5 litre su veya şekersiz içecek. Alkolü minimumda tutun. |
-| **8. Hassas Pişirin** | Besin değerini korumak için az suyla ve kısa süreli pişirmeyi tercih edin. |
-| **9. Bilinçli Yemek Yiyin** | Yemeğe zaman ayırın, iyi çiğneyin; bu sayede tokluk sinyallerini fark edersiniz. |
-| **10. Hareket Edin** | Dengeli beslenmeyi günlük 30-60 dakika fiziksel aktivite ile destekleyin. |
+> [!abstract] DGE Sağlıklı ve Sürdürülebilir Beslenmenin 10 İlkesi Matrisi
+> <div class="sc-diag-author"><a href="https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/" target="_blank" rel="noopener noreferrer">(Deutsche Gesellschaft für Ernährung, 2024)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 300" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="20" width="280" height="125" rx="6" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.6"/>
+>   <text x="155" y="42" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Bitkisel Temel (Hacmin %75+'i)</text>
+>   <text x="30" y="66" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 1. Çeşitlilik: Tek tip değil, gökkuşağı tabağı</text>
+>   <text x="30" y="86" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 2. Sebze &amp; Meyve: Günde en az 5 porsiyon (400g)</text>
+>   <text x="30" y="106" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 3. Tam Tahıl &amp; Baklagil: Lif ve mikrobiyom dostu</text>
+>   <text x="30" y="126" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 4. Kuruyemiş &amp; Tohumlar: Günlük 1 avuç</text>
+>
+>   <rect x="325" y="20" width="280" height="125" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.6"/>
+>   <text x="465" y="42" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">2. Hayvansal Denge (Sınırlı &amp; Seçici)</text>
+>   <text x="340" y="66" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 5. Süt Ürünleri: Günlük 2 porsiyon (kalsiyum)</text>
+>   <text x="340" y="86" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 6. Balık: Haftada 1-2 porsiyon (Omega-3)</text>
+>   <text x="340" y="106" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold">• 7. Et &amp; İşlenmiş Et: Haftada max. 300g (Kısıtlı)</text>
+>   <text x="340" y="126" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 8. Yumurta: Haftada max. 1 adet (opsiyonel)</text>
+>
+>   <rect x="15" y="160" width="280" height="120" rx="6" fill="rgba(200, 16, 46, 0.06)" stroke="#C8102E" stroke-width="1.6"/>
+>   <text x="155" y="182" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">3. Kısıtlama &amp; Sıvı Filtresi</text>
+>   <text x="30" y="206" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 9. Sağlıklı Yağlar: Tercihen zeytinyağı/kolza</text>
+>   <text x="30" y="226" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold">• 10. Şeker ve Tuzu Kısıtla: Ultra-işlenmiş gıda yok</text>
+>   <text x="30" y="246" fill="#96c46c" font-family="var(--bodyFont)" font-size="9">• Su: Günde en az 1.5 L su (şekersiz/alkolsüz)</text>
+>   <text x="30" y="266" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Görünmez kalorilerden ve tuz yükünden kaçın.</text>
+>
+>   <rect x="325" y="160" width="280" height="120" rx="6" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.6"/>
+>   <text x="465" y="182" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">4. Davranışsal &amp; Bilişsel Çerçeve</text>
+>   <text x="340" y="206" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• Hassas Pişirme: Az su ve kısa süreyle pişir</text>
+>   <text x="340" y="226" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• Bilinçli &amp; Yavaş Ye: Tokluk sinyallerini tanı</text>
+>   <text x="340" y="246" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• Fiziksel Aktivite: Günlük 30-60 dk hareket</text>
+>   <text x="340" y="266" fill="#8a8275" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Yemek bir mekanik yükleme değil, bilinçli moladır.</text>
+> </svg>
+> </div>
+>
+> *Alman Beslenme Derneği'nin (DGE) sağlıklı ve gezegensel sınırlarla uyumlu beslenme ilkelerini 4 temel davranışsal eksende organize eder.*
+>
+> *Deutsche Gesellschaft für Ernährung (DGE). (2024). DGE-Ernährungskreis: Vollwertig essen und trinken nach den 10 Regeln der DGE. DGE. https://www.dge.de/*
 
 > [!note] 
-> Bu kurallar sağlıklı bireyler içindir; diyabet veya metabolik rahatsızlıkları olan kişiler için özel diyetler geçerlidir.
+> Bu kurallar sağlıklı bireyler içindir; diyabet veya metabolik rahatsızlıkları olan kişiler için özel klinik diyetler geçerlidir.
 
 #### DGE Önerilen Makro Dağılımı
 * **%52-53 Karbonhidrat:** Tahıl ürünleri, patates, meyve & sebze
 * **%28-31 Yağ:** 60-80g, bitkisel
 * **%16-17 Protein:** Süt ürünleri, et, balık
 
-DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin [[İnaktivite|inaktivite]][^inaktivite] tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-etkililik belirler.
+DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-yeterlilik belirler.
 
 Sonuçta Alman yetişkinlerin sadece **%45.8'i** günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.
 

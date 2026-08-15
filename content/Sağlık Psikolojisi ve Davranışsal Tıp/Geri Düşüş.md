@@ -4,6 +4,11 @@ date: 2026-06-14
 tags:
   - sağlık-psikolojisi
   - geri-dusus
+  - relapse-prevention
+---
+
+> Sağlık davranışı kazanmak bir şeydir; onu tökezleme anlarında koruyabilmek bambaşka bir şeydir. Ayak kayması bir öğrenme kazasıdır; asıl felaket suçluluk krizine ve kontrolsüzlüğe teslim olmaktır.
+
 ---
 
 ## İçindekiler
@@ -11,108 +16,149 @@ tags:
 - [[#1. Ortak Düşman: Geri Düşüş (Relapse)]]
 - [[#2. Perhiz İhlali Etkisi (AVE)]]
 - [[#3. Kısır Döngü ve Önleme Dinamikleri]]
+- [[#4. Geri Düşüşün Anatomisi ve Tetikleyiciler]]
 
 ---
+
 ## 1. Ortak Düşman: Geri Düşüş (Relapse)
 
-*Tüm modellerin kesiştiği bir konu var:* **insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**
+Tüm modellerin kesiştiği ortak bir soru var: **İnsanlar kazandıkları sağlıklı davranışı neden ve nasıl kaybediyor?**
 
-Geri Düşüş, bir insanın yeni edindiği sağlıklı davranışı (sigarayı bırakmak, düzenli spor...)
-aniden kesip, o eski konforlu ve tehlikeli** riske geri dönmesi **durumudur. 
+Geri Düşüş, bir insanın yeni edindiği sağlıklı alışkanlığı (sigarayı bırakmak, düzenli spor, sağlıklı beslenme...) aniden kesip, o eski konforlu ve tehlikeli riskli davranışına kalıcı olarak geri dönmesidir. 
 
-Sağlık psikolojisi modellerinin en çok zorlandığı, çünkü insan iradesinin en** irrasyonel ve kaotik** olduğu yer burasıdır. 
+Sağlık psikolojisi modellerinin en çok zorlandığı, çünkü insan iradesinin en irrasyonel ve kaotik olduğu yer tam burasıdır. Bir modeli *gerçekçi* yapan şey, insanı sadece hedefe taşırken değil; **düştüğünde** sistemin bunu nasıl modellediğidir.
 
-Bir modeli ***"gerçek"*** yapan şey, insanı yukarı taşımaktan ziyade,***düştüğünde*** sistemin bunu nasıl modellediğidir. 
-*Yani: sağlık davranışı kazanmak bir şey. Onu korumak başka bir şey.*Geri düşüş, relapse[^1], kelimesinin hangi modele göre ne anlama geldiğinin değişmesi:*1 yudum alkol bazı modellere göre tam bir geri düşüş, bazılarına göre sadece bir*"ayak kayması/denge kaybı"*. 
+Sağlık davranışı kazanmak bir şeydir, onu korumak bambaşka bir şeydir. Kullanılan bozukluk modeline göre *Geri Düşüş* kavramının anlamı kökten değişir:
+- 1 yudum alkol bazı modellere göre tam bir geri düşüştür.
+- Bazı modellere göre ise sadece bir *ayak kayması / denge kaybıdır*.
 
-Bu yüzden rol oynayan şey, kullanılan bozukluk modeli. *Hastalık modeli sadece iki durum tanır:* **tamamen uzak** veya **geri düşmüş.** Marlatt ve Gordon (1985) ise sosyal-kognitif pencereden bakarak süreci detaylandırır: "ayak kayması" öğrenme sürecinin** normal **bir hatasıdır ve henüz gerçek anlamda** Geri Düşüş** sayılmaz. 
-Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü temsil eder. 
-***Sosyal-kognitif perspektif temsilcileri, alkolizmin bir hastalık olduğu düşüncesinin kişinin sadece sorumluluğunu değil, aynı zamanda kontrolünü de elinden aldığını savunuyor.***
+### Hastalık Modeli vs. Sosyal-Bilişsel Model
 
-> **20. yüzyıl başında popüler olan "ahlaki model"e göre çok içen kişiler iradesiz ve karakter zayıflığına sahip insanlardı....**
->
-> 1960'da Jellinek bağımlılığı bir hastalık olarak ele alana kadar bunu tamamen kişinin kontrolünde olduğu inancı hakimdi. 
-*Paradigmadaki bu değişim, dönemin etkilenen kişileri (dönemin bağımlıları) için **iradesizlik** damgasından kurtulma anlamına geldiği için büyük bir rahatlama sağladı.
+- **Hastalık Modeli (AA / Anonim Alkolikler):** Sadece iki durum tanır: *Tamamen uzak* veya *Geri düşmüş.* Tek bir kadeh şarap, "tedavi çöktü, hasta başa döndü" sayılarak tam bir felaket olarak kodlanır:
+  > *"Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez hastalandıysan hayatın boyunca hastasındır ve ASLA iyileşmezsin. Tek kadeh şarap = Geri Düşüştür."*
+  *(Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değildir).*
 
----
+- **Sosyal-Bilişsel Model (Marlatt & Gordon, 1985):** Süreci detaylandırır. Tek bir hata veya kaçamak (Lapse / Ayak kayması), öğrenme sürecinin normal bir parçasıdır ve henüz gerçek anlamda kalıcı bir **Geri Düşüş (Relapse)** sayılmaz. 
 
-> **AA (Anonim Alkolikler) gibi Hastalık Modeli temsilcilerine göre kişi ömür boyu alkoliktir ve tek çözüm tam perhizidr, "iyileşme" diye bi şey yoktur. Bi kere alkoliksen ömür boyu alkoliksin ve tek kadeh şarap = "Geri Düşüş"tür.** >** "Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez "hastalandıysan" hayatın boyunca hastasındır ve ASLA iyileşmezsin."
->
-> *Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değil.* 
+Sosyal-bilişsel perspektif temsilcileri, alkolizmin katı bir hastalık olduğu dogmasının kişinin sadece sorumluluğunu değil, aynı zamanda **kontrolünü de elinden aldığını** savunur.
+
+20. yüzyıl başında popüler olan *ahlaki model* bağımlıları iradesiz ve karakter zayıfı sayıyordu. 1960'ta Jellinek bağımlılığı bir hastalık olarak tanımlayınca iradesizlik damgası silinerek geçici bir rahatlama sağlandı. Ancak katı hastalık modeli kontrolü tamamen bireyin elinden alarak yeni bir açmaz doğurdu.
 
 ---
+
 ## 2. Perhiz İhlali Etkisi (AVE)
 
-### Perhiz İhlali Etkisi (AVE[^2] - Abstinenz-Verletzungs-Effekt) Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini** kötü **ve** suçlu **hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir:**"Ben iradesizim!"** veya *"Ben alkolik bir hastayım!"*. 
-Bu iki* atıf *[^3]da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu* olumsuz duygulardan kaçmak için *yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf*doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
+Marlatt ve Gordon (1985) tarafından tanımlanan **AVE (Abstinence Violation Effect / Abstinenz-Verletzungs-Effekt)**, perhizde olan bir kişinin küçük bir kaymadan (Lapse) sonra kendini ağır bir suçluluk ve utanç içinde hissetmesi ve bunun nedenini içsel, değişmez ve genel nedenlere atfetmesidir (nedensel atıf kuramı[^nedensel-atif-kurami]):
+*"Ben iradesizim!"* veya *"Ben iflah olmaz bir hastayım!"*
 
->**Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.** ## 3. Kısır Döngü ve Önleme Dinamikleri
-***Bu perhiz ihlali etkisinin mekanizması da tıkır tıkır çalışıyor:***- Anlık bir hata / İlk yudum
-- ↓
-- Ağır suçluluk/utanç..
-- ↓
-- "Ben zaten hastayım..."
-- ↓
-- Kontrolün tam kaybı "E madem kontrol da edemiyorum, zaten değiştiremem!"
-- ↓
-- Kısırdöngü
-- ↓
-- Vahşi ve TAM bir geri düşüş **Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek **tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.**Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.**
+Bu iki atıf tam olarak geri düşüş olasılığını patlatır:
+1. Kişi bu yoğun olumsuz duygulardan kaçmak için yeniden maddeye sığınır (kısırdöngü).
+2. Bu olumsuz atıf doğrudan kontrol kaybına yol açar: İnsanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmayı bırakırlar (*"Zaten artık değiştiremem, battı balık yan gider!"*).
 
-***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
-> [!abstract] 📜 Bilişsel-Davranışçı Geri Düşüş Modeli (Marlatt & Gordon, 1985)
-> *Kaynak: Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). Relapse Prevention: Maintenance Strategies in the Treatment of Addictive Behaviors. Guilford Press.*
+> [!tip] Özet
+> Tek bir hatadan sonra beynimizin bize oynadığı *"Battı balık yan gider"* oyununun arkasındaki bilimsel mekanizma tam olarak budur.
+
+---
+
+## 3. Kısır Döngü ve Önleme Dinamikleri
+
+```
+Anlık Bir Hata / İlk Yudum (Lapse)
+          ↓
+Ağır Suçluluk & Utanç
+          ↓
+"Ben zaten iflah olmam, hastayım..."
+          ↓
+Kontrolün Tam Kaybı: "Madem kontrol edemiyorum, zaten değiştiremem!"
+          ↓
+Kısırdöngü
+          ↓
+Vahşi ve TAM Bir Geri Düşüş (Relapse)
+```
+
+Hastalık modelinin o katı ve dogmatik *"Tek yudum içersen yandın"* bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek tam bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşür. Kontrolün kendisinde olmadığına ve hiçbir zaman olamayacağına inanan biri zaten davranışı kontrol etmeyi bırakır.
+
+**Tökezlemek normaldir.** Hatayı bir *hastalık patlaması* olarak değil de, bir *öğrenme kazası* olarak yorumlamak hem kısırdöngüyü kırmak hem de tam teşekküllü bir geri düşüş yaşamamak için en rasyonel yoldur.
+
+> [!abstract] Bilişsel-Davranışçı Geri Düşüş Modeli
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/0003-066X.59.4.224" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985; Witkiewitz &amp; Marlatt, 2004)</a></div>
 >
-> ```mermaid
-> flowchart TD
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="220" y="15" width="180" height="38" rx="19" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="310" y="39" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Yüksek Risk Durumu (Tetikleyici)</text>
 >
->   Risk((Yüksek Riskli Kriz)):::cardinal --> Karar{{Baş Etme Tepkisi?}}:::sepia
->   
->   Karar -.->|Coping Var| Coping([Etkili Baş Etme Davranışı]):::sepia
->   Coping -.-> OE([Artan Öz-Etkililik]):::sepia
->   OE ==> Abstinans((Abstinans Sürdürülür))
->   
->   Karar ==>|Coping Yok| NoCoping([Baş Edememe & Pozitif Beklenti]):::cardinal
->   NoCoping ==> Lapse{{İlk Kaçamak / Lapse}}:::cardinal
->   Lapse ==> AVE([Yoksunluk İhlali Etkisi - AVE]):::cardinal
->   AVE ==> Relapse((Tam Geri Düşüş / Relapse)):::cardinal
-> ```
+>   <line x1="260" y1="53" x2="160" y2="85" stroke="#96c46c" stroke-width="2"/>
+>   <polygon points="160,79 152,87 163,88" fill="#96c46c"/>
+>   <text x="200" y="66" fill="#96c46c" font-family="var(--bodyFont)" font-size="8.5" font-weight="bold">Baş Etme Var</text>
 >
->**Açıklama:**  *Kriz anındaki bilişsel baş etmenin; öz-etkililik, ilk kayma (lapse) ve yoksunluk ihlali etkisi (AVE) üzerinden tam geri düşüşe (relapse) giden karar dinamiklerini betimler.*
+>   <rect x="15" y="85" width="250" height="155" rx="8" fill="rgba(150, 196, 108, 0.06)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="140" y="108" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">1. Başarılı Başa Çıkma</text>
+>   <text x="140" y="130" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Etkili Eylem &amp; Problem Çözme</text>
+>   <text x="140" y="148" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">• Artan Öz-Yeterlilik İnancı</text>
+>   <text x="140" y="168" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Ayartma Dürtüsünün Sönmesi</text>
+>   <rect x="35" y="185" width="210" height="40" rx="4" fill="rgba(150, 196, 108, 0.16)" stroke="#96c46c" stroke-width="2"/>
+>   <text x="140" y="210" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">ABSTİNANS SÜRDÜRÜLÜR</text>
+>
+>   <line x1="360" y1="53" x2="460" y2="85" stroke="#C8102E" stroke-width="2"/>
+>   <polygon points="457,88 468,87 460,79" fill="#C8102E"/>
+>   <text x="420" y="66" fill="#C8102E" font-family="var(--bodyFont)" font-size="8.5" font-weight="bold">Baş Etme Yok</text>
+>
+>   <rect x="355" y="85" width="250" height="155" rx="8" fill="rgba(200, 16, 46, 0.06)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="480" y="108" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">2. Kaçamak ve AVE Tuzağı</text>
+>   <text x="480" y="130" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• İlk Ayak Kayması (Lapse)</text>
+>   <text x="480" y="148" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">• AVE: "Ben zaten iradesizim!"</text>
+>   <text x="480" y="168" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Kontrol Kaybı: "Battı balık yan gider"</text>
+>   <rect x="375" y="185" width="210" height="40" rx="4" fill="rgba(200, 16, 46, 0.16)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="480" y="210" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">TAM GERİ DÜŞÜŞ (Relapse)</text>
+> </svg>
+> </div>
+>
+> *Kriz anındaki bilişsel baş etmenin; öz-yeterlilik, ilk kayma (lapse) ve perhiz ihlali etkisi (AVE) üzerinden tam geri düşüşe giden karar dinamiklerini modeller.*
+>
+> *Witkiewitz, K., &amp; Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. American Psychologist, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224*
 
-### Geri Düşüşün Anatomisi
->**Bağımlılık genetik bir ceza değil. Yanlış öğrenilmiş bir alışkanlıktır. Ve her alışkanlık gibi, doğru stratejiyle hacklenebilir.** Marlatt diyor ki:*"Seni geriye düşüren şey zayıf karakterin değil, karşına çıkan "Yüksek Risk Durumu" (Hochrisikosituation) karşısında verdiğin tepkidir."* Bağımlılık = öğrenilmiş, alışkanlık haline gelmiş bir davranış.
-O halde, öğrenilmiş bi şey yine bir öğrenme süreci ile *değiştirilebilir*.
-Kişi, kendi içme/kullanma davranışının koşullarını ***tanımayı*** ve bunlarla baş etmeyi öğrenir. 
+---
 
-***Marlatt, insanı o eski leş alışkanlığına döndüren tetikleyicileri iki ana gruba ayırıyor:***
+## 4. Geri Düşüşün Anatomisi ve Tetikleyiciler
 
-***A) İçsel Tetikleyiciler***-***Negatif Duygusal Durumlar*** Kaygı, öfke, depresiflik, can sıkıntısı.. En çok kurbanı bu grup alır. 
--*Pozitif Duygular & İrade Testi*
-Aşırı neşeliyken "ulan şu şişeyi diksem ne olur ki?" diyerek kendi sınırlarını **kaşımak** ve spesifik aşırı istek. 
-***B) Sosyal Tetikleyiciler***-***Sosyal Baskı*** Ortamdaki herkesin hunharca içiyor oluşu. 
--*Negatif Sosyal Durumlar* Aile içi olaylar, bitmeyen tartışmalar, ilişkisel çatışmalar. 
+> Bağımlılık genetik bir ceza değil; yanlış öğrenilmiş bir alışkanlıktır. Ve her alışkanlık gibi, doğru stratejiyle dönüştürülebilir.
 
-Aynı zamanda Görünüşte Alakasız Kararlar, ya da orijinal dilinde Apparently Irrelevant Decisions (AIDS), var. Bunlar gizli ön koşullar gibi. *Bir bağımlı, bilinci açıkken direkt gidip o maddeyi almıyorken bile beyni ona görünüşte **çok mantıklı ve bağımlılıkla alakasız** görünen kararlar aldırır. Bağımlılık davranışıyla ilgisiz görünen bu davranışlar aslında direkt olarak onu mümkün kılan kararlardır. 
-***Örnek:***
-**Alkolü bırakan birinin "ya haftaya arkadaşlar falan gelir, ne olur ne olmaz, evde bulunsun...." diyerek eve alkol alması. Görünüşte kankalıktır, misafirperverliktir.. Ama arka planda zihin o maddeyi bir nebze daha kolay **ulaşılabilir** kılarak olası bir kriz anında **bodoslama** geri düşüşün zeminini kendisi hazırlar.
-### Sonuç **Meta-analizler Marlat'ın modeline dayanan terapilerin özellikle alkol ve çoklu madde bağımlılıklarında çok iyi çalıştığını, hastaların refahını uçurduğunu gösteriyor.** İlginç** bir şekilde, sigara bırakma ve kokain senaryolarında etkisi biraz daha zayıf. 
-Model ayrıca depresyon, panik atak ve obezite gibi klinik durumlarda da işe yarıyor ve kullanılıyor.**---
-Modeli eleştirenler (Longabaug ve ark. 1996) unsurların çok katı ve hiyerarşik sıralandığını söylüyordu. 
-Witkiewitz ve Marlatt (2004) modeli güncelleyerek bu hiyerarşiyi yıktı. 
-Yeni **dinamik modelde** her şey birbiriyle anlık etkileşimde: 
-***Krizi yönetme şeklin madde kullanımını, madde kullanımın da bir sonraki kriz yönetimini anlık olarak değiştiriyor.***
+Marlatt diyor ki: *"Seni geriye düşüren şey zayıf karakterin değil, karşına çıkan Yüksek Risk Durumu (Hochrisikosituation) karşısında verdiğin tepkidir."*
 
-**Sistem aşırı kompleksleştiği için deneysel olarak kanıtlanması şu an tam bir lojistik cehennem.** ---
-[^1]: **Relaps / Geri Düşüş (Relapse):** 
-[^2]: **Perhiz İhlali Etkisi (AVE):** 
-[^3]: **İçsel Atıf (Internal Attribution):** 
+Bağımlılık öğrenilmiş bir davranışsa, yine bir öğrenme süreciyle değiştirilebilir. Kişi, kendi içme/kullanma davranışının koşullarını tanımayı ve bunlarla baş etmeyi öğrenir.
+
+Marlatt, insanı o eski alışkanlığına döndüren tetikleyicileri (yüksek risk durumları[^yuksek-risk-durumu]) iki ana gruba ayırır:
+
+### A) İçsel Tetikleyiciler
+- **Negatif Duygusal Durumlar:** Kaygı, öfke, depresiflik, can sıkıntısı (en çok kurbanı bu grup alır).
+- **Pozitif Duygular & İrade Testi:** Aşırı neşeliyken *"Ulan bir kadehten ne çıkar?"* diyerek kendi sınırlarını kaşımak ve aşırı istek duymak.
+
+### B) Sosyal Tetikleyiciler
+- **Sosyal Baskı:** Ortamdaki herkesin yoğun şekilde içiyor oluşu.
+- **Kişilerarası Çatışmalar:** Aile içi olaylar, bitmeyen tartışmalar, ilişkisel çatışmalar.
+
+### Görünüşte Alakasız Kararlar (AIDs[^gorunuste-alakasiz-kararlar])
+Bir bağımlı, bilinci açıkken doğrudan gidip o maddeyi almaz; ama beyni ona görünüşte çok mantıklı ve bağımlılıkla alakasız kararlar aldırır:
+*Örnek:* Alkolü bırakan birinin *"Haftaya arkadaşlar falan gelir, ne olur ne olmaz, evde bulunsun..."* diyerek eve alkol alması. Görünüşte misafirperverliktir; ancak arka planda zihin maddeyi ulaşılabilir kılarak olası bir kriz anında geri düşüşün zeminini bizzat hazırlar.
+
+---
+
+### Sonuç ve Dinamik Model
+
+Meta-analizler Marlatt'ın modeline dayanan terapilerin özellikle alkol ve çoklu madde bağımlılıklarında çok iyi çalıştığını, hastaların iyilik halini yükselttiğini gösteriyor. (Sigara bırakma ve kokain senaryolarında etkisi biraz daha zayıftır; model ayrıca depresyon, panik atak ve obezite klinik tablolarında da uygulanmaktadır).
+
+Modeli eleştirenler (Longabaugh ve ark. 1996) unsurların çok katı ve hiyerarşik sıralandığını söylüyordu. Witkiewitz ve Marlatt (2004) modeli güncelleyerek bu hiyerarşiyi kaldırdı. Yeni **dinamik modelde** her şey birbiriyle anlık etkileşimdedir: 
+*Krizi yönetme şeklin madde kullanımını, madde kullanımın da bir sonraki kriz yönetimini anlık olarak değiştirir.*
+
+---
+
+[^gorunuste-alakasiz-kararlar]: **Görünüşte Alakasız Kararlar (Apparently Irrelevant Decisions - AIDs):** Bağımlı bireyin masumane gerekçelerle (örn. misafir için eve içki almak) maddeye erişim zeminini gizlice hazırladığı bilinçdışı rasyonalizasyon zinciri.
+[^yuksek-risk-durumu]: **Yüksek Risk Durumları (High-Risk Situations):** Negatif duygulanım (öfke, yalnızlık), sosyal baskı veya kişilerarası çatışmaların bireyin özdüzenleme kapasitesini en çok tehdit ettiği tetikleyici anlar.
+[^nedensel-atif-kurami]: **Nedensel Atıf Kuramı (Attribution Theory):** Bernard Weiner tarafından modellenen; bireyin başarısızlıklarını içsel/değişmez (iradesizlik) veya dışsal/geçici (hazırlıksız yakalanma) nedenlere bağlamasının motivasyonel sonuçları.
 
 ## Kaynaklar
 
-- Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). *Relapse prevention: Maintenance strategies in the treatment of addictive behaviors*. Guilford Press. https://psycnet.apa.org/record/1985-97621-000
+- Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). *Relapse prevention: Maintenance strategies in the treatment of addictive behaviors*. Guilford Press. https://doi.org/10.1037/026217
 - Weiner, B. (1985). An attributional theory of achievement motivation and emotion. *Psychological Review*, 92(4), 548–573. https://doi.org/10.1037/0033-295X.92.4.548
 - Witkiewitz, K., & Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. *American Psychologist*, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224

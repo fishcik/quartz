@@ -153,7 +153,8 @@ Yazının "dümdüz bir metin bloku" gibi görünmesini engellemek ve okuma temp
 
 Her yazının içinde geçen; genel okuyucunun veya alana daha az aşina olanların tam bilemeyeceği terimler, sendromlar ve jargonlar dipnot olarak işaretlenir:
 
-- **Sayı Dengesi:** Yazının yoğunluğuna göre **en az 3, en fazla 8** kavram seçilir.
+- **Sayı Dengesi:** Yazının yoğunluğuna göre **en az 3, en fazla 11** kavram seçilir.
+- **Seçim Kriteri (Altın Kural):** Metin içinde zaten ana konu olarak uzun uzadıya açıklanan/tanımlanan modeller veya kavramlar (örn. HBM, TPB, HAPA, Biyomedikal Model gibi ana başlıklar) K&K dipnotu yapılmaz. K&K dipnotları; metinde sadece ismi geçen, arka plandaki tıbbi/istatistiksel/biyolojik terimler, merak uyandıran veya okurun bilmeme ihtimali olan yan kavramlar ve jargonlar için açılır.
 - **Konum:** Metin içinde kavramın hemen ardına `[^kavram]` eklenir. Açıklamalar yazının sonunda, **Kaynakça bölümünün hemen üstünde** yer alır.
 - **İçerik:** Ansiklopedi kuruluğunda değil; kısa, net, `sayko.ch` üslubuna uygun akademik/profesyonel açıklama.
 
