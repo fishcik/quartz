@@ -2114,6 +2114,11 @@ html[saved-theme="dark"] .sc-day-strip span.today { color: #fff; }
     display: block;
   }
 
+  &#sc-gtoggle svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
   .sc-sbb-glyph {
     font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
     font-size: 0.95rem;
