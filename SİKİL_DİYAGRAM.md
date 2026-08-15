@@ -73,12 +73,17 @@ flowchart TD
 1. Metinde resmî bir model adı geçmiyorsa dahi: İki teorinin çatışması, iki disiplinin kesişimi (Venn), bir paradoks, çok faktörlü nedensellik veya istatistiki bir eğri var mı?
 2. Eğer bir görsel bu bölümü dümdüz yazı olmaktan kurtarıp berrak kılacaksa, en uygun görsel format belirlenir.
 
-### Aşama 3: Kullanıcı Onayı ve Brifing Kuralı (ZORUNLU)
+### Aşama 3: Kullanıcı Onayı, Alfanümerik Kodlama ve Brifing Kuralı (ZORUNLU)
 - **Kesin Kural:** Hiçbir diyagram kullanıcıya danışılmadan doğrudan metne gömülmez.
+- **Alfanümerik Model Kodlama Kuralı:** Her önerilen model ve wild card için standart bir alfanümerik kod kullanılır (Örn: `S1.1`, `S2.4`, `K1.2`, `G1.1`, `S2.W1`):
+  - **Kategori Harfi:** `S` (Sağlık Psikolojisi), `K` (Klinik Psikoloji), `G` (Gelişim Psikolojisi), `N` (Nörobilim/Biyoloji), `F` (Felsefe/Metodoloji) vb.
+  - **Makale No:** Kategorideki kaçıncı makale olduğu (Örn: `S1` = Sağlık Psikolojisi 1. Makale).
+  - **Model No:** O makale içindeki model sırası (Örn: `S1.1`, `S2.4`).
+  - **Wild Card Kodları:** `W` ön ekiyle belirtilir (Örn: `S1.W1`, `S2.W1`).
 - Her brifingde **2 zorunlu niceliksel değerlendirme metriği** ve varsa **Wild Card** yer alır:
 
 ```markdown
-#### 🔍 Model [No]: [Modelin / Görselin Adı]
+#### 🔍 Model [Kod]: [Modelin / Görselin Adı] (Örn: Model S2.4: Sağlık Eylemi Süreci Yaklaşımı)
 - **Metindeki Yeri:** [Bölüm Adı] (Satır XX-YY)
 - **Literatür / Kavramsal Temel:** [APA Kaynağı veya Teorik Dinamik]
 - **Önerilen Format:** [Semantik Mermaid / Vektörel Inline SVG / İstatistiki Plot]
@@ -88,7 +93,7 @@ flowchart TD
 
 ---
 
-#### 🃏 WILD CARD(s) (Varsa Alışılagelmişin Dışında / Absürt / Deneysel Fikirler)
+#### 🃏 WILD CARD [Kod]: [Metaforik / Deneysel Model Adı] (Örn: Wild Card S2.W1: Rubikon Nehri Zihinsel Sınır Haritası)
 - Metin analiz edilirken akla gelen zekice, absürt, ters köşe veya deneysel görsel metaforlar (örn. "Amfi Watt Gücü Göstergesi", "Genetik vs. Çevre Poker Masası", "Çocukluk Hamurunun Pişme Termometresi") buraya eklenir.
 ```
 

@@ -160,24 +160,56 @@ Sonuç? *Herkes kendi riskini ortalamanın altında gördü.*
 
 > Gelelim bu modelin neden günümüz sağlık psikolojisinde "antika" olarak kaldığına ve ciddi eleştirilerine. 
 
-Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?* Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında *o kadar da* iyi tahmin edemiyor.**Neden?** Çünkü HBM'de "niyet" (intention) kavramı yok. 
-Modern psikolojide en güçlü davranış öngörücüsü olan niyet, HBM'de **hiç** yer almıyor. 
-Yani bir şeyi yapmayı "hedefleme ve niyet etme" aşaması bu modelde tamamen *pas geçilmiş.*
+Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar, zarar) ortaya attılar ama bunların kafanın içinde nasıl bir kombo ile bir araya geldiğine dair bir formül vermediler. *Bunlar toplanıyor mu, biri diğerini sıfırlıyor mu, çarpılıyor mu? Napcaz şimdi bu değişkenlerle?* Harrison ve arkadaşlarının 1992'de 147 HBM çalışmasını incelediği meta-analiz şunu gösterdi: modelin değişkenleri davranış değişikliğini aslında *o kadar da* iyi tahmin edemiyor.*> ***Özetle:*** 
+>**HBM sağlık psikolojisinin emekleme dönemi için güzel bir denemeydi. Çok fazla araştırmayı tetikledi. 
+> Ama niyet ve eylem arasındaki o devasa uçurumu açıklamakta yetersiz kalıp sınıfta kaldı...**
 
-***"Korktum ve faydayı gördüm, o zaman hadi koşuya çıkayım bari"*** demek gibi mekanik, aşırı **düz** bir mantık var..
+> [!abstract] Sağlık İnanç Modeli (HBM)
+> <div class="sc-diag-author"><a href="https://doi.org/10.1177/109019817400200403" target="_blank" rel="noopener noreferrer">(Rosenstock, 1974; Becker, 1974)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="25" width="170" height="90" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
+>   <text x="100" y="48" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Tehdit Algısı</text>
+>   <rect x="25" y="58" width="150" height="24" rx="3" fill="none" stroke="#c79a6d" stroke-width="1"/>
+>   <text x="100" y="74" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Öznel Kırılganlık</text>
+>   <rect x="25" y="86" width="150" height="24" rx="3" fill="none" stroke="#c79a6d" stroke-width="1"/>
+>   <text x="100" y="102" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Hastalığın Ciddiyeti</text>
+>
+>   <rect x="15" y="135" width="170" height="90" rx="6" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.5"/>
+>   <text x="100" y="158" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Sonuç Beklentileri</text>
+>   <rect x="25" y="168" width="150" height="24" rx="3" fill="none" stroke="#96c46c" stroke-width="1"/>
+>   <text x="100" y="184" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Algılanan Faydalar</text>
+>   <rect x="25" y="196" width="150" height="24" rx="3" fill="none" stroke="#C8102E" stroke-width="1"/>
+>   <text x="100" y="212" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Algılanan Engeller (-)</text>
+>
+>   <line x1="185" y1="70" x2="245" y2="120" stroke="#c79a6d" stroke-width="1.8"/>
+>   <polygon points="241,114 250,123 241,124" fill="#c79a6d"/>
+>   <line x1="185" y1="180" x2="245" y2="135" stroke="#96c46c" stroke-width="1.8"/>
+>   <polygon points="241,131 250,132 241,141" fill="#96c46c"/>
+>
+>   <rect x="245" y="85" width="165" height="75" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="327" y="110" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Eylem İpuçları &amp; Tetikleyiciler</text>
+>   <text x="327" y="126" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">(Kamu Spotu, Semptom)</text>
+>   <text x="327" y="146" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">+ Öz-Yeterlilik İnancı</text>
+>
+>   <line x1="410" y1="122" x2="465" y2="122" stroke="#C8102E" stroke-width="2.4"/>
+>   <polygon points="463,117 472,122 463,127" fill="#C8102E"/>
+>
+>   <rect x="475" y="85" width="130" height="75" rx="8" fill="rgba(150, 196, 108, 0.14)" stroke="#96c46c" stroke-width="2"/>
+>   <text x="540" y="117" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Sağlık Eylemi</text>
+>   <text x="540" y="135" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">(Tarama, Bırakma,</text>
+>   <text x="540" y="148" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Aşı Olma)</text>
+>
+>   <text x="310" y="255" fill="#8a8275" font-family="var(--bodyFont)" font-size="9.5" font-style="italic" text-anchor="middle">Eksik Halka: "Niyet" kavramı modelde yer almadığı için eylemi tahminde sınırlı kalmıştır.</text>
+> </svg>
+> </div>
+>
+> *Bireyin algıladığı tehdit düzeyi ve fayda-maliyet terazisinin birleşerek koruyucu bir sağlık davranışını başlatma olasılığını modeller.*
+>
+> *Rosenstock, I. M. (1974). Historical origins of the health belief model. Health Education Monographs, 2(4), 328–335. https://doi.org/10.1177/109019817400200403*
 
-> ***Korku ve bilgi, insanı değiştirmeye yetmiyor.***
-
-**Kampanyalarda da, sadece korku pompalayıp jenerik uyarılar yapmak bu yüzden **işe yaramıyor**.
-
-Eğer birinin bu optimist kalkanının kırılması gerekiyorsa, ona öyle genel istatistikler falan sunmayacaksın.**"Senin şu değerlerine, şu yaşam tarzına ve şu davranışlarına göre riskin tam olarak budur"** diyerek kişiselleştirilmiş bir geri bildirim vereceksin. 
-
-Büyük kampanyalarda bunu yapmak zor olduğu için, en azından hedef kitleyi "temsil edebilecek", onlara tıpatıp benzeyen somut örnek karakterler üzerinden o **vulnerabiliteyi** hissettirmek gerekiyor. 
-
-> ***Özetle:*** 
->**HBM sağlık psikolojisinin emekle dönemi için güzel bir denemeydi. Çok fazla araştırmayı tetikledi. 
-> Ama** niyet ve eylem **arasındaki o devasa uçurumu açıklamakta yetersiz kalıp sınıfta kaldı...** > [!abstract] 📜 Sağlık İnanç Modeli / HBM (Rosenstock, 1974; Becker, 1974)
-> *Kaynak: Rosenstock, I. M. (1974). Historical origins of the health belief model. Health Education Monographs, 2(4), 328–335.*
+## 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)th Education Monographs, 2(4), 328–335.*
 >
 > ```mermaid
 > flowchart TD
@@ -237,31 +269,66 @@ Sebebi ise araştırmacıların bu ***devasa*** sosyal etkiyi anketlerde tek bi 
 **TRA'dan TPB'ye geçişte eklenen üçüncü unsur.** Adamın niyeti kapı gibi sağlam olsa bile, kayak yapmaya niyetlendiğinde dışarıda kar yoksa o davranış gerçekleşmez. *İrade dışı engeller çıktığında TRA çuvallıyordu.*
 
 Yani bu kavram, kişinin bir davranışı gerçekleştirirken ne kadar zorlanacağına veya ne kadar kolay yapacağına dair subjektif tahmindir. 
-Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan,**sağlıklı beslenme niyetin** de o kantinin lojistiğine kurban gider. 
-***Algılanan davranış kontrolü, niyeti etkilemenin yanı sıra davranışı da direkt olarak etkiliyor. Çünkü en iyi niyetle bile, fırsatın ya da kapasitenin olmadığı yerde davranış gerçekleşmez.***-**Algılanan davranış kontrolü direkt Bandrua'nın öz-yeterliliğini "hatırlatıyor". Ajzen de sonradan bunu kabul etti ve yeniden tanımladı.** > ***Peki bu kadar anlattık da ne oldu?***
->**Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki** niyeti **canavar gibi tahmin ediyor. 
-> Ama iş o niyetin** davranışa** dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü yerlerde sürünüyor. 
-***Yani:*** İnsanın kafasında niyet oluşturmasını çok iyi çözdük ama niyet ile o davranışı gerçekten sergilemek arasındaki uçurumu sadece niyet ve kontrol algısıyla ***ölçemiyoruz.*** Adam niyet ediyor ama hareket geç(e)miyor. Bu fiyaskoya da literatürde ***Niyet-Davranış Boşluğu*** deniyor.** Yani, bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
+Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan, **sağlıklı beslenme niyetin** de o kantinin lojistiğine kurban gider. 
+***Algılanan davranış kontrolü, niyeti etkilemenin yanı sıra davranışı da direkt olarak etkiliyor. Çünkü en iyi niyetle bile, fırsatın ya da kapasitenin olmadığı yerde davranış gerçekleşmez.***
+
+Algılanan davranış kontrolü direkt Bandura'nın öz-yeterliliğini "hatırlatıyor". Ajzen de sonradan bunu kabul etti ve yeniden tanımladı.
+
+> ***Peki bu kadar anlattık da ne oldu?***
+> **Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki niyeti canavar gibi tahmin ediyor. 
+> Ama iş o niyetin davranışa dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü yerlerde sürünüyor.** 
+
+***Yani:*** İnsanın kafasında niyet oluşturmasını çok iyi çözdük ama niyet ile o davranışı gerçekten sergilemek arasındaki uçurumu sadece niyet ve kontrol algısıyla ***ölçemiyoruz.*** Adam niyet ediyor ama harekete geç(e)miyor. Bu fiyaskoya da literatürde ***Niyet-Davranış Boşluğu*** deniyor. Yani, bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
 Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olacak ***daha canavar modellere ihtiyacımız var.***
 
->**"Theories don’t have to be correct – only facts do." - Hans Selye"** > [!abstract] 📜 Planlı Davranış Teorisi / TPB (Ajzen, 1991)
-> *Kaynak: Ajzen, I. (1991). The theory of planned behavior. Organizational Behavior and Human Decision Processes, 50(2), 179–211.*
+> *"Theories don’t have to be correct – only facts do." - Hans Selye*
+
+> [!abstract] Planlı Davranış Teorisi (TPB)
+> <div class="sc-diag-author"><a href="https://doi.org/10.1016/0749-5978(91)90020-T" target="_blank" rel="noopener noreferrer">(Ajzen, 1991)</a></div>
 >
-> ```mermaid
-> flowchart LR
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 250" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="25" width="165" height="42" rx="5" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
+>   <text x="97" y="50" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">1. Davranışa Yönelik Tutum</text>
 >
->   Tutum([Davranışa Yönelik Tutum]):::sepia --> Niyet{{Davranışsal Niyet}}:::cardinal
->   Norm([Öznel Normlar / Sosyal Baskı]):::sepia --> Niyet
->   Kontrol([Algılanan Davranışsal Kontrol]):::sepia --> Niyet
->   
->   Niyet ==> Davranis((Gerçekleşen Davranış)):::cardinal
->   Kontrol -.->|Doğrudan Etki| Davranis
-> ```
+>   <rect x="15" y="85" width="165" height="42" rx="5" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.5"/>
+>   <text x="97" y="110" fill="#8a8275" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">2. Öznel Normlar (Sosyal Baskı)</text>
 >
->**Açıklama:**  *İnsan eylemlerinin doğrudan tutumlardan değil, tutum ve sosyal baskıların süzülerek oluşturduğu "niyet" üzerinden davranışa döküldüğünü betimler.*## 3. Korkunun Ecele Faydası (var mı?)*Koruma Motivasyonu Teorisi (PMT - Protection Motivation Theory
+>   <rect x="15" y="145" width="165" height="50" rx="5" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.5"/>
+>   <text x="97" y="167" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">3. Algılanan Davranışsal</text>
+>   <text x="97" y="182" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Kontrol (Öz-Yeterlilik)</text>
+>
+>   <line x1="180" y1="46" x2="245" y2="95" stroke="#c79a6d" stroke-width="1.8"/>
+>   <polygon points="241,89 250,98 241,100" fill="#c79a6d"/>
+>   <line x1="180" y1="106" x2="245" y2="106" stroke="#8a8275" stroke-width="1.8"/>
+>   <polygon points="241,102 249,106 241,110" fill="#8a8275"/>
+>   <line x1="180" y1="170" x2="245" y2="117" stroke="#96c46c" stroke-width="1.8"/>
+>   <polygon points="241,113 250,114 241,123" fill="#96c46c"/>
+>
+>   <rect x="250" y="70" width="135" height="72" rx="8" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="317" y="102" fill="#C8102E" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">NİYET</text>
+>   <text x="317" y="122" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Bilinçli Eylem Hedefi</text>
+>
+>   <line x1="385" y1="106" x2="455" y2="106" stroke="#C8102E" stroke-width="2.5"/>
+>   <polygon points="453,101 462,106 453,111" fill="#C8102E"/>
+>   <text x="420" y="96" fill="#C8102E" font-family="var(--bodyFont)" font-size="8.5" font-style="italic" text-anchor="middle">Uçurum</text>
+>
+>   <rect x="465" y="70" width="140" height="72" rx="8" fill="rgba(150, 196, 108, 0.14)" stroke="#96c46c" stroke-width="2"/>
+>   <text x="535" y="102" fill="#96c46c" font-family="var(--bodyFont)" font-size="12" font-weight="bold" text-anchor="middle">DAVRANIŞ</text>
+>   <text x="535" y="122" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Gerçekleşen Eylem</text>
+>
+>   <path d="M 180 185 L 535 185 L 535 146" fill="none" stroke="#96c46c" stroke-width="1.8" stroke-dasharray="4"/>
+>   <polygon points="531,148 535,142 539,148" fill="#96c46c"/>
+>   <text x="360" y="202" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">Doğrudan Kapasite / Fırsat Etkisi (İrade Dışı Engeller)</text>
+> </svg>
+> </div>
+>
+> *İnsan eylemlerinin doğrudan tutumlardan değil, tutum, sosyal baskı ve kontrol algısının süzülerek oluşturduğu niyet üzerinden şekillendiğini; ancak niyet ile eylem arasında kapatılması gereken bir uçurum olduğunu gösterir.*
+>
+> *Ajzen, I. (1991). The theory of planned behavior. Organizational Behavior and Human Decision Processes, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T*
+
+## 3. Korkunun Ecele Faydası (var mı?)
+### Koruma Motivasyonu Teorisi (PMT - Protection Motivation Theory)
 
 > Niyet etmek neden yetmez? 
 > Korku mesajları gerçekten işe yarıyor mu?*PMT korku mesajlarının etkisin incelemek için geliştirildi.* 1975'de Rogers, şunu merak etti: sigara paketlerine "Bu ürün sizi öldürür" yazsan, insanlara yeterince korkunç görüntüler göstersen, bu gerçekten de davranışı değiştirir mi? 
@@ -278,77 +345,140 @@ Ama Ocak sonu o motivasyonun çoğu **biter.**
 ***Niyet oluşturmada hiç bi sorun yok. Uygulamada var.***
 **Bir tehdidin ciddiyeti ve kişinin savunmasızlığı, bunlar işin "maliyet" tarafı. *"Maliyet" kalemlerinin karşısında da,*mevcut davranışın sağladığı içsel (örn. sigaranın rahatlatıcı etkisi) ve dışsal (örn. arkadaş grubunun onayı)"ödüller" var.*Kişi bunların arasında bilinçli ya da bilinçsiz bir denge kurar. 
 
-Heckhausen'e motivasyon, niyet oluşana kadar süren*süreçtir.*
-Niyet oluştuğunda ***volisyon ***fazı başlar.*** Artık soru "Yapacak mıyım?" değil, "Nasıl yapacağım?"dır. 
+Heckhausen'e göre motivasyon, niyet oluşana kadar süren süreçtir. 
+Niyet oluştuğunda ***volisyon*** fazı başlar. Artık soru "Yapacak mıyım?" değil, "Nasıl yapacağım?"dır. 
 
-Bunu Julius Sezar'ın Rubikon nehrini geçmesine benzetti. 
-```
+Bunu Julius Sezar'ın Rubikon nehrini geçmesine benzetti:
+
+```text
 M.Ö. 49 yılında henüz general olan Julius Sezar, ordusuyla birlikte Roma Cumhuriyeti'nin kuzey sınırını oluşturan Rubikon nehrinin kıyısına gelmişti. 
 Roma yasalarına göre bir generalin, senato izni olmadan bu nehri geçip güneye yani Roma topraklarına girmesi kesinlikle yasaktı ve doğrudan "vatana ihanet" sayılırdı. 
 
 Sezar nehrin kıyısında durup uzun uzun düşündü. Riskleri tarttı. Çünkü nehri geçtiği andan itibaren geri dönüş olmayacaktı. 
 
-Sonunda meşhur kararını verdi, nehri geçti ve tarihe geçen o sözü söyledi : "Alea iacta est..." (Ok yaydan çıktı../Zarlar atıldı..).
-
+Sonunda meşhur kararını verdi, nehri geçti ve tarihe geçen o sözü söyledi: "Alea iacta est..." (Zarlar atıldı..).
 ```
 
 Heinz Heckhausen işte bu andan ilham alarak insan eylemlerini iki **keskin** faza ayırıyor:
 
-> Rubikon öncesi (Motivasyon)
-*Sezar'ın nehrin kıyısında durup uzun uzun düşünmesidir. Riskleri ve kazançları tartmasıdır. "Geçersem ne olur, geçmezsem ne olur?" 
-Karar öncesi aşama. 
+> **Rubikon öncesi (Motivasyon):** Sezar'ın nehrin kıyısında durup uzun uzun düşünmesidir. Riskleri ve kazançları tartmasıdır. "Geçersem ne olur, geçmezsem ne olur?" Karar öncesi aşama.
+>
+> **Rubikon sonrası (Volisyon):** Nehre **ilk** adımın atıldığı, kararın kesinleştiği ve geri dönüşün artık **imkansız** olduğu aşama. Artık "geçsem mi ya?" diye düşünülmez, "hedefe nasıl ulaşırım?" planı yapılır.
 
-> Rubikon sonrası (Volisyon)* Nehre **ilk** adımın atıldığı, kararın kesinleştiği ve geri dönüşün artık **imkansız** olduğu aşama. Artık "geçsem mi ya?" diye düşünülmez, "hedefe nasıl ulaşırım?"**planı** yapılır. 
-
-Niyet Rubikon'u geçmek, ama nehri geçtikten sonra Roma'ya yürümek ayrı bi hikaye. 
-***Niyet edersin tamam ama, ettiğin niyeti eyleme dönüştürüp sürdürmek niyet etmekle daha az alakalı ve başka bir durum.***
+Niyet Rubikon'u geçmek, ama nehri geçtikten sonra Roma'ya yürümek ayrı bir hikaye. 
+***Niyet edersin tamam ama, ettiğin niyeti eyleme dönüştürüp sürdürmek niyet etmekle daha az alakalı ve başka bir durumdur.***
 
 ### Plan yapmayı denedin mi?
 
-Niyet-davranış uçurumunu kapatmanın en kanıtlı yolu somut If/Then (Eğer/O zaman) planları yapmaktır.** "Ne yapacağım" değil, "ne zaman, nerede, nasıl yapacağım" ve "yapamayacak olursam ne yapacağım". 
+Niyet-davranış uçurumunu kapatmanın en kanıtlı yolu somut **If/Then (Eğer/O zaman)** planları yapmaktır: "Ne yapacağım" değil, "ne zaman, nerede, nasıl yapacağım" ve "yapamayacak olursam ne yapacağım". 
 Bu hem harekete geçişi hem de sürekliliği güçlendiriyor. 
 
-> "Düzenli spor yapacağım!"
+> *"Düzenli spor yapacağım!"* $\rightarrow$ Bu niyet.
+> *"Pazartesi ve Çarşamba akşamları işten çıkınca, eve gitmeden spor salonuna gideceğim."* $\rightarrow$ Bu somut plan.
 
-bu niyet. 
+***Fark şu: ikinci cümlede durum ve davranış zihinsel olarak iç içe geçmiş durumda. Yani beyin o durum geldiğinde "şimdi napıyorduk?" diye düşünmek zorunda kalmıyor. Otopilota geçiyor.***
 
-> "Pazartesi ve Çarşamba akşamları işten çıkınca, eve gitmeden spor salonuna gitcem."
+Buna bir katman daha Sniehotta ve ark. ekledi: **Engeller**. 
+Yorgunsundur, hava berbattır, canın istemez... "**Başa çıkma planlaması**" bunlar için önceden plan yapmaktır: *"Eğer gitmek istemiyorsam, sadece 20 dakika giderim."* Bu da engel senaryoları için bir Eğer/O zaman planıdır. 
 
-bu somut plan. 
+94 araştırmayı kapsayan meta-analizler boş söylemiyor: planlayan insanlar hedeflerine hem daha sık hem daha hızlı ulaşıyor.
 
-***Fark şu: ikinci cümlede durum ve davranış zihinsel olarak iç içe geçmiş durumda. Yani beyin o durum geldiğince "şimdi napıyorduk?" diye düşünmek zorunda kalmıyor. Otopilota geçiyor.***
+> [!abstract] Rubikon Eylemsel Faz Modeli ve Eylem Niyetleri
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/0003-066X.54.7.493" target="_blank" rel="noopener noreferrer">(Gollwitzer, 1999; Heckhausen, 1987)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 230" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="25" width="220" height="175" rx="8" fill="rgba(199, 154, 109, 0.06)" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="125" y="52" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">1. Rubikon Öncesi (Motivasyon)</text>
+>   <text x="125" y="80" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">"Geçsem mi, geçmesem mi?"</text>
+>   <rect x="30" y="95" width="190" height="38" rx="4" fill="none" stroke="#c79a6d" stroke-width="1.2"/>
+>   <text x="125" y="118" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Hedef Niyeti: "Spor yapacağım"</text>
+>   <text x="125" y="160" fill="#8a8275" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">Açık zihin, alternatifleri tartma</text>
+>   <text x="125" y="180" fill="#8a8275" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">ve risk hesabı evresi.</text>
+>
+>   <path d="M 270 20 Q 255 115 270 210" fill="none" stroke="#C8102E" stroke-width="3" stroke-dasharray="6 3"/>
+>   <text x="270" y="110" fill="#C8102E" font-family="var(--bodyFont)" font-size="9.5" font-weight="bold" text-anchor="middle" transform="rotate(-90 270 110)">RUBİKON NEHRİ</text>
+>   <text x="270" y="130" fill="#C8102E" font-family="var(--bodyFont)" font-size="8" font-style="italic" text-anchor="middle" transform="rotate(-90 270 130)">"Alea Iacta Est"</text>
+>
+>   <rect x="300" y="25" width="305" height="175" rx="8" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.6"/>
+>   <text x="452" y="52" fill="#96c46c" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">2. Rubikon Sonrası (Volisyon &amp; Eylem)</text>
+>   <text x="452" y="80" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">"Nasıl ve ne zaman yapacağım?"</text>
+>   <rect x="315" y="95" width="275" height="38" rx="4" fill="rgba(150, 196, 108, 0.14)" stroke="#96c46c" stroke-width="1.4"/>
+>   <text x="452" y="113" fill="#96c46c" font-family="var(--bodyFont)" font-size="9.5" font-weight="bold" text-anchor="middle">Eğer/O Zaman Planı (If-Then):</text>
+>   <text x="452" y="126" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">"Pzt 18:00'de iş çıkışı doğrudan salona gideceğim"</text>
+>   <text x="452" y="160" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">Kapalı zihin, hedefe kilitlenme</text>
+>   <text x="452" y="180" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">ve engelleri aşma planlaması.</text>
+> </svg>
+> </div>
+>
+> *Niyet etmenin nehrin kıyısında durup riskleri tartmak olduğunu; asıl değişimin ise nehri geçip geri dönüşü kapatan somut ‘Eğer/O Zaman’ uygulama planlarıyla başladığını ortaya koyar.*
+>
+> *Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. American Psychologist, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493*
 
-Buna bir katman daha Sniehotta ve ark. ekledi. Engeller. 
-Yorgunsundur, hava berbattır, canın istemez..
-"**Başa etme planlaması**" bunlar için önceden plan yapmaktır. 
-*"Eğer gitmek istemiyorsam, sadece 20 dakika giderim."*
-Bu da bir Eğer/O zaman planı, engel senaryosu için.**94 araştırmayı kapsayan bir meta-analiz boş söylemiyor: 
-> planlayan insanlar hem daha sık hem daha hızlı hedeflerine ulaşıyor.**
-
-**Basit bir araç ama pek çok pahalı müdahaleden daha etkili.** ## 4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)
+## 4. Aşama Modelleri: HAPA ve TTM (Değişimin 6 Aşaması)
 
 ### HAPA (Health Action Process Approach)
 
-HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş*bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
+HAPA[^4], sağlık davranışlarını "niyet oluşturma" ile *bitmiş* bir süreç olarak görmez; davranışı başlatmak, devam ettirmek ve tökezleme durumunda toparlanmak birbirinden psikolojik olarak farklı süreçlerdir ve her biri kendi özgüvenini, planlamasını ve kontrolünü gerektirir. 
 
-Yani iş niyetten sonra başlıyor. Ve o "sonrası" tek bir blok değil,*her aşamanın kendi dinamiği var.* Diğer modellerin büyük çoğunluğu motivasyon, yani niyet, ile ilgilenirken, HAPA volisyonla ilgilenir ve niyeti davranışa dönüştürme sürecini ele alır. 
+Yani iş niyetten sonra başlıyor. Ve o "sonrası" tek bir blok değil, *her aşamanın kendi dinamiği var.* Diğer modellerin büyük çoğunluğu motivasyon, yani niyet, ile ilgilenirken, HAPA volisyonla ilgilenir ve niyeti davranışa dönüştürme sürecini ele alır. 
 
-> Volisyonel fazın 3 adımı: 
-*1) Kasıt sonrası - eylem öncesi*
-**Niyet oluştu ama davranış henüz başlamadı. Planlama burada gerçekleşiyor.**
+> **Volisyonel fazın 3 adımı:** 
+> 1. *Kasıt sonrası - eylem öncesi:* Niyet oluştu ama davranış henüz başlamadı. Planlama burada gerçekleşiyor.
+> 2. *Kasıt sonrası - eylem anı:* Davranış başladı ve sürdürülüyor. 
+> 3. *Kasıt sonrası - eylem sonrası:* Olası geri düşüşlerden sonra davranışı yeniden kazanma ya da hedeften tamamen vazgeçme.
 
-**2) Kasıt sonrası - eylem anı**
-**Davranış başladı ve sürdürülüyor.** 3) Kasıt sonrası - eylem sonrası**
-**Olası geri düşüşlerden sonra davranışı yeniden kazanma ya da hedeften tamamen vazgeçme.**
-**Aynı zamanda motivasyon da kişinin kendi savunmasızlığını ve hastalığının ciddiyetini değerlendirmesi, davranışın değişikliğinin olası sonuçlarının tartılması ve davranışı gerçekleştirebileceğine dair özgüvene bağlıdır.** HAPA'ya göre engel senaryolarına hazırlıklı olmak (her akşam spora giderim ve bu akşam fırtına olması), kendi gözlemlerinle niyetinin farkında olmak ve çeşitli öz-yeterlilik türleri, davranışın sürdürülmesini sağlıyor. 
+Aynı zamanda motivasyon da kişinin kendi savunmasızlığını ve hastalığının ciddiyetini değerlendirmesi, davranış değişikliğinin olası sonuçlarının tartılması ve davranışı gerçekleştirebileceğine dair özgüvene bağlıdır. HAPA'ya göre engel senaryolarına hazırlıklı olmak, kendi gözlemlerinle niyetinin farkında olmak ve çeşitli öz-yeterlilik türleri, davranışın sürdürülmesini sağlıyor. 
 
 ***Yani:***
-**Doktor sana "kolesterolün çıldırmış vaziyette, beslenme alışlkanlıklarını gözden geçirmenin vakti geldi"** diyor. 
+Doktor sana *"kolesterolün çıldırmış vaziyette, beslenme alışkanlıklarını gözden geçirmenin vakti geldi"* diyor. 
 Risk algısı devreye girdi. 
-Sonuçları tartıyorsun ve "yapabilirim" diyorsun. Niyet oluştu.** Hapa burada bitmez. Sonraki sorular:**-plan var mı?**
-**- Zor günlerde ne yapacaksın?**
-**- Aksatırsan nasıl geri döneceksin?** Niyet ettin, hatta başladın bile, tamam. Ama başlamak bir adım ise, başladıktan sonraki gelen her devam etme durumu da bir adım atmaktır. Daha yeni başlıyoruz.
-### Transteorik Model (TTM): Değişimin 6 Aşaması
+Sonuçları tartıyorsun ve *"yapabilirim"* diyorsun. Niyet oluştu. HAPA burada bitmez. Sonraki sorular:
+- Plan var mı?
+- Zor günlerde ne yapacaksın?
+- Aksatırsan nasıl geri döneceksin? 
+
+Niyet ettin, hatta başladın bile, tamam. Ama başlamak bir adım ise, başladıktan sonraki gelen her devam etme durumu da bir adım atmaktır. Daha yeni başlıyoruz.
+
+> [!abstract] Sağlık Eylemi Süreci Yaklaşımı (HAPA Modeli)
+> <div class="sc-diag-author"><a href="https://doi.org/10.1111/j.1464-0597.2007.00325.x" target="_blank" rel="noopener noreferrer">(Schwarzer, 2008)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="20" width="180" height="240" rx="8" fill="rgba(199, 154, 109, 0.06)" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="105" y="44" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Motivasyonel Faz</text>
+>   <rect x="25" y="58" width="160" height="32" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="105" y="78" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Risk &amp; Tehdit Algısı</text>
+>   <rect x="25" y="98" width="160" height="32" rx="4" fill="none" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="105" y="118" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Sonuç Beklentileri (+/-)</text>
+>   <rect x="25" y="138" width="160" height="32" rx="4" fill="none" stroke="#c79a6d" stroke-width="1.2"/>
+>   <text x="105" y="158" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">Eylem Öz-Yeterliliği</text>
+>   <rect x="35" y="195" width="140" height="42" rx="6" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="105" y="221" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">NİYET</text>
+>
+>   <rect x="215" y="20" width="390" height="240" rx="8" fill="rgba(150, 196, 108, 0.06)" stroke="#96c46c" stroke-width="1.6"/>
+>   <text x="410" y="44" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">2. Volisyonel Faz (Planlama, Eylem &amp; İyileşme)</text>
+>
+>   <rect x="230" y="65" width="170" height="70" rx="6" fill="rgba(199, 154, 109, 0.12)" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="315" y="86" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Planlama</text>
+>   <text x="315" y="104" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">• Eylem Planı (If/Then)</text>
+>   <text x="315" y="120" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">• Başa Çıkma Planı</text>
+>
+>   <rect x="425" y="65" width="165" height="70" rx="6" fill="rgba(150, 196, 108, 0.16)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="507" y="86" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Eylem ve Sürdürme</text>
+>   <text x="507" y="104" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">Girişim &amp; Sürdürme</text>
+>   <text x="507" y="120" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">Öz-Düzenleme</text>
+>
+>   <rect x="230" y="155" width="360" height="85" rx="6" fill="none" stroke="#C8102E" stroke-width="1.4" stroke-dasharray="3"/>
+>   <text x="410" y="176" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Volisyonel Öz-Yeterlilik Destek Motoru</text>
+>   <text x="410" y="196" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">• Sürdürme Öz-Yeterliliği: Zor koşullarda devam edebilme inancı</text>
+>   <text x="410" y="214" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">• Toparlanma Öz-Yeterliliği: Tökezleme sonrası vazgeçmeyip yeniden başlama inancı</text>
+> </svg>
+> </div>
+>
+> *Niyet oluştuktan sonra işin bitmediğini; eylem planlaması, başa çıkma planlaması ve tökezleme anlarında toparlanma öz-yeterliliğinin davranışı kalıcı kıldığını modeller.*
+>
+> *Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. Applied Psychology, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x*
 
 > *"Değişmek bir eylem değil, bir bayrak yarışıdır."*
 
@@ -394,9 +524,50 @@ Birden fazla teorinin yapıları entegre.** Yani** TTM, davranışın değişimi
 
 *Zihniyet:*- "Eski ben kimdi hatırlamıyorum bile.."
 - "Sigara mı? O ne? Yeniyor mu?......."*Zaman:*
-**5 yıldan uzun süren başarı. Öz-etkililik[^2] 100%, eski alışkanlığa dönme dürtüsü 0%. Yeni davranış artık karaktere dönüşmüştür.**---
-> ***Sürecin ille de yukarıdan aşağıya sıralı bi şekilde gitmesine gerek yok. Düşüşler ve sıçramalar normaldir. Bir kişi 4. aşamadan 2. aşamaya düşebilir, ya da tam tersi. Bu başarısızlık değil, sürecin kendisi. 
----
+> **5 yıldan uzun süren başarı. Öz-etkililik[^2] %100, eski alışkanlığa dönme dürtüsü %0. Yeni davranış artık karaktere dönüşmüştür.**
+
+> [!abstract] Transteorik Model (TTM) Değişimin 6 Aşaması
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/0022-006X.51.3.390" target="_blank" rel="noopener noreferrer">(Prochaska &amp; DiClemente, 1983)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 300" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="220" width="85" height="50" rx="4" fill="rgba(138, 130, 117, 0.10)" stroke="#8a8275" stroke-width="1.3"/>
+>   <text x="57" y="240" fill="#8a8275" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">1. Gaflet</text>
+>   <text x="57" y="255" fill="var(--dark)" font-family="var(--bodyFont)" font-size="7.5" text-anchor="middle">Farkında Değil</text>
+>
+>   <rect x="115" y="180" width="85" height="90" rx="4" fill="rgba(199, 154, 109, 0.10)" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="157" y="200" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">2. Düşünme</text>
+>   <text x="157" y="215" fill="var(--dark)" font-family="var(--bodyFont)" font-size="7.5" text-anchor="middle">Flört Aşaması</text>
+>
+>   <rect x="215" y="140" width="85" height="130" rx="4" fill="rgba(199, 154, 109, 0.14)" stroke="#c79a6d" stroke-width="1.6"/>
+>   <text x="257" y="160" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">3. Hazırlık</text>
+>   <text x="257" y="175" fill="var(--dark)" font-family="var(--bodyFont)" font-size="7.5" text-anchor="middle">Savaş Hazırlığı</text>
+>
+>   <rect x="315" y="100" width="85" height="170" rx="4" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="357" y="120" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">4. Eylem</text>
+>   <text x="357" y="135" fill="#C8102E" font-family="var(--bodyFont)" font-size="7.5" font-weight="bold" text-anchor="middle">İlk 6 Ay (Kritik)</text>
+>
+>   <rect x="415" y="60" width="85" height="210" rx="4" fill="rgba(150, 196, 108, 0.12)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="457" y="80" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">5. Sürdürme</text>
+>   <text x="457" y="95" fill="var(--dark)" font-family="var(--bodyFont)" font-size="7.5" text-anchor="middle">Kaleyi Koruma</text>
+>
+>   <rect x="515" y="20" width="85" height="250" rx="4" fill="rgba(150, 196, 108, 0.20)" stroke="#96c46c" stroke-width="2.2"/>
+>   <text x="557" y="40" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">6. Alışkanlık</text>
+>   <text x="557" y="55" fill="#96c46c" font-family="var(--bodyFont)" font-size="7.5" font-weight="bold" text-anchor="middle">Terminasyon</text>
+>
+>   <line x1="20" y1="285" x2="300" y2="285" stroke="#c79a6d" stroke-width="2"/>
+>   <text x="160" y="297" fill="#c79a6d" font-family="var(--bodyFont)" font-size="8.5" font-weight="bold" text-anchor="middle">Yazılımsal (Bilişsel) Kaldıraçlar</text>
+>
+>   <line x1="315" y1="285" x2="595" y2="285" stroke="#96c46c" stroke-width="2"/>
+>   <text x="455" y="297" fill="#96c46c" font-family="var(--bodyFont)" font-size="8.5" font-weight="bold" text-anchor="middle">Donanımsal (Davranışsal) Kaldıraçlar</text>
+> </svg>
+> </div>
+>
+> *Davranış değişiminin anlık bir karar değil; bilişsel farkındalıktan başlayıp çevresel uyaran kontrolüyle kalıcı alışkanlığa evrilen 6 basamaklı bir merdiven olduğunu gösterir.*
+>
+> *Prochaska, J. O., &amp; DiClemente, C. C. (1983). Stages and processes of self-change of smoking: Toward an integrative model of change. Journal of Consulting and Clinical Psychology, 51(3), 390–395. https://doi.org/10.1037/0022-006X.51.3.390*
+
+> ***Sürecin ille de yukarıdan aşağıya sıralı bir şekilde gitmesine gerek yok. Düşüşler ve sıçramalar normaldir. Bir kişi 4. aşamadan 2. aşamaya düşebilir, ya da tam tersi. Bu başarısızlık değil, sürecin kendisidir.***
 
 Tabi TTM sadece aşamalardan ibaret değil.. Aşamaları başlatan ve birbirine bağlayan mekanizma olmadan insan şurdan şuraya gidemez.
 ## Arka Plandaki Motor
@@ -489,7 +660,56 @@ Geri düşüş (relapse) kuralı:
 Ama ASLA 1. adım olan MUTLAK CAHİLLİĞE geri düşemezler. Bir kere duyup öğrendiğin bir tehlikeyi beyninden silemezsin öyle..
 ```
 
-***Altın Kural:  Kişiye Özel Müdahale ***PAPM'in en büyük iddiası şudur:***"Her aşamadaki insana aynı yaklaşımı uygulayamazsın."***
+> [!abstract] Önleyici Eylem Süreç Modeli (PAPM)
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/0278-6133.11.3.170" target="_blank" rel="noopener noreferrer">(Weinstein &amp; Sandman, 1992)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="25" width="165" height="36" rx="4" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.2"/>
+>   <text x="97" y="47" fill="#8a8275" font-family="var(--bodyFont)" font-size="9.5" font-weight="bold" text-anchor="middle">1. Mutlak Cahillik (Bihaber)</text>
+>
+>   <line x1="97" y1="61" x2="97" y2="78" stroke="#8a8275" stroke-width="1.4"/>
+>   <polygon points="94,76 97,82 100,76" fill="#8a8275"/>
+>
+>   <rect x="15" y="82" width="165" height="36" rx="4" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.4"/>
+>   <text x="97" y="104" fill="#c79a6d" font-family="var(--bodyFont)" font-size="9.5" font-weight="bold" text-anchor="middle">2. Kulaktan Dolma / İlgisiz</text>
+>
+>   <line x1="97" y1="118" x2="97" y2="135" stroke="#c79a6d" stroke-width="1.4"/>
+>   <polygon points="94,133 97,139 100,133" fill="#c79a6d"/>
+>
+>   <rect x="15" y="139" width="165" height="42" rx="6" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="97" y="165" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">3. Karar Masası (Yol Ayrımı)</text>
+>
+>   <line x1="97" y1="181" x2="97" y2="215" stroke="#C8102E" stroke-width="1.6"/>
+>   <line x1="97" y1="215" x2="50" y2="215" stroke="#C8102E" stroke-width="1.6"/>
+>   <polygon points="52,211 44,215 52,219" fill="#C8102E"/>
+>
+>   <rect x="10" y="225" width="175" height="42" rx="5" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.5"/>
+>   <text x="97" y="244" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">4. Bilinçli "HAYIR" Kararı</text>
+>   <text x="97" y="258" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">(Eylem Sona Erer / Sabit)</text>
+>
+>   <line x1="180" y1="160" x2="235" y2="160" stroke="#96c46c" stroke-width="2"/>
+>   <polygon points="233,156 241,160 233,164" fill="#96c46c"/>
+>
+>   <rect x="245" y="139" width="165" height="42" rx="5" fill="rgba(150, 196, 108, 0.12)" stroke="#96c46c" stroke-width="1.6"/>
+>   <text x="327" y="158" fill="#96c46c" font-family="var(--bodyFont)" font-size="9.5" font-weight="bold" text-anchor="middle">5. Bilinçli "EVET" Kararı</text>
+>   <text x="327" y="172" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">Eyleme Geçiş Niyeti</text>
+>
+>   <line x1="410" y1="160" x2="455" y2="160" stroke="#96c46c" stroke-width="2"/>
+>   <polygon points="453,156 461,160 453,164" fill="#96c46c"/>
+>
+>   <rect x="465" y="125" width="140" height="70" rx="6" fill="rgba(150, 196, 108, 0.18)" stroke="#96c46c" stroke-width="2"/>
+>   <text x="535" y="152" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">6. Eylem &amp; 7. İstikrar</text>
+>   <text x="535" y="170" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">Uygulama ve Kalıcılık</text>
+> </svg>
+> </div>
+>
+> *Bireyin bir tehlikeye karşı tamamen habersiz olmaktan başlayıp bilinçli bir 'Hayır' veya 'Evet' kararına varışını 7 niteliksel basamakla açıklar.*
+>
+> *Weinstein, N. D., &amp; Sandman, P. M. (1992). A model of the precaution adoption process. Health Psychology, 11(3), 170–180. https://doi.org/10.1037/0278-6133.11.3.170*
+
+***Altın Kural: Kişiye Özel Müdahale***
+PAPM'in en büyük iddiası şudur: ***"Her aşamadaki insana aynı yaklaşımı uygulayamazsın."***
 
 >**Radon Çalışması **```
 1897 katılımcıyla yapılan randomize, boylamsal çalışmada iki müdahale test edildi:** Yüksek risk bilgisi ve düşük efor**. 
@@ -582,6 +802,42 @@ Vahşi ve TAM bir geri düşüş **Yani:** hastalık modelinin o katı ve dogmat
 
 ***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
 
+> [!abstract] Perhiz İhlali Etkisi (AVE) ve Geri Düşüş Kısırdöngüsü
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/026217" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="220" y="15" width="180" height="38" rx="19" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="310" y="39" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Tökezleme / İlk Kaçamak (Lapse)</text>
+>
+>   <line x1="260" y1="53" x2="160" y2="85" stroke="#C8102E" stroke-width="2"/>
+>   <polygon points="160,79 152,87 163,88" fill="#C8102E"/>
+>
+>   <rect x="15" y="85" width="250" height="155" rx="8" fill="rgba(200, 16, 46, 0.06)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="140" y="108" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">1. Katı Model &amp; AVE Kısırdöngüsü</text>
+>   <text x="140" y="130" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Ağır Suçluluk &amp; Bilişsel Uyumsuzluk</text>
+>   <text x="140" y="148" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Ben iradesiz bir hastayım!"</text>
+>   <text x="140" y="168" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Kontrol Kaybı: "Battı balık yan gider"</text>
+>   <rect x="35" y="185" width="210" height="40" rx="4" fill="rgba(200, 16, 46, 0.16)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="140" y="210" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">TAM GERİ DÜŞÜŞ (Relapse)</text>
+>
+>   <line x1="360" y1="53" x2="460" y2="85" stroke="#96c46c" stroke-width="2"/>
+>   <polygon points="457,88 468,87 460,79" fill="#96c46c"/>
+>
+>   <rect x="355" y="85" width="250" height="155" rx="8" fill="rgba(150, 196, 108, 0.06)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="480" y="108" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">2. Bilişsel Yeniden Çerçeveleme</text>
+>   <text x="480" y="130" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Hatayı "Öğrenme Kazası" Görme</text>
+>   <text x="480" y="148" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Bir hata tüm çabayı yok etmez"</text>
+>   <text x="480" y="168" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Başa Çıkma Planını Devreye Sokma</text>
+>   <rect x="375" y="185" width="210" height="40" rx="4" fill="rgba(150, 196, 108, 0.16)" stroke="#96c46c" stroke-width="2"/>
+>   <text x="480" y="210" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">PERHİZE DÖNÜŞ VE KORUMA</text>
+> </svg>
+> </div>
+>
+> *Tek bir tökezlemenin ardından hissedilen yıkıcı suçluluk duygusunun insanı 'Battı balık yan gider' diyerek tam bir geri düşüşe sürüklemesi mekanizmasını ve bilişsel toparlanma yolunu gösterir.*
+>
+> *Marlatt, G. A., &amp; Gordon, J. R. (Eds.). (1985). Relapse prevention: Maintenance strategies in the treatment of addictive behaviors. Guilford Press. https://doi.org/10.1037/026217*
+
 ---
 [^1]: **Sağlık İnanç Modeli (Health Belief Model):** 
 [^2]: **Öz-Etkililik (Self-Efficacy):** 
@@ -593,6 +849,9 @@ Vahşi ve TAM bir geri düşüş **Yani:** hastalık modelinin o katı ve dogmat
 
 - Ajzen, I. (1991). The theory of planned behavior. *Organizational Behavior and Human Decision Processes*, 50(2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T
 - Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. *Psychological Review*, 84(2), 191–215. https://doi.org/10.1037/0033-295X.84.2.191
-- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans.*American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
+- Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. *American Psychologist*, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493
+- Marlatt, G. A., & Gordon, J. R. (Eds.). (1985). *Relapse prevention: Maintenance strategies in the treatment of addictive behaviors*. Guilford Press. https://doi.org/10.1037/026217
+- Prochaska, J. O., & DiClemente, C. C. (1983). Stages and processes of self-change of smoking: Toward an integrative model of change. *Journal of Consulting and Clinical Psychology*, 51(3), 390–395. https://doi.org/10.1037/0022-006X.51.3.390
 - Rosenstock, I. M. (1974). Historical origins of the health belief model. *Health Education Monographs*, 2(4), 328–335. https://doi.org/10.1177/109019817400200403
 - Schwarzer, R. (2008). Modeling health behavior change: How to predict and modify the adoption and maintenance of health behaviors. *Applied Psychology*, 57(1), 1–29. https://doi.org/10.1111/j.1464-0597.2007.00325.x
+- Weinstein, N. D., & Sandman, P. M. (1992). A model of the precaution adoption process. *Health Psychology*, 11(3), 170–180. https://doi.org/10.1037/0278-6133.11.3.170

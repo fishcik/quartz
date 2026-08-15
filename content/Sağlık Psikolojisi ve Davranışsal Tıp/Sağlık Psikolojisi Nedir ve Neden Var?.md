@@ -78,25 +78,48 @@ Hem hastalığın ortaya çıkışında hem de seyrinde psikolojik faktörler de
 
 Sağlık psikolojisi **ikinci** modeli temel alıyor, her şey biyopsikososyal model zemini üzerine kuruluyor.
 
-> [!abstract] 📜 Biyopsikososyal Sağlık Modeli (Engel, 1977)
-> *Kaynak: Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196(4286), 129–136.*
+> [!abstract] Biyomedikal ve Biyopsikososyal Sağlık Modelleri Karşılaştırması
+> <div class="sc-diag-author"><a href="https://doi.org/10.1126/science.847460" target="_blank" rel="noopener noreferrer">(Engel, 1977)</a></div>
 >
-> ```mermaid
-> flowchart TD
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+>   <rect x="15" y="20" width="265" height="240" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.3"/>
+>   <text x="147" y="46" fill="#8a8275" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">1. Geleneksel Biyomedikal Model</text>
+>   <rect x="35" y="65" width="225" height="36" rx="4" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.5"/>
+>   <text x="147" y="87" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Biyolojik Arıza (Virüs, Doku Hasarı)</text>
+>   <line x1="147" y1="101" x2="147" y2="120" stroke="#8a8275" stroke-width="1.6"/>
+>   <polygon points="144,118 147,124 150,118" fill="#8a8275"/>
+>   <rect x="35" y="125" width="225" height="36" rx="4" fill="none" stroke="#8a8275" stroke-width="1.3"/>
+>   <text x="147" y="147" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Dışsal Müdahale (İlaç, Cerrahi)</text>
+>   <line x1="147" y1="161" x2="147" y2="180" stroke="#8a8275" stroke-width="1.6"/>
+>   <polygon points="144,178 147,184 150,178" fill="#8a8275"/>
+>   <rect x="35" y="185" width="225" height="42" rx="4" fill="none" stroke="#8a8275" stroke-width="1.3" stroke-dasharray="3"/>
+>   <text x="147" y="203" fill="#8a8275" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Hasta: Pasif Alıcı</text>
+>   <text x="147" y="217" fill="#8a8275" font-family="var(--bodyFont)" font-size="8.5" font-style="italic" text-anchor="middle">"Bozulduysa Tamir Et"</text>
 >
->   Bio([Biyolojik Sistemler: Genetik, Fizyoloji, İmmünoloji]):::sepia --> Saglik((Sağlık & Hastalık)):::cardinal
->   Psy([Psikolojik Süreçler: Biliş, Duygu, Başa Çıkma]):::cardinal --> Saglik
->   Soc([Sosyal Çevre: Kültür, Sosyoekonomik Düzey, Aile]):::sepia --> Saglik
->   
->   Bio <--> Psy
->   Psy <--> Soc
->   Bio <--> Soc
-> ```
+>   <rect x="300" y="20" width="305" height="240" rx="8" fill="rgba(200, 16, 46, 0.04)" stroke="#C8102E" stroke-width="1.6"/>
+>   <text x="452" y="46" fill="#C8102E" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">2. Biyopsikososyal Sağlık Modeli</text>
+>   <circle cx="380" cy="115" r="42" fill="rgba(199, 154, 109, 0.12)" stroke="#c79a6d" stroke-width="1.8"/>
+>   <text x="380" y="112" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">BİYOLOJİ</text>
+>   <text x="380" y="125" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">Genetik &amp; İmmün</text>
 >
-> **Açıklama:** *Hastalık ve iyilik halinin yalnızca hücresel/biyolojik kusurlarla değil, biyoloji, psikoloji ve sosyal bağlamın kesişiminde dinamik olarak belirlendiğini modeller.*
+>   <circle cx="525" cy="115" r="42" fill="rgba(150, 196, 108, 0.12)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="525" y="112" fill="#96c46c" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">PSİKOLOJİ</text>
+>   <text x="525" y="125" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">Biliş, Stres &amp; Eylem</text>
+>
+>   <circle cx="452" cy="190" r="42" fill="rgba(138, 130, 117, 0.12)" stroke="#8a8275" stroke-width="1.8"/>
+>   <text x="452" y="187" fill="#8a8275" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">SOSYAL ÇEVRE</text>
+>   <text x="452" y="200" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8" text-anchor="middle">Kültür &amp; Destek</text>
+>
+>   <rect x="420" y="120" width="65" height="30" rx="6" fill="rgba(200, 16, 46, 0.18)" stroke="#C8102E" stroke-width="2"/>
+>   <text x="452" y="138" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">SAĞLIK</text>
+>   <text x="452" y="248" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Bağlam İçinde Aktif Birey"</text>
+> </svg>
+> </div>
+>
+> *Hastalık ve iyilik halinin yalnızca tek yönlü hücresel bir arızadan ibaret olmadığını; biyoloji, psikolojik süreçler ve sosyal bağlamın karşılıklı kesişiminde dinamik olarak belirlendiğini modeller.*
+>
+> *Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196(4286), 129–136. https://doi.org/10.1126/science.847460*
 
 ## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
