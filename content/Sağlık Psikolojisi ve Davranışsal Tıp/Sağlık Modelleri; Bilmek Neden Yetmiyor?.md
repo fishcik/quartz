@@ -23,7 +23,7 @@ tags:
 
 ---
 
-Sigara öldürür, hareket etmek iyidir, sebze yemek lazım. Bunları herkes biliyor. Bunları bilmek için tıp okumaya da gerek yok. Ambalajların üstünde bile yazıyor. 
+Sigara öldürür, hareket etmek iyidir, sebze yemek lazım. Bunları herkes biliyor. Ancak temel sağlık okuryazarlığı[^saglik-okuryazarligi] bile tek başına eylemi başlatmaya yetmiyor.
 
 > *Peki neden insan sigara içiyor, spor salonuna üye olup hiç gitmiyor?*
 
@@ -49,7 +49,7 @@ Bu durumu açıklayan 2 model ailesi var:
    - Riski ne kadar ciddiye alıyorsun?
    - Başarabileceğine inanıyor musun?
    - Sonuç senin için önemli mi?
-   - *Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory) bu aileden.*
+   - *Bandura'nın sosyal bilişsel teorisi, Sağlık İnanç Modeli (Health Belief Model), Gerekçeli Eylem Teorisi (Theory of Reasoned Action), Planlı Davranış Teorisi (Theory of Planned Behaviour) ve Koruma Motivasyonu Teorisi (Protection Motivation Theory - korku uyaranlarının yarattığı vejetatif uyarılma[^vejetatif-uyarilma] ile çalışan model) bu aileden.*
 
 2. **Aşama Modelleri (Stage Models):** *"Hayır, öyle çizgi üzerinde ileri-geri kaymak olmaz"* der. Davranış değişikliği sırasında insan niceliksel değil, **niteliksel olarak farklı evrelerden** geçer. Düşünmeme evresi ile düşünme evresi psikolojik olarak birbirinden temelden farklıdır.
    - *Sağlık Eylemi Süreci Yaklaşımı (HAPA), Transteorik Model (TTM) ve Önleyici Eylem Süreç Modeli (PAPM) bu aileye aittir.*
@@ -60,7 +60,7 @@ Bu durumu açıklayan 2 model ailesi var:
 
 Albert Bandura (1925–2021), 1977'de ortaya koyduğu kuramla psikolojide devrim yarattı. Sağlık açısından iki kavram kritiktir:
 1. **Eylem Sonucu Beklentileri (Outcome Expectancies):** Kafadaki otomatik terazi. *"Az yağlı beslenirsem kalp krizi riskim düşer"* (+ fayda) vs. *"Ama o zaman yemek lezzetli olmaz"* (- maliyet).
-2. **Öz-Yeterlilik Beklentileri (Self-Efficacy[^oz-yeterlilik]):** Zorlu koşullarda dahi davranışı gerçekleştirebileceğine dair inanç. *"Lokantada arkadaşlarımın yanında da bu diyeti sürdürebilir miyim?"*
+2. **Öz-Yeterlilik Beklentileri (Self-Efficacy):** Zorlu koşullarda dahi davranışı gerçekleştirebileceğine dair inanç. *"Lokantada arkadaşlarımın yanında da bu diyeti sürdürebilir miyim?"*
 
 Bandura öz-yeterliliğin 4 kaynaktan beslendiğini söyler:
 - **Başarı Deneyimi (En Güçlüsü):** Bizzat kendi yetkinliğinle tekrar tekrar başarmak.
@@ -72,10 +72,16 @@ Bandura öz-yeterliliğin 4 kaynaktan beslendiğini söyler:
 
 1950'lerde halk sağlığı uzmanlarının *"İnsanlar ücretsiz tüberküloz taramasına bile neden gitmiyor?"* çaresizliğinden doğdu. 
 
-Modelin temel iddiası: Bir davranışı değiştirme olasılığın, algıladığın **sağlık tehdidinin büyüklüğü** (öznel kırılganlık + hastalığın ciddiyeti) ve önlemin **algılanan net yararı** (faydalar eksi engeller) ile doğru orantılıdır.
+Modelin temel iddiası: Bir davranışı değiştirme olasılığın, algıladığın **sağlık tehdidinin büyüklüğü** ve önlemin **algılanan net yararı** (faydalar eksi engeller) ile doğru orantılıdır.
 
-> **Gerçekçi Olmayan İyimserlik (Optimistic Bias - Weinstein, 1980):**
-> İnsanlar sigara paketindeki kanserli akciğere bakıp içmeye devam eder; çünkü hepimiz gizliden gizliye kendimizi ortalamadan daha dayanıklı, özel ve kurşun geçirmez sanırız: *"Kanser kötü evet, ama benim genlerim sağlam, bana bir şey olmaz!"*
+- **Öznel Kırılganlık:** Bireyin bir hastalığa yakalanma riskine dair kişisel algısı (optimistik önyargı[^optimistik-onyargi] nedeniyle genelde yapay biçimde düşüktür).
+- **Hastalığın Ciddiyeti:** Tedavi edilmediğinde yaratacağı tıbbi ve sosyal sonuçların ağırlığı.
+
+### Sonuç Beklentileri
+1. **Algılanan Faydalar:** Önerilen davranışın tehdidi azaltacağına dair inanç.
+2. **Algılanan Engeller:** Eylemin gerektirdiği finansal, fiziksel, zaman veya psikolojik maliyetler (en güçlü eylem ketleyicisi).
+
+> Sağlık İnanç Modeli özellikle mamografi taramaları, aşılanma ve check-up gibi tek seferlik koruyucu davranışlarda canavar gibi çalışır. Ancak bağımlılıklar gibi alışkanlık döngülerinde yetersiz kalır.
 
 > [!abstract] Sağlık İnanç Modeli (HBM)
 > <div class="sc-diag-author"><a href="https://doi.org/10.1177/109019817400200403" target="_blank" rel="noopener noreferrer">(Rosenstock, 1974; Becker, 1974)</a></div>
@@ -85,7 +91,7 @@ Modelin temel iddiası: Bir davranışı değiştirme olasılığın, algıladı
 >   <rect x="15" y="25" width="170" height="90" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
 >   <text x="100" y="48" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Tehdit Algısı</text>
 >   <rect x="25" y="58" width="150" height="24" rx="3" fill="none" stroke="#c79a6d" stroke-width="1"/>
->   <text x="100" y="74" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Öznel Kırılganlık</text>
+>   <text x="100" y="74" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Öznel Kırılganlık[^optimistik-onyargi]</text>
 >   <rect x="25" y="86" width="150" height="24" rx="3" fill="none" stroke="#c79a6d" stroke-width="1"/>
 >   <text x="100" y="102" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Hastalığın Ciddiyeti</text>
 >
@@ -135,8 +141,8 @@ Fishbein ve Ajzen aradaki eksik halkayı **niyet** olarak tanımlayarak **Planl�
 2. **Sübjektif Normlar (Sosyal Baskı):** Önemli gördüğümüz kişilerin beklentileri $\times$ Bu beklentilere uyma motivasyonu.
 3. **Algılanan Davranışsal Kontrol:** Eylemi gerçekleştirmenin ne kadar kolay veya zor olduğuna dair tahmin (Dışsal engeller ve öz-yeterlilik).
 
-> [!warning] Niyet-Davranış Boşluğu (Intention-Behavior Gap[^niyet-davranis-ucurumu])
-> TPB niyet oluşumunu canavar gibi tahmin eder (%40–50 varyans). Ancak iş niyetin **gerçek eyleme** dönüşmesine gelince tahmin gücü %20–30'lara çakılır. Adam yürekten niyet eder ama harekete geç(e)mez.
+> [!warning] Niyet-Davranış Boşluğu (Intention-Behavior Gap)
+> TPB niyet oluşumunu canavar gibi tahmin eder (%40–50 varyans). Ancak iş niyetin **gerçek eyleme** dönüşmesine gelince tahmin gücü %20–30'lara çakılır. Gollwitzer ve Sheeran (2006) tarafından yapılan meta-analiz[^meta-analiz] çalışmaları, Eğer/O Zaman planlarının bu uçurumu kapattığını göstermiştir.
 
 > [!abstract] Planlı Davranış Teorisi (TPB)
 > <div class="sc-diag-author"><a href="https://doi.org/10.1016/0749-5978(91)90020-T" target="_blank" rel="noopener noreferrer">(Ajzen, 1991)</a></div>
@@ -192,17 +198,17 @@ Rogers (1975), sigara paketlerindeki dehşet verici görsellerin tek başına ne
 - Korku mesajı algılandığında beyin iki paralel soru sorar:
   1. **Tehdit Değerlendirmesi:** *"Bu durum ne kadar korkunç ve bana olma ihtimali ne?"*
   2. **Başa Çıkma Değerlendirmesi:** *"Bunu yapacak gücüm var mı (öz-yeterlilik) ve bu önlem işe yarar mı?"*
-- Eğer kişi *"Ben zaten bırakamam"* diyorsa, korku dozu ne kadar artarsa artsın niyet oluşmaz; sadece savunmacı inkar ve kaygı üretilir.
+- Eğer kişi *"Ben zaten bırakamam"* diyorsa, korku dozu ne kadar artarsa artsın niyet oluşmaz; sadece savunmacı inkâr[^savunmaci-inkar] ve psikolojik reaktivite[^psikolojik-reaktivite] (inadına içme) üretilir.
 
 ### Rubikon Modeli (Heckhausen & Gollwitzer)
 
 Julius Sezar M.Ö. 49'da ordusuyla Rubikon nehrinin kıyısına geldiğinde durup uzun uzun düşündü. Nehri geçtiği an geri dönüş yoktu (*"Alea iacta est" / Zarlar atıldı*).
 
 - **Rubikon Öncesi (Motivasyon Fazı):** Nehrin kıyısında durup artıları ve eksileri tartma evresidir (*"Yapsam mı, yapmasam mı?"*).
-- **Rubikon Sonrası (Volisyon Fazı):** Karar verilmiş, nehir geçilmiştir. Artık *"Nasıl, ne zaman, nerede yapacağım?"* planlaması başlar.
+- **Rubikon Sonrası (Volisyon[^volisyon] Fazı):** Karar verilmiş, nehir geçilmiştir. Artık hedef hiyerarşisinde[^hedef-hiyerarsisi] netleşip *"Nasıl, ne zaman, nerede yapacağım?"* planlaması başlar.
 
 > **Eğer/O Zaman (If-Then) Uygulama Niyetleri (Gollwitzer, 1999):**
-> Niyet-davranış boşluğunu kapatmanın en sağlam yolu somut durum-eylem eşleşmeleridir: *"Pazartesi 18:00'de işten çıkınca, eve uğramadan doğrudan salona gideceğim."* Durum ile davranış zihinsel olarak bağlandığı için irade harcanmaz, sistem otopilota geçer.
+> Niyet-davranış boşluğunu kapatmanın en sağlam yolu somut durum-eylem eşleşmeleridir: *"Pazartesi 18:00'de işten çıkınca, eve uğramadan doğrudan salona gideceğim."* Durum ile davranış zihinsel olarak bağlandığı için ego tükenmesi[^ego-tukenmesi] yaşanmaz, irade harcanmadan sistem otopilota geçer.
 
 > [!abstract] Rubikon Eylemsel Faz Modeli ve Eylem Niyetleri
 > <div class="sc-diag-author"><a href="https://doi.org/10.1037/0003-066X.54.7.493" target="_blank" rel="noopener noreferrer">(Gollwitzer, 1999; Heckhausen, 1987)</a></div>
@@ -348,7 +354,7 @@ Weinstein ve Sandman, TTM'nin iki kritik grubu gözden kaçırdığını söyler
 1. Bir tehlikeden tamamen habersiz olanlar (Mutlak Cahillik).
 2. Tehlikeyi bilip bile isteye *"Yapmayacağım ulan!"* diyenler (Bilinçli Hayır).
 
-> **Radon Gazı Deneyi (Weinstein ve ark., 1998):**
+> **Radon Gazı[^radon-gazi] Deneyi (Weinstein ve ark., 1998):**
 > 1897 katılımcıda test edildi: *"Risk çok yüksek"* broşürü sadece kararsızları niyetlendirmede işe yaradı; ama zaten niyetli olanları harekete geçirmedi. Hazır sipariş formu göndermek ise tam tersine sadece zaten niyetli olanları anında eyleme geçirdi. 
 > *Sonuç: İnsanın hangi aşamada olduğunu bilmeden yapılan genel kamu spotları çöpe gider.*
 
@@ -420,7 +426,7 @@ Sağlık davranışı kazanmak bir şeydir; onu sürdürmek bambaşka bir şeydi
 
 ### Perhiz İhlali Etkisi (AVE - Abstinence Violation Effect)
 
-Marlatt ve Gordon (1985) tarafından tanımlanan AVE[^ave], perhizde olan birinin küçük bir kaçamaktan sonra kendini ağır bir suçluluk ve yetersizlik içinde hissetmesidir: *"Ben zaten iradesizim, battı balık yan gider!"* 
+Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan birinin küçük bir kaçamaktan sonra kendini ağır bir suçluluk, bilişsel uyumsuzluk[^bilissel-uyumsuzluk] ve yetersizlik içinde hissetmesidir: *"Ben zaten iradesizim, battı balık yan gider!"* 
 
 Bu kısırdöngü insanı elleriyle tam bir geri düşüşe sürükler. Çözüm: Hatayı bir *"hastalık patlaması"* değil, bir *"öğrenme kazası"* olarak yeniden çerçevelemektir.
 
@@ -462,11 +468,17 @@ Bu kısırdöngü insanı elleriyle tam bir geri düşüşe sürükler. Çözüm
 
 ---
 
-[^optimistik-onyargi]: **Optimistik Önyargı (Unrealistic Optimism):** Bireyin olumsuz yaşam olaylarının (hastalık, kaza) kendi başına gelme olasılığını akranlarına ve ortalamaya kıyasla sistematik olarak daha düşük tahmin etmesi bilişsel eğilimi.
+[^saglik-okuryazarligi]: **Sağlık Okuryazarlığı (Health Literacy):** Bireyin temel koruyucu bilgileri bulma, anlama, doğru tartma ve günlük yaşam kararlarına entegre etme bilişsel ve sosyal kapasitesi.
+[^vejetatif-uyarilma]: **Vejetatif Uyarılma (Autonomic Arousal):** Yüksek tehdit veya korku mesajları karşısında otonom sinir sisteminin devreye soktuğu kalp çarpıntısı, içsel huzursuzluk ve kaçınma tepkisi.
+[^optimistik-onyargi]: **Optimistik Önyargı (Unrealistic Optimism):** Bireyin olumsuz yaşam olaylarının (hastalık, kaza) kendi başına gelme olasılığını akranlarına kıyasla sistematik olarak daha düşük tahmin etmesi bilişsel yanılsaması.
 [^volisyon]: **Volisyon (Volition):** Hedef niyetinin oluşmasından sonra devreye giren; eylemin başlatılması, sürdürülmesi ve engeller karşısında iradenin korunmasını sağlayan yürütücü kontrol süreçleri.
 [^meta-analiz]: **Meta-Analiz (Meta-Analysis):** Belirli bir araştırma sorusuna dair yapılmış çok sayıda bağımsız ampirik çalışmanın bulgularını istatistiksel olarak birleştirip genel etki büyüklüğünü hesaplayan üst düzey kanıt yöntemi.
 [^radon-gazi]: **Radon Gazı (Radon):** Topraktaki uranyumun doğal bozunmasıyla açığa çıkan, renksiz, kokusuz ve sigaradan sonra akciğer kanserinin en yaygın ikinci nedeni olan radyoaktif soy gaz.
 [^bilissel-uyumsuzluk]: **Bilişsel Uyumsuzluk (Cognitive Dissonance):** Bireyin inançları, değerleri ve eylemleri arasındaki tutarsızlıktan doğan ve kişiyi kaçamak sonrası ağır suçluluk krizine sürükleyen içsel psikolojik gerilim hali.
+[^savunmaci-inkar]: **Savunmacı İnkâr (Defensive Avoidance):** Korku mesajı aşırı yoğun verildiğinde ancak kişiye somut ve erişilebilir bir başa çıkma yolu sunulmadığında beynin tehdidi yok sayarak rahatlama mekanizması.
+[^psikolojik-reaktivite]: **Psikolojik Reaktivite (Psychological Reactance - Brehm):** Bireyin seçim özgürlüğünün veya özerkliğinin kısıtlandığını hissettiğinde (örn. katı sağlık yasakları), yasaklanan eylemi daha çekici bularak direnç göstermesi.
+[^hedef-hiyerarsisi]: **Hedef Hiyerarşisi (Goal Hierarchy):** Uzun vadeli soyut hedefler (sağlıklı yaşlanmak) ile anlık somut hedonik hedeflerin (tatlı yemek) zihinsel temsilde çatışması örüntüsü.
+[^ego-tukenmesi]: **Ego Tükenmesi (Ego Depletion - Baumeister):** Öz-denetim ve irade gücünün sınırlı bir kaynak olduğu ve gün içindeki ardışık kararlarla tüketildiğinde dürtüsel kaçamaklara zemin hazırladığı kuramı.
 
 ## Kaynaklar
 

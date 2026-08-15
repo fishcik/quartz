@@ -74,13 +74,13 @@ Fiziksel aktiviteden kasıt ağır performans sporları değildir. Alman Kardiyo
 ## 2. Mekanizma: Fizyoloji vs. Sosyal Temas
 
 Aslında depresyon-hareket ilişkisindeki mekanizma üzerine iki güçlü hipotez yarışır:
-1. **Fizyolojik/Nörobiyolojik:** BDNF salınımı, hipokampal nörogenez ve serotonin/endorfin regülasyonu.
+1. **Fizyolojik/Nörobiyolojik:** BDNF[^bdnf] salınımı, hipokampal nörogenez[^hipokampal-norogenez] ve endokanabinoid sistemi[^endokanabinoid-sistemi] (anandamid salınımı) ile serotonin/endorfin regülasyonu.
 2. **Psikososyal/Davranışsal Aktivasyon:** Sosyal izolasyonu kırmak, grup desteği ve öz-yeterlilik kazanımı.
 
 > [!info] Müdahale Tasarımı Açısından Soru
 > Grup sporları bireysel koşudan neden daha yüksek uyum sağlıyor? Çünkü sosyal temas, iradenin üzerindeki bilişsel yükü hafifletiyor.
 
-Zorluk ise hareketin faydasında değil; popülasyonun yaş ilerledikçe sedanter[^sedanter-yasam] yaşama kaymasıdır.
+Zorluk ise hareketin faydasında değil; popülasyonun yaş ilerledikçe enerji tüketiminin $\le 1.5$ MET[^met-degeri] düzeyinde kaldığı sedanter[^sedanter-yasam] yaşama kaymasıdır.
 
 Kalp hastalıkları, kanser türleri, osteoporoz, tip 2 diyabet ve depresyonu tek bir davranışın aynı anda pozitif etkilemesi **başka hiçbir tıp müdahalesi için geçerli değildir.**
 
@@ -97,9 +97,13 @@ Bu planı yapmadan niyet sadece vicdan rahatlatıcı bir arzu olarak kalır.
 ---
 
 [^metabolik-risk]: **Metabolik Risk (Metabolic Risk):** İnsülin direnci, visseral yağlanma, hipertansiyon ve dislipidemi gibi kardiyometabolik hastalık olasılığını artıran faktörler bütünü.
-[^sedanter-yasam]: **Sedanter Yaşam (Sedentary Behavior):** Uyanıkken harcanan enerjinin bazal metabolizma düzeyine ($\le 1.5$ MET) yakın kaldığı, oturma veya uzanma odaklı hareketsiz yaşam tarzı.
+[^sedanter-yasam]: **Sedanter Yaşam (Sedentary Behavior):** Uyanıkken harcanan enerjinin bazal metabolizma düzeyine yakın kaldığı, oturma veya uzanma odaklı hareketsiz yaşam tarzı.
 [^doz-yanit-iliskisi]: **Doz-Yanıt İlişkisi (Dose-Response Relationship):** Fiziksel aktivite süresi ve yoğunluğu arttıkça mortalite ve morbidite riskinin doğrusal olmayan şekilde azalması dinamik örüntüsü.
 [^majör-depresyon]: **Majör Depresif Bozukluk (Major Depressive Disorder):** Sürekli çökkün duygudurum ve anhedoni ile seyreden; düzenli aerobik egzersizle BDNF salınımı ve nöroplastisite üzerinden sağaltımı desteklenen klinik tablo.
+[^bdnf]: **BDNF (Brain-Derived Neurotrophic Factor):** Aerobik egzersizle kanda ve beyinde yükselerek yeni sinaps oluşumunu, nörogenezi ve sinir hücresi sağkalımını destekleyen nörotrofik faktör.
+[^met-degeri]: **MET Değeri (Metabolic Equivalent of Task):** Bir fiziksel aktivite esnasındaki enerji harcamasının dinlenme anındaki bazal metabolizma hızına ($3.5\text{ ml } O_2 / \text{kg} \cdot \text{dk}$) oranını belirten standart fizyolojik birim.
+[^hipokampal-norogenez]: **Hipokampal Nörogenez (Hippocampal Neurogenesis):** Düzenli aerobik aktivitenin hipokampusta yeni granül nöron üretimini uyararak hafıza konsolidasyonunu ve anksiyolitik dayanıklılığı güçlendirmesi.
+[^endokanabinoid-sistemi]: **Endokanabinoid Sistemi (Runner's High - Boecker):** Sürekli aerobik egzersiz sırasında kanda anandamid seviyesinin yükselerek santral sinir sisteminde öfori, sedasyon ve analjezi (ağrı kesici his) üretmesi.
 
 ## Kaynaklar
 

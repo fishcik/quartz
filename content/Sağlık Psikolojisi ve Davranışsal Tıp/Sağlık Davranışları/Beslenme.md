@@ -21,7 +21,7 @@ tags:
 
 ## 1. Sağlıksız Beslenme ve DGE Kuralları
 
-Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel [[Öz-Etkililik|öz-etkililik]][^oz-etkililik]" mekanizmasını koruyabilmektir.
+Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak bireysel öz-yeterlilik mekanizmasını koruyabilmektir.
 
 ---
 
@@ -30,56 +30,51 @@ Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal u�
 
 Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
-### DGE[^dge] (Alman Beslenme Derneği) 10 Kuralı
+### DGE (Alman Beslenme Derneği) 10 Kuralı
 
-> [!abstract] DGE Sağlıklı ve Sürdürülebilir Beslenmenin 10 İlkesi Matrisi
+> [!abstract] DGE Sağlıklı ve Sürdürülebilir Beslenme Hiyerarşisi Modeli
 > <div class="sc-diag-author"><a href="https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/" target="_blank" rel="noopener noreferrer">(Deutsche Gesellschaft für Ernährung, 2024)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 300" width="100%" style="max-width: 680px; height: auto;">
->   <rect x="15" y="20" width="280" height="125" rx="6" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.6"/>
->   <text x="155" y="42" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Bitkisel Temel (Hacmin %75+'i)</text>
->   <text x="30" y="66" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 1. Çeşitlilik: Tek tip değil, gökkuşağı tabağı</text>
->   <text x="30" y="86" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 2. Sebze &amp; Meyve: Günde en az 5 porsiyon (400g)</text>
->   <text x="30" y="106" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 3. Tam Tahıl &amp; Baklagil: Lif ve mikrobiyom dostu</text>
->   <text x="30" y="126" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 4. Kuruyemiş &amp; Tohumlar: Günlük 1 avuç</text>
+> <svg viewBox="0 0 620 310" width="100%" style="max-width: 680px; height: auto;">
+>   <!-- Tier 1: Plant Base (75%+) -->
+>   <rect x="15" y="15" width="590" height="75" rx="6" fill="rgba(150, 196, 108, 0.08)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="35" y="38" fill="#96c46c" font-family="var(--bodyFont)" font-size="11" font-weight="bold">1. BİTKİSEL TEMEL (Tabağın %75+'i)</text>
+>   <text x="35" y="58" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5">• Sebze &amp; Meyve (Günde 5 porsiyon / 400g) • Tam Tahıl &amp; Baklagiller (Lif &amp; Mikrobiyom) • Su (&ge;1.5 L/gün)</text>
+>   <text x="35" y="74" fill="#96c46c" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Beslenmenin ana omurgası bitkisel çeşitliliktir; kalori yoğunluğu düşük, mikro besin yoğunluğu yüksektir.</text>
 >
->   <rect x="325" y="20" width="280" height="125" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.6"/>
->   <text x="465" y="42" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">2. Hayvansal Denge (Sınırlı &amp; Seçici)</text>
->   <text x="340" y="66" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 5. Süt Ürünleri: Günlük 2 porsiyon (kalsiyum)</text>
->   <text x="340" y="86" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 6. Balık: Haftada 1-2 porsiyon (Omega-3)</text>
->   <text x="340" y="106" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold">• 7. Et &amp; İşlenmiş Et: Haftada max. 300g (Kısıtlı)</text>
->   <text x="340" y="126" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 8. Yumurta: Haftada max. 1 adet (opsiyonel)</text>
+>   <!-- Tier 2: Animal Balance -->
+>   <rect x="15" y="100" width="590" height="68" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.6"/>
+>   <text x="35" y="122" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold">2. HAYVANSAL DENGE (Sınırlı &amp; Seçici Kaynaklar)</text>
+>   <text x="35" y="142" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5">• Süt &amp; Fermente Ürünler (Günlük 2 porsiyon) • Balık (Haftada 1-2 / Omega-3) • Et (Haftada max. 300g)</text>
+>   <text x="35" y="156" fill="#c79a6d" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Hayvansal proteinler tamamlayıcıdır; kırmızı ve işlenmiş et tüketimi asgari düzeyde tutulmalıdır.</text>
 >
->   <rect x="15" y="160" width="280" height="120" rx="6" fill="rgba(200, 16, 46, 0.06)" stroke="#C8102E" stroke-width="1.6"/>
->   <text x="155" y="182" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">3. Kısıtlama &amp; Sıvı Filtresi</text>
->   <text x="30" y="206" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• 9. Sağlıklı Yağlar: Tercihen zeytinyağı/kolza</text>
->   <text x="30" y="226" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-weight="bold">• 10. Şeker ve Tuzu Kısıtla: Ultra-işlenmiş gıda yok</text>
->   <text x="30" y="246" fill="#96c46c" font-family="var(--bodyFont)" font-size="9">• Su: Günde en az 1.5 L su (şekersiz/alkolsüz)</text>
->   <text x="30" y="266" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Görünmez kalorilerden ve tuz yükünden kaçın.</text>
+>   <!-- Tier 3: Restriction Filter -->
+>   <rect x="15" y="178" width="590" height="60" rx="6" fill="rgba(200, 16, 46, 0.06)" stroke="#C8102E" stroke-width="1.6"/>
+>   <text x="35" y="198" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold">3. MİKRO-FİLTRE (Kısıtlama &amp; Kalite Kontrol)</text>
+>   <text x="35" y="218" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9.5">• Sağlıklı Bitkisel Yağlar (Zeytinyağı/Kolza) • Şeker &amp; Tuz Kısıtlaması • Ultra-İşlenmiş Gıdalar Yok</text>
+>   <text x="35" y="230" fill="#C8102E" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Gizli sodyum, rafine şeker ve trans yağ yükünden kaçınarak endotel sağlığını koru.</text>
 >
->   <rect x="325" y="160" width="280" height="120" rx="6" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.6"/>
->   <text x="465" y="182" fill="#8a8275" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">4. Davranışsal &amp; Bilişsel Çerçeve</text>
->   <text x="340" y="206" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• Hassas Pişirme: Az su ve kısa süreyle pişir</text>
->   <text x="340" y="226" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• Bilinçli &amp; Yavaş Ye: Tokluk sinyallerini tanı</text>
->   <text x="340" y="246" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9">• Fiziksel Aktivite: Günlük 30-60 dk hareket</text>
->   <text x="340" y="266" fill="#8a8275" font-family="var(--bodyFont)" font-size="8.5" font-style="italic">Yemek bir mekanik yükleme değil, bilinçli moladır.</text>
+>   <!-- Tier 4: Behavioral Matrix -->
+>   <rect x="15" y="248" width="590" height="48" rx="6" fill="rgba(138, 130, 117, 0.08)" stroke="#8a8275" stroke-width="1.4"/>
+>   <text x="310" y="268" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">DAVRANIŞSAL ÇERÇEVE: Bilinçli &amp; Yavaş Ye • Hassas Pişir • Günlük 30-60 Dk Hareket Et</text>
+>   <text x="310" y="284" fill="#8a8275" font-family="var(--bodyFont)" font-size="8.5" font-style="italic" text-anchor="middle">Beslenme yalnızca bir biyolojik yakıt ikmali değil; duyusal farkındalık ve hareketle bütünleşen bir yaşam ritmidir.</text>
 > </svg>
 > </div>
 >
-> *Alman Beslenme Derneği'nin (DGE) sağlıklı ve gezegensel sınırlarla uyumlu beslenme ilkelerini 4 temel davranışsal eksende organize eder.*
+> *DGE'nin güncellenen kanıta dayalı beslenme yönergesini; bitkisel taban, seçici protein, kısıtlama filtresi ve eylemsel farkındalık eksenlerinde hiyerarşik olarak modeller.*
 >
 > *Deutsche Gesellschaft für Ernährung (DGE). (2024). DGE-Ernährungskreis: Vollwertig essen und trinken nach den 10 Regeln der DGE. DGE. https://www.dge.de/*
 
 > [!note] 
-> Bu kurallar sağlıklı bireyler içindir; diyabet veya metabolik rahatsızlıkları olan kişiler için özel klinik diyetler geçerlidir.
+> Bu kurallar sağlıklı bireyler içindir; diyabet, çölyak veya metabolik sendrom[^metabolik-sendrom] tablosu olan kişiler için özel klinik protokoller geçerlidir.
 
 #### DGE Önerilen Makro Dağılımı
 * **%52-53 Karbonhidrat:** Tahıl ürünleri, patates, meyve & sebze
 * **%28-31 Yağ:** 60-80g, bitkisel
 * **%16-17 Protein:** Süt ürünleri, et, balık
 
-DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-yeterlilik belirler.
+DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ancak senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni öz-yeterlilik belirler.
 
 Sonuçta Alman yetişkinlerin sadece **%45.8'i** günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.
 
@@ -87,37 +82,23 @@ Sonuçta Alman yetişkinlerin sadece **%45.8'i** günlük düzenli sebze tüketi
 
 ## 2. Akademi vs. Sokak: Mitler ve Gerçekler
 
-### Şeker ve Aşırı Kilo
-> [!quote] Mit
-> "Şeker yemesem zayıflarım"
+Beslenme alanında sokak dedikoduları ile ampirik fizyoloji arasındaki uçurum devasadır. Popüler kültür indirgemeci masalları sever; klinik biyokimya ise sistemik etkileşimlerle çalışır.
 
-* Aynen sanki tek sorun şeker...
-* Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.
+### Mit 1: "Sadece şekeri kestiğim an bütün kilo sorunum çözülür."
+- **Sokak Safsatası:** Şekeri sıfırlarsan yağ dokun buharlaşır; kilo almanın tek sebebi basit şekerdir.
+- **Klinik Gerçek:** Kilo regülasyonu çok faktörlü bir enerji dengesi, hormonal regülasyon ve hedonik açlık[^hedonik-aclik] dinamiğidir. Şekeri kesip yerine kontrolsüzce işlenmiş yağ veya rafine un yüklersen toplam enerji fazlası yağ olarak depolanmaya devam eder.
 
-### Yağ Algısı ve İrade
-> [!quote] Mit
-> "Yağ yemek şişmanlatır"
+### Mit 2: "Yağ düşmandır; sıfır yağlı beslenmek en sağlıklısıdır."
+- **Sokak Safsatası:** Yağ yersen vücudunda yağ birikir; o halde yağı tamamen kesmek gerekir (Lipofobi yanılsaması).
+- **Klinik Gerçek:** Yağın varlığı değil; türü ve dozu belirleyicidir. Günlük 60–80g kaliteli bitkisel yağ (zeytinyağı, ceviz, keten tohumu) hücre zarı akışkanlığı, steroid hormon üretimi ve yağda eriyen vitaminlerin (A, D, E, K) emilimi için elzemdir. Sıfır yağ diyeti metabolik iflasa davetiyedir.
 
-* Yağın türü ve miktarı değil, varlığı sorun gibi algılanır.
-* Yağın miktarı (günlük 60-80 g) ve türü (bitkisel) önemli. Sıfır yağ zaten önerilmiyor.
+### Mit 3: "Obezite tamamen bir iradesizlik ve tembellik meselesidir."
+- **Sokak Safsatası:** Kilo veremeyen insan iradesizdir; az yiyip çok hareket etse anında zayıflar.
+- **Klinik Gerçek:** Obezite (Adipositas[^adipositas]), Dünya Sağlık Örgütü tarafından tanınan kronik ve nörobiyolojik bir hastalıktır. Leptin direnci[^leptin-direnci], bozulmuş tokluk sinyalleri, genetik set-point yatkınlığı ve ultra-işlenmiş gıdaların[^ultra-islenmis-gidalar] dopaminerjik ödül merkezini hacklemesi iradeyi biyokimyasal olarak felç eder.
 
-> [!quote] Mit
-> "Kilolu = tembel"
-
-* Aşırı kilo tamamen irade meselesi sanılır.
-* Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yok etmez.
-
-### BMI ve Gizli Hasar
-> [!quote] Mit
-> "Benim BMI 27, gayet sağlıklıyım valla"
-
-* Kilo hastalık değil diye ihmal edilir.
-* [[BMI]][^bmi] 25-29.9 henüz hastalık sayılmıyor. Ama >30 ([[Adipositas]][^adipositas]) resmi olarak hastalık sınıfında.
-
-> [!quote] Mit
-> "Kankam, benim kilom yerinde, göbek yok, istesem de şişmanlamıyorum. İstediğim çöpü yerim. Hiç acımam."
-
-* Yemezler. Yanlış beslenme normal kilolularda bile gizli hasar ve besin yetersizliği doğurur.
+### Mit 4: "Ben zayıfım, ne yersem yiyeyim kolesterolüm ve damarlarım tertemiz kalır."
+- **Sokak Safsatası:** BMI indeksim 22 ise iç organlarım tertemizdir; istediğim kadar fast food ve trans yağ tüketebilirim.
+- **Klinik Gerçek:** TOFI (*Thin Outside, Fat Inside* / Dışı İnce, İçi Yağlı) sendromu tam olarak bu yanılsamayı yıkar. Standart BMI[^bmi] sınırlarında kalsa dahi bir bireyde visseral organ çevresi yağlanması, gizli insülin direnci[^insulin-direnci] ve damar içi endotel hasarı normal kilolularda dahi sessiz kardiyovasküler krizler doğurur. Egzersiz ve lifli beslenme salt tartıdaki kiloyu değil, damar endotel sağlığını ve karaciğer yağlanmasını doğrudan belirler.
 
 ---
 
@@ -237,13 +218,14 @@ Lezzetli bir yiyeceğin kokusu veya görüntüsü algılandığında, hedonik he
 
 ---
 
-[^oz-etkililik]: **Öz-Etkililik (Self-Efficacy):** Bireyin sağlıklı beslenme hedefini zorlu sosyal veya duygusal koşullarda dahi sürdürebileceğine olan inanç düzeyi.
-[^dge]: **DGE (Deutsche Gesellschaft für Ernährung):** Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.
-[^inaktivite]: **İnaktivite (Sedentary Behavior):** Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.
-[^bmi]: **BMI / Beden Kitle İndeksi (Body Mass Index):** Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite kabul edildiği standart ölçüt.
-[^adipositas]: **Adipositas (Klinik Obezite):** Vücutta sağlığı bozacak ölçüde aşırı yağ dokusu birikmesiyle karakterize, metabolik ve kardiyovasküler risk taşıyan kronik hastalık.
-[^kisitlayici-yeme]: **Kısıtlayıcı Yeme (Restrained Eating):** Bireyin kilo kontrolü amacıyla biyolojik açlık sinyallerini bilişsel olarak baskılaması; sıklıkla kontrol kaybı ve aşırı yeme nöbetleriyle sonuçlanan örüntü.
-[^hedonik-aclik]: **Hedonik Açlık (Hedonic Hunger):** Metabolik bir enerji ihtiyacı olmaksızın, salt ödül ve zevk merkezli (dopaminerjik) besin tüketme dürtüsü.
+[^leptin-direnci]: **Leptin Direnci (Leptin Resistance):** Yağ dokusundan salgılanan tokluk hormonu leptinin hipotalamus tarafından algılanamaması sonucu beynin sürekli "kıtlık ve açlık alarmında" kalarak yeme dürtüsünü tetiklemesi.
+[^bmi]: **BMI / Beden Kitle İndeksi (Body Mass Index):** Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; viseral iç organ yağlanmasını ve kas oranını hesaba katmadığı için metabolik riski maskeleyebilen standart ölçüt.
+[^adipositas]: **Adipositas / Klinik Obezite (Obesity):** Vücutta metabolik ve kardiyovasküler hasar üretecek ölçüde aşırı yağ dokusu birikmesiyle karakterize kronik nörobiyolojik hastalık tablosu.
+[^kisitlayici-yeme]: **Kısıtlayıcı Yeme (Restrained Eating):** Kilo kontrolü amacıyla fizyolojik açlık sinyallerinin bilişsel kurallarla baskılanması; ilk irade kırılmasında tıkınırcasına yeme krizini doğuran yeme örüntüsü.
+[^hedonik-aclik]: **Hedonik Açlık (Hedonic Hunger):** Metabolik ve hücresel bir enerji ihtiyacı olmaksızın, salt ödül ve zevk merkezli (dopaminerjik) besin tüketme dürtüsü.
+[^insulin-direnci]: **İnsülin Direnci (Insulin Resistance):** Hücrelerin glikoz alımı için insüline yeterli yanıt verememesi sonucu kanda kronik hiperinsülinemi ve damarsal endotel hasarı gelişmesi tablosu.
+[^metabolik-sendrom]: **Metabolik Sendrom (Metabolic Syndrome):** Abdominal obezite, hipertansiyon, yüksek kan şekeri ve lipid bozukluğunun bir arada bulunduğu yüksek kardiyovasküler risk kümesi.
+[^ultra-islenmis-gidalar]: **Ultra-İşlenmiş Gıdalar (UPF - NOVA 4):** Doğal lif ve besin matrisi parçalanmış, endüstriyel emülgatör ve tatlandırıcılarla zenginleştirilerek bağımlılık yapıcı tokluk frenlerini baypas eden gıdalar.
 
 ## Kaynaklar
 

@@ -22,7 +22,7 @@ tags:
 ## 1. Sağlık Psikolojisinin Doğuşu ve Kapsamı
 
 Grip olduğunda doktora gidiyorsun, ilaç yazıyor, içiyorsun. Sistem bu. 
-Biyomedikal model[^biyomedikal-model] seni bir arıza olarak görüyor: Bozulmuşsa tamir et, sağlamsa dokunma. 
+Biyomedikal model seni bir arıza olarak görüyor: Bozulmuşsa tamir et, sağlamsa dokunma. 
 
 Sorun nerede peki?
 
@@ -38,7 +38,7 @@ Sağlık psikolojisi 1980'li yıllarda psikolojinin bağımsız bir alt dalı ha
 
 > ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. Laboratuvardan çıkıp sahaya inen bir alan.***
 
-Klinik psikolojiden farkı: Klinik psikoloji zihinsel bozukluklar ve psikopatoloji üzerine yoğunlaşırken; sağlık psikolojisi doğrudan **fiziksel hastalıklara** ve onları çevreleyen [[Sağlık Davranışları|sağlık davranışı]][^saglik-davranisi], duygu ve biliş sarmalına odaklanır.
+Klinik psikolojiden farkı: Klinik psikoloji zihinsel bozukluklar ve psikopatoloji üzerine yoğunlaşırken; sağlık psikolojisi doğrudan **fiziksel hastalıklara** ve onları çevreleyen duygu, stres ve davranış sarmalına odaklanır.
 
 İnsan bedeni bir makine değil, bağlam içinde yaşayan bir organizma. *Ve o bağlamın büyük bölümü psikolojik.*
 
@@ -48,23 +48,23 @@ Klinik psikolojiden farkı: Klinik psikoloji zihinsel bozukluklar ve psikopatolo
 
 ### Beden & Zihin
 
-Zihin ve bedenin birbirini etkilediği fikri yeni sayılmaz. Bağışıklık sistemi duygusal durumlardan etkilenebiliyor ve genetik yatkınlıklar davranış biçimleriyle etkileşime girerek hastalığı şekillendiriyor. 
+Zihin ve bedenin birbirini etkilediği fikri yeni sayılmaz. Bağışıklık sistemi duygusal durumlardan etkilenebiliyor (psikonöroimmünoloji[^psikonoroimmunoloji]) ve genetik yatkınlıklar davranış biçimleriyle etkileşime girerek hastalığı şekillendiriyor. 
 
 Bu bilgiler aslında eskiden de sezgisel düzeyde vardı. Sistematikleşmesi ve modern tıp hizmetlerine aktarılması hâlâ devam eden, bitmemiş bir süreçtir.
 
 ### İki Model, İki Dünya Görüşü
 
 #### 1. Biyomedikal Model
-19. yüzyılda yerleşti. Hastalık ve sağlığın nesnel olarak ölçülebilir olduğunu savunur. Hastalık tanımı biyolojik sapmalara ve hücresel hasara dayanır. Sebepler sadece genetik ya da dış patojenlerdir (bakteri, virüs). Tedavi de saf somatiktir: Ameliyat, kemoterapi, ilaç.
+19. yüzyılda yerleşti. Biyolojik indirgemecilik[^biyolojik-indirgemecilik] felsefesine dayanarak hastalık ve sağlığın nesnel olarak ölçülebilir olduğunu savunur. Hastalık tanımı biyolojik sapmalara ve hücresel hasara dayanır. Sebepler sadece genetik ya da dış patojenlerdir (bakteri, virüs). Tedavi de saf somatiktir (bu mekanist yaklaşım kimi zaman somatizasyon[^somatizasyon], ikincil kazanç[^sekonder-kazanc], plasebo/nosebo dinamikleri[^plasebo-nosebo] veya iyatrojenik hasar[^iyatrojenik-hasar] risklerini göz ardı eder).
 
 > ***Kritik nokta da şu: Bu modelde hasta kendi iyileşmesinden sorumlu tutulamaz.***
 > Beden ve zihin iki ayrı kutudur. Hastalık psikolojiyi bozabilir ama tersi mümkün görülmez. Sağlık ise sadece hastalığın "yokluğu" olarak tanımlanır.
 
 #### 2. Biyopsikososyal Model
 20. yüzyılda George Engel tarafından ortaya atıldı. Hastalıkların biyolojik, psikolojik ve sosyal faktörlerin karşılıklı etkileşiminden doğduğunu savunur:
-- **Biyolojik:** Genetik yatkınlık, immün yanıt, doku hasarı.
-- **Psikolojik:** Kronik[^kronik-hastalik] kaygı, depresyon, iyileşme beklentileri, öz-yeterlilik inancı.
-- **Sosyal:** Sağlık sistemine erişim, sosyal destek ağları, kültürel hastalık normları.
+- **Biyolojik:** Genetik yatkınlık, immün yanıt, allostatik yük[^allostatik-yuk] ve doku hasarı.
+- **Psikolojik:** Kronik kaygı, depresyon, iyileşme beklentileri, öz-yeterlilik inancı.
+- **Sosyal:** Sağlığın sosyal belirleyicileri[^sosyal-belirleyiciler] (gelir, eğitim), sağlık sistemine erişim ve kültürel normlar.
 
 > ***Fark:*** Biyomedikal model sana *"Sen bozuksun, dışarıdan tamir olacaksın"* der. Biyopsikososyal model ise *"Sen bir bağlam içinde yaşıyorsun ve o bağlamın her katmanı sağlığını bizzat belirler"* der.
 
@@ -78,15 +78,14 @@ Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 >   <rect x="15" y="20" width="265" height="240" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.3"/>
 >   <text x="147" y="46" fill="#8a8275" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">1. Geleneksel Biyomedikal Model</text>
 >   <rect x="35" y="65" width="225" height="36" rx="4" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.5"/>
->   <text x="147" y="87" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Biyolojik Arıza (Virüs, Doku Hasarı)</text>
->   <line x1="147" y1="101" x2="147" y2="120" stroke="#8a8275" stroke-width="1.6"/>
->   <polygon points="144,118 147,124 150,118" fill="#8a8275"/>
->   <rect x="35" y="125" width="225" height="36" rx="4" fill="none" stroke="#8a8275" stroke-width="1.3"/>
->   <text x="147" y="147" fill="var(--dark)" font-family="var(--bodyFont)" font-size="10" text-anchor="middle">Dışsal Müdahale (İlaç, Cerrahi)</text>
->   <line x1="147" y1="161" x2="147" y2="180" stroke="#8a8275" stroke-width="1.6"/>
->   <polygon points="144,178 147,184 150,178" fill="#8a8275"/>
->   <rect x="35" y="185" width="225" height="42" rx="4" fill="none" stroke="#8a8275" stroke-width="1.3" stroke-dasharray="3"/>
->   <text x="147" y="203" fill="#8a8275" font-family="var(--bodyFont)" font-size="9.5" text-anchor="middle">Hasta: Pasif Alıcı</text>
+>   <text x="147" y="88" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Hücresel Sapma &amp; Patojen</text>
+>   <line x1="147" y1="101" x2="147" y2="125" stroke="#C8102E" stroke-width="1.8"/>
+>   <polygon points="144,123 147,129 150,123" fill="#C8102E"/>
+>   <rect x="35" y="129" width="225" height="36" rx="4" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.5"/>
+>   <text x="147" y="152" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Somatik Hasar (Hastalık)</text>
+>   <line x1="147" y1="165" x2="147" y2="189" stroke="#C8102E" stroke-width="1.8"/>
+>   <polygon points="144,187 147,193 150,187" fill="#C8102E"/>
+>   <rect x="35" y="193" width="225" height="36" rx="4" fill="rgba(138, 130, 117, 0.12)" stroke="#8a8275" stroke-width="1.5"/>
 >   <text x="147" y="217" fill="#8a8275" font-family="var(--bodyFont)" font-size="8.5" font-style="italic" text-anchor="middle">"Bozulduysa Tamir Et"</text>
 >
 >   <rect x="300" y="20" width="305" height="240" rx="8" fill="rgba(200, 16, 46, 0.04)" stroke="#C8102E" stroke-width="1.6"/>
@@ -117,7 +116,7 @@ Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 
 ## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
-Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında iç içe geçen üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
+Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında epidemiyoloji[^epidemiyoloji] verilerinin ortaya koyduğu üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
 
 1. **Kronik-Dejeneratif Hastalıkların Artışı:** Tüberküloz gibi bulaşıcı enfeksiyonlar yerini kalp hastalıkları, kanser ve diyabet gibi yavaş ilerleyen hastalıklara bıraktı. Bunlar sadece antibiyotikle çözülmez; yaşam tarzı değişikliği gerektirir.
 2. **Davranışsal Risk Faktörlerinin Keşfi:** Sigara içmek, sedanter yaşam ve kronik stres biyolojik sonuçları doğrudan tayin eder. Artık **davranışın kendisi** tedavinin ve önlemenin ana konusu haline geldi.
@@ -127,11 +126,16 @@ Bu faktörlerin kesişiminde, 1978 yılında APA bünyesinde **Division of Healt
 
 ---
 
-[^biyomedikal-model]: **Biyomedikal Model (Biomedical Model):** Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel mekanist tıp yaklaşımı.
-[^biyopsikososyal-model]: **Biyopsikososyal Model (Biopsychosocial Model):** George Engel tarafından geliştirilen; sağlık ve hastalığı genetik/biyolojik, bilişsel/duygusal ve sosyoekonomik katmanların dinamik bir bileşkesi olarak ele alan bütüncül çerçeve.
-[^kronik-hastalik]: **Kronik Hastalık (Chronic Illness):** Yavaş ilerleyen, kalıcı yaşam tarzı ve davranışsal yönetim gerektiren, bulaşıcı olmayan metabolik veya kardiyovasküler sağlık tablosu.
-[^birincil-koruma]: **Birincil Koruma (Primary Prevention):** Hastalık semptomları ve hasarı henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı ve sağlığı korumayı amaçlayan proaktif müdahale stratejisi.
-[^saglik-davranisi]: **Sağlık Davranışı (Health Behavior):** Bireyin sağlığı koruma, geliştirme veya hastalıktan kaçınma amacıyla sergilediği bilinçli veya alışkanlıksal eylemler bütünü.
+[^birincil-koruma]: **Birincil Koruma (Primary Prevention):** Hastalık ve hücresel hasar henüz hiç başlamadan önce risk faktörlerini ortadan kaldırarak sağlığı korumayı amaçlayan proaktif müdahale düzeyi.
+[^psikonoroimmunoloji]: **Psikonöroimmünoloji (PNI):** Psikolojik stres ve bilişsel süreçlerin merkezi sinir sistemi ile bağışıklık sistemi arasındaki çift yönlü moleküler etkileşimini inceleyen disiplinlerarası bilim.
+[^epidemiyoloji]: **Epidemiyoloji (Epidemiology):** Toplumlarda hastalıkların dağılımını, sıklığını ve belirleyici risk faktörlerini istatistiksel yöntemlerle araştıran halk sağlığı bilimi.
+[^iyatrojenik-hasar]: **İyatrojenik Hasar (Iatrogenic Harm):** Tıbbi müdahale, farmakolojik yan etki veya klinik hata sonucu hastada istenmeden ortaya çıkan ikincil sağlık hasarı.
+[^somatizasyon]: **Somatizasyon (Somatization):** Çözümlenmemiş psikolojik çatışmaların ve duygusal stresin açıklanamayan bedensel ve organik semptomlar şeklinde dışa vurulması.
+[^biyolojik-indirgemecilik]: **Biyolojik İndirgemecilik (Biological Reductionism):** İnsanın tüm karmaşık zihinsel, duygusal ve varoluşsal yaşantısını salt hücresel arızalara ve moleküler mekanizmalara indirgeyen metodolojik yanılgı.
+[^sekonder-kazanc]: **İkincil Kazanç (Secondary Gain):** Hastalık rolünün kişiye sağladığı sorumluluklardan muafiyet, ilgi ve sosyal korunma gibi bilinçdışı psikolojik avantajlar.
+[^plasebo-nosebo]: **Plasebo ve Nosebo Etkisi (Placebo & Nocebo):** Bireyin tedaviye dair bilişsel beklentisinin merkezi sinir sisteminde endorfin salınımı ya da anksiyete üzerinden ölçülebilir fizyolojik iyileşme veya yan etki üretmesi.
+[^allostatik-yuk]: **Allostatik Yük (Allostatic Load - McEwen):** Süregiden kronik stres karşısında sempatik-adrenal eksenin aşırı çalışmasının damarlar ve organ sistemlerinde yarattığı kümülatif aşınma ve yıpranma bedeli.
+[^sosyal-belirleyiciler]: **Sağlığın Sosyal Belirleyicileri (Social Determinants of Health):** Sosyoekonomik statü, gelir adaletsizliği ve barınma koşullarının mortalite riskini biyolojik faktörlerden daha güçlü tayin etmesi örüntüsü.
 
 ## Kaynaklar
 

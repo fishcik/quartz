@@ -1079,33 +1079,13 @@ function scCardTilt(){
 }
 // ── Görev 7 (revize): Konu hex hover efekti artık tamamen CSS — yalnız renk
 // değişimi + shadow-inset-center animasyonu. JS tilt KALDIRILDI. ──
-// ── Görev 8: Backlinks + Etiketler'i SBB-kutusuna entegre et ──
-// Menüden (sc-bclayers) sonra ince separatör + "Alakalı yazılar:" + backlinks;
-// en altta "Etiketler" dropdown (varsayılan kapalı). Her nav'da yeniden kurulur.
+// ── Görev 8: Backlinks + Etiketler SBB-kutusundan geçici olarak kaldırıldı ──
 function scSbbExtras(){
   var sbb=document.getElementById('sc-sbb');if(!sbb)return;
   var extra=sbb.querySelector('.sc-sbb-extra');
-  if(!extra){extra=document.createElement('div');extra.className='sc-sbb-extra';sbb.appendChild(extra);}
-  extra.innerHTML='';
-  // Alakalı yazılar (backlinks)
-  var bl=document.querySelector('.backlinks');
-  if(bl){
-    var sep=document.createElement('div');sep.className='sc-sbb-sep';extra.appendChild(sep);
-    var rt=document.createElement('div');rt.className='sc-sbb-rel-title';rt.textContent='Alakalı yazılar:';extra.appendChild(rt);
-    var oh=bl.querySelector('h3');if(oh)oh.style.display='none';
-    bl.classList.add('sc-sbb-backlinks');
-    extra.appendChild(bl);
-  }
-  // Etiketler dropdown (note-properties) — varsayılan kapalı
-  var np=document.querySelector('.note-properties');
-  if(np){
-    var det=document.createElement('details');det.className='sc-sbb-tags';
-    var sm=document.createElement('summary');sm.textContent='Etiketler';det.appendChild(sm);
-    var npt=np.querySelector('.note-properties-title');if(npt)npt.style.display='none';
-    np.classList.add('sc-sbb-np');
-    det.appendChild(np);
-    extra.appendChild(det);
-  }
+  if(extra){extra.innerHTML='';extra.style.display='none';}
+  var bl=document.querySelector('.backlinks');if(bl)bl.style.display='none';
+  var np=document.querySelector('.note-properties');if(np)np.style.display='none';
 }
 // ── Footer'ı body seviyesine taşı → tüm sayfa enini kaplar; SPA nav'da
 // Quartz yeni footer üretirse onları siler, body-level olanı korur.

@@ -35,7 +35,7 @@ Pasif içicilik de tehlikeli tabii. Sigara içen bir eşle yaşayan sigara içme
 
 ### 40 Yıllık Doktor Çalışması (Doll ve ark. 1994)
 
-Sigara içme üzerine yapılmış gelmiş geçmiş en uzun ve en saygın çalışma tam **34.439 erkek İngiliz hekim** üzerinde yapıldı. Sonuçlar, sigaranın tam bir *zaman gecikmeli katil* olduğunu kanıtladı:
+Sigara içme üzerine yapılmış gelmiş geçmiş en uzun ve en saygın çalışma tam **34.439 erkek İngiliz hekim** üzerinde yapıldı. Sonuçlar, sigaranın tam bir kümülatif zaman gecikmeli hasar[^zaman-gecikmeli-hasar] kaynağı olduğunu kanıtladı:
 
 - Araştırmanın ilk 20 yılındaki ölüm sayıları ile sonraki 20 yılındaki ölüm sayıları neredeyse aynıydı (her dönem yaklaşık 10.000 ölüm).
 - Ancak son 20 yıla gelindiğinde, ölümlerin arkasındaki temel sebebin *doğrudan* sigara olduğu ortaya çıktı.
@@ -52,11 +52,11 @@ Sigara içme üzerine yapılmış gelmiş geçmiş en uzun ve en saygın çalı�
 
 Olay sadece nikotin mi?
 
-Bu da başka konularda olduğu gibi farklı modellerle açıklanmaya çalışılıyor. Nikotin Regülasyon Teorisi, olayın tamamen fizyolojik olduğunu ve kişinin vücudundaki nikotin seviyesi düşünce yoksunluk belirtilerini bitirmek için sigara yaktığını söyler. 
+Bu da başka konularda olduğu gibi farklı modellerle açıklanmaya çalışılıyor. Nikotin Regülasyon Teorisi, olayın tamamen fizyolojik olduğunu ve kişinin vücudundaki nikotin seviyesi düşünce nikotin yoksunluğu[^nikotin-yoksunlugu] belirtilerini bitirmek için sigara yaktığını söyler. 
 
 **Ama** eğer olay sadece biyolojik nikotin ihtiyacı olsaydı, piyasadaki nikotin sakızları veya bantları herkesi anında sigaradan kurtarırdı. Demek ki işin içinde çok ağır bir **psikolojik bağımlılık** bileşeni var. Bunu ıskalayan tüm tedaviler patlamaya mahkumdur.
 
-Bağımlılık fiziksel bir bileşenin yanı sıra güçlü bir psikolojik bileşen de içerir. Psikolojik teoriler sigarayı **öğrenilmiş bir davranış** olarak görür; rahatlama, mola verme ve sosyal onay gibi düzenleyici işlevler aracılığıyla negatif pekiştirme[^negatif-pekistirme] mekanizmasıyla kökleşir.
+Bağımlılık fiziksel bir bileşenin yanı sıra güçlü bir psikolojik bileşen de içerir. Karşıt-süreç teorisi[^karsit-surec] ve öğrenme kuramları sigarayı **öğrenilmiş bir davranış** olarak görür; rahatlama, mola verme ve sosyal onay gibi düzenleyici işlevler aracılığıyla negatif pekiştirme[^negatif-pekistirme] mekanizmasıyla kökleşir.
 
 Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir tiryakinin beyninde o "click" sesinin çıkması için tek bir rasyonel kırılma gerekiyor:
 *Korkuyla değil, kazançla hareket etmek.*
@@ -109,15 +109,19 @@ Akademik dünyayı ve tüm o terapi metotlarını bir kenara bırakalım. Bir ti
 
 - *"Beni rahatlatıyor."* (Aslında sadece nikotin çekilmesinin yarattığı stresi sıfırlıyor, net pozitif bir rahatlama yok).
 - *"Bırakırsam kilo alırım."* (Kilo alma riski var evet, ama sigaranın damar içi tahribatıyla kıyaslanamaz bile).
-- *"Zaten öleceğiz."* (Ölüm biçimi ve yaşam kalitesi farkını göz ardı eden bilişsel rasyonalizasyon).
+- *"Zaten öleceğiz."* (Ölüm biçimi ve yaşam kalitesi farkını göz ardı eden bilişsel rasyonalizasyon[^kognitif-rasyonalizasyon]).
 
-Sonuç olarak sigara sadece kimyasal bir tuzak değil; otomatik alışkanlık halkaları, rasyonalizasyonlar ve bilişsel çarpıtmalarla örülü bir zihinsel labirenttir.
+Sonuç olarak sigara sadece kimyasal bir tuzak değil; dopaminerjik duyarlılaşma[^dopaminerjik-duyarlilasma], otomatik alışkanlık halkaları ve bilişsel çarpıtmalarla örülü bir zihinsel labirenttir.
 
 ---
 
 [^zaman-gecikmeli-hasar]: **Kümülatif Zaman Gecikmeli Hasar (Time-Lagged Damage):** Toksik maruziyetin hücresel DNA mutasyonlarını ve endotelyal plakları sinsice biriktirip klinik tabloyu 20–40 yıl sonra ortaya çıkarması örüntüsü.
 [^koroner-arter-hastaligi]: **Koroner Kalp Hastalığı (Coronary Heart Disease):** Kalbi besleyen arterlerin aterosklerotik plaklar ve vazokonstriksiyon sonucu daralarak enfarktüs riskini katlaması.
 [^negatif-pekistirme]: **Negatif Pekiştirme (Negative Reinforcement):** Davranışın haz vermekten ziyade rahatsız edici bir içsel durumu (yoksunluk krizi, anksiyete) sonlandırması nedeniyle güçlenmesi mekanizması.
+[^karsit-surec]: **Karşıt-Süreç Modeli (Opponent-Process Theory):** İlk kullanımda yaşanan pozitif haz (A süreci) zamanla toleransla zayıflarken, organizmanın başlattığı telafi edici negatif çekilme halinin (B süreci) şiddetlenerek bağımlılığı sürdürmesi modeli.
+[^nikotin-yoksunlugu]: **Nikotin Yoksunluğu (Nicotine Withdrawal):** Beyindeki nikotinik asetilkolin reseptörlerinin uyarılmaması sonucu gelişen ajitasyon, irritabilite, bradikardi ve kompulsif aşerme krizi.
+[^kognitif-rasyonalizasyon]: **Bilişsel Rasyonalizasyon (Cognitive Rationalization):** Tiryakinin "Dedem de 90 yıl içti bir şey olmadı" gibi istisnai örneklerle kendi risk algısını çarpıtıp suçluluktan kaçınması savunması.
+[^dopaminerjik-duyarlilasma]: **Dopaminerjik Duyarlılaşma (Incentive Sensitization - Robinson & Berridge):** Nikotinin beyin ödül merkezinde "istemeyi" (craving / aşerme) devasa büyütürken, maddeden alınan gerçek "hoşlanmayı" (liking) zayıflatması nörobiyolojik ayrışması.
 
 ## Kaynaklar
 

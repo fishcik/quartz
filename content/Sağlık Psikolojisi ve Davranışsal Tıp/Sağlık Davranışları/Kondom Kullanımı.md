@@ -27,7 +27,7 @@ Cinsel sağlıkta kondom kullanımı, HIV ve diğer cinsel yolla bulaşan enfeks
 
 ## 2. Korunma Kararının Sosyokognitif Dinamikleri
 
-Karar anı laboratuvardaki gibi rasyonel bir tartımla değil; partner baskısı, alkol/madde etkisi ve yüksek fizyolojik uyarılmanın yarattığı cinsel miyopi[^cinsel-miyopi] ortamında gerçekleşir. 
+Karar anı laboratuvardaki gibi rasyonel bir tartımla değil; partner baskısı, çoğulcu cehalet[^cogulcu-cehalet], alkol etkisi ve sıcak-soğuk empati boşluğunun[^sicak-soguk-empati-boslugu] yarattığı cinsel miyopi[^cinsel-miyopi] ortamında gerçekleşir. 
 
 Birey alkol veya tutku anında uzun vadeli enfeksiyon risklerini tamamen unutur ve sadece anlık haz ipuçlarına odaklanır. Bu yüzden salt risk bilgisi veren geleneksel modeller tek başına korunma davranışını üretmekte yetersiz kalır.
 
@@ -78,15 +78,19 @@ Birey alkol veya tutku anında uzun vadeli enfeksiyon risklerini tamamen unutur 
 
 ## 3. Spontanite İllüzyonu ve Eylem Planı
 
-Kondom taşımak veya kullanımını açıkça konuşmak *"Romantizmi bozuyor"* veya *"Partnere güvensizlik göstergesi"* olarak kodlandığında koruyucu davranış çöker. 
+Kondom taşımak veya kullanımını açıkça konuşmak spontanite illüzyonu[^spontanite-illuzyonu] yüzünden *"Romantizmi bozuyor"* veya *"Partnere güvensizlik göstergesi"* olarak kodlandığında koruyucu davranış çöker. 
 
-Etkili müdahaleler sadece korku mesajı vermez; iletişim becerileri, utanç bariyerini yıkma ve somut **Eğer/O Zaman (If-Then)** uygulama niyetleri kazandırmayı hedefler: *"Eğer cinsel yakınlaşma başlarsa, partnerimle doğrudan korunmayı konuşacağım ve yanımda bulundurduğum kondomu kullanacağım."*
+Etkili müdahaleler (IMB modeli[^imb-modeli] ekseninde) sadece korku mesajı vermez; iletişim becerileri, utanç bariyerini yıkma ve somut **Eğer/O Zaman (If-Then)** uygulama niyetleri kazandırmayı hedefler: *"Eğer cinsel yakınlaşma başlarsa, partnerimle doğrudan korunmayı konuşacağım ve yanımda bulundurduğum kondomu kullanacağım."*
 
 ---
 
 [^cybe]: **CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar):** HIV, HPV, klamidya ve gonore gibi korunmasız mukozal temasla bulaşan viral ve bakteriyel patojenler grubu.
 [^cinsel-miyopi]: **Cinsel Miyopi (Sexual Myopia):** Alkol, madde veya yüksek fizyolojik uyarılma anında bireyin uzun vadeli riskleri (hastalık, gebelik) göz ardı edip yalnızca anlık ipuçlarına ve hazza odaklanması bilişsel kısıtlanması.
 [^guvenilirlik-yanilsamasi]: **Güvenilirlik Yanılsaması (Illusion of Safety):** Bireyin yeni veya geçici partnerini dış görünüş, eğitim ya da sempati gibi alakasız ipuçlarına dayanarak "temiz/güvenli" varsayması ve korunmayı gereksiz görmesi yanlılığı.
+[^spontanite-illuzyonu]: **Spontanite İllüzyonu (Spontaneity Illusion):** Cinselliğin tamamen "anın akışında ve plansız" yaşanması gerektiği romantik kabulünün, rasyonel korunma hazırlığını ve kondom taşımayı engellemesi.
+[^imb-modeli]: **IMB Modeli (Information-Motivation-Behavioral Skills):** Bilgi ve motivasyonun tek başına yetmediğini; riskli davranışın ancak partnerle müzakere ve uygulama becerileriyle önlenebileceğini gösteren kuramsal çerçeve.
+[^sicak-soguk-empati-boslugu]: **Sıcak-Soğuk Empati Boşluğu (Hot-Cold Empathy Gap - Loewenstein):** Bireyin sakin ve rasyonel durumdayken (soğuk faz), yüksek cinsel uyarılma veya alkol anındaki (sıcak faz) dürtüsellik ve risk alma eğilimini vahim derecede hafife alması.
+[^cogulcu-cehalet]: **Çoğulcu Cehalet (Pluralistic Ignorance):** Çoğu bireyin içten içe korunmayı arzulamasına rağmen, akranlarının veya partnerinin bunu "romantizmi bozan ayıp bir talep" gördüğü yanılsamasına kapılarak sessiz kalması.
 
 ## Kaynaklar
 

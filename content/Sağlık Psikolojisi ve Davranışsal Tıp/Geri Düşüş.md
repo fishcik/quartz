@@ -34,7 +34,7 @@ Sağlık davranışı kazanmak bir şeydir, onu korumak bambaşka bir şeydir. K
 
 ### Hastalık Modeli vs. Sosyal-Bilişsel Model
 
-- **Hastalık Modeli (AA / Anonim Alkolikler):** Sadece iki durum tanır: *Tamamen uzak* veya *Geri düşmüş.* Tek bir kadeh şarap, "tedavi çöktü, hasta başa döndü" sayılarak tam bir felaket olarak kodlanır:
+- **Hastalık Modeli (AA / Anonim Alkolikler):** Sadece iki durum tanır: *Tamamen perhiz (abstinans[^abstinans])* veya *Geri düşmüş.* Tek bir kadeh şarap, "tedavi çöktü, hasta başa döndü" sayılarak tam bir felaket olarak kodlanır:
   > *"Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez hastalandıysan hayatın boyunca hastasındır ve ASLA iyileşmezsin. Tek kadeh şarap = Geri Düşüştür."*
   *(Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değildir).*
 
@@ -48,7 +48,7 @@ Sosyal-bilişsel perspektif temsilcileri, alkolizmin katı bir hastalık olduğu
 
 ## 2. Perhiz İhlali Etkisi (AVE)
 
-Marlatt ve Gordon (1985) tarafından tanımlanan **AVE (Abstinence Violation Effect / Abstinenz-Verletzungs-Effekt)**, perhizde olan bir kişinin küçük bir kaymadan (Lapse) sonra kendini ağır bir suçluluk ve utanç içinde hissetmesi ve bunun nedenini içsel, değişmez ve genel nedenlere atfetmesidir (nedensel atıf kuramı[^nedensel-atif-kurami]):
+Marlatt ve Gordon (1985) tarafından tanımlanan **AVE (Abstinence Violation Effect / Abstinanz-Verletzungs-Effekt)**[^abstinans-ihlal-etkisi], perhizde olan bir kişinin küçük bir kaymadan (Lapse) sonra kendini ağır bir suçluluk ve utanç içinde hissetmesi ve bunun nedenini içsel, değişmez ve genel nedenlere atfetmesidir (nedensel atıf kuramı[^nedensel-atif-kurami]):
 *"Ben iradesizim!"* veya *"Ben iflah olmaz bir hastayım!"*
 
 Bu iki atıf tam olarak geri düşüş olasılığını patlatır:
@@ -60,25 +60,56 @@ Bu iki atıf tam olarak geri düşüş olasılığını patlatır:
 
 ---
 
-## 3. Kısır Döngü ve Önleme Dinamikleri
-
-```
-Anlık Bir Hata / İlk Yudum (Lapse)
-          ↓
-Ağır Suçluluk & Utanç
-          ↓
-"Ben zaten iflah olmam, hastayım..."
-          ↓
-Kontrolün Tam Kaybı: "Madem kontrol edemiyorum, zaten değiştiremem!"
-          ↓
-Kısırdöngü
-          ↓
-Vahşi ve TAM Bir Geri Düşüş (Relapse)
-```
+> [!abstract] AVE Kısırdöngüsü ve Bilişsel Kırılma Modeli
+> <div class="sc-diag-author"><a href="https://doi.org/10.1037/026217" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985)</a></div>
+>
+> <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
+> <svg viewBox="0 0 620 290" width="100%" style="max-width: 680px; height: auto;">
+>   <!-- Top: Lapse Box -->
+>   <rect x="210" y="10" width="200" height="38" rx="6" fill="rgba(199, 154, 109, 0.12)" stroke="#c79a6d" stroke-width="1.8"/>
+>   <text x="310" y="34" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Anlık Hata / İlk Kaçamak (Lapse)</text>
+>
+>   <!-- Left Arrow: Dogmatic Disease Path -->
+>   <line x1="250" y1="48" x2="160" y2="78" stroke="#C8102E" stroke-width="2"/>
+>   <polygon points="158,82 153,74 163,73" fill="#C8102E"/>
+>   <text x="185" y="60" fill="#C8102E" font-family="var(--bodyFont)" font-size="8.5" font-weight="bold">Hastalık Modeli &amp; Suçluluk</text>
+>
+>   <!-- Left Container: AVE Spiral -->
+>   <rect x="15" y="80" width="280" height="150" rx="8" fill="rgba(200, 16, 46, 0.06)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="155" y="102" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">1. AVE Kısırdöngüsü &amp; Teslimiyet</text>
+>   <text x="155" y="124" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Ağır Suçluluk ve Kendini Kınama</text>
+>   <text x="155" y="142" fill="#C8102E" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Ben zaten iradesiz bir hastayım..."</text>
+>   <text x="155" y="162" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Kontrol Kaybı: "Battı balık yan gider!"</text>
+>   <rect x="35" y="178" width="240" height="38" rx="4" fill="rgba(200, 16, 46, 0.18)" stroke="#C8102E" stroke-width="1.8"/>
+>   <text x="155" y="202" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">TAM GERİ DÜŞÜŞ (Relapse)</text>
+>
+>   <!-- Right Arrow: Cognitive Reframing Path -->
+>   <line x1="370" y1="48" x2="460" y2="78" stroke="#96c46c" stroke-width="2"/>
+>   <polygon points="457,73 467,74 462,82" fill="#96c46c"/>
+>   <text x="435" y="60" fill="#96c46c" font-family="var(--bodyFont)" font-size="8.5" font-weight="bold">Bilişsel Yeniden Yapılandırma</text>
+>
+>   <!-- Right Container: Cognitive Recovery -->
+>   <rect x="325" y="80" width="280" height="150" rx="8" fill="rgba(150, 196, 108, 0.06)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="465" y="102" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">2. Bilişsel Kırılma &amp; Toparlanma</text>
+>   <text x="465" y="124" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Hatayı "Öğrenme Kazası" Görme</text>
+>   <text x="465" y="142" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-style="italic" text-anchor="middle">"Bir tökezleme tüm emeği yok etmez"</text>
+>   <text x="465" y="162" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">• Başa Çıkma Planını Devreye Sokma</text>
+>   <rect x="345" y="178" width="240" height="38" rx="4" fill="rgba(150, 196, 108, 0.18)" stroke="#96c46c" stroke-width="1.8"/>
+>   <text x="465" y="202" fill="#96c46c" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">PERHİZE GÜVENLİ DÖNÜŞ</text>
+>
+>   <!-- Bottom Annotation -->
+>   <text x="310" y="260" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">Hastalık modelinin katı "tek kadeh felakettir" dogması AVE'yi bizzat körüklerken,</text>
+>   <text x="310" y="276" fill="#96c46c" font-family="var(--bodyFont)" font-size="9" font-weight="bold" text-anchor="middle">bilişsel başa çıkma stratejisi hatayı izole edip eylemsel kontrolü elde tutar.</text>
+> </svg>
+> </div>
+>
+> *Tek bir tökezlemenin ardından hissedilen yıkıcı suçluluk duygusunun insanı 'battı balık yan gider' diyerek tam bir geri düşüşe sürüklemesi mekanizmasını ve bilişsel toparlanma yolunu gösterir.*
+>
+> *Marlatt, G. A., &amp; Gordon, J. R. (Eds.). (1985). Relapse prevention: Maintenance strategies in the treatment of addictive behaviors. Guilford Press. https://doi.org/10.1037/026217*
 
 Hastalık modelinin o katı ve dogmatik *"Tek yudum içersen yandın"* bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek tam bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşür. Kontrolün kendisinde olmadığına ve hiçbir zaman olamayacağına inanan biri zaten davranışı kontrol etmeyi bırakır.
 
-**Tökezlemek normaldir.** Hatayı bir *hastalık patlaması* olarak değil de, bir *öğrenme kazası* olarak yorumlamak hem kısırdöngüyü kırmak hem de tam teşekküllü bir geri düşüş yaşamamak için en rasyonel yoldur.
+**Tökezlemek normaldir.** Hatayı bir *hastalık patlaması* olarak değil de, kognitif yeniden yapılandırma[^kognitif-yeniden-yapilandirma] ile bir *öğrenme kazası* olarak yorumlamak hem kısırdöngüyü kırmak hem de tam teşekküllü bir geri düşüş yaşamamak için en rasyonel yoldur.
 
 > [!abstract] Bilişsel-Davranışçı Geri Düşüş Modeli
 > <div class="sc-diag-author"><a href="https://doi.org/10.1037/0003-066X.59.4.224" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985; Witkiewitz &amp; Marlatt, 2004)</a></div>
@@ -132,7 +163,7 @@ Marlatt, insanı o eski alışkanlığına döndüren tetikleyicileri (yüksek r
 
 ### A) İçsel Tetikleyiciler
 - **Negatif Duygusal Durumlar:** Kaygı, öfke, depresiflik, can sıkıntısı (en çok kurbanı bu grup alır).
-- **Pozitif Duygular & İrade Testi:** Aşırı neşeliyken *"Ulan bir kadehten ne çıkar?"* diyerek kendi sınırlarını kaşımak ve aşırı istek duymak.
+- **Pozitif Duygular & İrade Testi:** Aşırı neşeliyken *"Ulan bir kadehten ne çıkar?"* diyerek kendi sınırlarını kaşımak ve aşırı istek duymak (bazen düşünce baskılama paradoksu[^baskilama-paradoksu] ile istek daha da kabarır).
 
 ### B) Sosyal Tetikleyiciler
 - **Sosyal Baskı:** Ortamdaki herkesin yoğun şekilde içiyor oluşu.
@@ -153,9 +184,13 @@ Modeli eleştirenler (Longabaugh ve ark. 1996) unsurların çok katı ve hiyerar
 
 ---
 
-[^gorunuste-alakasiz-kararlar]: **Görünüşte Alakasız Kararlar (Apparently Irrelevant Decisions - AIDs):** Bağımlı bireyin masumane gerekçelerle (örn. misafir için eve içki almak) maddeye erişim zeminini gizlice hazırladığı bilinçdışı rasyonalizasyon zinciri.
-[^yuksek-risk-durumu]: **Yüksek Risk Durumları (High-Risk Situations):** Negatif duygulanım (öfke, yalnızlık), sosyal baskı veya kişilerarası çatışmaların bireyin özdüzenleme kapasitesini en çok tehdit ettiği tetikleyici anlar.
-[^nedensel-atif-kurami]: **Nedensel Atıf Kuramı (Attribution Theory):** Bernard Weiner tarafından modellenen; bireyin başarısızlıklarını içsel/değişmez (iradesizlik) veya dışsal/geçici (hazırlıksız yakalanma) nedenlere bağlamasının motivasyonel sonuçları.
+[^gorunuste-alakasiz-kararlar]: **Görünüşte Alakasız Kararlar (Apparently Irrelevant Decisions - AIDs):** Bireyin bilinçdışı olarak ayartıcı ortama girmeyi hedefleyen ama bilince "masum bir tesadüf" gibi sunduğu küçük rota seçimleri zinciri.
+[^yuksek-risk-durumu]: **Yüksek Risk Durumları (High-Risk Situations):** Olumsuz duygulanım, sosyal baskı ve çatışma anlarında bireyin öz-denetim kapasitesini en çok zorlayan ve nüksü tetikleyen kritik eşikler.
+[^nedensel-atif-kurami]: **Nedensel Atıf Kuramı (Attribution Theory):** Bireyin bir başarısızlığı içsel, kalıcı ve kontrol edilemez nedenlere (örn. "ben iradesizim") bağlayarak çaresizliği pekiştirmesi bilişsel mekanizması.
+[^abstinans]: **Abstinans / Perhiz (Abstinence):** Bağımlılık yaratan bir maddeden veya riskli davranıştan tamamen uzak durma ve sıfır tüketim durumu.
+[^baskilama-paradoksu]: **Düşünce Baskılama Paradoksu (Ironic Process Theory - Wegner):** Bir ayartıcı düşünceyi (örn. sigara, tatlı) zorla zihinden atmaya çalışmanın, o düşüncenin bilinçte daha da şiddetlenip saplantıya dönüşmesine yol açması.
+[^abstinans-ihlal-etkisi]: **Abstinans İhlal Etkisi (AVE / Abstinence Violation Effect):** Tek bir küçük kaçamağın (lapse) bireyde yarattığı *"Madem kural bozuldu, battı balık yan gider"* yıkımı ve kontrol kaybı krizidir.
+[^kognitif-yeniden-yapilandirma]: **Kognitif Yeniden Yapılandırma (Cognitive Reframing):** Kaymayı bir son ve felaket olarak görmek yerine, nüks önleme becerilerini test eden bir "öğrenme fırsatı" olarak yeniden anlamlandırma tekniği.
 
 ## Kaynaklar
 

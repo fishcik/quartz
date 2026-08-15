@@ -54,9 +54,9 @@ Yani:
 
 Yani özetle: **Psikoterapi, klinik psikolojinin elinde tuttuğu bir alet. Alet eli kapsamıyor.** Peki bu aletin tanımı ne? Baumann’la Perrez (2005) kafayı buna yormuş. Ortaya bir çerçeve atmışlar:
 1. Neden oluyor ([[Etiyoloji|etiyoloji]][^etiyoloji])
-2. Nasıl sınıflandırılıyor (tanı)
+2. Nasıl sınıflandırılıyor (tanı ve operasyonel tanımlama[^operasyonel-tanimlama])
 3. Nasıl durduruluyor (önleme, terapi, rehabilitasyon)
-4. Ne kadar yaygın ve sağlık sistemi bu yaygınlığa nasıl cevap veriyor (epidemiyoloji, değerlendirme)
+4. Ne kadar yaygın ve sağlık sistemi buna nasıl cevap veriyor (prevalans ve insidans[^prevalans-ve-insidans], epidemiyoloji, değerlendirme)
 
 Bu dördü bir araya gelmeden disiplin topallıyor, eksik kalıyor.
 
@@ -86,7 +86,7 @@ Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönl
 
 "Bozulmuş işlev örüntüleri"ne dar anlamda "ruhsal bozukluk" diyoruz. Burda klinik psikoloji yalnız çalışmıyor. Tanı sınıflandırma sistemlerine yaslanıyor. Bunlar tıbbın, psikiyatrinin ve diğer sağlık mesleklerinin de paylaştığı sistemler.
 
-### DSM-5[^dsm] ve ICD-10[^icd]
+### DSM-5 ve ICD-10 (Psikiyatrik Nosoloji[^nosoloji] Sistemleri)
 Bozuklukları tanımlamak için kullanılan iki resmi "kural kitabı". ICD dünya çapında geçerli, hastaneler ve sigortalar onu kullanmak zorunda. DSM ise araştırma ve eğitimde olmazsa olmaz.
 
 Mesela, ICD-10’un V (F) bölümünde kodlanmış tanı kurallarının zayıf yanları olsa da, dünya genelinde tüm sağlık sistemleri ve meslekleri için bağlayıcıdır.
@@ -130,7 +130,7 @@ Ancak bu yakın temasın bir bedeli de var… **İsim kalabalığı.** Terminolo
 | **Sağlık Psikolojisi** | Sağlığı korumak, hastalığı önlemek, riski azaltmak. |
 | **Klinik Nöropsikoloji** | Beyin hasarının deneyim ve davranışa etkisi. |
 | **Psikanaliz** | Freud’un kavramlarına dayanan psikoterapi ekolü. |
-| **[[Psikopatoloji]][^psikopatoloji]** | Anormal deneyim, hal ve davranışı tanımlama öğretisi. |
+| **[[Psikopatoloji]]** | Anormal deneyim, patofizyoloji[^patofizyoloji] ve davranışsal sapmaları tanımlama öğretisi. |
 | **Biyolojik Psikiyatri** | Bozuklukları nörobiyolojik yöntemlerle araştırma ve tedavi. |
 | **Psikofarmakoloji** | İlaçların ruhsal süreçler üzerindeki etkisi. |
 | **Sosyal Psikiyatri** | Hastalığın epidemiyolojik ve sosyolojik boyutları. |
@@ -195,7 +195,7 @@ Peki… "Ruhsal bozukluk" neye denir? Bu şemsiyenin altına ne giriyor? Şizofr
 >
 > *Popper, K. R., &amp; Eccles, J. C. (1977). The self and its brain. Springer. https://doi.org/10.1007/978-3-642-61891-8*
 
-Araştırmalar, ruhsal bozukluklarda çokça "bedensel", bedensel bozukluklarda da "ruhsal" sebep olduğunu gösteriyor. Belki de sorun terminolojiktir ve bunla ilgili henüz tatmin edici bir çözüm bulunmuş değil.
+Araştırmalar, ruhsal bozukluklarda çokça "bedensel", bedensel bozukluklarda da "ruhsal" sebep olduğunu gösteriyor. Klinik epistemoloji[^epistemoloji] açısından zihin ile beyin arasındaki bu ayrım felsefi ve ampirik olarak tartışmalıdır. Belki de sorun terminolojiktir ve bunla ilgili henüz tatmin edici bir çözüm bulunmuş değil.
 
 Ruhsal bozuklukların görünüm biçimlerini, teşhis yöntemleri ve sınıflandırmaları hakkında sağlam bilgi sahibi olmak, hemen hemen tüm psikolojik uygulama alanları için olmazsa olmaz (**Conditio sine qua non**).
 
@@ -211,7 +211,7 @@ Ama işler çığrından çıktığında, davranış ve ruhsal sorunlar çekilme
 Bunun üzerine en çok uzlaşılan tanım DSM üzerinden yapılmıştır:
 
 > [!important] DSM Tanımı
-> **Ruhsal bozukluk** bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal [[Semptom|sendrom]][^sendrom] ya da örüntüdür. 
+> **Ruhsal bozukluk** bir kişide görülen, klinik olarak anlamlı bir davranışsal ya da ruhsal sendrom ya da örüntüdür. Çoğu zaman komorbidite[^komorbidite] göstererek diğer tablolarla iç içe geçer. 
 > 
 > Bu sendrom ya da örüntü, sadece *bir* olaya karşı anlaşılabilir ve kültürel olarak kabul gören bir tepki olmamalı. *(Örnek: sevilen birinin ölümü sonrası yaşanan normal bir yas.)* Ayrıca: Toplumun normlarından sapma (siyasi, dini, cinsel) veya bireyin toplumla çatışması tek başına bir bozukluk sayılmaz. 
 
@@ -272,7 +272,7 @@ Yani; ruhsal bozukluk, sadece "ruhsal" süreçler değil, insan davranışının
 
 Anlaşılacağı üzere, bu yaklaşım **betimleyici**. Yani durumu *tarif* ediyor. *"Neden?"* sorusuna pek girmiyor. 
 
-Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini kolaylaştırır. Yani: DSM, *"bu adam niye depresyonda yahu?"* diye sormuyor. Sadece *"bu adamda şu belirtiler var mı? kaç tanesi? ne zamandır?"* diye soruyor. Böylece farklı klinisyenler aynı hastaya baktıklarında aynı tanıya varma olasılıkları artar. Çünkü kriterler net, gözlemlenebilir ve yoruma açık değil. *"Hastada şu [[Semptom|semptom]][^semptom] var mı yok mu hocam?"* gibi somut sorular.
+Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini kolaylaştırır. Ancak her tanı etiketi beraberinde iatrojenik damgalama[^iatrojenik-damgalama] ve klinisyenin hatalı yönlendirmesi durumunda iatrojenik hasar[^iatrojenik-hasar] riskini de getirir. Yani: DSM, *"bu adam niye depresyonda yahu?"* diye sormuyor. Sadece *"bu adamda şu belirtiler var mı? kaç tanesi? ne zamandır?"* diye soruyor. Böylece farklı klinisyenler aynı hastaya baktıklarında aynı tanıya varma olasılıkları artar. Çünkü kriterler net, gözlemlenebilir ve yoruma açık değil. *"Hastada şu semptom var mı yok mu hocam?"* gibi somut sorular.
 
 İletişim de buna bağlı olarak kolaylaşıyor. Bir psikolog Zürih’te, diğeri de Lahor’da aynı "şizofreni" tanısı koyduğunda, ikisinin de aynı şeyden bahsediyor olması. Çünkü tanı, hangi teoriye yakın oldukları ile değil, gözlemlenebilir bir kriter/semptom listesine dayanır.
 
@@ -335,13 +335,13 @@ Karmaşa maalesef burda da bitmiyor.. Daha "normal/anormal", "ruhsal bozukluk/ha
 
 Ama… Ve bu "ama" çok önemli.. Şu ana kadar, ruhsal bozuklukların özünü daha tatmin edici şekilde yakalayan başka yaklaşım ya da model ortaya konmuş değil. Eleştirmek kolay, daha iyisini bulmak zor. ***Şimdilik.***
 
-DSM-5 bu yüzden sadece kategorik yaklaşımla yetinmeyip, [[Boyutsal Yaklaşımlar|boyutsal]][^boyutsal-yaklasim] ve bozukluklar-arası ve gelişimsel yönleri de daha güçlü şekilde hesaba katmayı hedef koymuş. Aslında idealize edilen: Mevcut nozolojik bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani *"doğayı eklem yerlerinden ayırmak"* gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.
+DSM-5 bu yüzden sadece kategorik yaklaşımla yetinmeyip, boyutsal spektrumları, gelişimsel yönleri ve sosyodemografik risk gradientini[^sosyodemografik-risk] daha güçlü şekilde hesaba katmayı hedef koymuş. Aslında idealize edilen: Mevcut nozolojik bilgiye dayanarak, ruhsal bozuklukların yepyeni bir meta-yapısını inşa etmek, yani *"doğayı eklem yerlerinden ayırmak"* gibi bir metafor bile kullanılmış bu hedef için (Andrews ve ark. 2009; Regier ve ark. 2009). Ama veriler yetersiz ve bulgular tutarsız olduğu için bu vizyon hayata geçirilemedi.
 
 ---
 
 ## 5. Çok Eksenli Yapıdan Yaşam Çizgisine (DSM-IV’ten DSM-5’e)
 
-Peki DSM-5’te ne değişti? Tüm bu eleştirilere karşı DSM ne yaptı? Önceki versiyonları gibi, DSM-5 de ICD-11’e yol gösteren bir pusula olarak konumlandırıldı. Hedefi net: Klinik kullanışlılığı, tanı güvenilirliğini ve geçerliliğini artırmak.
+Peki DSM-5’te ne değişti? Tüm bu eleştirilere karşı DSM ne yaptı? Önceki versiyonları gibi, DSM-5 de ICD-11’e yol gösteren bir pusula olarak konumlandırıldı. Hedefi net: Klinik kullanışlılığı, tanı güvenilirliğini ve prognostik geçerliliği[^prognostik-gecerlilik] artırmak.
 
 En sert değişim ise çok eksenli yapının tamamen terk edilmesi oldu.
 
@@ -472,13 +472,17 @@ Bu üç vaka, tam da **multimodal** yaklaşımın neden gerekli olduğunu göste
 
 ---
 
-[^etiyoloji]: **Etiyoloji (Etiology):** Bir hastalığın, psikolojik bozukluğun veya klinik tablonun altında yatan köken, nedensellik ve tetikleyici faktörler bütünü.
-[^dsm]: **DSM (Diagnostic and Statistical Manual of Mental Disorders):** Amerikan Psikiyatri Birliği tarafından yayımlanan, ruhsal bozukluklar için standart tanı kriterlerini belirleyen kılavuz.
-[^psikopatoloji]: **Psikopatoloji (Psychopathology):** Ruhsal rahatsızlıkların, anormal davranışların ve zihinsel işlev bozukluklarının doğasını, nedenlerini ve gelişimsel dinamiklerini inceleyen bilim dalı.
-[^sendrom]: **Sendrom (Syndrome):** Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.
-[^semptom]: **Semptom (Symptom):** Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.
-[^boyutsal-yaklasim]: **Boyutsal Yaklaşım (Dimensional Approach):** Psikolojik durumları katı "sağlıklı / hasta" kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.
-[^icd]: **ICD (International Classification of Diseases):** Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.
+[^nosoloji]: **Nosoloji (Nosology):** Hastalıkların ve psikiyatrik tabloların kuramsal temellerine, semptom örüntülerine ve klinik benzerliklerine göre hiyerarşik sınıflandırılması bilimi.
+[^komorbidite]: **Komorbidite (Comorbidity):** Bir bireyde aynı anda iki veya daha fazla bağımsız psikiyatrik ya da organik tablonun klinik tanı kriterlerini karşılayarak birlikte bulunması durumu.
+[^iatrojenik-damgalama]: **İatrojenik Damgalama (Iatrogenic Stigmatization):** Tanı etiketlerinin hastanın kimliğini daraltarak toplumda ve bireyin kendi zihninde ikincil öz-değersizlik ve ayrımcılık üretmesi riski.
+[^epistemoloji]: **Klinik Epistemoloji (Clinical Epistemology):** Ruhsal sağlıkta "normal" ile "anormal" arasındaki sınırın nesnel bir gerçeklik mi yoksa kültürel, tarihsel ve değer yüklü bir uzlaşı mı olduğunu sorgulayan bilgi felsefesi dalı.
+[^etiyoloji]: **Etiyoloji (Etiology):** Bir psikopatolojik tablonun ortaya çıkışına zemin hazırlayan genetik, gelişimsel, çevresel ve nörobiyolojik köken faktörleri bütünü.
+[^sosyodemografik-risk]: **Sosyodemografik Risk Gradienti (Social Gradient in Health):** Düşük sosyoekonomik statü, yoksulluk ve dışlanmanın psikiyatrik prevalansı ve kırılganlığı katlaması örüntüsü.
+[^patofizyoloji]: **Patofizyoloji (Pathophysiology):** Bir rahatsızlık sırasında sinir sisteminde, nörotransmitter dengesinde ve organ düzeyinde bozulan fizyolojik işleyiş mekanizmaları.
+[^iatrojenik-hasar]: **İatrojenik Hasar (Iatrogenesis):** Tıbbi/psikolojik müdahale, yanlış etiketleme veya farmakolojik yan etki sonucu danışanda hekim ya da terapist eliyle üretilen ikincil klinik hasar.
+[^prevalans-ve-insidans]: **Prevalans vs. İnsidans (Prevalence & Incidence):** Prevalans belirli bir anda popülasyondaki mevcut vaka oranını; insidans ise belirli bir zaman diliminde sıfırdan ortaya çıkan yeni vaka sıklığını gösterir.
+[^prognostik-gecerlilik]: **Prognostik Geçerlilik (Prognostic Validity):** Bir klinik tanı kategorisinin, rahatsızlığın gelecekteki doğal seyrini, nüks riskini ve tedaviye vereceği yanıtı doğru öngörebilme gücü.
+[^operasyonel-tanimlama]: **Operasyonel Tanımlama (Operationalization):** Soyut klinik yapıların (örn. anhedoni, ajitasyon) gözlemlenebilir, ölçülebilir ve tekrarlanabilir somut tanı kriterlerine (süre, sıklık, şiddet) dökülmesi yöntemi.
 
 ## Kaynaklar
 

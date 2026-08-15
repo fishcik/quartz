@@ -76,7 +76,7 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 
 >**Genel mantık şu: uzmanlaşma her zaman bir daralmayla geliyor.**
 
-**Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
+**Bunun nörobilimdeki adı sinaptik budanma[^sinaptik-budanma] (synaptic pruning), yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
 
 > [!abstract] Yaşam Boyu Gelişimde Kazanç ve Kayıp Dinamiği
 > <div class="sc-diag-author"><a href="https://doi.org/10.1037/0012-1649.23.5.611" target="_blank" rel="noopener noreferrer">(Baltes, 1987)</a></div>
@@ -141,7 +141,7 @@ Diyelim ki 8 yaşındasın ve sana 20 kelime veriyorum: elma, armut, kel, mahmut
 8 yaşındaki çocuk ne yapar? Gelişigüzel ezberler. Elma, araba, armut.. Sırayla gitmeye çalışır. Hatırladığı kadar hatırlar. 
 
 16 yaşındaki ne yapar?
-Farkında olmadan "dur, bunları bi gruplandırayım hele" der. Meyveler, Araçlar..
+Farkında olmadan "dur, bunları bi gruplandırayım hele" der (yönetsel işlevler[^yonetsel-islevler]). Meyveler, Araçlar..
 
 Sonuç: daha fazla kelime hatırlıyor. 
 
@@ -361,7 +361,7 @@ Bir popülasyondaki bireysel farklılıkların ne kadarının genetik varyansla 
 
 ### Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)
 
-Gen ve çevre statik değil, dinamik bir kovaryasyon içindedir:
+Gen ve çevre statik değil, dinamik bir gen-çevre kovaryasyonu[^gen-cevre-korelasyonu] (rGE) içindedir:
 
 - **Pasif Kovaryasyon:** Çocuk hiçbir şey yapmaz, yetenekli olduğu genetik ortama doğar (Müzisyen ailenin evindeki piyanoyla büyüyen çocuk).
 - **Çağrıştırıcı Kovaryasyon (Evocative):** Çocuğun genetik eğilimi bir davranış üretir, çevre bu davranışa yanıt verir (Resme yetenekli çocuğa ebeveynin boya seti alması).
@@ -436,7 +436,7 @@ Sosyalizasyon kuramcıları buna sert karşı çıktı: Ebeveynin sıcaklığı,
 >
 > *Bronfenbrenner, U. (1979). The ecology of human development: Experiments by nature and design. Harvard University Press. https://www.jstor.org/stable/j.ctv2607144*
 
-Bronfenbrenner'e göre insan, soğan zarları gibi iç içe geçmiş ekolojik sistemlerin merkezindedir:
+Bronfenbrenner'e göre insan, proksimal süreçler[^proksimal-surecler] aracılığıyla şekillenen ve soğan zarları gibi iç içe geçmiş ekolojik sistemlerin merkezindedir:
 1. **Mikrosistem:** Doğrudan temas edilen günlük yaşam alanı (Aile, okul, akran grubu).
 2. **Mezosistem:** Mikrosistemlerin birbiriyle etkileşimi (Ailenin okul veya arkadaş grubuyla ilişkisi).
 3. **Ekzosistem:** Bireyin doğrudan içinde bulunmadığı ama kararlarından etkilendiği yapılar (Ebeveynin işyeri politikaları, belediye hizmetleri).
@@ -513,12 +513,17 @@ Philippe Ariès (1975), Orta Çağ tablolarında çocukların minyatür yetişki
 
 ---
 
-[^ontojenez]: **Ontojenez (Ontogeny):** Bireyin döllenmeden ölüme kadar kendi yaşam süresi boyunca geçirdiği yapısal, biyolojik ve psikolojik değişimler bütünü (türün evrimsel gelişimi olan filojenezden farklı olarak).
-[^kristalize-zeka]: **Kristalize ve Akışkan Zekâ (Cattell-Horn-Carroll):** Akışkan zekâ yeni problemleri hızlı çözme yetisini (biyolojik donanım) ifade ederken; kristalize zekâ kültürel birikim, deneyim ve kelime haznesini (yaşla artan yazılım) temsil eder.
-[^plastisite]: **Nöral Plastisite (Neuroplasticity):** Beynin deneyim, öğrenme ve çevresel uyaranlara yanıt olarak sinaptik bağlantılarını yeniden organize etme ve şekillendirme kapasitesi.
-[^hassas-donem]: **Hassas Dönem (Sensitive Period):** Belirli çevresel uyaranlara veya deneyimlere karşı beynin biyolojik olarak en yüksek duyarlılıkta olduğu, bu pencere kapandıktan sonra telafisi güçleşen kritik zaman aralığı.
-[^epigenetik]: **Epigenetik (Epigenetics):** DNA diziliminde bir değişiklik olmaksızın, çevresel faktörlerin gen ekspresyonunu (genlerin açık veya kapalı olma durumunu) kimyasal mekanizmalarla modüle etmesi.
-[^diferansiyel-duyarlilik]: **Diferansiyel Duyarlılık (Differential Susceptibility):** Bireylerin çevresel koşullara (hem olumsuz stresörlere hem de zenginleştirici desteklere) genetik ve fizyolojik olarak farklı derecelerde duyarlılık göstermesi (Orkide vs. Karahindiba metaforu).
+[^ontojenez]: **Ontojenez vs. Filojenez (Ontogeny & Phylogeny):** Ontojenez bireyin döllenmeden ölüme kadar kendi yaşam döngüsündeki yapısal ve psikolojik gelişimini ifade ederken; filojenez türün milyonlarca yıllık evrimsel soyoluşunu inceler.
+[^kristalize-zeka]: **Kristalize ve Akışkan Zekâ (Cattell-Horn-Carroll):** Akışkan zekâ biyolojik donanıma dayalı yeni problem çözme hızını temsil ederken; kristalize zekâ kültürel birikim, deneyim ve sözcük dağarcığı gibi yaşla korunan kazanımları ifade eder.
+[^plastisite]: **Nöral Plastisite (Neuroplasticity):** Beyin korteksinin deneyim, öğrenme ve çevresel uyaranlara yanıt olarak sinaps yoğunluğunu ve nöral ağ bağlantılarını yeniden organize etme esnekliği.
+[^sinaptik-budanma]: **Sinaptik Budanma (Synaptic Pruning):** Erken çocuklukta aşırı üretilen sinaps bağlantılarından kullanılmayanların budanarak nöral iletimin hızlandırılması ve beynin ana dile/çevreye özelleşmesi süreci.
+[^hassas-donem]: **Hassas Dönem (Sensitive Period):** Belirli çevresel girdilere (dil, bağlanma) karşı beynin biyolojik duyarlılığının zirve yaptığı; bu pencere kapandıktan sonra telafisi imkansız olmasa da güçleşen zaman aralığı.
+[^epigenetik]: **Epigenetik ve DNA Metilasyonu (Epigenetics):** Çevresel stresörlerin DNA dizilimini değiştirmeksizin, metil grupları ve histon modifikasyonlarıyla genlerin açık veya kapalı kalma durumunu modüle etmesi.
+[^diferansiyel-duyarlilik]: **Diferansiyel Duyarlılık / Orkide-Karahindiba Hipotezi (Boyce & Ellis):** Kimi bireylerin (karahindiba) olumsuz çevreye dirençli ama zengin ortamdan az etkilenmesi; kimi bireylerin ise (orkide) kötü çevrede derin hasar alırken destekleyici çevrede zirveye ulaşması biyolojik yatkınlığı.
+[^kohort-etkisi]: **Kohort Etkisi (Cohort Effect):** Aynı tarihsel dönemde, ortak sosyal kriz, savaş veya teknolojik dönüşümlere maruz kalarak büyüyen bir kuşağın paylaştığı gelişimsel sapma örüntüsü.
+[^yonetsel-islevler]: **Yönetsel İşlevler (Executive Functions):** Prefrontal korteks denetimindeki çalışma belleği, bilişsel esneklik, ketleme (inhibition) ve hedef odaklı stratejik planlama kapasiteleri bütünü.
+[^gen-cevre-korelasyonu]: **Gen-Çevre Kovaryasyonu (rGE - Scarr & McCartney):** Bireyin genetik profilinin maruz kaldığı çevreyi pasif (aileden miras), çağrıştırıcı (çevrenin tepkisi) ve aktif (kendi gelişimsel nişini seçme) yollarla bizzat belirlemesi.
+[^proksimal-surecler]: **Proksimal Süreçler (Proximal Processes - Bronfenbrenner):** Bireyin yakın çevresindeki nesneler ve insanlarla kurduğu sürekli, karşılıklı ve gitgide karmaşıklaşan birincil gelişim motoru etkileşimleri.
 
 ## Kaynaklar
 

@@ -28,7 +28,7 @@ Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]
 
 ## 1. Risk Grubu ve Biyolojik Duyarlılık
 
-- Sarışınlar, kızıllar, güneşe çıktığı an ıstakoza dönen açık tenliler (Fitzpatrick Tip I-II).
+- Sarışınlar, kızıllar, güneşe çıktığı an ıstakoza dönen açık tenliler (Fitzpatrick Tip I-II[^fitzpatrick-skalasi]).
 - Çil oluşturma eğilimi, çok sayıda atipik ben.
 - 18 yaşından önce 2 ya da daha fazla ciddi kabarcıklı güneş yanığı geçirmek.
 - Dışarıda çalışma; açık havada uzun süreli UV maruziyeti.
@@ -41,7 +41,7 @@ Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]
 - **Öğle Güneşinden Kaçmak:** Yaz aylarında 11:00–16:00 arası doğrudan güneşe çıkmamak.
 - **Koruyucu Giysi:** Uzun kollu sıkı dokunmuş giysiler, geniş kenarlı şapka, UV filtreli gözlük.
 - **Gölge:** Güneş altında doğrudan kavrulmak yerine gölgeyi tercih etmek.
-- **Güneş Kremi:** Geniş spektrumlu (UVA + UVB), en az SPF 30. Düzenli ve erken uygulama.
+- **Güneş Kremi:** Geniş spektrumlu (UVA + UVB), en az SPF[^spf-faktoru] 30. Düzenli ve erken uygulama.
 - **Bebekler ve Çocuklar:** Asla doğrudan güneş altında bırakılmamalı; korumada kremden önce giysi ve gölge tercih edilmelidir.
 
 > [!abstract] Güneşten Korunmada Koruma Motivasyonu ve Görünüş Çatışması Modeli
@@ -89,9 +89,9 @@ Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]
 - *"50 faktörü çaktım kanka, akşama kadar güneşin altında uyuyabilirim."*  
   **Yanlış:** Güneş kremi güneşte kalma süresini uzatmak için değil, kaçınılmaz maruziyetin hasarını filtrelemek içindir.
 - *"Kanser riskini biliyorum ama azıcık bronzlaşsam bir şey olmaz."*  
-  **Yanlış:** UV hasarı kümülatiftir; cilt hücreleri maruz kaldığı DNA mutasyonlarını asla unutmaz.
+  **Yanlış:** UV hasarı kümülatiftir; bronzlaşma bir güzellik değil, timin dimerleri[^melanogenez-ve-dna] ile tetiklenen bir hücresel imdat çığlığıdır. Cilt hücreleri DNA mutasyonlarını asla unutmaz.
 
-Klasik sağlık iletişimi *"Riski anlat, insan değişsin"* der. Ama insan laftan öyle kolay anlamaz. Jones ve Leary (1994) bunu deneyle kanıtladı: İnsanlara *"Kanser olacaksın"* demek güneşte yatma niyetlerini pek sarsmadı; fakat *"Yüzün erken buruşacak, sarkacak ve sıfatın kayacak"* (foto-yaşlanma[^foto-yaslanma]) demek anında frene bastırdı.
+Klasik sağlık iletişimi *"Riski anlat, insan değişsin"* der. Ama insan laftan öyle kolay anlamaz. Koruma motivasyonu[^koruma-motivasyonu] salt kanser tehdidiyle değil, görünüş tehdidiyle de tetiklenir. Jones ve Leary (1994) bunu deneyle kanıtladı: İnsanlara *"Kanser olacaksın"* demek zaman indirgeme yanlılığı[^zaman-indirgeme-yanliligi] yüzünden güneşte yatma niyetlerini pek sarsmadı; fakat *"Yüzün erken buruşacak, sarkacak ve sıfatın kayacak"* (foto-yaşlanma[^foto-yaslanma]) demek anında frene bastırdı.
 
 Kanser korkusu, görünüş korkusuna yenilir. Bronzlaşmanın anında görünen sosyal ödülü vardır; kanser ise soyut ve uzaktır.
 
@@ -103,7 +103,11 @@ Kanser korkusu, görünüş korkusuna yenilir. Bronzlaşmanın anında görünen
 [^uv-radyasyonu]: **UV Radyasyonu (Ultraviolet Radiation):** Hücresel DNA hasarına, foto-yaşlanmaya ve melanom gibi malign cilt tümörlerine yol açan görünmez elektromanyetik ışınım.
 [^malign-melanom]: **Malign Melanom (Malignant Melanoma):** Melanosit hücrelerinden köken alan, erken evrede tespit edilmediğinde hızla metastaz yapabilen en ölümcül cilt kanseri türü.
 [^foto-yaslanma]: **Foto-Yaşlanma (Photoaging):** Kronik UV maruziyetinin cildin kollajen ve elastin liflerini parçalayarak erken kırışıklık, lekelenme ve elastisite kaybı yaratması süreci.
+[^fitzpatrick-skalasi]: **Fitzpatrick Cilt Tipi Skalası (Fitzpatrick Skin Phototype):** Cildin UV ışınlarına verdiği biyolojik yanıtı ve yanma/bronzlaşma eğilimini I'den VI'ya kadar 6 sınıfa ayıran dermatolojik standart.
+[^spf-faktoru]: **SPF / Güneş Koruma Faktörü (Sun Protection Factor):** Bir koruyucu ürünün cildi UVB kaynaklı güneş yanığına (eritem) karşı koruma süresini ve filtrasyon oranını belirten katsayı.
 [^koruma-motivasyonu]: **Koruma Motivasyonu (Protection Motivation):** Bireyin algılanan tehdit şiddeti ile başa çıkma öz-yeterliliğini tartarak tehlikeden kaçınma eylemini başlatmasını sağlayan psikolojik itici güç.
+[^melanogenez-ve-dna]: **Timin Dimerleri ve Melanogenez (UV-Induced DNA Damage):** UV fotonlarının melanosit DNA'sında pirimidin dimerleri oluşturması; bronzlaşmanın bir sağlık emaresi değil, hücresel mutasyon alarmına verilen savunma yanıtı olması.
+[^zaman-indirgeme-yanliligi]: **Zaman İndirgeme Yanlılığı (Present Bias / Temporal Discounting):** Bireyin anlık estetik bronzluk ödülünü, on yıllar sonra ortaya çıkacak soyut ve uzak kanser riskine kıyasla bilişsel olarak aşırı değerli görmesi yanlılığı.
 
 ## Kaynaklar
 
