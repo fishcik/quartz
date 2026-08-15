@@ -3,7 +3,12 @@ title: Sağlık Psikolojisi Nedir ve Neden Var?
 date: 2026-06-07
 tags:
   - sağlık-psikolojisi
-  - saglik-psikolojisi-nedir
+  - biyomedikal-model
+  - biyopsikososyal-model
+---
+
+> İnsan bedeni sadece tamir edilecek bir makine değil; biyoloji, zihin ve sosyal bağlamın kesişiminde yaşayan dinamik bir organizmadır.
+
 ---
 
 ## İçindekiler
@@ -14,69 +19,56 @@ tags:
 
 ---
 
-> *İnsanlar neden hastalanıyor ve bu süreçte psikolojinin rolü ne?*
-> 
-> *Kim hastalanıyor ve neden?*
-> 
-> *Kim iyileşiyor ve neden?*
-> 
-> *Hastalıklar nasıl önlenebilir?*
-
 ## 1. Sağlık Psikolojisinin Doğuşu ve Kapsamı
 
 Grip olduğunda doktora gidiyorsun, ilaç yazıyor, içiyorsun. Sistem bu. 
-Biyomedikal model[^1] seni bir arıza olarak görüyor: bozulmuşsa tamir et, sağlamsa dokunma. 
+Biyomedikal model[^biyomedikal-model] seni bir arıza olarak görüyor: Bozulmuşsa tamir et, sağlamsa dokunma. 
+
 Sorun nerede peki?
-Sorun, grip olmandan önce neden her gece 4 saat uyuduğun, neden sigara içtiğin, neden stresin tavana vurduğu. Muayenehanede bunlar pek mevzu olmuyor. 
+
+Sorun, grip olmandan önce neden her gece 4 saat uyuduğun, neden sigara içtiğin, neden stresinin tavana vurduğu. Muayenehanede bunlar pek mevzu olmuyor. 
 Sağlık psikolojisi de işte tam burayı dolduruyor. 
 
-Gelişim psikolojisi 80'li yıllarda psikolojinin bir alt dalı olarak bağımsız bir alan haline geldi. Günümüzde hızlı bir büyüme içinde. 
-Sağlığın korunması, hastalığın önlenmesi, sağlık hizmetleri ve rehabilitasyon süreçlerinde psikolojik süreçlerin nasıl işlediği, temel ilgi alanları sağlık psikolojisinin. 
+Sağlık psikolojisi 1980'li yıllarda psikolojinin bağımsız bir alt dalı haline geldi ve günümüzde en hızlı büyüyen disiplinlerden biri. Sağlığın korunması, hastalığın önlenmesi, sağlık hizmetleri ve rehabilitasyon süreçlerinde psikolojik mekanizmaların nasıl işlediği temel araştırma alanıdır.
 
-> Bir insanın davranışları, bilişleri, duyguları, motivasyonu ve kişilği onun sağlığını nasıl etkiliyor?
+> Bir insanın davranışları, bilişleri, duyguları, motivasyonu ve kişiliği onun sağlığını nasıl etkiliyor?
 > 
 > Hangi davranışlar sağlığı korur? Hastalıkları önlemede neler işe yarar? 
-> Hastalık varken yaşam kalitesi nasıl artılır?
+> Hastalık varken yaşam kalitesi nasıl artırılır?
 
 > ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. Laboratuvardan çıkıp sahaya inen bir alan.***
 
-Klinik psikolojiden farkı ise, klinik psikolojinin zihinsel bozukluklar ve davranış sapmaları üzerine yoğunlaşır, zemini psikopatolojidir.
-Sağlık psikolojisi ise **fiziksel hastalıklara** ve onları çevreleten davranış, duygu, biliş sarmalına bakıyor.
+Klinik psikolojiden farkı: Klinik psikoloji zihinsel bozukluklar ve psikopatoloji üzerine yoğunlaşırken; sağlık psikolojisi doğrudan **fiziksel hastalıklara** ve onları çevreleyen [[Sağlık Davranışları|sağlık davranışı]][^saglik-davranisi], duygu ve biliş sarmalına odaklanır.
 
-İnsan bedeni bir makine değil, bağlam içinde yaşayan bir organizma. 
-*Ve o bağlamın büyük bölümü psikolojik.*
+İnsan bedeni bir makine değil, bağlam içinde yaşayan bir organizma. *Ve o bağlamın büyük bölümü psikolojik.*
+
+---
 
 ## 2. Beden ve Zihin: İki Model, İki Dünya Görüşü
 
 ### Beden & Zihin
-Zihin ve bedenin birbirini etkilediği fikri yeni sayılmaz. 
-Bağışıklık sistemi duygusal durumlardan etkilenebiliyor ve genetik yatkınlıklar davranış biçimleriyle etkileşime girerek hastalığı şekillendiriyor. 
 
-Bu bilgiler aslında eskiden de sezgisel düzeyde vardı. 
-Sistematikleşmesi ve sağlık hizmetlerine, özellikle fiziksel hastalıkların tedavi yapısına aktarılması hâlâ devam eden, bitmemiş bir süreç.
+Zihin ve bedenin birbirini etkilediği fikri yeni sayılmaz. Bağışıklık sistemi duygusal durumlardan etkilenebiliyor ve genetik yatkınlıklar davranış biçimleriyle etkileşime girerek hastalığı şekillendiriyor. 
+
+Bu bilgiler aslında eskiden de sezgisel düzeyde vardı. Sistematikleşmesi ve modern tıp hizmetlerine aktarılması hâlâ devam eden, bitmemiş bir süreçtir.
 
 ### İki Model, İki Dünya Görüşü
 
-> ***Biyomedikal model:***
+#### 1. Biyomedikal Model
+19. yüzyılda yerleşti. Hastalık ve sağlığın nesnel olarak ölçülebilir olduğunu savunur. Hastalık tanımı biyolojik sapmalara ve hücresel hasara dayanır. Sebepler sadece genetik ya da dış patojenlerdir (bakteri, virüs). Tedavi de saf somatiktir: Ameliyat, kemoterapi, ilaç.
 
-19. yüzyılda yerleşti. Hastalık ve sağlık nesnel olarak ölçülebilir der. Hastalık tanımı tamamen operasyonelleştirilebilir kriterlere dayanır: referans grubunun istatistiksel normundan biyolojik sapma, ya da hayatta kalmayı ve üreme kapasitesini tehdit eden organizma bozukluğu. 
-Sebeplere bakıldığında sadece genetik ya da dışsal kaynaklar görülüyor: bakteri, virüs gibi. Buna paralel olarak tedavi de saf somatik oluyor: ameliyat, kemoterapi, ilaç. 
+> ***Kritik nokta da şu: Bu modelde hasta kendi iyileşmesinden sorumlu tutulamaz.***
+> Beden ve zihin iki ayrı kutudur. Hastalık psikolojiyi bozabilir ama tersi mümkün görülmez. Sağlık ise sadece hastalığın "yokluğu" olarak tanımlanır.
 
-> ***Kritik nokta da şu: bu modelde hasta kendi iyileşmesinden sorumlu tutulamaz.***
-> *Çünkü beden ve zihin "ayrı" varlıklar. 
-> Hastalık psikolojiyi bozabilir, ama tersi mümkün değil der. 
-> Sağlık ise hastalığın "olmayışı", bu kadar.*
+#### 2. Biyopsikososyal Model
+20. yüzyılda George Engel tarafından ortaya atıldı. Hastalıkların biyolojik, psikolojik ve sosyal faktörlerin karşılıklı etkileşiminden doğduğunu savunur:
+- **Biyolojik:** Genetik yatkınlık, immün yanıt, doku hasarı.
+- **Psikolojik:** Kronik[^kronik-hastalik] kaygı, depresyon, iyileşme beklentileri, öz-yeterlilik inancı.
+- **Sosyal:** Sağlık sistemine erişim, sosyal destek ağları, kültürel hastalık normları.
 
-> ***Biyopsikososyal model:***
+> ***Fark:*** Biyomedikal model sana *"Sen bozuksun, dışarıdan tamir olacaksın"* der. Biyopsikososyal model ise *"Sen bir bağlam içinde yaşıyorsun ve o bağlamın her katmanı sağlığını bizzat belirler"* der.
 
-*20. yüzyılda biyomedikal modelin yerini aldı. Hastalıkların biyolojik, psikolojik ve sosyal faktörlerin hepsinin etkileşiminden oluştuğunu savunuyor. 
-Hem hastalığın ortaya çıkışında hem de seyrinde psikolojik faktörler devrede: kronik[^2] kaygı, depresyon, yas gibi duygusal haller; iyileşme beklentileri, hastalık hakkındaki kişisel teoriler gibi bilişsel süreçler.*
-
-*Bunların yanında: hastalık davranışına dair beklentiler, finansal destek mekanizmaları, sağlık sistemine erişim gibi sosyal-toplumsal faktörler de var.*
-
-> ***Fark:*** biyomedikal model sana "sen bozuksun, tamir olacaksın" diyor. Biyopsikososyal model ise "sen bağlam içinde yaşayan bir insansın ve bağlamın her katmanı hastalığına ya da sağlığına katkıda bulunur" diyor. 
-
-Sağlık psikolojisi **ikinci** modeli temel alıyor, her şey biyopsikososyal model zemini üzerine kuruluyor.
+Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 
 > [!abstract] Biyomedikal ve Biyopsikososyal Sağlık Modelleri Karşılaştırması
 > <div class="sc-diag-author"><a href="https://doi.org/10.1126/science.847460" target="_blank" rel="noopener noreferrer">(Engel, 1977)</a></div>
@@ -121,34 +113,28 @@ Sağlık psikolojisi **ikinci** modeli temel alıyor, her şey biyopsikososyal m
 >
 > *Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196(4286), 129–136. https://doi.org/10.1126/science.847460*
 
-## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
+---
 
-### Alanın oluşması
+## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
 Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında iç içe geçen üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
 
-> 1) Kronik-dejeneratif hastalıkların aşırı artışı. 
-> Tüberküloz gibi bulaşıcı hastalıklar artık birinci katil değil. Yerlerini kalp hastalıkları, kanser, diyabet gibi yavaş ilerleyen ve uzun soluklu olan hastalıklar aldı. **Bunlar, bakterileri öldürerek çözülmüyor.**
+1. **Kronik-Dejeneratif Hastalıkların Artışı:** Tüberküloz gibi bulaşıcı enfeksiyonlar yerini kalp hastalıkları, kanser ve diyabet gibi yavaş ilerleyen hastalıklara bıraktı. Bunlar sadece antibiyotikle çözülmez; yaşam tarzı değişikliği gerektirir.
+2. **Davranışsal Risk Faktörlerinin Keşfi:** Sigara içmek, sedanter yaşam ve kronik stres biyolojik sonuçları doğrudan tayin eder. Artık **davranışın kendisi** tedavinin ve önlemenin ana konusu haline geldi.
+3. **Sağlık Maliyetlerinin Patlaması:** Tedavi etmek devasa pahalıdır, oysa birincil koruma[^birincil-koruma] ve önleme çok daha ucuz ve sürdürülebilirdir.
 
-> 2) Risk davranışları.
-> Yani **hem** sigara içiyorsun, **hem** hareketsiz yaşıyorsun **hem de** kronik yoğun stres altındasın. Bunlar hastalığı **doğrudan** etkiliyor. Artık **davranış** tedavinin konusu haline geldi.
-
-> 3) Sağlık sistemlerindeki maliyet patlaması. 
-> Tedavi etmek pahalı, gittikçe de pahalanıyor. Ama **önlemek** çok daha ucuz. Bu ekonomik gerçeklik, önleme[^3] ve yaşam tarzı araştırmalarında ciddi bir ivme kazandırdı. 
-
-Bu faktörleri, sağlık/hastalık bağlantılarını ve değiştirilebilirlik koşullarını araştıran bir alan olarak 1978'de APA bünyesinde **Division of Health Psychology** kurularak doğmuş oldu.
-
-Sağlık psikolojisinin diğer bir çok alanla cevaplamaya çalıştığı soru aynı: psikolojik süreçler sağlık ve hastalıkla nasıl kesişiyor? 
-Ama bu alanların her biri bunu farklı bir zemin ve araçla, farklı bir odakla yapıyor.
+Bu faktörlerin kesişiminde, 1978 yılında APA bünyesinde **Division of Health Psychology** kurularak alan resmen kurumsallaşmıştır.
 
 ---
 
-[^1]: **Biyomedikal Model (Biomedical Model):** Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel tıp yaklaşımı.
-[^2]: **Kronik Hastalık (Chronic Illness):** Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).
-[^3]: **Birincil Koruma (Primary Prevention):** Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.
+[^biyomedikal-model]: **Biyomedikal Model (Biomedical Model):** Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel mekanist tıp yaklaşımı.
+[^biyopsikososyal-model]: **Biyopsikososyal Model (Biopsychosocial Model):** George Engel tarafından geliştirilen; sağlık ve hastalığı genetik/biyolojik, bilişsel/duygusal ve sosyoekonomik katmanların dinamik bir bileşkesi olarak ele alan bütüncül çerçeve.
+[^kronik-hastalik]: **Kronik Hastalık (Chronic Illness):** Yavaş ilerleyen, kalıcı yaşam tarzı ve davranışsal yönetim gerektiren, bulaşıcı olmayan metabolik veya kardiyovasküler sağlık tablosu.
+[^birincil-koruma]: **Birincil Koruma (Primary Prevention):** Hastalık semptomları ve hasarı henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı ve sağlığı korumayı amaçlayan proaktif müdahale stratejisi.
+[^saglik-davranisi]: **Sağlık Davranışı (Health Behavior):** Bireyin sağlığı koruma, geliştirme veya hastalıktan kaçınma amacıyla sergilediği bilinçli veya alışkanlıksal eylemler bütünü.
 
 ## Kaynaklar
 
-- Engel, G. L. (1980). The clinical application of the biopsychosocial model. *American Journal of Psychiatry*, 137(5), 535–544. https://doi.org/10.1176/ajp.137.5.535
+- Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. *Science*, 196(4286), 129–136. https://doi.org/10.1126/science.847460
 - Matarazzo, J. D. (1980). Behavioral health and behavioral medicine: Frontiers for a new health psychology. *American Psychologist*, 35(9), 807–817. https://doi.org/10.1037/0003-066X.35.9.807
-- Schwartz, G. E., & Weiss, S. M. (1978). Behavioral medicine revisited: An amended definition. *Journal of Behavioral Medicine*, 1(3), 249–251. https://doi.org/10.1007/BF00846660
+- World Health Organization. (1948). *Constitution of the World Health Organization*. WHO. https://www.who.int/about/governance/constitution

@@ -218,7 +218,7 @@ var SC_GLYPHS=[
 function scFold(s){
   s=(s||'').toUpperCase();
   s=s.replace(/İ/g,'I').replace(/Ş/g,'S').replace(/Ç/g,'C').replace(/Ğ/g,'G').replace(/Ü/g,'U').replace(/Ö/g,'O');
-  return s.replace(new RegExp('[^A-Z0-9 ]', 'g'),' ').replace(/[ \t\n\r]+/g,' ').trim();
+  return s.replace(new RegExp('[^A-Z0-9 ]', 'g'),' ').replace(new RegExp('\\s+', 'g'),' ').trim();
 }
 var SC_GLYPH_FULL={},SC_GLYPH_BASE={};
 SC_GLYPHS.forEach(function(e){
@@ -292,7 +292,7 @@ function ensure(){
     if(badge){
       var pct=Math.round(p*100);
       var art=document.querySelector('article, .center');
-      var wc=art?(art.textContent||'').split(/[ \t\n\r]+/).length:600;
+      var wc=art?(art.textContent||'').split(new RegExp('\\s+')).length:600;
       var totalMin=Math.ceil(wc/180);
       var remMin=Math.max(1, Math.ceil(totalMin*(1-p)));
       badge.textContent='%'+pct+(p<0.95?' • ~'+remMin+' dk':' • Bitti');
@@ -1808,7 +1808,7 @@ function scOpenDiagramModal(svgEl, titleText){
   if(!dm) return;
   var cont = dm.querySelector('#sc-diagram-modal-content');
   var titleEl = dm.querySelector('#sc-diag-modal-title');
-  if(titleEl && titleText) titleEl.textContent = titleText.replace(/^[ \t\n\r\u200B-\u200D\uFEFF]+/, '').trim();
+  if(titleEl && titleText) titleEl.textContent = titleText.trim();
   if(!cont) return;
   cont.innerHTML = '';
   
