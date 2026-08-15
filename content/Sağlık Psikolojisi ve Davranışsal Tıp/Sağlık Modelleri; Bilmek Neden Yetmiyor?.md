@@ -209,76 +209,37 @@ Modelin mimarları bu kadar değişkeni (vulnerabilite, ciddiyet, maliyet, yarar
 >
 > *Rosenstock, I. M. (1974). Historical origins of the health belief model. Health Education Monographs, 2(4), 328–335. https://doi.org/10.1177/109019817400200403*
 
-## 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)th Education Monographs, 2(4), 328–335.*
->
-> ```mermaid
-> flowchart TD
->   classDef cardinal fill:none,stroke:#C8102E,stroke-width:2.2px,color:#C8102E,font-weight:bold;
->   classDef sepia fill:none,stroke:#c79a6d,stroke-width:1.8px,color:#c79a6d;
->   classDef default fill:none,stroke:#ece8e1,stroke-width:1.2px,color:#d8cfc0;
->
->   Duyarlilik([Algılanan Duyarlılık]):::sepia --> Tehdit{{Algılanan Tehdit}}:::cardinal
->   Ciddiyet([Algılanan Ciddiyet]):::sepia --> Tehdit
->   
->   Tehdit --> Eylem((Sağlık Davranışı Eylemi)):::cardinal
->   
->   Faydalar([Algılanan Faydalar]):::sepia --> NetFayda{{Maliyet-Fayda Dengesi}}:::sepia
->   Engeller([Algılanan Engeller]):::cardinal --> NetFayda
->   NetFayda --> Eylem
->   
->   Ipucu([Harekete Geçirici İpuçları]):::sepia --> Eylem
->   Ozetkililik([Bireysel Öz-Etkililik]):::cardinal --> Eylem
-> ```
->
->**Açıklama:**  *Bir insanın sağlık tehdidi algısı ile maliyet-fayda dengesinin birleşerek gerçek bir koruyucu sağlık eylemine dönüşme sürecini bilişsel basamaklarla modeller.*
-
 ## 2. Niyet ve Planlı Davranış Teorisi (TRA/TPB)
 
-Zamanında sosyal psikoloji dünyasında çok düz bir mantık hakimdi: *Bir insanın bir şeye karşı tutumu neyse, ona göre davranır.
-Spor yapmayı seviyorsa yapar, sevmiyorsa yapmaz.*
+Zamanında sosyal psikoloji dünyasında çok düz bir mantık hakimdi: *Bir insanın bir şeye karşı tutumu neyse, ona göre davranır. Spor yapmayı seviyorsa yapar, sevmiyorsa yapmaz.*
 
-***Fishbein ve Ajzen isimli iki kafadar çıkıp verileri inceleyince*** acı *  *gerçek ortaya çıktı***:**Tutum dediğin şey, davranışı tahmin etmede** berbat**.**
-***İnsanlar sporun iyi bi şey olduğunu düşünüp yine de tüm gün koltukta pinekleyebiliyor.
-Ya da "sağlıklı beslenmek önemli yaa" diyen biri buna göre davranmıyor.*** O halde ***tutum*** ile ***davranış*** arasında başka bir şey olmalı. 
+Fishbein ve Ajzen isimli iki araştırmacı çıkıp verileri inceleyince acı gerçek ortaya çıktı: **Tutum dediğin şey, davranışı tahmin etmede tek başına berbattır.** İnsanlar sporun iyi bir şey olduğunu düşünüp yine de tüm gün koltukta pinekleyebiliyor. Ya da "sağlıklı beslenmek önemli yaa" diyen biri buna göre davranmıyor. O halde **tutum** ile **davranış** arasında başka bir şey olmalı. 
 
-Fishbein ve Ajzen bu "başka şey"i niyet olarak tanımladı ve **Gerekçeli Eylem Teorisi'ni** (TRA - Theory of reasoned action) kurdu. 
+Fishbein ve Ajzen bu eksik halkayı **niyet** olarak tanımladı ve **Gerekçeli Eylem Teorisi'ni** (TRA - Theory of Reasoned Action) kurdu. 
 
-> *Ajzen daha sonra bunu Planlı Davranış Teorisi'ne (TPB[^3] - Theory of planned behavior) genişletti.* Niyet, kişinin belirli bir davranışı gerçekleştirmeye ya da belirli bir sonuca varmaya dair *bilinçli* kararı. 
-Her iki teoride de niyet davranışın en güçlü öngörücüsü/tahmincisi.
+> Ajzen daha sonra bunu **Planlı Davranış Teorisi'ne** (TPB[^3] - Theory of Planned Behavior) genişletti. Niyet, kişinin belirli bir davranışı gerçekleştirmeye ya da belirli bir sonuca varmaya dair *bilinçli* kararıdır. Her iki teoride de niyet, davranışın en güçlü doğrudan tahmincisidir.
 
-***Peki niyeti ne belirliyor o zaman?***
-***Niyetin 3 kaynağı***
---
-> ***Tutum ***Fishbein ve Ajzen'e göre tutum, bir davranışa karşı duygulanımsal değerlendirme.*** Bu davranış iyi mi? Kötü mü? Aptalca mı? Hoş mu? 
-Doğrudan sorulabiliyor.
-*"Günde 5 porsiyon turp yemek benim için yararlı/zararlı."*Tutum şöyle de hesaplanabilir: önce davranışın sonuçlarına dair inançlar ölçülür, sonra bu sonuçların değerlendirilmesiyle çarpılır ve tutum hesaplanır.*Yani, "Düzenli koşarsam iyi hissederim" =**(büyük ihtimalle) x "Kendimi iyi hissetmek "iyi" bir şeydir"**.
+### Niyetin 3 Kaynağı
 
-> ***Subjektif norm*** Yani mahalle baskısının psikolojideki ismi. 
-Kişinin, hayatındaki **önemli** insanların ondan ne beklediğini  *yorumlama* biçimidir. 
+> **1) Tutum:** Fishbein ve Ajzen'e göre tutum, bir davranışa karşı duygulanımsal ve rasyonel değerlendirmedir. *"Bu davranış iyi mi? Kötü mü? Yararlı mı? Hoş mu?"* Doğrudan sorulabilir: *"Günde 5 porsiyon sebze/meyve yemek benim için yararlı/zararlı."*
+> Tutum şöyle de hesaplanabilir: Önce davranışın sonuçlarına dair inançlar ölçülür, sonra bu sonuçların öznel değeriyle çarpılır:
+> *("Düzenli koşarsam iyi hissederim" $\times$ "Kendimi iyi hissetmek benim için önemlidir")*
 
-***"Bu beklentilere uymaya ne kadar istekliyim?"*** Normatif inançlar X "boyun eğme isteği"
-```
-"Kankam Abidin daha çok spor yapmamı istiyor"
-X
-"Kankam Abidin'i ne kadar kaale alırım?"
-```**Sosyal etkinin bu kadar açık ele alınması, bu teorinin ortaya çıktığı dönem için bir özgünlüktü. İşin tuhaf tarafı, sosyal etkileri bu kadar açıkça hesaba katsalar da, yapılan çalışmalarda subjektif norm niyetin hep** en zayıf tahminci** si çıkar.
+> **2) Subjektif Norm (Sosyal Baskı):** Yani mahalle baskısının psikolojideki ismi. Kişinin, hayatındaki önemli insanların ondan ne beklediğini yorumlama biçimidir.
+> *"Bu beklentilere uymaya ne kadar istekliyim?"* (Normatif inançlar $\times$ boyun eğme motivasyonu):
+> - *"Kankam Abidin daha çok spor yapmamı istiyor"* $\times$ *"Kankam Abidin'in fikrini ne kadar umursuyorum?"*
+> 
+> Sosyal etkinin bu kadar açık ele alınması o dönem için bir özgünlüktü. Ancak yapılan çalışmalarda subjektif norm niyetin hep en zayıf tahmincisi çıkmıştır. Sebebi ise araştırmacıların bu devasa sosyal etkiyi anketlerde yüzeysel tek bir soruyla geçiştirmeleridir.
 
-Sebebi ise araştırmacıların bu ***devasa*** sosyal etkiyi anketlerde tek bi soruyla geçiştirdiler, bu da ölçümün güvenilirliğinin dibine kibrit suyu döker.
+> **3) Algılanan Davranışsal Kontrol:** TRA'dan TPB'ye geçişte eklenen üçüncü kritik unsur. Kişinin niyeti kapı gibi sağlam olsa bile, kayak yapmaya niyetlendiğinde dışarıda kar yoksa o eylem gerçekleşmez. İrade dışı engeller çıktığında eski TRA çuvallıyordu.
+> Bu kavram, kişinin bir davranışı gerçekleştirirken ne kadar zorlanacağına veya kolay yapacağına dair subjektif tahminidir (Bandura'nın öz-yeterlilik kavramına paraleldir). Kantinde sağlıklı besin bulamıyorsan niyet lojistiğe kurban gider.
+> Algılanan davranış kontrolü, niyeti belirlemenin yanı sıra davranışı doğrudan da etkiler.
 
-> ***Algılanan davranış kontrolü***
-**TRA'dan TPB'ye geçişte eklenen üçüncü unsur.** Adamın niyeti kapı gibi sağlam olsa bile, kayak yapmaya niyetlendiğinde dışarıda kar yoksa o davranış gerçekleşmez. *İrade dışı engeller çıktığında TRA çuvallıyordu.*
+> [!warning] Peki bu kadar anlattık da ne oldu?
+> Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki niyeti canavar gibi tahmin ediyor (%40-50 varyans). Ama iş o niyetin davranışa dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü %20-30'lara çakılıyor.
 
-Yani bu kavram, kişinin bir davranışı gerçekleştirirken ne kadar zorlanacağına veya ne kadar kolay yapacağına dair subjektif tahmindir. 
-Kantinde, kafeteryada günde 5 porsiyon turp bulamıyorsan, **sağlıklı beslenme niyetin** de o kantinin lojistiğine kurban gider. 
-***Algılanan davranış kontrolü, niyeti etkilemenin yanı sıra davranışı da direkt olarak etkiliyor. Çünkü en iyi niyetle bile, fırsatın ya da kapasitenin olmadığı yerde davranış gerçekleşmez.***
+***Yani:*** İnsanın kafasında niyet oluşturmasını çok iyi çözdük ama niyet ile o davranışı gerçekten sergilemek arasındaki uçurumu sadece niyet ve kontrol algısıyla ***ölçemiyoruz.*** Adam niyet ediyor ama harekete geç(e)miyor. Bu fiyaskoya da literatürde ***Niyet-Davranış Boşluğu (Intention-Behavior Gap)*** deniyor. Yani bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
 
-Algılanan davranış kontrolü direkt Bandura'nın öz-yeterliliğini "hatırlatıyor". Ajzen de sonradan bunu kabul etti ve yeniden tanımladı.
-
-> ***Peki bu kadar anlattık da ne oldu?***
-> **Meta-analizlerin vurduğu o meşhur tokat şu: TPB insanın içindeki niyeti canavar gibi tahmin ediyor. 
-> Ama iş o niyetin davranışa dönüşmesine gelince modelin nefesi tıkanıyor, tahmin gücü yerlerde sürünüyor.** 
-
-***Yani:*** İnsanın kafasında niyet oluşturmasını çok iyi çözdük ama niyet ile o davranışı gerçekten sergilemek arasındaki uçurumu sadece niyet ve kontrol algısıyla ***ölçemiyoruz.*** Adam niyet ediyor ama harekete geç(e)miyor. Bu fiyaskoya da literatürde ***Niyet-Davranış Boşluğu*** deniyor. Yani, bu model bizi nehrin kenarına kadar getiriyor ama karşısına geçiremiyor. 
 Bize nehri gerçekten geçtirecek, tutum ile davranış arasındaki köprü olacak ***daha canavar modellere ihtiyacımız var.***
 
 > *"Theories don’t have to be correct – only facts do." - Hans Selye*
@@ -711,96 +672,90 @@ Ama ASLA 1. adım olan MUTLAK CAHİLLİĞE geri düşemezler. Bir kere duyup ö�
 ***Altın Kural: Kişiye Özel Müdahale***
 PAPM'in en büyük iddiası şudur: ***"Her aşamadaki insana aynı yaklaşımı uygulayamazsın."***
 
->**Radon Çalışması **```
-1897 katılımcıyla yapılan randomize, boylamsal çalışmada iki müdahale test edildi:** Yüksek risk bilgisi ve düşük efor**. 
+> **Radon Çalışması (Weinstein ve ark., 1998):**
+> 1897 katılımcıyla yapılan randomize, boylamsal çalışmada iki müdahale test edildi: **Yüksek risk bilgisi** ve **düşük efor (hazır sipariş formu)**. 
+> 
+> Radon, toprakta doğal olarak bulunan uranyumun bozunmasıyla oluşan radyoaktif bir gazdır. Sigaradan sonra akciğer kanserinin ikinci en yaygın nedenidir; görünmez ve kokusuzdur.
+> 
+> - 1. Grup (Kontrol): Hiçbir şey almadı.
+> - 2. Grup: "Evinde radon olma ihtimali yüksek" bilgi broşürü aldı.
+> - 3. Grup: Doğrudan hazır test sipariş formu aldı (efor azaltıldı).
+> - 4. Grup: Hem bilgi broşürü hem sipariş formu aldı.
+> 
+> **Sonuç:**
+> Katılımcıların %71'i zaten "yapacağım" kararını vermişti (5. aşama). %29'u ise hâlâ kararsızdı (3. aşama).
+> "Risk yüksek" bilgisi, sadece kararsızları kararlı hale getirmede işe yaradı; ama zaten kararlı olanları harekete geçirmedi. Hazır sipariş formu göndermek ise tam tersini yaptı: Zaten kararlı olanları anında eyleme geçirdi, ancak kararsızların tutumunu hiç etkilemedi.
+> 
+> *Yani iki farklı müdahale, iki farklı gruba bambaşka etki yaptı. Bu bulgu PAPM'ın temel tezini doğrular: İnsanın değişim sürecinin neresinde olduğunu bilmeden yapılan genel kamu spotları çöpe gider.*
 
-Radon, toprakta doğal olarak bulunan uranyumun bozunmasıyla oluşan radyoaktif bir gazdır. Sigaradan sonra akciğer kanserinin ikinci en yaygın nedeni. 
+### PAPM'ın Çatlakları
 
-Görünmez ve kokusuz olduğu için insanlar genelde varlığından haberdar değil. 
+1. **Kanıt Eksikliği:** Çalışmaların çoğu enine kesitseldir (anlık fotoğraf çeker). Bir insanın 1'den 7'ye gerçekten bu sırayla geçip geçmediğini kanıtlayacak boylamsal testler sınırlıdır.
+2. **Uygulama Zorluğu:** Gerçek hayatta sağlık otoritelerinin toplumdaki her bireyin 7 aşamadan tam neresinde olduğunu tek tek tespit edip ona özel mikro-hedefli içerik üretmesi lojistik bir meydan okumadır.
 
-Weinstein ve arkadaşları 1998'de radon gazını PAPM'ı test etmek için kullandılar. 
+---
 
-Birinci grup hiç bi şey almadı. (kontrol grubu)
-İkinci gruba "evinde radon olma ihtimali yüksek" bilgisi verildi. 
-Üçüncü gruba direkt bir test sipariş formu gönderildi, yani "ölçmek" için gereken çabayı azalttılar. 
-Dördüncü grup da ikisini birden aldı, hem bilgi hem sipariş formu. 
+## 5. Büyük Kavga: Gerçekten "Aşama" Diye Bir Şey Var mı?
 
-Sonuç:
-katılımcıların 71%'i zaten "yapacağım" kararını vermiş durumdaydı, 5. aşama. 
-29%'u hâlâ kararsızdı, 3. aşama. 
-"Risk yüksek" bilgisi, kararsızları kararlı hale getirmede işe yaradı. Ama zaten kararlı olanları harekete geçirmedi. 
-"Test formu gönderme" efor azaltma ise tam tersini yaptı: zaten kararlı olanları eyleme geçirdi, ama kararsızları etkilemedi.
+> *İnsan zihni bir merdiven midir, yoksa sürekli akan bir nehir mi? Yoksa tüm bu kategoriler yapay bir illüzyondan mı ibaret?!*
 
-Yani iki farklı müdahale, iki farklı gruba farklı şekilde işledi. Bu da PAPM'ın temel iddiasını destekliyor: insanların değişim sürecinin neresinde olduğunu bilmeden yapılan müdahale boşuna gidiyor...
+Buraya kadar sağlık psikolojisinin iki büyük kampını tanıdık: **Süreklilik Modelleri** (HBM, TPB) ve **Aşamalı Modeller** (TTM, PAPM, HAPA). İki taraf da insan davranışını çözdüğünü iddia ederken birbirinin en hassas açığını yakalar:
+
+- **Süreklilik Modellerinin Çıkmazı:** En büyük dertleri *"Niyeti harika ölçüyoruz ama eylemi tahmin edemiyoruz"* fiyaskosuydu. Bu niyet-eylem boşluğunu kapatmak için "Volisyon" kavramını sokup modeli *"Niyet öncesi"* ve *"Niyet sonrası"* diye ikiye böldüler. Ancak bir modeli evrelere böldüğün an o model artık sürekli olmaktan çıkar; gizlice aşamalı modele dönüşmüş olur.
+
+- **Aşamalı Modellerin İllüzyonu (Sutton, 2001 Eleştirisi):** Sutton başta olmak üzere şüpheci araştırmacılar şu yıkıcı soruyu sordu: *"Ya bu aşamalar doğada gerçekte yoksa?"* 
+  Örneğin insan boyunu "kısa, orta, uzun" diye üçe bölebiliriz; ancak boy gerçekte kesintisiz, sürekli bir değişkendir. Bizim yapay sınırlarımız doğada biyolojik birer duvar değildir. 
+  Eğer davranış motivasyonu da kesintisiz akan tek bir çizgi ise, insanları "Action", "Contemplation" gibi yapay etiketlere bölüp her birine milyon dolarlık ayrı kampanyalar tasarlamak tamamen kaynak israfıdır.
+
+---
+
+## 6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE
+
+### Ortak Düşman: Geri Düşüş (Relapse)
+
+*Tüm bu modellerin kesiştiği ortak bir soru var:* **İnsanlar kazandıkları sağlıklı davranışı neden ve nasıl kaybediyor?**
+
+Geri Düşüş (Relapse), bir insanın yeni edindiği sağlıklı davranışı (sigarayı bırakmak, düzenli spor...) aniden kesip, o eski konforlu ve tehlikeli riskli alışkanlığına kalıcı olarak geri dönmesi durumudur. 
+
+Sağlık psikolojisi modellerinin en çok zorlandığı, çünkü insan iradesinin en irrasyonel ve kaotik olduğu yer tam olarak burasıdır. Bir modeli "gerçekçi" yapan şey, insanı sadece hedefe taşırken değil; **tökezleyip düştüğünde** sistemin bunu nasıl modellediğidir.
+
+*Yani: Sağlık davranışı kazanmak bir şeydir; onu korumak bambaşka bir şeydir.* 
+
+Kullanılan bozukluk modeline göre "Geri Düşüş" tanımı tamamen değişir:
+- **Hastalık Modeli (Disease Model):** Sadece iki durum tanır: *Tamamen uzak* veya *Geri düşmüş.* Tek bir yudum alkol ya da tek bir sigara, "tedavi çöktü, hasta başa döndü" sayılarak tam bir felaket olarak kodlanır.
+- **Sosyal-Bilişsel Model (Marlatt & Gordon, 1985):** Süreci detaylandırır. Tek bir hata veya kaçamak (Lapse / Ayak kayması), öğrenme sürecinin doğal bir kazasıdır ve henüz kalıcı bir geri düşüş (Relapse) değildir.
+
+> 20. yüzyıl başında popüler olan "ahlaki model"e göre bağımlılar iradesiz ve karakter zayıflığına sahip kişilerdi. 1960'ta Jellinek bağımlılığı bir hastalık olarak tanımlayınca bu durum iradesizlik damgasını silerek geçici bir rahatlama sağladı.
+> 
+> Ancak Anonim Alkolikler (AA) gibi katı hastalık modeli savunucuları "Bir kez alkoliksen ömür boyu alkoliksin, tek kadeh şarap felakettir" diyerek kontrolü tamamen bireyin elinden aldı. Oysa araştırmalar bu dogmatik yaklaşımın geri düşüşü bizzat tetikleyebildiğini göstermektedir.
+
+---
+
+### Perhiz İhlali Etkisi (AVE - Abstinence Violation Effect)
+
+Marlatt ve Gordon (1985) tarafından tanımlanan **AVE**, perhizde olan bir bireyin küçük bir kaçamaktan (Lapse) sonra kendini ağır bir suçluluk ve utanç içinde hissetmesi ve bu hatayı içsel, stabil ve değişmez bir nedene atfetmesidir:
+*"Ben zaten iradesizim!"* veya *"Ben kontrolsüz bir hastayım!"*
+
+Bu olumsuz atıf iki ölümcül mekanizmayı tetikler:
+1. Kişi bu yoğun suçluluk ve bilişsel uyumsuzluk acısını dindirmek için tekrar maddeye/davranışa sığınır (Kısırdöngü).
+2. Doğrudan kontrol kaybı inancı gelişir: *"Zaten değiştiremem, battı balık yan gider!"*
 
 ```
-## PAPM'ın Çatlakları
-1) Kanıt eksikliği: Çalışmaların çoğu enine kesitsel. Yani anlık fotoğraf çekiyorlar. Bir insanın 1'den 7'ye gerçekten bu sırayla geçip geçmediğini kanıtlayacak boylamsal tam bir test hala yapılmış değil. 
-2) Uygulama zorluğu: Gerçek hayatta bir sağlık bakanlığının veya kliniğin, toplumdaki her bireyin 7 aşamadan tam olarak neresinde olduğunu tek tek tespit edip ona göre "biçilmiş" reklam/kamu spotu üretmesi lojistik olarak tam bir cehennemdir. 
-*Ama imkansız değildir.*
-## Kavga konusu: Gerçekten "Aşama" Diye Bir Şey Var mı?
-> *İnsan zihni bir merdiven midir, yoksa sürekli akan bir nehir mi? Yoksa tüm hepsi uydurma bir illüzyondan mı ibaret?!*
+Anlık Bir Hata / İlk Yudum (Lapse)
+          ↓
+Ağır Suçluluk & Utanç
+          ↓
+"Ben zaten iflah olmam, iradesizim..."
+          ↓
+Kontrol Kaybı: "Madem kontrol edemiyorum, battı balık yan gider!"
+          ↓
+Tam Geri Düşüş (Relapse)
+```
 
-*Buraya kadar sağlık psikolojisinin iki kampını tanıdık:* süreklilik **modelleri ve** aşamalı **modeller.** İki taraf da insan davranışını çözdüğünü iddia ediyor ve birbirinin açığını yakalıyor:
-
----
-
-**Süreklilik** modellerinin en büyük derdi şuydu:***"Niyeti harika ölçüyoruz ama eylemi tahmin edemiyoruz."***
-
- *Bu niyet-eylem-boşluğunu ne ile doldurdular? 
-Volisyon ile.*
-
-***Çelişki:*** Bir modeli "niyet öncesi" (motivasyonel) ve "niyet sonrası" (volisyonel) diye iki ayrı faza ayırırsan, o model artık "sürekli/doğrusal" bir model olmaktan çıkar...
-2 ayrı evreye bölünmüş olur.**Yani sürekli modelciler, sırf eylemi açıklayabilmek için kendi ilkelerine ihanet edip modeli aşamalıya dönüştürdüler...** ---
-
-**Aşamalı **modellerin illüzyonu: Gelelim TTM ve PAPM modellerine.. Sutton (2001) başta olmak üzere şüpheci bilim insanları bu modellere sordukları şu soru sistemi sallıyor:**"Ya bu aşamalar gerçekte yoksa?"** Yani aslında sürekli bir özelliğin yapay olarak aşamalara bölünmesi mi? Eğer aşamlar gerçekte sürekli bir özellikse, *kişiye özel*(kişiselleştirilmiş) müdahalelere gerek kalmaz.*Örnek:* İnsan boyunu "kısa, orta, uzun" diye üçe bölmek. Boy aslında *sürekli*bir değişken. Ama biz onu kategoriye koyuyoruz. Bu kategoriler doğada "gerçek" sınırlar değil, bizim çizdiğimiz sınırlar.*Soru şu* :***davranış değişim aşamaları da böyle mi, yoksa gerçekten birbirinden niteliksel olarak*** ayrı *  *durumlar mı?***
-
-> ***Eleştiri:***>Alerji ilacını almaya giden Ahmet, spora başlayan Mehmet ya da meyve yiyen Larissa aslında "niteliksel olarak farklı" aşamalarda olmayabilirler. Belki de sadece davranış motivasyonları kesintisiz bir çizgi üzerine azalıp artıyordur ve ***biz onlara yapay olarak "Action", "Contemplation" falan gibi havalı isimler veriyoruzdur?!*** Eğer bu aşamalar **yalansa**, her aşamaya özel devasa bütçeli kampanyalar yapılması tamamen para ve zaman kaybıdır. 
-
----
-## 6. Ortak Düşman: Geri Düşüş (Relapse) ve AVE
-### Ortak Düşman: Geri Düşüş (Relapse)
-*Tüm bu modellerin kesiştiği bir konu var:* insanlar kazandıkları davranışı neden ve nasıl kaybediyor?**Geri Düşüş, bir insanın yeni edindiği sağlıklı davranışı (sigarayı bırakmak, düzenli spor...)
-aniden kesip, o eski konforlu ve tehlikeli** riske geri dönmesi **durumudur. 
-
-Sağlık psikolojisi modellerinin en çok zorlandığı, çünkü insan iradesinin en** irrasyonel ve kaotik** olduğu yer burasıdır. 
-
-Bir modeli ***"gerçek"*** yapan şey, insanı yukarı taşımaktan ziyade,***düştüğünde*** sistemin bunu nasıl modellediğidir. 
-*Yani: sağlık davranışı kazanmak bir şey. Onu korumak başka bir şey.*Geri düşüş, relapse, kelimesinin hangi modele göre ne anlama geldiğinin değişmesi:*1 yudum alkol bazı modellere göre tam bir geri düşüş, bazılarına göre sadece bir*"ayak kayması/denge kaybı"*. 
-
-Bu yüzden rol oynayan şey, kullanılan bozukluk modeli.*Hastalık modeli sadece iki durum tanır:* tamamen uzak **veya geri** düşmüş.**Marlatt ve Gordon (1985) ise sosyal-kognitif pencereden bakarak süreci detaylandırır: "ayak kayması" öğrenme sürecinin** normal **bir hatasıdır ve henüz gerçek anlamda** Geri Düşüş** sayılmaz. 
-Bu teoride "Geri Düşüş" riskli davranışa ***kalıcı*** geri dönüşü temsil eder. 
-***Sosyal-kognitif perspektif temsilcileri, alkolizmin bir hastalık olduğu düşüncesinin kişinin sadece sorumluluğunu değil, aynı zamanda kontrolünü de elinden aldığını savunuyor.***
-
->** 20. yüzyıl başında popüler olan "ahlaki model"e göre çok içen kişiler iradesiz ve karakter zayıflığına sahip insanlardı....
-
-> 1960'da Jellinek bağımlılığı bir hastalık olarak ele alana kadar bunu tamamen kişinin kontrolünde olduğu inancı hakimdi. 
-
-*Paradigmadaki bu değişim, dönemin etkilenen kişileri (dönemin bağımlıları) için **iradesizlik** damgasından kurtulma anlamına geldiği için büyük bir rahatlama sağladı.**---
-
->** AA (Anonim Alkolikler) gibi Hastalık Modeli temsilcilerine göre kişi ömür boyu alkoliktir ve tek çözüm tam perhizidr, "iyileşme" diye bi şey yoktur. Bi kere alkoliksen ömür boyu alkoliksin ve tek kadeh şarap = "Geri Düşüş"tür.** >** "Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez "hastalandıysan" hayatın boyunca hastasındır ve ASLA iyileşmezsin."
->
-> *Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değil. 
-
----
-### Perhiz İhlali Etkisi (AVE - Abstinenz-Verletzungs-Effekt) Yine Marlatt ve Gordon (1985) tarafından tanımlanan AVE, perhizde olan bir kişinin küçük bir kaymadan sonra kendini** kötü **ve** suçlu **hissetmesi ve bunun nedenini internal, stabil ve global şekilde atfetmesidir:**"Ben iradesizim!"** veya *"Ben alkolik bir hastayım!"*. 
-Bu iki* atıf  *da tam olarak bir geri düşüş olasılığını artırıyor. Hem kişi bu*olumsuz duygulardan kaçmak için*yeniden içmeye yönelebilir (kısır döngü) hemde bu olumsuz atıf*doğrudan kontrol kaybına yol açıyor*: insanlar başından beri kontrol edilemez olduğuna inandıkları bir şeyi kontrol etmeye çalışmazlar, "Zaten artık değiştiremem."
-
->**Yani tek bir hatadan sonra beynimizin bize oynadığı "Battı balık yan gider.." oyununun arkasındaki bilimsel şey bu.**
-
-***Bu perhiz ihlali etkisinin mekanizması da tıkır tıkır çalışıyor:*** Anlık bir hata / İlk yudum
-↓
-Ağır suçluluk/utanç..
-↓
-"Ben zaten hastayım..."
-↓
-Kontrolün tam kaybı "E madem kontrol da edemiyorum, zaten değiştiremem!"
-↓
-Kısırdöngü
-↓
-Vahşi ve TAM bir geri düşüş **Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek **tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.**Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.**
-
-***Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.***
+> [!important] Sonuç
+> Hastalık modelinin o katı "tek yudum içersen bittin" dogması, aslında AVE'yi bizzat besleyerek bireyi elleriyle tam bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşür. 
+> 
+> **Tökezlemek normaldir.** Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak kısırdöngüyü kırarak perhize geri dönmeyi sağlar.
 
 > [!abstract] Perhiz İhlali Etkisi (AVE) ve Geri Düşüş Kısırdöngüsü
 > <div class="sc-diag-author"><a href="https://doi.org/10.1037/026217" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985)</a></div>

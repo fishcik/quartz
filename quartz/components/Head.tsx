@@ -218,19 +218,26 @@ var SC_GLYPHS=[
 function scFold(s){
   s=(s||'').toUpperCase();
   s=s.replace(/İ/g,'I').replace(/Ş/g,'S').replace(/Ç/g,'C').replace(/Ğ/g,'G').replace(/Ü/g,'U').replace(/Ö/g,'O');
-  return s.replace(new RegExp('[^A-Z0-9 ]', 'g'),' ').replace(/[\s]+/g,' ').trim();
+  return s.replace(new RegExp('[^A-Z0-9 ]', 'g'),' ').replace(/[ \t\n\r]+/g,' ').trim();
 }
 var SC_GLYPH_FULL={},SC_GLYPH_BASE={};
 SC_GLYPHS.forEach(function(e){
   var f=scFold(e[0]);if(!SC_GLYPH_FULL[f])SC_GLYPH_FULL[f]=e[1];
-  if(Array.from(e[1]).length===1){var m=f.match(/^(.*?)[\s]+(III|II|I|3|2|1)$/);var base=m?m[1]:f;if(!SC_GLYPH_BASE[base])SC_GLYPH_BASE[base]=e[1];}
+  if(Array.from(e[1]).length===1){var m=f.match(/^(.*?)[ \t]+(III|II|I|3|2|1)$/);var base=m?m[1]:f;if(!SC_GLYPH_BASE[base])SC_GLYPH_BASE[base]=e[1];}
 });
 function scGlyphFor(title){
   var f=scFold(title);
   if(SC_GLYPH_FULL[f])return SC_GLYPH_FULL[f];
-  var m=f.match(/^(.*?)[\s]+(III|II|I|3|2|1)$/);
+  var m=f.match(/^(.*?)[ \t]+(III|II|I|3|2|1)$/);
   if(m){var base=m[1],c=({I:1,II:2,III:3,'1':1,'2':2,'3':3})[m[2]],g=SC_GLYPH_BASE[base];if(g){var o='';for(var i=0;i<c;i++)o+=g;return o;}}
   return '';
+}
+function scGetElByHref(href){
+  if(!href) return null;
+  var rawId = href.replace(/^#/, '');
+  var decodedId = '';
+  try { decodedId = decodeURIComponent(rawId); } catch(e){ decodedId = rawId; }
+  return document.getElementById(decodedId) || document.getElementById(rawId);
 }
 // ── Otomatik tema: Luzern gün doğumu/batımına göre (manuel seçim oturum boyunca öncelikli) ──
 function scAutoTheme(){
@@ -285,7 +292,7 @@ function ensure(){
     if(badge){
       var pct=Math.round(p*100);
       var art=document.querySelector('article, .center');
-      var wc=art?(art.textContent||'').split(new RegExp('[\\\\s]+')).length:600;
+      var wc=art?(art.textContent||'').split(/[ \t\n\r]+/).length:600;
       var totalMin=Math.ceil(wc/180);
       var remMin=Math.max(1, Math.ceil(totalMin*(1-p)));
       badge.textContent='%'+pct+(p<0.95?' • ~'+remMin+' dk':' • Bitti');
@@ -531,13 +538,6 @@ function updateBcLayers(){
           }
         });
       }
-function scGetElByHref(href){
-  if(!href) return null;
-  var rawId = href.replace(/^#/, '');
-  var decodedId = '';
-  try { decodedId = decodeURIComponent(rawId); } catch(e){ decodedId = rawId; }
-  return document.getElementById(decodedId) || document.getElementById(rawId);
-}
 
       if(tocItems.length>0){
         var tocWrap=document.createElement('div');tocWrap.className='sc-bclayer-toc';
@@ -1808,7 +1808,7 @@ function scOpenDiagramModal(svgEl, titleText){
   if(!dm) return;
   var cont = dm.querySelector('#sc-diagram-modal-content');
   var titleEl = dm.querySelector('#sc-diag-modal-title');
-  if(titleEl && titleText) titleEl.textContent = titleText.replace(/^[\s\u200B-\u200D\uFEFF]+/, '').trim();
+  if(titleEl && titleText) titleEl.textContent = titleText.replace(/^[ \t\n\r\u200B-\u200D\uFEFF]+/, '').trim();
   if(!cont) return;
   cont.innerHTML = '';
   
