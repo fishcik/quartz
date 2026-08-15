@@ -1,29 +1,35 @@
-# 🏛️ SİKİLDİ.md — `sayko.ch` Evrensel İçerik, Tipografi ve Görselleştirme Anayasası
+# 🏛️ SİKİLDİ.md — `sayko.ch` Evrensel İçerik, Tipografi, Felsefe ve Bilimsel Görselleştirme Anayasası
 
 > **"Psikoloji: Kitapta durduğu gibi durmaz. Teori biter, maruz kalma başlar."**
 
-Bu anayasa; `sayko.ch` üzerindeki tüm makalelerin metin formatını, tipografisini, nöral ağ (graph) bağlantılarını, kavram sözlüğünü (K&K), akademik kaynakçasını ve bilimsel/kavramsal modellerini tek bir atomik süreçte **İsviçre saati hassasiyetinde** üretmek ve denetlemek için oluşturulmuş **nihai süper-protokoldür**.
+Bu anayasa; `sayko.ch` üzerindeki tüm makalelerin metin formatını, edebi/serseri üslubunu, tipografisini, nöral ağ (graph) bağlantılarını, kavram sözlüğünü (K&K), akademik kaynakçasını ve bilimsel/kavramsal modellerini tek bir atomik süreçte **İsviçre saati hassasiyetinde** üretmek ve denetlemek için oluşturulmuş **nihai süper-protokoldür**.
 
 ---
 
 ## 📑 İçindekiler
 
 - [[#1. DOKUNULMAZ ALAN — Yazının Sesi ve Ruhu]]
-- [[#2. Frontmatter Standardı]]
-- [[#3. Tipografi, Başlık ve Renk Hiyerarşisi]]
-- [[#4. TOC — İçindekiler ve Sayfa Mimarisi]]
-- [[#5. Nöral Ağ (Graph View) ve Wikilink Protokolü]]
-- [[#6. Callout Haritası ve Görsel Ritim]]
-- [[#7. K&K (Kavramlar & Kelimeler / Footnotes) Sistemi]]
-- [[#8. Akademik Kaynakça — APA 7 Standardı]]
-- [[#9. Bilimsel Görselleştirme ve Model Mimarisi]]
-  - [[#9.1 Alfanümerik Model Kodlama Standardı]]
-  - [[#9.2 Saf Vektör (Inline Sayko SVG) İlkeleri]]
-  - [[#9.3 Semantik Renk ve Çizgi Paleti]]
-  - [[#9.4 Standart Callout Anatomisi]]
-- [[#10. Yasaklı Tasarım Kalıpları (Forbidden Clichés)]]
-- [[#11. Atomik Uygulama Workflow'u (Adım Adım)]]
-- [[#12. Standart Çıktı & Değerlendirme Raporu Şablonu]]
+- [[#2. Felsefi Temeller: Karpathy Sadeliği & Kepano Dayanıklılığı]]
+- [[#3. Frontmatter Standardı]]
+- [[#4. Tipografi, Başlık ve Renk Hiyerarşisi]]
+- [[#5. TOC — İçindekiler ve Sayfa Mimarisi]]
+- [[#6. Nöral Ağ (Graph View) ve Wikilink Protokolü]]
+- [[#7. Callout Haritası ve Görsel Ritim]]
+- [[#8. K&K (Kavramlar & Kelimeler / Footnotes) Sistemi]]
+- [[#9. Akademik Kaynakça — APA 7 Standardı]]
+- [[#10. Görsel Felsefe: "Argue, Not Display" (İddia Et, Sergileme)]]
+  - [[#10.1 İzomorfizm Testi]]
+  - [[#10.2 Kutu Disiplini — < %30 Kuralı]]
+  - [[#10.3 Multi-Zoom Katmanlaşması]]
+- [[#11. Bilimsel Görselleştirme ve Vektör Mimarisi]]
+  - [[#11.1 Alfanümerik Model Kodlama Standardı]]
+  - [[#11.2 Saf Vektör (Inline Sayko SVG) İlkeleri]]
+  - [[#11.3 Yüksek Kontrast ve Dinamik Tema Güvencesi]]
+  - [[#11.4 Semantik Renk ve Çizgi Paleti]]
+  - [[#11.5 Standart Callout Anatomisi]]
+- [[#12. Yasaklı Tasarım Kalıpları (Forbidden Clichés)]]
+- [[#13. Atomik Uygulama Workflow'u (Adım Adım)]]
+- [[#14. Standart Çıktı & Değerlendirme Raporu Şablonu]]
 
 ---
 
@@ -32,7 +38,7 @@ Bu anayasa; `sayko.ch` üzerindeki tüm makalelerin metin formatını, tipografi
 Formatlama yapılırken metnin **özüne, üslubuna, edebi ritmine ve sesine kesinlikle müdahale edilmez:**
 
 - **Noktalama Özgürlüğü:** `......`, `—`, virgülsüz akış, kesik cümleler — hepsi kasıtlıdır; düzeltilmez.
-- **Kelime Seçimi ve Söz Dizimi:** Sokak dili, akademik kaymalar, "tabi", "bi", "yani:", "lan", "genco" gibi samimi, sert ve otantik ifadeler aynen korunur.
+- **Kelime Seçimi ve Söz Dizimi:** Sokak dili, akademik kaymalar, "tabi", "bi", "yani:", "lan", "genco", "fiyasko", "bomba" gibi samimi, sert ve otantik ifadeler aynen korunur.
 - **Cümle ve Paragraf Yapısı:** Yazar nerede nefes almış, nerede bölmüşse orada kalır. Cümleler yapay olarak birleştirilmez veya bölünmez.
 - **Mevcut Vurgular:** Yazarın koyduğu `==highlight==`, `*italik*` veya `**bold**` dengelerine dokunulmaz.
 - **Sadece Sentaks Temizliği:** Hatalı veya yapışık yazılan Markdown kodları düzeltilir (Örn: `ben**bugün**` yerine `ben **bugün**`).
@@ -42,7 +48,18 @@ Formatlama yapılırken metnin **özüne, üslubuna, edebi ritmine ve sesine kes
 
 ---
 
-## 2. Frontmatter Standardı
+## 2. Felsefi Temeller: Karpathy Sadeliği & Kepano Dayanıklılığı
+
+1. **Karpathy İlkesi (İlk İlkelerden Düşünme & Yalınlık):** 
+   - Dışarıdan hantal kütüphaneler yükleme; yapabileceğin en hafif, en temiz ve en kararlı araçla çöz (Bkz: Kırılgan Mermaid yerine saf Inline SVG). 
+   - Kodun ve şablonun her pikselinin neden orada olduğunu tam olarak bil.
+2. **Kepano İlkesi (Dayanıklı Plain-Text Mimarisi):**
+   - Yazılar 50 yıl sonra bile her Markdown okuyucusunda bozulmadan okunabilecek yalınlıkta olmalıdır.
+   - Veri yapıları standart olmalı, platforma bağımlı karmaşık eklenti çöplüklerinden arındırılmalıdır.
+
+---
+
+## 3. Frontmatter Standardı
 
 Vault veri düzenini, Quartz derleyicisini ve arama motorunu temiz tutmak için sadece üç zorunlu alan kullanılır:
 
@@ -62,7 +79,7 @@ tags:
 
 ---
 
-## 3. Tipografi, Başlık ve Renk Hiyerarşisi
+## 4. Tipografi, Başlık ve Renk Hiyerarşisi
 
 Sitedeki tüm yazılar otantik bir edebi/akademik kimlikle render edilir:
 
@@ -78,7 +95,7 @@ Sitedeki tüm yazılar otantik bir edebi/akademik kimlikle render edilir:
 
 ---
 
-## 4. TOC — İçindekiler ve Sayfa Mimarisi
+## 5. TOC — İçindekiler ve Sayfa Mimarisi
 
 Uzun notlarda (3 veya daha fazla ana başlık içeren) frontmatter'dan hemen sonra eklenir:
 
@@ -97,7 +114,7 @@ Uzun notlarda (3 veya daha fazla ana başlık içeren) frontmatter'dan hemen son
 
 ---
 
-## 5. Nöral Ağ (Graph View) ve Wikilink Protokolü
+## 6. Nöral Ağ (Graph View) ve Wikilink Protokolü
 
 `sayko.ch` vault'u yaşayan bir nöral ağdır. Graph View'ın tam kapasite çalışması ve kopuk düğüm oluşmaması için:
 
@@ -114,7 +131,7 @@ Uzun notlarda (3 veya daha fazla ana başlık içeren) frontmatter'dan hemen son
 
 ---
 
-## 6. Callout Haritası ve Görsel Ritim
+## 7. Callout Haritası ve Görsel Ritim
 
 Yazının "dümdüz bir metin bloku" gibi görünmesini engellemek ve okuma temposunu artırmak için uygun yerlerde semantik çağrı kutuları kullanılır:
 
@@ -132,7 +149,7 @@ Yazının "dümdüz bir metin bloku" gibi görünmesini engellemek ve okuma temp
 
 ---
 
-## 7. K&K (Kavramlar & Kelimeler / Footnotes) Sistemi
+## 8. K&K (Kavramlar & Kelimeler / Footnotes) Sistemi
 
 Her yazının içinde geçen; genel okuyucunun veya alana daha az aşina olanların tam bilemeyeceği terimler, sendromlar ve jargonlar dipnot olarak işaretlenir:
 
@@ -151,7 +168,7 @@ Metin içerisinde geçen kısıtlayıcı yeme davranışı[^kisitlayici-yeme] ve
 
 ---
 
-## 8. Akademik Kaynakça — APA 7 Standardı
+## 9. Akademik Kaynakça — APA 7 Standardı
 
 `sayko.ch`'nin bilimsel omurgasıdır. Yazının dayandığı tüm teorik/ampirik literatür metnin **en sonuna** `## Kaynaklar` başlığı altında eklenir.
 
@@ -168,11 +185,32 @@ Metin içerisinde geçen kısıtlayıcı yeme davranışı[^kisitlayici-yeme] ve
 
 ---
 
-## 9. Bilimsel Görselleştirme ve Model Mimarisi
+## 10. Görsel Felsefe: "Argue, Not Display" (İddia Et, Sergileme)
 
-Görselleştirme süs değildir; metnin teorik çekirdeğini kristalleştiren **bilişsel zihin modelidir**.
+Görselleştirme `sayko.ch` için süs veya metin tekrarı değildir; metnin teorik çekirdeğini kanıtlayan **bilişsel bir zihin modelidir (Mental Model)**.
 
-### 9.1 Alfanümerik Model Kodlama Standardı
+### 10.1 İzomorfizm Testi (The Isomorphism Test)
+> *"Tüm yazıları sildiğinde, diyagramın sadece şekli bile o teoriyi anlatabiliyor mu?"*
+- Bir geri düşüş şeması **düşüşü ve kısırdöngüyü**,
+- Bir Rubikon modeli **nehir/köprü geçişini ve geri dönüşsüzlüğü**,
+- Bir maliyet-fayda modeli **teraziyi ve ağırlık merkezini**,
+- Bir triaj/tanı modeli **akış hunisini** görsel form olarak yansıtmalıdır. Formun kendisi anlam taşımıyorsa tasarım yanlıştır.
+
+### 10.2 Kutu Disiplini — < %30 Kuralı (Container vs. Free-Floating)
+- Her cümleyi dikdörtgen kutu içine hapsetme hastalığından (box-in-box cliché) kaçınılır.
+- Görseldeki metinlerin **%70'i serbest metin (free-floating text)** olmalı; hiyerarşi font boyutu, kalınlığı, renkleri ve bağlayıcı çizgilerle kurulmalıdır. Kutu sadece odak noktası veya sistem sınırları için kullanılır.
+
+### 10.3 Multi-Zoom Katmanlaşması
+Kapsamlı modeller 3 düzlemde bilgi verir:
+1. **Level 1 (Özet Akış):** İlk bakışta anlaşılan ana yön (Girdi $\rightarrow$ Karar $\rightarrow$ Çıktı).
+2. **Level 2 (Sistem Sınırları):** Motivasyonel vs. Volisyonel faz gibi ayrım alanları.
+3. **Level 3 (Somut Kanıt & Detay):** Formüller ($A \times B$), yüzde varyansları (%57 vs %20), gerçek ampirik veriler.
+
+---
+
+## 11. Bilimsel Görselleştirme ve Vektör Mimarisi
+
+### 11.1 Alfanümerik Model Kodlama Standardı
 Her model ve wild card için benzersiz alfanümerik kod kullanılır:
 - **Kategori Harfi:** `S` (Sağlık), `K` (Klinik), `G` (Gelişim), `B` (Biliş), `İ` (İstatistik), `Y` (Yöntem), `N` (Nörobilim).
 - **Makale No:** Kategorideki makale sırası (Örn: `S3` = Beslenme).
@@ -181,14 +219,20 @@ Her model ve wild card için benzersiz alfanümerik kod kullanılır:
 
 ---
 
-### 9.2 Saf Vektör (Inline Sayko SVG) İlkeleri
+### 11.2 Saf Vektör (Inline Sayko SVG) İlkeleri
 - **Sıfır Dış Bağımlılık:** Görseller kütüphane yükleme beklemez; doğrudan `<svg viewBox="..." width="100%" style="max-width: 680px; height: auto;">` olarak yerleştirilir.
-- **Responsive & Dynamic Theme:** Metin renkleri `var(--dark)` veya CSS değişkenlerine bağlanır; hem koyu hem açık modda mükemmel okunur.
 - **Tek Parça XML:** Markdown parser çakışmalarını önlemek için `<svg>` etiketleri arasında boşluksuz, temiz ve geçerli XML yapısı kullanılır.
+- **Çift Tıklama ile Zoom:** Sayfadaki tüm SVG modeller çift tıklama ile tam ekran inceleme modalında açılır.
 
 ---
 
-### 9.3 Semantik Renk ve Çizgi Paleti
+### 11.3 Yüksek Kontrast ve Dinamik Tema Güvencesi
+- **Açık/Koyu Mod Güvencesi:** Metin renkleri asla tarayıcı varsayılanına bırakılmaz. Koyu temada kaybolmayı önlemek için `fill="var(--dark)"`, `fill="#C8102E"`, `fill="#c79a6d"` veya `fill="#96c46c"` açıkça tanımlanır.
+- **WCAG Seviyesi Kontrast:** Açık arka plan üzerinde koyu metin, koyu arka plan üzerinde açık metin ilkesi her düğümde zorunludur.
+
+---
+
+### 11.4 Semantik Renk ve Çizgi Paleti
 
 | Renk Sınıfı | HEX Kodu | Anlamı & Kullanım Alanı |
 | :--- | :--- | :--- |
@@ -199,7 +243,7 @@ Her model ve wild card için benzersiz alfanümerik kod kullanılır:
 
 ---
 
-### 9.4 Standart Callout Anatomisi
+### 11.5 Standart Callout Anatomisi
 
 Her model `> [!abstract]` çağrı kutusu içinde, başlıksız emojisiz, ortalı yazar-yıl künyesiyle ve alt açıklamasıyla çerçevelenir:
 
@@ -220,12 +264,12 @@ Her model `> [!abstract]` çağrı kutusu içinde, başlıksız emojisiz, ortal�
 
 ---
 
-## 10. Yasaklı Tasarım Kalıpları (Forbidden Clichés)
+## 12. Yasaklı Tasarım Kalıpları (Forbidden Clichés)
 
 Aşağıdaki klişeler Sayko.ch genelinde **KESİNLİKLE YASAKTIR**:
 1. ❌ **Gereksiz Dashboard:** Dashboard gerektirmeyen metne panel/widget sıkıştırmak.
 2. ❌ **Karanlıkta Mor/Neon:** Koyu temada mor/neon parlamalar.
-3. ❌ **İlişkisiz İkon Yığını (Bento Box Cliché):** Alakasız süs ikonları doldurmak.
+3. ❌ **İlişkisiz İkon Yığını (Bento Box Cliché):** Alakasız süs emojileri doldurmak.
 4. ❌ **Başlık Üstü Nabız Atan Hap (Biscuit Pill):** Başlık üzerine gereksiz noktalı hap rozetler koymak.
 5. ❌ **Gradient Başlıklar:** Başlık kelimelerine ucuz CSS degrade efektleri basmak.
 6. ❌ **Izgara/Mesh Arka Planlar:** Sayfa arkasına yapay grid çizgileri sermek.
@@ -234,7 +278,7 @@ Aşağıdaki klişeler Sayko.ch genelinde **KESİNLİKLE YASAKTIR**:
 
 ---
 
-## 11. Atomik Uygulama Workflow'u (Adım Adım)
+## 13. Atomik Uygulama Workflow'u (Adım Adım)
 
 Bir makaleye `SİKİLDİ.md` yedirilirken şu sıra izlenir:
 
@@ -255,7 +299,7 @@ flowchart TD
 
 ---
 
-## 12. Standart Çıktı & Değerlendirme Raporu Şablonu
+## 14. Standart Çıktı & Değerlendirme Raporu Şablonu
 
 Her makale işlemi bittiğinde kullanıcıya aşağıdaki standart formatta kısa, öz ve net rapor sunulur:
 
