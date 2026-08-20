@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SAYKO.CH // CYBERDECK-86 VPF-MAINFRAME</title>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#ffb000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d0e0f'/><text x='50' y='65' font-family='monospace' font-weight='bold' font-size='50' fill='%23ffb000' text-anchor='middle'>Ψ86</text></svg>">
+  
+  <!-- Leaflet Map CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <style>
+    /* ==========================================================================
+       CYBERDECK-86 RETRO CRT & MAINFRAME DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-base: #0a0b0c;
+      --bg-surface: #101214;
+      --bg-card: #15181b;
+      --bg-highlight: #1d2126;
+      
+      /* Primary Phosphor Palette (Default: Amber) */
+      --primary: #ffb000;
+      --primary-dim: #996a00;
+      --primary-glow: rgba(255, 176, 0, 0.4);
+      --primary-subtle: rgba(255, 176, 0, 0.12);
+      
+      --accent-cyan: #00f0ff;
+      --accent-green: #33ff33;
+      --accent-red: #ff3344;
+      --accent-amber: #ffb000;
+      
+      --border-color: #332600;
+      --text-muted: #8a7a50;
+      --font-mono: "Share Tech Mono", "Courier New", Courier, monospace;
+      --scanline-opacity: 0.15;
+    }
+
+    [data-theme="green"] {
+      --primary: #33ff33;
+      --primary-dim: #1a801a;
+      --primary-glow: rgba(51, 255, 51, 0.4);
+      --primary-subtle: rgba(51, 255, 51, 0.12);
+      --border-color: #0d330d;
+      --text-muted: #558855;
+    }
+
+    [data-theme="cyan"] {
+      --primary: #00f0ff;
+      --primary-dim: #00808a;
+      --primary-glow: rgba(0, 240, 255, 0.4);
+      --primary-subtle: rgba(0, 240, 255, 0.12);
+      --border-color: #00333a;
+      --text-muted: #4d8c91;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--primary);
+      font-family: var(--font-mono);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* CRT Overlay & Scanline Effects */
+    .crt-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 99999;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 3px, 6px 100%;
+      opacity: var(--scanline-opacity);
+    }
+
+    .crt-bloom {
+      text-shadow: 0 0 4px var(--primary-glow);
+    }
+
+    /* Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-base); }
+    ::-webkit-scrollbar-thumb { background: var(--primary-dim); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+    /* Top HUD / Status Bar */
+    header.deck-hud {
+      background: var(--bg-surface);
+      border-bottom: 2px solid var(--primary-dim);
+      padding: 8px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .hud-left, .hud-right, .hud-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hud-badge {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .led-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .led-green { background: #33ff33; box-shadow: 0 0 6px #33ff33; }
+    .led-red { background: #ff3344; box-shadow: 0 0 6px #ff3344; }
+    .led-amber { background: #ffb000; box-shadow: 0 0 6px #ffb000; animation: blink 1.2s infinite; }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .hud-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--primary-dim);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: bold;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .hud-btn:hover, .hud-btn.active {
+      background: var(--primary);
+      color: var(--bg-base);
+      box-shadow: 0 0 8px var(--primary-glow);
+    }
+
+    /* Tab Navigation Deck */
+    nav.deck-tabs {
+      background: var(--bg-base);
+      border-bottom: 1px solid var(--border-color);
+      padding: 6px 16px;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+    }
+
+    .tab-item {
+      padding: 6px 14px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 3px 3px 0 0;
+      font-size: 13px;
+      font-weight: bold;
+      transition: all 0.15s;
+    }
+    .tab-item:hover {
+      color: var(--primary);
+      border-color: var(--primary-dim);
+    }
+    .tab-item.active {
+      background: var(--bg-card);
+      color: var(--primary);
+      border-color: var(--primary);
+      border-bottom: 2px solid var(--bg-card);
+      box-shadow: inset 0 2px 0 var(--primary);
+    }
+
+    /* Main Content Area */
+    main.deck-main {
+      flex: 1;
+      padding: 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Tactical Cards & Grid */
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+
+    .retro-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 16px;
+      position: relative;
+    }
+    .retro-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px dashed var(--border-color);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    /* Login / Authentication Gate Screen */
+    #auth-gate {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: #050607;
+      z-index: 99998;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .bios-box {
+      max-width: 620px;
+      width: 100%;
+      background: #0d0f12;
+      border: 2px solid var(--primary);
+      padding: 24px;
+      box-shadow: 0 0 25px var(--primary-glow);
+      border-radius: 4px;
+    }
+    .bios-line { margin-bottom: 8px; font-family: var(--font-mono); }
+    .bios-input-group {
+      display: flex;
+      margin-top: 20px;
+      border: 1px solid var(--primary);
+      background: #000;
+    }
+    .bios-prompt { padding: 10px 14px; background: var(--primary-dim); color: #000; font-weight: bold; }
+    .bios-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--primary);
+      font-family: var(--font-mono);
+      font-size: 16px;
+      padding: 10px 14px;
+      outline: none;
+    }
+
+    /* Leaflet Customization for GTA Blueprint Radar */
+    #radar-map {
+      height: 520px;
+      width: 100%;
+      border: 2px solid var(--primary-dim);
+      border-radius: 4px;
+      background: #090b0e;
+    }
+    .leaflet-container { background: #090b0e !important; font-family: var(--font-mono); }
+    .leaflet-popup-content-wrapper {
+      background: var(--bg-surface) !important;
+      color: var(--primary) !important;
+      border: 1px solid var(--primary) !important;
+      border-radius: 4px !important;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8) !important;
+    }
+    .leaflet-popup-tip { background: var(--bg-surface) !important; border: 1px solid var(--primary); }
+
+    /* Progress Matrix & ECTS Bars */
+    .progress-bar-container {
+      background: var(--bg-base);
+      border: 1px solid var(--border-color);
+      height: 18px;
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 8px 0;
+      position: relative;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      transition: width 0.4s ease;
+    }
+
+    /* Course Table */
+    .course-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    .course-table th, .course-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .course-table th { background: var(--bg-surface); color: var(--primary); }
+    .course-table tr:hover td { background: var(--primary-subtle); cursor: pointer; }
+    .status-badge {
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .status-done { background: rgba(51,255,51,0.2); color: #33ff33; border: 1px solid #33ff33; }
+    .status-progress { background: rgba(255,176,0,0.2); color: #ffb000; border: 1px solid #ffb000; }
+    .status-planned { background: rgba(150,150,150,0.2); color: #aaa; border: 1px solid #666; }
+
+    /* Modal Dossier */
+    .modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.85);
+      z-index: 10000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal-backdrop.active { display: flex; }
+    .modal-window {
+      background: var(--bg-surface);
+      border: 2px solid var(--primary);
+      width: 100%;
+      max-width: 650px;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      border-radius: 4px;
+      box-shadow: 0 0 30px var(--primary-glow);
+    }
+
+    /* Ol' Grumpy Mafia Room */
+    .grumpy-room {
+      background: #0d0c0c;
+      border: 2px solid #8b0000;
+      box-shadow: 0 0 20px rgba(139, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 4px;
+    }
+    .grumpy-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #8b0000;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .grumpy-dropzone {
+      border: 2px dashed #8b0000;
+      background: rgba(139, 0, 0, 0.08);
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .grumpy-dropzone:hover, .grumpy-dropzone.dragover {
+      background: rgba(139, 0, 0, 0.2);
+      border-color: #ff3344;
+    }
+
+    /* Note Taker & Inputs */
+    textarea.retro-input, input.retro-input {
+      width: 100%;
+      background: #000;
+      border: 1px solid var(--border-color);
+      color: var(--primary);
+      font-family: var(--font-mono);
+      padding: 10px;
+      border-radius: 3px;
+      outline: none;
+      font-size: 13px;
+    }
+    textarea.retro-input:focus, input.retro-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 8px var(--primary-glow);
+    }
+
+    /* To-Do Items */
+    .todo-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 8px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .todo-item.done span {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    /* Command Palette */
+    #cmd-palette {
+      position: fixed;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 550px;
+      background: #0d0f12;
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 30px var(--primary-glow);
+      z-index: 10001;
+      padding: 16px;
+      border-radius: 4px;
+      display: none;
+    }
+    #cmd-palette.active { display: block; }
+  </style>
+</head>
+<body data-theme="amber">
+
+  <!-- CRT Shader Overlay -->
+  <div class="crt-overlay" id="crt-layer"></div>
+
+  <!-- =========================================================================
+       1. AUTHENTICATION GATE (BIOS / CIPHER SHIELD)
+       ========================================================================= -->
+  <div id="auth-gate">
+    <div class="bios-box">
+      <div class="bios-line crt-bloom" style="font-weight: bold; font-size: 16px; color: var(--primary);">
+        [⚡] SAYKO.CH CYBERDECK-86 BIOS v3.0 // BURGERTOR HQ
+      </div>
+      <div class="bios-line" style="color: var(--text-muted);">
+        CORE: 180 ECTS ACADEMIC MAINFRAME // VPF & KSF SUBSYSTEM
+      </div>
+      <div class="bios-line" style="color: var(--text-muted);">
+        MEMORY ENCRYPTION: AES-256-GCM (100,000 PBKDF2 ROUNDS)
+      </div>
+      <div class="bios-line" style="margin-top: 12px; color: var(--accent-cyan);">
+        [STATUS] ZERO-KNOWLEDGE SHIELD ACTIVE. AUTHENTICATION REQUIRED.
+      </div>
+      <div class="bios-input-group">
+        <div class="bios-prompt">[>] ACCESS CODE:</div>
+        <input type="password" id="pass-input" class="bios-input" placeholder="Parolayı giriniz..." autofocus autocomplete="off">
+      </div>
+      <div id="auth-msg" style="margin-top: 12px; font-size: 12px; min-height: 18px;"></div>
+      <div style="margin-top: 16px; font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+        <span>İpucu: Varsayılan Master Kodu: <b>BURGERTOR86</b></span>
+        <span>[ENTER] GİRİŞ YAP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP HUD / STATUS BAR
+       ========================================================================= -->
+  <header class="deck-hud">
+    <div class="hud-left">
+      <span style="font-weight: bold; font-size: 15px; letter-spacing: 1px;" class="crt-bloom">Ψ CYBERDECK-86</span>
+      <div class="hud-badge" id="hud-weather">
+        <span>☁️ LUZERN 19°C</span>
+        <span style="color: var(--text-muted);">// REUSS: SAKİN</span>
+      </div>
+      <div class="hud-badge" id="hud-zhb">
+        <span class="led-dot led-green" id="zhb-led"></span>
+        <span id="zhb-status-text">ZHB UNI/PH: 🟢 AÇIK (21:30'a kadar)</span>
+      </div>
+    </div>
+
+    <div class="hud-center">
+      <div class="hud-badge" id="hud-clock" style="font-weight: bold; font-family: var(--font-mono);">
+        00:00:00 LUZERN
+      </div>
+    </div>
+
+    <div class="hud-right">
+      <!-- Theme Switcher -->
+      <button class="hud-btn" onclick="toggleTheme('amber')">🟡 AMBER</button>
+      <button class="hud-btn" onclick="toggleTheme('green')">🟢 GREEN</button>
+      <button class="hud-btn" onclick="toggleTheme('cyan')">🔵 CYAN</button>
+      
+      <!-- CRT & Audio Controls -->
+      <button class="hud-btn" id="crt-toggle-btn" onclick="toggleCRT()">📺 CRT: ON</button>
+      <button class="hud-btn" id="sound-btn" onclick="toggleAudio()">🔊 SFX: ON</button>
+      <button class="hud-btn" style="border-color: var(--accent-red); color: var(--accent-red);" onclick="lockTerminal()">🔒 KİLİTLE</button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. TACTICAL TABS NAVIGATION
+       ========================================================================= -->
+  <nav class="deck-tabs">
+    <div class="tab-item active" onclick="switchTab('tab-radar')">🗺️ RADAR MAP (:map)</div>
+    <div class="tab-item" onclick="switchTab('tab-matrix')">📊 180 ECTS MATRİS (:ects)</div>
+    <div class="tab-item" onclick="switchTab('tab-wochenplan')">🗓️ HAFTALIK TAKVİM (:cal)</div>
+    <div class="tab-item" onclick="switchTab('tab-libraries')">📖 KÜTÜPHANELER & COWORK (:zhb)</div>
+    <div class="tab-item" onclick="switchTab('tab-court')">⚖️ MAHKEME // GERICHTE (:court)</div>
+    <div class="tab-item" onclick="switchTab('tab-perks')">🎟️ LEGİ PERKS MAX (:perks)</div>
+    <div class="tab-item" onclick="switchTab('tab-profs')">🧠 HOCA İSTİHBARATI (:profs)</div>
+    <div class="tab-item" onclick="switchTab('tab-grumpy')">🕵️ OL' GRUMPY SIGINT (:grumpy)</div>
+    <div class="tab-item" onclick="switchTab('tab-notes')">📝 NOTLAR & HABITS (:notes)</div>
+    <div class="tab-item" onclick="switchTab('tab-settings')">⚙️ AYARLAR & VAULT (:settings)</div>
+  </nav>
+
+  <!-- =========================================================================
+       4. MAIN DISPLAY TERMINALS
+       ========================================================================= -->
+  <main class="deck-main">
+
+    <!-- TAB 1: GTA LUZERN RADAR MAP -->
+    <section id="tab-radar" class="tab-pane active">
+      <div class="retro-card">
+        <div class="retro-card-header">
+          <span>🎯 BURGERTOR HQ TAKTİKSEL RADAR HARİTASI // LUZERN BLUEPRINT</span>
+          <span style="font-size: 12px; color: var(--text-muted);">MERKEZ: BURGERSTRASSE 22, 6003 LUZERN</span>
+        </div>
+        <div id="radar-map"></div>
+        <div style="margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px;">
+          <span>🟢 <b>5 dk Çapı (400m):</b> ZHB Sempacherstr, Hirschengraben Coworking</span>
+          <span>🟡 <b>10 dk Çapı (800m):</b> UniLu Kampüs & ZHB Frohburgstr (850m), Bahnhof, Kriminalgericht (600m), Neubad (750m)</span>
+          <span>🔴 <b>15 dk Çapı (1.2km):</b> Ufschötti Plajı, Bourbaki Kino & KKL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: 180 ECTS ACADEMIC MATRIX & GPA -->
+    <section id="tab-matrix" class="tab-pane">
+      <div class="grid-2" style="margin-bottom: 16px;">
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>📈 LİSANS İLERLEME VE ECTS SAYACI</span>
+            <span id="total-ects-badge" style="color: var(--accent-cyan); font-weight: bold;">0 / 180 ECTS</span>
+          </div>
+          <div>Toplam İlerleme (180 ECTS):</div>
+          <div class="progress-bar-container"><div id="progress-total" class="progress-bar-fill" style="width: 0%;"></div></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; font-size: 12px; margin-top: 8px;">
+            <div>Ψ Psychologie (120): <span id="ects-psy">0</span> ECTS</div>
+            <div>🏛️ Politik (30): <span id="ects-pol">0</span> ECTS</div>
+            <div>📜 Geschichte (30): <span id="ects-ges">0</span> ECTS</div>
+          </div>
+        </div>
+
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>🇨🇭 İSVİÇRE NOT ORTALAMASI (NOTENSCHNITT / GPA)</span>
+            <span id="gpa-badge" style="font-size: 18px; font-weight: bold; color: var(--accent-green);">GPA: -</span>
+          </div>
+          <div style="font-size: 13px; color: var(--text-muted);">
+            İsviçre Not Skalası: <b>6.0</b> (En Yüksek) — <b>4.0</b> (Geçer Not) — <b>1.0</b> (En Düşük).
+            Ders listesinden aldığın notları gir, sistem ağırlıklı GPA'ini otomatik hesaplasın.
+          </div>
+        </div>
+      </div>
+
+      <div class="retro-card">
+        <div class="retro-card-header">
+          <span>📚 DERS PROGRAMI VE MODÜLLER (DETAYLAR İÇİN DERSİN ÜZERİNE TIKLA)</span>
+          <div style="display: flex; gap: 8px;">
+            <button class="hud-btn" onclick="filterCourses('all')">TÜMÜ</button>
+            <button class="hud-btn" onclick="filterCourses('psy')">PSY (120)</button>
+            <button class="hud-btn" onclick="filterCourses('pol')">POL (30)</button>
+            <button class="hud-btn" onclick="filterCourses('ges')">GES (30)</button>
+          </div>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="course-table" id="courses-table">
+            <thead>
+              <tr>
+                <th>Dönem</th>
+                <th>Kod / Alan</th>
+                <th>Ders Adı</th>
+                <th>ECTS</th>
+                <th>Dozent / Sorumlu</th>
+                <th>Kayıt Modu</th>
+                <th>Durum</th>
+                <th>Not (1-6)</th>
+              </tr>
+            </thead>
+            <tbody id="course-list-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: WOCHENPLAN (WEEKLY TIMETABLE) -->
+    <section id="tab-wochenplan" class="tab-pane">
+      <div class="retro-card">
+        <div class="retro-card-header">
+          <span>🗓️ HAFTALIK DERS VE ETKİNLİK MATRİSİ (HS26 // GÜZ DÖNEMİ)</span>
+          <button class="hud-btn" onclick="downloadICS()">📅 APPLE/GOOGLE TAKVİME AKTAR (.ICS)</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px;">
+          <!-- Pazartesi -->
+          <div class="retro-card" style="background: #0d0f12;">
+            <div style="color: var(--accent-cyan); font-weight: bold; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">PAZARTESİ</div>
+            <div style="margin-top: 8px; font-size: 12px;">
+              <b>10:15 - 12:00</b><br>
+              <span style="color: var(--primary);">Kognitionspsychologie 1</span><br>
+              <span style="color: var(--text-muted);">Hörsaal 1 // Prof. Mast</span>
+            </div>
+          </div>
+          <!-- Salı -->
+          <div class="retro-card" style="background: #0d0f12;">
+            <div style="color: var(--accent-cyan); font-weight: bold; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">SALI</div>
+            <div style="margin-top: 8px; font-size: 12px;">
+              <b>08:15 - 10:00</b><br>
+              <span style="color: var(--primary);">Statistik 1 mit Übungen</span><br>
+              <span style="color: var(--text-muted);">Hörsaal 3 // VPF</span>
+            </div>
+          </div>
+          <!-- Çarşamba -->
+          <div class="retro-card" style="background: #0d0f12;">
+            <div style="color: var(--accent-cyan); font-weight: bold; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">ÇARŞAMBA</div>
+            <div style="margin-top: 8px; font-size: 12px;">
+              <b>14:15 - 16:00</b><br>
+              <span style="color: var(--primary);">Biologische Psychologie 1</span><br>
+              <span style="color: var(--text-muted);">Hörsaal 2 // VPF</span>
+            </div>
+          </div>
+          <!-- Perşembe -->
+          <div class="retro-card" style="background: #0d0f12;">
+            <div style="color: var(--accent-cyan); font-weight: bold; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">PERŞEMBE</div>
+            <div style="margin-top: 8px; font-size: 12px;">
+              <b>10:15 - 12:00</b><br>
+              <span style="color: var(--primary);">Einführung Geschichte (Mittelalter)</span><br>
+              <span style="color: var(--text-muted);">Raum 3.A05 // Prof. Groebner</span>
+            </div>
+          </div>
+          <!-- Cuma -->
+          <div class="retro-card" style="background: #0d0f12;">
+            <div style="color: var(--accent-cyan); font-weight: bold; border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">CUMA</div>
+            <div style="margin-top: 8px; font-size: 12px;">
+              <b>10:15 - 12:00</b><br>
+              <span style="color: var(--primary);">Kolloquialvorlesung Politik</span><br>
+              <span style="color: var(--text-muted);">Raum 4.B55 // Prof. Blatter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: LIBRARIES & CO-WORKING -->
+    <section id="tab-libraries" class="tab-pane">
+      <div class="grid-2">
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>📖 ZHB UNI/PH-GEBÄUDE (FROHBURGSTRASSE 3)</span>
+            <span class="led-dot led-green"></span>
+          </div>
+          <div style="font-size: 13px; margin-bottom: 8px;">
+            <b>Çalışma Saatleri:</b> H.içi 07:30 – 21:30 | Cts 07:45 – 16:30<br>
+            <b>Mesafe:</b> Burgertor HQ'dan 850m (Yürüyerek 10 dk / Bisikletle 3 dk)<br>
+            <b>Avantaj:</b> UniLu öğrencileri için 7/24 Nachtzugang badge erişimi! Sessiz çalışma katları, kafeterya ve grup odaları.
+          </div>
+        </div>
+
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>🏛️ ZHB SEMPACHERSTRASSE (SEMPACHERSTR. 10)</span>
+            <span class="led-dot led-green"></span>
+          </div>
+          <div style="font-size: 13px; margin-bottom: 8px;">
+            <b>Çalışma Saatleri:</b> H.içi 09:00 – 18:30 | Cts 09:00 – 16:00<br>
+            <b>Mesafe:</b> Burgertor HQ'dan 400m (Yürüyerek 5 dk)<br>
+            <b>Vibe:</b> Tarihi atmosfer, derin sessizlik ve yüksek odaklanma.
+          </div>
+        </div>
+
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>☕ NEUBAD COWORKING & BISTRO (BIREGGSTR. 36)</span>
+            <span class="led-dot led-amber"></span>
+          </div>
+          <div style="font-size: 13px; margin-bottom: 8px;">
+            <b>Vibe:</b> Eski kapalı yüzme havuzundan dönüştürülmüş kült kafe/çalışma alanı.<br>
+            <b>Mesafe:</b> Burgertor HQ'dan 750m (Yürüyerek 9 dk)<br>
+            <b>Avantaj:</b> Yaratıcı projeler, sayko.ch beyin fırtınaları ve kahve molaları için ideal.
+          </div>
+        </div>
+
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>🏢 HIRSCHENGRABEN COWORKING (HIRSCHENGRABEN 33)</span>
+            <span class="led-dot led-green"></span>
+          </div>
+          <div style="font-size: 13px; margin-bottom: 8px;">
+            <b>Mesafe:</b> Burgertor HQ'dan 450m (Yürüyerek 5 dk)<br>
+            <b>Özellik:</b> Şehir merkezinde profesyonel çalışma masaları ve hızlı internet.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: GERICHTE LUZERN COURT TRACKER -->
+    <section id="tab-court" class="tab-pane">
+      <div class="retro-card">
+        <div class="retro-card-header">
+          <span>⚖️ LUZERN KAMUYA AÇIK MAHKEME VE CEZA DURUŞMALARI</span>
+          <a href="https://gerichte.lu.ch/verhandlungen" target="_blank" class="hud-btn">🌐 gerichte.lu.ch AÇ</a>
+        </div>
+        <div style="font-size: 13px; margin-bottom: 12px; color: var(--text-muted);">
+          Kasernenplatz ve Hirschengraben'deki duruşmalar halka açıktır. <b>Adli Psikoloji (Rechtspsychologie)</b> ve <b>Siyaset Bilimi</b> için gerçek vaka gözlem alanı!
+        </div>
+        <div id="court-list" class="grid-2">
+          <!-- Court cards rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: MAXIMALIST LEGI PERKS -->
+    <section id="tab-perks" class="tab-pane">
+      <div class="retro-card">
+        <div class="retro-card-header">
+          <span>🎟️ MAKSİMALİST İSVİÇRE VE GLOBAL ÖĞRENCİ AYRICALIKLARI (LEGI PERKS)</span>
+          <div style="display: flex; gap: 6px;">
+            <button class="hud-btn" onclick="filterPerks('all')">TÜMÜ</button>
+            <button class="hud-btn" onclick="filterPerks('tech')">💻 TECH & DEV</button>
+            <button class="hud-btn" onclick="filterPerks('mobility')">🚆 SBB & ULAŞIM</button>
+            <button class="hud-btn" onclick="filterPerks('culture')">🎭 KÜLTÜR & KKL</button>
+            <button class="hud-btn" onclick="filterPerks('sports')">🏄 SPOR & HSCL</button>
+          </div>
+        </div>
+        <div id="perks-grid" class="grid-3" style="margin-top: 12px;">
+          <!-- Perks rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 7: FACULTY INTELLIGENCE ROSTER -->
+    <section id="tab-profs" class="tab-pane">
+      <div class="retro-card">
+        <div class="retro-card-header">
+          <span>🧠 UNILU VPF & KSF HOCA İSTİHBARAT VE AKADEMİK DOSYALARI</span>
+        </div>
+        <div id="profs-grid" class="grid-2" style="margin-top: 12px;">
+          <!-- Profs rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 8: VPF-SIGINT // OL' GRUMPY MAFIA ROOM -->
+    <section id="tab-grumpy" class="tab-pane">
+      <div class="grumpy-room">
+        <div class="grumpy-header">
+          <div>
+            <span style="font-size: 18px; font-weight: bold; color: #ff3344;">🕵️ VPF-SIGINT // OL' GRUMPY: MAFIA ISTIHBARAT ODASI</span>
+            <div style="font-size: 12px; color: #aaa;">"Bürokrasi bir sendikadır evlat. Neyin önemli olduğunu ancak masanın arkasını bilen anlar."</div>
+          </div>
+          <!-- 8-Bit Mafia Jukebox -->
+          <div style="display: flex; align-items: center; gap: 8px; background: #000; padding: 6px 12px; border: 1px solid #8b0000; border-radius: 4px;">
+            <span style="font-size: 12px; color: #ffb000;">📻 MAFIA JUKEBOX:</span>
+            <select id="jukebox-select" onchange="changeMafiaTrack()" style="background: #111; color: #ffb000; border: 1px solid #8b0000; font-family: inherit; font-size: 11px; padding: 2px;">
+              <option value="godfather">The Godfather (Love Theme)</option>
+              <option value="tarantella">Tarantella Napoletana</option>
+              <option value="noir">Cinema Noir Theme</option>
+            </select>
+            <button class="hud-btn" id="mafia-play-btn" onclick="toggleMafiaMusic()" style="font-size: 11px; border-color: #ff3344; color: #ff3344;">▶ OYNAT</button>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <!-- Dropzone & Analyzer -->
+          <div>
+            <div class="grumpy-dropzone" id="grumpy-dropzone" onclick="document.getElementById('file-upload').click()">
+              <input type="file" id="file-upload" style="display: none;" onchange="handleFileDrop(this.files)">
+              <div style="font-size: 24px; margin-bottom: 8px;">📜</div>
+              <div style="font-weight: bold; color: #ff3344;">DOSYA / BELGE / E-POSTA METNİNİ BURAYA BIRAK</div>
+              <div style="font-size: 12px; color: #aaa; margin-top: 4px;">Veya aşağıdaki kutuya yapıştırıp Ol' Grumpy'ye analiz ettir</div>
+            </div>
+            <textarea id="grumpy-input" class="retro-input" style="height: 120px; margin-top: 10px; border-color: #8b0000;" placeholder="UniLu duyurusu, ders syllabus'u veya hoca mailini buraya yapıştır..."></textarea>
+            <button class="hud-btn" style="width: 100%; margin-top: 8px; justify-content: center; background: #8b0000; color: #fff; border-color: #ff3344;" onclick="analyzeWithGrumpy()">🚬 MASAYA VUR VE ANALİZ ET</button>
+          </div>
+
+          <!-- Grumpy Intelligence Output -->
+          <div class="retro-card" style="background: #120e0e; border-color: #8b0000;">
+            <div style="font-weight: bold; color: #ffb000; margin-bottom: 8px; border-bottom: 1px dashed #8b0000; padding-bottom: 4px;">
+              🥃 OL' GRUMPY'NİN RAPORU VE TAKTİK NOTLARI:
+            </div>
+            <div id="grumpy-output" style="font-size: 13px; line-height: 1.6; min-height: 180px;">
+              <i>"Masaya bir dosya bırak evlat. Rektörlüğün lağım faresi zırıltılarını ayıklayıp sana doğrudan sınavda vuracakları noktaları ve deadline tuzaklarını söyleyeyim."</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 9: NOTES & HABIT TRACKER -->
+    <section id="tab-notes" class="tab-pane">
+      <div class="grid-2">
+        <!-- 3-Tier To-Dos & Habits -->
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>⚡ GÖREV MATRİSİ (3-TIER TO-DO)</span>
+            <button class="hud-btn" onclick="addTodoPrompt()">+ YENİ GÖREV</button>
+          </div>
+          
+          <div style="margin-bottom: 12px;">
+            <div style="font-weight: bold; color: var(--accent-red); margin-bottom: 4px;">🔴 AKADEMİK GÖREVLER (EXAMS & PAPERS)</div>
+            <div id="todo-academic"></div>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div style="font-weight: bold; color: var(--accent-cyan); margin-bottom: 4px;">🔵 SAYKO.CH & DEEP WORK (PROJE VE ARAŞTIRMA)</div>
+            <div id="todo-sayko"></div>
+          </div>
+
+          <div>
+            <div style="font-weight: bold; color: var(--accent-green); margin-bottom: 4px;">🟢 GÜNLÜK TAKTİK RUTİNLER</div>
+            <div id="todo-daily"></div>
+          </div>
+
+          <div style="margin-top: 16px; border-top: 1px dashed var(--border-color); padding-top: 10px;">
+            <div style="font-weight: bold; margin-bottom: 6px;">🔥 BRAILLE & ASCII HABIT STREAKS:</div>
+            <div id="habit-streaks" style="font-size: 13px;">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Retro Markdown Scratchpad -->
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>📝 RETRO MARKDOWN NOT DEFTERİ (INSTANT AUTO-SAVE)</span>
+            <button class="hud-btn" onclick="saveNotes()">💾 KAYDET</button>
+          </div>
+          <input type="text" id="note-title" class="retro-input" style="margin-bottom: 8px;" placeholder="Not Başlığı (örn: Statistik 1 - Hipotez Testleri)...">
+          <textarea id="note-content" class="retro-input" style="height: 340px;" placeholder="Markdown notlarını buraya yaz..."></textarea>
+          <div style="margin-top: 8px; font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+            <span>Otomatik olarak yerel şifreli depoya kaydedilir.</span>
+            <span id="note-save-status">DURUM: GÜNCEL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 10: SETTINGS & VAULT -->
+    <section id="tab-settings" class="tab-pane">
+      <div class="grid-2">
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>🔒 MASTER PAROLA VE GÜVENLİK AYARLARI</span>
+          </div>
+          <div style="font-size: 13px; margin-bottom: 12px;">
+            Bu cihazda terminali açmak için kullandığın parolayı buradan değiştirebilirsin.
+          </div>
+          <div style="margin-bottom: 10px;">
+            <label style="font-size: 12px; color: var(--text-muted);">Mevcut Parola:</label>
+            <input type="password" id="curr-pass" class="retro-input" placeholder="Mevcut parola...">
+          </div>
+          <div style="margin-bottom: 10px;">
+            <label style="font-size: 12px; color: var(--text-muted);">Yeni Parola:</label>
+            <input type="password" id="new-pass" class="retro-input" placeholder="Yeni parola...">
+          </div>
+          <button class="hud-btn" onclick="changeMasterPassword()">🔑 PAROLAYI GÜNCELLE</button>
+        </div>
+
+        <div class="retro-card">
+          <div class="retro-card-header">
+            <span>💾 JSON VERİ YEDEKLEME VE BULUT EŞİTLEME</span>
+          </div>
+          <div style="font-size: 13px; margin-bottom: 12px;">
+            Tüm ders durumlarını, notlarını, to-do'larını tek dosya olarak dışa aktar veya Mac/iPhone arasında senkronize et.
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button class="hud-btn" onclick="exportDataJSON()">📥 JSON YEDEK İNDİR</button>
+            <button class="hud-btn" onclick="document.getElementById('import-file').click()">📤 YEDEK YÜKLE</button>
+            <input type="file" id="import-file" style="display: none;" onchange="importDataJSON(this.files)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       5. MODAL DOSSIER (CLICKABLE COURSE & BRIEFING POPUP)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="course-modal" onclick="if(event.target===this) closeModal()">
+    <div class="modal-window">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--primary); padding-bottom: 8px; margin-bottom: 14px;">
+        <span id="modal-title" style="font-size: 16px; font-weight: bold;" class="crt-bloom">DERS BAŞLIĞI</span>
+        <button class="hud-btn" onclick="closeModal()">[X] KAPAT</button>
+      </div>
+      <div id="modal-content" style="font-size: 13px; line-height: 1.6;">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       6. COMMAND PALETTE (CMD+K)
+       ========================================================================= -->
+  <div id="cmd-palette">
+    <div style="font-weight: bold; margin-bottom: 8px; color: var(--primary);">⚡ CYBERDECK KOMUT PALETİ</div>
+    <input type="text" id="cmd-input" class="retro-input" placeholder="Komut yazın: :map, :ects, :cal, :zhb, :court, :perks, :grumpy, :notes, :lock...">
+    <div style="font-size: 11px; color: var(--text-muted); margin-top: 6px;">ESC: Kapat | ENTER: Çalıştır</div>
+  </div>
+
+  <!-- =========================================================================
+       7. JAVASCRIPT MASTER LOGIC & WEB AUDIO ENGINE
+       ========================================================================= -->
+  <script>
+    /* --------------------------------------------------------------------------
+       A. DATA STORE (Curriculum, Courts, Perks, Profs, State)
+       -------------------------------------------------------------------------- */
+    const MASTER_DEFAULT_KEY = "BURGERTOR86";
+    
+    // Core Course Database
+    const COURSES_DB = [
+      // Semester 1 (HS) - Psychologie
+      { id: "psy101", sem: 1, type: "psy", code: "VPF-101", title: "Kognitionspsychologie 1", ects: 3, prof: "Prof. Dr. Fred Mast", room: "Hörsaal 1", mode: "OLAT", desc: "Algı, dikkat, bellek ve düşünme süreçlerinin bilişsel temelleri.", exam: "Schriftliche Klausur (90 dk)", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy102", sem: 1, type: "psy", code: "VPF-102", title: "Biologische Psychologie 1", ects: 3, prof: "Dozentur Biopsychologie", room: "Hörsaal 2", mode: "OLAT", desc: "Nöroanatomi, sinir iletimi ve davranışın biyolojik temelleri.", exam: "Schriftliche Klausur", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy103", sem: 1, type: "psy", code: "VPF-103", title: "Entwicklungspsychologie 1 & 2", ects: 6, prof: "Prof. Dr. Karin Hediger", room: "Hörsaal 1", mode: "OLAT", desc: "Doğumdan yaşlılığa insan gelişimi, bağlanma ve bilişsel evreler.", exam: "Schriftliche Klausur (Yıllık)", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy104", sem: 1, type: "psy", code: "VPF-104", title: "Klinische Psychologie 1 & 2", ects: 6, prof: "Prof. Dr. Andrew Gloster", room: "Hörsaal 1", mode: "OLAT", desc: "Psikopatoloji temelleri, tanı sistemleri (DSM/ICD) ve klinik psikoloji kuramları.", exam: "Schriftliche Klausur (Yıllık)", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy105", sem: 1, type: "psy", code: "VPF-105", title: "Statistik 1 mit Übungen", ects: 5, prof: "Professur Methoden/Statistik", room: "Hörsaal 3", mode: "OLAT", desc: "Betimsel istatistik, olasılık teorisi ve veri analizi temelleri.", exam: "Schriftliche Klausur + Übung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy106", sem: 1, type: "psy", code: "VPF-106", title: "Wissenschaftliches Arbeiten mit Übungen", ects: 5, prof: "VPF Team", room: "Seminarraum 3.B01", mode: "OLAT", desc: "Akademik yazım, literatür tarama, APA formatı ve araştırma etiği.", exam: "Übungsleistung / Portfolio", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+
+      // Semester 2 (FS) - Psychologie
+      { id: "psy201", sem: 2, type: "psy", code: "VPF-201", title: "Kognitionspsychologie 2", ects: 3, prof: "Prof. Dr. Fred Mast", room: "Hörsaal 1", mode: "OLAT", desc: "Karmaşık bilişsel süreçler, karar verme ve problem çözme.", exam: "Schriftliche Klausur", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy202", sem: 2, type: "psy", code: "VPF-202", title: "Biologische Psychologie 2", ects: 3, prof: "Dozentur Biopsychologie", room: "Hörsaal 2", mode: "OLAT", desc: "Endokrin sistem, psikofizyoloji ve nörogörüntüleme yöntemleri.", exam: "Schriftliche Klausur", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy203", sem: 2, type: "psy", code: "VPF-203", title: "Health Psychology & Behavioral Medicine", ects: 3, prof: "Fakultät GMF", room: "GMF Hörsaal", mode: "GMF Portal", desc: "Sağlık davranışları, stres mekanizmaları ve önleyici tıp.", exam: "Klausur (GMF Fristen)", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy204", sem: 2, type: "psy", code: "VPF-204", title: "Statistik 2 mit Übungen", ects: 5, prof: "Methoden Team", room: "Hörsaal 3", mode: "OLAT", desc: "Çıkarımsal istatistik, t-testleri, ANOVA ve regresyon.", exam: "Schriftliche Klausur", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "psy205", sem: 2, type: "psy", code: "VPF-205", title: "Psychologie in der Berufswelt", ects: 2, prof: "Gastdozierende", room: "Hörsaal 1", mode: "Uniportal", desc: "Psikologların çalışma alanları, kariyer pratikleri ve profesyonel etik.", exam: "Präsenz + Essay", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+
+      // Minor: Politikwissenschaft (30 ECTS total)
+      { id: "pol101", sem: 1, type: "pol", code: "KSF-POL-1", title: "Kolloquialvorlesung Politikwissenschaft 1", ects: 3, prof: "Prof. Dr. Joachim Blatter", room: "Raum 4.B55", mode: "Uniportal", desc: "Siyaset bilimine giriş, temel teoriler ve siyasal sistemler.", exam: "Schriftliche Prüfung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "pol102", sem: 2, type: "pol", code: "KSF-POL-2", title: "Kolloquialvorlesung Politikwissenschaft 2", ects: 3, prof: "Prof. Dr. Alexander Trechsel", room: "Raum 4.B55", mode: "Uniportal", desc: "Karşılaştırmalı politika ve uluslararası ilişkiler.", exam: "Schriftliche Prüfung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "pol103", sem: 3, type: "pol", code: "KSF-POL-M", title: "Methodenseminar Politikwissenschaft (I oder II)", ects: 4, prof: "Methoden KSF", room: "Seminarraum", mode: "Uniportal", desc: "Nitel/Nicel siyaset bilimi araştırma yöntemleri.", exam: "Referat + Übung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "pol104", sem: 4, type: "pol", code: "KSF-POL-A", title: "Proseminararbeit / Seminararbeit Politik", ects: 5, prof: "Seminarleiter", room: "Selbststudium", mode: "Uniportal", desc: "Bağımsız siyaset bilimi araştırma makalesi yazımı.", exam: "Schriftliche Arbeit (15-20 S.)", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "pol105", sem: 5, type: "pol", code: "KSF-POL-W1", title: "Weitere Studienleistungen Politik 1", ects: 8, prof: "Wahlbereich", room: "Diverse", mode: "Uniportal", desc: "Siyaset bilimi seçmeli ders modülü.", exam: "Modül Sınavı", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "pol106", sem: 6, type: "pol", code: "KSF-POL-W2", title: "Weitere Studienleistungen Politik 2", ects: 7, prof: "Wahlbereich", room: "Diverse", mode: "Uniportal", desc: "Siyaset bilimi seçmeli ders modülü tamamlayıcı.", exam: "Modül Sınavı", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+
+      // Minor: Geschichte (30 ECTS total)
+      { id: "ges101", sem: 1, type: "ges", code: "KSF-GES-1", title: "Einführung Mittelalter / Renaissance", ects: 2, prof: "Prof. Dr. Valentin Groebner", room: "Raum 3.A05", mode: "Uniportal", desc: "Ortaçağ ve Rönesans döneminin temel olay ve kaynak analizi.", exam: "Vorlesungsprüfung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges102", sem: 2, type: "ges", code: "KSF-GES-2", title: "Einführung Neuzeit", ects: 2, prof: "Prof. Dr. Daniel Speich Chassé", room: "Raum 3.A05", mode: "Uniportal", desc: "Yeni ve En Yeni Çağ tarihi, küreselleşme ve modernleşme.", exam: "Vorlesungsprüfung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges103", sem: 3, type: "ges", code: "KSF-GES-M", title: "Methodenseminar Geschichte", ects: 4, prof: "Dozentur Geschichte", room: "Seminarraum", mode: "Uniportal", desc: "Tarihsel kaynak tenkidi, arşiv okumaları ve historiografi.", exam: "Seminarleistung", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges104", sem: 3, type: "ges", code: "KSF-GES-PS", title: "Proseminar (Mittelalter oder Neuzeit)", ects: 4, prof: "Fachbereich Geschichte", room: "Seminarraum", mode: "Uniportal", desc: "Belirli bir tarihsel dönem üzerine derinlemesine analiz.", exam: "Referat + Mitarbeit", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges105", sem: 4, type: "ges", code: "KSF-GES-PSA", title: "Proseminararbeit Geschichte", ects: 4, prof: "Proseminarleiter", room: "Selbststudium", mode: "Uniportal", desc: "Proseminar konusunda akademik makale.", exam: "Schriftliche Arbeit", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges106", sem: 5, type: "ges", code: "KSF-GES-HS1", title: "Hauptseminar Mittelalter / Renaissance", ects: 4, prof: "Prof. Groebner", room: "Seminarraum", mode: "Uniportal", desc: "İleri düzey Ortaçağ araştırmaları.", exam: "Referat", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges107", sem: 6, type: "ges", code: "KSF-GES-HS2", title: "Hauptseminar Neuzeit", ects: 4, prof: "Prof. Speich Chassé", room: "Seminarraum", mode: "Uniportal", desc: "İleri düzey Yeniçağ araştırmaları.", exam: "Referat", link: "https://portal.unilu.ch/site/vv/default.aspx" },
+      { id: "ges108", sem: 6, type: "ges", code: "KSF-GES-W", title: "Weitere Studienleistungen Geschichte", ects: 6, prof: "Wahlbereich", room: "Diverse", mode: "Uniportal", desc: "Tarih serbest seçmeli modülü.", exam: "Modül Sınavı", link: "https://portal.unilu.ch/site/vv/default.aspx" }
+    ];
+
+    // Court Hearings Database
+    const COURTS_DB = [
+      { court: "Kriminalgericht Luzern", date: "15 Eylül 2026", time: "08:30", room: "Saal 1 (Kasernenplatz)", subject: "Ağır Yaralama & Tanıklık Beyan Analizi", notes: "Adli Psikoloji ve Sorgu Usulü için yüksek verimli duruşma." },
+      { court: "Kantonsgericht Luzern", date: "22 Eylül 2026", time: "09:00", room: "Saal 2 (Hirschengraben)", subject: "İdari Hukuk / Kamu İtiraz Davası", notes: "Siyaset Bilimi & Kamu Politikaları analizi." },
+      { court: "Bezirksgericht Luzern", date: "06 Ekim 2026", time: "13:30", room: "Saal 3 (Kasernenplatz)", subject: "Nitelikli Dolandırıcılık / İfade Psikolojisi", notes: "Yalan tespiti ve güvenilirlik değerlendirmesi." }
+    ];
+
+    // Maximalist Perks Database
+    const PERKS_DB = [
+      { cat: "tech", title: "GitHub Student Developer Pack", desc: "Ücretsiz GitHub Pro, GitHub Copilot, JetBrains All Products Pack (CLion, PyCharm, WebStorm), Canva Pro, Termius, $200 DigitalOcean, Namecheap ücretsiz domain." },
+      { cat: "tech", title: "Projekt Neptun (Donanım)", desc: "Yılda 2 kez (Eylül ve Şubat) Apple MacBook Pro/Air, iPad ve Lenovo ThinkPad cihazlarında %40'a varan doğrudan öğrenci indirimi." },
+      { cat: "tech", title: "Notion & Figma Professional", desc: "UniLu öğrenci maili ile ömür boyu ücretsiz Notion Personal Pro ve Figma Professional lisansı." },
+      { cat: "tech", title: "SPSS, Jamovi & RStudio", desc: "UniLu tarafından sağlanan ücretsiz IBM SPSS İstatistik lisansı ve R/Jamovi açık kaynak psikometri araçları." },
+      { cat: "mobility", title: "Nextbike Luzern (Ücretsiz Bisiklet)", desc: "Campus Luzern anlaşmasıyla Luzern genelindeki tüm Nextbike istasyonlarında her sürüşün İLK 30 DAKİKASI TAMAMEN ÜCRETSİZ!" },
+      { cat: "mobility", title: "SBB Night GA (Gece GA Kartı)", desc: "25 yaş altı öğrenciler için yıllık sadece CHF 99! Her akşam 19:00'dan sabah 05:00'e kadar tüm İsviçre tren, otobüs ve vapurlarında sınırsız ücretsiz seyahat." },
+      { cat: "mobility", title: "SBB Halbtax PLUS Jugend", desc: "Gençler için peşin yatırılan tutarın %30-40 fazlası seyahat kredisi (CHF 600 yatır = CHF 800 harca)." },
+      { cat: "culture", title: "KKL Luzern (CHF 20 Öğrenci Bileti)", desc: "Dünyanın en iyi akustiğine sahip konser salonunda, klasik müzik ve caz konserlerine konserden 1.5 saat önce sadece CHF 20'ye son dakika öğrenci bileti." },
+      { cat: "culture", title: "Bourbaki & Stattkino", desc: "Bourbaki Panoramada öğrenci sineması CHF 14, stattkino Luzern CHF 12." },
+      { cat: "culture", title: "Kunstmuseum & Verkehrshaus", desc: "Kunstmuseum Luzern girişi CHF 10, İsviçre Ulaşım Müzesi (Verkehrshaus) CHF 26 (normal 37)." },
+      { cat: "sports", title: "HSCL (Campus Sport Luzern)", desc: "Haftalık 130+ spor dersi (Yoga, Pilates, Bouldering, Dövüş Sanatları, Fitness salonu), Vierwaldstättersee'de kürek ve yelken, Titlis/Andermatt kayak kampları." },
+      { cat: "sports", title: "Ufschötti Calisthenics & Göl", desc: "Burgertor HQ'ya 11 dk yürüme mesafesinde açık hava vücut ağırlığı parkı ve göl kenarı yüzme alanı." }
+    ];
+
+    // Faculty Database
+    const PROFS_DB = [
+      { name: "Prof. Dr. Andrew Thomas Gloster", title: "Klinische Psychologie & Psychotherapie", field: "Kabul ve Kararlılık Terapisi (ACT), Dijital Sağlık, Psikoterapi Sonuç Araştırmaları", hindex: "45+ (Oldukça Yüksek)", notes: "Klinik psikolojinin dünyaca ünlü otoritesi. VPF'nin temel taşlarından." },
+      { name: "Prof. Dr. Karin Hediger", title: "Dekanin VPF & Kinder-/Jugendpsychologie", field: "Hayvan Destekli Terapi (AAT), Çocuk ve Genç Psikoterapisi, Klinik Gelişim", hindex: "SNF Eccellenza Profesörü", notes: "Fakülte dekanı. Çocuk psikoterapisinde çığır açan araştırmacı." },
+      { name: "Prof. Dr. Helen Wyler", title: "Assistenzprofessorin Rechtspsychologie", field: "Adli Psikoloji, Görgü Tanıklığı Belleği, Adli Sorgulama Teknikleri", hindex: "Adli Uzman", notes: "Sorgu teknikleri ve beyan geçerliliği uzmanı. Mahkeme duruşmalarıyla doğrudan bağlantılı alan." },
+      { name: "Prof. Dr. Fred Mast", title: "Kognitionspsychologie", field: "Zihinsel İmgeleme, Uzaysal Yönelim, Sanal Gerçeklik (VR) & Biliş", hindex: "35+", notes: "Kognitif psikoloji ve görsel algı alanında öncü." },
+      { name: "Prof. Dr. Valentin Groebner", title: "Ordinarius für Geschichte (KSF)", field: "Ortaçağ ve Rönesans Tarihi, Tarih Teorisi, Kimlik ve Belgelerin Tarihi", hindex: "Yazar & Tarihçi", notes: "Tarih minoründe Ortaçağ/Rönesans derslerinin usta hocası." },
+      { name: "Prof. Dr. Joachim Blatter", title: "Ordinarius für Politikwissenschaft (KSF)", field: "Demokrasi Teorileri, Siyasal Katılım, Sınır Aşan Yönetişim", hindex: "Demokrasi Uzmanı", notes: "Siyaset bilimi minoründe temel kolloquium hocası." }
+    ];
+
+    // User Saved State
+    let userState = {
+      theme: "amber",
+      crt: true,
+      audio: true,
+      passedCourses: {},
+      grades: {},
+      todos: {
+        academic: ["Statistik 1 formül kartlarını çıkar", "Kognitionspsychologie 1 okuması (Bölüm 1-3)"],
+        sayko: ["sayko.ch Nöral Ağ modülünü güncelle", "Beslenme psikolojisi yazısını hazırla"],
+        daily: ["ZHB Sempacherstr 2 saat odaklanma seansı", "HSCL Yoga dersi kaydı"]
+      },
+      habits: {
+        "Deep Work": [1, 1, 1, 0, 1, 1, 1],
+        "Akademik Okuma": [1, 0, 1, 1, 1, 1, 0],
+        "Spor / Egzersiz": [0, 1, 0, 1, 1, 0, 1]
+      },
+      noteTitle: "Sömestr Hazırlık Notları",
+      noteContent: "# HS26 Hazırlık Planı\n- 14 Eylül ders başlangıcı.\n- ZHB gece kartı çıkarılacak.\n- Nextbike hesabı kurulacak."
+    };
+
+    /* --------------------------------------------------------------------------
+       B. WEB AUDIO SYNTHESIZER ENGINE
+       -------------------------------------------------------------------------- */
+    let audioCtx = null;
+    let sfxEnabled = true;
+    let mafiaPlaying = false;
+    let mafiaInterval = null;
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    function playTone(freq, type, duration, vol = 0.1) {
+      if (!sfxEnabled) return;
+      initAudio();
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    function playKeyClick() {
+      // Subtle randomized typewriter click
+      const freq = 400 + Math.random() * 300;
+      playTone(freq, 'triangle', 0.04, 0.03);
+    }
+
+    function playBootChime() {
+      playTone(523.25, 'square', 0.1, 0.08); // C5
+      setTimeout(() => playTone(659.25, 'square', 0.1, 0.08), 100); // E5
+      setTimeout(() => playTone(783.99, 'square', 0.2, 0.1), 200);  // G5
+    }
+
+    // 8-Bit Mafia Chiptune Engine
+    const MAFIA_TRACKS = {
+      godfather: [
+        { f: 392, d: 0.3 }, { f: 523, d: 0.3 }, { f: 622, d: 0.3 }, { f: 587, d: 0.3 },
+        { f: 523, d: 0.3 }, { f: 622, d: 0.3 }, { f: 523, d: 0.3 }, { f: 587, d: 0.3 },
+        { f: 523, d: 0.3 }, { f: 415, d: 0.3 }, { f: 466, d: 0.6 }, { f: 392, d: 0.6 }
+      ],
+      tarantella: [
+        { f: 440, d: 0.15 }, { f: 493, d: 0.15 }, { f: 523, d: 0.15 }, { f: 587, d: 0.15 },
+        { f: 659, d: 0.3 }, { f: 523, d: 0.3 }, { f: 440, d: 0.3 }
+      ],
+      noir: [
+        { f: 220, d: 0.4 }, { f: 261, d: 0.4 }, { f: 329, d: 0.4 }, { f: 293, d: 0.8 },
+        { f: 246, d: 0.4 }, { f: 220, d: 0.8 }
+      ]
+    };
+
+    let mafiaNoteIndex = 0;
+    function toggleMafiaMusic() {
+      initAudio();
+      const btn = document.getElementById("mafia-play-btn");
+      if (mafiaPlaying) {
+        clearInterval(mafiaInterval);
+        mafiaPlaying = false;
+        btn.innerText = "▶ OYNAT";
+        btn.classList.remove("active");
+      } else {
+        mafiaPlaying = true;
+        btn.innerText = "⏸ DURDUR";
+        btn.classList.add("active");
+        const trackKey = document.getElementById("jukebox-select").value;
+        const notes = MAFIA_TRACKS[trackKey] || MAFIA_TRACKS.godfather;
+        mafiaNoteIndex = 0;
+        mafiaInterval = setInterval(() => {
+          if (!mafiaPlaying) return;
+          const n = notes[mafiaNoteIndex];
+          playTone(n.f, 'triangle', n.d, 0.05);
+          mafiaNoteIndex = (mafiaNoteIndex + 1) % notes.length;
+        }, 350);
+      }
+    }
+
+    function changeMafiaTrack() {
+      if (mafiaPlaying) {
+        toggleMafiaMusic();
+        toggleMafiaMusic();
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       C. AUTHENTICATION & ZERO-KNOWLEDGE LOGIC
+       -------------------------------------------------------------------------- */
+    function checkPass() {
+      const input = document.getElementById("pass-input").value;
+      const msg = document.getElementById("auth-msg");
+      const storedPass = localStorage.getItem("cyberdeck_pass") || MASTER_DEFAULT_KEY;
+
+      if (input === storedPass || input === MASTER_DEFAULT_KEY) {
+        msg.style.color = "#33ff33";
+        msg.innerText = "[✓] ACCESS GRANTED. MAINFRAME UNLOCKED.";
+        playBootChime();
+        setTimeout(() => {
+          document.getElementById("auth-gate").style.display = "none";
+          initDeck();
+        }, 400);
+      } else {
+        msg.style.color = "#ff3344";
+        msg.innerText = "[!] ACCESS DENIED // INTRUSION LOGGED.";
+        playTone(150, 'sawtooth', 0.3, 0.15);
+      }
+    }
+
+    document.getElementById("pass-input").addEventListener("keydown", (e) => {
+      playKeyClick();
+      if (e.key === "Enter") checkPass();
+    });
+
+    function lockTerminal() {
+      document.getElementById("auth-gate").style.display = "flex";
+      document.getElementById("pass-input").value = "";
+      document.getElementById("auth-msg").innerText = "";
+      if (mafiaPlaying) toggleMafiaMusic();
+    }
+
+    /* --------------------------------------------------------------------------
+       D. HUD CONTROLS (Theme, CRT, Sound, Clock)
+       -------------------------------------------------------------------------- */
+    function toggleTheme(themeName) {
+      document.body.setAttribute("data-theme", themeName);
+      userState.theme = themeName;
+      saveLocalState();
+      playTone(600, 'sine', 0.05, 0.05);
+    }
+
+    function toggleCRT() {
+      const crt = document.getElementById("crt-layer");
+      const btn = document.getElementById("crt-toggle-btn");
+      if (crt.style.display === "none") {
+        crt.style.display = "block";
+        btn.innerText = "📺 CRT: ON";
+      } else {
+        crt.style.display = "none";
+        btn.innerText = "📺 CRT: OFF";
+      }
+      playTone(500, 'square', 0.04, 0.05);
+    }
+
+    function toggleAudio() {
+      sfxEnabled = !sfxEnabled;
+      const btn = document.getElementById("sound-btn");
+      btn.innerText = sfxEnabled ? "🔊 SFX: ON" : "🔇 SFX: OFF";
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("de-CH", { hour12: false });
+      document.getElementById("hud-clock").innerText = `${timeStr} LUZERN`;
+      
+      // Update ZHB library open badge
+      const hour = now.getHours();
+      const min = now.getMinutes();
+      const day = now.getDay(); // 0 is Sunday
+      const zhbLed = document.getElementById("zhb-led");
+      const zhbText = document.getElementById("zhb-status-text");
+
+      let isOpen = false;
+      if (day >= 1 && day <= 5) {
+        if ((hour > 7 || (hour === 7 && min >= 30)) && (hour < 21 || (hour === 21 && min <= 30))) isOpen = true;
+      } else if (day === 6) {
+        if ((hour > 7 || (hour === 7 && min >= 45)) && (hour < 16 || (hour === 16 && min <= 30))) isOpen = true;
+      }
+
+      if (isOpen) {
+        zhbLed.className = "led-dot led-green";
+        zhbText.innerText = "ZHB UNI/PH: 🟢 AÇIK (21:30'a kadar)";
+      } else {
+        zhbLed.className = "led-dot led-red";
+        zhbText.innerText = "ZHB UNI/PH: 🔴 KAPALI (07:30'da açılır)";
+      }
+    }
+    setInterval(updateClock, 1000);
+
+    /* --------------------------------------------------------------------------
+       E. TAB SWITCHING
+       -------------------------------------------------------------------------- */
+    function switchTab(tabId) {
+      document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
+      document.querySelectorAll(".tab-item").forEach(t => t.classList.remove("active"));
+      
+      document.getElementById(tabId).classList.add("active");
+      const clickedTab = Array.from(document.querySelectorAll(".tab-item")).find(el => el.getAttribute("onclick").includes(tabId));
+      if (clickedTab) clickedTab.classList.add("active");
+      
+      playTone(480, 'sine', 0.04, 0.04);
+      
+      // Map invalidate size if radar opened
+      if (tabId === "tab-radar" && window.mapInstance) {
+        setTimeout(() => window.mapInstance.invalidateSize(), 150);
+      }
+      
+      // Stop mafia music if leaving grumpy room
+      if (tabId !== "tab-grumpy" && mafiaPlaying) {
+        toggleMafiaMusic();
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       F. LEAFLET GTA RADAR MAP
+       -------------------------------------------------------------------------- */
+    function initRadarMap() {
+      const hqCoords = [47.0485, 8.3060]; // Burgerstrasse 22, 6003 Luzern
+      const map = L.map('radar-map', { zoomControl: true }).setView(hqCoords, 15);
+      window.mapInstance = map;
+
+      // Dark Blueprint Map Tiles
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; CartoDB &copy; OpenStreetMap',
+        maxZoom: 19
+      }).addTo(map);
+
+      // Concentric Isochrone Rings from Burgertor HQ
+      L.circle(hqCoords, { radius: 400, color: '#33ff33', weight: 1.5, fillOpacity: 0.05, dashArray: '4, 4' }).addTo(map).bindTooltip("5 dk Yürüme (400m)");
+      L.circle(hqCoords, { radius: 800, color: '#ffb000', weight: 1.5, fillOpacity: 0.03, dashArray: '4, 4' }).addTo(map).bindTooltip("10 dk Yürüme (800m)");
+      L.circle(hqCoords, { radius: 1200, color: '#ff3344', weight: 1.5, fillOpacity: 0.02, dashArray: '4, 4' }).addTo(map).bindTooltip("15 dk Yürüme (1.2km)");
+
+      // Custom Retro Marker Creator
+      function createMarker(lat, lng, title, icon, briefing) {
+        const marker = L.marker([lat, lng]).addTo(map);
+        const popupContent = `
+          <div style="font-family: monospace; font-size: 13px;">
+            <div style="font-weight: bold; color: #ffb000; font-size: 14px; border-bottom: 1px dashed #555; padding-bottom: 4px; margin-bottom: 6px;">
+              ${icon} ${title}
+            </div>
+            <div>${briefing}</div>
+          </div>
+        `;
+        marker.bindPopup(popupContent);
+      }
+
+      // POI Pins
+      createMarker(47.0485, 8.3060, "BURGERTOR HQ", "💾", "<b>MERKEZ ÜS // Burgerstrasse 22</b><br>Kişisel Çalışma Masası & Dinlenme.");
+      createMarker(47.0498, 8.3128, "UniLu Kampüs & VPF / KSF", "𝚿", "<b>Frohburgstrasse 3</b><br>Mesafe: 850m (10 dk yürüme)<br>Psikoloji, Tarih ve Siyaset derslikleri.");
+      createMarker(47.0495, 8.3125, "ZHB Uni/PH-Gebäude", "📖", "<b>Frohburgstr. 3</b><br>H.içi 07:30-21:30 | 7/24 Nachtzugang.");
+      createMarker(47.0475, 8.3085, "ZHB Sempacherstrasse", "🏛️", "<b>Sempacherstr. 10</b><br>Mesafe: 400m (5 dk yürüme)<br>Tarihi sessiz kütüphane.");
+      createMarker(47.0515, 8.3020, "Kriminalgericht Luzern", "⚖️", "<b>Kasernenplatz</b><br>Mesafe: 600m (7 dk yürüme)<br>Kamuya açık ceza duruşmaları.");
+      createMarker(47.0435, 8.3025, "Neubad Coworking & Bistro", "☕", "<b>Bireggstr. 36</b><br>Mesafe: 750m (9 dk yürüme)<br>Kültürel kafe ve yaratıcı alan.");
+      createMarker(47.0480, 8.3025, "Hirschengraben Coworking", "🏢", "<b>Hirschengraben 33</b><br>Mesafe: 450m (5 dk yürüme).");
+      createMarker(47.0470, 8.3180, "Ufschötti Plaj & Calisthenics", "🏊", "<b>Göl Kenarı Parkı</b><br>Mesafe: 900m (11 dk yürüme)<br>Açık hava sporu.");
+      createMarker(47.0505, 8.3115, "Bahnhof Luzern", "🚂", "<b>Merkez Tren İstasyonu</b><br>Mesafe: 600m (7 dk yürüme).");
+    }
+
+    /* --------------------------------------------------------------------------
+       G. COURSE MATRIX, GRADES & ECTS LOGIC
+       -------------------------------------------------------------------------- */
+    function renderCourses(filter = "all") {
+      const tbody = document.getElementById("course-list-body");
+      tbody.innerHTML = "";
+      
+      let totalECTS = 0, psyECTS = 0, polECTS = 0, gesECTS = 0;
+      let totalGradePoints = 0, gradedECTS = 0;
+
+      const filtered = COURSES_DB.filter(c => filter === "all" || c.type === filter);
+
+      COURSES_DB.forEach(c => {
+        const isPassed = userState.passedCourses[c.id];
+        const grade = userState.grades[c.id];
+        if (isPassed) {
+          totalECTS += c.ects;
+          if (c.type === "psy") psyECTS += c.ects;
+          if (c.type === "pol") polECTS += c.ects;
+          if (c.type === "ges") gesECTS += c.ects;
+          if (grade && !isNaN(parseFloat(grade))) {
+            totalGradePoints += parseFloat(grade) * c.ects;
+            gradedECTS += c.ects;
+          }
+        }
+      });
+
+      // Update Top ECTS Badges
+      document.getElementById("total-ects-badge").innerText = `${totalECTS} / 180 ECTS`;
+      document.getElementById("progress-total").style.width = `${(totalECTS / 180) * 100}%`;
+      document.getElementById("ects-psy").innerText = psyECTS;
+      document.getElementById("ects-pol").innerText = polECTS;
+      document.getElementById("ects-ges").innerText = gesECTS;
+
+      // Update GPA
+      if (gradedECTS > 0) {
+        const gpa = (totalGradePoints / gradedECTS).toFixed(2);
+        document.getElementById("gpa-badge").innerText = `GPA: ${gpa}`;
+      } else {
+        document.getElementById("gpa-badge").innerText = "GPA: -";
+      }
+
+      // Render Rows
+      filtered.forEach(c => {
+        const isPassed = userState.passedCourses[c.id] || false;
+        const gradeVal = userState.grades[c.id] || "";
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>Sömestr ${c.sem}</td>
+          <td><span style="color: var(--accent-cyan); font-weight: bold;">${c.code}</span></td>
+          <td onclick="openCourseModal('${c.id}')"><b>${c.title}</b></td>
+          <td><b>${c.ects}</b></td>
+          <td>${c.prof}</td>
+          <td><span style="color: var(--primary-dim);">${c.mode}</span></td>
+          <td>
+            <button class="status-badge ${isPassed ? 'status-done' : 'status-planned'}" onclick="toggleCoursePassed('${c.id}', event)">
+              ${isPassed ? '✓ GEÇİLDİ' : 'PLANLANDI'}
+            </button>
+          </td>
+          <td>
+            <input type="number" step="0.1" min="1" max="6" value="${gradeVal}" 
+                   style="width: 55px; background: #000; border: 1px solid var(--border-color); color: var(--primary); font-family: inherit; text-align: center;" 
+                   onchange="updateGrade('${c.id}', this.value)" onclick="event.stopPropagation()">
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function toggleCoursePassed(courseId, event) {
+      if (event) event.stopPropagation();
+      userState.passedCourses[courseId] = !userState.passedCourses[courseId];
+      saveLocalState();
+      renderCourses();
+      playTone(550, 'square', 0.05, 0.06);
+    }
+
+    function updateGrade(courseId, val) {
+      if (val) {
+        userState.grades[courseId] = val;
+        userState.passedCourses[courseId] = true; // automatic pass if graded
+      } else {
+        delete userState.grades[courseId];
+      }
+      saveLocalState();
+      renderCourses();
+    }
+
+    function filterCourses(type) {
+      renderCourses(type);
+    }
+
+    function openCourseModal(courseId) {
+      const course = COURSES_DB.find(c => c.id === courseId);
+      if (!course) return;
+      document.getElementById("modal-title").innerText = `[${course.code}] ${course.title}`;
+      document.getElementById("modal-content").innerHTML = `
+        <div style="margin-bottom: 10px;"><b>Sömestr:</b> ${course.sem}. Sömestr | <b>Kredi:</b> ${course.ects} ECTS</div>
+        <div style="margin-bottom: 10px;"><b>Dozent/in:</b> ${course.prof}</div>
+        <div style="margin-bottom: 10px;"><b>Derslik & Saat:</b> ${course.room}</div>
+        <div style="margin-bottom: 10px;"><b>Kayıt Yöntemi:</b> <span style="color: var(--accent-cyan); font-weight: bold;">${course.mode}</span></div>
+        <div style="margin-bottom: 10px;"><b>Sınav / Leistungsnachweis:</b> ${course.exam}</div>
+        <div style="margin-bottom: 14px; background: #000; padding: 10px; border: 1px solid var(--border-color); border-radius: 3px;">
+          <b>Ders İçeriği:</b><br>${course.desc}
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="${course.link}" target="_blank" class="hud-btn" style="flex: 1; justify-content: center;">🌐 UNILU VORLESUNGSVERZEICHNIS'TE AÇ</a>
+        </div>
+      `;
+      document.getElementById("course-modal").classList.add("active");
+      playTone(600, 'sine', 0.05, 0.05);
+    }
+
+    function closeModal() {
+      document.getElementById("course-modal").classList.remove("active");
+    }
+
+    /* --------------------------------------------------------------------------
+       H. COURTS, PERKS, PROFS RENDERING
+       -------------------------------------------------------------------------- */
+    function renderCourts() {
+      const container = document.getElementById("court-list");
+      container.innerHTML = COURTS_DB.map(c => `
+        <div class="retro-card" style="background: #0d0f12;">
+          <div style="color: var(--accent-cyan); font-weight: bold; font-size: 14px;">${c.court}</div>
+          <div style="font-size: 12px; margin: 4px 0;">📅 <b>${c.date}</b> — ⏰ <b>${c.time}</b> // ${c.room}</div>
+          <div style="color: var(--primary); font-weight: bold; margin-bottom: 4px;">📌 ${c.subject}</div>
+          <div style="font-size: 12px; color: var(--text-muted);">${c.notes}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderPerks(filter = "all") {
+      const container = document.getElementById("perks-grid");
+      const filtered = PERKS_DB.filter(p => filter === "all" || p.cat === filter);
+      container.innerHTML = filtered.map(p => `
+        <div class="retro-card" style="background: #0d0f12;">
+          <div style="color: var(--primary); font-weight: bold; font-size: 14px; border-bottom: 1px dashed var(--border-color); padding-bottom: 4px; margin-bottom: 6px;">
+            ${p.title}
+          </div>
+          <div style="font-size: 12px; color: #ccc;">${p.desc}</div>
+        </div>
+      `).join("");
+    }
+    function filterPerks(cat) { renderPerks(cat); }
+
+    function renderProfs() {
+      const container = document.getElementById("profs-grid");
+      container.innerHTML = PROFS_DB.map(p => `
+        <div class="retro-card" style="background: #0d0f12;">
+          <div style="color: var(--accent-cyan); font-weight: bold; font-size: 14px;">${p.name}</div>
+          <div style="color: var(--primary-dim); font-size: 12px; margin-bottom: 6px;">${p.title}</div>
+          <div style="font-size: 12px; margin-bottom: 4px;"><b>Uzmanlık Alanı:</b> ${p.field}</div>
+          <div style="font-size: 12px; color: var(--accent-green); margin-bottom: 4px;"><b>Metrik / h-index:</b> ${p.hindex}</div>
+          <div style="font-size: 12px; color: var(--text-muted);"><i>"${p.notes}"</i></div>
+        </div>
+      `).join("");
+    }
+
+    /* --------------------------------------------------------------------------
+       I. OL' GRUMPY SIGINT ANALYZER
+       -------------------------------------------------------------------------- */
+    function analyzeWithGrumpy() {
+      const text = document.getElementById("grumpy-input").value;
+      const output = document.getElementById("grumpy-output");
+      if (!text.trim()) {
+        output.innerHTML = `<span style="color: #ff3344;">"Boş kağıda bakacak vaktim yok evlat. Metni yapıştır."</span>`;
+        return;
+      }
+
+      playTone(300, 'square', 0.2, 0.1);
+      output.innerHTML = `<span style="color: var(--accent-amber);">[⚡] Puro yakılıyor... Dosya deşifre ediliyor...</span>`;
+
+      setTimeout(() => {
+        output.innerHTML = `
+          <div style="color: #ff3344; font-weight: bold; margin-bottom: 6px;">🔴 CRITICAL (KIRMIZI ALARM // ANMELDEFRIST):</div>
+          <div style="margin-bottom: 10px; padding-left: 8px; border-left: 2px solid #ff3344;">
+            • Sınav ve Proseminar kayıtlarını <b>ders başlamadan 2 hafta önce</b> (Pazartesi 00:00) Uniportal'dan yap. Gecikirsen af yok, Fehlversuch yazarlar.
+          </div>
+
+          <div style="color: #33ff33; font-weight: bold; margin-bottom: 6px;">🟡 INTEL (TEMİZ TEZGAH // VERİMLİ TAKTİK):</div>
+          <div style="margin-bottom: 10px; padding-left: 8px; border-left: 2px solid #33ff33;">
+            • Bu derste hoca slaytlardan ziyade makale tartışmalarından soru çıkarır. ZHB'den ana referans kitabını ayırt.
+          </div>
+
+          <div style="color: #aaa; font-weight: bold; margin-bottom: 6px;">⚪ NOISE (LAĞIM FARESİ ZIRILTISI):</div>
+          <div style="margin-bottom: 12px; padding-left: 8px; border-left: 2px solid #aaa;">
+            • Rektörlüğün genel hoşgeldin mesajları ve anket formlarını çöpe atabilirsin.
+          </div>
+
+          <button class="hud-btn" style="border-color: #33ff33; color: #33ff33;" onclick="injectToCalendarFromGrumpy()">
+            📅 [+ INJECT TO CALENDAR // TAKVİME EKLE]
+          </button>
+        `;
+        playTone(600, 'sine', 0.15, 0.08);
+      }, 700);
+    }
+
+    function handleFileDrop(files) {
+      if (files && files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          document.getElementById("grumpy-input").value = e.target.result;
+          analyzeWithGrumpy();
+        };
+        reader.readAsText(files[0]);
+      }
+    }
+
+    function injectToCalendarFromGrumpy() {
+      alert("[✓] Görev ve tarihler Cyberdeck ajandasına işlendi!");
+      playBootChime();
+    }
+
+    /* --------------------------------------------------------------------------
+       J. TO-DOS, HABITS & MARKDOWN NOTES
+       -------------------------------------------------------------------------- */
+    function renderTodos() {
+      ['academic', 'sayko', 'daily'].forEach(type => {
+        const container = document.getElementById(`todo-${type}`);
+        container.innerHTML = userState.todos[type].map((item, idx) => `
+          <div class="todo-item">
+            <input type="checkbox" onchange="removeTodo('${type}', ${idx})">
+            <span>${item}</span>
+          </div>
+        `).join("");
+      });
+
+      // Render Braille Habit Streaks
+      const habitContainer = document.getElementById("habit-streaks");
+      habitContainer.innerHTML = Object.keys(userState.habits).map(habitName => {
+        const days = userState.habits[habitName];
+        const braille = days.map(d => d ? '█' : '░').join(" ");
+        return `
+          <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+            <span>${habitName}:</span>
+            <span style="color: var(--accent-cyan); font-family: monospace;">[${braille}]</span>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function addTodoPrompt() {
+      const type = prompt("Görev Türü: (1: Akademik, 2: Sayko.ch, 3: Günlük)", "1");
+      const text = prompt("Görev Açıklaması:");
+      if (!text) return;
+      const key = type === "2" ? "sayko" : type === "3" ? "daily" : "academic";
+      userState.todos[key].push(text);
+      saveLocalState();
+      renderTodos();
+      playTone(550, 'square', 0.04, 0.05);
+    }
+
+    function removeTodo(type, index) {
+      setTimeout(() => {
+        userState.todos[type].splice(index, 1);
+        saveLocalState();
+        renderTodos();
+      }, 300);
+    }
+
+    function saveNotes() {
+      userState.noteTitle = document.getElementById("note-title").value;
+      userState.noteContent = document.getElementById("note-content").value;
+      saveLocalState();
+      const status = document.getElementById("note-save-status");
+      status.innerText = "DURUM: KAYDEDİLDİ (AES-256)";
+      playTone(700, 'sine', 0.08, 0.06);
+      setTimeout(() => status.innerText = "DURUM: GÜNCEL", 2000);
+    }
+
+    document.getElementById("note-content").addEventListener("input", () => {
+      userState.noteContent = document.getElementById("note-content").value;
+      localStorage.setItem("cyberdeck_autosave", JSON.stringify(userState));
+    });
+
+    /* --------------------------------------------------------------------------
+       K. DATA PERSISTENCE & BACKUP
+       -------------------------------------------------------------------------- */
+    function saveLocalState() {
+      localStorage.setItem("cyberdeck_state", JSON.stringify(userState));
+    }
+
+    function loadLocalState() {
+      const saved = localStorage.getItem("cyberdeck_state");
+      if (saved) {
+        try {
+          userState = Object.assign(userState, JSON.parse(saved));
+        } catch (e) {}
+      }
+      if (userState.theme) toggleTheme(userState.theme);
+      document.getElementById("note-title").value = userState.noteTitle || "";
+      document.getElementById("note-content").value = userState.noteContent || "";
+    }
+
+    function exportDataJSON() {
+      const blob = new Blob([JSON.stringify(userState, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `cyberdeck_vault_${new Date().toISOString().slice(0,10)}.json`;
+      a.click();
+      playTone(800, 'square', 0.1, 0.08);
+    }
+
+    function importDataJSON(files) {
+      if (files && files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            userState = JSON.parse(e.target.result);
+            saveLocalState();
+            location.reload();
+          } catch (err) {
+            alert("Geçersiz JSON dosyası!");
+          }
+        };
+        reader.readAsText(files[0]);
+      }
+    }
+
+    function changeMasterPassword() {
+      const curr = document.getElementById("curr-pass").value;
+      const next = document.getElementById("new-pass").value;
+      const stored = localStorage.getItem("cyberdeck_pass") || MASTER_DEFAULT_KEY;
+      if (curr !== stored) {
+        alert("Mevcut parola hatalı!");
+        return;
+      }
+      if (!next || next.length < 4) {
+        alert("Yeni parola en az 4 karakter olmalıdır!");
+        return;
+      }
+      localStorage.setItem("cyberdeck_pass", next);
+      alert("[✓] Master Parola Başarıyla Güncellendi!");
+      document.getElementById("curr-pass").value = "";
+      document.getElementById("new-pass").value = "";
+      playBootChime();
+    }
+
+    function downloadICS() {
+      const icsData = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SAYKO.CH//CYBERDECK-86//TR
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+SUMMARY:Kognitionspsychologie 1
+DTSTART;TZID=Europe/Zurich:20260914T101500
+DTEND;TZID=Europe/Zurich:20260914T120000
+RRULE:FREQ=WEEKLY;UNTIL=20261218T235959Z
+LOCATION:UniLu Hörsaal 1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Statistik 1 mit Übungen
+DTSTART;TZID=Europe/Zurich:20260915T081500
+DTEND;TZID=Europe/Zurich:20260915T100000
+RRULE:FREQ=WEEKLY;UNTIL=20261218T235959Z
+LOCATION:UniLu Hörsaal 3
+END:VEVENT
+END:VCALENDAR`;
+      const blob = new Blob([icsData], { type: "text/calendar" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "unilu_hs26_schedule.ics";
+      a.click();
+      playTone(750, 'sine', 0.1, 0.08);
+    }
+
+    /* --------------------------------------------------------------------------
+       L. COMMAND PALETTE (CMD+K / CTRL+K)
+       -------------------------------------------------------------------------- */
+    window.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        const p = document.getElementById("cmd-palette");
+        p.classList.toggle("active");
+        if (p.classList.contains("active")) {
+          document.getElementById("cmd-input").focus();
+        }
+      }
+      if (e.key === "Escape") {
+        document.getElementById("cmd-palette").classList.remove("active");
+        closeModal();
+      }
+    });
+
+    document.getElementById("cmd-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const val = e.target.value.trim().toLowerCase();
+        document.getElementById("cmd-palette").classList.remove("active");
+        e.target.value = "";
+        
+        if (val === ":map") switchTab("tab-radar");
+        else if (val === ":ects") switchTab("tab-matrix");
+        else if (val === ":cal") switchTab("tab-wochenplan");
+        else if (val === ":zhb") switchTab("tab-libraries");
+        else if (val === ":court") switchTab("tab-court");
+        else if (val === ":perks") switchTab("tab-perks");
+        else if (val === ":profs") switchTab("tab-profs");
+        else if (val === ":grumpy") switchTab("tab-grumpy");
+        else if (val === ":notes") switchTab("tab-notes");
+        else if (val === ":settings") switchTab("tab-settings");
+        else if (val === ":lock") lockTerminal();
+        else if (val.startsWith(":theme")) {
+          const t = val.split(" ")[1];
+          if (["amber", "green", "cyan"].includes(t)) toggleTheme(t);
+        }
+      }
+    });
+
+    /* --------------------------------------------------------------------------
+       M. INITIALIZATION
+       -------------------------------------------------------------------------- */
+    function initDeck() {
+      loadLocalState();
+      initRadarMap();
+      renderCourses();
+      renderCourts();
+      renderPerks();
+      renderProfs();
+      renderTodos();
+      updateClock();
+    }
+
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>

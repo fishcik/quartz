@@ -18,6 +18,21 @@ export const Static: QuartzEmitterPlugin = () => ({
       await fs.promises.copyFile(src, dest)
       yield dest
     }
+
+    // Mirror quartz/static/terminal directly to public/terminal for clean URL sayko.ch/terminal
+    const terminalSrc = joinSegments(staticPath, "terminal")
+    if (fs.existsSync(terminalSrc)) {
+      const termFps = await glob("**", terminalSrc, cfg.configuration.ignorePatterns)
+      const outputTermPath = joinSegments(argv.output, "terminal")
+      await fs.promises.mkdir(outputTermPath, { recursive: true })
+      for (const fp of termFps) {
+        const src = joinSegments(terminalSrc, fp) as FilePath
+        const dest = joinSegments(outputTermPath, fp) as FilePath
+        await fs.promises.mkdir(dirname(dest), { recursive: true })
+        await fs.promises.copyFile(src, dest)
+        yield dest
+      }
+    }
   },
   async *partialEmit() {},
 })
