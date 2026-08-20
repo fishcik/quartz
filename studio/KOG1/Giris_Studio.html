@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILHAMMATIK3000 Stüdyosu — Biliş Psikolojisi 1 (Giriş: Algı, Duyu Fizyolojisi, Göz & Retina)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf7f2;
+      --bg-inset: #ede8de;
+      --ink: #2c2418;
+      --ink-mid: #5a4e3a;
+      --ink-faint: #9a8e7a;
+      --rule: #d4c9b4;
+      --accent: #7a3e2a;
+      --accent-lt: #f0e4da;
+      --cardinal: #C8102E;
+      --teal: #2a6b5a;
+      --teal-lt: #ddf0ea;
+      --amber: #7a5a1a;
+      --amber-lt: #f5edce;
+      --blue: #2a4a7a;
+      --blue-lt: #dde8f5;
+      --purple: #4a2a7a;
+      --purple-lt: #ede8f8;
+      --punk: #b82255;
+      --punk-lt: #fce8f0;
+      --podcast: #007074;
+      --podcast-lt: #e0f4f5;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.6;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* TOPBAR */
+    header.cockpit-topbar {
+      height: 50px;
+      background: var(--bg-card);
+      border-bottom: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      flex-shrink: 0;
+      z-index: 20;
+    }
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: 1.12rem;
+      color: var(--accent);
+    }
+    .brand-title .glyph { font-size: 1.25rem; opacity: 0.7; }
+    .brand-title .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-mid);
+      background: var(--bg-inset);
+      padding: 2px 7px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--rule);
+    }
+    .top-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-stat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--ink-mid);
+      background: var(--bg-inset);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--rule);
+    }
+    .badge-stat strong { color: var(--accent); }
+    .save-indicator {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    button.btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    button.btn-accent { background: var(--accent); color: #ffffff; }
+    button.btn-accent:hover { background: #602f20; }
+    button.btn-outline { background: var(--bg-card); border: 1px solid var(--rule); color: var(--ink-mid); }
+    button.btn-outline:hover { background: var(--bg-inset); color: var(--ink); }
+    button.btn-recovery { background: #fff3c4; border: 1px solid #d4c060; color: #7a5a1a; font-weight: bold; }
+    button.btn-recovery:hover { background: #ffe899; }
+
+    /* COCKPIT SPLIT */
+    .cockpit-workspace {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 50px);
+      overflow: hidden;
+    }
+
+    /* LEFT PANEL */
+    .panel-left {
+      width: 53%;
+      min-width: 490px;
+      background: var(--bg);
+      border-right: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .nav-tabs {
+      display: flex;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--rule);
+      padding: 4px 6px 0;
+      gap: 2px;
+      overflow-x: auto;
+      flex-shrink: 0;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.73rem;
+      font-weight: 600;
+      padding: 7px 9px;
+      color: var(--ink-faint);
+      cursor: pointer;
+      border-bottom: 2.5px solid transparent;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--ink); }
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      background: var(--bg);
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    }
+    .tab-btn.tab-punk.active { color: var(--punk); border-bottom-color: var(--punk); }
+    .tab-btn.tab-drill.active { color: var(--cardinal); border-bottom-color: var(--cardinal); }
+    .tab-btn.tab-podcast.active { color: var(--podcast); border-bottom-color: var(--podcast); }
+
+    .left-scroll-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* EMBEDDED VIEWER */
+    .viewer-subbar {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .viewer-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 4px 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      color: var(--ink-mid);
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .viewer-btn:hover { background: var(--bg-inset); color: var(--ink); }
+    .viewer-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+    iframe.uncut-frame {
+      width: 100%;
+      height: calc(100vh - 130px);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+    }
+
+    /* RIGHT PANEL */
+    .panel-right {
+      flex: 1;
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .editor-toolbar {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--rule);
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .toolbar-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      border-right: 1px solid var(--rule);
+      padding-right: 6px;
+    }
+    .toolbar-group:last-child { border-right: none; }
+    .tool-icon-btn {
+      background: none;
+      border: 1px solid transparent;
+      padding: 3px 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--ink-mid);
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .tool-icon-btn:hover { background: var(--bg-inset); border-color: var(--rule); color: var(--ink); }
+
+    select.tool-select {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 2px 4px;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      background: var(--bg-card);
+      color: var(--ink);
+    }
+
+    textarea.main-editor-area {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      padding: 22px 28px;
+      background: var(--bg-card);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 16.5px;
+      line-height: 1.75;
+      resize: none;
+      overflow-y: auto;
+    }
+
+    /* CARD STYLING */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .card-header {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--rule);
+      padding-bottom: 4px;
+    }
+    .card-header .badge-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: normal;
+      color: var(--ink-faint);
+      background: var(--bg-inset);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .callout {
+      border-left: 3.5px solid var(--accent);
+      background: var(--bg-inset);
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.88rem;
+    }
+    .callout.teal { border-left-color: var(--teal); background: var(--teal-lt); }
+    .callout.amber { border-left-color: var(--amber); background: var(--amber-lt); }
+    .callout.blue { border-left-color: var(--blue); background: var(--blue-lt); }
+    .callout.purple { border-left-color: var(--purple); background: var(--purple-lt); }
+    .callout.punk { border-left-color: var(--punk); background: var(--punk-lt); }
+    .callout.cardinal { border-left-color: var(--cardinal); background: #fce8e8; }
+    .callout.podcast { border-left-color: var(--podcast); background: var(--podcast-lt); }
+    .callout-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      color: inherit;
+    }
+
+    /* TIMELINE (CRONOS) */
+    .timeline-wrap {
+      position: relative;
+      padding-left: 18px;
+      border-left: 2px solid var(--rule);
+      margin: 8px 0 8px 4px;
+    }
+    .timeline-node { position: relative; margin-bottom: 14px; }
+    .timeline-node::before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg-card);
+    }
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .timeline-event { font-size: 0.86rem; color: var(--ink); margin-top: 2px; }
+
+    /* STEP INSERTERS & PROMPTS */
+    .step-box, .prompt-box, .podcast-prompt-card {
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      transition: all 0.15s ease;
+    }
+    .step-box:hover, .prompt-box:hover {
+      border-color: var(--accent);
+      background: #ffffff;
+      transform: translateX(3px);
+    }
+    .podcast-prompt-card:hover {
+      border-color: var(--podcast);
+      background: #ffffff;
+    }
+    .step-title, .prompt-head, .podcast-head {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .podcast-head { color: var(--podcast); }
+    .step-text, .prompt-body { font-size: 0.85rem; color: var(--ink-mid); }
+    .podcast-body {
+      font-size: 0.84rem;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--bg-inset);
+      padding: 10px 12px;
+      border-radius: 4px;
+      border: 1px dashed var(--rule);
+      margin: 8px 0;
+      white-space: pre-wrap;
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    /* DRILL QUESTION CARDS */
+    .drill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .drill-q-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--cardinal);
+      margin-bottom: 6px;
+    }
+    .drill-options {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 10px 0;
+      font-size: 0.86rem;
+    }
+    .drill-options label {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 3px;
+      transition: background 0.1s;
+    }
+    .drill-options label:hover { background: var(--bg-inset); }
+    .drill-feedback {
+      margin-top: 8px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      display: none;
+    }
+
+    /* DICTIONARY & SYNC TABLE */
+    table.dict-table, table.sync-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 8px 0;
+    }
+    table.dict-table th, table.dict-table td, table.sync-table th, table.sync-table td {
+      border: 1px solid var(--rule);
+      padding: 6px 8px;
+      text-align: left;
+    }
+    table.dict-table th, table.sync-table th {
+      background: var(--bg-inset);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="cockpit-topbar">
+    <div class="brand-title">
+      <span class="glyph">𓉐</span>
+      <span>ILHAMMATIK3000</span>
+      <span class="tag">Biliş Psikolojisi 1 (Goldstein 1-88 / Slaytlar 1-87)</span>
+    </div>
+    <div class="top-meta">
+      <button class="btn btn-recovery" onclick="recoverAllSavedSnapshots()" title="Tüm geçmiş yedekleri tara ve geri getir">🔄 Hafızadan Kurtar</button>
+      <div class="save-indicator" id="save-status">● Otomatik Kaydedildi</div>
+      <div class="badge-stat">Kelime: <strong id="word-count">0</strong></div>
+      <button class="btn btn-outline" onclick="downloadMarkdownFile()">💾 .md İndir</button>
+      <button class="btn btn-outline" onclick="copyMarkdown()">Panoya Kopyala</button>
+      <button class="btn btn-accent" onclick="insertDefaultFrontmatter()">+ Frontmatter Ekle</button>
+    </div>
+  </header>
+
+  <!-- SPLIT WORKSPACE -->
+  <div class="cockpit-workspace">
+    
+    <!-- LEFT PANEL: 10 SEKMELİ KOKPİT -->
+    <div class="panel-left">
+      <nav class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('tab-book')">01. 📖 Orijinal Kitap & Slayt</button>
+        <button class="tab-btn" onclick="switchTab('tab-sync')">02. ⚡ Kitap+Slayt Omurgası</button>
+        <button class="tab-btn tab-podcast" onclick="switchTab('tab-podcast')">03. 🎙️ SAYKO MAYKO: AUDIO</button>
+        <button class="tab-btn" onclick="switchTab('tab-skeleton')">04. 🗺️ İskelet & Akış</button>
+        <button class="tab-btn tab-punk" onclick="switchTab('tab-punk')">05. ⚡ PUNK!</button>
+        <button class="tab-btn" onclick="switchTab('tab-cronos')">06. ⏳ Cronos</button>
+        <button class="tab-btn tab-drill" onclick="switchTab('tab-drill')">07. 💥 DARBELİ MATKAP</button>
+        <button class="tab-btn" onclick="switchTab('tab-prompts')">08. ✍️ Yazma Ateşleyicileri</button>
+        <button class="tab-btn" onclick="switchTab('tab-mood')">09. 🎨 Moodboard</button>
+        <button class="tab-btn" onclick="switchTab('tab-dict')">10. 🧠 Sözlük & Formüller</button>
+      </nav>
+
+      <div class="left-scroll-area">
+
+        <!-- TAB 1: ORİJİNAL KİTAP & SLAYT VIEWER (4 AYRI GÖMÜLÜ ALAN) -->
+        <div id="tab-book" class="tab-pane" style="display: flex; flex-direction: column; height: 100%;">
+          <div class="viewer-subbar">
+            <span style="font-family:'JetBrains Mono'; font-size:0.72rem; color:var(--ink-mid); font-weight:700;">CANLI KAYNAK:</span>
+            <button class="viewer-btn active" onclick="showViewer('view-book-pdf', this)">Kitap PDF (88 Sayfa)</button>
+            <button class="viewer-btn" onclick="showViewer('view-slides-pdf', this)">Ders Slaytları (87 Slayt)</button>
+            <button class="viewer-btn" onclick="showViewer('view-book-html', this)">Kitap HTML (Seçilebilir Metin)</button>
+            <button class="viewer-btn" onclick="showViewer('view-summary', this)">Detaylı Bölüm Özeti</button>
+            <button class="viewer-btn" style="color:var(--accent);" onclick="document.getElementById('pdf-file-picker').click()">📂 Dosya Seç</button>
+            <input type="file" id="pdf-file-picker" accept=".pdf,.html" style="display:none;" onchange="loadLocalFile(event)">
+          </div>
+
+          <!-- 1. KİTAP PDF -->
+          <iframe id="view-book-pdf" class="uncut-frame" src="book.pdf"></iframe>
+
+          <!-- 2. SLAYTLAR PDF -->
+          <iframe id="view-slides-pdf" class="uncut-frame" src="slides.pdf" style="display: none;"></iframe>
+
+          <!-- 3. KİTAP HTML -->
+          <iframe id="view-book-html" class="uncut-frame" src="book.html" style="display: none;"></iframe>
+
+          <!-- 4. DETAYLI ÖZET -->
+          <div id="view-summary" style="display: none; overflow-y: auto; height: calc(100vh - 130px); padding-right: 4px;">
+            <div class="callout teal">
+              <div class="callout-title">Goldstein 10. Edisyon & Prof. Mast Slaytları — Özümsenmiş Bölüm Külliyatı</div>
+              <p>Kitabın 1-88. sayfalarındaki 3 ana bölümün tüm mekanizmaları, formülleri ve deneyleri:</p>
+            </div>
+            
+            <div class="card">
+              <div class="card-header"><span>Bölüm 1: Algı Süreci & Psikofizik</span><span class="badge-tag">Goldstein S. 1-24 | Slayt 1-39</span></div>
+              <p>• <strong>Koffka's Question:</strong> <em>"Why do things look as they do?"</em>. Dış dünyada renk, ses, tat yoktur; sadece dalga boyları (400-700nm) ve basınç dalgaları vardır.</p>
+              <p>• <strong>Ters Problem (Ill-Posed Inverse Problem):</strong> 2D retinal görüntü, 3D nesneyi tek başına belirleyemez (*underdetermined*). Beyin ön-bilgilerle (*priors*) tahmin yürütür.</p>
+              <p>• <strong>Fechner'in 3 Eşik Metodu:</strong> Sınır (Grenzmethode), Ayarlama (Herstellungsmethode), Sabit Uyarıcılar (Konstanzmethode - %50 ogive eğrisi).</p>
+              <p>• <strong>Weber Kanunu:</strong> $\Delta S / S = k$ (Şok %1, Ağırlık %2, Ses %4, Işık/Tat %8). İki-Nokta Eşiği (*Zwei-Punkt-Schwelle*): Parmak ucu 2mm vs Kol 40mm.</p>
+              <p>• <strong>Stevens Güç Yasası:</strong> $W = K \cdot S^n$ ($n<1$ Parlaklık Sıkışması, $n>1$ Şok Genişlemesi).</p>
+              <p>• <strong>Sinyal Algılama (SDT):</strong> $2\times2$ Matris. Laura (%90 Hit, %50 FA $\rightarrow$ 40) vs Christa (%60 Hit, %10 FA $\rightarrow$ 50). Christa daha hassastır!</p>
+            </div>
+
+            <div class="card">
+              <div class="card-header"><span>Bölüm 2: Duyu Fizyolojisi & Aksiyon Potansiyeli</span><span class="badge-tag">Goldstein S. 25-44 | Slayt 40, 55-63</span></div>
+              <p>• <strong>Santiago Ramón y Cajal (1888):</strong> Nöron Doktrini. Nöronlar bağımsızdır, sinaptik yarıkla ayrılır (1906 Nobel).</p>
+              <p>• <strong>Aksiyon Potansiyeli:</strong> Dinlenim $-70\text{ mV}$ $\rightarrow$ Eşik $-55\text{ mV}$ $\rightarrow$ $\text{Na}^+$ girişi ile $+40\text{ mV}$ $\rightarrow$ $\text{K}^+$ çıkışı ile repolarizasyon.</p>
+              <p>• <strong>Üç Kural:</strong> Hep ya da Hiç kuralı, Refrakter evre (~1 ms), Frekans kodlaması (Şiddet voltajla değil, ateşleme sıklığıyla iletilir!).</p>
+              <p>• <strong>Sinaps:</strong> EPSP (eksitatuar depolarizasyon) vs IPSP (inhibitor hiperpolarizasyon) toplamı.</p>
+            </div>
+
+            <div class="card">
+              <div class="card-header"><span>Bölüm 3: Göz, Retina, Uyum & İllüzyonlar</span><span class="badge-tag">Goldstein S. 45-88 | Slayt 41-54, 64-87</span></div>
+              <p>• <strong>Gözün Optiği:</strong> Kornea sabit %80 kırma. Mercek akomodasyonla %20 kırma. Mercek sertleşince **Presbiyopi** (yakın noktası / Nahpunkt uzaklaşır).</p>
+              <p>• <strong>126 Milyon Reseptör vs 1 Milyon Gangliyon:</strong> 120 milyon çubuk (periferde, 120:1 yüksek konverjans, karanlıkta aşırı hassas ama bulanık); 6 milyon koni (foveada, 1:1 düşük konverjans, yüksek keskinlik / Sehschärfe).</p>
+              <p>• <strong>Fototransdüksiyon & Karanlığa Uyum:</strong> Rodopsin = Opsin + 11-cis Retinal. Işıkla izomerizasyon ve ağarma (*bleaching*). 7. dakikada **Kohlrausch Kırılması** ile çubuklar baskınlaşır (30 dk'da 100.000 kat duyarlılık).</p>
+              <p>• <strong>Purkinje Kayması (1825):</strong> Koniler sarı-yeşile (560 nm), çubuklar mavi-yeşile (500 nm) duyarlıdır. Alacakaranlıkta kırmızı solar, mavi parıldar.</p>
+              <p>• <strong>Yanal Engelleme (Hartline, 1956 Limulus):</strong> Horizontal hücreler komşuları baskılar. Hermann ızgarası kavşakları (-40) koridorlardan (-24) daha koyu görünür. Foveada odaklanınca kaybolur.</p>
+              <p>• <strong>White Yanılsaması & Benary Haçı:</strong> Lateral inhibisyon ters çıkar; korteksteki 3D derinlik ve aidiyet (*belongingness*) retinayı ezer.</p>
+              <p>• <strong>Görme Yolları & Lezyonlar:</strong> Kiazma optikum orta hat basısında (hipofiz tümörü) **Bitemporal Heteronim Hemianopsi (Tünel Görüşü)** oluşur.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: KİTAP + SLAYT ORTAK OMURGA (SENKRONİK AKIŞ HARİTASI) -->
+        <div id="tab-sync" class="tab-pane" style="display: none;">
+          <div class="callout teal">
+            <div class="callout-title">⚡ Kitap + Slaytlar Senkronik Omurgası (Ortak Akış Haritası)</div>
+            <p>Prof. Fred Mast'ın slayt sırası ile Goldstein kitabının birebir eşleşme tablosu:</p>
+          </div>
+
+          <table class="sync-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Ders Slaytı (UNILU)</th>
+                <th style="width: 25%;">Goldstein Bölüm & Sayfa</th>
+                <th>Ortak Kavram & Kritik Çıkarım</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Slayt 1–15</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Grundfragen & Prozess</span></td>
+                <td><strong>Bölüm 1.1–1.4</strong><br>(Sayfa 1–14)</td>
+                <td><strong>Kurt Koffka Sorusu & Ters Problem:</strong> Dış dünyada renk/ses yok (400-700nm spektrum). Algı bir veri bilimci gibi ön-bilgilerle hipotez kurar.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 16–22</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Psychophysik & JND</span></td>
+                <td><strong>Bölüm 1.5 & Anhang A</strong><br>(Sayfa 14–15, 490)</td>
+                <td><strong>Weber Kanunu ($\Delta S/S = k$):</strong> Ağırlık farkı mutlak gramajla değil, başlangıç ağırlığının %2'siyle ($0.02$) anlaşılır. İki-nokta eşiği (parmak 2mm vs kol 40mm).</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 23–32</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Absolute Schwelle</span></td>
+                <td><strong>Bölüm 1.6 & Metot 1.1</strong><br>(Sayfa 15–17)</td>
+                <td><strong>Fechner'in 3 Eşik Metodu:</strong> Sınır yöntemi (Grenzmethode - ortalama), Ayarlama (Herstellungsmethode - kaba/hızlı), Sabit Uyarıcılar (Konstanzmethode - %50 psikometrik eğri).</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 33</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Grössenschätzung</span></td>
+                <td><strong>Bölüm 1.6 & Metot 1.2</strong><br>(Sayfa 18–19)</td>
+                <td><strong>Stevens Güç Yasası ($W = K \cdot S^n$):</strong> Parlaklıkta sıkışma (Verdichtung $n<1$), şokta patlama (Spreizung $n>1$).</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 34–39</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Signalentdeckungstheorie</span></td>
+                <td><strong>Anhang C</strong><br>(Sayfa 492–495)</td>
+                <td><strong>Sinyal Algılama (SDT) & Kriter:</strong> Duşta çalan telefon. Laura (%90 Hit, %50 FA $\rightarrow$ 40) vs Christa (%60 Hit, %10 FA $\rightarrow$ 50). Christa daha hassastır!</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 40–44</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Das Auge & Akkomodation</span></td>
+                <td><strong>Bölüm 3.1–3.2</strong><br>(Sayfa 45–49)</td>
+                <td><strong>Gözün Kırma Optiği:</strong> Kornea %80, Mercek %20 akomodasyon. Presbiyopi: Mercek sertleşir, yakın noktası (Nahpunkt) uzaklaşır.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 45–48</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Transduktion & Retina</span></td>
+                <td><strong>Bölüm 3.3.1</strong><br>(Sayfa 50–51)</td>
+                <td><strong>Fototransdüksiyon:</strong> Rodopsin = Opsin + 11-cis Retinal. Işıkla izomerizasyon ve ağarma (Bleaching). Kör nokta ve Makula dejenerasyonu.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 49–51</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Dunkeladaptation</span></td>
+                <td><strong>Bölüm 3.3.2</strong><br>(Sayfa 51–54)</td>
+                <td><strong>Karanlığa Adaptasyon:</strong> İki aşamalı eğri. 7. dakikada Kohlrausch kırılması (Kohlrausch-Knick) ile çubuklar baskınlaşır. Korsan göz bandı hack'i!</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 52–54</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Zapfen & Purkinje</span></td>
+                <td><strong>Bölüm 3.3.3</strong><br>(Sayfa 54–56)</td>
+                <td><strong>Spektral Duyarlılık & Purkinje Kayması:</strong> Koniler 560nm (sarı-yeşil), Çubuklar 500nm (mavi-yeşil). Alacakaranlıkta kırmızı kararır, mavi parlar.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 55–63</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Aktionspotential & Synapse</span></td>
+                <td><strong>Bölüm 2.1–2.2</strong><br>(Sayfa 25–44)</td>
+                <td><strong>Sinirsel İletim:</strong> Cajal nöron doktrini. Dinlenim -70mV, Na+ girişi +40mV. Hep ya da Hiç kuralı, Refrakter süre, Frekans kodlaması, EPSP/IPSP.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 64–68</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Neuronale Konvergenz</span></td>
+                <td><strong>Bölüm 3.4</strong><br>(Sayfa 59–63)</td>
+                <td><strong>Konverjans Dengesi:</strong> 120:1 Çubuklar (karanlıkta toplama / yüksek duyarlılık, düşük keskinlik) vs 1:1 Fovea Konileri (yüksek keskinlik, düşük ışık duyarlılığı).</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 69–79</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Laterale Inhibition</span></td>
+                <td><strong>Bölüm 3.5</strong><br>(Sayfa 64–72)</td>
+                <td><strong>Yanal Engelleme (Hartline Limulus):</strong> Horizontal hücreler. Hermann ızgarası (-40 vs -24 hesabı), Mach Bantları (88 vs 8), Simültankontrast.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 80–83</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">White & Benary Paradoksu</span></td>
+                <td><strong>Bölüm 3.5.3</strong><br>(Sayfa 72–75)</td>
+                <td><strong>Retinanın İflası:</strong> White İllüzyonu ve Benary Haçı. Korteksteki 3D derinlik ve Gestalt aidiyeti (Prinzip der Zugehörigkeit / Belongingness) retinayı ezer.</td>
+              </tr>
+              <tr>
+                <td><strong>Slayt 84–87</strong><br><span style="font-size:0.75rem; color:var(--ink-faint);">Sehbahn & Ausfälle</span></td>
+                <td><strong>Bölüm 4 Giriş & Exkurs</strong><br>(Sayfa 77–88)</td>
+                <td><strong>Görme Yolları ve Lezyonlar:</strong> Optik sinir $\rightarrow$ Kiazma $\rightarrow$ CGL $\rightarrow$ V1. Kiazma orta hat tümörü $\rightarrow$ Heteronim Hemianopsi (Tünel Görüşü).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TAB 3: SAYKO MAYKO: AUDIO (COMPANION PODCAST MASTER PROMPT) -->
+        <div id="tab-podcast" class="tab-pane" style="display: none;">
+          <div class="callout podcast">
+            <div class="callout-title">🎙️ SAYKO MAYKO: AUDIO — Cihan'ın Zihinsel Çapası & Companion Podcast</div>
+            <p>Bu podcast alelade bir ders özeti değildir; her gün kütüphaneye gelip sayko.ch'u inşa etme mücadelenin, felsefî disiplininin ve varoluşsal direncinin sesli yol arkadaşıdır.</p>
+          </div>
+
+          <!-- MASTER COMPANION PROMPT CARD -->
+          <div class="podcast-prompt-card" style="border: 2px solid var(--podcast);">
+            <div class="podcast-head">
+              <span style="font-size:0.9rem;">⚡ TEK MASTER PROMPT: Cihan & Sayko.ch Companion Audio (NotebookLM)</span>
+              <button class="btn btn-accent" style="font-size:0.72rem; padding:4px 9px; background:var(--podcast);" onclick="copyPromptText('podcast-master-prompt')">📋 Master Promptu Kopyala</button>
+            </div>
+            <p style="font-size:0.82rem; color:var(--ink-mid); margin: 4px 0 8px;">
+              NotebookLM'de <strong>"Sesli Özet'i Özelleştirin"</strong> penceresini aç, Biçim olarak <strong>Ayrıntılı İnceleme</strong> seç ve aşağıdaki metni kutuya yapıştır:
+            </p>
+            <div id="podcast-master-prompt" class="podcast-body">Bu podcastin adı "SAYKO MAYKO: AUDIO".
+
+Format & Rol: İki sunucu olarak siz, Universität Luzern'de psikoloji lisansını kendi özgün projesi sayko.ch ile edebi bir külliyata dönüştüren kadim dostunuz Cihan'ın zihinsel yol arkadaşısınız (Companion Podcast). Cihan şu an kütüphaneden çıkmış, kulaklığını takmış, Luzern gölü kıyısında veya şehrin sokaklarında adımlıyor. Bu podcast onun her gün kütüphaneye gelme motivasyonunun, düşünce disiplininin ve sayko.ch projesinin zihinsel çapasıdır (mental anchor).
+
+Konuşma Akışı ve Kurallar:
+1. Giriş & Kişisel Çapa: Cihan'a doğrudan ve sıcak bir şekilde ismiyle hitap edin. Bugün kütüphanede masaya yatırdığı materyalle, İsviçre'deki akademik mücadelesiyle ve sayko.ch'un ruhuyla bağı kurun ("Selam Cihan, yine o kütüphane masasından kalktın, adımlarını duyuyoruz... Bugün stüdyoda tartıştığımız o devasa meseleleri zihnine çapalama vakti").
+2. Bugünün Bilimsel Omurgası (Biliş Psikolojisi 1): Ekli kaynaklardaki (Goldstein 10. Ed ve Prof. Fred Mast slaytları) kavramları sokak akademisyeni titizliğiyle açın:
+   - Kurt Koffka'nın sorusu ve Ters Problem (Ill-Posed Problem): Dünyada aslında renk ve sesin yokluğu, beynin 2B retinal silüetten 3B dünyayı tahmin eden istatistiki bir kestirim motoru oluşu.
+   - Fechner, Weber ve Stevens Kanunları: Ağırlık farkının mutlak gramajla değil Weber kesriyle (%2) anlaşılması; Stevens'ın güç yasasında neden parlaklıkta doygunluk (n=0.33) yaşarken acıda (elektrik şoku n=3.5) patlama yaşadığımızın hayatta kalma mantığı.
+   - Sinyal Algılama (SDT) & Karar Kriteri: Duşta çalan telefon analojisi; Laura (%90 Hit, %50 FA) ile Christa (%60 Hit, %10 FA) üzerinden duyarlılık (d') ile liberal/muhafazakar kriter ayrımı.
+   - Aksiyon Potansiyeli & Cajal: Nöronun -70 mV dinlenim potansiyelinden Na+ hücumuyla +40 mV'a fırlaması, bilginin voltaj boyutuyla değil frekans sıklığıyla (rate coding) iletilmesi.
+   - 126 Milyon Reseptör Dengesi: Foveadaki 1:1 koni keskinliği ile periferdeki 120:1 çubuk konverjansının karanlık kumarı. 7. dakikadaki Kohlrausch kırılması, karanlığa uyum ve korsanların göz bandı takma taktiği.
+   - Retinanın Çöküşü (Hartline'dan White İllüzyonuna): At nalı yengecindeki (Limulus) yanal engelleme ve Hermann ızgarası matematiği (-40 vs -24); ardından White yanılsamasıyla retinanın iflas edip kortikal Gestalt aidiyetinin (belongingness) nasıl kazandığı.
+3. Varoluşsal Kapanış & Sayko Manifestosu: Konuyu sadece bir sınav müfredatı olarak bırakmayın; Cihan'ın sayko.ch'ta yaratmak istediği "Cioran okumuş sokak akademisyeni" vizyonuna bağlayın. Algının bir yanılsama, bilimin ise bu yanılsamayı deşifre etme cesareti olduğunu vurgulayarak Cihan'a yarın kütüphanede yeniden buluşmak üzere güçlü bir motivasyonla veda edin.
+
+Üslup: Tamamen Türkçe, inanılmaz doğal, iki dostun birbiriyle paslaşarak ve Cihan'ı sohbete dahil ederek konuştuğu, mekaniklikten uzak, zeki, derin, edebi ve tutkulu bir ton.</div>
+          </div>
+
+          <div class="card" style="margin-top: 10px;">
+            <div class="card-header"><span>Companion Podcast Kullanım Ritüeli</span><span class="badge-tag">Günlük Akış</span></div>
+            <p>1. <strong>Kütüphane Masası:</strong> Slaytları ve kitabı sol panelden oku, notlarını çıkar, editörde yazını hazırla.</p>
+            <p style="margin-top: 4px;">2. <strong>NotebookLM Sentezi:</strong> Kitap + Slaytlar + <code>SAYKO_MAYKO_AUDIO_NotebookLM_Manifesto.md</code> kaynaklarını yükle, yukarıdaki tek master promptu yapıştır ve podcasti üret.</p>
+            <p style="margin-top: 4px;">3. <strong>Luzern Yürüyüşü:</strong> Kulaklığı tak; kütüphanede ürettiğin teoriyi yürüyüşte içselleştirip zihnine mühürle.</p>
+          </div>
+        </div>
+
+        <!-- TAB 4: İSKELET & AKIŞ -->
+        <div id="tab-skeleton" class="tab-pane" style="display: none;">
+          <div class="callout amber">
+            <div class="callout-title">sayko.ch Feynman İskeleti (5 Adımlı Anlatı Mimari)</div>
+            <p>Adımlara tıklayarak editöre taslağın başlık ve gövde yapı taşlarını fırlatabilirsin:</p>
+          </div>
+
+          <div class="step-box" onclick="insertTextAtCursor('\n## 1. Işık Değil Dalga Boyu — Algının İstatistiki Doğası\n\nKurt Koffka (1886–1941) o meşhur soruyu sorduğunda...\n')">
+            <div class="step-title"><span>Adım 1: Paradoksu Kur (Kancayı At)</span><span>+ Ekle</span></div>
+            <div class="step-text">Koffka sorusu (*Why do things look as they do?*), dış dünyada renk ve sesin yokluğu, retinanın 2B ters problemi (*underdetermined inverse problem*) ve beynin istatistiki kestirim motoru.</div>
+          </div>
+
+          <div class="step-box" onclick="insertTextAtCursor('\n## 2. Psikofizik ve Ölçüm Sanatı — Fechner, Weber ve Stevens\n\nFiziksel dünya ile zihinsel yaşantı arasındaki köprü...\n')">
+            <div class="step-title"><span>Adım 2: Ölçüm Kanunlarını ve Deneyleri Ser</span><span>+ Ekle</span></div>
+            <div class="step-text">Fechner'in 3 eşik yöntemi, Weber Kanunu ($\Delta S/S = k$) ve Stevens Güç Yasası (parlaklıkta doygunluk $n<1$ vs şokta acı $n>1$).</div>
+          </div>
+
+          <div class="step-box" onclick="insertTextAtCursor('\n## 3. Sinyal Algılama Kuramı (SDT) — Gürültüde Zil Sesi Aramak\n\nKlasik eşik deneylerinin en büyük açmazı...\n')">
+            <div class="step-title"><span>Adım 3: Belirsizliği ve Karar Kriterini Aç</span><span>+ Ekle</span></div>
+            <div class="step-text">Duşta çalan telefon analojisi, $2\times2$ Karar Matrisi, Laura-Christa sınav tuzağı (Hit'e değil False Alarm farkına bak!).</div>
+          </div>
+
+          <div class="step-box" onclick="insertTextAtCursor('\n## 4. Retinada Nöronal Mimari — Konverjans ve Yanal Engelleme\n\nIşık korneadan (%80 kırılma) ve mercekten geçip...\n')">
+            <div class="step-title"><span>Adım 4: Biyolojik Mikro-Devreleri Çarpıştır</span><span>+ Ekle</span></div>
+            <div class="step-text">126 milyon reseptör, foveada 1:1 koni keskinliği vs çubuklarda 120:1 toplama. Fototransdüksiyon (rodopsin ağarması), 7. dk Kohlrausch kırılması ve Hartline'ın yanal engellemesi (*Lateral Inhibition*).</div>
+          </div>
+
+          <div class="step-box" onclick="insertTextAtCursor('\n## 5. İllüzyonlar, Lezyonlar ve Sayko Yargısı\n\nHermann ızgarası retinayı doğrular gibi dururken, White yanılsaması...\n')">
+            <div class="step-title"><span>Adım 5: Ters Köşe Yap & En Güçlü Cümleyle Bitir</span><span>+ Ekle</span></div>
+            <div class="step-text">Hermann vs White İllüzyonu (Kortikal Gestalt aidiyeti / *belongingness*), optik kiazma lezyonu (tünel görüşü) ve "evrim bize gerçeği değil, hayatta kalacak kadar illüzyonu verdi" finali.</div>
+          </div>
+        </div>
+
+        <!-- TAB 5: PUNK! (YERALTI, FELSEFE & OUTSIDE-THE-BOX) -->
+        <div id="tab-punk" class="tab-pane" style="display: none;">
+          <div class="callout punk">
+            <div class="callout-title">⚡ PUNK! — Radikal Fikirler, Provokasyonlar & Cioran Bakışı</div>
+            <p>Burada akademik nezaket biter; biyolojinin acımasız ironisi ve yeraltı felsefesi konuşur.</p>
+          </div>
+
+          <div class="card" style="border-left: 4px solid var(--punk);">
+            <div class="card-header" style="color: var(--punk);"><span>1. Kör Nokta Küstahlığı: Beynin Yalan Söyleme Sanatı</span><span class="badge-tag" style="color: var(--punk);">Ontolojik İroni</span></div>
+            <p>Gözünün tam ortasında, 1 milyon sinir lifinin çıktığı yerde kocaman bir delik var: **Kör Nokta (Blinder Fleck)**. Orada tek bir reseptör bile yok. Ama şu an baktığın hiçbir yerde siyah bir delik görmüyorsun. Neden? Çünkü beynin arsız bir bürokrat gibi deliğin etrafındaki pikselleri kopyalayıp oraya yapıştırıyor (*filling-in*). Beyin gerçeği söylemektense kesintisiz bir yalan kurgulamayı seçer. İnsan bilinci, kendi kör noktalarını örtbas etme sanatıdır.</p>
+          </div>
+
+          <div class="card" style="border-left: 4px solid var(--punk);">
+            <div class="card-header" style="color: var(--punk);"><span>2. Korsan Göz Bandı: Nörobiyolojik Bir Korsan Hack'i</span><span class="badge-tag" style="color: var(--punk);">Yeraltı Taktiği</span></div>
+            <p>Popüler kültür korsanları tek gözü kör sanır. Oysa korsan göz bandı, 17. yüzyılın en vahşi nörofizyolojik hack'idir. Güneş altındaki güvertede rodopsin fotopigmentlerin ışıkla ağarır (*bleached*). Karanlık ambar odasına kılıçla daldığında çubuklarının adapte olması için 30 dakika (*Kohlrausch-Knick*) bekleyecek vaktin yoktur—ölürsün. Bandı yukarı sıyırdığın an kapalı gözün zaten 30 dakikadır karanlığa adapte olmuştur. Biyolojiye teslim olmayan, onu kandırır.</p>
+          </div>
+
+          <div class="card" style="border-left: 4px solid var(--punk);">
+            <div class="card-header" style="color: var(--punk);"><span>3. Stevens Güç Yasası ve Hayatta Kalma Paranoyası</span><span class="badge-tag" style="color: var(--punk);">Matematiksel Şiddet</span></div>
+            <p>Neden ışık şiddeti 100 kat artınca sadece 4-5 kat parlaklık hissederiz ($n=0.33$) de, elektrik şoku azıcık artınca acıdan kıvranırız ($n=3.5$)? Çünkü evrim güzellikle ilgilenmez. Işığın fazlası sadece retinayı yorar; elektrik şoku veya doku hasarı seni 1 saniyede öldürür. Beyin, ölüm tehdidi taşıyan sinyallerin sesini logaritmik değil eksponansiyel açan paranoyak bir amfidir.</p>
+          </div>
+
+          <div class="card" style="border-left: 4px solid var(--punk);">
+            <div class="card-header" style="color: var(--punk);"><span>4. White İllüzyonu: Retinanın İdam Fermanı</span><span class="badge-tag" style="color: var(--punk);">Kortikal Darbe</span></div>
+            <p>100 yıldır ders kitapları retinayı mekanik bir fotoğraf makinesi gibi anlattı: "Işık düşer, horizontal hücre yanındakini ezer, kontrast çıkar." White yanılsaması bu masalı yerle bir etti. Aynı foton sayısına ve aynı yanal baskıya sahip iki gri şerit; sadece korteksin "bu nesne arkada duruyor, diğeri önde" şeklindeki 3D derinlik varsayımı yüzünden taban tabana zıt algılanıyor. Retinadaki pikseller köledir; efendi korteksteki Gestalt aidiyetidir (*belongingness*).</p>
+          </div>
+        </div>
+
+        <!-- TAB 6: CRONOS (KRONOLOJİ) -->
+        <div id="tab-cronos" class="tab-pane" style="display: none;">
+          <div class="callout blue">
+            <div class="callout-title">Duyu ve Algı Biliminin Tarihsel Omurgası (1825–1966)</div>
+            <p>Kavramların hangi laboratuvarlarda, hangi deneylerle doğduğunun eksiksiz kronolojisi:</p>
+          </div>
+
+          <div class="timeline-wrap">
+            <div class="timeline-node">
+              <div class="timeline-date">1825 — Jan Evangelista Purkinje</div>
+              <div class="timeline-event"><strong>Purkinje Etkisi:</strong> Prag'da sabah alacakaranlığında yürürken kırmızı çiçeklerin karardığını, mavi çiçeklerin parıldadığını fark etti. Çubuk ve konilerin spektral duyarlılık farkının ilk keşfi.</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1834 — Ernst Heinrich Weber</div>
+              <div class="timeline-event"><strong>Weber Kanunu ($\Delta S / S = k$):</strong> Leipzig'de deri duyarlılığı ve kaldırılan ağırlık deneyleri. İki-nokta eşiği (*Zwei-Punkt-Schwelle*) ve fark eşiğinin oransal doğası.</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1860 — Gustav Theodor Fechner</div>
+              <div class="timeline-event"><strong>Elemente der Psychophysik:</strong> Psikofiziğin kuruluşu. Mutlak Eşik kavramı ve 3 klasik psikofiziksel ölçüm metodu (Sınır, Ayarlama, Sabit Uyarıcılar).</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1888 — Santiago Ramón y Cajal</div>
+              <div class="timeline-event"><strong>Nöron Doktrini:</strong> Golgi gümüş boyama tekniğiyle nöronların birbirine sürekli bir ağla bağlı olmadığını, bağımsız hücreler olduğunu kanıtladı (1906 Nobel).</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1935 — Kurt Koffka</div>
+              <div class="timeline-event"><strong>Gestalt Prensipleri:</strong> <em>"Why do things look as they do?"</em> sorusuyla algının yerel uyarılmadan ibaret olmadığını, bütüncül bir organizasyon olduğunu ilan etti.</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1956 — Haldan Keffer Hartline & ark.</div>
+              <div class="timeline-event"><strong>Lateral İnhibisyonun İspatı:</strong> At nalı yengeci (*Limulus*) ommatidiyumlarında tek hücre kayıtlarıyla komşu reseptörlerin birbirini engellediğini doğrudan kaydetti (1967 Nobel).</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1957 — S. S. Stevens</div>
+              <div class="timeline-event"><strong>Stevens Güç Yasası ($W = K \cdot S^n$):</strong> Doğrudan büyüklük tahmini (*magnitude estimation*) yöntemiyle Fechner'in logaritmik yasasını düzeltti.</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-date">1966 — Green & Swets</div>
+              <div class="timeline-event"><strong>Sinyal Algılama Kuramı (SDT):</strong> Radar operatörlerinin kararlarından psikofiziğe aktarıldı; duyusal hassasiyet ($d'$) ile karar kriteri ($\beta$) ayrıştırıldı.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 7: DARBELİ MATKAP (SINAV SİMÜLATÖRÜ) -->
+        <div id="tab-drill" class="tab-pane" style="display: none;">
+          <div class="callout cardinal">
+            <div class="callout-title">💥 DARBELİ MATKAP — Prof. Fred Mast Sınav Simülatörü</div>
+            <p>Universität Luzern sınavlarında sorulan en çetin ve tuzaklı 4 soru. Şıkkı seç, cevabını anında analiz et:</p>
+          </div>
+
+          <div class="drill-card">
+            <div class="drill-q-title">1. Sinyal Algılama Kuramı (SDT) — Laura vs. Christa Tuzağı</div>
+            <p style="font-size: 0.88rem;">Bir işitme eşiği deneyinde Laura 100 sinyalli denemenin 90'ında "evet", 100 sinyalsiz denemenin 50'sinde "evet" demiştir. Christa ise 100 sinyallinin 60'ında, 100 sinyalsizin 10'unda "evet" demiştir. Sonuçlara göre hangisi <strong>kesinlikle doğrudur</strong>?</p>
+            <div class="drill-options">
+              <label><input type="radio" name="dq1" value="a"> (A) Laura'nın isabet oranı (%90) daha yüksek olduğu için işitme duyarlılığı Christa'dan daha yüksektir.</label>
+              <label><input type="radio" name="dq1" value="b"> (B) Christa'nın duyusal hassasiyeti ($d'$) Laura'dan daha yüksektir; Laura sadece daha liberal bir karar kriteri kullanmaktadır.</label>
+              <label><input type="radio" name="dq1" value="c"> (C) İkisinin de duyusal hassasiyeti eşittir çünkü ikisi de 100'er denemeye katılmıştır.</label>
+              <label><input type="radio" name="dq1" value="d"> (D) Christa'nın yanlış alarmı düşük olduğu için sağır olma ihtimali yüksektir.</label>
+            </div>
+            <button class="btn btn-outline" onclick="checkDrillQ(1, 'b')">Cevabı Kontrol Et</button>
+            <div id="dfb-1" class="drill-feedback"></div>
+          </div>
+
+          <div class="drill-card">
+            <div class="drill-q-title">2. Aksiyon Potansiyeli ve Şiddet Kodlaması</div>
+            <p style="font-size: 0.88rem;">Deriye uygulanan mekanik basınç veya retinaya düşen foton miktarı 10 katına çıkarıldığında primer duyu nöronunda ne gerçekleşir?</p>
+            <div class="drill-options">
+              <label><input type="radio" name="dq2" value="a"> (A) Aksiyon potansiyelinin tepe voltajı +40 mV'tan +400 mV'a fırlar.</label>
+              <label><input type="radio" name="dq2" value="b"> (B) Aksiyon potansiyellerinin genliği sabit kalır (+40 mV); saniyedeki ateşleme sıklığı (frekansı) artar.</label>
+              <label><input type="radio" name="dq2" value="c"> (C) Dinlenim potansiyeli -70 mV'tan sıfıra kalıcı olarak eşitlenir.</label>
+              <label><input type="radio" name="dq2" value="d"> (D) Refrakter dönem tamamen ortadan kalkar.</label>
+            </div>
+            <button class="btn btn-outline" onclick="checkDrillQ(2, 'b')">Cevabı Kontrol Et</button>
+            <div id="dfb-2" class="drill-feedback"></div>
+          </div>
+
+          <div class="drill-card">
+            <div class="drill-q-title">3. Optik Kiazma Lezyonu & Görme Alanı</div>
+            <p style="font-size: 0.88rem;">Hipofiz bezi adenomu (tümörü) olan bir hastada <em>Chiasma opticum</em>'un tam orta hattı baskı altında kalırsa hastada hangi görme kaybı tablosu ortaya çıkar?</p>
+            <div class="drill-options">
+              <label><input type="radio" name="dq3" value="a"> (A) Sol gözde tam körlük (monoküler körlük).</label>
+              <label><input type="radio" name="dq3" value="b"> (B) Bitemporal Heteronim Hemianopsi (Heteronyme Hemianopsie / Tünel Görüşü).</label>
+              <label><input type="radio" name="dq3" value="c"> (C) Homonim Hemianopsi (Her iki gözün sol görme alanı kaybı).</label>
+              <label><input type="radio" name="dq3" value="d"> (D) Sadece gece körlüğü (Nykctalopie).</label>
+            </div>
+            <button class="btn btn-outline" onclick="checkDrillQ(3, 'b')">Cevabı Kontrol Et</button>
+            <div id="dfb-3" class="drill-feedback"></div>
+          </div>
+
+          <div class="drill-card">
+            <div class="drill-q-title">4. Fovea ve Görme Keskinliği Paradoksu</div>
+            <p style="font-size: 0.88rem;">Foveanın karanlıkta hiçbir şey görememesine karşın gün ışığında en yüksek görme keskinliğine (*Sehschärfe*) sahip olmasının nöroanatomik temeli nedir?</p>
+            <div class="drill-options">
+              <label><input type="radio" name="dq4" value="a"> (A) Foveada hiç çubuk bulunmaz, sadece koniler vardır ve koniler gangliyonlara 1:1 düşük konverjansla bağlanır.</label>
+              <label><input type="radio" name="dq4" value="b"> (B) Foveada 120 çubuk tek gangliyona bağlandığı için ışık toplanır.</label>
+              <label><input type="radio" name="dq4" value="c"> (C) Foveada korneanın kırma gücü %100'e çıkar.</label>
+              <label><input type="radio" name="dq4" value="d"> (D) Foveada lateral inhibisyon tamamen devre dışıdır.</label>
+            </div>
+            <button class="btn btn-outline" onclick="checkDrillQ(4, 'a')">Cevabı Kontrol Et</button>
+            <div id="dfb-4" class="drill-feedback"></div>
+          </div>
+        </div>
+
+        <!-- TAB 8: YAZMA ATEŞLEYİCİLERİ & KİLİT AÇICILAR -->
+        <div id="tab-prompts" class="tab-pane" style="display: none;">
+          <div class="callout teal">
+            <div class="callout-title">Creative Block Kırıcılar — Cümle Tamamlamaları & Provokasyonlar</div>
+            <p>Tıkandığın an aşağıdaki kutulara tıkla, kancayı sağdaki editöre yapıştırıp devam et:</p>
+          </div>
+
+          <div class="prompt-box" onclick="insertTextAtCursor('\nEğer göz bir fotoğraf makinesi olsaydı, insan türü ilk haftasında bir yırtıcıya yem olurdu. Çünkü...\n')">
+            <div class="prompt-head"><span>Kamera İllüzyonunu Yık</span><span>+ Editöre At</span></div>
+            <div class="prompt-body">"Eğer göz bir fotoğraf makinesi olsaydı, insan türü ilk haftasında bir yırtıcıya yem olurdu. Çünkü..."</div>
+          </div>
+
+          <div class="prompt-box" onclick="insertTextAtCursor('\nFechner ve Weber’in 19. yüzyılda keşfettiği şey aslında çok basitti: Zihin, dünyanın kantarını tutmaz; sadece değişimlerin oranını tartar. Yani...\n')">
+            <div class="prompt-head"><span>Weber Kanununu Basitleştir</span><span>+ Editöre At</span></div>
+            <div class="prompt-body">"Fechner ve Weber’in 19. yüzyılda keşfettiği şey aslında çok basitti: Zihin, dünyanın kantarını tutmaz; sadece değişimlerin oranını tartar. Yani..."</div>
+          </div>
+
+          <div class="prompt-box" onclick="insertTextAtCursor('\nSinyal Algılama Kuramı bize bir gerçeği fısıldar: Cesaret ile duyu keskinliği aynı şey değildir. Laura duşta telefona koşarken...\n')">
+            <div class="prompt-head"><span>SDT & Günlük Hayat Kancası</span><span>+ Editöre At</span></div>
+            <div class="prompt-body">"Sinyal Algılama Kuramı bize bir gerçeği fısıldar: Cesaret ile duyu keskinliği aynı şey değildir. Laura duşta telefona koşarken..."</div>
+          </div>
+
+          <div class="prompt-box" onclick="insertTextAtCursor('\nRetinadaki 126 milyon fotoreseptörün 1 milyon kabloya sıkıştırıldığı o dar boğazda, doğanın en büyük mühendislik kumarı oynanır: Çubukların karanlık hassasiyeti mi, konilerin foveal keskinliği mi?\n')">
+            <div class="prompt-head"><span>Konverjans Dramı</span><span>+ Editöre At</span></div>
+            <div class="prompt-body">"Retinadaki 126 milyon fotoreseptörün 1 milyon kabloya sıkıştırıldığı o dar boğazda, doğanın en büyük mühendislik kumarı..."</div>
+          </div>
+
+          <div class="prompt-box" onclick="insertTextAtCursor('\nWhite yanılsaması, 100 yıllık retina mekaniğinin tabutuna çakılan son çividir. Çünkü göz yanılmaz; göz sadece bakar, karar veren ise...\n')">
+            <div class="prompt-head"><span>White İllüzyonu & Korteks Zaferi</span><span>+ Editöre At</span></div>
+            <div class="prompt-body">"White yanılsaması, 100 yıllık retina mekaniğinin tabutuna çakılan son çividir. Çünkü göz yanılmaz; göz sadece bakar..."</div>
+          </div>
+        </div>
+
+        <!-- TAB 9: MOODBOARD (KÜLTÜR, SİNEMA, MÜZİK & KOZMOS) -->
+        <div id="tab-mood" class="tab-pane" style="display: none;">
+          <div class="callout purple">
+            <div class="callout-title">Kültürel & Kozmik İlham Matrisi (Moodboard)</div>
+            <p>Konuyu zihninde canlandıracak ve yazıya derinlik katacak somut referanslar:</p>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><span>🎬 Sinema & Görsel Algı Felsefesi</span><span class="badge-tag">Film</span></div>
+            <p>• <strong>Blow-Up (Michelangelo Antonioni, 1966):</strong> Fotoğrafçının parkta çektiği kareyi büyüttükçe grenlerin arasında cinayet silüeti araması (Retinal pikseller vs. zihinsel illüzyon / SDT gürültüsü).</p>
+            <p style="margin-top: 4px;">• <strong>The Matrix (1999):</strong> <em>"Gerçek nedir? Eğer hissettiğin, kokladığın, tattığın ve gördüğün şeylerden bahsediyorsan, gerçek sadece beynin tarafından yorumlanan elektriksel sinyallerdir."</em></p>
+            <p style="margin-top: 4px;">• <strong>Perfect Sense (2011):</strong> İnsanlığın sırayla tüm duyularını (koku, tat, işitme, görme) kaybetmesi ve dünyanın ontolojik olarak silinişi.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><span>🎵 Müzik & Spektral Ritim</span><span class="badge-tag">Albüm</span></div>
+            <p>• <strong>Pink Floyd — The Dark Side of the Moon (1973):</strong> Prizmadan geçen beyaz ışığın gökkuşağına ayrılması (Elektromanyetik spektrum ve kırılma).</p>
+            <p style="margin-top: 4px;">• <strong>Aphex Twin — Selected Ambient Works:</strong> Arka plan dip gürültüsünde (Noise) saklanan mikro-frekanslar (SDT analojisi).</p>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><span>🌌 Kozmos & Biyolojik Canavarlar</span><span class="badge-tag">Evrim & Doğa</span></div>
+            <p>• <strong>At Nalı Yengeci (Limulus polyphemus):</strong> 450 milyon yıldır değişmeyen mavi kanlı antik yaratık. Hartline Nobel ödülünü bu yengecin ommatidiyumlarındaki yanal engellemeyi kaydederek aldı.</p>
+            <p style="margin-top: 4px;">• <strong>Mantis Karidesi (Stomatopod):</strong> İnsanda 3 koni tipi varken onda 16 farklı fotoreseptör tipi vardır; ultraviyole ve dairesel polarize ışığı görür.</p>
+            <p style="margin-top: 4px;">• <strong>James Webb vs. Hubble:</strong> Hubble görünür ışıkta bakarken (400-700nm), James Webb kızılötesine (Infrared) bakar; çünkü evrenin en eski galaksileri kırmızıya kaymıştır (Koffka'nın göremediğimiz spektrumu!).</p>
+          </div>
+        </div>
+
+        <!-- TAB 10: SÖZLÜK & FORMÜLLER (ALMANCA - İNGİLİZCE - TÜRKÇE) -->
+        <div id="tab-dict" class="tab-pane" style="display: none;">
+          <div class="callout amber">
+            <div class="callout-title">UNILU Biliş Psikolojisi Terminoloji Sözlüğü & Formül Kartları</div>
+            <p>Sınavda çıkacak Almanca terimlerin İngilizce ve Türkçe tam karşılıkları:</p>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><span>Kritik Formül Kartları</span><span class="badge-tag">Matematik</span></div>
+            <p>• <strong>Weber Kanunu:</strong> $k = \frac{\Delta S}{S}$ (Elektrik şoku %1, Ağırlık %2, Ses %4, Işık/Tat %8)</p>
+            <p style="margin-top: 4px;">• <strong>Stevens Güç Yasası:</strong> $W = K \cdot S^n$ ($n<1$ Parlaklık Sıkışması, $n>1$ Şok Genişlemesi)</p>
+            <p style="margin-top: 4px;">• <strong>SDT Duyarlılığı:</strong> $d' = Z(\text{Hit}) - Z(\text{False Alarm})$</p>
+            <p style="margin-top: 4px;">• <strong>Hermann Yanal İnhibisyonu:</strong> Kesişim $= 100 - (4 \times 10) = 60$; Koridor $= 100 - (2 \times 10 + 2 \times 2) = 76$</p>
+          </div>
+
+          <table class="dict-table">
+            <thead>
+              <tr><th>Almanca (UNILU)</th><th>İngilizce (Goldstein)</th><th>Türkçe (Sayko)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Wahrnehmung</td><td>Perception</td><td>Algı</td></tr>
+              <tr><td>Empfindung</td><td>Sensation</td><td>Duyum</td></tr>
+              <tr><td>Reiz / Stimulus</td><td>Stimulus</td><td>Uyarıcı</td></tr>
+              <tr><td>Transduktion</td><td>Transduction</td><td>Duyusal Dönüştürme</td></tr>
+              <tr><td>Absolute Schwelle</td><td>Absolute Threshold</td><td>Mutlak Eşik</td></tr>
+              <tr><td>Unterschiedsschwelle</td><td>Difference Threshold (JND)</td><td>Fark Eşiği</td></tr>
+              <tr><td>Grenzmethode</td><td>Method of Limits</td><td>Sınır Yöntemi</td></tr>
+              <tr><td>Herstellungsmethode</td><td>Method of Adjustment</td><td>Ayarlama Yöntemi</td></tr>
+              <tr><td>Konstanzmethode</td><td>Method of Constant Stimuli</td><td>Sabit Uyarıcılar Yöntemi</td></tr>
+              <tr><td>Signalentdeckungstheorie</td><td>Signal Detection Theory (SDT)</td><td>Sinyal Algılama Kuramı</td></tr>
+              <tr><td>Antwortkriterium</td><td>Response Criterion</td><td>Karar Kriteri (Bias)</td></tr>
+              <tr><td>Aktionspotential</td><td>Action Potential</td><td>Aksiyon Potansiyeli</td></tr>
+              <tr><td>Frequenzkodierung</td><td>Rate / Frequency Coding</td><td>Frekans Kodlaması</td></tr>
+              <tr><td>Akkommodation</td><td>Accommodation</td><td>Göz Uyumu</td></tr>
+              <tr><td>Presbyopie</td><td>Presbyopia</td><td>Yaşa Bağlı Yakın Görmezlik</td></tr>
+              <tr><td>Nahpunkt</td><td>Near Point</td><td>Yakın Noktası</td></tr>
+              <tr><td>Stäbchen</td><td>Rods</td><td>Çubuklar (120 Milyon)</td></tr>
+              <tr><td>Zapfen</td><td>Cones</td><td>Koniler (6 Milyon)</td></tr>
+              <tr><td>Dunkeladaptation</td><td>Dark Adaptation</td><td>Karanlığa Uyum</td></tr>
+              <tr><td>Kohlrausch-Knick</td><td>Rod-Cone Break</td><td>Kohlrausch Kırılması (7. dk)</td></tr>
+              <tr><td>Laterale Inhibition / Hemmung</td><td>Lateral Inhibition</td><td>Yanal Engelleme</td></tr>
+              <tr><td>Sehnerv</td><td>Optic Nerve</td><td>Görme Siniri</td></tr>
+              <tr><td>Chiasma opticum</td><td>Optic Chiasm</td><td>Optik Kiazma (Nazal Çapraz)</td></tr>
+              <tr><td>CGL (Corpus Geniculatum Lat.)</td><td>LGN (Lateral Geniculate)</td><td>Talamus Görsel Kapısı</td></tr>
+              <tr><td>Heteronyme Hemianopsie</td><td>Heteronymous Hemianopia</td><td>Tünel Görüşü (Kiazma Lezyonu)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: CANLI YAZI ALANI & GÜÇLENDİRİLMİŞ STİL ARAÇLARI -->
+    <div class="panel-right">
+      <div class="editor-toolbar">
+        <div class="toolbar-left">
+          <div class="toolbar-group">
+            <select class="tool-select" id="font-family-select" onchange="changeEditorFont(this.value)">
+              <option value="'Source Serif 4', Georgia, serif">Source Serif 4</option>
+              <option value="'Libre Baskerville', Georgia, serif">Libre Baskerville</option>
+              <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+              <option value="system-ui, sans-serif">Sans-Serif</option>
+            </select>
+            <select class="tool-select" id="font-size-select" onchange="changeEditorFontSize(this.value)">
+              <option value="15px">15px</option>
+              <option value="16.5px" selected>16.5px</option>
+              <option value="18px">18px</option>
+              <option value="20px">20px</option>
+            </select>
+          </div>
+
+          <div class="toolbar-group">
+            <button class="tool-icon-btn" title="Kalın" onclick="wrapSelection('**', '**')"><strong>B</strong></button>
+            <button class="tool-icon-btn" title="İtalik" onclick="wrapSelection('*', '*')"><em>I</em></button>
+            <button class="tool-icon-btn" title="Vurgu (Highlight)" onclick="wrapSelection('==', '==')"><span style="background:#fff3c4; padding:0 2px;">H</span></button>
+            <button class="tool-icon-btn" title="Wikilink" onclick="wrapSelection('[[', ']]')">[[Link]]</button>
+          </div>
+
+          <!-- RENK BUTONLARI -->
+          <div class="toolbar-group">
+            <button class="tool-icon-btn" title="Cardinal Kırmızı" onclick="applyColor('#C8102E')"><span style="color:#C8102E; font-weight:bold;">A</span></button>
+            <button class="tool-icon-btn" title="Sayko Kiremit" onclick="applyColor('#7a3e2a')"><span style="color:#7a3e2a; font-weight:bold;">A</span></button>
+            <button class="tool-icon-btn" title="Adaçayı Yeşili" onclick="applyColor('#2a6b5a')"><span style="color:#2a6b5a; font-weight:bold;">A</span></button>
+            <button class="tool-icon-btn" title="Ametist Moru" onclick="applyColor('#4a2a7a')"><span style="color:#4a2a7a; font-weight:bold;">A</span></button>
+            <button class="tool-icon-btn" title="Sıcak Kehribar" onclick="applyColor('#7a5a1a')"><span style="color:#7a5a1a; font-weight:bold;">A</span></button>
+          </div>
+        </div>
+
+        <div class="toolbar-right">
+          <button class="tool-icon-btn" title="Başlık 2" onclick="insertHeading(2)">H2</button>
+          <button class="tool-icon-btn" title="Başlık 3" onclick="insertHeading(3)">H3</button>
+          <button class="tool-icon-btn" title="Callout Ekle" onclick="insertCalloutPrompt()">[!box]</button>
+          <button class="tool-icon-btn" title="K&K Footnote" onclick="insertFootnotePrompt()">[^fn]</button>
+        </div>
+      </div>
+
+      <!-- SAĞ PANEL YAZI ALANI -->
+      <textarea id="editor" class="main-editor-area" spellcheck="false" placeholder="Yazmaya buradan başla kankam... İster doğrudan yaz, ister üstteki '+ Frontmatter Ekle' butonuna bas."></textarea>
+    </div>
+
+  </div>
+
+  <script>
+    // KALICI DEĞİŞMEZ ANAHTAR + TÜM YEDEK GEÇMİŞ TARAYICI
+    const PERMANENT_STORAGE_KEY = "SAYKO_STUDIO_KOG1_PERMANENT_V1";
+    const BACKUP_PREFIX = "SAYKO_STUDIO_BACKUP_";
+
+    const STARTER_FRONTMATTER = `---
+title: "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina"
+date: 2026-08-16
+tags:
+  - biliş-psikolojisi-1
+  - duyusal-süreçler
+  - optik-yollar
+---
+
+## İçindekiler
+
+- [[#1. Işık Değil Dalga Boyu — Algının İstatistiki Doğası]]
+- [[#2. Psikofizik ve Ölçüm Sanatı — Fechner, Weber ve Stevens]]
+- [[#3. Sinyal Algılama Kuramı (SDT) — Gürültüde Zil Sesi Aramak]]
+- [[#4. Gözün Optiği, Fototransdüksiyon ve Karanlığa Adaptasyon]]
+- [[#5. Retinada Nöronal Mimari — Konverjans ve Yanal Engelleme]]
+- [[#6. İllüzyonlar, Lezyonlar ve Sayko Yargısı]]
+- [[#Kavram Sözlüğü]]
+- [[#Kaynakça]]
+
+---
+
+## 1. Işık Değil Dalga Boyu — Algının İstatistiki Doğası
+
+`;
+
+    const editor = document.getElementById('editor');
+    const wordCountEl = document.getElementById('word-count');
+    const saveStatusEl = document.getElementById('save-status');
+
+    function updateWordCount() {
+      const text = editor.value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+      wordCountEl.innerText = words;
+    }
+
+    function saveContent() {
+      const val = editor.value;
+      // 1. Ana kalıcı anahtara kaydet
+      localStorage.setItem(PERMANENT_STORAGE_KEY, val);
+      
+      // 2. Her zaman ek genel anahtarlara da yedekle
+      localStorage.setItem("SAYKO_STUDIO_LATEST_DRAFT", val);
+      
+      // 3. Tarihli yedek at
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('tr-TR');
+      saveStatusEl.innerText = "● Otomatik Kaydedildi (" + timeStr + ")";
+      saveStatusEl.style.color = "var(--teal)";
+    }
+
+    let saveTimer;
+    editor.addEventListener('input', () => {
+      updateWordCount();
+      saveStatusEl.innerText = "○ Yazılıyor...";
+      saveStatusEl.style.color = "var(--amber)";
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveContent, 400);
+    });
+
+    // EVRENSEL OTOMATİK KURTARMA MOTORU
+    function loadContent() {
+      // 1. Kalıcı anahtardan oku
+      let saved = localStorage.getItem(PERMANENT_STORAGE_KEY);
+      
+      // 2. Eğer boşsa, tarayıcıdaki tüm SAYKO anahtarlarını tara ve en dolu olanı bul!
+      if(!saved || saved.trim().length === 0) {
+        let bestDraft = "";
+        for(let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if(key && (key.includes("SAYKO") || key.includes("GIRIS") || key.includes("STUDIO"))) {
+            const candidate = localStorage.getItem(key);
+            if(candidate && candidate.trim().length > bestDraft.length) {
+              bestDraft = candidate;
+            }
+          }
+        }
+        if(bestDraft && bestDraft.trim().length > 0) {
+          saved = bestDraft;
+        }
+      }
+
+      if(saved && saved.trim().length > 0) {
+        editor.value = saved;
+      } else {
+        editor.value = "";
+      }
+      updateWordCount();
+    }
+
+    // KULLANICI İÇİN MANUEL KURTARMA BUTONU
+    function recoverAllSavedSnapshots() {
+      const foundSnapshots = [];
+      for(let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if(key && (key.includes("SAYKO") || key.includes("GIRIS") || key.includes("STUDIO") || key.includes("DRAFT"))) {
+          const content = localStorage.getItem(key);
+          if(content && content.trim().length > 0) {
+            foundSnapshots.push({ key, content, length: content.length });
+          }
+        }
+      }
+
+      if(foundSnapshots.length === 0) {
+        alert("Tarayıcı hafızasında henüz kayıtlı bir taslak bulunamadı. Yazdıkça otomatik kaydedilir!");
+        return;
+      }
+
+      // En uzun olanı bul
+      foundSnapshots.sort((a, b) => b.length - a.length);
+      const best = foundSnapshots[0];
+      
+      if(confirm(`Tarayıcı hafızasında ${best.length} karakterlik (${best.key}) taslak bulundu! Editöre geri yüklensin mi?`)) {
+        editor.value = best.content;
+        saveContent();
+        updateWordCount();
+        alert("Taslağın başarıyla geri yüklendi kankam!");
+      }
+    }
+
+    function downloadMarkdownFile() {
+      const content = editor.value;
+      if(!content.trim()) {
+        alert('Editör boş! İndirilecek bir metin yok.');
+        return;
+      }
+      const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina.md';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function insertDefaultFrontmatter() {
+      if(editor.value.trim().length > 0) {
+        if(!confirm('Editörde yazı var. Başına standart frontmatter eklensin mi?')) return;
+        editor.value = STARTER_FRONTMATTER + editor.value;
+      } else {
+        editor.value = STARTER_FRONTMATTER;
+      }
+      saveContent();
+      updateWordCount();
+      editor.focus();
+    }
+
+    function copyMarkdown() {
+      navigator.clipboard.writeText(editor.value).then(() => {
+        alert('Tüm Markdown panoya kopyalandı!');
+      });
+    }
+
+    function insertTextAtCursor(text) {
+      const start = editor.selectionStart;
+      const end = editor.selectionEnd;
+      const val = editor.value;
+      editor.value = val.substring(0, start) + text + val.substring(end);
+      editor.selectionStart = editor.selectionEnd = start + text.length;
+      editor.focus();
+      updateWordCount();
+      saveContent();
+    }
+
+    function wrapSelection(before, after) {
+      const start = editor.selectionStart;
+      const end = editor.selectionEnd;
+      const selected = editor.value.substring(start, end);
+      const replacement = before + (selected || "metin") + after;
+      insertTextAtCursor(replacement);
+    }
+
+    function applyColor(hexColor) {
+      const start = editor.selectionStart;
+      const end = editor.selectionEnd;
+      const selected = editor.value.substring(start, end);
+      if(!selected) {
+        insertTextAtCursor(`<span style="color:${hexColor}">renkli metin</span>`);
+      } else {
+        const replacement = `<span style="color:${hexColor}">${selected}</span>`;
+        editor.value = editor.value.substring(0, start) + replacement + editor.value.substring(end);
+        editor.selectionStart = start;
+        editor.selectionEnd = start + replacement.length;
+        editor.focus();
+        updateWordCount();
+        saveContent();
+      }
+    }
+
+    function insertHeading(level) {
+      const prefix = "\n" + "#".repeat(level) + " ";
+      insertTextAtCursor(prefix);
+    }
+
+    function insertCalloutPrompt() {
+      const type = prompt('Callout tipi (note, quote, warning, example, tip, info, punk, danger):', 'note');
+      if(type) {
+        insertTextAtCursor(`\n> [!${type}] Başlık\n> Açıklama metni buraya...\n\n`);
+      }
+    }
+
+    function insertFootnotePrompt() {
+      const fn = prompt('Dipnot etiketi (örn: ill_posed):', 'terim');
+      if(fn) {
+        insertTextAtCursor(`[^${fn}]`);
+      }
+    }
+
+    function changeEditorFont(fontName) {
+      editor.style.fontFamily = fontName;
+    }
+
+    function changeEditorFontSize(size) {
+      editor.style.fontSize = size;
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const target = document.getElementById(tabId);
+      if(target) target.style.display = (tabId === 'tab-book') ? 'flex' : 'block';
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if(activeBtn) activeBtn.classList.add('active');
+    }
+
+    // GÖRÜNTÜLEYİCİ DEĞİŞTİRME
+    function showViewer(viewId, btn) {
+      document.querySelectorAll('.viewer-btn').forEach(b => b.classList.remove('active'));
+      if(btn) btn.classList.add('active');
+
+      const allViews = ['view-book-pdf', 'view-slides-pdf', 'view-book-html', 'view-summary'];
+      allViews.forEach(id => {
+        const el = document.getElementById(id);
+        if(el) {
+          el.style.display = (id === viewId) ? 'block' : 'none';
+        }
+      });
+    }
+
+    function loadLocalFile(event) {
+      const file = event.target.files[0];
+      if(!file) return;
+      const fileUrl = URL.createObjectURL(file);
+      const activeIframe = document.querySelector('.uncut-frame[style*="display: block"]') || document.getElementById('view-book-pdf');
+      if(activeIframe) {
+        activeIframe.src = fileUrl;
+        activeIframe.style.display = 'block';
+        document.getElementById('view-summary').style.display = 'none';
+      }
+    }
+
+    function copyPromptText(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Master Companion Podcast promptu panoya kopyalandı! NotebookLM alanına yapıştırabilirsin.');
+      });
+    }
+
+    function checkDrillQ(qNum, correctVal) {
+      const selected = document.querySelector(`input[name="dq${qNum}"]:checked`);
+      const fb = document.getElementById(`dfb-${qNum}`);
+      fb.style.display = 'block';
+      if(!selected) {
+        fb.style.background = '#fce8e8';
+        fb.style.color = '#a51d24';
+        fb.innerHTML = 'Lütfen bir seçenek işaretleyin!';
+        return;
+      }
+      if(selected.value === correctVal) {
+        fb.style.background = '#e6f4ea';
+        fb.style.color = '#137333';
+        fb.innerHTML = '<strong>✓ TEBRİKLER, DOĞRU!</strong> Tam sınav formatı analizi yapıldı.';
+      } else {
+        fb.style.background = '#fce8e8';
+        fb.style.color = '#a51d24';
+        fb.innerHTML = `<strong>✗ YANLIŞ.</strong> Doğru seçenek: <strong>(${correctVal.toUpperCase()})</strong>. Gerekçe ve tuzak için konunun teorik özetine göz at.`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadContent();
+    });
+  </script>
+</body>
+</html>
