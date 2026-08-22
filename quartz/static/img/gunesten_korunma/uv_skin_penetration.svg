@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="auto" style="background:#f9f8f6; border-radius:8px; font-family:'Source Serif 4', Georgia, serif;">
+  <text x="300" y="30" font-size="15" font-weight="bold" fill="#2b2826" text-anchor="middle">UV Radyasyonu ve Deri Penetrasyon Katmanları</text>
+  
+  <!-- Rays -->
+  <!-- UVB -->
+  <line x1="180" y1="50" x2="180" y2="135" stroke="#f4a261" stroke-width="4"/>
+  <polygon points="175,135 180,145 185,135" fill="#f4a261"/>
+  <text x="180" y="45" font-size="13" font-weight="bold" fill="#e76f51" text-anchor="middle">UV-B (290–320 nm)</text>
+  <text x="180" y="65" font-size="10" fill="#5a5346" text-anchor="middle">Güneş Yanığı &amp; DNA Hasarı</text>
+
+  <!-- UVA -->
+  <line x1="420" y1="50" x2="420" y2="225" stroke="#9d0208" stroke-width="4"/>
+  <polygon points="415,225 420,235 425,225" fill="#9d0208"/>
+  <text x="420" y="45" font-size="13" font-weight="bold" fill="#9d0208" text-anchor="middle">UV-A (320–400 nm)</text>
+  <text x="420" y="65" font-size="10" fill="#5a5346" text-anchor="middle">Derin Foto-Yaşlanma &amp; Melanom</text>
+
+  <!-- Skin Layers -->
+  <!-- Epidermis -->
+  <rect x="50" y="100" width="500" height="60" fill="rgba(231,111,81,0.15)" stroke="#e76f51" stroke-width="1.2"/>
+  <text x="70" y="135" font-size="12" font-weight="bold" fill="#e76f51">Epidermis (Üst Deri)</text>
+  <text x="70" y="150" font-size="10" fill="#5a5346">Melanositler &amp; Keratinositler</text>
+
+  <!-- Dermis -->
+  <rect x="50" y="160" width="500" height="90" fill="rgba(157,2,8,0.1)" stroke="#9d0208" stroke-width="1.2"/>
+  <text x="70" y="205" font-size="12" font-weight="bold" fill="#9d0208">Dermis (Alt Deri)</text>
+  <text x="70" y="220" font-size="10" fill="#5a5346">Kollajen, Elastin &amp; Kılcal Damarlar</text>
+
+  <!-- Subcutis -->
+  <rect x="50" y="250" width="500" height="30" fill="rgba(138,130,117,0.1)" stroke="#8a8275" stroke-width="1"/>
+  <text x="70" y="270" font-size="11" fill="#8a8275">Subkutis (Yağ Dokusu)</text>
+</svg>

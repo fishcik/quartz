@@ -116,6 +116,9 @@ Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 
 ## 3. Alanın Oluşması: 20. Yüzyılın 3 Büyük Trendi
 
+![Epidemiyolojik Geçiş: Ölüm Nedenlerinin Evrimi (1900 vs. Günümüz)](/static/img/saglik_giris/epidemiological_transition.svg)
+*Grafik: 20. yüzyıldan bugüne ölüm nedenlerinin akut mikrobiyal enfeksiyonlardan davranışsal ve kronik yaşam tarzı hastalıklarına dramatik kayışı.*
+
 Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında epidemiyoloji[^epidemiyoloji] verilerinin ortaya koyduğu üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
 
 1. **Kronik-Dejeneratif Hastalıkların Artışı:** Tüberküloz gibi bulaşıcı enfeksiyonlar yerini kalp hastalıkları, kanser ve diyabet gibi yavaş ilerleyen hastalıklara bıraktı. Bunlar sadece antibiyotikle çözülmez; yaşam tarzı değişikliği gerektirir.

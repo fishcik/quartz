@@ -87,6 +87,9 @@ Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönl
 "Bozulmuş işlev örüntüleri"ne dar anlamda "ruhsal bozukluk" diyoruz. Burda klinik psikoloji yalnız çalışmıyor. Tanı sınıflandırma sistemlerine yaslanıyor. Bunlar tıbbın, psikiyatrinin ve diğer sağlık mesleklerinin de paylaştığı sistemler.
 
 ### DSM-5 ve ICD-10 (Psikiyatrik Nosoloji[^nosoloji] Sistemleri)
+
+![Emil Kraepelin (1856–1926)](/static/img/klinik1/emil_kraepelin.jpg)
+*Arşiv: Emil Kraepelin — Modern psikiyatrik tanı ve nosoloji sistemlerinin (DSM ve ICD) sınıflandırma mantığını kuran öncü psikiyatrist.*
 Bozuklukları tanımlamak için kullanılan iki resmi "kural kitabı". ICD dünya çapında geçerli, hastaneler ve sigortalar onu kullanmak zorunda. DSM ise araştırma ve eğitimde olmazsa olmaz.
 
 Mesela, ICD-10’un V (F) bölümünde kodlanmış tanı kurallarının zayıf yanları olsa da, dünya genelinde tüm sağlık sistemleri ve meslekleri için bağlayıcıdır.
@@ -157,6 +160,9 @@ Peki… "Ruhsal bozukluk" neye denir? Bu şemsiyenin altına ne giriyor? Şizofr
 > [!question] Tartışma Malzemesi
 > "Ruhsal" ile "bedensel" bozukluk arasındaki ayrım, ruh-beden ikiliğinin bir kalıntısı mı? Ayrımı nasıl ve neden yapıyoruz?
 > **Zihin, beyni etkileyebilir mi yoksa sadece beyin zihni mi etkiler?**
+
+![Phineas Gage Kafatası ve Tamping Demiri (1868)](/static/img/klinik1/phineas_gage.jpg)
+*Tarihsel Vaka: 1848'de prefrontal korteksinden demir çubuk geçen Phineas Gage — Zihin, kişilik ve organik beyin hasarı arasındaki doğrudan ilişkinin ilk büyük kanıtı.*
 
 * **Churchland tarafı (tek yönlü):** Bu tarafa göre neden-sonuç ilişkisi tek yönlü işliyor: `beyin -> zihin`. Yani düşündüğün, hissettiğin her şey beyninde olup biten kimyasal/elektriksel sürecin bir sonucu. Zihin, beynin ürettiği bir "görüntü". Şöyle düşünebiliriz: Bir filmi izlerken, film seni ağlatabilir ama sen filmi değiştiremezsin. Sadece izleyip ağlarsın.
 * **Popper-Eccles tarafı (çift yönlü):** Bunlar da diyor ki: *"Tamam, beyin zihni etkiler, ama zihin de kendi başına bir gerçeklik; o da beyne sinyaller gönderir, etkileşim çift taraflıdır."* Yani: Beyin ile zihin birbirine karışıyor.

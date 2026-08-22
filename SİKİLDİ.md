@@ -27,9 +27,14 @@ Bu anayasa; `sayko.ch` üzerindeki tüm makalelerin metin formatını, edebi/ser
   - [[#11.3 Yüksek Kontrast ve Dinamik Tema Güvencesi]]
   - [[#11.4 Semantik Renk ve Çizgi Paleti]]
   - [[#11.5 Standart Callout Anatomisi]]
-- [[#12. Yasaklı Tasarım Kalıpları (Forbidden Clichés)]]
-- [[#13. Atomik Uygulama Workflow'u (Adım Adım)]]
-- [[#14. Standart Çıktı & Değerlendirme Raporu Şablonu]]
+- [[#12. Tarihsel, Bilimsel ve Kültürel Orijinal Görseller / Arşiv Materyali]]
+  - [[#12.1 Diyagramdan Farkı ve Kapsamı]]
+  - [[#12.2 Telif ve Kamu Malı (Public Domain) Güvencesi]]
+  - [[#12.3 Yerel-İlk (Local-First) Depolama Protokolü]]
+  - [[#12.4 Bağlamsal Köprü ve İtalik Açıklama İlkesi]]
+- [[#13. Yasaklı Tasarım Kalıpları (Forbidden Clichés)]]
+- [[#14. Atomik Uygulama Workflow'u (Adım Adım)]]
+- [[#15. Standart Çıktı & Değerlendirme Raporu Şablonu]]
 
 ---
 
@@ -265,7 +270,31 @@ Her model `> [!abstract]` çağrı kutusu içinde, başlıksız emojisiz, ortal�
 
 ---
 
-## 12. Yasaklı Tasarım Kalıpları (Forbidden Clichés)
+## 12. Tarihsel, Bilimsel ve Kültürel Orijinal Görseller / Arşiv Materyali
+
+### 12.1 Diyagramdan Farkı ve Kapsamı
+Bu kural; kavramsal akış şemalarından (flowcharts) veya soyut Mermaid/SVG çizimlerinden **tamamen farklıdır**. Psikoloji, duyu fizyolojisi, nörobilim ve bilim tarihinin bizzat kendisine ait otantik, kanıt niteliğindeki görsel ve deneysel arşiv materyalini kapsar:
+- **Tarihi Deney Cihazları ve Belgeler:** Frank Rosenblatt'ın 5 tonluk Perceptron Mark I makinesi ve orijinal şemaları, Skinner Box, Milgram şok jeneratörü, Pavlov'un tükürük ölçüm düzeneği, Little Albert deney fotoğrafları.
+- **Canlı ve Biyolojik Orijinaller:** Cajal'ın el çizimi nöron ve Purkinje hücresi preparatları, Limulus (at nalı yengeci) ommatidia gözleri, Phineas Gage'in tamping iron demiri ve kafatası tomografisi.
+- **Klasik Algı ve Psikofizik İllüzyonları:** Hermann Izgarası, Benary Haçı, White İllüzyonu, Kanizsa Üçgeni, Mach Bantları, Rubin Vazosu, Ames Odası.
+- **Spektral ve Biyofiziksel Ölçüm Grafikleri:** Kohlrausch karanlık adaptasyon eğrileri, Purkinje kayması spektral hassasiyet eğrisi, aksiyon potansiyeli osiloskop izleri.
+
+### 12.2 Telif ve Kamu Malı (Public Domain) Güvencesi
+- Sitede kullanılan tüm fotoğraf ve arşiv materyali **Kamu Malı (Public Domain)**, **Creative Commons (CC-BY, CC0)**, **Açık Erişim Bilimsel Literatür** veya **Tarihsel Arşiv (US Gov / NIH / NASA / Wellcome Collection)** statüsünde olmalıdır.
+- Asla telif hakkı ihlali yaratacak stok ajans görselleri veya yapay "AI süsleme" illüstrasyonları kullanılmaz.
+
+### 12.3 Yerel-İlk (Local-First) Depolama Protokolü
+- Dış web sitelerindeki kırılgan CDN linkleri (hotlinking) **kesinlikle yasaktır**.
+- İlgili tüm materyal indirilip optimize edilerek doğrudan `quartz/static/img/<kategori_slug>/` dizinine yerleştirilir ve Markdown içine `![Açıklama](/static/img/<kategori_slug>/dosya.ext)` formatıyla gömülür. Böylece 50 yıl sonra bile offline çalışır.
+
+### 12.4 Bağlamsal Köprü ve İtalik Açıklama İlkesi
+- **Doğrudan Anlatılan Materyaller:** Eğer metin zaten o cihazı/illüzyonu doğrudan konu alıyorsa (örn: Rosenblatt Perceptron'u veya Limulus deneyi), görsel ilgili paragrafın hemen altına şık bir başlıkla yerleştirilir.
+- **Yan Kanıt & Destekleyici Materyaller:** Eğer görsel metin akışında doğrudan kelimesi kelimesine çözümlenmiyorsa, okuyucunun bağlamdan kopmaması için görselin hemen üstüne veya altına *italik tek cümlelik bir bağlama/köprü cümlesi* eklenir:
+  > *Şekil: Hermann ızgarasında kesişim noktalarının neden gri gölgelendiğini açıklayan yanal engelleme dinamikleri.*
+
+---
+
+## 13. Yasaklı Tasarım Kalıpları (Forbidden Clichés)
 
 Aşağıdaki klişeler Sayko.ch genelinde **KESİNLİKLE YASAKTIR**:
 1. ❌ **Gereksiz Dashboard:** Dashboard gerektirmeyen metne panel/widget sıkıştırmak.
@@ -279,7 +308,7 @@ Aşağıdaki klişeler Sayko.ch genelinde **KESİNLİKLE YASAKTIR**:
 
 ---
 
-## 13. Atomik Uygulama Workflow'u (Adım Adım)
+## 14. Atomik Uygulama Workflow'u (Adım Adım)
 
 Bir makaleye `SİKİLDİ.md` yedirilirken şu sıra izlenir:
 
@@ -293,14 +322,15 @@ flowchart TD
   B --> C[3. MD Sentaks Temizliği — Sese Dokunmadan]:::sepia
   C --> D[4. Nöral Ağ Wikilinkleri & Callout Ritmi]:::sepia
   D --> E[5. Modellerin Tespiti & Alfanümerik SVG Üretimi]:::cardinal
-  E --> F[6. K&K Dipnotları 3-8 Adet Oluşturma]:::sepia
-  F --> G[7. APA 7 Kaynakça Entegrasyonu]:::sepia
-  G --> H[8. Derleme, Test & Değerlendirme Raporu]:::sage
+  E --> F[6. Tarihsel/Bilimsel Orijinal Görsel & Arşiv Entegrasyonu]:::cardinal
+  F --> G[7. K&K Dipnotları 3-11 Adet Oluşturma]:::sepia
+  G --> H[8. APA 7 Kaynakça Entegrasyonu]:::sepia
+  H --> I[9. Derleme, Test & Değerlendirme Raporu]:::sage
 ```
 
 ---
 
-## 14. Standart Çıktı & Değerlendirme Raporu Şablonu
+## 15. Standart Çıktı & Değerlendirme Raporu Şablonu
 
 Her makale işlemi bittiğinde kullanıcıya aşağıdaki standart formatta kısa, öz ve net rapor sunulur:
 

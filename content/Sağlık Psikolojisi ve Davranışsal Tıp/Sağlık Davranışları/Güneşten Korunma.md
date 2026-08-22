@@ -28,6 +28,9 @@ Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]
 
 ## 1. Risk Grubu ve Biyolojik Duyarlılık
 
+![UV-A ve UV-B Radyasyonunun Deri Penetrasyon Katmanları](/static/img/gunesten_korunma/uv_skin_penetration.svg)
+*Anatomik Diyagram: UV-B ışınlarının epidermiste yanık ve doğrudan DNA mutasyonu yaratırken; UV-A ışınlarının dermise kadar inerek derin foto-yaşlanma ve melanom riskini tetiklemesi.*
+
 - Sarışınlar, kızıllar, güneşe çıktığı an ıstakoza dönen açık tenliler (Fitzpatrick Tip I-II[^fitzpatrick-skalasi]).
 - Çil oluşturma eğilimi, çok sayıda atipik ben.
 - 18 yaşından önce 2 ya da daha fazla ciddi kabarcıklı güneş yanığı geçirmek.

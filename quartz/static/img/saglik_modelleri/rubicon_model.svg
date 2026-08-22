@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="100%" height="auto" style="background:#f9f8f6; border-radius:8px; font-family:'Source Serif 4', Georgia, serif;">
+  <text x="320" y="30" font-size="15" font-weight="bold" fill="#2b2826" text-anchor="middle">Rubikon Eylem Evreleri Modeli (Heckhausen &amp; Gollwitzer)</text>
+  
+  <!-- Motivational Phase -->
+  <rect x="30" y="60" width="240" height="180" rx="6" fill="rgba(199,154,109,0.08)" stroke="#c79a6d" stroke-width="1.8"/>
+  <text x="150" y="88" font-size="13" font-weight="bold" fill="#c79a6d" text-anchor="middle">1. Eylem Öncesi Faz (Motivasyonel)</text>
+  <text x="50" y="125" font-size="11.5" fill="#4a433a">• Açık Zihinlilik (Open-mindedness)</text>
+  <text x="50" y="155" font-size="11.5" fill="#4a433a">• İsteklerin ve risklerin tartılması</text>
+  <text x="50" y="185" font-size="11.5" fill="#4a433a">• "Bunu yapmalı mıyım?" sorgusu</text>
+  <text x="150" y="225" font-size="11" font-weight="bold" fill="#7a5a1a" text-anchor="middle">Ürün: Niyet / Hedef (Goal)</text>
+
+  <!-- The Rubicon River (Threshold) -->
+  <line x1="320" y1="50" x2="320" y2="250" stroke="#C8102E" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <polygon points="315,150 325,145 325,155" fill="#C8102E"/>
+  <text x="320" y="268" font-size="11" font-weight="bold" fill="#C8102E" text-anchor="middle">RUBİKON GEÇİŞİ ("Alea iacta est")</text>
+
+  <!-- Volitional Phase -->
+  <rect x="370" y="60" width="240" height="180" rx="6" fill="rgba(150,196,108,0.08)" stroke="#2a6b5a" stroke-width="1.8"/>
+  <text x="490" y="88" font-size="13" font-weight="bold" fill="#2a6b5a" text-anchor="middle">2. Eylem Fazı (Volisyonel)</text>
+  <text x="390" y="125" font-size="11.5" fill="#4a433a">• Kapalı Zihinlilik (Closed-mindedness)</text>
+  <text x="390" y="155" font-size="11.5" fill="#4a433a">• Uygulama Niyetleri (Eğer-O Zaman)</text>
+  <text x="390" y="185" font-size="11.5" fill="#4a433a">• Engelleri savuşturma odağı</text>
+  <text x="490" y="225" font-size="11" font-weight="bold" fill="#2a6b5a" text-anchor="middle">Ürün: Kararlı Eylem &amp; Başarı</text>
+</svg>

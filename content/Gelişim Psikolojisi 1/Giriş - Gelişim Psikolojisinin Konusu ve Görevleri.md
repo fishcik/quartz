@@ -404,6 +404,9 @@ Gen ve çevre statik değil, dinamik bir gen-çevre kovaryasyonu[^gen-cevre-kore
 
 ## 5. Bağlamsal Sistemler ve Bireysel Eylemlilik
 
+![Harry Harlow Kumaş Anne Deneyi (1958)](/static/img/gelisim1/harlow_monkey.jpg)
+*Tarihsel Deney: Harry Harlow'un yavru Rhesus maymunlarıyla yaptığı klasik bağlanma deneyi — Canlının besin veren tel anne yerine temas rahatlığı (contact comfort) sunan kumaş anneyi tercih etmesi.*
+
 ### "Ortalama" Yeterli mi?
 
 Scarr (1992) zamanında kışkırtıcı bir soru sormuştu: ***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"***

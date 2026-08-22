@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="auto" style="background:#f9f8f6; border-radius:8px; font-family:'Source Serif 4', Georgia, serif;">
+  <text x="300" y="30" font-size="15" font-weight="bold" fill="#2b2826" text-anchor="middle">Jeremy Morris (1953) Londra Çift Katlı Otobüs Çalışması</text>
+  <text x="300" y="50" font-size="11.5" fill="#5a5346" text-anchor="middle">Epidemiyoloji Tarihinde Fiziksel Aktivite ve Kalp Sağlığının İlk Somut İspatı (Lancet)</text>
+  
+  <!-- Otobüs Şoförü (Sedanter) -->
+  <rect x="40" y="75" width="240" height="190" rx="8" fill="#ffffff" stroke="#C8102E" stroke-width="1.8"/>
+  <text x="160" y="105" font-size="14" font-weight="bold" fill="#C8102E" text-anchor="middle">🪑 Otobüs Şoförü (Sedanter)</text>
+  <text x="60" y="140" font-size="12" fill="#2b2826">• Günde 8+ saat direksiyon başında oturur.</text>
+  <text x="60" y="170" font-size="12" fill="#2b2826">• Neredeyse sıfır fiziksel efor.</text>
+  <text x="60" y="200" font-size="12" fill="#C8102E" font-weight="bold">• Koroner Kalp Krizi Riski: 2.0x (%100 Fazla!)</text>
+  <text x="60" y="235" font-size="11" fill="#7a3e2a">Erken ve ölümcül enfarktüs oranı çok yüksek.</text>
+
+  <!-- Biletçi (Aktif) -->
+  <rect x="320" y="75" width="240" height="190" rx="8" fill="#ffffff" stroke="#2a6b5a" stroke-width="1.8"/>
+  <text x="440" y="105" font-size="14" font-weight="bold" fill="#2a6b5a" text-anchor="middle">🚶‍♂️ Bilet Toplayıcı (Aktif)</text>
+  <text x="340" y="140" font-size="12" fill="#2b2826">• Günde ~600-750 basamak merdiven çıkar.</text>
+  <text x="340" y="170" font-size="12" fill="#2b2826">• Vardiya boyu sürekli hareket halinde.</text>
+  <text x="340" y="200" font-size="12" fill="#2a6b5a" font-weight="bold">• Kalp Krizi Riski: %50 Daha Düşük!</text>
+  <text x="340" y="235" font-size="11" fill="#2a6b5a">Kalp krizi geçirse bile hayatta kalma oranı yüksek.</text>
+</svg>

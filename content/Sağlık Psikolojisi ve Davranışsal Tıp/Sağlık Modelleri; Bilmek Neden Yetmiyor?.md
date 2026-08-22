@@ -202,6 +202,9 @@ Rogers (1975), sigara paketlerindeki dehşet verici görsellerin tek başına ne
 
 ### Rubikon Modeli (Heckhausen & Gollwitzer)
 
+![Rubikon Eylem Evreleri Modeli](/static/img/saglik_modelleri/rubicon_model.svg)
+*Model: Heckhausen & Gollwitzer'in Rubikon modeli — Niyet oluşturma (motivasyonel) ile eylemi kararlılıkla başlatma (volisyonel) arasındaki geri dönüşsüz zihinsel eşik.*
+
 Julius Sezar M.Ö. 49'da ordusuyla Rubikon nehrinin kıyısına geldiğinde durup uzun uzun düşündü. Nehri geçtiği an geri dönüş yoktu (*"Alea iacta est" / Zarlar atıldı*).
 
 - **Rubikon Öncesi (Motivasyon Fazı):** Nehrin kıyısında durup artıları ve eksileri tartma evresidir (*"Yapsam mı, yapmasam mı?"*).

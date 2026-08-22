@@ -21,6 +21,9 @@ tags:
 
 ## 1. Cinsel Yolla Bulaşan Enfeksiyonlar ve Risk Algısı
 
+![Tarihi HIV ve Güvenli Seks Farkındalık Afişi (Wellcome Collection)](/static/img/kondom/hiv_awareness_poster.jpg)
+*Tarihsel Halk Sağlığı Arşivi: 1980'lerin sonundaki küresel HIV/AIDS krizinde risk algısı ve kondom kullanım bariyerlerini kırmak için tasarlanan tarihi bilinçlendirme afişi.*
+
 Cinsel sağlıkta kondom kullanımı, HIV ve diğer cinsel yolla bulaşan enfeksiyonlara (CYBE[^cybe]) karşı en birincil koruyucu kalkandır. Ancak risk algısı genellikle "bana bir şey olmaz" yanılsaması ve partneri dış görünüşüne göre güvenli varsayma yanlılığıyla (güvenilirlik yanılsaması[^guvenilirlik-yanilsamasi]) kolayca bastırılır.
 
 ---

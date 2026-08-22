@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="100%" height="auto" style="background:#f9f8f6; border-radius:8px; font-family:'Source Serif 4', Georgia, serif;">
+  <text x="320" y="32" font-size="16" font-weight="bold" fill="#2b2826" text-anchor="middle">Epidemiyolojik Geçiş: Ölüm Nedenlerinin Evrimi</text>
+  <text x="320" y="52" font-size="12" fill="#5a5346" text-anchor="middle">Enfeksiyondan Davranışsal ve Kronik Yaşam Tarzı Hastalıklarına (1900 vs. Günümüz)</text>
+  
+  <!-- 1900 Panel -->
+  <rect x="25" y="70" width="280" height="240" rx="8" fill="#ffffff" stroke="#7a3e2a" stroke-width="1.5"/>
+  <text x="165" y="98" font-size="14" font-weight="bold" fill="#7a3e2a" text-anchor="middle">1900'ler (Biyomedikal Çağ)</text>
+  <text x="40" y="130" font-size="12" fill="#2b2826">1. 🫁 Zatürre &amp; Grip (%12)</text>
+  <text x="40" y="160" font-size="12" fill="#2b2826">2. 🦠 Tüberküloz / Verem (%11)</text>
+  <text x="40" y="190" font-size="12" fill="#2b2826">3. 💧 Gastrointestinal Enfeksiyonlar (%8)</text>
+  <text x="40" y="220" font-size="12" fill="#5a5346">4. Kalp Hastalıkları (%6)</text>
+  <text x="40" y="250" font-size="12" fill="#5a5346">5. Felç / Serebrovasküler (%5)</text>
+  <text x="165" y="290" font-size="11" font-weight="bold" fill="#C8102E" text-anchor="middle">🔴 %80+ Bulaşıcı / Mikrobiyal</text>
+
+  <!-- 2020s Panel -->
+  <rect x="335" y="70" width="280" height="240" rx="8" fill="#ffffff" stroke="#2a6b5a" stroke-width="1.5"/>
+  <text x="475" y="98" font-size="14" font-weight="bold" fill="#2a6b5a" text-anchor="middle">Günümüz (Davranışsal / BPS Çağ)</text>
+  <text x="350" y="130" font-size="12" fill="#2b2826">1. 🫀 Kalp &amp; Damar Hastalıkları (%31)</text>
+  <text x="350" y="160" font-size="12" fill="#2b2826">2. 🎗️ Kanser Türleri (%23)</text>
+  <text x="350" y="190" font-size="12" fill="#2b2826">3. 🫁 Kronik Solunum (KOAH) (%7)</text>
+  <text x="350" y="220" font-size="12" fill="#2b2826">4. 🧠 Felç &amp; Demans (%6)</text>
+  <text x="350" y="250" font-size="12" fill="#2b2826">5. 🩸 Diyabet &amp; Metabolik Sendrom (%4)</text>
+  <text x="475" y="290" font-size="11" font-weight="bold" fill="#2a6b5a" text-anchor="middle">🟢 %70+ Yaşam Tarzı / Davranışsal</text>
+</svg>

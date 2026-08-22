@@ -164,6 +164,9 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 
 ## 4. Kısıtlayıcı Yeme ve Hedef Çatışması
 
+![Ancel Keys (1904–2004)](/static/img/beslenme/ancel_keys.jpg)
+*Tarihsel Arşiv: Ancel Keys — 1944 Minnesota Yarı-Açlık Deneyi ile gıda kısıtlamasının insan psikolojisinde nasıl obsesif yeme takıntılarına dönüştüğünü kanıtlayan fizyolog.*
+
 İnsanların diyet yaparken çökmesinin ardındaki temel psikolojik dinamik **Kısıtlayıcı Yeme[^kisitlayici-yeme]** ve **Hedonik Açlık[^hedonik-aclik]** çatışmasıdır.
 
 Stroebe ve arkadaşlarının (2013) **Hedef Çatışması Modeli (Goal Conflict Model)**, diyet yapan bireylerin zihninde iki hedefin sürekli savaştığını gösterir:

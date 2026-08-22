@@ -21,6 +21,9 @@ tags:
 
 ## 1. Epidemiyoloji ve 40 Yıllık Doktor Çalışması
 
+![1964 US Surgeon General Raporu (Smoking and Health)](/static/img/sigara/surgeon_general_1964.jpg)
+*Tarihsel Belge: 1964 US Surgeon General Raporu — Tütün endüstrisinin inkar politikalarını yıkarak sigara ile akciğer kanseri ve kardiyovasküler ölüm arasındaki doğrudan bağı resmi olarak ilan eden tarihi rapor.*
+
 > [!quote] Bu Alışkanlık Neden Bırakılamıyor?
 > **Almanya'da yetişkin nüfusun hâlâ %30'u aktif olarak sigara içiyor.**
 > Erkeklerin %27'si, kadınların %20'si her gün içiyor.

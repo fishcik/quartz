@@ -21,6 +21,9 @@ tags:
 
 ## 1. Hareketin Tanımı ve Koruyucu Rolü
 
+![Jeremy Morris (1953) Londra Çift Katlı Otobüs Çalışması](/static/img/fiziksel_aktivite/london_bus_morris.svg)
+*Epidemiyolojik Çığır: Morris ve ark. (1953) — Merdiven inip çıkan aktif biletçilerin oturan şoförlere kıyasla %50 daha az kalp krizi geçirdiğini ispatlayan ilk araştırma.*
+
 Fiziksel aktiviteden kasıt ağır performans sporları değildir. Alman Kardiyoloji Cemiyeti (DGK) yetişkinlere günde en az 30 dk. hafif terleten ve nabzı yükselten hareket önerirken, çocuklara 1-2 saat öneriyor.
 
 > Hareket, metabolik[^metabolik-risk] riskleri minimize eden ve klinik majör depresyonu[^majör-depresyon] önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
