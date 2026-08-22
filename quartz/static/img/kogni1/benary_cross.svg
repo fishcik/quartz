@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="auto" style="background:#f9f8f6; border-radius:8px;">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#f4f1ea"/>
+  <!-- Black Cross -->
+  <path d="M190 60 H310 V190 H440 V310 H310 V440 H190 V310 H60 V190 H190 Z" fill="#1a1712"/>
+  <!-- Triangle A (inside cross arm - on black background) -->
+  <polygon points="190,190 250,190 190,250" fill="#888888"/>
+  <text x="210" y="220" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">A</text>
+  <!-- Triangle B (outside cross in white arm-pit) -->
+  <polygon points="190,310 190,370 130,310" fill="#888888"/>
+  <text x="165" y="340" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1a1712">B</text>
+</svg>

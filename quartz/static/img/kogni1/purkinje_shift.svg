@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="auto" style="background:#f9f8f6; border-radius:8px; font-family: 'Source Serif 4', Georgia, serif;">
+  <!-- Axes -->
+  <line x1="70" y1="40" x2="70" y2="280" stroke="#4a433a" stroke-width="2"/>
+  <line x1="70" y1="280" x2="550" y2="280" stroke="#4a433a" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="310" y="320" font-size="14" fill="#2b2826" text-anchor="middle" font-weight="bold">Işık Dalga Boyu (Nanometre - nm)</text>
+  <text x="25" y="160" font-size="14" fill="#2b2826" text-anchor="middle" transform="rotate(-90 25,160)" font-weight="bold">Bağıl Spektral Duyarlılık (%)</text>
+  <!-- Wavelength Marks -->
+  <text x="120" y="298" font-size="12" fill="#5a5346" text-anchor="middle">400 (Mor)</text>
+  <text x="240" y="298" font-size="12" fill="#1f7a8c" font-weight="bold" text-anchor="middle">500 (Mavi-Yeşil)</text>
+  <text x="330" y="298" font-size="12" fill="#d48c00" font-weight="bold" text-anchor="middle">555 (Sarı-Yeşil)</text>
+  <text x="460" y="298" font-size="12" fill="#C8102E" text-anchor="middle">650 (Kırmızı)</text>
+  <text x="520" y="298" font-size="12" fill="#5a5346" text-anchor="middle">700</text>
+  <!-- Scotopic / Rods Curve (Peak at 500nm) -->
+  <path d="M 100 270 Q 170 190 240 60 Q 310 190 400 275" fill="none" stroke="#1f7a8c" stroke-width="3"/>
+  <text x="190" y="45" font-size="12" fill="#1f7a8c" font-weight="bold">Gece / Çubuklar (500 nm)</text>
+  <!-- Photopic / Cones Curve (Peak at 555nm) -->
+  <path d="M 160 270 Q 240 190 330 60 Q 420 190 510 275" fill="none" stroke="#d48c00" stroke-width="3"/>
+  <text x="350" y="45" font-size="12" fill="#d48c00" font-weight="bold">Gündüz / Koniler (555 nm)</text>
+  <!-- Purkinje Shift Arrow -->
+  <path d="M 320 120 L 250 120" stroke="#C8102E" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="285" y="110" font-size="12" fill="#C8102E" font-weight="bold" text-anchor="middle">Purkinje Kayması (← Geceye Geçiş)</text>
+</svg>

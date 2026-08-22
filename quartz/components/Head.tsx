@@ -847,6 +847,7 @@ function scFitHex(){
 function scSortRecentNotes(){
   var rns=document.querySelectorAll('.recent-notes .recent-ul');
   var DATE_MAP={
+    'GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA': '2026-08-20',
     'GIRIS NORMAL VE ANORMAL': '2026-07-03',
     'GUNESTEN KORUNMA': '2026-06-25',
     'BESLENME PSIKOLOJISI': '2026-06-25',
@@ -865,12 +866,16 @@ function scSortRecentNotes(){
     var lis=Array.from(ul.querySelectorAll(':scope > .recent-li'));
     if(!lis.length)return;
     lis.sort(function(a,b){
+      var aTime=a.querySelector('time');
+      var bTime=b.querySelector('time');
       var aA=a.querySelector('.desc h3 a')||a.querySelector('a');
       var bA=b.querySelector('.desc h3 a')||b.querySelector('a');
       var aTitle=scFold(aA?aA.textContent:'');
       var bTitle=scFold(bA?bA.textContent:'');
-      var aDate=DATE_MAP[aTitle]||'2026-05-30';
-      var bDate=DATE_MAP[bTitle]||'2026-05-30';
+      var aDate=(aTime&&aTime.getAttribute('datetime'))?aTime.getAttribute('datetime').slice(0,10):(DATE_MAP[aTitle]||'2026-01-01');
+      var bDate=(bTime&&bTime.getAttribute('datetime'))?bTime.getAttribute('datetime').slice(0,10):(DATE_MAP[bTitle]||'2026-01-01');
+      if(DATE_MAP[aTitle]) aDate = DATE_MAP[aTitle];
+      if(DATE_MAP[bTitle]) bDate = DATE_MAP[bTitle];
       return bDate.localeCompare(aDate);
     });
     lis.forEach(function(li){
