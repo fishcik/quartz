@@ -5,4 +5,3 @@ tags:
   - sosyal-psikoloji
   - sosyal-algi-ve
 ---
-

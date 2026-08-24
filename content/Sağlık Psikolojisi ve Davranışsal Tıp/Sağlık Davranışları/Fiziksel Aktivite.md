@@ -29,10 +29,10 @@ Fiziksel aktiviteden kasıt ağır performans sporları değildir. Alman Kardiyo
 > Hareket, metabolik[^metabolik-risk] riskleri minimize eden ve klinik majör depresyonu[^majör-depresyon] önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
 
 > [!abstract] Fiziksel Aktivite Doz-Yanıt ve Mortalite Riski Modeli
-> <div class="sc-diag-author"><a href="https://doi.org/10.1097/00005768-200106001-00003" target="_blank" rel="noopener noreferrer">(Kesäniemi ve ark., 2001; US DHHS, 2018)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1097/00005768-200106001-00003" target="_blank" rel="noopener noreferrer">(Kesäniemi ve ark., 2001; US DHHS, 2018)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 250" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <rect x="15" y="45" width="125" height="75" rx="6" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
 >   <text x="77" y="75" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Sedanter Yaşam</text>
 >   <text x="77" y="93" fill="var(--dark)" font-family="var(--bodyFont)" font-size="8.5" text-anchor="middle">0 dk / Hafta</text>
@@ -70,7 +70,7 @@ Fiziksel aktiviteden kasıt ağır performans sporları değildir. Alman Kardiyo
 >
 > *Hareketsizlikten haftalık 150 dakikalık orta tempolu yürüyüşe geçişin mortaliteyi en dramatik şekilde düşürdüğünü, sonrasındaki hacim artışlarının ise azalan marjinal fayda sağladığını gösteren klinik doz-yanıt akışıdır.*
 >
-> *Kesäniemi, Y. A., et al. (2001). Dose-response issues concerning physical activity and health. Medicine & Science in Sports & Exercise, 33(6), S351–S358. https://doi.org/10.1097/00005768-200106001-00003*
+> <div class="sc-gfx-source">Kesäniemi, Y. A., et al. (2001). Dose-response issues concerning physical activity and health. Medicine & Science in Sports & Exercise, 33(6), S351–S358. https://doi.org/10.1097/00005768-200106001-00003</div>
 
 ---
 

@@ -5,4 +5,3 @@ tags:
   - gelişim-psikolojisi-1
   - biyoloji-ve-davranis
 ---
-

@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="karargah">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İLHAMMAN 3500 — KliPsy 1: Kuramlar &amp; Kategorik Yaklaşımlar</title>
+
+<!-- GOOGLE FONTS: LITERATA & JETBRAINS MONO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..900;1,7..72,300..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================================
+     THEME SYSTEM & 10 DISTINCT PRESETS (AÇIK & KOYU MODLAR)
+     ========================================================================== */
+  :root {
+    --editor-font: 'Literata', Georgia, 'Times New Roman', serif;
+    --ui-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --mono-font: 'JetBrains Mono', monospace;
+    --transition-speed: 0.15s;
+  }
+
+  /* 1. SAYKO KARARGÂH (Varsayılan Koyu: Sepia / Koyu Ahşap / Cardinal) */
+  html[data-theme="karargah"] {
+    --bg-main: #121110;
+    --bg-panel-left: #161513;
+    --bg-panel-right: #1a1815;
+    --bg-card: #201d19;
+    --bg-toolbar: #181614;
+    --border-color: #2e2b26;
+    --border-highlight: #c79a6d;
+    --accent: #c79a6d;
+    --accent-secondary: #C8102E;
+    --accent-tag: #96c46c;
+    --text-main: #ece8e1;
+    --text-muted: #a69e90;
+    --code-bg: #24211d;
+    --shadow: rgba(0, 0, 0, 0.4);
+  }
+
+  /* 2. SBB CFF FFS / SWISS RAILWAY (AÇIK TEMA: İsviçre Kırmızısı, Net Beyaz & İstasyon Grisi) */
+  html[data-theme="sbb"] {
+    --bg-main: #f0f0f0;
+    --bg-panel-left: #ffffff;
+    --bg-panel-right: #f7f7f7;
+    --bg-card: #ffffff;
+    --bg-toolbar: #e6e6e6;
+    --border-color: #d0d0d0;
+    --border-highlight: #EB0000;
+    --accent: #EB0000;
+    --accent-secondary: #1E242B;
+    --accent-tag: #008542;
+    --text-main: #1e242b;
+    --text-muted: #646b73;
+    --code-bg: #ebebeb;
+    --shadow: rgba(235, 0, 0, 0.08);
+  }
+
+  /* 3. WINDOWS 95 / RETRO PC (AÇIK TEMA: Teal Masaüstü, Gri Çerçeve, 3D Bevel) */
+  html[data-theme="win95"] {
+    --bg-main: #008080;
+    --bg-panel-left: #ffffff;
+    --bg-panel-right: #c0c0c0;
+    --bg-card: #dfdfdf;
+    --bg-toolbar: #c0c0c0;
+    --border-color: #808080;
+    --border-highlight: #000080;
+    --accent: #000080;
+    --accent-secondary: #800000;
+    --accent-tag: #008000;
+    --text-main: #000000;
+    --text-muted: #444444;
+    --code-bg: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.2);
+  }
+
+  /* 4. SPOTIFY DARK / GREEN STREAM (KOYU TEMA: OLED Siyah & Neon Yeşil) */
+  html[data-theme="spotify"] {
+    --bg-main: #121212;
+    --bg-panel-left: #181818;
+    --bg-panel-right: #121212;
+    --bg-card: #242424;
+    --bg-toolbar: #0f0f0f;
+    --border-color: #2a2a2a;
+    --border-highlight: #1DB954;
+    --accent: #1DB954;
+    --accent-secondary: #ffffff;
+    --accent-tag: #1ed760;
+    --text-main: #ffffff;
+    --text-muted: #b3b3b3;
+    --code-bg: #282828;
+    --shadow: rgba(29, 185, 84, 0.15);
+  }
+
+  /* 5. ANTİK KÜTÜPHANE / CIORAN KAĞIDI (AÇIK TEMA: Sıcak Fildişi Parşömen & Koyu Mürekkep) */
+  html[data-theme="parchment"] {
+    --bg-main: #f4eee2;
+    --bg-panel-left: #fcf8f0;
+    --bg-panel-right: #ece4d2;
+    --bg-card: #f8f2e4;
+    --bg-toolbar: #e8ded0;
+    --border-color: #d6cbb6;
+    --border-highlight: #8c2d19;
+    --accent: #8c2d19;
+    --accent-secondary: #2b5344;
+    --accent-tag: #a36528;
+    --text-main: #241e17;
+    --text-muted: #6e6456;
+    --code-bg: #e6dcce;
+    --shadow: rgba(0, 0, 0, 0.08);
+  }
+
+  /* 6. SAKURA / TOKYO MINIMAL (AÇIK TEMA: Porselen Beyaz, Kiraz Çiçeği Pembe & Yumuşak Kömür) */
+  html[data-theme="sakura"] {
+    --bg-main: #fbf5f5;
+    --bg-panel-left: #ffffff;
+    --bg-panel-right: #f6eded;
+    --bg-card: #ffffff;
+    --bg-toolbar: #f4e8e8;
+    --border-color: #e8d7d7;
+    --border-highlight: #db5478;
+    --accent: #db5478;
+    --accent-secondary: #5e8b7e;
+    --accent-tag: #e07a5f;
+    --text-main: #2b2728;
+    --text-muted: #786b6e;
+    --code-bg: #f5ebeb;
+    --shadow: rgba(219, 84, 120, 0.08);
+  }
+
+  /* 7. MATCHA ZEN / GREEN TEA (AÇIK TEMA: Doğal Adaçayı, Bambu Yeşili & Krem) */
+  html[data-theme="matcha"] {
+    --bg-main: #eef3ee;
+    --bg-panel-left: #f7faf7;
+    --bg-panel-right: #e6ede6;
+    --bg-card: #ffffff;
+    --bg-toolbar: #e2eae2;
+    --border-color: #cbd8cb;
+    --border-highlight: #2d5a3c;
+    --accent: #2d5a3c;
+    --accent-secondary: #c26732;
+    --accent-tag: #588157;
+    --text-main: #1a2a1e;
+    --text-muted: #576b5c;
+    --code-bg: #e5ece5;
+    --shadow: rgba(45, 90, 60, 0.08);
+  }
+
+  /* 8. CYBER ZHB / MATRIX (KOYU TEMA: Terminal Siyah & Fosforlu Yeşil) */
+  html[data-theme="cyber"] {
+    --bg-main: #050806;
+    --bg-panel-left: #080d0a;
+    --bg-panel-right: #0b120d;
+    --bg-card: #0f1a13;
+    --bg-toolbar: #09100b;
+    --border-color: #15291c;
+    --border-highlight: #00ff66;
+    --accent: #00ff66;
+    --accent-secondary: #00e5ff;
+    --accent-tag: #ffe600;
+    --text-main: #e0fde8;
+    --text-muted: #6b9e78;
+    --code-bg: #112418;
+    --shadow: rgba(0, 255, 102, 0.15);
+  }
+
+  /* 9. DEEP SPACE / OBSIDIAN (KOYU TEMA: Ultra Saf Siyah & Minimal Slate) */
+  html[data-theme="obsidian"] {
+    --bg-main: #000000;
+    --bg-panel-left: #080808;
+    --bg-panel-right: #0e0e0e;
+    --bg-card: #141414;
+    --bg-toolbar: #0a0a0a;
+    --border-color: #222222;
+    --border-highlight: #3b82f6;
+    --accent: #3b82f6;
+    --accent-secondary: #f43f5e;
+    --accent-tag: #10b981;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --code-bg: #1c1c1c;
+    --shadow: rgba(0, 0, 0, 0.7);
+  }
+
+  /* 10. BORDO AKADEMİ / OXFORD (KOYU TEMA: Derin Bordo & Altın Yaldız) */
+  html[data-theme="oxford"] {
+    --bg-main: #140b0e;
+    --bg-panel-left: #1c1014;
+    --bg-panel-right: #221419;
+    --bg-card: #2b1920;
+    --bg-toolbar: #180d11;
+    --border-color: #3d1f2a;
+    --border-highlight: #d4af37;
+    --accent: #d4af37;
+    --accent-secondary: #e63946;
+    --accent-tag: #48cae4;
+    --text-main: #f8edf1;
+    --text-muted: #ab929b;
+    --code-bg: #331d26;
+    --shadow: rgba(212, 175, 55, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--ui-font);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+
+  /* ==========================================================================
+     HEADER / TOPBAR
+     ========================================================================== */
+  header {
+    background: var(--bg-toolbar);
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .brand-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand-badge {
+    background: var(--accent-secondary);
+    color: #fff;
+    font-weight: 900;
+    font-size: 11px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.8px;
+    font-family: var(--mono-font);
+  }
+  .brand-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .top-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .theme-select {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 4px 8px;
+    font-size: 11.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+  }
+  .theme-select:focus { border-color: var(--border-highlight); }
+
+  .status-pill {
+    font-size: 11px;
+    color: var(--accent-tag);
+    font-family: var(--mono-font);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 4px;
+  }
+
+  .btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 4px 8px;
+    font-size: 11.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .btn:hover {
+    border-color: var(--border-highlight);
+    color: var(--accent);
+  }
+  .btn-accent {
+    background: var(--accent);
+    color: var(--bg-main) !important;
+    border-color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ==========================================================================
+     MAIN TWO-PANEL SPLIT CONTAINER
+     ========================================================================== */
+  .split-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* LEFT PANEL: WRITING & CREATIVE TOOLBAR */
+  .panel-left {
+    width: 50%;
+    min-width: 320px;
+    background: var(--bg-panel-left);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    position: relative;
+  }
+
+  /* TOOLBAR */
+  .creative-toolbar {
+    background: var(--bg-toolbar);
+    border-bottom: 1px solid var(--border-color);
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-items: center;
+    font-size: 11px;
+  }
+  .tool-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 3px 6px;
+    font-size: 11px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: var(--mono-font);
+    transition: all 0.1s;
+  }
+  .tool-btn:hover {
+    color: var(--text-main);
+    border-color: var(--border-highlight);
+  }
+  .tool-group-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 0 2px 0 5px;
+    font-weight: 700;
+  }
+  .tool-divider {
+    width: 1px;
+    height: 15px;
+    background: var(--border-color);
+    margin: 0 3px;
+  }
+
+  /* EDITOR TEXTAREA WITH LITERATA FONT */
+  .editor-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  #editor-textarea {
+    flex: 1;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    padding: 24px 32px;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: var(--editor-font);
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  #editor-textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.4;
+  }
+
+  .editor-status-bar {
+    padding: 4px 14px;
+    background: var(--bg-toolbar);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--mono-font);
+  }
+
+  /* RESIZER DIVIDER */
+  .resizer {
+    width: 6px;
+    background: var(--border-color);
+    cursor: col-resize;
+    transition: background 0.15s;
+    z-index: 10;
+  }
+  .resizer:hover, .resizer.dragging {
+    background: var(--border-highlight);
+  }
+
+  /* RIGHT PANEL: RAW MATERIAL, DIRECT PDF & OMURGA */
+  .panel-right {
+    flex: 1;
+    min-width: 320px;
+    background: var(--bg-panel-right);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .panel-right-header {
+    background: var(--bg-toolbar);
+    border-bottom: 1px solid var(--border-color);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .view-tabs {
+    display: flex;
+    gap: 4px;
+  }
+  .view-tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .view-tab-btn.active {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--accent);
+  }
+  .view-tab-btn:hover:not(.active) {
+    color: var(--text-main);
+  }
+
+  .pdf-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .file-picker-btn {
+    background: var(--bg-card);
+    border: 1px dashed var(--border-highlight);
+    color: var(--accent);
+    padding: 3px 7px;
+    font-size: 10.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .file-picker-btn:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+  }
+  #pdf-file-input { display: none; }
+
+  /* CONTENT PANES */
+  .right-content {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .view-pane {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .view-pane.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* PDF EMBED CONTAINER */
+  .pdf-frame-container {
+    width: 100%;
+    height: 100%;
+    background: #525659;
+    position: relative;
+  }
+  .pdf-frame-container iframe, .pdf-frame-container embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* OMURGA CARDS */
+  .omurga-container {
+    padding: 16px 20px;
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .omurga-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .omurga-item:hover {
+    border-color: var(--border-highlight);
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .omurga-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .omurga-title {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent);
+  }
+  .omurga-badge {
+    font-size: 10px;
+    background: var(--code-bg);
+    color: var(--text-muted);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: var(--mono-font);
+  }
+  .omurga-desc {
+    font-size: 12px;
+    color: var(--text-main);
+    line-height: 1.5;
+  }
+  .omurga-keywords {
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .omurga-insert-btn {
+    margin-top: 8px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 2px 8px;
+    font-size: 10.5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .omurga-insert-btn:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+  }
+
+  /* SCRATCHPAD DRAWER */
+  .scratchpad-panel {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-toolbar);
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100px;
+  }
+  .scratchpad-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  #scratchpad-textarea {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 6px 8px;
+    font-size: 12px;
+    font-family: var(--editor-font);
+    resize: none;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  /* ZEN FULLSCREEN */
+  .zen-mode .panel-right, .zen-mode .resizer {
+    display: none !important;
+  }
+  .zen-mode .panel-left {
+    width: 100% !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header>
+  <div class="brand-group">
+    <span class="brand-badge">ILHAMMAN 3500</span>
+    <span class="brand-title">KliPsy 1: Kuramlar &amp; Kategorik Yaklaşımlar</span>
+  </div>
+
+  <div class="top-controls">
+    <!-- 10 THEME PRESETS -->
+    <select class="theme-select" id="theme-selector" onchange="changeTheme(this.value)">
+      <optgroup label="🌙 Koyu Modlar">
+        <option value="karargah">☕ 1. Sayko Karargâh</option>
+        <option value="spotify">🎧 2. Spotify Dark</option>
+        <option value="cyber">🌌 3. Cyber ZHB / Matrix</option>
+        <option value="obsidian">🪐 4. Deep Space / Obsidian</option>
+        <option value="oxford">🍷 5. Bordo Akademi / Oxford</option>
+      </optgroup>
+      <optgroup label="☀️ Açık Modlar">
+        <option value="sbb">🇨🇭 6. SBB CFF FFS (İsviçre)</option>
+        <option value="win95">💾 7. Windows 95 Retro</option>
+        <option value="parchment">📜 8. Antik Kütüphane / Fildişi</option>
+        <option value="matcha">🍵 9. Matcha Zen / Green Tea</option>
+        <option value="sakura">🌸 10. Sakura / Tokyo Minimal</option>
+      </optgroup>
+    </select>
+
+    <div class="tool-divider"></div>
+    <span class="status-pill" id="save-status">● Kaydedildi</span>
+    <button class="btn" onclick="recoverFromStorage()" title="Geçmiş kayıtları tarar ve en uzununu kurtarır">🔄 Kurtar</button>
+    <button class="btn" onclick="exportMarkdown()" title="Markdown (.md) olarak indirir">💾 .md İndir</button>
+    <button class="btn" onclick="copyEditorText()" title="Panoya kopyalar">📋 Kopyala</button>
+    <button class="btn btn-accent" onclick="toggleZenMode()" id="zen-btn" title="Tam ekran saf yazı modu">⚡ Zen Modu</button>
+  </div>
+</header>
+
+<!-- MAIN TWO-PANEL SPLIT CONTAINER -->
+<div class="split-container" id="split-container">
+  
+  <!-- LEFT PANEL: WRITING & CREATIVE TOOLBAR (LITERATA FONT) -->
+  <div class="panel-left" id="panel-left">
+    <div class="creative-toolbar">
+      <!-- Formatting -->
+      <button class="tool-btn" onclick="insertSnippet('## ')">H2</button>
+      <button class="tool-btn" onclick="insertSnippet('### ')">H3</button>
+      <button class="tool-btn" onclick="insertSnippet('**', '**')">B</button>
+      <button class="tool-btn" onclick="insertSnippet('*', '*')">I</button>
+      <button class="tool-btn" onclick="insertSnippet('==', '==')">Vurgu</button>
+      <button class="tool-btn" onclick="insertSnippet('`', '`')">Kod</button>
+
+      <!-- Font Size Adjuster -->
+      <div class="tool-divider"></div>
+      <button class="tool-btn" onclick="adjustFontSize(-1)" title="Yazı boyutunu küçült">A-</button>
+      <button class="tool-btn" onclick="adjustFontSize(1)" title="Yazı boyutunu büyüt">A+</button>
+
+      <div class="tool-divider"></div>
+      <span class="tool-group-label">💡 Yaratıcılık:</span>
+
+      <!-- Creative & Thinking Sparks -->
+      <button class="tool-btn" onclick="insertSnippet('> [!danger] Paradoks:\n> ', '\n')" title="Kuramsal çatışma kutusu">⚡ Paradoks</button>
+      <button class="tool-btn" onclick="insertSnippet('> [!example] Vaka / Karakter:\n> ', '\n')" title="Somut klinik vaka / analoji">🎭 Vaka</button>
+      <button class="tool-btn" onclick="insertSnippet('> [!tip] Sokak Analojisi:\n> ', '\n')" title="Sokak akademisyeni analojisi">🔥 Analoji</button>
+      <button class="tool-btn" onclick="insertSnippet('> [!note] Zihinsel Dipnot:\n> ', '\n')" title="Samimi iç ses">💬 İç Ses</button>
+      <button class="tool-btn" onclick="insertSnippet('> [!quote]\n> *"', '"* — Yazar, Yıl\n')" title="Alıntı">📜 Alıntı</button>
+      <button class="tool-btn" onclick="insertTable()" title="Karşılaştırma Tablosu">📊 Tablo</button>
+      <button class="tool-btn" onclick="insertSnippet('**Tez:** ...\n**Antitez:** ...\n**Sentez:** ...\n')" title="Diyalektik düşünce">⚖️ Tez-Antitez</button>
+    </div>
+
+    <!-- Textarea with Literata Font -->
+    <div class="editor-wrapper">
+      <textarea id="editor-textarea" placeholder="Kuramlar ve Kategorik Yaklaşımlar yazına buradan başla kankam..."></textarea>
+    </div>
+
+    <!-- Scratchpad (Anlık Karalama Çekmecesi) -->
+    <div class="scratchpad-panel">
+      <div class="scratchpad-title">📝 Anlık Fikirler &amp; Karalama Defteri (Geçici Cümleler)</div>
+      <textarea id="scratchpad-textarea" placeholder="Yazarken aklına gelen anlık metaforları buraya fırlat..."></textarea>
+    </div>
+
+    <!-- Footer Stats -->
+    <div class="editor-status-bar">
+      <span id="stat-words">0 kelime | 0 karakter</span>
+      <span id="font-indicator">Literata (16px) &bull; ZHB Luzern</span>
+    </div>
+  </div>
+
+  <!-- RESIZER -->
+  <div class="resizer" id="resizer"></div>
+
+  <!-- RIGHT PANEL: RAW MATERIAL, DIRECT PDF & OMURGA -->
+  <div class="panel-right" id="panel-right">
+    <div class="panel-right-header">
+      <div class="view-tabs">
+        <button class="view-tab-btn active" onclick="switchRightTab('slides')">📑 Slaytlar PDF (Morina)</button>
+        <button class="view-tab-btn" onclick="switchRightTab('book')">📖 Lehrbuch PDF (Wittchen)</button>
+        <button class="view-tab-btn" onclick="switchRightTab('omurga')">🏛️ OMURGA &amp; Rota</button>
+        <button class="view-tab-btn" onclick="switchRightTab('llm')">🤖 LLM Okuyucu</button>
+        <button class="view-tab-btn" onclick="switchRightTab('prompt')">🔥 Master Prompt</button>
+      </div>
+
+      <div class="pdf-controls">
+        <label class="file-picker-btn" for="pdf-file-input">📂 Başka PDF Seç</label>
+        <input type="file" id="pdf-file-input" accept="application/pdf" onchange="loadCustomPDF(this)">
+      </div>
+    </div>
+
+    <div class="right-content">
+      
+      <!-- PANE 1: SLAYTLAR DİREKT PDF EMBED -->
+      <div id="pane-slides" class="view-pane active">
+        <div class="pdf-frame-container">
+          <iframe id="slides-iframe" src="KLIN1_VO_02_Theorien_klinischer_Auffaelligkeiten.pdf"></iframe>
+        </div>
+      </div>
+
+      <!-- PANE 2: LEHRBUCH DİREKT PDF EMBED -->
+      <div id="pane-book" class="view-pane">
+        <div class="pdf-frame-container">
+          <iframe id="book-iframe" src="978-3-662-61814-1-2-2.pdf" type="application/pdf"></iframe>
+        </div>
+      </div>
+
+      <!-- PANE 3: LLM MARKDOWN OKUYUCU & MAT HIGHLIGHTER -->
+      <div id="pane-llm" class="view-pane">
+        <div style="display:flex; flex-direction:column; height:100%;">
+          <!-- LLM Reader Toolbar -->
+          <div style="background:var(--bg-toolbar); border-bottom:1px solid var(--border-color); padding:6px 10px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:6px;">
+            <div style="display:flex; align-items:center; gap:4px; flex-wrap:wrap;">
+              <button class="btn btn-accent" onclick="pasteFromClipboardToLLM()" style="font-size:11px;">📋 Panodan Yapıştır &amp; Oku</button>
+              <button class="btn" onclick="toggleLLMEditMode()" id="llm-toggle-edit-btn" style="font-size:11px;">✏️ Ham Markdown Düzenle</button>
+              <button class="btn" onclick="insertSelectedLLMToEditor()" title="Seçtiğin veya tüm metni sol taraftaki yazı masasına aktarır" style="font-size:11px;">✍️ Sola Aktar</button>
+              <button class="btn" onclick="clearLLMReader()" style="font-size:11px;">🧹 Temizle</button>
+            </div>
+
+            <!-- Matte Highlighter Palette -->
+            <div style="display:flex; align-items:center; gap:3px;">
+              <span style="font-size:10px; color:var(--text-muted); font-weight:700; text-transform:uppercase; margin-right:3px;">Mat Vurgu:</span>
+              <button class="tool-btn" style="background:#e5c07b; color:#1a1a1a; font-weight:bold; padding:2px 6px; border:none;" onclick="applyMatteHighlight('rgba(229, 192, 123, 0.5)')" title="Mat Kehribar / Sarı">Sarı</button>
+              <button class="tool-btn" style="background:#98c379; color:#1a1a1a; font-weight:bold; padding:2px 6px; border:none;" onclick="applyMatteHighlight('rgba(152, 195, 121, 0.5)')" title="Mat Adaçayı / Yeşil">Yeşil</button>
+              <button class="tool-btn" style="background:#e06c75; color:#ffffff; font-weight:bold; padding:2px 6px; border:none;" onclick="applyMatteHighlight('rgba(224, 108, 117, 0.5)')" title="Mat Kiremit / Gül">Kırmızı</button>
+              <button class="tool-btn" style="background:#61afef; color:#ffffff; font-weight:bold; padding:2px 6px; border:none;" onclick="applyMatteHighlight('rgba(97, 175, 239, 0.5)')" title="Mat Buzul / Mavi">Mavi</button>
+              <button class="tool-btn" style="background:#c678dd; color:#ffffff; font-weight:bold; padding:2px 6px; border:none;" onclick="applyMatteHighlight('rgba(198, 120, 221, 0.5)')" title="Mat Lavanta / Mor">Mor</button>
+              <button class="tool-btn" style="background:var(--bg-card); color:var(--text-main); padding:2px 6px;" onclick="removeMatteHighlight()" title="Vurguyu Kaldır">Silgi</button>
+            </div>
+          </div>
+
+          <!-- Raw Markdown Input (Hidden by default when rendered) -->
+          <textarea id="llm-raw-input" placeholder="Gemini veya Claude'dan aldığın Puzpuz'lu, ELI5'li çıktıyı buraya yapıştır kankam..." style="display:none; flex:1; width:100%; background:var(--bg-card); color:var(--text-main); border:none; padding:16px 20px; font-family:var(--mono-font); font-size:13px; line-height:1.6; resize:none; outline:none;" oninput="onLLMRawInput()"></textarea>
+
+          <!-- Rendered Reading Canvas (Editable for in-line highlighting) -->
+          <div id="llm-rendered-view" contenteditable="true" style="flex:1; overflow-y:auto; padding:24px 28px; background:var(--bg-panel-right); color:var(--text-main); font-family:var(--editor-font); font-size:15.5px; line-height:1.75; outline:none;" oninput="saveLLMRenderedContent()">
+            <div style="text-align:center; padding:40px 20px; color:var(--text-muted); font-family:var(--ui-font);">
+              <div style="font-size:32px; margin-bottom:10px;">🤖</div>
+              <div style="font-size:14px; font-weight:600; margin-bottom:6px;">LLM Çıktı Okuma Alanı Boş</div>
+              <div style="font-size:12px;">Yukarıdaki <strong>"📋 Panodan Yapıştır &amp; Oku"</strong> butonuna bas veya doğrudan metin yapıştır. Okurken dilediğin yeri fareyle seçip mat renklerle vurgulayabilirsin!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 4: MASTER PROMPT -->
+      <div id="pane-prompt" class="view-pane">
+        <div class="omurga-container">
+          <div class="omurga-item" style="border-left-color: var(--accent-secondary);">
+            <div class="omurga-header">
+              <span class="omurga-title" style="color: var(--accent-secondary);">🔥 SAYKO.CH DİSEKSİYON &amp; PUZPUZ MASTER PROMPTU</span>
+              <button class="omurga-insert-btn" onclick="copyMasterPromptText()">📋 Promptu Kopyala</button>
+            </div>
+            <div class="omurga-desc" style="margin-top: 8px;">
+              <pre id="prompt-pre" style="background: var(--code-bg); padding: 12px; border-radius: 6px; font-family: var(--mono-font); font-size: 11.5px; line-height: 1.6; white-space: pre-wrap; color: var(--text-main); user-select: all;"># ROL VE GÖREV TANIMI: SAYKO.CH DİSEKSİYON & ANALİZ MOTORU
+
+Sen; Universität Luzern (UNILU) Klinik Psikoloji lisans müfredatını (Prof. Nexhmedin Morina, Wittchen & Hoyer / Rief Lehrbuch, Caspi & Moffitt, Beck, Barlow), uluslararası ampirik psikopatoloji literatürünü ve `sayko.ch` projesinin tavizsiz, sokak zekasıyla harmanlanmış edebi-bilimsel sesini yöneten AKADEMİK DİSEKSİYON MOTORUSUN.
+
+## 🎯 TEMEL ÇIKTI STANDARDI:
+Sana bir konu, slayt, pasaj veya kavram verildiğinde çıktın son derece öz (concise), olgusal (factual) ve gereksiz laf kalabalığından arındırılmış olacaktır.
+
+---
+
+## 🧬 DİSEKSİYON ÇIKTI ŞABLONU (4 ZORUNLU KATMAN):
+
+### 1. 🧒 ELI5 (Açık ve Sezgisel — Max 1-3 Paragraf)
+- Konunun mantıksal çekirdeğini 5 yaşındaki birinin anlayacağı somut, günlük hayat metaforlarıyla (oyuncak, vazo, su bardağı) açıkla.
+- Asla lafı uzatma; en fazla 1-3 kısa paragrafta bitir.
+
+### 2. 🪓 PUZPUZ’UN MAĞARASI (Taş Devri Gerçekçiliği)
+- Karakter: PUZPUZ (Mağarada yaşayan, olayları bizzat tecrübe eden, mamut kovalayan, kabile şifacısıyla didişen, saf içgüdüleriyle hayatta kalan avcı-toplayıcı atamız).
+- Olayı Puzpuz’un gözünden, taş devri gerçekçiliği ve kabile dinamikleriyle (ateş, av, kürk, tehlike, kabile dışlanması) anlat.
+
+### 3. 🔬 FRONTIER (Bilimin En Uç Sınırı — Max 1-2 Cümle)
+- Bu konuyla ilgili şu an dünya psikiyatri/psikoloji biliminin geldiği en uç noktayı, çözümsüz epistemolojik krizi veya en güncel tartışmayı en fazla 1-2 keskin cümlede özetle.
+
+### 4. ✍️ SAYKO.CH HAMMETİN (Yazı Masası İçin Sentez)
+- Konuyu `sayko.ch` tonunda (Cioran derinliği + Feynman netliği + sokak zekası) yazıya doğrudan aktarılabilecek ham, vurucu bir paragrafa dök.
+
+---
+
+## 🌐 DİL VE LOKALİZASYON KURALI (ZORUNLU):
+- Metinde geçen tüm Almanca ve İngilizce akademik terimler Türkçeye tam ve akıcı şekilde lokalize edilecektir.
+- Lokalize edilen her terimin hemen yanında, orijinal hali parantez içinde ve italik olarak yazılacaktır.
+  - Örnek: Kırılganlık-Stres Modeli (*Vulnerabilitäts-Stress-Modell*)
+  - Örnek: Bozukluklar-Ötesi Yaklaşım (*Transdiagnostischer Ansatz*)
+  - Örnek: Genel Psikopatoloji Faktörü (*General Psychopathology / p-Factor*)
+  - Örnek: Eşzamanlı Tanı / Eştanılılık (*Komorbidität*)
+  - Örnek: Kuramsız / Sadece Betimleyici (*Atheoretisch*)
+
+---
+
+## 🔄 BAĞLAMSAL HAFIZA:
+- Süregelen sohbette daha önce verilen analojileri, klinik vakaları ve önceki yazılardaki kavramları (Kraepelin, Wakefield, SORCK, Diatez-Stres) unutma; gerektiğinde yeni konulara organik olarak çapala.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 5: OMURGA & ROTA -->
+      <div id="pane-omurga" class="view-pane">
+        <div class="omurga-container">
+
+          <div class="omurga-item">
+            <div class="omurga-header">
+              <span class="omurga-title">1. Açılış &amp; Soru: Normal/Anormal'den Sonraki Bataklık</span>
+              <span class="omurga-badge">Bölüm 1</span>
+            </div>
+            <div class="omurga-desc">Giriş yazısında sınırların ne kadar kaygan olduğunu görmüştük. Şimdi masada 2 dev soru var: <em>"Bu acı neden başladı?"</em> (Etiyoloji) ve <em>"Biz bu acıyı nasıl kutulayacağız?"</em> (Nosoloji).</div>
+            <div class="omurga-keywords">Anahtar: Kraepelin mirası, Baumann &amp; Perrez 4'lü çerçevesi, Strotzka tanımı.</div>
+            <button class="omurga-insert-btn" onclick="insertSnippet('## 1. Açılış: Neden Başladı ve Nasıl Kutulayacağız?\n\n')">Başlığı Metne Ekle</button>
+          </div>
+
+          <div class="omurga-item">
+            <div class="omurga-header">
+              <span class="omurga-title">2. Störungsspezifisch vs. Transdiagnostisch</span>
+              <span class="omurga-badge">Bölüm 2</span>
+            </div>
+            <div class="omurga-desc"><strong>Bozukluğa Özgü (Störungsspezifisch):</strong> Tekil tanılar için özel haritalar (Clark Panik Modeli, Mowrer Fobi 2-Faktör).<br><strong>Bozukluklar-Ötesi (Transdiagnostik):</strong> Ortak çekirdekler (Rumination, Barlow Unified Protocol, Caspi p-faktörü).</div>
+            <div class="omurga-keywords">Anahtar: Clark (1986), Mowrer (1939), Barlow (2004), Caspi (2014).</div>
+            <button class="omurga-insert-btn" onclick="insertSnippet('## 2. Bozukluğa Özgü vs. Transdiagnostik: Böl Parçala mı, Büyük Resim mi?\n\n')">Başlığı Metne Ekle</button>
+          </div>
+
+          <div class="omurga-item">
+            <div class="omurga-header">
+              <span class="omurga-title">3. Zihnin 6 Açıklama Kalesi: Etiyoloji Paradigması</span>
+              <span class="omurga-badge">Bölüm 3</span>
+            </div>
+            <div class="omurga-desc">
+              1. <strong>Biyolojik/Medikal:</strong> Somatogenez, nörotransmitter, genetik.<br>
+              2. <strong>Psikodinamik:</strong> Es/Ich/Über-Ich çatışması, savunma mekanizmaları.<br>
+              3. <strong>Kognitif-Behavioral:</strong> Öğrenme kuramları + Beck Kognitif Triadı (Kendilik, Çevre, Gelecek).<br>
+              4. <strong>Hümanist/Varoluşçu:</strong> Otantiklik ve kendini gerçekleştirme tıkanıklığı.<br>
+              5. <strong>Sistemik:</strong> Aile dengesi, indeks hasta (Symptomträger), dairesel nedensellik.<br>
+              6. <strong>Biyopsikososyal (Zubin &amp; Spring 1977):</strong> Diatez-Stres kırılma eşiği (Tipping Point).
+            </div>
+            <button class="omurga-insert-btn" onclick="insertSnippet('## 3. Zihnin 6 Açıklama Kalesi: Etiyoloji Paradigması\n\n')">Başlığı Metne Ekle</button>
+          </div>
+
+          <div class="omurga-item">
+            <div class="omurga-header">
+              <span class="omurga-title">4. Kanfer SORCK Mikro Davranış Analizi</span>
+              <span class="omurga-badge">Bölüm 4</span>
+            </div>
+            <div class="omurga-desc">KVT'nin altın formülasyonu: <strong>S</strong> (Stimulus) $\rightarrow$ <strong>O</strong> (Organizma) $\rightarrow$ <strong>R</strong> (Reaksiyon) $\rightarrow$ <strong>C</strong> (Sonuç/Rahatlama) $\rightarrow$ <strong>K</strong> (Kontingenz).</div>
+            <button class="omurga-insert-btn" onclick="insertSnippet('### Kanfer SORCK Davranış Analizi\n\n')">Başlığı Metne Ekle</button>
+          </div>
+
+          <div class="omurga-item">
+            <div class="omurga-header">
+              <span class="omurga-title">5. Nosoloji Krizi: Kategorik Kutular (DSM/ICD) vs. Boyutsal İsyan</span>
+              <span class="omurga-badge">Bölüm 5</span>
+            </div>
+            <div class="omurga-desc">Kategorik tanıların iflası: %50+ komorbidite yapaylığı, devasa NOS (b.b.b) çöplüğü, etiketleme damgası.<br>Boyutsal alternatifler: <strong>HiTOP</strong> (Hiyerarşik spektrumlar) ve <strong>RDoC</strong> (Biyolojik fonksiyonel devre matrisi).</div>
+            <button class="omurga-insert-btn" onclick="insertSnippet('## 4. Nosoloji Krizi: Kategorik Kutular vs. Boyutsal İsyan (HiTOP & RDoC)\n\n')">Başlığı Metne Ekle</button>
+          </div>
+
+          <div class="omurga-item">
+            <div class="omurga-header">
+              <span class="omurga-title">6. Ateoretik Nosoloji Paradoksu</span>
+              <span class="omurga-badge">Bölüm 6</span>
+            </div>
+            <div class="omurga-desc">DSM ve ICD nedenleri bilmediği için 'ateoretik' (salt semptom betimleyici) olmak zorundadır. Bu bir güç müdür, yoksa bilimin geçici bir çaresizliği mi?</div>
+            <button class="omurga-insert-btn" onclick="insertSnippet('## 5. Ateoretik Nosoloji Paradoksu: Bilmediğini İtiraf Eden El Kitabı\n\n')">Başlığı Metne Ekle</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const PERMANENT_STORAGE_KEY = "ILHAMMAN_3500_KLIPSY1_PERMANENT_V1";
+  const SCRATCHPAD_STORAGE_KEY = "ILHAMMAN_3500_SCRATCHPAD_V1";
+  const THEME_STORAGE_KEY = "ILHAMMAN_3500_THEME_V1";
+  const FONT_SIZE_STORAGE_KEY = "ILHAMMAN_3500_FONT_SIZE_V1";
+
+  const starterMarkdown = `---
+title: "Kuramlar ve Kategorik Yaklaşımlar"
+date: 2026-08-23
+tags:
+  - klinik-psikoloji-1
+  - kuramlar-ve-kategorik-yaklasimlar
+  - etiyoloji
+  - nosoloji
+  - psikopatoloji
+---
+
+## İçindekiler
+
+- [[#1. Açılış: Neden Başladı ve Nasıl Kutulayacağız?]]
+- [[#2. Bozukluğa Özgü vs. Transdiagnostik: Böl Parçala mı, Büyük Resim mi?]]
+- [[#3. Zihnin 6 Açıklama Kalesi: Etiyoloji Paradigması]]
+  - [[#Biyolojik / Medikal Model (Somatogenez)]]
+  - [[#Psikodinamik Model (Bilinçdışı Çatışmalar)]]
+  - [[#Kognitif-Behavioral Model ve Kanfer SORCK Analizi]]
+  - [[#Hümanist ve Sistemik Yaklaşım]]
+  - [[#Biyopsikososyal Üst Yapı: Zubin & Spring Diatez-Stres Modeli]]
+- [[#4. Nosoloji Krizi: Kategorik Kutular vs. Boyutsal İsyan (HiTOP & RDoC)]]
+- [[#5. Ateoretik Nosoloji Paradoksu: Bilmediğini İtiraf Eden El Kitabı]]
+- [[#Kavramlar ve Kelimeler]]
+- [[#Kaynaklar]]
+
+---
+
+Klinik psikolojinin kapısından içeri girdiğimizde masada iki büyük soru durur:
+1. *"Bu dert neden başladı ve neden bitmiyor?"* ([[Etiyoloji]])
+2. *"Biz bu derdi diğer dertlerden nasıl ayırıp kutulayacağız?"* ([[Nosoloji]])
+
+İlk yazıda (Normal ve Anormal) sınırların nasıl kaygan olduğunu, Kraepelin'in attığı temellerin bugünkü DSM-5 ve ICD-11 bürokrasisine nasıl dönüştüğünü görmüştük. Şimdi ise daha derin bir bataklığa giriyoruz: Kuramlar savaşı.
+
+`;
+
+  const textarea = document.getElementById("editor-textarea");
+  const scratchpad = document.getElementById("scratchpad-textarea");
+  const saveStatus = document.getElementById("save-status");
+  const statWords = document.getElementById("stat-words");
+  const themeSelector = document.getElementById("theme-selector");
+  const fontIndicator = document.getElementById("font-indicator");
+
+  let currentFontSize = 16;
+
+  // Load Saved Content, Theme & Font
+  function init() {
+    // Theme
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || "karargah";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    themeSelector.value = savedTheme;
+
+    // Font Size
+    const savedFontSize = localStorage.getItem(FONT_SIZE_STORAGE_KEY);
+    if (savedFontSize) {
+      currentFontSize = parseInt(savedFontSize, 10);
+      textarea.style.fontSize = currentFontSize + "px";
+      fontIndicator.textContent = `Literata (${currentFontSize}px) • ZHB Luzern`;
+    }
+
+    // Editor Text
+    const savedText = localStorage.getItem(PERMANENT_STORAGE_KEY);
+    if (savedText && savedText.trim().length > 20) {
+      textarea.value = savedText;
+    } else {
+      textarea.value = starterMarkdown;
+    }
+
+    // Scratchpad Text
+    const savedScratch = localStorage.getItem(SCRATCHPAD_STORAGE_KEY);
+    if (savedScratch) scratchpad.value = savedScratch;
+
+    updateStats();
+  }
+
+  // Update Stats & Auto Save
+  function updateStats() {
+    const text = textarea.value;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const chars = text.length;
+    statWords.textContent = `${words} kelime | ${chars} karakter`;
+
+    localStorage.setItem(PERMANENT_STORAGE_KEY, text);
+    const now = new Date().toLocaleTimeString();
+    saveStatus.textContent = `● Otomatik Kaydedildi (${now})`;
+  }
+
+  textarea.addEventListener("input", updateStats);
+  scratchpad.addEventListener("input", () => {
+    localStorage.setItem(SCRATCHPAD_STORAGE_KEY, scratchpad.value);
+  });
+
+  // Change Theme
+  function changeTheme(themeName) {
+    document.documentElement.setAttribute("data-theme", themeName);
+    localStorage.setItem(THEME_STORAGE_KEY, themeName);
+  }
+
+  // Font Size Adjuster
+  function adjustFontSize(delta) {
+    currentFontSize = Math.max(12, Math.min(26, currentFontSize + delta));
+    textarea.style.fontSize = currentFontSize + "px";
+    fontIndicator.textContent = `Literata (${currentFontSize}px) • ZHB Luzern`;
+    localStorage.setItem(FONT_SIZE_STORAGE_KEY, currentFontSize);
+  }
+
+  // Insert Snippets
+  function insertSnippet(before, after = '') {
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const sel = textarea.value.substring(start, end);
+    const replace = before + sel + after;
+    textarea.value = textarea.value.substring(0, start) + replace + textarea.value.substring(end);
+    textarea.focus();
+    textarea.selectionEnd = start + replace.length;
+    updateStats();
+  }
+
+  function insertTable() {
+    const table = `\n| Boyut / Kriter | Kategorik (DSM-5/ICD-11) | Boyutsal (HiTOP/RDoC) |\n| :--- | :--- | :--- |\n| **Temel Mantık** | Niteliksel (Var / Yok) | Niceliksel (Az / Çok) |\n| **Klinik Güç** | Kolay iletişim & fatura | Gerçekçi & sıfır komorbidite |\n| **Zayıflık** | NOS havuzu & etiketleme | Karmaşık uygulama |\n\n`;
+    insertSnippet(table);
+  }
+
+  // Right Panel Tabs
+  function switchRightTab(tabName) {
+    document.querySelectorAll('.view-pane').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.view-tab-btn').forEach(el => el.classList.remove('active'));
+
+    document.getElementById('pane-' + tabName).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+  // Load Custom PDF
+  function loadCustomPDF(input) {
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const fileURL = URL.createObjectURL(file);
+      
+      // Determine which iframe to load into or switch to book pane
+      const bookIframe = document.getElementById("book-iframe");
+      bookIframe.src = fileURL;
+      
+      // Switch tab to book pane
+      document.querySelectorAll('.view-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.view-tab-btn').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById('pane-book').classList.add('active');
+      document.querySelectorAll('.view-tab-btn')[1].classList.add('active');
+      document.querySelectorAll('.view-tab-btn')[1].textContent = `📖 ${file.name.substring(0, 16)}...`;
+    }
+  }
+
+  // Zen Mode Toggle
+  function toggleZenMode() {
+    const container = document.getElementById("split-container");
+    container.classList.toggle("zen-mode");
+    const isZen = container.classList.contains("zen-mode");
+    document.getElementById("zen-btn").textContent = isZen ? "📖 Paneli Göster" : "⚡ Zen Modu";
+  }
+
+  // Recovery Engine
+  function recoverFromStorage() {
+    let longestKey = null;
+    let longestVal = "";
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      const val = localStorage.getItem(k) || "";
+      if (val.length > longestVal.length) {
+        longestVal = val;
+        longestKey = k;
+      }
+    }
+    if (longestVal && confirm(`En uzun kaydedilmiş taslak (${longestVal.length} karakter - ${longestKey}) geri yüklensin mi?`)) {
+      textarea.value = longestVal;
+      updateStats();
+      alert("Taslak başarıyla geri yüklendi!");
+    }
+  }
+
+  // Export .md
+  function exportMarkdown() {
+    const blob = new Blob([textarea.value], { type: "text/markdown;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "Kuramlar ve Kategorik Yaklaşımlar.md";
+    a.click();
+  }
+
+  // Copy Editor Text
+  function copyEditorText() {
+    navigator.clipboard.writeText(textarea.value).then(() => {
+      alert("Makale taslağı panoya kopyalandı!");
+    });
+  }
+
+  // Copy Master Prompt
+  function copyMasterPromptText() {
+    const text = document.getElementById("prompt-pre").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Master LLM Promptu panoya kopyalandı!");
+    });
+  }
+
+  // ==========================================================================
+  // LLM READER & MATTE HIGHLIGHTING ENGINE
+  // ==========================================================================
+  const LLM_RAW_STORAGE_KEY = "ILHAMMAN_3500_LLM_RAW_V1";
+  const LLM_HTML_STORAGE_KEY = "ILHAMMAN_3500_LLM_HTML_V1";
+
+  const llmRawInput = document.getElementById("llm-raw-input");
+  const llmRenderedView = document.getElementById("llm-rendered-view");
+  const llmToggleEditBtn = document.getElementById("llm-toggle-edit-btn");
+
+  function initLLMReader() {
+    const savedHTML = localStorage.getItem(LLM_HTML_STORAGE_KEY);
+    const savedRaw = localStorage.getItem(LLM_RAW_STORAGE_KEY);
+    if (savedRaw) llmRawInput.value = savedRaw;
+    if (savedHTML && savedHTML.trim().length > 10) {
+      llmRenderedView.innerHTML = savedHTML;
+    } else if (savedRaw && savedRaw.trim().length > 10) {
+      renderLLMMarkdown(savedRaw);
+    }
+  }
+
+  function parseMarkdownToHTML(md) {
+    if (!md) return "";
+    let html = md
+      // Escape HTML tags slightly
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      // Headers
+      .replace(/^### (.*$)/gim, '<h3 style="color:var(--accent); font-size:1.15em; margin:16px 0 8px 0; border-bottom:1px solid var(--border-color); padding-bottom:4px;">$1</h3>')
+      .replace(/^## (.*$)/gim, '<h2 style="color:var(--accent-secondary); font-size:1.3em; margin:20px 0 10px 0; border-bottom:2px solid var(--border-color); padding-bottom:4px;">$1</h2>')
+      .replace(/^# (.*$)/gim, '<h1 style="color:var(--accent); font-size:1.5em; margin:24px 0 12px 0;">$1</h1>')
+      // Blockquotes / Callouts
+      .replace(/^\> \[\!(.*?)\] (.*$)/gim, '<div style="background:var(--code-bg); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; border-radius:4px;"><strong style="color:var(--accent); text-transform:uppercase; font-size:11px;">$1</strong><br>$2</div>')
+      .replace(/^\> (.*$)/gim, '<blockquote style="border-left:3px solid var(--border-highlight); padding:6px 12px; margin:10px 0; color:var(--text-muted); font-style:italic;">$1</blockquote>')
+      // Bold & Italic
+      .replace(/\*\*(.*?)\*\*/gim, '<strong style="color:var(--text-main); font-weight:700;">$1</strong>')
+      .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+      // Code blocks
+      .replace(/```([\s\S]*?)```/gim, '<pre style="background:var(--code-bg); padding:10px 12px; border-radius:5px; font-family:var(--mono-font); font-size:12px; overflow-x:auto; margin:10px 0;">$1</pre>')
+      .replace(/`([^`]+)`/gim, '<code style="background:var(--code-bg); padding:2px 5px; border-radius:3px; font-family:var(--mono-font); font-size:12px; color:var(--accent);">$1</code>')
+      // Bullet list items
+      .replace(/^\- (.*$)/gim, '<li style="margin-left:20px; margin-bottom:4px;">$1</li>')
+      // Horizontal rules
+      .replace(/^---$/gim, '<hr style="border:none; border-top:1px solid var(--border-color); margin:18px 0;">')
+      // Paragraph linebreaks
+      .replace(/\n\n+/g, '</p><p style="margin-bottom:12px;">')
+      .replace(/\n/g, '<br>');
+
+    return '<p style="margin-bottom:12px;">' + html + '</p>';
+  }
+
+  function renderLLMMarkdown(rawText) {
+    const html = parseMarkdownToHTML(rawText);
+    llmRenderedView.innerHTML = html;
+    saveLLMRenderedContent();
+  }
+
+  function onLLMRawInput() {
+    localStorage.setItem(LLM_RAW_STORAGE_KEY, llmRawInput.value);
+    renderLLMMarkdown(llmRawInput.value);
+  }
+
+  function saveLLMRenderedContent() {
+    localStorage.setItem(LLM_HTML_STORAGE_KEY, llmRenderedView.innerHTML);
+  }
+
+  function toggleLLMEditMode() {
+    if (llmRawInput.style.display === "none") {
+      llmRawInput.style.display = "block";
+      llmRenderedView.style.display = "none";
+      llmToggleEditBtn.textContent = "👁️ Görsel Okuma Modu";
+      llmRawInput.focus();
+    } else {
+      llmRawInput.style.display = "none";
+      llmRenderedView.style.display = "block";
+      llmToggleEditBtn.textContent = "✏️ Ham Markdown Düzenle";
+      renderLLMMarkdown(llmRawInput.value);
+    }
+  }
+
+  function pasteFromClipboardToLLM() {
+    navigator.clipboard.readText().then(text => {
+      if (!text || text.trim().length === 0) {
+        alert("Pano boş görünüyor kankam!");
+        return;
+      }
+      llmRawInput.value = text;
+      localStorage.setItem(LLM_RAW_STORAGE_KEY, text);
+      renderLLMMarkdown(text);
+      llmRawInput.style.display = "none";
+      llmRenderedView.style.display = "block";
+      llmToggleEditBtn.textContent = "✏️ Ham Markdown Düzenle";
+    }).catch(err => {
+      // Fallback: switch to edit mode
+      toggleLLMEditMode();
+      alert("Panoya doğrudan erişilemedi. Lütfen Cmd+V / Ctrl+V ile metin alanına yapıştır.");
+    });
+  }
+
+  function clearLLMReader() {
+    if (confirm("LLM okuma alanını ve vurgularını temizlemek istiyor musun?")) {
+      llmRawInput.value = "";
+      llmRenderedView.innerHTML = `
+        <div style="text-align:center; padding:40px 20px; color:var(--text-muted); font-family:var(--ui-font);">
+          <div style="font-size:32px; margin-bottom:10px;">🤖</div>
+          <div style="font-size:14px; font-weight:600; margin-bottom:6px;">LLM Çıktı Okuma Alanı Boş</div>
+          <div style="font-size:12px;">Yukarıdaki <strong>"📋 Panodan Yapıştır &amp; Oku"</strong> butonuna bas veya doğrudan metin yapıştır.</div>
+        </div>`;
+      localStorage.removeItem(LLM_RAW_STORAGE_KEY);
+      localStorage.removeItem(LLM_HTML_STORAGE_KEY);
+    }
+  }
+
+  // Matte Highlighter Logic
+  function applyMatteHighlight(color) {
+    const sel = window.getSelection();
+    if (!sel || sel.rangeCount === 0 || sel.isCollapsed) {
+      alert("Lütfen önce vurgulamak istediğin kelimeleri veya cümleyi fareyle seç kankam.");
+      return;
+    }
+    const range = sel.getRangeAt(0);
+    
+    // Check if inside LLM view
+    if (!llmRenderedView.contains(range.commonAncestorContainer)) {
+      alert("Lütfen sadece LLM Okuyucu paneli içindeki metinleri seç.");
+      return;
+    }
+
+    const mark = document.createElement("mark");
+    mark.style.backgroundColor = color;
+    mark.style.borderRadius = "3px";
+    mark.style.padding = "1px 3px";
+    mark.style.color = "inherit";
+    mark.style.boxDecorationBreak = "clone";
+    mark.style.webkitBoxDecorationBreak = "clone";
+
+    try {
+      range.surroundContents(mark);
+    } catch (e) {
+      // Complex multi-node selection fallback
+      document.execCommand("hiliteColor", false, color);
+    }
+    sel.removeAllRanges();
+    saveLLMRenderedContent();
+  }
+
+  function removeMatteHighlight() {
+    const sel = window.getSelection();
+    if (!sel || sel.rangeCount === 0 || sel.isCollapsed) {
+      alert("Vurgusunu kaldırmak istediğin alanı seç.");
+      return;
+    }
+    document.execCommand("removeFormat", false, null);
+    document.execCommand("hiliteColor", false, "transparent");
+    saveLLMRenderedContent();
+  }
+
+  function insertSelectedLLMToEditor() {
+    const sel = window.getSelection();
+    let textToInsert = "";
+    if (sel && !sel.isCollapsed && llmRenderedView.contains(sel.getRangeAt(0).commonAncestorContainer)) {
+      textToInsert = sel.toString();
+    } else {
+      textToInsert = llmRawInput.value || llmRenderedView.innerText;
+    }
+    if (textToInsert && textToInsert.trim().length > 0) {
+      insertSnippet("\n\n" + textToInsert.trim() + "\n\n");
+      alert("Metin sol taraftaki yazı masasına aktarıldı!");
+    } else {
+      alert("Aktarılacak metin bulunamadı.");
+    }
+  }
+
+  // Init LLM Reader on start
+  initLLMReader();
+  init();
+</script>
+</body>
+</html>

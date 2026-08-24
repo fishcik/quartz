@@ -71,10 +71,10 @@ Bu bilgiler aslında eskiden de sezgisel düzeyde vardı. Sistematikleşmesi ve 
 Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 
 > [!abstract] Biyomedikal ve Biyopsikososyal Sağlık Modelleri Karşılaştırması
-> <div class="sc-diag-author"><a href="https://doi.org/10.1126/science.847460" target="_blank" rel="noopener noreferrer">(Engel, 1977)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1126/science.847460" target="_blank" rel="noopener noreferrer">(Engel, 1977)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <rect x="15" y="20" width="265" height="240" rx="8" fill="rgba(138, 130, 117, 0.05)" stroke="#8a8275" stroke-width="1.3"/>
 >   <text x="147" y="46" fill="#8a8275" font-family="var(--bodyFont)" font-size="11.5" font-weight="bold" text-anchor="middle">1. Geleneksel Biyomedikal Model</text>
 >   <rect x="35" y="65" width="225" height="36" rx="4" fill="rgba(200, 16, 46, 0.08)" stroke="#C8102E" stroke-width="1.5"/>
@@ -110,7 +110,7 @@ Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 >
 > *Hastalık ve iyilik halinin yalnızca tek yönlü hücresel bir arızadan ibaret olmadığını; biyoloji, psikolojik süreçler ve sosyal bağlamın karşılıklı kesişiminde dinamik olarak belirlendiğini modeller.*
 >
-> *Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196(4286), 129–136. https://doi.org/10.1126/science.847460*
+> <div class="sc-gfx-source">Engel, G. L. (1977). The need for a new medical model: A challenge for biomedicine. Science, 196(4286), 129–136. https://doi.org/10.1126/science.847460</div>
 
 ---
 

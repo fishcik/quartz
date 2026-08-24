@@ -362,10 +362,14 @@ function ensure(){
       if(typeof window.scOpenGlossary==='function') window.scOpenGlossary();
       else if(typeof scOpenGlossary==='function') scOpenGlossary();
     });
-    // Focus
-    var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus';bf.setAttribute('aria-label','Fokus');
+    // Focus & Bionic Reading
+    var bf=document.createElement('button');bf.type='button';bf.className='sc-toolbtn sc-focusbtn';bf.title='Fokus & Bionic Okuma';bf.setAttribute('aria-label','Fokus & Bionic Okuma');
     bf.innerHTML='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
-    bf.addEventListener('click',function(){document.body.classList.toggle('is-focus');this.classList.toggle('sc-active');});
+    bf.addEventListener('click',function(){
+      this.classList.toggle('sc-active');
+      if(typeof window.scToggleBionicReading==='function') window.scToggleBionicReading();
+      else if(typeof scToggleBionicReading==='function') scToggleBionicReading();
+    });
     // Geri (tarayıcı geçmişi)
     var bb=document.createElement('button');bb.type='button';bb.className='sc-toolbtn sc-backbtn';bb.title='Geri';bb.setAttribute('aria-label','Geri');
     bb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
@@ -1765,8 +1769,8 @@ function scInitDiagramModal(){
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'sc-diag-zoom-btn';
-    btn.innerHTML = '🔍 İncele';
-    btn.title = 'Tam Ekran Görünüm (Çift Tıklama)';
+    btn.innerHTML = 'İncele';
+    btn.title = 'Tam Ekran Görünüm (Tek Tıklama)';
     btn.addEventListener('click', function(e){
       e.preventDefault();
       e.stopPropagation();
@@ -1776,7 +1780,8 @@ function scInitDiagramModal(){
     });
     wrap.appendChild(btn);
 
-    wrap.addEventListener('dblclick', function(e){
+    wrap.addEventListener('click', function(e){
+      if(e.target.closest('a, button, input, label')) return;
       var targetSvg = scFindDiagramSvg(wrap);
       if(targetSvg){
         e.preventDefault();
@@ -1818,15 +1823,160 @@ function scCloseDiagramModal(){
   document.body.classList.remove('sc-modal-open');
 }
 
+// ─── BIONIC READING MOTORU ──────────────────────────────────────────
+function scToggleBionicReading(){
+  var isFocus = document.body.classList.toggle('is-focus');
+  var isBionic = document.body.classList.toggle('is-bionic');
+  try { localStorage.setItem('sc_bionic', isBionic ? '1' : '0'); } catch(e){}
+
+  var targets = document.querySelectorAll('article p, article li, article blockquote');
+  targets.forEach(function(el){
+    if(isBionic){
+      if(!el.getAttribute('data-sc-orig-html')){
+        el.setAttribute('data-sc-orig-html', el.innerHTML);
+      }
+      scApplyBionicToTextNodes(el);
+    } else {
+      var orig = el.getAttribute('data-sc-orig-html');
+      if(orig){
+        el.innerHTML = orig;
+        el.removeAttribute('data-sc-orig-html');
+      }
+    }
+  });
+}
+window.scToggleBionicReading = scToggleBionicReading;
+
+function scApplyBionicToTextNodes(node){
+  if(node.nodeType === Node.TEXT_NODE){
+    var text = node.nodeValue;
+    if(!text || !text.trim()) return;
+    var span = document.createElement('span');
+    span.className = 'sc-bionic-transformed';
+    span.innerHTML = text.replace(/([a-zA-Z0-9çğıöşüÇĞİÖŞÜ]+)/g, function(w){
+      var len = w.length;
+      if(len <= 1) return w;
+      var mid = len <= 3 ? 1 : (len <= 6 ? 2 : Math.ceil(len / 2) - 1);
+      return '<b class="sc-bionic-b">' + w.slice(0, mid) + '</b>' + w.slice(mid);
+    });
+    node.parentNode.replaceChild(span, node);
+  } else if(node.nodeType === Node.ELEMENT_NODE && !node.classList.contains('katex') && !node.classList.contains('sc-gfx-card') && !node.classList.contains('sc-bionic-transformed') && !node.classList.contains('sc-sdt-simulator')){
+    Array.from(node.childNodes).forEach(scApplyBionicToTextNodes);
+  }
+}
+
+// ─── MEDIUM-ZOOM GÖRSEL MODALI (Tek Tıklama) ─────────────────────────
+function scInitMediaZoom(){
+  var mm = document.getElementById('sc-media-modal');
+  if(!mm){
+    mm = document.createElement('div');
+    mm.id = 'sc-media-modal';
+    mm.className = 'sc-media-modal';
+    mm.innerHTML = '<img id="sc-media-modal-img" src="" alt=""><div id="sc-media-modal-cap" style="position:absolute;bottom:20px;color:#ece7dd;font-style:italic;font-size:0.9rem;text-align:center;"></div>';
+    document.body.appendChild(mm);
+
+    mm.addEventListener('click', function(){
+      mm.classList.remove('sc-active');
+      document.body.classList.remove('sc-modal-open');
+    });
+  }
+
+  document.querySelectorAll('article figure, article .sc-media-frame, article img').forEach(function(imgEl){
+    if(imgEl.getAttribute('data-sc-zoom-ready')) return;
+    if(imgEl.tagName === 'IMG' && imgEl.closest('figure, .sc-media-frame, .sc-toolbtn, #sc-clock, .callout')) return;
+    imgEl.setAttribute('data-sc-zoom-ready', '1');
+
+    var actualImg = imgEl.tagName === 'IMG' ? imgEl : imgEl.querySelector('img');
+    if(!actualImg) return;
+
+    imgEl.style.cursor = 'zoom-in';
+    imgEl.addEventListener('click', function(e){
+      if(e.target.closest('a, button')) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var modalImg = mm.querySelector('#sc-media-modal-img');
+      var modalCap = mm.querySelector('#sc-media-modal-cap');
+      if(modalImg){
+        modalImg.src = actualImg.src;
+        modalImg.alt = actualImg.alt || '';
+      }
+      var captionText = (imgEl.querySelector('figcaption, figcaption span') || {}).textContent || actualImg.alt || '';
+      if(modalCap) modalCap.textContent = captionText;
+      mm.classList.add('sc-active');
+      document.body.classList.add('sc-modal-open');
+    });
+  });
+}
+
+// ─── CANLI SDT (Sinyal Algılama) SİMÜLATÖRÜ ─────────────────────────
+function scInitSdtSimulator(){
+  var sim = document.getElementById('sc-sdt-sim');
+  if(!sim) return;
+
+  var slDprime = sim.querySelector('#sdt-dprime');
+  var slBeta = sim.querySelector('#sdt-beta');
+  var vDprime = sim.querySelector('#val-dprime');
+  var vBeta = sim.querySelector('#val-beta');
+  var vCritName = sim.querySelector('#val-crit-name');
+
+  var pHit = sim.querySelector('#sdt-pct-hit');
+  var pFa = sim.querySelector('#sdt-pct-fa');
+  var pMiss = sim.querySelector('#sdt-pct-miss');
+  var pCr = sim.querySelector('#sdt-pct-cr');
+
+  // Approximation of Normal CDF
+  function phi(x){
+    var a1 =  0.254829592, a2 = -0.284496736, a3 =  1.421413741;
+    var a4 = -1.453152027, a5 =  1.061405429, p  =  0.3275911;
+    var sign = x < 0 ? -1 : 1;
+    x = Math.abs(x) / Math.sqrt(2.0);
+    var t = 1.0 / (1.0 + p * x);
+    var y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+    return 0.5 * (1.0 + sign * y);
+  }
+
+  function updateSdt(){
+    var d = parseFloat(slDprime.value);
+    var c = parseFloat(slBeta.value);
+
+    if(vDprime) vDprime.textContent = d.toFixed(1);
+    if(vBeta) vBeta.textContent = c.toFixed(1);
+
+    if(vCritName){
+      if(c < -0.4) vCritName.textContent = 'Mülayim / Serbest (Her şeye "Evet")';
+      else if(c > 0.4) vCritName.textContent = 'Kevser / Tutucu (Kasıntı / "Hayır")';
+      else vCritName.textContent = 'Nötr / Rasyonel';
+    }
+
+    var hitRate = phi(d / 2 - c);
+    var faRate = phi(-d / 2 - c);
+    var missRate = 1 - hitRate;
+    var crRate = 1 - faRate;
+
+    if(pHit) pHit.textContent = '%' + Math.round(hitRate * 100);
+    if(pFa) pFa.textContent = '%' + Math.round(faRate * 100);
+    if(pMiss) pMiss.textContent = '%' + Math.round(missRate * 100);
+    if(pCr) pCr.textContent = '%' + Math.round(crRate * 100);
+  }
+
+  if(slDprime) slDprime.addEventListener('input', updateSdt);
+  if(slBeta) slBeta.addEventListener('input', updateSdt);
+  updateSdt();
+}
+
 document.addEventListener('keydown', function(e){
   if(e.key === 'Escape' || e.key === 'Esc'){
     scCloseGlossary();
     scCloseDiagramModal();
+    var mm = document.getElementById('sc-media-modal');
+    if(mm) mm.classList.remove('sc-active');
   }
 });
 
   scInitAccordions();
   scInitDiagramModal();
+  scInitMediaZoom();
+  scInitSdtSimulator();
   scCardTilt();
   scSerpentHr();
   scArticleGlyph();

@@ -1,0 +1,253 @@
+// ================================================
+//  sayko-gfx.scss — Unified GFX & Scientific Visualization Engine
+//  Distill.pub Standards, Hover Citations, SDT Simulators & Media Frames
+// ================================================
+
+// ── 1. Unified Diagram Framework ─────────────────
+.sc-gfx-author {
+  text-align: center;
+  margin-top: -0.2rem;
+  margin-bottom: 0.6rem;
+
+  a.sc-gfx-link {
+    color: #C8102E !important;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--bordo-h) !important;
+      text-decoration: underline;
+    }
+
+    &::after {
+      display: none !important; // Kesinlikle harici popout ikonu görünmez
+    }
+  }
+}
+
+.sc-gfx-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.6rem 0 0.8rem 0;
+  width: 100%;
+
+  svg {
+    max-width: 640px;
+    height: auto;
+    border-radius: 6px;
+    background: transparent;
+  }
+}
+
+// Hover ile Beliren APA 7 Kaynakçası (Fade-in on Hover)
+.sc-gfx-source {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  font-size: 0.80rem;
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--gray);
+  text-align: center;
+  margin-top: 0.8rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed var(--lightgray);
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+.callout[data-callout="abstract"]:hover .sc-gfx-source,
+.sc-sdt-simulator:hover .sc-gfx-source,
+.sc-media-frame:hover .sc-gfx-source {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+
+// ── 2. Canlı Deney Simülatörü (SDT) ───────────────
+.sc-sdt-simulator {
+  border: 1px solid var(--br);
+  border-radius: 8px;
+  padding: 1.4rem;
+  background: var(--bg-2);
+  margin: 2.2rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+
+  .sc-sdt-header {
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .sc-sdt-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+  }
+
+  .sc-sdt-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+    margin-bottom: 1.4rem;
+
+    @media (max-width: 680px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sc-sdt-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: #C8102E;
+      cursor: pointer;
+    }
+
+    .sc-sdt-hint {
+      font-size: 0.75rem;
+      color: var(--fg-3);
+      font-style: italic;
+    }
+  }
+
+  .sc-sdt-matrix {
+    margin-top: 1rem;
+  }
+
+  .sc-sdt-matrix-header {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--fg-2);
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+
+  .sc-sdt-matrix-cells {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .sc-sdt-cell {
+    border: 1px solid var(--br);
+    border-radius: 6px;
+    padding: 0.8rem;
+    text-align: center;
+    background: var(--bg);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      border-color: #C8102E;
+      transform: translateY(-1px);
+    }
+
+    .sc-cell-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .sc-cell-pct {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #C8102E;
+      margin: 0.2rem 0;
+    }
+
+    .sc-cell-sub {
+      font-size: 0.75rem;
+      color: var(--fg-3);
+    }
+  }
+}
+
+// ── 3. sayko.ch Medya & Görsel Çerçeve Standardı ───
+.sc-media-frame {
+  max-width: 540px;
+  margin: 2rem auto;
+  text-align: center;
+  background: var(--bg-2);
+  border: 1px solid var(--br);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: zoom-in;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.86rem;
+    color: var(--fg-2);
+    margin-top: 8px;
+    padding: 0 4px;
+  }
+}
+
+// ── 4. Fullscreen Zoom Modal (Tek Tıklama) ─────────
+.sc-media-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 2rem;
+
+  &.sc-active {
+    display: flex;
+  }
+
+  img {
+    max-width: 90vw;
+    max-height: 86vh;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+  }
+}
+
+// ── 5. Bionic Reading Tipografisi ─────────────────
+b.sc-bionic-b {
+  font-weight: 750 !important;
+  color: inherit !important;
+}
+
+body.is-focus {
+  article {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+}

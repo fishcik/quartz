@@ -35,10 +35,10 @@ Karar anı laboratuvardaki gibi rasyonel bir tartımla değil; partner baskısı
 Birey alkol veya tutku anında uzun vadeli enfeksiyon risklerini tamamen unutur ve sadece anlık haz ipuçlarına odaklanır. Bu yüzden salt risk bilgisi veren geleneksel modeller tek başına korunma davranışını üretmekte yetersiz kalır.
 
 > [!abstract] IMB (Bilgi-Motivasyon-Davranışsal Beceriler) Korunma Modeli
-> <div class="sc-diag-author"><a href="https://doi.org/10.1037/0033-2909.111.3.455" target="_blank" rel="noopener noreferrer">(Fisher &amp; Fisher, 1992, 2000)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1037/0033-2909.111.3.455" target="_blank" rel="noopener noreferrer">(Fisher &amp; Fisher, 1992, 2000)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <rect x="15" y="25" width="180" height="75" rx="6" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.5"/>
 >   <text x="105" y="52" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">1. Bilgi (Information)</text>
 >   <text x="105" y="72" fill="var(--dark)" font-family="var(--bodyFont)" font-size="9" text-anchor="middle">CYBE Bulaş Yolları &amp;</text>
@@ -75,7 +75,7 @@ Birey alkol veya tutku anında uzun vadeli enfeksiyon risklerini tamamen unutur 
 >
 > *Kondom kullanımının sadece risk bilgisiyle değil; partnerle müzakere edebilme ve anlık spontanite baskısına direnme gibi kritik davranışsal becerilerle eyleme dönüştüğünü modeller.*
 >
-> *Fisher, J. D., &amp; Fisher, W. A. (1992). Changing AIDS-risk behavior. Psychological Bulletin, 111(3), 455–474. https://doi.org/10.1037/0033-2909.111.3.455*
+> <div class="sc-gfx-source">Fisher, J. D., &amp; Fisher, W. A. (1992). Changing AIDS-risk behavior. Psychological Bulletin, 111(3), 455–474. https://doi.org/10.1037/0033-2909.111.3.455</div>
 
 ---
 

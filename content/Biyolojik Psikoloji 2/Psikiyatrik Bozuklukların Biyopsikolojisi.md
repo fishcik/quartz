@@ -5,4 +5,3 @@ tags:
   - biyolojik-psikoloji-2
   - psikiyatrik-bozukluklarin-biyopsikolojisi
 ---
-

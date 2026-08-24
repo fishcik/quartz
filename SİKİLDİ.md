@@ -1,4 +1,4 @@
-# 🏛️ SİKİLDİ.md — `sayko.ch` Evrensel İçerik, Tipografi, Felsefe ve Bilimsel Görselleştirme Anayasası
+#  SİKİLDİ.md — `sayko.ch` Evrensel İçerik, Tipografi, Felsefe ve Bilimsel Görselleştirme Anayasası
 
 > **"Psikoloji: Kitapta durduğu gibi durmaz. Teori biter, maruz kalma başlar."**
 
@@ -6,7 +6,7 @@ Bu anayasa; `sayko.ch` üzerindeki tüm makalelerin metin formatını, edebi/ser
 
 ---
 
-## 📑 İçindekiler
+##  İçindekiler
 
 - [[#1. DOKUNULMAZ ALAN — Yazının Sesi ve Ruhu]]
 - [[#2. Felsefi Temeller: Karpathy Sadeliği & Kepano Dayanıklılığı]]
@@ -38,18 +38,33 @@ Bu anayasa; `sayko.ch` üzerindeki tüm makalelerin metin formatını, edebi/ser
 
 ---
 
-## 1. DOKUNULMAZ ALAN — Yazının Sesi ve Ruhu
+## 1. DOKUNULMAZ ALAN — Yazının Sesi, Ruhu ve Bütünlüğü
 
-Formatlama yapılırken metnin **özüne, üslubuna, edebi ritmine ve sesine kesinlikle müdahale edilmez:**
+> [!danger] KESİN VE TAVİZSİZ YASA: SIFIR SİLME & SIFIR YENİDEN YAZIM
+> Asistan bir **YAZAR VEYA EDİTÖR DEĞİLDİR; YALNIZCA BİR DİZGİCİDİR (TYPESETTER / COMPILER)**. Yazarın metni bitmiş, kutsal ve dokunulmaz bir edebiyattır.
+> 
+> **Aşağıdaki eylemler KESİNLİKLE VE İSTİSNASIZ YASAKTIR:**
+> 1.  **ASLA BLOK / PARAGRAF / HİKAYE / CÜMLE SİLİNEMEZ:** Metni "kartlara sığdırmak", "3 sütuna bölmek" ya da "özetlemek" bahanesiyle yazarın yazdığı tek bir paragraf, analoji, hikaye, argo, espri veya exkurs ASLA kesilemez, atılamaz veya özetlenemez.
+> 2.  **ASLA YENİDEN YAZILAMAZ (NO RE-WRITING / NO PARAPHRASING):** Yazarın cümleleri "daha derli toplu olsun", "daha akıcı olsun" veya "yapay zekâ formatına uysun" diye baştan kurulamaz, sentetik jenerik metinlerle değiştirilemez.
+> 3.  **ARAYA YAPAY AÇIKLAMA SIKIŞTIRILAMAZ:** Yazarın anlatmadığı hiçbir şey "bağlam kuruyorum" denilerek metnin arasına enjekte edilemez.
 
-- **Noktalama Özgürlüğü:** `......`, `—`, virgülsüz akış, kesik cümleler — hepsi kasıtlıdır; düzeltilmez.
-- **Kelime Seçimi ve Söz Dizimi:** Sokak dili, akademik kaymalar, "tabi", "bi", "yani:", "lan", "genco", "fiyasko", "bomba" gibi samimi, sert ve otantik ifadeler aynen korunur.
-- **Cümle ve Paragraf Yapısı:** Yazar nerede nefes almış, nerede bölmüşse orada kalır. Cümleler yapay olarak birleştirilmez veya bölünmez.
+### 1.1 Metnin Dokunulmaz Unsurları
+Formatlama yapılırken metnin **özüne, kelimelerine, üslubuna, edebi ritmine ve sesine harfi harfine sadık kalınır:**
+
+- **Tam Metin Bütünlüğü:** Yazar 6.000 kelime verdiyse, çıktı en az 6.000 kelime olmak zorundadır. Kelime sayısını düşüren her formatlama denemesi **doğrudan sistem hatası ve kural ihlalidir**.
+- **Noktalama Özgürlüğü:** `......`, `—`, virgülsüz akış, kesik cümleler — hepsi yazarın kasıtlı edebi tercihidir; düzeltilmez.
+- **Kelime Seçimi ve Söz Dizimi:** Sokak dili, akademik kaymalar, "tabi", "bi", "yani:", "lan", "genco", "fiyasko", "bomba", "amına koyim" gibi samimi, sert ve otantik ifadeler harfi harfine korunur.
+- **Cümle ve Paragraf Yapısı:** Yazar nerede nefes almış, nerede satır başı yapmışsa orada kalır. Paragraflar yapay olarak birleştirilmez veya bölünmez.
 - **Mevcut Vurgular:** Yazarın koyduğu `==highlight==`, `*italik*` veya `**bold**` dengelerine dokunulmaz.
-- **Sadece Sentaks Temizliği:** Hatalı veya yapışık yazılan Markdown kodları düzeltilir (Örn: `ben**bugün**` yerine `ben **bugün**`).
+- **Sadece Sentaks Temizliği:** Yalnızca hatalı veya Markdown'ı kıran sentakslar temizlenir (Örn: `ben**bugün**` yerine `ben **bugün**`).
 
-> [!danger] Altın Kural
-> Eğer bir değişiklik yazının içeriğine, tona, söz dizimine veya kelime seçimine dokunuyorsa **ASLA YAPILMAZ**. Sadece formatlama, linkleme, kavramlaştırma ve görsel modelleme yapılır.
+### 1.2 Asistanın Yetki Sınırı (Sadece Dizgi ve Altyapı)
+Asistanın görevi yazarın metnini değiştirmek değil, metnin **etrafındaki** teknik altyapıyı kurmaktır:
+1. Frontmatter eklemek (başlık, tarih, etiketler).
+2. Metin başlıklarını TOC ile eşleştirmek.
+3. K&K dipnotlarını (`[^kavram]`) yazarın metnindeki ilgili kelimelere iliştirmek ve tanımları en alta eklemek.
+4. Kaynakçayı APA 7 standardında metnin en sonuna bağlamak.
+5. Varsa istenen görseli metnin akışını bozmadan doğru konuma iliştirmek.
 
 ---
 
@@ -249,24 +264,33 @@ Her model ve wild card için benzersiz alfanümerik kod kullanılır:
 
 ---
 
-### 11.5 Standart Callout Anatomisi
+### 11.5 Standart Callout & Distill.pub Figür Anatomisi
 
-Her model `> [!abstract]` çağrı kutusu içinde, başlıksız emojisiz, ortalı yazar-yıl künyesiyle ve alt açıklamasıyla çerçevelenir:
+Her model `> [!abstract]` çağrı kutusu içinde, başlıksız ve emojisiz, ortalı yazar-yıl künyesiyle ve **yalnızca hover ile beliren** alt kaynakçasıyla çerçevelenir:
+
+- **Başlık Altı Kaynak Linki:** `<div class="sc-gfx-author"><a href="..." class="sc-gfx-link">(Yazar, Yıl)</a></div>` formatında, düz kırmızı (`#C8102E`) ve tıklanabilir linktir. Harici link ikonu (pop-out oku) CSS ile gizlenir.
+- **Standart Oran:** Tüm vektör çizimler `viewBox="0 0 640 280"` (2:1 oranı) ve `max-width: 640px` standardında render edilir.
+- **Hover ile Beliren APA 7 Künyesi (`fade-in on hover`):** En alttaki tam bibliyografya satırı varsayılan olarak gizlidir (`opacity: 0`). Mouse diyagram kutusunun üzerine geldiğinde yumuşakça görünür (`opacity: 1`).
 
 ```markdown
 > [!abstract] Hedonik Yeme ve Hedef Çatışması Modeli
-> <div class="sc-diag-author"><a href="https://doi.org/10.1037/a0030849" target="_blank" rel="noopener noreferrer">(Stroebe ve ark., 2013)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1037/a0030849" target="_blank" rel="noopener noreferrer">(Stroebe ve ark., 2013)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 260" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <!-- Vektörel SVG Grafiği -->
 > </svg>
 > </div>
 >
 > *Bireyin lezzetli bir yiyecek kokusu aldığında haz hedefinin nasıl anında baskın hale gelip kilo kontrolü hedefini bilişsel olarak devre dışı bıraktığını modeller.*
 >
-> *Stroebe, W., et al. (2013). Why most dieters fail: A goal conflict model. Psychological Review, 120(1), 110–138. https://doi.org/10.1037/a0030849*
+> <div class="sc-gfx-source">Stroebe, W., et al. (2013). Why most dieters fail: A goal conflict model. Psychological Review, 120(1), 110–138. https://doi.org/10.1037/a0030849</div>
 ```
+
+---
+
+### 11.6 Canlı Deney Simülatörleri (Interactive Experiment Simulators)
+SİKİLDİ.md uygulanan yazılarda implementasyonu mümkün ve mantıklı olan canlı deney ve bilişsel simülasyon fırsatları (örneğin SDT duyarlılık $d'$ ve karar kriteri $\beta$ ROC eğrisi, Weber fark eşiği, Kohlrausch adaptasyon kaydırıcısı vb.) tespit edilir, **kullanıcıya önerilir/sorulur** ve onay gelirse tüy gibi hafif D3 / Observable Plot bileşeni olarak yerleştirilir.
 
 ---
 
@@ -283,28 +307,29 @@ Bu kural; kavramsal akış şemalarından (flowcharts) veya soyut Mermaid/SVG ç
 - Sitede kullanılan tüm fotoğraf ve arşiv materyali **Kamu Malı (Public Domain)**, **Creative Commons (CC-BY, CC0)**, **Açık Erişim Bilimsel Literatür** veya **Tarihsel Arşiv (US Gov / NIH / NASA / Wellcome Collection)** statüsünde olmalıdır.
 - Asla telif hakkı ihlali yaratacak stok ajans görselleri veya yapay "AI süsleme" illüstrasyonları kullanılmaz.
 
-### 12.3 Yerel-İlk (Local-First) Depolama Protokolü
+### 12.3 Yerel-İlk (Local-First) Depolama Protokolü & Tek Tıkla Zoom
 - Dış web sitelerindeki kırılgan CDN linkleri (hotlinking) **kesinlikle yasaktır**.
-- İlgili tüm materyal indirilip optimize edilerek doğrudan `quartz/static/img/<kategori_slug>/` dizinine yerleştirilir ve Markdown içine `![Açıklama](/static/img/<kategori_slug>/dosya.ext)` formatıyla gömülür. Böylece 50 yıl sonra bile offline çalışır.
+- İlgili tüm materyal indirilip optimize edilerek doğrudan `quartz/static/img/<kategori_slug>/` dizinine yerleştirilir ve standart figür çerçevesiyle gömülür.
+- Görsellere **tek tıklandığında** Medium-Zoom / sayko.ch modalında tam ekran açılır.
 
 ### 12.4 Bağlamsal Köprü ve İtalik Açıklama İlkesi
-- **Doğrudan Anlatılan Materyaller:** Eğer metin zaten o cihazı/illüzyonu doğrudan konu alıyorsa (örn: Rosenblatt Perceptron'u veya Limulus deneyi), görsel ilgili paragrafın hemen altına şık bir başlıkla yerleştirilir.
-- **Yan Kanıt & Destekleyici Materyaller:** Eğer görsel metin akışında doğrudan kelimesi kelimesine çözümlenmiyorsa, okuyucunun bağlamdan kopmaması için görselin hemen üstüne veya altına *italik tek cümlelik bir bağlama/köprü cümlesi* eklenir:
-  > *Şekil: Hermann ızgarasında kesişim noktalarının neden gri gölgelendiğini açıklayan yanal engelleme dinamikleri.*
+- Görselin hemen altına ne olduğunu açıklayan standart tipografi eklenir:
+  > *Şekil: Limulus polyphemus ommatidia göz yapısı ve yanal engelleme deney düzeneği.*
 
 ---
 
 ## 13. Yasaklı Tasarım Kalıpları (Forbidden Clichés)
 
 Aşağıdaki klişeler Sayko.ch genelinde **KESİNLİKLE YASAKTIR**:
-1. ❌ **Gereksiz Dashboard:** Dashboard gerektirmeyen metne panel/widget sıkıştırmak.
-2. ❌ **Karanlıkta Mor/Neon:** Koyu temada mor/neon parlamalar.
-3. ❌ **İlişkisiz İkon Yığını (Bento Box Cliché):** Alakasız süs emojileri doldurmak.
-4. ❌ **Başlık Üstü Nabız Atan Hap (Biscuit Pill):** Başlık üzerine gereksiz noktalı hap rozetler koymak.
-5. ❌ **Gradient Başlıklar:** Başlık kelimelerine ucuz CSS degrade efektleri basmak.
-6. ❌ **Izgara/Mesh Arka Planlar:** Sayfa arkasına yapay grid çizgileri sermek.
-7. ❌ **İç İçe 3 Kat Kart:** Kart içine kart, onun içine kart koymak.
-8. ❌ **Callout Başlığında Emoji:** `[!abstract] 📜 Model` veya `📊 Grafik` şeklinde emoji kullanmak.
+1. ❌ **EMOJİ KULLANMAK KESİNLİKLE YASAKTIR:** Başlıklarda, callout'larda, listelerde, metinlerde ve görsellerde hiçbir emoji kullanılamaz.
+2. ❌ **Gereksiz Dashboard:** Dashboard gerektirmeyen metne panel/widget sıkıştırmak.
+3. ❌ **Karanlıkta Mor/Neon:** Koyu temada mor/neon parlamalar.
+4. ❌ **İlişkisiz İkon Yığını (Bento Box Cliché):** Alakasız süs ikonları doldurmak.
+5. ❌ **Başlık Üstü Nabız Atan Hap (Biscuit Pill):** Başlık üzerine gereksiz noktalı hap rozetler koymak.
+6. ❌ **Gradient Başlıklar:** Başlık kelimelerine ucuz CSS degrade efektleri basmak.
+7. ❌ **Izgara/Mesh Arka Planlar:** Sayfa arkasına yapay grid çizgileri sermek.
+8. ❌ **İç İçe 3 Kat Kart:** Kart içine kart, onun içine kart koymak.
+9. ❌ **Callout Başlığında Emoji / İkon:** `[!abstract] Model` yerine sade `[!abstract] Model Adı` kullanmak.
 
 ---
 
@@ -335,7 +360,7 @@ flowchart TD
 Her makale işlemi bittiğinde kullanıcıya aşağıdaki standart formatta kısa, öz ve net rapor sunulur:
 
 ```markdown
-### 🏛️ SİKİLDİ.md İcraat Raporu: [Makale Adı]
+###  SİKİLDİ.md İcraat Raporu: [Makale Adı]
 
 1. **Yapılan İcraat:** 
    - [Frontmatter, TOC, Wikilinkler, Callout ritmi, MD temizliği özeti]
@@ -344,9 +369,9 @@ Her makale işlemi bittiğinde kullanıcıya aşağıdaki standart formatta kıs
 3. **Üretilen Bilimsel Modeller:**
    - **Model [Kod]:** [Model Adı] — (Kaynak)
    - **Model [Kod]:** [Model Adı] — (Kaynak)
-4. **🃏 Wild Card & Alternatif Öneriler:**
+4. ** Wild Card & Alternatif Öneriler:**
    - **Wild Card [Kod]:** [Serseri/Metaforik Fikir]
-5. **🎯 Hazır Olma Skoru:** `%XX` *(Realist / Akademik / Serseri Gerekçesi)*
+5. ** Hazır Olma Skoru:** `%XX` *(Realist / Akademik / Serseri Gerekçesi)*
 ```
 
 ---

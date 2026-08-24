@@ -5,4 +5,3 @@ tags:
   - bilimsel-çalışma-yöntemleri
   - veri-toplama-yontemleri
 ---
-

@@ -5,4 +5,3 @@ tags:
   - istatistik-1
   - olasilik-kurami-ii
 ---
-

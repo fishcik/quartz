@@ -48,10 +48,10 @@ Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]
 - **Bebekler ve Çocuklar:** Asla doğrudan güneş altında bırakılmamalı; korumada kremden önce giysi ve gölge tercih edilmelidir.
 
 > [!abstract] Güneşten Korunmada Koruma Motivasyonu ve Görünüş Çatışması Modeli
-> <div class="sc-diag-author"><a href="https://doi.org/10.1111/j.1559-1816.1994.tb02363.x" target="_blank" rel="noopener noreferrer">(Prentice-Dunn &amp; Rogers, 1986; Jones &amp; Leary, 1994)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1111/j.1559-1816.1994.tb02363.x" target="_blank" rel="noopener noreferrer">(Prentice-Dunn &amp; Rogers, 1986; Jones &amp; Leary, 1994)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <rect x="220" y="15" width="180" height="38" rx="19" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
 >   <text x="310" y="39" fill="#C8102E" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">UV Radyasyonu &amp; Cilt Tehdidi</text>
 >
@@ -81,7 +81,7 @@ Bu bölümde, [[Sağlık Modelleri; Bilmek Neden Yetmiyor?|sağlık risklerinin]
 >
 > *Güneşten korunma kararının, cilt hasarı korkusu ile bronzlaşmanın getirdiği anlık sosyal/estetik ödül ve kremin zahmeti arasındaki bilişsel çatışmayı nasıl çözdüğünü modeller.*
 >
-> *Jones, J. L., &amp; Leary, M. R. (1994). Effects of health-oriented and appearance-oriented appeals on sunbathing intentions. Journal of Applied Social Psychology, 24(9), 832–846. https://doi.org/10.1111/j.1559-1816.1994.tb02363.x*
+> <div class="sc-gfx-source">Jones, J. L., &amp; Leary, M. R. (1994). Effects of health-oriented and appearance-oriented appeals on sunbathing intentions. Journal of Applied Social Psychology, 24(9), 832–846. https://doi.org/10.1111/j.1559-1816.1994.tb02363.x</div>
 
 ---
 

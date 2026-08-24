@@ -1,29 +1,29 @@
 [
   {
-    "term": "Birincil Koruma (Primary Prevention)",
-    "desc": "Hastalık veya hasar henüz ortaya çıkmadan önce risk faktörlerini ortadan kaldırmayı amaçlayan koruyucu sağlık stratejisi.",
+    "term": "Abstinans / Perhiz (Abstinence)",
+    "desc": "Bağımlılık yaratan bir maddeden veya riskli davranıştan tamamen uzak durma ve sıfır tüketim durumu.",
     "sources": [
       {
-        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+        "title": "Geri Düşüş",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
       }
     ]
   },
   {
-    "term": "Biyomedikal Model (Biomedical Model)",
-    "desc": "Sağlığı salt fiziksel/biyolojik arızaların yokluğu olarak gören, zihinsel ve sosyokültürel dinamikleri dışlayan geleneksel tıp yaklaşımı.",
+    "term": "Abstinans İhlal Etkisi (AVE / Abstinence Violation Effect)",
+    "desc": "Tek bir küçük kaçamağın (lapse) bireyde yarattığı *\"Madem kural bozuldu, battı balık yan gider\"* yıkımı ve kontrol kaybı krizidir.",
     "sources": [
       {
-        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+        "title": "Geri Düşüş",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
       }
     ]
   },
   {
-    "term": "BMI / Beden Kitle İndeksi (Body Mass Index)",
-    "desc": "Vücut ağırlığının boyun karesine bölünmesiyle hesaplanan; 30 üzerinin klinik olarak obezite (adipositas) kabul edildiği ölçüt.",
+    "term": "Adipositas / Klinik Obezite (Obesity)",
+    "desc": "Vücutta sağlığı bozacak ölçüde aşırı yağ dokusu birikimi ile karakterize, BMI $\\ge 30 \\text{ kg/m}^2$ olan kronik metabolik hastalık tablosu.",
     "sources": [
       {
         "title": "Beslenme Psikolojisi",
@@ -33,19 +33,63 @@
     ]
   },
   {
-    "term": "Boyutsal Yaklaşım (Dimensional Approach)",
-    "desc": "Psikolojik durumları katı 'sağlıklı / hasta' kategorileri yerine sürekli bir spektrum ve şiddet ekseninde ele alan klinik model.",
+    "term": "Akomodasyon (Accommodation)",
+    "desc": "Siliyer kasların kasılıp gevşemesiyle lensin eğriliğini ve kırma gücünü değiştirerek farklı mesafelerdeki nesnelerin görüntüsünü retinanın fovea bölgesine net düşürme süreci.",
     "sources": [
       {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
       }
     ]
   },
   {
-    "term": "CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar)",
-    "desc": "Korunmasız cinsel temas yoluyla bulaşan patojenlerin neden olduğu viral veya bakteriyel enfeksiyonlar.",
+    "term": "Allostatik Yük (Allostatic Load - McEwen)",
+    "desc": "Süregiden kronik stres karşısında sempatik-adrenal eksenin aşırı çalışmasının damarlar ve organ sistemlerinde yarattığı kümülatif aşınma ve yıpranma bedeli.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "BDNF (Brain-Derived Neurotrophic Factor)",
+    "desc": "Aerobik egzersizle kanda ve beyinde yükselerek yeni sinaps oluşumunu, nörogenezi ve sinir hücresi sağkalımını destekleyen nörotrofik faktör.",
+    "sources": [
+      {
+        "title": "Fiziksel Aktivite",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
+      }
+    ]
+  },
+  {
+    "term": "Birincil Koruma (Primary Prevention)",
+    "desc": "Hastalık ve hücresel hasar henüz hiç başlamadan önce risk faktörlerini ortadan kaldırarak sağlığı korumayı amaçlayan proaktif müdahale düzeyi.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Biyolojik İndirgemecilik (Biological Reductionism)",
+    "desc": "İnsanın tüm karmaşık zihinsel, duygusal ve varoluşsal yaşantısını salt hücresel arızalara ve moleküler mekanizmalara indirgeyen metodolojik yanılgı.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Cinsel Miyopi (Sexual Myopia)",
+    "desc": "Alkol, madde veya yüksek fizyolojik uyarılma anında bireyin uzun vadeli riskleri (hastalık, gebelik) göz ardı edip yalnızca anlık ipuçlarına ve hazza odaklanması bilişsel kısıtlanması.",
     "sources": [
       {
         "title": "Kondom Kullanımı",
@@ -55,33 +99,66 @@
     ]
   },
   {
-    "term": "DGE (Deutsche Gesellschaft für Ernährung)",
-    "desc": "Bilimsel kanıta dayalı beslenme yönergeleri ve makro/mikro besin standartları yayımlayan Alman Beslenme Derneği.",
+    "term": "CYBE (Cinsel Yolla Bulaşan Enfeksiyonlar)",
+    "desc": "HIV, HPV, klamidya ve gonore gibi korunmasız mukozal temasla bulaşan viral ve bakteriyel patojenler grubu.",
     "sources": [
       {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
+        "title": "Kondom Kullanımı",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
       }
     ]
   },
   {
-    "term": "DSM (Diagnostic and Statistical Manual of Mental Disorders)",
-    "desc": "Amerikan Psikiyatri Birliği tarafından yayımlanan, ruhsal bozukluklar için standart tanı kriterlerini belirleyen kılavuz.",
+    "term": "Doz-Yanıt İlişkisi (Dose-Response Relationship)",
+    "desc": "Fiziksel aktivite süresi ve yoğunluğu arttıkça mortalite ve morbidite riskinin doğrusal olmayan şekilde azalması dinamik örüntüsü.",
     "sources": [
       {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+        "title": "Fiziksel Aktivite",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
+      }
+    ]
+  },
+  {
+    "term": "Düşünce Baskılama Paradoksu (Ironic Process Theory - Wegner)",
+    "desc": "Bir ayartıcı düşünceyi (örn. sigara, tatlı) zorla zihinden atmaya çalışmanın, o düşüncenin bilinçte daha da şiddetlenip saplantıya dönüşmesine yol açması.",
+    "sources": [
+      {
+        "title": "Geri Düşüş",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
+      }
+    ]
+  },
+  {
+    "term": "Endokanabinoid Sistemi (Runner's High - Boecker)",
+    "desc": "Sürekli aerobik egzersiz sırasında kanda anandamid seviyesinin yükselerek santral sinir sisteminde öfori, sedasyon ve analjezi (ağrı kesici his) üretmesi.",
+    "sources": [
+      {
+        "title": "Fiziksel Aktivite",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
+      }
+    ]
+  },
+  {
+    "term": "Epidemiyoloji (Epidemiology)",
+    "desc": "Toplumlarda hastalıkların dağılımını, sıklığını ve belirleyici risk faktörlerini istatistiksel yöntemlerle araştıran halk sağlığı bilimi.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
       }
     ]
   },
   {
     "term": "Epigenetik (Epigenetics)",
-    "desc": "DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.",
+    "desc": "DNA baz diziliminde bir mutasyon olmaksızın, çevresel faktörlerin (stres, beslenme vb.) gen ekspresyonunu (açılıp kapanmasını) metilasyon gibi mekanizmalarla kalıcı olarak değiştirmesi bilimi.",
     "sources": [
       {
-        "title": "Giriş",
+        "title": "Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
         "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
         "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
       }
@@ -89,7 +166,7 @@
   },
   {
     "term": "Etiyoloji (Etiology)",
-    "desc": "Bir hastalığın, psikolojik bozukluğun veya klinik tablonun altında yatan köken, nedensellik ve tetikleyici faktörler bütünü.",
+    "desc": "Bir psikopatolojik tablonun ortaya çıkışına zemin hazırlayan genetik, gelişimsel, çevresel ve nörobiyolojik köken faktörleri bütünü.",
     "sources": [
       {
         "title": "Giriş - Normal ve Anormal",
@@ -99,8 +176,8 @@
     ]
   },
   {
-    "term": "HAPA Modeli (Health Action Process Approach)",
-    "desc": "Ralf Schwarzer tarafından geliştirilen, motivasyonel (niyet oluşturma) ve iradi (eylem planlama ve sürdürme) evreleri ayıran modern sağlık davranışı modeli.",
+    "term": "Eylem Sonucu Beklentisi (Outcome Expectancy)",
+    "desc": "Bireyin belirli bir sağlık davranışını gerçekleştirdiğinde hangi olumlu veya olumsuz fizyolojik/sosyal sonuçlarla karşılaşacağına dair zihinsel olasılık hesabı.",
     "sources": [
       {
         "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
@@ -110,52 +187,52 @@
     ]
   },
   {
-    "term": "Hassas Dönem (Sensitive Period)",
-    "desc": "Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.",
+    "term": "Fark Eşiği / JND (Just Noticeable Difference)",
+    "desc": "Bireyin iki uyarıcı şiddeti arasındaki farkı denemelerin %50'sinde ayırt edebildiği en küçük fiziksel değişim miktarı ($\\Delta S = k \\cdot S$).",
     "sources": [
       {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
       }
     ]
   },
   {
-    "term": "ICD (International Classification of Diseases)",
-    "desc": "Dünya Sağlık Örgütü (WHO) tarafından yayımlanan, tüm bedensel ve zihinsel hastalıkları kapsayan uluslararası tanı sınıflandırması.",
+    "term": "Fitzpatrick Cilt Tipi Skalası (Fitzpatrick Skin Phototype)",
+    "desc": "Cildin UV ışınlarına verdiği biyolojik yanıtı ve yanma/bronzlaşma eğilimini I'den VI'ya kadar 6 sınıfa ayıran dermatolojik standart.",
     "sources": [
       {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+        "title": "Güneşten Korunma",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
       }
     ]
   },
   {
-    "term": "İnaktif Yaşam (Physical Inactivity)",
-    "desc": "Sağlık için önerilen asgari fiziksel hareket eşiğinin altında kalan yaşam tarzı.",
+    "term": "Foto-Yaşlanma (Photoaging)",
+    "desc": "Kronik UV maruziyetinin cildin kollajen ve elastin liflerini parçalayarak erken kırışıklık, lekelenme ve elastisite kaybı yaratması süreci.",
     "sources": [
       {
-        "title": "Fiziksel Aktivite",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
+        "title": "Güneşten Korunma",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
       }
     ]
   },
   {
-    "term": "İnaktivite (Sedentary Behavior)",
-    "desc": "Enerji harcamasının bazal metabolizma düzeyine yakın olduğu hareketsiz yaşam tarzı.",
+    "term": "Fototransdüksiyon (Phototransduction)",
+    "desc": "Retinadaki fotoreseptörlerde (çubuk ve koni) ışık fotonlarının rodopsin/opsin izomerizasyonu yoluyla biyokimyasal basamakları tetikleyip elektrik sinyallerine (hiperpolarizasyon) dönüştürülmesi mekanizması.",
     "sources": [
       {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
       }
     ]
   },
   {
-    "term": "İçsel Atıf (Internal Attribution)",
-    "desc": "Başarısızlığı durumsal faktörler yerine kendi karakterine, iradesizliğine veya yetersizliğine bağlama eğilimi.",
+    "term": "Görünüşte Alakasız Kararlar (Apparently Irrelevant Decisions - AIDs)",
+    "desc": "Bireyin bilinçdışı olarak ayartıcı ortama girmeyi hedefleyen ama bilince \"masum bir tesadüf\" gibi sunduğu küçük rota seçimleri zinciri.",
     "sources": [
       {
         "title": "Geri Düşüş",
@@ -165,8 +242,19 @@
     ]
   },
   {
-    "term": "Klinik Depresyon (Major Depressive Disorder)",
-    "desc": "Sürekli çökkün duygudurum, ilgi kaybı ve enerji azalmasıyla seyreden ve egzersizle nörotransmitter regülasyonu sağlanan duygu durum bozukluğu.",
+    "term": "Güvenilirlik Yanılsaması (Illusion of Safety)",
+    "desc": "Bireyin yeni veya geçici partnerini dış görünüş, eğitim ya da sempati gibi alakasız ipuçlarına dayanarak \"temiz/güvenli\" varsayması ve korunmayı gereksiz görmesi yanlılığı.",
+    "sources": [
+      {
+        "title": "Kondom Kullanımı",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
+      }
+    ]
+  },
+  {
+    "term": "Hipokampal Nörogenez (Hippocampal Neurogenesis)",
+    "desc": "Düzenli aerobik aktivitenin hipokampusta yeni granül nöron üretimini uyararak hafıza konsolidasyonunu ve anksiyolitik dayanıklılığı güçlendirmesi.",
     "sources": [
       {
         "title": "Fiziksel Aktivite",
@@ -176,8 +264,41 @@
     ]
   },
   {
-    "term": "Kronik Hastalık (Chronic Illness)",
-    "desc": "Genellikle yavaş ilerleyen, uzun süreli bakım ve yaşam tarzı yönetimi gerektiren kalıcı sağlık durumu (ör. diyabet, hipertansiyon).",
+    "term": "IMB Modeli (Information-Motivation-Behavioral Skills)",
+    "desc": "Bilgi ve motivasyonun tek başına yetmediğini; riskli davranışın ancak partnerle müzakere ve uygulama becerileriyle önlenebileceğini gösteren kuramsal çerçeve.",
+    "sources": [
+      {
+        "title": "Kondom Kullanımı",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
+      }
+    ]
+  },
+  {
+    "term": "İatrojenik Damgalama (Iatrogenic Stigmatization)",
+    "desc": "Tanı etiketlerinin hastanın kimliğini daraltarak toplumda ve bireyin kendi zihninde ikincil öz-değersizlik ve ayrımcılık üretmesi riski.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "İatrojenik Hasar (Iatrogenesis)",
+    "desc": "Tıbbi/psikolojik müdahale, yanlış etiketleme veya farmakolojik yan etki sonucu danışanda hekim ya da terapist eliyle üretilen ikincil klinik hasar.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "İkincil Kazanç (Secondary Gain)",
+    "desc": "Hastalık rolünün kişiye sağladığı sorumluluklardan muafiyet, ilgi ve sosyal korunma gibi bilinçdışı psikolojik avantajlar.",
     "sources": [
       {
         "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
@@ -187,8 +308,74 @@
     ]
   },
   {
-    "term": "Melanom (Malignant Melanoma)",
-    "desc": "Cilde rengini veren melanosit hücrelerinden köken alan, metastaz riski yüksek cilt kanseri türü.",
+    "term": "İyatrojenik Hasar (Iatrogenic Harm)",
+    "desc": "Tıbbi müdahale, farmakolojik yan etki veya klinik hata sonucu hastada istenmeden ortaya çıkan ikincil sağlık hasarı.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Klinik Epistemoloji (Clinical Epistemology)",
+    "desc": "Ruhsal sağlıkta \"normal\" ile \"anormal\" arasındaki sınırın nesnel bir gerçeklik mi yoksa kültürel, tarihsel ve değer yüklü bir uzlaşı mı olduğunu sorgulayan bilgi felsefesi dalı.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Kognitif Yeniden Yapılandırma (Cognitive Reframing)",
+    "desc": "Kaymayı bir son ve felaket olarak görmek yerine, nüks önleme becerilerini test eden bir \"öğrenme fırsatı\" olarak yeniden anlamlandırma tekniği.",
+    "sources": [
+      {
+        "title": "Geri Düşüş",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
+      }
+    ]
+  },
+  {
+    "term": "Kohlrausch Kırılması (Rod-Cone Break)",
+    "desc": "Karanlık adaptasyonu eğrisinde (yaklaşık 7. dakikada) hızlı koni adaptasyonunun plato çizip yerini çok daha hassas olan çubuk (rod) adaptasyonuna bıraktığı geçiş noktası.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Komorbidite (Comorbidity)",
+    "desc": "Bir bireyde aynı anda iki veya daha fazla bağımsız psikiyatrik ya da organik tablonun klinik tanı kriterlerini karşılayarak birlikte bulunması durumu.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Koroner Arter Hastalığı (Coronary Artery Disease)",
+    "desc": "Kalp kasını besleyen koroner damarların ateroskleroz ve tütün toksinleri nedeniyle daralması sonucu miyokard enfarktüsü riskinin katlanması tablosu.",
+    "sources": [
+      {
+        "title": "Sigaranın Psikolojisi",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
+      }
+    ]
+  },
+  {
+    "term": "Koruma Motivasyonu (Protection Motivation)",
+    "desc": "Bireyin algılanan tehdit şiddeti ile başa çıkma öz-yeterliliğini tartarak tehlikeden kaçınma eylemini başlatmasını sağlayan psikolojik itici güç.",
     "sources": [
       {
         "title": "Güneşten Korunma",
@@ -198,8 +385,41 @@
     ]
   },
   {
-    "term": "Metabolik Risk (Metabolic Risk)",
-    "desc": "İnsülin direnci, tip 2 diyabet ve kardiyovasküler hastalıkların gelişme olasılığını artıran fizyolojik risk faktörleri bütünü.",
+    "term": "Kritik Dönem (Critical Period)",
+    "desc": "Belirli bir biyolojik/bilişsel yetinin (örneğin dil veya binoküler görme) gelişebilmesi için organizmanın belirli çevresel uyaranlara maruz kalmasının mutlak zorunlu olduğu sınırlı zaman aralığı.",
+    "sources": [
+      {
+        "title": "Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
+        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
+      }
+    ]
+  },
+  {
+    "term": "Kümülatif Zaman Gecikmeli Hasar (Time-Lagged Damage)",
+    "desc": "Toksik maruziyetin hücresel hasar ve mutasyonları sinsice biriktirerek klinik mortalite faturasını 20-30 yıl sonra orta yaşta çıkarması paterni.",
+    "sources": [
+      {
+        "title": "Sigaranın Psikolojisi",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
+      }
+    ]
+  },
+  {
+    "term": "Malign Melanom (Malignant Melanoma)",
+    "desc": "Melanosit hücrelerinden köken alan, erken evrede tespit edilmediğinde hızla metastaz yapabilen en ölümcül cilt kanseri türü.",
+    "sources": [
+      {
+        "title": "Güneşten Korunma",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
+      }
+    ]
+  },
+  {
+    "term": "MET Değeri (Metabolic Equivalent of Task)",
+    "desc": "Bir fiziksel aktivite esnasındaki enerji harcamasının dinlenme anındaki bazal metabolizma hızına ($3.5\\text{ ml } O_2 / \\text{kg} \\cdot \\text{dk}$) oranını belirten standart fizyolojik birim.",
     "sources": [
       {
         "title": "Fiziksel Aktivite",
@@ -209,41 +429,19 @@
     ]
   },
   {
-    "term": "Nikotin Regülasyon Teorisi (Nicotine Regulation Theory)",
-    "desc": "Vücuttaki nikotin seviyesi düştüğünde ortaya çıkan yoksunluk semptomlarını bastırmak için sigara içme sıklığının ayarlandığını öne süren biyolojik model.",
+    "term": "Metabolik Risk (Metabolic Risk)",
+    "desc": "İnsülin direnci, visseral yağlanma, hipertansiyon ve dislipidemi gibi kardiyometabolik hastalık olasılığını artıran faktörler bütünü.",
     "sources": [
       {
-        "title": "Sigaranın Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
+        "title": "Fiziksel Aktivite",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
       }
     ]
   },
   {
-    "term": "Niyet-Davranış Uçurumu (Intention-Behavior Gap)",
-    "desc": "Bireyin bir davranışı yapmaya güçlü bir şekilde niyet etmesine rağmen, somut eyleme geçememesi arasındaki istatistiksel ve psikolojik boşluk.",
-    "sources": [
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  },
-  {
-    "term": "Ontojenez (Ontogeny)",
-    "desc": "Bireysel bir organizmanın döllenmeden ölüme kadar geçen yaşam süresince geçirdiği yapısal, biyolojik ve psikolojik gelişimsel süreç.",
-    "sources": [
-      {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
-      }
-    ]
-  },
-  {
-    "term": "Perhiz İhlali Etkisi (Abstinence Violation Effect - AVE)",
-    "desc": "Marlatt tarafından tanımlanan; tek bir kaçamak sonrası bireyin suçluluk, yetersizlik ve 'battı balık yan gider' bilişiyle kontrolü tamamen kaybetmesi.",
+    "term": "Nedensel Atıf Kuramı (Attribution Theory)",
+    "desc": "Bireyin bir başarısızlığı içsel, kalıcı ve kontrol edilemez nedenlere (örn. \"ben iradesizim\") bağlayarak çaresizliği pekiştirmesi bilişsel mekanizması.",
     "sources": [
       {
         "title": "Geri Düşüş",
@@ -253,8 +451,74 @@
     ]
   },
   {
-    "term": "Planlanmış Davranış Teorisi (Theory of Planned Behavior)",
-    "desc": "Davranışın en doğrudan öncülünün niyet olduğunu; niyetin ise tutum, öznel norm ve algılanan davranış kontrolüyle şekillendiğini savunan kuram.",
+    "term": "Nosoloji (Nosology)",
+    "desc": "Hastalıkların ve psikiyatrik tabloların kuramsal temellerine, semptom örüntülerine ve klinik benzerliklerine göre hiyerarşik sınıflandırılması bilimi.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Nöral ve Davranışsal Plastisite (Plasticity)",
+    "desc": "Sinir sisteminin ve bilişsel/davranışsal işlevlerin çevresel deneyimler, öğrenme veya beyin hasarları karşısında yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.",
+    "sources": [
+      {
+        "title": "Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
+        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
+      }
+    ]
+  },
+  {
+    "term": "Nöron Doktrini (Neuron Doctrine)",
+    "desc": "Santiago Ramón y Cajal (1888) tarafından kanıtlanan; sinir sisteminin kesintisiz bir retikulum değil, sinaps adı verilen mikroskobik boşluklarla ayrılmış bağımsız hücresel birimlerden (nöronlar) oluştuğunu ortaya koyan biyolojik temel.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Operasyonel Tanımlama (Operationalization)",
+    "desc": "Soyut klinik yapıların (örn. anhedoni, ajitasyon) gözlemlenebilir, ölçülebilir ve tekrarlanabilir somut tanı kriterlerine (süre, sıklık, şiddet) dökülmesi yöntemi.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Patofizyoloji (Pathophysiology)",
+    "desc": "Bir rahatsızlık sırasında sinir sisteminde, nörotransmitter dengesinde ve organ düzeyinde bozulan fizyolojik işleyiş mekanizmaları.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Perceptron",
+    "desc": "Frank Rosenblatt (1958) tarafından geliştirilen, biyolojik nöronların ağırlıklı girdi toplamı ve eşik aşımı prensibini taklit ederek görsel örüntüleri öğrenen tarihteki ilk yapay sinir ağı donanımı.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Perhiz İhlali Etkisi / AVE (Abstinence Violation Effect)",
+    "desc": "Alan Marlatt (1985) tarafından tanımlanan; bağımlılık veya diyet sürecindeki tek bir kural ihlalinin (lapse), bireyde yoğun suçluluk ve yetersizlik atfıyla tam bir geri düşüşe (relapse) dönüşmesi psikolojik örüntüsü.",
     "sources": [
       {
         "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
@@ -264,19 +528,19 @@
     ]
   },
   {
-    "term": "Plastisite (Plasticity)",
-    "desc": "Beynin ve bilişsel sistemlerin deneyim, öğrenme ve çevresel uyaranlara bağlı olarak yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.",
+    "term": "Plasebo ve Nosebo Etkisi (Placebo & Nocebo)",
+    "desc": "Bireyin tedaviye dair bilişsel beklentisinin merkezi sinir sisteminde endorfin salınımı ya da anksiyete üzerinden ölçülebilir fizyolojik iyileşme veya yan etki üretmesi.",
     "sources": [
       {
-        "title": "Giriş",
-        "path": "Gelişim Psikolojisi 1/Giriş - Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş---gelişim-psikolojisinin-konusu-ve-görevleri"
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
       }
     ]
   },
   {
     "term": "Pozitif Pekiştirme (Positive Reinforcement)",
-    "desc": "Bir davranışın ardından haz verici veya ödüllendirici bir uyaranın gelmesi sonucu o davranışın tekrarlanma sıklığının artması.",
+    "desc": "Davranışın ardından ortama dopaminerjik haz veya sosyal onay gibi arzu edilen bir uyarıcının eklenmesiyle davranışın tekrarlanma olasılığının artması mekanizması.",
     "sources": [
       {
         "title": "Sigaranın Psikolojisi",
@@ -286,63 +550,19 @@
     ]
   },
   {
-    "term": "Psikolojik Bağımlılık (Psychological Dependence)",
-    "desc": "Madde veya davranışın duygu düzenleme, rahatlama veya kimlik parçası olarak algılanması sonucu gelişen zihinsel bağımlılık örüntüsü.",
+    "term": "Presbiyopi (Presbyopia)",
+    "desc": "Yaşlanmaya bağlı olarak göz merceğinin (lens) elastikiyetini ve siliyer kas adaptasyonunu kaybetmesi sonucu yakın odaklanma noktasının (Nahpunkt) uzaklaşması durumu.",
     "sources": [
       {
-        "title": "Sigaranın Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
       }
     ]
   },
   {
-    "term": "Psikopatoloji (Psychopathology)",
-    "desc": "Ruhsal rahatsızlıkların, anormal davranışların ve zihinsel işlev bozukluklarının doğasını, nedenlerini ve gelişimsel dinamiklerini inceleyen bilim dalı.",
-    "sources": [
-      {
-        "title": "Giriş - Normal ve Anormal",
-        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
-        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
-      }
-    ]
-  },
-  {
-    "term": "Relaps / Geri Düşüş (Relapse)",
-    "desc": "Bireyin değiştirdiği eski istenmeyen alışkanlığa (ör. sigara, madde kullanımı) tam ölçekli ve kalıcı olarak geri dönmesi.",
-    "sources": [
-      {
-        "title": "Geri Düşüş",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
-      }
-    ]
-  },
-  {
-    "term": "Sağlık İnanç Modeli",
-    "desc": "Risk algısı ve yarar-engel dengesi üzerinden sağlık kararlarını açıklayan model.",
-    "sources": [
-      {
-        "title": "Kondom Kullanımı",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
-      }
-    ]
-  },
-  {
-    "term": "Sağlık İnanç Modeli (Health Belief Model)",
-    "desc": "Bireylerin algılanan tehdit, duyarlılık ve kar-zarar dengesi üzerinden sağlık davranışlarına karar verdiğini öne süren bilişsel model.",
-    "sources": [
-      {
-        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
-      }
-    ]
-  },
-  {
-    "term": "Semptom (Symptom)",
-    "desc": "Danışanın ya da hastanın kendi deneyimlediği ve öznel olarak bildirdiği işlevsel/duygusal şikayet veya rahatsızlık göstergesi.",
+    "term": "Prevalans vs. İnsidans (Prevalence & Incidence)",
+    "desc": "Prevalans belirli bir anda popülasyondaki mevcut vaka oranını; insidans ise belirli bir zaman diliminde sıfırdan ortaya çıkan yeni vaka sıklığını gösterir.",
     "sources": [
       {
         "title": "Giriş - Normal ve Anormal",
@@ -352,8 +572,8 @@
     ]
   },
   {
-    "term": "Sendrom (Syndrome)",
-    "desc": "Düzenli olarak belirli bir örüntü halinde bir arada ortaya çıkan semptomlar ve klinik belirtiler topluluğu.",
+    "term": "Prognostik Geçerlilik (Prognostic Validity)",
+    "desc": "Bir klinik tanı kategorisinin, rahatsızlığın gelecekteki doğal seyrini, nüks riskini ve tedaviye vereceği yanıtı doğru öngörebilme gücü.",
     "sources": [
       {
         "title": "Giriş - Normal ve Anormal",
@@ -363,8 +583,96 @@
     ]
   },
   {
-    "term": "UV Radyasyonu (Ultraviolet Radiation)",
-    "desc": "Hücresel DNA hasarına, erken cilt yaşlanmasına ve melanom gibi cilt kanserlerine yol açan görünmez güneş ışınımı.",
+    "term": "Psikofizik (Psychophysics)",
+    "desc": "Gustav Theodor Fechner (1860) tarafından kurulan; fiziksel uyarıcıların şiddeti ile insan zihninde yarattığı sübjektif duyum şiddeti arasındaki matematiksel bağıntıları araştıran ampirik bilim dalı.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Psikonöroimmünoloji (PNI)",
+    "desc": "Psikolojik stres ve bilişsel süreçlerin merkezi sinir sistemi ile bağışıklık sistemi arasındaki çift yönlü moleküler etkileşimini inceleyen disiplinlerarası bilim.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Purkinje Kayması (Purkinje Shift)",
+    "desc": "Aydınlık ortamdan (fotopik görüş / 555 nm koni tepe noktası) karanlık ortama (skotopik görüş / 500 nm çubuk tepe noktası) geçildiğinde spektral hassasiyetin mavi-yeşil dalga boylarına doğru kayması.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Sağlığın Sosyal Belirleyicileri (Social Determinants of Health)",
+    "desc": "Sosyoekonomik statü, gelir adaletsizliği ve barınma koşullarının mortalite riskini biyolojik faktörlerden daha güçlü tayin etmesi örüntüsü.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Sedanter Yaşam (Sedentary Behavior)",
+    "desc": "Uyanıkken harcanan enerjinin bazal metabolizma düzeyine yakın kaldığı, oturma veya uzanma odaklı hareketsiz yaşam tarzı.",
+    "sources": [
+      {
+        "title": "Fiziksel Aktivite",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
+      }
+    ]
+  },
+  {
+    "term": "Sinyal Algılama Teorisi (Signal Detection Theory - SDT)",
+    "desc": "Karar vericinin duyusal hassasiyeti ($d'$) ile karar kriterini ($\beta$ / $c$) birbirinden bağımsız olarak ayrıştıran 2x2 matrisli psikofiziksel karar modeli.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Somatizasyon (Somatization)",
+    "desc": "Çözümlenmemiş psikolojik çatışmaların ve duygusal stresin açıklanamayan bedensel ve organik semptomlar şeklinde dışa vurulması.",
+    "sources": [
+      {
+        "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Sosyodemografik Risk Gradienti (Social Gradient in Health)",
+    "desc": "Düşük sosyoekonomik statü, yoksulluk ve dışlanmanın psikiyatrik prevalansı ve kırılganlığı katlaması örüntüsü.",
+    "sources": [
+      {
+        "title": "Giriş - Normal ve Anormal",
+        "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
+        "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "SPF / Güneş Koruma Faktörü (Sun Protection Factor)",
+    "desc": "Bir koruyucu ürünün cildi UVB kaynaklı güneş yanığına (eritem) karşı koruma süresini ve filtrasyon oranını belirten katsayı.",
     "sources": [
       {
         "title": "Güneşten Korunma",
@@ -374,8 +682,8 @@
     ]
   },
   {
-    "term": "Uygulama Niyetleri (If-Then Plans)",
-    "desc": "Karar anında dürtüsel davranışı engelleyen 'durum X olduğunda Y yapacağım' formatındaki somut ön anlaşmalar.",
+    "term": "Spontanite İllüzyonu (Spontaneity Illusion)",
+    "desc": "Cinselliğin tamamen \"anın akışında ve plansız\" yaşanması gerektiği romantik kabulünün, rasyonel korunma hazırlığını ve kondom taşımayı engellemesi.",
     "sources": [
       {
         "title": "Kondom Kullanımı",
@@ -385,18 +693,106 @@
     ]
   },
   {
-    "term": "Öz-Etkililik (Self-Efficacy)",
-    "desc": "Bireyin sağlıklı beslenme hedefini zorlu sosyal veya duygusal koşullarda dahi sürdürebileceğine olan inanç düzeyi.",
+    "term": "Sıcak-Soğuk Empati Boşluğu (Hot-Cold Empathy Gap - Loewenstein)",
+    "desc": "Bireyin sakin ve rasyonel durumdayken (soğuk faz), yüksek cinsel uyarılma veya alkol anındaki (sıcak faz) dürtüsellik ve risk alma eğilimini vahim derecede hafife alması.",
     "sources": [
       {
-        "title": "Beslenme Psikolojisi",
-        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
-        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
-      },
+        "title": "Kondom Kullanımı",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
+      }
+    ]
+  },
+  {
+    "term": "Timin Dimerleri ve Melanogenez (UV-Induced DNA Damage)",
+    "desc": "UV fotonlarının melanosit DNA'sında pirimidin dimerleri oluşturması; bronzlaşmanın bir sağlık emaresi değil, hücresel mutasyon alarmına verilen savunma yanıtı olması.",
+    "sources": [
+      {
+        "title": "Güneşten Korunma",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
+      }
+    ]
+  },
+  {
+    "term": "UV Radyasyonu (Ultraviolet Radiation)",
+    "desc": "Hücresel DNA hasarına, foto-yaşlanmaya ve melanom gibi malign cilt tümörlerine yol açan görünmez elektromanyetik ışınım.",
+    "sources": [
+      {
+        "title": "Güneşten Korunma",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
+      }
+    ]
+  },
+  {
+    "term": "Yanal Engelleme (Lateral Inhibition)",
+    "desc": "Uyarılmış bir nöronun (veya ommatidia'nın) komşu nöronların ateşleme frekansını horizontal/amakrin hücreler aracılığıyla baskılayarak sınır ve kenar kontrastını yapay olarak keskinleştirmesi mekanizması.",
+    "sources": [
+      {
+        "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
+        "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Yüksek Risk Durumları (High-Risk Situations)",
+    "desc": "Olumsuz duygulanım, sosyal baskı ve çatışma anlarında bireyin öz-denetim kapasitesini en çok zorlayan ve nüksü tetikleyen kritik eşikler.",
+    "sources": [
+      {
+        "title": "Geri Düşüş",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Geri Düşüş",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/geri-düşüş"
+      }
+    ]
+  },
+  {
+    "term": "Zaman İndirgeme Yanlılığı (Present Bias / Temporal Discounting)",
+    "desc": "Bireyin anlık estetik bronzluk ödülünü, on yıllar sonra ortaya çıkacak soyut ve uzak kanser riskine kıyasla bilişsel olarak aşırı değerli görmesi yanlılığı.",
+    "sources": [
+      {
+        "title": "Güneşten Korunma",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
+      }
+    ]
+  },
+  {
+    "term": "Çoğulcu Cehalet (Pluralistic Ignorance)",
+    "desc": "Çoğu bireyin içten içe korunmayı arzulamasına rağmen, akranlarının veya partnerinin bunu \"romantizmi bozan ayıp bir talep\" gördüğü yanılsamasına kapılarak sessiz kalması.",
+    "sources": [
+      {
+        "title": "Kondom Kullanımı",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
+      }
+    ]
+  },
+  {
+    "term": "Öz-Düzenleme (Self-Regulation)",
+    "desc": "Bireyin uzun vadeli sağlık hedeflerine ulaşmak amacıyla dürtüsel arzularını, dikkatini ve davranışlarını planlı biçimde denetleme ve yönetme kapasitesi.",
+    "sources": [
       {
         "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
+      }
+    ]
+  },
+  {
+    "term": "Öz-Yeterlilik (Self-Efficacy)",
+    "desc": "Albert Bandura (1977) tarafından tanımlanan; bireyin belirli bir eylemi gerçekleştirebilmek için gerekli motivasyonel ve bilişsel kaynakları seferber edebileceğine dair sübjektif yetkinlik inancı.",
+    "sources": [
+      {
+        "title": "Sağlık Modelleri; Bilmek Neden Yetmiyor?",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Modelleri; Bilmek Neden Yetmiyor?",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-modelleri;-bilmek-neden-yetmiyor?"
+      },
+      {
+        "title": "Beslenme Psikolojisi",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
       }
     ]
   }

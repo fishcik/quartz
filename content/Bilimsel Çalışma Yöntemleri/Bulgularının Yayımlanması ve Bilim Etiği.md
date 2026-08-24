@@ -5,4 +5,3 @@ tags:
   - bilimsel-çalışma-yöntemleri
   - bulgularinin-yayimlanmasi-ve
 ---
-

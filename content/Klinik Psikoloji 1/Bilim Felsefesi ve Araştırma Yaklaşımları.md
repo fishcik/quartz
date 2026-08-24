@@ -5,4 +5,3 @@ tags:
   - klinik-psikoloji-1
   - bilim-felsefesi-ve
 ---
-

@@ -61,10 +61,10 @@ Bu iki atıf tam olarak geri düşüş olasılığını patlatır:
 ---
 
 > [!abstract] AVE Kısırdöngüsü ve Bilişsel Kırılma Modeli
-> <div class="sc-diag-author"><a href="https://doi.org/10.1037/026217" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1037/026217" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 290" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <!-- Top: Lapse Box -->
 >   <rect x="210" y="10" width="200" height="38" rx="6" fill="rgba(199, 154, 109, 0.12)" stroke="#c79a6d" stroke-width="1.8"/>
 >   <text x="310" y="34" fill="#c79a6d" font-family="var(--bodyFont)" font-size="11" font-weight="bold" text-anchor="middle">Anlık Hata / İlk Kaçamak (Lapse)</text>
@@ -105,17 +105,17 @@ Bu iki atıf tam olarak geri düşüş olasılığını patlatır:
 >
 > *Tek bir tökezlemenin ardından hissedilen yıkıcı suçluluk duygusunun insanı 'battı balık yan gider' diyerek tam bir geri düşüşe sürüklemesi mekanizmasını ve bilişsel toparlanma yolunu gösterir.*
 >
-> *Marlatt, G. A., &amp; Gordon, J. R. (Eds.). (1985). Relapse prevention: Maintenance strategies in the treatment of addictive behaviors. Guilford Press. https://doi.org/10.1037/026217*
+> <div class="sc-gfx-source">Marlatt, G. A., &amp; Gordon, J. R. (Eds.). (1985). Relapse prevention: Maintenance strategies in the treatment of addictive behaviors. Guilford Press. https://doi.org/10.1037/026217</div>
 
 Hastalık modelinin o katı ve dogmatik *"Tek yudum içersen yandın"* bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek tam bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşür. Kontrolün kendisinde olmadığına ve hiçbir zaman olamayacağına inanan biri zaten davranışı kontrol etmeyi bırakır.
 
 **Tökezlemek normaldir.** Hatayı bir *hastalık patlaması* olarak değil de, kognitif yeniden yapılandırma[^kognitif-yeniden-yapilandirma] ile bir *öğrenme kazası* olarak yorumlamak hem kısırdöngüyü kırmak hem de tam teşekküllü bir geri düşüş yaşamamak için en rasyonel yoldur.
 
 > [!abstract] Bilişsel-Davranışçı Geri Düşüş Modeli
-> <div class="sc-diag-author"><a href="https://doi.org/10.1037/0003-066X.59.4.224" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985; Witkiewitz &amp; Marlatt, 2004)</a></div>
+> <div class="sc-gfx-author"><a href="https://doi.org/10.1037/0003-066X.59.4.224" target="_blank" rel="noopener noreferrer">(Marlatt &amp; Gordon, 1985; Witkiewitz &amp; Marlatt, 2004)</a></div>
 >
 > <div style="display:flex; justify-content:center; margin: 0.2rem 0 0.6rem 0;">
-> <svg viewBox="0 0 620 280" width="100%" style="max-width: 680px; height: auto;">
+> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
 >   <rect x="220" y="15" width="180" height="38" rx="19" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="2"/>
 >   <text x="310" y="39" fill="#C8102E" font-family="var(--bodyFont)" font-size="10.5" font-weight="bold" text-anchor="middle">Yüksek Risk Durumu (Tetikleyici)</text>
 >
@@ -147,7 +147,7 @@ Hastalık modelinin o katı ve dogmatik *"Tek yudum içersen yandın"* bakış a
 >
 > *Kriz anındaki bilişsel baş etmenin; öz-yeterlilik, ilk kayma (lapse) ve perhiz ihlali etkisi (AVE) üzerinden tam geri düşüşe giden karar dinamiklerini modeller.*
 >
-> *Witkiewitz, K., &amp; Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. American Psychologist, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224*
+> <div class="sc-gfx-source">Witkiewitz, K., &amp; Marlatt, G. A. (2004). Relapse prevention for alcohol and drug problems: That was Zen, this is Tao. American Psychologist, 59(4), 224–235. https://doi.org/10.1037/0003-066X.59.4.224</div>
 
 ---
 

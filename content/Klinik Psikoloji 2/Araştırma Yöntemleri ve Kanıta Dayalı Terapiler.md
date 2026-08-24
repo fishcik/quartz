@@ -5,4 +5,3 @@ tags:
   - klinik-psikoloji-2
   - arastirma-yontemleri-ve
 ---
-

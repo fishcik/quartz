@@ -5,4 +5,3 @@ tags:
   - biliş-psikolojisi-1
   - renk-algisi-derinlik
 ---
-
