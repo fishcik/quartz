@@ -88,6 +88,17 @@
     ]
   },
   {
+    "term": "Boyutsal Yaklaşım (Dimensional Approach)",
+    "desc": "Psikopatolojik durumları katı \"sağlıklı vs. hasta\" kategorileri yerine, semptom şiddetinin ve psikolojik değişkenlerin sürekli bir spektrum ve skor üzerinde dağıldığını savunan ölçüm modeli.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      }
+    ]
+  },
+  {
     "term": "Cinsel Miyopi (Sexual Myopia)",
     "desc": "Alkol, madde veya yüksek fizyolojik uyarılma anında bireyin uzun vadeli riskleri (hastalık, gebelik) göz ardı edip yalnızca anlık ipuçlarına ve hazza odaklanması bilişsel kısıtlanması.",
     "sources": [
@@ -166,8 +177,13 @@
   },
   {
     "term": "Etiyoloji (Etiology)",
-    "desc": "Bir psikopatolojik tablonun ortaya çıkışına zemin hazırlayan genetik, gelişimsel, çevresel ve nörobiyolojik köken faktörleri bütünü.",
+    "desc": "Bir hastalığın, bozukluğun veya patolojik tablonun ortaya çıkışına zemin hazırlayan biyolojik, genetik, psikososyal ve çevresel nedenlerin tümü.",
     "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      },
       {
         "title": "Giriş - Normal ve Anormal",
         "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
@@ -260,6 +276,28 @@
         "title": "Fiziksel Aktivite",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
+      }
+    ]
+  },
+  {
+    "term": "Hipotetik Yapı / Kurgu (Hypothetical Construct)",
+    "desc": "Doğrudan fiziksel olarak gözlenemeyen (örneğin zekâ, depresyon, anksiyete), ancak gözlenebilir davranışsal ve duygusal semptomların bir aradalığından çıkarsanan kuramsal kavramsal yapı.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      }
+    ]
+  },
+  {
+    "term": "HiTOP (Hierarchical Taxonomy of Psychopathology)",
+    "desc": "Psikopatolojiyi yapay kategorik sınırlar yerine, semptom düzeyinden en üstteki genel faktöre (p-faktörü) kadar hiyerarşik boyutlar ve spektrumlar halinde düzenleyen modern ampirik sınıflandırma sistemi.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
       }
     ]
   },
@@ -396,6 +434,17 @@
     ]
   },
   {
+    "term": "Kültürel Formülasyon Görüşmesi / CFI (Cultural Formulation Interview)",
+    "desc": "DSM-5'te klinisyenin hastanın kültürel kimliğini, acıyı kavrayışını ve sosyal bağlamını 16 yapılandırılmış soruyla sistematik olarak araştırmasını sağlayan kılavuz.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      }
+    ]
+  },
+  {
     "term": "Kümülatif Zaman Gecikmeli Hasar (Time-Lagged Damage)",
     "desc": "Toksik maruziyetin hücresel hasar ve mutasyonları sinsice biriktirerek klinik mortalite faturasını 20-30 yıl sonra orta yaşta çıkarması paterni.",
     "sources": [
@@ -451,6 +500,17 @@
     ]
   },
   {
+    "term": "NOS Kodları (Not Otherwise Specified / BŞB)",
+    "desc": "Hastanın gösterdiği klinik tablonun genel bir bozukluk grubuna girmesine rağmen, özgül alt tanı kriterlerinin tamamını karşılamadığı durumlarda kullanılan geçiş kategorisi.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      }
+    ]
+  },
+  {
     "term": "Nosoloji (Nosology)",
     "desc": "Hastalıkların ve psikiyatrik tabloların kuramsal temellerine, semptom örüntülerine ve klinik benzerliklerine göre hiyerarşik sınıflandırılması bilimi.",
     "sources": [
@@ -480,6 +540,17 @@
         "title": "Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
         "path": "Biliş Psikolojisi 1/Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina",
         "url": "/biliş-psikolojisi-1/giriş-—-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Operasyonel / İşevuruk Tanımlama (Operational Definition)",
+    "desc": "Soyut bir kavramı (örneğin depresif çökkünlük), somut, gözlenebilir ve ölçülebilir kriterlerle (örneğin günde 5 saatten az uyuma, iştah kaybı) tanımlama yöntemi.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
       }
     ]
   },
@@ -616,6 +687,17 @@
     ]
   },
   {
+    "term": "RDoC (Research Domain Criteria)",
+    "desc": "ABD Ulusal Ruh Sağlığı Enstitüsü (NIMH) tarafından geliştirilen; psikopatolojiyi geleneksel tanı kategorileri yerine, beynin temel işlevsel nöral devreleri (negatif değerlik, pozitif değerlik, biliş vb.) ve biyolojik düzeyler üzerinden inceleyen translasyonel çerçeve.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      }
+    ]
+  },
+  {
     "term": "Sağlığın Sosyal Belirleyicileri (Social Determinants of Health)",
     "desc": "Sosyoekonomik statü, gelir adaletsizliği ve barınma koşullarının mortalite riskini biyolojik faktörlerden daha güçlü tayin etmesi örüntüsü.",
     "sources": [
@@ -704,6 +786,17 @@
     ]
   },
   {
+    "term": "Taijin Kyofusho / TKS (Interpersonal Fear Disorder)",
+    "desc": "Japonya ve Doğu Asya kültürlerinde görülen; bireyin kendi beden dili, bakışları veya kokusuyla başkalarını rahatsız edeceği, utandıracağı veya inciteceği dehşetiyle karakterize öteki-merkezli sosyal anksiyete tablosu.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
+      }
+    ]
+  },
+  {
     "term": "Timin Dimerleri ve Melanogenez (UV-Induced DNA Damage)",
     "desc": "UV fotonlarının melanosit DNA'sında pirimidin dimerleri oluşturması; bronzlaşmanın bir sağlık emaresi değil, hücresel mutasyon alarmına verilen savunma yanıtı olması.",
     "sources": [
@@ -722,6 +815,17 @@
         "title": "Güneşten Korunma",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
+      }
+    ]
+  },
+  {
+    "term": "WHODAS 2.0 (World Health Organization Disability Assessment Schedule)",
+    "desc": "DSÖ tarafından geliştirilen; bireyin 6 temel yaşam alanındaki (biliş, hareketlilik, öz-bakım, insan ilişkileri, yaşam aktiviteleri, toplumsal katılım) işlevsellik kaybını ölçen standart değerlendirme ölçeği.",
+    "sources": [
+      {
+        "title": "Kuramlar ve Kategorik Yaklaşımlar",
+        "path": "Klinik Psikoloji 1/Kuramlar ve Kategorik Yaklaşımlar",
+        "url": "/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar"
       }
     ]
   },
