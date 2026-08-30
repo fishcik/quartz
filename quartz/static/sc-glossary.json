@@ -357,6 +357,17 @@
     ]
   },
   {
+    "term": "Kimyasal Gradyan ve Kemotaksi (Chemical Gradient & Chemotaxis)",
+    "desc": "Bir ortamdaki kimyasal molekül yoğunluğunun uzamsal dağılım farkı. İlkel tek hücreli organizmaların besin kaynağına yönelip (pozitif kemotaksi) toksinlerden kaçmasını (negatif kemotaksi) sağlayan en kadim biyolojik algı-hareket mekanizması.",
+    "sources": [
+      {
+        "title": "Görsel Korteks — Nesneler ve Sahneler",
+        "path": "Biliş Psikolojisi 1/Görsel Korteks — Nesneler ve Sahneler",
+        "url": "/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler"
+      }
+    ]
+  },
+  {
     "term": "Klinik Epistemoloji (Clinical Epistemology)",
     "desc": "Ruhsal sağlıkta \"normal\" ile \"anormal\" arasındaki sınırın nesnel bir gerçeklik mi yoksa kültürel, tarihsel ve değer yüklü bir uzlaşı mı olduğunu sorgulayan bilgi felsefesi dalı.",
     "sources": [
@@ -397,6 +408,17 @@
         "title": "Giriş - Normal ve Anormal",
         "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
         "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Kontralateral Görsel İşleme (Contralateral Visual Processing)",
+    "desc": "Sol görme alanındaki tüm görsel bilginin sağ beyin yarımküresine, sağ görme alanındaki bilginin ise sol beyin yarımküresine iletilerek primer görme korteksinde (V1) işlenmesi prensibi.",
+    "sources": [
+      {
+        "title": "Görsel Korteks — Nesneler ve Sahneler",
+        "path": "Biliş Psikolojisi 1/Görsel Korteks — Nesneler ve Sahneler",
+        "url": "/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler"
       }
     ]
   },
@@ -452,6 +474,17 @@
         "title": "Sigaranın Psikolojisi",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Sigara",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/sigara"
+      }
+    ]
+  },
+  {
+    "term": "Lateral Genikulat Çekirdek / LGN (Corpus Geniculatum Laterale)",
+    "desc": "Talamusta yer alan ve retinadan gelen görsel liflerin %90'ını primer görme korteksine (V1) aktaran 6 katmanlı ana duyusal istasyon. Sinyalleri sadece iletmekle kalmaz; korteksten gelen yoğun geri-bildirimle dikkat ve görsel sansür/filtreleme işlevini yürütür.",
+    "sources": [
+      {
+        "title": "Görsel Korteks — Nesneler ve Sahneler",
+        "path": "Biliş Psikolojisi 1/Görsel Korteks — Nesneler ve Sahneler",
+        "url": "/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler"
       }
     ]
   },
@@ -562,6 +595,17 @@
         "title": "Giriş - Normal ve Anormal",
         "path": "Klinik Psikoloji 1/Giriş - Normal ve Anormal",
         "url": "/klinik-psikoloji-1/giriş---normal-ve-anormal"
+      }
+    ]
+  },
+  {
+    "term": "Optik Kiazma (Optic Chiasm)",
+    "desc": "Her iki gözden çıkan optik sinirlerin beynin tabanında buluştuğu X şeklindeki anatomik kavşak. Burada her iki retinanın nazal (iç) lifleri karşı beyin yarımküresine çaprazlama geçerken (dekussasyon), temporal (dış) lifler aynı tarafta kalarak görme alanlarının kontralateral işlenmesini sağlar.",
+    "sources": [
+      {
+        "title": "Görsel Korteks — Nesneler ve Sahneler",
+        "path": "Biliş Psikolojisi 1/Görsel Korteks — Nesneler ve Sahneler",
+        "url": "/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler"
       }
     ]
   },
@@ -874,6 +918,17 @@
     ]
   },
   {
+    "term": "Öngörücü / Özyinelemeli Kodlama (Predictive Coding)",
+    "desc": "Beynin duyusal verileri pasif olarak kaydetmek yerine; önceki deneyim ve içsel modellere dayanarak sürekli olarak yukarıdan-aşağıya (top-down) duyusal tahminler ürettiğini ve sadece tahmin hatalarını yukarı ilettiğini savunan bilişsel sinirbilim modeli.",
+    "sources": [
+      {
+        "title": "Görsel Korteks — Nesneler ve Sahneler",
+        "path": "Biliş Psikolojisi 1/Görsel Korteks — Nesneler ve Sahneler",
+        "url": "/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler"
+      }
+    ]
+  },
+  {
     "term": "Öz-Düzenleme (Self-Regulation)",
     "desc": "Bireyin uzun vadeli sağlık hedeflerine ulaşmak amacıyla dürtüsel arzularını, dikkatini ve davranışlarını planlı biçimde denetleme ve yönetme kapasitesi.",
     "sources": [
@@ -897,6 +952,17 @@
         "title": "Beslenme Psikolojisi",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Beslenme",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/beslenme"
+      }
+    ]
+  },
+  {
+    "term": "Üst Tepecik / Superior Colliculus (Tekto-Pulvinar Yol)",
+    "desc": "Orta beyin tavanında (tektum) yer alan ve retinadan çıkan liflerin %10'unu alan ilkel görsel merkez. Bilinçli görmeden bağımsız olarak, periferde beliren ani hareketlere yönelik refleksif göz ve baş yönelimini (sakkadlar) koordine eder.",
+    "sources": [
+      {
+        "title": "Görsel Korteks — Nesneler ve Sahneler",
+        "path": "Biliş Psikolojisi 1/Görsel Korteks — Nesneler ve Sahneler",
+        "url": "/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler"
       }
     ]
   }
