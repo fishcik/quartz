@@ -15,39 +15,15 @@ tags:
 
 ## İçindekiler
 
-- [[#1. Algı Süreci & Psikofizik]]
-  - [[#Işık Değil Dalga Boyu — Algının İstatistiki Doğası]]
-  - [[#Uzun İnce Bir Yol: Uyarıcıdan Aksiyona 7 Durak]]
-  - [[#Mutlak Eşik]]
-  - [[#Weber Kanunu ve Fark Eşiği (JND)]]
-  - [[#Fechner'in 3 Klasik Eşik Ölçüm Yöntemi]]
-  - [[#Stevens'ın Güç Yasası: Sıkışma vs. Patlama]]
-  - [[#Sinyal Algılama Teorisi: Kulak vs. Karakter]]
-- [[#2. Duyu Fizyolojisi & Aksiyon Potansiyeli]]
-  - [[#Cajal'ın Keşfi: Nöron Doktrini]]
-  - [[#Aksiyon Potansiyeli: -70 mV Pusudan +40 mV Patlamaya]]
-  - [[#Elektrik Tesisatının 3 Değişmez Kıstası]]
-  - [[#Sinapslar: Elektrikten Kimyasal Habercilere]]
-- [[#3. Göz ve Retina]]
-  - [[#Larry Hester: 33 Yıl Karanlıkta Kalan Adam]]
-  - [[#Işık: Görme Uyarıcısı]]
-  - [[#Gözün Yapısı: Işığın İçeri Girişi]]
-  - [[#Odaklanma: Kornea ve Lens'in Görevi]]
-  - [[#Presbiyopi: Lensin Emekliliği]]
-  - [[#Kırma Kusurları: Miyopi ve Hipermetropi]]
-  - [[#Beynin Photoshop Denemesi]]
-  - [[#Exkurs: Gözlük Takmazsan Ne Olur? Realite Bulanık mı?]]
-  - [[#Retina: Işığın Aydınlattığı Mahalle]]
-  - [[#Fototransdüksiyon: Işığın Kimyasal Kıvılcımı]]
-  - [[#Karanlıkta Rodopsin Yeniden Doğuyor]]
-  - [[#Karanlık Adaptasyonu ve Kohlrausch Kırılması]]
-  - [[#Alacakaranlıkta Renklerin İhaneti: Purkinje Kayması]]
-  - [[#Fedakârlık vs. Zekâ: Konverjans (120:1 vs 1:1)]]
-  - [[#Yanal Engelleme: Limulus ve Mahalle Baskısı]]
-
+- [[#1. Algı Süreci ve Psikofiziğin Temelleri]]
+- [[#2. Duyu Fizyolojisi ve Nöronal İletim]]
+- [[#3. Gözün Optik Mimarisi ve Odaklanma]]
+- [[#4. Retinal Fototransdüksiyon ve Karanlık Adaptasyonu]]
+- [[#5. Nöral Konverjans ve Yanal Engelleme]]
+- [[#6. Yanal Engellemenin İllüzyonları: Hermann, Benary ve White]]
 ---
 
-## 1. Algı Süreci & Psikofizik
+## 1. Algı Süreci ve Psikofiziğin Temelleri
 
 Algı Psikolojisi...
 
@@ -385,7 +361,7 @@ Yani algı sadece duyu değil; aynı zamanda bir *kumar* oynama biçimidir.
 </div>
 
 
-## 2. Duyu Fizyolojisi & Aksiyon Potansiyeli
+## 2. Duyu Fizyolojisi ve Nöronal İletim
 
 Pekii... Kafanın içinde ne oluyor? Tamam, algıyı ölçtük, kararı verdik, "Aa, bir şey **var!**" dedik.. O anda beyinde nasıl bi fırtına kopuyor?
 
@@ -506,7 +482,7 @@ Eğer ulaşamıyorsa: Sükûnet.. Sessizlik. Hiçbir şey olmaz.
 
 
 
-## 3. Göz ve Retina
+## 3. Gözün Optik Mimarisi ve Odaklanma
 
 Algı *fizyolojisi* bitti... Nöronlar davulcu gibi çalıyor, sinapslar gaz-fren yapıyor. Ama bu elektrik fırtınasını başlatan neydi?
 
@@ -666,6 +642,8 @@ Doğuştan ileri derece bozuk görme ile doğan ve hiç gözlük takmamış biri
 
 
 
+## 4. Retinal Fototransdüksiyon ve Karanlık Adaptasyonu
+
 ### Retina: Işığın Aydınlattığı Mahalle
 
 *Işık içeri girdi, kornea kırdı, lens ince ayarı yaptı, görüntü retinaya düştü.*
@@ -776,6 +754,8 @@ Kırmızı çiçeğin yaprakları aynı ışığı yansıtıyor. Ama o ışığ�
 Bu da yine aynı hikayeye bağlanıyor: **Renk dışarıda yok. Renk, hangi hücrenin hangi dalga boyunu yakaladığına ve beynin onu nasıl yorumladığına bağlı.**
 
 
+## 5. Nöral Konverjans ve Yanal Engelleme
+
 ### Fedakârlık vs. Zekâ: Konverjans (120:1 vs 1:1)
 
 Gözün fırsatçı mühendisliğine bakalım: Çubuklar ile koniler, beyne giden yolda farklı bağlantı stratejileri kullanır. 
@@ -850,7 +830,7 @@ Bu baskı Limulus'un gözünde **lateral pleksus** isimli sinir ağı aracılı�
 
 ---
 
-### Yanal Engellemenin İllüzyonları: Hermann, Benary ve White
+## 6. Yanal Engellemenin İllüzyonları: Hermann, Benary ve White
 
 Yanal engelleme sadece biyolojik bir sinyal filtreleme yöntemi değil; aynı zamanda algı dünyamızın en ünlü görsel illüzyonlarının da arkasındaki mekanizmadır:
 

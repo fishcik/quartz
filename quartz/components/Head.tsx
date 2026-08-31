@@ -904,7 +904,13 @@ function scSortRecentNotes(){
       var bDate=DATE_MAP[bTitle]||'2026-01-01';
       return bDate.localeCompare(aDate);
     });
-    validLis.forEach(function(li){
+    validLis.forEach(function(li, idx){
+      li.classList.remove('rp-1','rp-2','rp-3','rp-4');
+      if(idx === 0) li.classList.add('rp-1');
+      else if(idx === 1) li.classList.add('rp-2');
+      else if(idx === 2) li.classList.add('rp-3');
+      else if(idx === 3) li.classList.add('rp-4');
+
       var a=li.querySelector('.desc h3 a')||li.querySelector('a');
       var timeEl=li.querySelector('.meta time, time');
       if(a && timeEl){
@@ -916,6 +922,14 @@ function scSortRecentNotes(){
       }
       ul.appendChild(li);
     });
+    // Add "Tüm Yazılar..." button under recent-notes
+    var rnCont = ul.closest('.recent-notes');
+    if(rnCont && !rnCont.querySelector('.sc-all-notes-btn-wrap')){
+      var btnWrap = document.createElement('div');
+      btnWrap.className = 'sc-all-notes-btn-wrap';
+      btnWrap.innerHTML = '<a href="/tum-yazilar" class="sc-all-notes-btn">Tüm Yazılar &rarr;</a>';
+      rnCont.appendChild(btnWrap);
+    }
   });
 }
 // Sayfanın sağ kenarı ile içerik kutusu arası mesafe (scrollbar hariç) → SBB/kuyruk

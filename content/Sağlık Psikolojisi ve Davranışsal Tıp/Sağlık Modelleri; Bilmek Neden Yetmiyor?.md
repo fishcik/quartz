@@ -1,5 +1,5 @@
 ---
-title: Sağlık Modelleri; Bilmek Neden Yetmiyor?
+title: "Sağlık Modelleri; Bilmek Neden Yetmiyor?"
 date: 2026-06-13
 tags:
   - sağlık-psikolojisi

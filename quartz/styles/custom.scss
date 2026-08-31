@@ -1339,7 +1339,7 @@ footer .sc-sign {
   padding: 10px 14px 14px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center !important;
   border-top: 1px dashed rgba(200, 16, 46, 0.2);
   box-sizing: border-box;
 }
@@ -2479,11 +2479,44 @@ html[saved-theme="dark"] .cg-cell,
   margin-bottom: 0.25rem;
 }
 
-.page-footer .recent-notes .recent-li.rp-1 .desc h3 { font-size: 1.6rem !important; }
-.page-footer .recent-notes .recent-li.rp-2 .desc h3 { font-size: 1.2rem !important; }
-.page-footer .recent-notes .recent-li.rp-3 .desc h3 { font-size: 1rem  !important; }
-// Yalnız ilk 3 yazı (hiyerarşi)
-.page-footer .recent-notes .recent-li:nth-child(n+4) { display: none; }
+.page-footer .recent-notes .recent-li.rp-1 .desc h3 { font-size: 1.65rem !important; }
+.page-footer .recent-notes .recent-li.rp-2 .desc h3 { font-size: 1.35rem !important; }
+.page-footer .recent-notes .recent-li.rp-3 .desc h3 { font-size: 1.12rem !important; }
+.page-footer .recent-notes .recent-li.rp-4 .desc h3 { font-size: 0.95rem !important; }
+// Yalnız ilk 4 yazı (hiyerarşi)
+.page-footer .recent-notes .recent-li:nth-child(n+5) { display: none; }
+
+// Tüm Yazılar Butonu (Anasayfa Altı)
+.sc-all-notes-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.8rem 0 0.5rem;
+}
+.sc-all-notes-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent, #C8102E) !important;
+  background: rgba(200, 16, 46, 0.06);
+  border: 1.5px solid rgba(200, 16, 46, 0.35);
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: all 200ms ease;
+
+  &:hover {
+    background: var(--accent, #C8102E);
+    border-color: var(--accent, #C8102E);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(200, 16, 46, 0.25);
+  }
+}
 
 // ─── Görev 1.4b: Sol sütun "Son Yazılar" accordion ───
 .rp-accordion {
@@ -2673,26 +2706,23 @@ body[data-slug$="/index"] {
     pointer-events: none;
     transition: color 180ms ease, transform 180ms ease, opacity 180ms ease;
   }
-  // Konu Başlığı: Josefin Sans, Max 3 Satır, Okunaklı ve Net
+  // Konu Başlığı: Josefin Sans 0.75rem, Kesintisiz, Tam Okunur
   .page-listing .section-li .desc h3 a .sc-hx-label {
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 92% !important;
+    display: block !important;
+    max-width: 96% !important;
     margin: 0 auto !important;
     color: inherit;
     font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 0.82rem !important;
+    font-size: 0.75rem !important;
     font-weight: 700 !important;
     font-style: normal !important;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     text-align: center !important;
-    line-height: 1.12 !important;
+    line-height: 1.13 !important;
     padding: 0 2px;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: break-word;
     hyphens: auto;
   }
   .page-listing .section-li .desc h3 a:hover .sc-hx-glyph { color: #ffffff !important; opacity: 1 !important; transform: translateY(-17px) scale(1.1) !important; }
