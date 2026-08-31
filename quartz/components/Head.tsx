@@ -370,6 +370,9 @@ function ensure(){
       if(typeof window.scToggleBionicReading==='function') window.scToggleBionicReading();
       else if(typeof scToggleBionicReading==='function') scToggleBionicReading();
     });
+    // Mail Tuşu (@) - Kırmızı minimalist link
+    var bm=document.createElement('a');bm.className='sc-toolbtn sc-mailbtn';bm.href='mailto:cio@sayko.ch';bm.title='cio@sayko.ch';bm.setAttribute('aria-label','E-posta: cio@sayko.ch');
+    bm.innerHTML='<span style="font-weight:700;font-size:14px;color:#C8102E;font-family:monospace;line-height:1;">@</span>';
     // Geri (tarayıcı geçmişi)
     var bb=document.createElement('button');bb.type='button';bb.className='sc-toolbtn sc-backbtn';bb.title='Geri';bb.setAttribute('aria-label','Geri');
     bb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
@@ -377,7 +380,7 @@ function ensure(){
     sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
-    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bg);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
+    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bg);sbbTools.appendChild(bt);sbbTools.appendChild(bf);sbbTools.appendChild(bm);
     sbb.appendChild(sbbTools);
     // Clock — lüks kasa + Türkçe tarih + saniyeyi gösteren zarif SERPENT ibresi
     var ticks='';for(var i=0;i<60;i++){var a=i*6*Math.PI/180;var isH=(i%5===0);var r1=isH?38.5:41.5,r2=45;var x1=50+r1*Math.sin(a),y1=50-r1*Math.cos(a),x2=50+r2*Math.sin(a),y2=50-r2*Math.cos(a);ticks+='<line x1="'+x1.toFixed(2)+'" y1="'+y1.toFixed(2)+'" x2="'+x2.toFixed(2)+'" y2="'+y2.toFixed(2)+'" class="sc-tick'+(isH?' sc-tick-h':'')+'"/>';}
@@ -851,6 +854,8 @@ function scFitHex(){
 function scSortRecentNotes(){
   var rns=document.querySelectorAll('.recent-notes .recent-ul');
   var DATE_MAP={
+    'GORSEL KORTEKS NESNELER VE SAHNELER': '2026-08-30',
+    'KURAMLAR VE KATEGORIK YAKLASIMLAR': '2026-08-27',
     'GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA': '2026-08-20',
     'GIRIS NORMAL VE ANORMAL': '2026-07-03',
     'GUNESTEN KORUNMA': '2026-06-25',
@@ -864,6 +869,7 @@ function scSortRecentNotes(){
     'SAGLIK MODELLERI BILMEK NEDEN YETMIYOR': '2026-06-13',
     'SAGLIK PSIKOLOJISI NEDIR VE NEDEN VAR': '2026-06-07',
     'GIRIS GELISIM PSIKOLOJISININ KONUSU VE GOREVLERI': '2026-06-04',
+    'GIRIS AMPIRIK BIR BILIM OLARAK PSIKOLOJI': '2026-06-01',
     'GIRIS': '2026-06-04'
   };
   rns.forEach(function(ul){
@@ -1253,14 +1259,7 @@ function scSerpentHr(){
 // ── Görev: Animasyonlu zarf (mailto:cio@sayko.ch) — sol alt köşede sabit minik buton
 // ("sayfa yukarı" butonunun ayna konumu). Body seviyesinde, oturumda bir kez. ──
 function scFooterMail(){
-  if(document.querySelector('.sc-mail-link'))return;
-  var a=document.createElement('a');
-  a.className='sc-mail-link';a.href='mailto:cio@sayko.ch';a.title='cio@sayko.ch';a.setAttribute('aria-label','E-posta: cio@sayko.ch');
-  a.innerHTML='<span class="sc-mail"><span class="animated-mail">'+
-    '<span class="body"></span><span class="top-fold"></span><span class="back-fold"></span><span class="left-fold"></span>'+
-    '<span class="letter"><span class="letter-border"></span><span class="letter-title"></span><span class="letter-context"></span><span class="letter-stamp"></span></span>'+
-    '</span><span class="shadow"></span></span>';
-  document.body.appendChild(a);
+  // Deprecated: Mail button moved to SBB toolbar
 }
 // ── Görev 3b: Konu makalesinde başlığın üstüne büyük, ortalı hiyeroglif ──
 function scArticleGlyph(){

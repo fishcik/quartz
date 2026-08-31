@@ -1,5 +1,5 @@
 ---
-title: Giriş - Gelişim Psikolojisinin Konusu ve Görevleri
+title: "Giriş: Gelişim Psikolojisinin Konusu ve Görevleri"
 date: 2026-06-04
 tags:
   - gelişim-psikolojisi-1
@@ -25,7 +25,7 @@ tags:
 ## 1. Gelişimin Temel İlkeleri ve Doğası
 
 ---
-title: Giriş
+title: Giriş: Gelişim Psikolojisinin Konusu ve Görevleri
 date: 2026-06-04
 tags:
   - gelişim-psikolojisi-1

@@ -1,5 +1,5 @@
 ---
-title: Giriş - Normal ve Anormal
+title: "Giriş: Normal ve Anormal"
 date: 2026-07-03
 tags:
   - klinik-psikoloji-1

@@ -1,5 +1,5 @@
 ---
-title: Giriş — Algı, Duyu Fizyolojisi, Göz ve Retina
+title: "Giriş: Algı, Duyu Fizyolojisi, Göz ve Retina"
 date: 2026-08-20
 tags:
   - bilişsel-psikoloji-1
