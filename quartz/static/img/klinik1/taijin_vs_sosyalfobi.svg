@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 340" width="100%" height="auto" style="background:#ffffff; border-radius:8px;">
+  <defs>
+    <style>
+      .hdr { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 700; }
+      .sub { font-family: 'Source Serif 4', Georgia, serif; font-size: 13px; font-weight: 600; }
+      .quote-txt { font-family: 'Source Serif 4', Georgia, serif; font-size: 13px; font-style: italic; }
+      .bullet { font-family: 'Source Serif 4', Georgia, serif; font-size: 12px; fill: #2d261e; }
+      .meta-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="740" height="340" fill="#fdfcf9"/>
+
+  <!-- Left Card: Bati / Bireyci Sosyal Fobi -->
+  <g transform="translate(25, 20)">
+    <rect width="330" height="300" rx="8" fill="#fff9f9" stroke="#C8102E" stroke-width="2"/>
+    <!-- Card Header Banner -->
+    <rect width="330" height="42" rx="8" fill="#C8102E"/>
+    <text x="165" y="27" class="hdr" fill="#ffffff" text-anchor="middle">BATI / BİREYSEL SOSYAL FOBİ</text>
+    
+    <text x="165" y="70" class="sub" fill="#C8102E" text-anchor="middle">Odak Noktası: "Ben-Merkezli" Tehdit</text>
+    
+    <!-- Quote Pill -->
+    <rect x="20" y="85" width="290" height="38" rx="6" fill="#fbeef0" stroke="#f0b6bd" stroke-width="1"/>
+    <text x="165" y="109" class="quote-txt" fill="#900b1f" text-anchor="middle">"Beni yetersiz, gülünç görürler mi?"</text>
+    
+    <!-- Bullets -->
+    <text x="30" y="152" class="bullet"><tspan font-weight="bold" fill="#900b1f">• Temel Duygu:</tspan> Bireysel Utanç ve Yargılanma</text>
+    <text x="30" y="180" class="bullet"><tspan font-weight="bold" fill="#900b1f">• Bilişsel Şema:</tspan> Performans Başarısızlığı Korkusu</text>
+    <text x="30" y="208" class="bullet"><tspan font-weight="bold" fill="#900b1f">• Kültürel Zemin:</tspan> Bireyci / Öz-Yetkinlik Baskısı</text>
+    <text x="30" y="236" class="bullet"><tspan font-weight="bold" fill="#900b1f">• Davranışsal Kaçınma:</tspan> Sosyal Sahneden Çekilme</text>
+
+    <!-- DSM Badge -->
+    <rect x="20" y="256" width="290" height="30" rx="4" fill="#C8102E"/>
+    <text x="165" y="276" class="meta-tag" fill="#ffffff" text-anchor="middle">DSM-5 KODU: 300.23 (Sosyal Anksiyete)</text>
+  </g>
+
+  <!-- Right Card: Dogu / Kolektivist Taijin Kyofusho -->
+  <g transform="translate(385, 20)">
+    <rect width="330" height="300" rx="8" fill="#fcf9f5" stroke="#a07142" stroke-width="2"/>
+    <!-- Card Header Banner -->
+    <rect width="330" height="42" rx="8" fill="#a07142"/>
+    <text x="165" y="27" class="hdr" fill="#ffffff" text-anchor="middle">DOĞU / TAİJİN KYOFUSHO (TKS)</text>
+    
+    <text x="165" y="70" class="sub" fill="#a07142" text-anchor="middle">Odak Noktası: "Öteki-Merkezli" Tehdit</text>
+    
+    <!-- Quote Pill -->
+    <rect x="20" y="85" width="290" height="38" rx="6" fill="#f4ece1" stroke="#dfc7ab" stroke-width="1"/>
+    <text x="165" y="109" class="quote-txt" fill="#6d461f" text-anchor="middle">"Bakışımla başkasını rahatsız eder miyim?"</text>
+    
+    <!-- Bullets -->
+    <text x="30" y="152" class="bullet"><tspan font-weight="bold" fill="#6d461f">• Temel Duygu:</tspan> Grubu Huzursuz Etme Suçluluğu</text>
+    <text x="30" y="180" class="bullet"><tspan font-weight="bold" fill="#6d461f">• Bilişsel Şema:</tspan> Sosyal Uyumu Bozma Dehşeti</text>
+    <text x="30" y="208" class="bullet"><tspan font-weight="bold" fill="#6d461f">• Kültürel Zemin:</tspan> Kolektivist / Grup Harmonisi</text>
+    <text x="30" y="236" class="bullet"><tspan font-weight="bold" fill="#6d461f">• Davranışsal Kaçınma:</tspan> Başkalarını Korumak İçin İzolasyon</text>
+
+    <!-- DSM Badge -->
+    <rect x="20" y="256" width="290" height="30" rx="4" fill="#a07142"/>
+    <text x="165" y="276" class="meta-tag" fill="#ffffff" text-anchor="middle">DSM-5 KODU: DOĞRUDAN KOD YOK (CFI)</text>
+  </g>
+</svg>

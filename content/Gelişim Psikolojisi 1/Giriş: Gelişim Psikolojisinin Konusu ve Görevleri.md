@@ -14,7 +14,7 @@ tags:
 ## İçindekiler
 
 - [[#1. Gelişimin Temel İlkeleri ve Doğası]]
-- [[#2. Zaman Pencereleri: Kritik[^kritik-donem] ve Hassas Dönemler]]
+- [[#2. Zaman Pencereleri: Kritik ve Hassas Dönemler]]
 - [[#3. Gelişim Psikolojisi Neye Yarıyor?]]
 - [[#4. Biyoloji vs. Çevre: Genetik ve Epigenetik]]
 - [[#5. Bağlamsal Sistemler ve Bireysel Eylemlilik]]
@@ -75,7 +75,7 @@ Ya da yenidoğanların suyun altında refleks olarak nefes tutabilmeleri ve yüz
 
 **Bunun nörobilimdeki adı synaptic pruning, yani beyin gereksiz bağlantıları buduyor, verimli olanları güçlendiriyor.**
 
-## 1. Gelişimin Temel İlkeleri ve Doğası
+
 
 ### Kısa anlık değişimler gelişim değil, bunu biliyoruz. 
 
@@ -181,13 +181,9 @@ Yani burda bahsedilen şey*saf olgunlaşma*, çevrenin ve kişinin kendisinin hi
 
 Bu yüzden de salt olarak biyolojinin işi diyebileceğimiz örnekler çok az. Biyoloji bir temel kuruyor. Yapının hepsini oluşturmuyor.
 
-#
+## 2. Zaman Pencereleri: Kritik ve Hassas Dönemler
 
-# 2. Zaman Pencereleri: Kritik ve Hassas Dönemler
-
-#
-
-## Pencere Açık, Pencere Kapandı
+### Pencere Açık, Pencere Kapandı
 
 Davranış psikolojisinin söylediği sert bir kavram bu; bazı öğrenmeler geri alınamaz ve sadece belirli bir zaman diliminde olabilir. 
 
@@ -221,9 +217,7 @@ Bu vakaların 2/3'ü 15 yaşına kadar devam etti.
 >Ama 3-4 yaş seviyesinde kaldı. 
 >***Pencere kapanmıştı.*** İki vakadan da çıkan şey aynı: hassas dönemlerde kaçırılan şey, sonradan tam olarak telafi edilemiyor. Plastisite var, evet, ama o da sınırlı. Tamam beyin hamur gibi, ama sonsuza kadar değil.
 
-#
-
-## Stabilite - Ama hangisi?
+### Stabilite - Ama Hangisi?
 
 Gelişim psikolojisi değişmi inceliyor. Değişimin tam karşısında ne var? Stabilite.  
 Yani bir özellik, bir davranış, bir örüntü zaman içinde **aynı kaldı** mı?
@@ -250,9 +244,7 @@ Kişinin kendi içindeki sıralama sabit mi?
 1b: Herkes yükseldi ama sıralama değişmedi. Ortalama değişti ama pozisyonlar sabit. 
 1c: Ortalama aynı kaldı ama pozisyonlar alt-üst oldu.
 
-#
-
-## Süreklilik - Geçmiş geleceği yazıyor mu? 
+### Süreklilik - Geçmiş Geleceği Yazıyor mu? 
 
 İnsanlar arasındaki farklılıklar zaman içinde tutarlı mı kalıyor?
 
@@ -280,13 +272,9 @@ Ama o çocuğun bebek dönemindeki davranışlarından bi şeyler okuyabilirsin.
 
 Bunun bi sonraki adımı da: o bebek ağlamasından yetişkinlik nevrotikliğine giden ***aradaki adımlar*** ne? Hangi mekanizmalardan geçerek dönüşüyor?
 
-#
+## 3. Gelişim Psikolojisi Neye Yarıyor?
 
-# 3. Gelişim Psikolojisi Neye Yarıyor?
-
-#
-
-## Betimleme, Açıklama, Tahmin ve Müdahale
+### Betimleme, Açıklama, Tahmin ve Müdahale
 
 4 temel görevi var. 
 
@@ -309,13 +297,9 @@ Kesin değil olasılıksal. Ya geçmişteki koşullardan geleceği  ya da bir ö
 **Değiştirebilir miyiz?** Müdahale edince ne oluyor? Plastisite nereye kadar gidiyor? 
 Pratik boyutta doğrudan istenmeyen bir gelişimi önlemek, bir hasarı geri almak, ya da genel olarak gelişimi desteklemek.
 
-#
+## 4. Biyoloji vs. Çevre: Genetik ve Epigenetik
 
-# 4. Biyoloji vs. Çevre: Genetik ve Epigenetik
-
-#
-
-## Her Şey Her Şeyi Etkiliyor
+### Her Şey Her Şeyi Etkiliyor
 *Biyoloji, sosyal çevre, kültür, tarihsel bağlam ve kişinin kendi eylemleri.* 
 Hepsi aynı anda birbirini etkileyen bir ağ içinde çalışıyor. 
 
@@ -333,9 +317,7 @@ Yani çevre geni*değiştirmiyor* ama geni açıp kapatıyor, yükseltip kısıy
 
 Gen/Çevre, ikisi sürekli birbirini yazıp siliyor.
 
-#
-
-## Genetik 101 - DNA
+### Genetik 101 - DNA
 
 23 çift kromozomumuz oluyor genelde. 
 Her çiftin biri anadan biri babadan. 
@@ -360,9 +342,7 @@ Bunun cevabı, genlerin mi çevrenin mi daha ağır bastığını söylüyor.
 
 Moleküler genetik çalışmaları direkt spesifik alellere bakıp "bu alel şu özellikle ilişkili mi" diye sorabiliyor.
 
-#
-
-## İkiz Çalışmaları
+### İkiz Çalışmaları
 
 İkizler doğanın kontrol grubu gibi. 
 
@@ -383,9 +363,7 @@ Aynı evde büyüseler de her ikizin ayrı yaşadığı şeyler var. Biri daha �
 
 >Yani aynı genler, aynı ev. Ama yine de farklılaşabiliyorlar. Çünkü hayat tam olarak aynı akamaz.
 
-#
-
-## Kalıtım
+### Kalıtım
 
 Bir popülasyondaki bireysel farklılıkların ne kadarının genden kaynaklandığını gösteren istatistiksel bir tahmin. 
 
@@ -408,9 +386,7 @@ Baskın gen etkileri ikiz çalışmalarında "abartı" çıkarken, evlat edinme 
 Hem genetik olarak identikler, hem çevreleri farklı. 
 Bu iksinin kesişimi çok daha temiz bi tablo veriyor.
 
-#
-
-## Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)
+### Çevre Geni Çağırıyor (Gen Çevreyi Seçiyor)
 
 Gen ve çevre sürekli birbirini şekillendiriyor. Bu etkileşimin nasıl olduğuna dair çeşitli mekanizmalar var. 
 
@@ -427,10 +403,8 @@ Gen davranışı tetikledi > davranış çevreyi
 
 Yani gen direkt çevreyi değiştirmiyor. Davranış üzerinden dolaylı etkiliyor. 
 
-
 >***Aktif Kovaryasyon***>*** Artık sen seçiyorsun**Büyüdükçe kendi çevremizi kendimizin inşa etmesi. Müzik konservatuvarına başvurmak, o grubu kurmak, o insanları bulmak. 
 Gen artık seni*yönlendiriyor*. Sen de çevreyi* ona göre* şekillendiriyorsun. 
-
 
 >**Tüm bunlar ancak çevre bir miktar hareket alanı sunuyorsa çalışıyor. Aktive olacak/olabilecek çevre yoksa, gen orada kalıyor.** Gen kader değil. Ama fırsat garantili de değil. 
 
@@ -455,7 +429,6 @@ Zaten evrimsel mantığa göre her ikisi de bir strateji.
 Karahindiba olmak kötü çevrelerde **hayatta kalmayı garantiliyor.** Orkide olmak iyi çevrelerde* maksimum potansiyeli açıyor. 
 İkisi de farklı ortamlarda işe yarıyor. 
 
-
 Peki bu soyut bir metafor mu? Değil. 
 
 Şöyle düşünebiliriz: önümüzde ses kaynağına bağlı bir amfi/hoparlör var. Amfinin gücü yüksekse (w), iyi bir sinyal geldiğinde muhteşem ses çıkar. Sinyal bozuksa, o bozukluğu da muhteşem şekilde yükseltir. 
@@ -469,9 +442,7 @@ Kötü ebeveynlik? >: Derin hasar.
 
 Karahindidiba: Çevre ne yaparsa yapsın, sistem o kadar güçlü tepki vermiyor. Ne muhteşem bir yükseliş ne de derin bir çöküş. Sinyal *zayıf* geçiyor.
 
-#
-
-## Yaşlılık: Gen vs Çevre
+### Yaşlılık: Gen vs Çevre
 
 Yaşlandıkça çevre birikir, gen etkisi azalır. Ne kadar çok deneyim, ne kadar çok iş, okul, insan, olay, o kadar çok çevre etkisi. 
 
@@ -486,20 +457,15 @@ Bunlar genin seni yönlendirdiği seçimler.
 Aktif kovaryasyon devreye giriyor. 
 *Ve gen giderek daha fazla "kendine uygun" çevreyi seçtiriyor sana.* Yani gen etkisi artmıyor aslında. Gen artık kendi çevresini de yaratıyor, bu yüzden ölçümde daha*güçlü* görünüyor. 
 
-
 >Metodolojik uyarı: bebeklerdeki ölçümler ebeveyn değerlendirmesine dayanıyor. Çocuğun duygusal, öfkeli, dikkatsiz olup olmadığını anne baba cevaplıyor.
 >Gençlerde ise kişinin kendi değerlendirmesi kullanılıyor. 
 >İki farklı ölçüm bunlar aslında, karşılaştırırken dikkatli olmak lazım...
 
 Ayrıca, bazı genler zaten geç devreye giriyor. Ergenlikte, yetişkinlikte aktive oluyor. Bebeklikte istediğin kadar ölç, göremezsin. O yüzden erken dönemde gen etkisi bazı kıstaslar için **hep** düşük çıkıyor olabilir.
 
-#
+## 5. Bağlamsal Sistemler ve Bireysel Eylemlilik
 
-# 5. Bağlamsal Sistemler ve Bireysel Eylemlilik
-
-#
-
-## "Ortalama" yeterli mi?
+### "Ortalama" Yeterli mi?
 
 Scarr (1992) zamanında sert bi şekilde sormuş: 
 >***"Gen etkisi bu kadar güçlüyse, ebeveynliğin önemi ne?"*** Genler işini yapar. Eğer çevre en azından ortalama ise. Çocuk genetik olarak sağlıklıysa ve***aşırı** kötü bir ortamda büyümüyorsa zaten gelişir. Genler işini yapacak, çocuk kültürel normlara* uygun*bir şekilde büyüyecek. 
@@ -514,9 +480,7 @@ Sosyalizasyoncular bunu duyunca ayağa kalktı. Çünkü pek çok çalışma gö
 İkisinin gerçek uzlaşma noktasına şöyle bakabiliriz ama: 
 > **Ebeveynlerin etkisi genler tarafından sınırlandırılıyor. O sınırlar içinde hareket alanı var. O alanda iyi ebeveynlik fark yaratıyor.** Gen bir tavan/limit koyuyor. Ebeveynlik de o limite kadar oynama hakkına sahip.
 
-#
-
-## Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin
+### Ortadasın Ama Çok Daha Büyük Bir Şeyin İçindesin
 
 ![[Bildschirmfoto 2026-06-03 um 20.22.32.png]]
 
@@ -560,21 +524,15 @@ Tabi her şey "hallolsa" bile realite duvarı devreye girer.
 
 Hedefler de değiştiği için zamanla, insan hayatının çeşitli evrelerinde çeşitli şekillerde inşa ediyor kendini.
 
-#
-
-## Kelebek Etkisi
+### Kelebek Etkisi
 
 Bazen gelişimi kasıtlı olarak değil, yan ürün olarak etkiliyorsun. Günlük hayattaki plansız, anlık ortaya çıkan bir davranış, çevre üzerinde bir reaksiyon zinciri tetikler. Çevre öyle bir geri bildirim verir ki, dönüp dolaşıp senin gelişim şartlarını baştan aşağı değiştirir.
 
 **Yani ne demek bu?** Bilinçli bir hedef gütmeden attığın o rastgele adım, yan ürün olarak senin 10 yıl sonraki gerçekliğini inşa edebilir, seçimler niyeti aşar.
 
-#
+## 6. Disiplinin Tarihi ve Çağdaş 4 Trend
 
-# 6. Disiplinin Tarihi ve Çağdaş 4 Trend
-
-#
-
-## Çocuğun İcadı ve İlk Günlükler
+### Çocuğun İcadı ve İlk Günlükler
 
 Antik Yunan filozofları hayatı yaş dönemlerine bölüyordu ve her evrenin getirdiği avantaj ve dezavantajları felsefi olarak masaya yatırmışlardı. 
 
@@ -613,9 +571,7 @@ William T. Preyer (1841–1897) de kendi çocuğunu izledi, ama nasıl izlediği
 -*Gördüğünü hemen yaz, bekleme. Anında dokümentasyon. Hafızanın manipülasyonuna izin verilmeden kaydetmek.*-* Kendi gözlemini başkasına doğrulat. 
 - *Tek anlık bir kesit alma. Rastlantısal verilerden kaçınmak için sistematik olarak tekrarlanan gözlemler.* Bu metodolojik disiplin sayesinde çocuk, üzerinde spekülatif bir sürü şeyin söylendiği edebi bir "figür" olmaktan çıkıp, incelenebilen bir özneye dönüşmüştür.
 
-#
-
-## Kurumsallaşma ve Teorik Yükseliş
+### Kurumsallaşma ve Teorik Yükseliş
 
 Sadece 1890 ile 1915 yılları arasında 21 tane çocuk psikoljisi dergisi kuruldu ve 26 üniversite enstitüsü açıldı. 20. yüzyılın başlarında kabuğunu kırıp resmen akademik çılgınlığa dönüştüğü dönem tam. 
 Bi tarafta psikanaliz ve davranışçılık gibi genel psikoloji devleri. 
@@ -630,9 +586,7 @@ Bi tarafta psikanaliz ve davranışçılık gibi genel psikoloji devleri.
 İlk başta çocukluk ve ergenliği ölçmek için yola çıkılan çalışmaların orda durmaması ve devam etmesi sonucunda, katılımcıların yetişkinliği de yaşlılığı da çalışmaya dahil oldu. 
 Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 
-#
-
-## Çağdaş Paradigma, 4 Trend
+### Çağdaş Paradigma, 4 Trend
 
 >1) Yaşam Boyu Perspektifi
 >*Sanki insan yetişkinliğe girince donup kalıyor gibi, 1970'lere kadar alan neredeyse sadece çocukluk ve ergenliğe odaklanmıştı. 
@@ -649,35 +603,26 @@ Gelişim psikolojisinin omurgasını oluşturan çalışmalar.
 >4) Uygulama
 >Bilimsel bulgular artık doğrudan politikaya, eğitime, kliniğe giriyor. Alan sadece anlamakla kalmayıp değiştiriyor da. 
 
-
 ***Gelişim psikolojisi bilim olarak 135 yıllık ama insan anlamaya çalıştığından beri bu sorular hep vardı zaten.***
 
 ---
 
-#
-
-# Kaynaklar
-
-- Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
-- Bronfenbrenner, U. (1979). *The ecology of human development: Experiments by nature and design*. Harvard University Press. https://doi.org/10.2307/j.ctv2607144
-- Meaney, M. J. (2010). Epigenetics and the biological definition of gene × environment interactions. *Child Development*, 81(1), 41–79. https://doi.org/10.1111/j.1467-8624.2009.01381.x
-- Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press. https://doi.org/10.1037/11494-000
-
-[^1]: Ontojenez (Ontogeny): Bireysel bir organizmanın döllenmeden ölüme kadar geçen yaşam süresince geçirdiği yapısal, biyolojik ve psikolojik gelişimsel süreç.
-[^2]: Plastisite (Plasticity): Beynin ve bilişsel sistemlerin deneyim, öğrenme ve çevresel uyaranlara bağlı olarak yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.
-[^3]: Epigenetik (Epigenetics): DNA diziliminde değişiklik olmaksızın, çevresel etkilerle genlerin aktifleşmesini veya sessizleşmesini sağlayan hücresel mekanizmalar.
-[^4]: Hassas Dönem (Sensitive Period): Beynin belirli becerileri kazanmaya maksimum duyarlı olduğu, ancak kaçırılsa dahi telafisinin mümkün olduğu gelişimsel aralık.
 ---
 
-[^plastisite]: **Nöral ve Davranışsal Plastisite (Plasticity):** Sinir sisteminin ve bilişsel/davranışsal işlevlerin çevresel deneyimler, öğrenme veya beyin hasarları karşısında yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.
-[^epigenetik]: **Epigenetik (Epigenetics):** DNA baz diziliminde bir mutasyon olmaksızın, çevresel faktörlerin (stres, beslenme vb.) gen ekspresyonunu (açılıp kapanmasını) metilasyon gibi mekanizmalarla kalıcı olarak değiştirmesi bilimi.
-[^kritik-donem]: **Kritik Dönem (Critical Period):** Belirli bir biyolojik/bilişsel yetinin (örneğin dil veya binoküler görme) gelişebilmesi için organizmanın belirli çevresel uyaranlara maruz kalmasının mutlak zorunlu olduğu sınırlı zaman aralığı.
-
----
+[^ontogenez]: **Ontogenez (Ontogeny):** Bireysel bir organizmanın döllenmeden ölüme kadar geçirdiği tüm yapısal, psikolojik ve morfolojik gelişim süreci.
+[^kazanc-kayip-dengesi]: **Kazanç ve Kayıp Dinamiği (Multidirectionality):** Yaşam boyu gelişim perspektifinde (Baltes) her gelişimsel basamağın aynı anda hem yeni yetiler kazanımı hem de belirli biyolojik/bilişsel kapasitelerin terk edilmesiyle gerçekleştiği ilkesi.
+[^plastisite]: **Gelişimsel Plastisite (Developmental Plasticity):** Bireyin biyolojik ve psikolojik sistemlerinin çevresel taleplere, travmalara veya eğitime yanıt olarak yapısal ve işlevsel esneklik gösterebilme kapasitesi.
+[^kritik-donem]: **Kritik Dönem (Critical Period):** Belirli bir bilişsel veya biyolojik yetinin (örneğin dil veya binoküler görme) gelişebilmesi için organizmanın belirli çevresel uyaranlara maruz kalmasının mutlak zorunlu olduğu sınırlı zaman aralığı.
+[^hassas-donem]: **Hassas Dönem (Sensitive Period):** Organizmanın belirli deneyimlere ve öğrenmelere karşı biyolojik olarak maksimum duyarlılık gösterdiği, ancak bu aralık kaçırılsa dahi sonradan telafinin (daha zor olsa da) mümkün olduğu zaman penceresi.
+[^epigenetik]: **Epigenetik (Epigenetics):** DNA diziliminde herhangi bir baz değişikliği olmadan, çevresel faktörlerin (stres, beslenme vb.) genlerin aktifleşme veya susturulma paternlerini (metilasyon, histon modifikasyonu) kalıcı olarak değiştirmesi bilimi.
+[^biyolojik-gomulme]: **Biyolojik Gömülme (Biological Embedding):** Erken çocukluktaki ağır psikososyal stresörlerin sinir, bağışıklık ve endokrin sistem mimarisine fizyolojik izler bırakarak yaşam boyu sağlık ve davranış kalıplarını kalıcı olarak belirlemesi.
+[^bronfenbrenner-biyoekolojik]: **Biyoekolojik Sistemler Modeli (Bioecological Model):** Bireysel gelişimin mikrosistem (aile), mezosistem, ekzosistem ve makrosistem (kültürel normlar) katmanlarının karşılıklı ve dinamik etkileşimiyle şekillendiğini savunan Bronfenbrenner kuramı.
 
 ## Kaynaklar
 
 - Baltes, P. B. (1987). Theoretical propositions of life-span developmental psychology: On the dynamics between growth and decline. *Developmental Psychology*, 23(5), 611–626. https://doi.org/10.1037/0012-1649.23.5.611
-- Bowlby, J. (1982). *Attachment and loss: Vol. 1. Attachment* (2nd ed.). Basic Books.
-- Piaget, J. (1952). *The origins of intelligence in children*. International Universities Press.
-- Waddington, C. H. (1957). *The strategy of the genes*. George Allen & Unwin.
+- Bronfenbrenner, U., & Morris, P. A. (2006). The bioecological model of human development. In R. M. Lerner & W. Damon (Eds.), *Handbook of child psychology: Theoretical models of human development* (pp. 793–828). John Wiley & Sons.
+- Caspi, A., McClay, J., Moffitt, T. E., Mill, J., Martin, J., Craig, I. W., Taylor, A., & Poulton, R. (2002). Role of genotype in the cycle of violence in maltreated children. *Science*, 297(5582), 851–854. https://doi.org/10.1126/science.1072290
+- Gottlieb, G. (2007). Probabilistic epigenesis. *Developmental Science*, 10(1), 1–11. https://doi.org/10.1111/j.1467-7687.2007.00556.x
+- Plomin, R., DeFries, J. C., Knopik, V. S., & Neiderhiser, J. M. (2016). *Top 10 replicated findings from behavioral genetics*. Perspectives on Psychological Science, 11(1), 3–23. https://doi.org/10.1177/1745691615617763
+- Scarr, S., & McCartney, K. (1983). How people make their own environments: A theory of genotype $\rightarrow$ environment effects. *Child Development*, 54(2), 424–435. https://doi.org/10.2307/1129703

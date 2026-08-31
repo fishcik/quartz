@@ -724,6 +724,7 @@ Nasıl bir zaman alır?:
 Yani karanlıkta oturursan, 7. dakikada bir “Oha!” anı yaşarsın. Birden sanki perde kalkar, ortam bi tık daha aydınlanır. İşte o an bilin ki çubuklar konileri sollamıştır.. 
 
 Sonraki 20-30 dakika: Eşik iyice düşer, **göz neredeyse tek bir fotonu bile algılayabilecek hassasiyete ulaşır.**
+
 ---
 
 ### Alacakaranlıkta Renklerin İhaneti: Purkinje Kayması

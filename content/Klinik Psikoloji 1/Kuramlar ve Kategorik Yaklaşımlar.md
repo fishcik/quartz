@@ -26,20 +26,15 @@ tags:
 
 ==Kimin acısı "hastalık", kiminkisi *sadece* "hayatın acısı"dır?==
 
-Günlük yaşamda herkesin aşina olduğu  üzere, kendimizin ya da başkalarının davranış ve yaşantılarındaki *"belirginlikleri"*, klinik psikoloji ve psikiyatri terminolojilerine yakın kavramlarla adlandırırız, sanarız. 
+<div class="sc-dialogue-cloud">
+  <span class="sc-dialogue-tag">"Bu kafayı yemiş!"</span>
+  <span class="sc-dialogue-tag">"Bu deli ya.."</span>
+  <span class="sc-dialogue-tag">"Kafayı yemiş bu, bunun şöyle bi huyu var..."</span>
+  <span class="sc-dialogue-tag">"Ay o adam <em>çok</em> nevrotik yaa.. Gece 3'te mail atmış..."</span>
+  <span class="sc-dialogue-tag">"Sınavları yaklaşınca paranoyaklaştı iyice.. Sınav kaygısı var."</span>
+</div>
 
-**"Bu Kafayı Yemiş!"**
---
-*"Bu deli ya.."*
---
-**Kafayı yemiş bu, bunun şöyle bi huyu var...**
---
-*"Ay o adam **çok** nevrotik yaa.. Gece 3'te mail atmış..."*
---
-**"Sınavları yaklaşınca paranoyaklaştı iyice.. Sınav kaygısı var."**
---
-Hepimiz yaptık, yapıyoruz. 
---
+Hepimiz yaptık, yapıyoruz.
 
 * Bu cümleler ne kadar bilimsel?
 *Cevap:* **Hiç.**
@@ -196,42 +191,15 @@ Evrensel olan bir şey varsa o da acının varlığıdır. Ama o acının nasıl
 
 ==Exkurs bitti.==
 
-> [!abstract] Kültürel Anksiyete Matrisi: Sosyal Fobi vs. Taijin Kyofusho
-> <div class="sc-gfx-author"><a href="https://doi.org/10.1176/appi.books.9780890425596" target="_blank" rel="noopener noreferrer" class="sc-gfx-link">(Kirmayer, 1991; APA, 2013)</a></div>
->
-> <div class="sc-gfx-container" style="display:flex; justify-content:center; margin: 0.4rem 0 0.8rem 0;">
-> <svg viewBox="0 0 640 280" width="100%" style="max-width: 640px; height: auto;">
->   <!-- Sol Blok: Bati / Bireyci Sosyal Fobi -->
->   <rect x="25" y="25" width="280" height="230" rx="8" fill="rgba(200, 16, 46, 0.05)" stroke="#C8102E" stroke-width="1.8"/>
->   <text x="165" y="55" fill="#C8102E" font-family="var(--headerFont)" font-size="13" font-weight="bold" text-anchor="middle">BATI / BİREYSEL SOSYAL FOBİ</text>
->   <text x="165" y="80" fill="var(--fg)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Odak Noktası: "Ben-Merkezli" Tehdit</text>
->   
->   <rect x="45" y="100" width="240" height="40" rx="4" fill="rgba(200, 16, 46, 0.12)" stroke="#C8102E" stroke-width="1.2"/>
->   <text x="165" y="125" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">"Beni yetersiz, gülünç görürler mi?"</text>
->   
->   <text x="55" y="165" fill="var(--fg)" font-family="var(--bodyFont)" font-size="9.5">• Temel Duygu: Bireysel Utanç ve Yargılanma</text>
->   <text x="55" y="185" fill="var(--fg)" font-family="var(--bodyFont)" font-size="9.5">• Bilişsel Şema: Performans Başarısızlığı Korkusu</text>
->   <text x="55" y="205" fill="var(--fg)" font-family="var(--bodyFont)" font-size="9.5">• Kültürel Zemin: Bireyci / Öz-Yetkinlik Baskısı</text>
->   <text x="165" y="235" fill="#C8102E" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">DSM Kodu: 300.23 (Sosyal Anksiyete)</text>
->
->   <!-- Sag Blok: Dogu / Kolektivist Taijin Kyofusho -->
->   <rect x="335" y="25" width="280" height="230" rx="8" fill="rgba(199, 154, 109, 0.08)" stroke="#c79a6d" stroke-width="1.8"/>
->   <text x="475" y="55" fill="#c79a6d" font-family="var(--headerFont)" font-size="13" font-weight="bold" text-anchor="middle">DOĞU / TAİJİN KYOFUSHO (TKS)</text>
->   <text x="475" y="80" fill="var(--fg)" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">Odak Noktası: "Öteki-Merkezli" Tehdit</text>
->   
->   <rect x="355" y="100" width="240" height="40" rx="4" fill="rgba(199, 154, 109, 0.15)" stroke="#c79a6d" stroke-width="1.2"/>
->   <text x="475" y="125" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-style="italic" text-anchor="middle">"Bakışımla başkasını rahatsız eder miyim?"</text>
->   
->   <text x="365" y="165" fill="var(--fg)" font-family="var(--bodyFont)" font-size="9.5">• Temel Duygu: Grubu Huzursuz Etme Suçluluğu</text>
->   <text x="365" y="185" fill="var(--fg)" font-family="var(--bodyFont)" font-size="9.5">• Bilişsel Şema: Sosyal Uyumu Bozma Dehşeti</text>
->   <text x="365" y="205" fill="var(--fg)" font-family="var(--bodyFont)" font-size="9.5">• Kültürel Zemin: Kolektivist / Grup Harmonisi</text>
->   <text x="475" y="235" fill="#c79a6d" font-family="var(--bodyFont)" font-size="10" font-weight="bold" text-anchor="middle">DSM Karşılığı: Doğrudan Kod Yok (CFI Gerekir)</text>
-> </svg>
-> </div>
->
-> *Batı tıbbının ben-merkezli sosyal anksiyete tanımı ile Doğu Asya'nın öteki-merkezli kişilerarası dehşet sendromu (Taijin Kyofusho) arasındaki derin kültürel ve fenomenolojik ayrımı gösterir.*
->
-> <div class="sc-gfx-source">Kirmayer, L. J. (1991). The place of culture in psychiatric nosology: Taijin kyofusho and DSM-III-R. The Journal of Nervous and Mental Disease, 179(1), 19–28. https://doi.org/10.1097/00005053-199101000-00005</div>
+<div class="sc-gfx-frame">
+  <div class="sc-gfx-title">Kültürel Anksiyete Matrisi: Sosyal Fobi vs. Taijin Kyofusho</div>
+  <div class="sc-gfx-author"><a href="https://doi.org/10.1176/appi.books.9780890425596" target="_blank" rel="noopener noreferrer" class="sc-gfx-link">(Kirmayer, 1991; APA, 2013)</a></div>
+  <div class="sc-gfx-container">
+    <img src="/static/img/klinik1/taijin_vs_sosyalfobi.svg" alt="Kültürel Anksiyete Matrisi: Sosyal Fobi vs. Taijin Kyofusho">
+  </div>
+  <div class="sc-gfx-caption">Batı tıbbının ben-merkezli sosyal anksiyete tanımı ile Doğu Asya'nın öteki-merkezli kişilerarası dehşet sendromu (Taijin Kyofusho) arasındaki derin kültürel ve fenomenolojik ayrımı gösterir.</div>
+  <div class="sc-gfx-source">Kirmayer, L. J. (1991). The place of culture in psychiatric nosology: Taijin kyofusho and DSM-III-R. The Journal of Nervous and Mental Disease, 179(1), 19–28. https://doi.org/10.1097/00005053-199101000-00005</div>
+</div>
 
 ---
 

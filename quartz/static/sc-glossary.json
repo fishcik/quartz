@@ -77,6 +77,28 @@
     ]
   },
   {
+    "term": "Biyoekolojik Sistemler Modeli (Bioecological Model)",
+    "desc": "Bireysel gelişimin mikrosistem (aile), mezosistem, ekzosistem ve makrosistem (kültürel normlar) katmanlarının karşılıklı ve dinamik etkileşimiyle şekillendiğini savunan Bronfenbrenner kuramı.",
+    "sources": [
+      {
+        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
+        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
+      }
+    ]
+  },
+  {
+    "term": "Biyolojik Gömülme (Biological Embedding)",
+    "desc": "Erken çocukluktaki ağır psikososyal stresörlerin sinir, bağışıklık ve endokrin sistem mimarisine fizyolojik izler bırakarak yaşam boyu sağlık ve davranış kalıplarını kalıcı olarak belirlemesi.",
+    "sources": [
+      {
+        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
+        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
+      }
+    ]
+  },
+  {
     "term": "Biyolojik İndirgemecilik (Biological Reductionism)",
     "desc": "İnsanın tüm karmaşık zihinsel, duygusal ve varoluşsal yaşantısını salt hücresel arızalara ve moleküler mekanizmalara indirgeyen metodolojik yanılgı.",
     "sources": [
@@ -166,7 +188,7 @@
   },
   {
     "term": "Epigenetik (Epigenetics)",
-    "desc": "DNA baz diziliminde bir mutasyon olmaksızın, çevresel faktörlerin (stres, beslenme vb.) gen ekspresyonunu (açılıp kapanmasını) metilasyon gibi mekanizmalarla kalıcı olarak değiştirmesi bilimi.",
+    "desc": "DNA diziliminde herhangi bir baz değişikliği olmadan, çevresel faktörlerin (stres, beslenme vb.) genlerin aktifleşme veya susturulma paternlerini (metilasyon, histon modifikasyonu) kalıcı olarak değiştirmesi bilimi.",
     "sources": [
       {
         "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
@@ -247,6 +269,17 @@
     ]
   },
   {
+    "term": "Gelişimsel Plastisite (Developmental Plasticity)",
+    "desc": "Bireyin biyolojik ve psikolojik sistemlerinin çevresel taleplere, travmalara veya eğitime yanıt olarak yapısal ve işlevsel esneklik gösterebilme kapasitesi.",
+    "sources": [
+      {
+        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
+        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
+      }
+    ]
+  },
+  {
     "term": "Görünüşte Alakasız Kararlar (Apparently Irrelevant Decisions - AIDs)",
     "desc": "Bireyin bilinçdışı olarak ayartıcı ortama girmeyi hedefleyen ama bilince \"masum bir tesadüf\" gibi sunduğu küçük rota seçimleri zinciri.",
     "sources": [
@@ -265,6 +298,17 @@
         "title": "Kondom Kullanımı",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Kondom Kullanımı",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/kondom-kullanımı"
+      }
+    ]
+  },
+  {
+    "term": "Hassas Dönem (Sensitive Period)",
+    "desc": "Organizmanın belirli deneyimlere ve öğrenmelere karşı biyolojik olarak maksimum duyarlılık gösterdiği, ancak bu aralık kaçırılsa dahi sonradan telafinin (daha zor olsa da) mümkün olduğu zaman penceresi.",
+    "sources": [
+      {
+        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
+        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
       }
     ]
   },
@@ -353,6 +397,17 @@
         "title": "Sağlık Psikolojisi Nedir ve Neden Var?",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Psikolojisi Nedir ve Neden Var?",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-psikolojisi-nedir-ve-neden-var?"
+      }
+    ]
+  },
+  {
+    "term": "Kazanç ve Kayıp Dinamiği (Multidirectionality)",
+    "desc": "Yaşam boyu gelişim perspektifinde (Baltes) her gelişimsel basamağın aynı anda hem yeni yetiler kazanımı hem de belirli biyolojik/bilişsel kapasitelerin terk edilmesiyle gerçekleştiği ilkesi.",
+    "sources": [
+      {
+        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
+        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
       }
     ]
   },
@@ -446,7 +501,7 @@
   },
   {
     "term": "Kritik Dönem (Critical Period)",
-    "desc": "Belirli bir biyolojik/bilişsel yetinin (örneğin dil veya binoküler görme) gelişebilmesi için organizmanın belirli çevresel uyaranlara maruz kalmasının mutlak zorunlu olduğu sınırlı zaman aralığı.",
+    "desc": "Belirli bir bilişsel veya biyolojik yetinin (örneğin dil veya binoküler görme) gelişebilmesi için organizmanın belirli çevresel uyaranlara maruz kalmasının mutlak zorunlu olduğu sınırlı zaman aralığı.",
     "sources": [
       {
         "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
@@ -555,17 +610,6 @@
     ]
   },
   {
-    "term": "Nöral ve Davranışsal Plastisite (Plasticity)",
-    "desc": "Sinir sisteminin ve bilişsel/davranışsal işlevlerin çevresel deneyimler, öğrenme veya beyin hasarları karşısında yapısal ve işlevsel olarak yeniden organize olabilme esnekliği.",
-    "sources": [
-      {
-        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
-        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
-        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
-      }
-    ]
-  },
-  {
     "term": "Nöron Doktrini (Neuron Doctrine)",
     "desc": "Santiago Ramón y Cajal (1888) tarafından kanıtlanan; sinir sisteminin kesintisiz bir retikulum değil, sinaps adı verilen mikroskobik boşluklarla ayrılmış bağımsız hücresel birimlerden (nöronlar) oluştuğunu ortaya koyan biyolojik temel.",
     "sources": [
@@ -573,6 +617,17 @@
         "title": "\"Giriş: Algı, Duyu Fizyolojisi, Göz ve Retina\"",
         "path": "Biliş Psikolojisi 1/Giriş: Algı, Duyu Fizyolojisi, Göz ve Retina",
         "url": "/biliş-psikolojisi-1/giriş:-algı,-duyu-fizyolojisi,-göz-ve-retina"
+      }
+    ]
+  },
+  {
+    "term": "Ontogenez (Ontogeny)",
+    "desc": "Bireysel bir organizmanın döllenmeden ölüme kadar geçirdiği tüm yapısal, psikolojik ve morfolojik gelişim süreci.",
+    "sources": [
+      {
+        "title": "\"Giriş: Gelişim Psikolojisinin Konusu ve Görevleri\"",
+        "path": "Gelişim Psikolojisi 1/Giriş: Gelişim Psikolojisinin Konusu ve Görevleri",
+        "url": "/gelişim-psikolojisi-1/giriş:-gelişim-psikolojisinin-konusu-ve-görevleri"
       }
     ]
   },
