@@ -249,7 +249,7 @@ plugins:
     options:
       title: Son Eklenenler
       limit: 18
-      linkToMore: tags
+      linkToMore: false
       showTags: false
       hideFolderPages: true
       hideTagPages: true

@@ -105,7 +105,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manufacturing+Consent&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -164,12 +164,12 @@ var SC_GLYPHS=[
   // Bilimsel Çalışma Yöntemleri
   ['ARAŞTIRMA DESENLERI I','𓊖'],['ARAŞTIRMA DESENLERI II','𓊖𓊖'],['ARAŞTIRMA ETIĞI','𓆄'],
   ['ARAŞTIRMA SÜRECI, ARAŞTIRMA SORULARI VE HIPOTEZLER','𓀁'],['BULGULARININ YAYIMLANMASI VE BILIM ETIĞI','𓏞'],
-  ['GIRIŞ — AMPIRIK BIR BILIM OLARAK PSIKOLOJI','𓉐'],['LITERATÜR TARAMASI VE BILIMSEL METIN FORMATLARI','𓏛'],
+  ['GIRIŞ: AMPIRIK BIR BILIM OLARAK PSIKOLOJI','𓉐'],['GIRIŞ — AMPIRIK BIR BILIM OLARAK PSIKOLOJI','𓉐'],['GIRIŞ - AMPIRIK BIR BILIM OLARAK PSIKOLOJI','𓉐'],['LITERATÜR TARAMASI VE BILIMSEL METIN FORMATLARI','𓏛'],
   ['VERI TOPLAMA YÖNTEMLERI I','𓎟'],['VERI TOPLAMA YÖNTEMLERI II','𓎟𓎟'],['ÖRNEKLEM SEÇIMI','𓂧'],
   ['İSTATISTIKSEL VE İÇERIKSEL ANLAMLILIK','𓍝'],['İŞEVURUK TANIM VE ÖLÇME','𓎟'],
   // Biliş Psikolojisi 1
   ['GÖRSEL KORTEKS — NESNELER VE SAHNELER','𓁹'],['DERI DUYULARI VE KIMYASAL DUYULAR','𓂝'],
-  ['GIRIŞ — ALGI, DUYU FIZYOLOJISI, GÖZ VE RETINA','𓉐'],['GÖRSEL DIKKAT VE EYLEM','𓂀'],['HAREKET ALGISI','𓂻'],
+  ['GIRIŞ: ALGI, DUYU FIZYOLOJISI, GÖZ VE RETINA','𓉐'],['GIRIŞ — ALGI, DUYU FIZYOLOJISI, GÖZ VE RETINA','𓉐'],['GIRIŞ - ALGI, DUYU FIZYOLOJISI, GÖZ VE RETINA','𓉐'],['GÖRSEL DIKKAT VE EYLEM','𓂀'],['HAREKET ALGISI','𓂻'],
   ['RENK ALGISI, DERINLIK VE BÜYÜKLÜK ALGISI','𓁺'],['İŞITME — ÇEVRE, MÜZIK VE KONUŞMA ALGISI','𓄔'],
   // Biyolojik Psikoloji 2
   ['BEYIN HASARI VE NÖROPLASTISITE','𓁶'],['BIYOPSIKOLOJININ DIĞER ARAŞTIRMA YÖNTEMLERI','𓏞'],['DENGE DUYUSU','𓍝'],
@@ -178,7 +178,7 @@ var SC_GLYPHS=[
   ['PSIKIYATRIK BOZUKLUKLARIN BIYOPSIKOLOJISI','𓀿'],['UYKU, RÜYA VE SIRKADIYEN RITIMLER','𓇰'],
   ['ÖĞRENME, BELLEK VE AMNEZI','𓂉'],['İŞITME','𓄕'],
   // Gelişim Psikolojisi 1
-  ['GIRIŞ - GELIŞIM PSIKOLOJISININ KONUSU VE GÖREVLERI','𓉐'],['GIRIŞ — GELIŞIM PSIKOLOJISININ KONUSU VE GÖREVLERI','𓉐'],['GIRIŞ','𓉐'],['ALGI','𓁹'],['BILIŞ I','𓀁'],['BILIŞ II','𓀁𓀁'],['BIYOLOJI VE DAVRANIŞ','𓆣'],['DIL GELIŞIMI','𓂋'],
+  ['GIRIŞ: GELIŞIM PSIKOLOJISININ KONUSU VE GÖREVLERI','𓉐'],['GIRIŞ - GELIŞIM PSIKOLOJISININ KONUSU VE GÖREVLERI','𓉐'],['GIRIŞ — GELIŞIM PSIKOLOJISININ KONUSU VE GÖREVLERI','𓉐'],['GIRIŞ','𓉐'],['ALGI','𓁹'],['BILIŞ I','𓀁'],['BILIŞ II','𓀁𓀁'],['BIYOLOJI VE DAVRANIŞ','𓆣'],['DIL GELIŞIMI','𓂋'],
   ['DOĞUM ÖNCESI GELIŞIM, DOĞUM VE YENIDOĞAN','𓁒'],['GELIŞIM PSIKOLOJISININ KURAMLARI','𓀗'],
   ['GELIŞIM PSIKOLOJISININ YÖNTEMLERI','𓏞'],['MOTOR GELIŞIM','𓂻'],['OKUL BAŞARISI','𓀋'],['ZEKÂ','𓁶'],
   // Gelişim Psikolojisi 2
@@ -199,7 +199,7 @@ var SC_GLYPHS=[
   ['TERAPININ ZORUNLU VE EKOL ÖTESI BOYUTLARI','𓊪'],
   // Klinik Psikoloji 2
   ['BAĞIMLILIKLAR','𓆓'],['BILIM FELSEFESI VE ARAŞTIRMA YAKLAŞIMLARI','𓆄'],['BOYUTSAL YAKLAŞIMLAR','𓏣'],
-  ['CINSEL İŞLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI','𓂸'],['DUYGUDURUM BOZUKLUKLARI','𓀠'],['GIRIŞ - NORMAL VE ANORMAL','𓍝'],['GIRIŞ','𓉐'],
+  ['CINSEL İŞLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI','𓂸'],['DUYGUDURUM BOZUKLUKLARI','𓀠'],['GIRIŞ: NORMAL VE ANORMAL','𓍝'],['GIRIŞ - NORMAL VE ANORMAL','𓍝'],['GIRIŞ — NORMAL VE ANORMAL','𓍝'],['GIRIŞ','𓉐'],
   ['KAYGI BOZUKLUKLARI','𓀉'],['KURAMLAR VE KATEGORIK YAKLAŞIMLAR','𓀗'],
   ['OBSESIF KOMPULSIF BOZUKLUK VE TIKLER','𓀣'],['PSIKOZLAR','𓀡'],
   ['TRAVMA VE TRAVMA SONRASI STRES BOZUKLUĞU','𓀐'],['YEME BOZUKLUKLARI','𓀁'],
@@ -228,6 +228,8 @@ SC_GLYPHS.forEach(function(e){
 function scGlyphFor(title){
   var f=scFold(title);
   if(SC_GLYPH_FULL[f])return SC_GLYPH_FULL[f];
+  if(f.indexOf('NORMAL VE ANORMAL')!==-1) return '𓍝';
+  if(f.indexOf('GIRIS')!==-1) return '𓉐';
   var m=f.match(/^(.*?)[ \t]+(III|II|I|3|2|1)$/);
   if(m){var base=m[1],c=({I:1,II:2,III:3,'1':1,'2':2,'3':3})[m[2]],g=SC_GLYPH_BASE[base];if(g){var o='';for(var i=0;i<c;i++)o+=g;return o;}}
   return '';
@@ -370,9 +372,6 @@ function ensure(){
       if(typeof window.scToggleBionicReading==='function') window.scToggleBionicReading();
       else if(typeof scToggleBionicReading==='function') scToggleBionicReading();
     });
-    // Mail Tuşu (@) - Kırmızı minimalist link
-    var bm=document.createElement('a');bm.className='sc-toolbtn sc-mailbtn';bm.href='mailto:cio@sayko.ch';bm.title='cio@sayko.ch';bm.setAttribute('aria-label','E-posta: cio@sayko.ch');
-    bm.innerHTML='<span style="font-weight:700;font-size:14px;color:#C8102E;font-family:monospace;line-height:1;">@</span>';
     // Geri (tarayıcı geçmişi)
     var bb=document.createElement('button');bb.type='button';bb.className='sc-toolbtn sc-backbtn';bb.title='Geri';bb.setAttribute('aria-label','Geri');
     bb.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
@@ -380,7 +379,7 @@ function ensure(){
     sbbHdr.appendChild(lg);
     sbb.appendChild(sbbHdr);
     var sbbTools=document.createElement('div');sbbTools.className='sc-sbb-tools';
-    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bg);sbbTools.appendChild(bt);sbbTools.appendChild(bf);sbbTools.appendChild(bm);
+    sbbTools.appendChild(bb);sbbTools.appendChild(gtb);sbbTools.appendChild(bg);sbbTools.appendChild(bt);sbbTools.appendChild(bf);
     sbb.appendChild(sbbTools);
     // Clock — lüks kasa + Türkçe tarih + saniyeyi gösteren zarif SERPENT ibresi
     var ticks='';for(var i=0;i<60;i++){var a=i*6*Math.PI/180;var isH=(i%5===0);var r1=isH?38.5:41.5,r2=45;var x1=50+r1*Math.sin(a),y1=50-r1*Math.cos(a),x2=50+r2*Math.sin(a),y2=50-r2*Math.cos(a);ticks+='<line x1="'+x1.toFixed(2)+'" y1="'+y1.toFixed(2)+'" x2="'+x2.toFixed(2)+'" y2="'+y2.toFixed(2)+'" class="sc-tick'+(isH?' sc-tick-h':'')+'"/>';}
@@ -416,6 +415,12 @@ function ensure(){
     chev.innerHTML='<svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
     chev.addEventListener('click',function(){var exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',exp?'false':'true');bclayers.classList.toggle('sc-collapsed',exp);});
     sbb.appendChild(bclayers);sbb.appendChild(chev);
+    // SBB Alt Taban Şeridi (Minimalist Toolbar Bar)
+    var sbbFoot=document.createElement('div');sbbFoot.className='sc-sbb-foot';
+    var bm=document.createElement('a');bm.className='sc-sbb-mailbtn';bm.href='mailto:cio@sayko.ch';bm.title='cio@sayko.ch';bm.setAttribute('aria-label','E-posta: cio@sayko.ch');
+    bm.innerHTML='<span class="sc-sbb-mail-at">@</span>';
+    sbbFoot.appendChild(bm);
+    sbb.appendChild(sbbFoot);
     document.body.appendChild(sbb);
   }
   // Masaüstü: sağ sütun kenarından beliren minik SAAT kuyruğu → tıkla, SBB açılır
@@ -852,6 +857,12 @@ function scFitHex(){
 }
 
 function scSortRecentNotes(){
+  // Remove any remaining tags / see more link
+  document.querySelectorAll('.recent-notes p a[href*="tags"], .recent-notes a[href*="tags"]').forEach(function(el){
+    var p = el.closest('p');
+    if(p) p.remove();
+    else el.remove();
+  });
   var rns=document.querySelectorAll('.recent-notes .recent-ul');
   var DATE_MAP={
     'GORSEL KORTEKS NESNELER VE SAHNELER': '2026-08-30',
@@ -875,20 +886,25 @@ function scSortRecentNotes(){
   rns.forEach(function(ul){
     var lis=Array.from(ul.querySelectorAll(':scope > .recent-li'));
     if(!lis.length)return;
-    lis.sort(function(a,b){
-      var aTime=a.querySelector('time');
-      var bTime=b.querySelector('time');
+    // Filter only actual written articles
+    lis.forEach(function(li){
+      var a=li.querySelector('.desc h3 a')||li.querySelector('a');
+      var aTitle=scFold(a?a.textContent:'');
+      if(!DATE_MAP[aTitle]){
+        li.remove();
+      }
+    });
+    var validLis=Array.from(ul.querySelectorAll(':scope > .recent-li'));
+    validLis.sort(function(a,b){
       var aA=a.querySelector('.desc h3 a')||a.querySelector('a');
       var bA=b.querySelector('.desc h3 a')||b.querySelector('a');
       var aTitle=scFold(aA?aA.textContent:'');
       var bTitle=scFold(bA?bA.textContent:'');
-      var aDate=(aTime&&aTime.getAttribute('datetime'))?aTime.getAttribute('datetime').slice(0,10):(DATE_MAP[aTitle]||'2026-01-01');
-      var bDate=(bTime&&bTime.getAttribute('datetime'))?bTime.getAttribute('datetime').slice(0,10):(DATE_MAP[bTitle]||'2026-01-01');
-      if(DATE_MAP[aTitle]) aDate = DATE_MAP[aTitle];
-      if(DATE_MAP[bTitle]) bDate = DATE_MAP[bTitle];
+      var aDate=DATE_MAP[aTitle]||'2026-01-01';
+      var bDate=DATE_MAP[bTitle]||'2026-01-01';
       return bDate.localeCompare(aDate);
     });
-    lis.forEach(function(li){
+    validLis.forEach(function(li){
       var a=li.querySelector('.desc h3 a')||li.querySelector('a');
       var timeEl=li.querySelector('.meta time, time');
       if(a && timeEl){
@@ -1864,8 +1880,27 @@ function scApplyBionicToTextNodes(node){
   }
 }
 
+// ── SAYKO.ch Standart Medya / Görsel Çerçevesi (Otomatik Frame Entegrasyonu) ──
+function scEnhanceMedia(){
+  document.querySelectorAll('article img, .center img').forEach(function(img){
+    if(img.closest('figure, .sc-media-frame, .sc-img-frame, .sc-gfx-container, #sc-clock, .sc-toolbtn, .callout, .sc-sbb-foot')) return;
+    var figure=document.createElement('figure');
+    figure.className='sc-media-frame';
+    img.parentNode.insertBefore(figure, img);
+    figure.appendChild(img);
+    var capText=img.getAttribute('alt') || img.getAttribute('title');
+    if(capText && capText.trim() && !capText.startsWith('http') && !capText.endsWith('.png') && !capText.endsWith('.jpg') && !capText.endsWith('.svg')){
+      var figcap=document.createElement('figcaption');
+      figcap.className='sc-media-caption';
+      figcap.textContent=capText;
+      figure.appendChild(figcap);
+    }
+  });
+}
+
 // ─── MEDIUM-ZOOM GÖRSEL MODALI (Tek Tıklama) ─────────────────────────
 function scInitMediaZoom(){
+  scEnhanceMedia();
   var mm = document.getElementById('sc-media-modal');
   if(!mm){
     mm = document.createElement('div');
