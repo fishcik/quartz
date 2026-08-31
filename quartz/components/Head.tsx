@@ -11,15 +11,15 @@ const CustomOgImagesEmitterName = "CustomOgImages"
 // ── Müfredat verisi: ders adı + GERÇEK Quartz slug'ı + ASCII ikon dosyası ──
 // (Quartz slugify Türkçe karakterleri KORUR; İstatistik → i̇ + U+0307 combining)
 const SC_COURSES = [
-  { n: "01", name: "Bilimsel Çalışma Yöntemleri", slug: "bilimsel-çalışma-yöntemleri", icon: "bilimsel-calisma-yontemleri" },
-  { n: "02", name: "Biliş Psikolojisi 1", slug: "biliş-psikolojisi-1", icon: "bilis-psikolojisi-1" },
-  { n: "03", name: "Biyolojik Psikoloji 2", slug: "biyolojik-psikoloji-2", icon: "biyolojik-psikoloji-2" },
-  { n: "04", name: "Gelişim Psikolojisi 1", slug: "gelişim-psikolojisi-1", icon: "gelisim-psikolojisi-1" },
-  { n: "05", name: "Gelişim Psikolojisi 2", slug: "gelişim-psikolojisi-2", icon: "gelisim-psikolojisi-2" },
-  { n: "06", name: "İstatistik 1", slug: "i̇statistik-1", icon: "istatistik-1" },
-  { n: "07", name: "Klinik Psikoloji 1", slug: "klinik-psikoloji-1", icon: "klinik-psikoloji-1" },
-  { n: "08", name: "Klinik Psikoloji 2", slug: "klinik-psikoloji-2", icon: "klinik-psikoloji-2" },
-  { n: "09", name: "Sağlık Psikolojisi ve Davranışsal Tıp", slug: "sağlık-psikolojisi-ve-davranışsal-tıp", icon: "saglik-psikolojisi-ve-davranissal-tip" },
+  { n: "01", name: "Bilimsel Çalışma\u00A0Yöntemleri", slug: "bilimsel-çalışma-yöntemleri", icon: "bilimsel-calisma-yontemleri" },
+  { n: "02", name: "Biliş Psikolojisi\u00A01", slug: "biliş-psikolojisi-1", icon: "bilis-psikolojisi-1" },
+  { n: "03", name: "Biyolojik Psikoloji\u00A02", slug: "biyolojik-psikoloji-2", icon: "biyolojik-psikoloji-2" },
+  { n: "04", name: "Gelişim Psikolojisi\u00A01", slug: "gelişim-psikolojisi-1", icon: "gelisim-psikolojisi-1" },
+  { n: "05", name: "Gelişim Psikolojisi\u00A02", slug: "gelişim-psikolojisi-2", icon: "gelisim-psikolojisi-2" },
+  { n: "06", name: "İstatistik\u00A01", slug: "i̇statistik-1", icon: "istatistik-1" },
+  { n: "07", name: "Klinik Psikoloji\u00A01", slug: "klinik-psikoloji-1", icon: "klinik-psikoloji-1" },
+  { n: "08", name: "Klinik Psikoloji\u00A02", slug: "klinik-psikoloji-2", icon: "klinik-psikoloji-2" },
+  { n: "09", name: "Sağlık Psikolojisi ve\u00A0Davranışsal\u00A0Tıp", slug: "sağlık-psikolojisi-ve-davranışsal-tıp", icon: "saglik-psikolojisi-ve-davranissal-tip" },
   { n: "10", name: "Sosyal Psikoloji", slug: "sosyal-psikoloji", icon: "sosyal-psikoloji" },
 ]
 
@@ -483,7 +483,7 @@ function ensure(){
   }
   if(!window.__scScroll){
     window.addEventListener('scroll',function(){if(window.__scProg)window.__scProg();var y=window.scrollY||window.pageYOffset;document.body.classList.toggle('sc-scrolled',y>100);var tt=document.getElementById('sc-totop');if(tt)tt.classList.toggle('sc-show',y>400);},{passive:true});
-    window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();scREdge();clearTimeout(window.__scFitT);window.__scFitT=setTimeout(function(){scFitHex();scFitHeader();},160);});
+    window.addEventListener('resize',function(){if(window.__scProg)window.__scProg();scREdge();clearTimeout(window.__scFitT);window.__scFitT=setTimeout(function(){scFitHex(); scInjectCourseHero();scFitHeader();},160);});
     window.__scScroll=1;
   }
   scREdge();
@@ -904,7 +904,12 @@ function scSortRecentNotes(){
       var bDate=DATE_MAP[bTitle]||'2026-01-01';
       return bDate.localeCompare(aDate);
     });
+    var isHome = document.body.getAttribute('data-slug') === 'index' || !document.body.getAttribute('data-slug');
     validLis.forEach(function(li, idx){
+      if(isHome && idx >= 4){
+        li.remove();
+        return;
+      }
       li.classList.remove('rp-1','rp-2','rp-3','rp-4');
       if(idx === 0) li.classList.add('rp-1');
       else if(idx === 1) li.classList.add('rp-2');
@@ -1913,6 +1918,32 @@ function scEnhanceMedia(){
 }
 
 // ─── MEDIUM-ZOOM GÖRSEL MODALI (Tek Tıklama) ─────────────────────────
+
+function scInjectCourseHero(){
+  var pl = document.querySelector('.page-listing');
+  if(!pl || pl.getAttribute('data-sc-hero-ready')) return;
+  pl.setAttribute('data-sc-hero-ready', '1');
+
+  var path = decodeURIComponent(window.location.pathname).replace(/^[/]|[/]$/g, '');
+  var seg = path.split('/')[0];
+  var matchedCourse = null;
+  for(var i=0; i<SC_GRID.length; i++){
+    if(SC_GRID[i].slug === seg || seg.indexOf(SC_GRID[i].slug) !== -1 || SC_GRID[i].slug.indexOf(seg) !== -1){
+      matchedCourse = SC_GRID[i];
+      break;
+    }
+  }
+  if(matchedCourse){
+    var existingHero = document.querySelector('.sc-course-hero-header');
+    if(!existingHero){
+      var hero = document.createElement('div');
+      hero.className = 'sc-course-hero-header';
+      hero.innerHTML = '<div class="sc-course-hero-badge"><span class="sc-course-hero-icon">' + matchedCourse.svg + '</span><span class="sc-course-hero-num">' + matchedCourse.n + '</span></div><h1 class="sc-course-hero-title">' + matchedCourse.name + '</h1>';
+      pl.parentNode.insertBefore(hero, pl);
+    }
+  }
+}
+
 function scInitMediaZoom(){
   scEnhanceMedia();
   var mm = document.getElementById('sc-media-modal');

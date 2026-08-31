@@ -4379,13 +4379,21 @@ body[data-slug="tum-yazilar"] {
 
   article h3 {
     font-family: 'Manufacturing Consent', serif !important;
+    font-style: normal !important;
     font-size: 2.2rem !important;
     color: var(--accent, #C8102E) !important;
     letter-spacing: 0.02em;
-    margin: 2.2rem 0 1rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px dashed rgba(200, 16, 46, 0.3);
+    margin: 2.5rem 0 1.2rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px dashed rgba(200, 16, 46, 0.35);
   }
+}
+
+.sc-archive-divider {
+  border: none !important;
+  border-top: 2.5px solid var(--accent, #C8102E) !important;
+  margin: 3.5rem 0 2rem !important;
+  opacity: 0.95 !important;
 }
 
 .sc-archive-grid {
@@ -4396,6 +4404,7 @@ body[data-slug="tum-yazilar"] {
 }
 
 .sc-archive-card {
+  position: relative;
   background: var(--bg-2, #ece8e1);
   border: 1px solid var(--border, #dfd7ca);
   border-radius: 6px;
@@ -4408,7 +4417,14 @@ body[data-slug="tum-yazilar"] {
   &:hover {
     transform: translateY(-2px);
     border-color: var(--accent, #C8102E);
-    box-shadow: 0 4px 14px rgba(200, 16, 46, 0.08);
+    box-shadow: 0 4px 14px rgba(200, 16, 46, 0.12);
+  }
+
+  .sc-archive-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
   }
 
   .sc-archive-meta {
@@ -4416,6 +4432,15 @@ body[data-slug="tum-yazilar"] {
     font-size: 0.72rem;
     color: var(--secondary, #c79a6d);
     font-weight: 600;
+  }
+
+  .sc-archive-glyph {
+    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
+    font-size: 1.45rem !important;
+    color: var(--accent, #C8102E) !important;
+    font-style: normal !important;
+    line-height: 1;
+    pointer-events: none;
   }
 
   .sc-archive-title {
@@ -4458,33 +4483,51 @@ html[saved-theme="dark"] .sc-archive-card,
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin: 1.8rem 0;
-  padding: 18px 20px;
+  gap: 16px;
+  margin: 2rem 0;
+  padding: 22px 24px;
   background: var(--bg-2, #ece8e1);
   border: 1px dashed rgba(200, 16, 46, 0.35);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .sc-dialogue-tag {
+  position: relative;
   display: inline-block;
-  padding: 8px 16px;
-  background: var(--light, #f9f8f6);
-  border: 1px solid var(--border, #dfd7ca);
-  border-radius: 20px;
+  padding: 10px 18px;
+  background: var(--light, #fdfcf9);
+  border: 1.5px solid var(--border, #dfd7ca);
+  border-radius: 16px 16px 16px 2px; // Çentikli chat balonu
   font-family: 'Source Serif 4', Georgia, serif;
   font-style: italic;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--accent, #C8102E);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 
+  // Chat balonu kıvrık kuyruğu
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 0;
+    border-color: var(--border, #dfd7ca) transparent transparent transparent;
+  }
+
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
     background: rgba(200, 16, 46, 0.06);
     border-color: var(--accent, #C8102E);
-    box-shadow: 0 4px 10px rgba(200, 16, 46, 0.12);
+    box-shadow: 0 6px 14px rgba(200, 16, 46, 0.15);
+
+    &::after {
+      border-color: var(--accent, #C8102E) transparent transparent transparent;
+    }
   }
 }
 
@@ -4498,4 +4541,62 @@ html[saved-theme="dark"] .sc-dialogue-tag,
 [saved-theme="dark"] .sc-dialogue-tag {
   background: #1c1a16;
   border-color: #2e2820;
+
+  &::after {
+    border-color: #2e2820 transparent transparent transparent;
+  }
+}
+
+// ─── DERS KONU SEÇME SAYFALARI: HERO İKON BANNER ─────
+.sc-course-hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 2.5rem;
+  text-align: center;
+}
+
+.sc-course-hero-badge {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-2, #ece8e1);
+  border: 2px solid var(--accent, #C8102E);
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(200, 16, 46, 0.15);
+
+  .sc-course-hero-icon svg {
+    width: 52px;
+    height: 52px;
+    display: block;
+    color: var(--accent, #C8102E);
+  }
+}
+
+.sc-course-hero-num {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--accent, #C8102E);
+  color: #ffffff;
+  font-family: 'Bebas Neue', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 2px solid var(--bg, #fdfcf9);
+}
+
+.sc-course-hero-title {
+  font-family: 'Manufacturing Consent', serif !important;
+  font-style: normal !important;
+  font-size: 2.5rem !important;
+  color: var(--accent, #C8102E) !important;
+  margin: 0 !important;
+  letter-spacing: 0.03em;
 }

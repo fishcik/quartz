@@ -37,7 +37,7 @@ tags:
 Hepimiz yaptık, yapıyoruz.
 
 * Bu cümleler ne kadar bilimsel?
-*Cevap:* **Hiç.**
+**Cevap:* **Hiç.**
 
 
 Pek de övücü olmayan, incitici ve aşağılayıcı gündelik dil *etiketleri.
@@ -47,20 +47,20 @@ Bunlar kelimelerin silah gibi kullanılmasının en *ucuz* yoludur.
 Düpedüz kabadır. İşin ilginç kısmı: Hepimiz bunları kullanırken, aslında psikolojinin en temel sorularından birine  dokunuyoruz: 
 
 
-> "Normal" ile "anormal" arasındaki sınır ***tam olarak*** nereden geçiyor?
+> "Normal" ile "anormal" arasındaki sınır **tam olarak** nereden geçiyor?
 
 "Sağlıklı ile hasta" veya "klinik olarak anlamlı ile anlamlı olmayan" arasındaki sınırların çizilmesi sorunu. 
 
 Psikoloji, bir şeyi ölçmek için genelde eline bir cetvel alır.. Buna boyutsal yaklaşım[^boyutsal-yaklasim] deniyor. Yani insanları, psikometrik olarak geliştirilmiş ölçekler üzerinden değerlendiririz. Puanlar, noktalar, skorlar.. 
 
-Yani, hastalık sadece bedendeki bir "arıza" değil; ***biz*** neye "hastalık" diyorsak, odur. 
+Yani, hastalık sadece bedendeki bir "arıza" değil; **biz** neye "hastalık" diyorsak, odur. 
 
 Biz birisine "hasta" dediğimiz an, o kişiye bir rol ve bir kimlik veririz. Halbuki sağlık dediğimiz şeyin bir ucu laboratuvarda, diğer ucu toplumsal beklentilerde, başka bir ucu da kişinin kendi iç sesinde kaybolur..
 
 "Kendimi berbat hissediyorum ya.." diyen biri hasta mıdır, yoksa sadece hayata mı küsmüştür? 
 Doktor teşhisini mi bekleyelim, yoksa kişinin kendi anlattığına mı inanalım?
 
-***Acı çeken herkes hasta mıdır, yoksa hayatın kendisi zaten bi türlü iyileşmeyen bir yara mıdır?***
+**Acı çeken herkes hasta mıdır, yoksa hayatın kendisi zaten bi türlü iyileşmeyen bir yara mıdır?**
 
 ---
 
@@ -75,29 +75,29 @@ Bu arada, hasta hep aynı hasta, değişenler etiketler. Yıllar içinde de değ
 
 Bu ilerleme midir? Evet, tedavi de teşhis de gelişiyor çünkü. 
 Ama bir kibir tarafı da vardır: Bugün doğru sanılanların yarın kullanılmaz olması durumu. 
-Klinik psikoloji bu noktada, mevcut durumda, mevcut açıklamalara göre yeni anlayışlar getirmeye devam edecek. Burdaki kıstas: bu yeni anlayışların asla *gerçekliğin ta kendisi* **sanılmamasıdır**.
+Klinik psikoloji bu noktada, mevcut durumda, mevcut açıklamalara göre yeni anlayışlar getirmeye devam edecek. Burdaki kıstas: bu yeni anlayışların asla *gerçekliğin ta kendisi* **sanılmamasıdır** .
 
 ### Ruhsal Bozuklukların Tanımı
 
 Bir insana dört ayrı katmandan bakılır: Duygular, düşünceler, davranışlar, biyoloji. 
 
-*Duygular*
+**Duygular**
 Kişi ne hissediyor? Üzgün mü? Öfkeli mi? Korku, neşe.. Bu duyguların yoğunluğu ne? Ne kadar sürüyor?
 
-*Düşünceler*
+**Düşünceler**
 Bu kişi *nasıl* düşünüyor? Neyi yargılıyor, nasıl yargılıyor, nasıl öğreniyor, nelere önem veriyor? 
 Depresyondaki birisi sürekli "değersizim" diye düşünürken, kaygılı biri "tehlikedeyim" diye tetikte bekler.
 
-*Davranış*
+**Davranış**
 Kişi ne yapıyor? Aşırı yemek mi yiyor, sosyal ortamlardan kaçıyor mu, kendine zarar veriyor mu? Davranış, iç dünyanın dışa vurumudur. 
 
-*Biyoloji*
+**Biyoloji**
 Yani beden. Kalp atışı, terleme, kas gerilimi, beyin kimyası, genetik yatkınlık.. 
 
 Bu dört katman iç içe geçer, bağımsız değiller. 
-Depresyondaki birinin **düşünceleri** karamsardır, bu **duygularına** yansır, yataktan **çıkmaz**, uyku ve iştahı **bozulur**. Hepsi birbirini besler. 
+Depresyondaki birinin **düşünceleri** karamsardır, bu **duygularına** yansır, yataktan **çıkmaz** , uyku ve iştahı **bozulur** . Hepsi birbirini besler. 
 
-Bir yakının ölümüne duyulan yas normaldir. Ama iki yıl boyunca hiç iyileşmemek de normal **değildir**. DSM-5'e göre bu dört katmanda görülenler, kişinin hayatını önemli ölçüde zorlaştıracak kadar şiddetliyse ve kültürel/sosyal olarak da "normal" kabul edilen bir tepki değilse, o zaman "ruhsal bozukluk"tan bahsetmeye başlayabiliriz. 
+Bir yakının ölümüne duyulan yas normaldir. Ama iki yıl boyunca hiç iyileşmemek de normal **değildir** . DSM-5'e göre bu dört katmanda görülenler, kişinin hayatını önemli ölçüde zorlaştıracak kadar şiddetliyse ve kültürel/sosyal olarak da "normal" kabul edilen bir tepki değilse, o zaman "ruhsal bozukluk"tan bahsetmeye başlayabiliriz. 
 
 Burda bilimin şu anda bulunduğu konumdan dolayı farkında olmamız gereken bir kritik nokta var: 
 ==**Günümüzde hiçbir ruhsal bozukluğu, kan testi ya da beyin taramasıyla falan kesin olarak teşhis edemiyoruz.**==
@@ -116,7 +116,7 @@ Ve her vaka ile tekrar tekrar hatırlıyoruz: Ruhsal bozukluk sadece bir "arıza
 Sınıflandırma neden önemli? 
 Herkesin aynı dili konuştuğunu düşünelim ama herkes kafasına göre kelimeler kullanıyor. Sınıflandırmanın yapmayı hedeflediği şey ortak dil yaratmak. Yani, kütüphanedeki kitapların raflarda düzenli bir şekilde durması gibi; kitaplar olmasa da hayat devam etmez mi? Eder.. Ama kitapları rafa dizmezsen kimse istediğini okuyamaz. "Sınıflandırma" düzenin ismidir. Kitapların kendisi değil yani.. 
 
-Bir insanı anlamak için onu önce bir ***kutuya*** koymamız gerekir...
+Bir insanı anlamak için onu önce bir **kutuya** koymamız gerekir...
 "Depresyon", "Locked-in sendromu", "şizofreni" gibi kutular. Bu kutular o acının kendisi değil fakat onu anlamlandırma çabamızın bir "izdüşümüdür". 
 Bu kutular olmasaydı bilim yapmak imkansızlaşırdı: tedavi geliştiremezsin, konuşamazsın, "aynı" şeyden bahsedemezsin. 
 
@@ -127,33 +127,33 @@ Bu yaklaşımların hepsinin kendine göre avantajları ve dezavantajları vard�
 **Ruhsal bozuklukları sınıflandırırken de durum benzer.**
 
 --
-*Semptomlara göre mi?*
+**Semptomlara göre mi?**
 **Kişi ne hissediyor, nasıl davranıyor?**
 Mesela: "Kişi üzgün mü? İsteksiz mi? Uyuyamıyor mu? İşte depresyon!"
 Ama sorun şu ki... aynı semptomlar *farklı* şeylerin habercisi olabilir. Aynı hem gripte hem de zatürrede ateşinin çıkabilmesi gibi. **Sırf** semptomlara bakarsak, yanlış teşhis kaçınılmaz.
 
 --
-*Zamansal seyrine göre mi?*
+**Zamansal seyrine göre mi?**
 **Hastalık ne zaman başladı, ilerleyişi nasıl, krizler halinde mi, kronik mi?**
-Bu da her derde deva değil; bazı hastalıklar başlıyor, duruyor, nüksediyor, bazısı **hiç durmuyor**.. Bu yüzden *seyir* her zaman net bir rehber olamıyor.
+Bu da her derde deva değil; bazı hastalıklar başlıyor, duruyor, nüksediyor, bazısı **hiç durmuyor** .. Bu yüzden *seyir* her zaman net bir rehber olamıyor.
 
 --
-*Nedenine (etiyoloji) göre mi?*
+**Nedenine (etiyoloji) göre mi?**
 **Genetik mi, travma mı, biyokimyasal bi dengesizlik mi?**
-Nedenleri (etiyoloji[^etiyoloji]) bilmek harika olurdu tabi.. ama bildiğimizi *sandığımız* çoğu şey aslında sadece **hipotez**. 
+Nedenleri (etiyoloji[^etiyoloji]) bilmek harika olurdu tabi.. ama bildiğimizi *sandığımız* çoğu şey aslında sadece **hipotez** . 
 
 --
-*Yoğunluğuna göre mi?*
+**Yoğunluğuna göre mi?**
 **Hafif, orta, ağır?**
 Yoğunluğu kıstas olarak koyduğumuz zaman "Ne kadar?" sorusunu da sormamız gerekir. Ama "hafif depresyon" ile "ağır depresyon" arasındaki sınır, yine bir *uzlaşının* sonucudur. 10 üzerinden kaç alırsan "ağır" sayılırsın, kime göre? 
 
 --
-*Güvenilirliğine göre mi?*
+**Güvenilirliğine göre mi?**
 **Bu tanı ne kadar kesin konabiliyor?**
 İki ayrı doktor aynı hastaya bakıp aynı teşhisi koyabiliyorlar mı? DSM-III'ün asıl kritik başarısı buydu: Semptomları ve tanıları o kadar net ve operasyonel[^operasyonel-tanim] hale getirdi ki, artık birbirinden habersiz bambaşka klinisyenler artık aynı dili konuşuyor. Ama bu, gerçekten de *doğru* oldukları anlamına gelmekten ziyade, **aynı yanlışı hep beraber yapabilmemizi sağlar.**
 
 Bu ölçütlerin *hepsi* tarih boyunca denenmiştir. Her biri bir döneme damgasını vurdu. Kimi zaman biri ağır bastı, başka zaman bi diğeri. 
-***Bugün ise hepsini bir arada kullanmaya çalışıyoruz.*** *Bunun bedeli de, sistemin sürekli daha karmaşık, birbirine dolanık ve ağır hale gelmesi.*
+**Bugün ise hepsini bir arada kullanmaya çalışıyoruz.** *Bunun bedeli de, sistemin sürekli daha karmaşık, birbirine dolanık ve ağır hale gelmesi.*
 DSM-III ile birlikte "Ne olduğunu *tam* bilmiyorum ama **tarif edebiliyorum**" denebilmiştir ve bu bragmatik bir çözümdü, baya da işe yaradı. 
 
 DSM-III, Amerikan Psikiyatri Birliği'nin (*APA*) eseriydi, ve dünya bildiğimiz üzere sadece ABD'den ibaret değil. 
@@ -205,46 +205,42 @@ Evrensel olan bir şey varsa o da acının varlığıdır. Ama o acının nasıl
 
 ## 4. ICD-10 Yapısı, Kod Sistemi ve Eleştiriler
 
-***ICD-10 Yapısı ve Kod Sistemi***
+**ICD-10 Yapısı ve Kod Sistemi**
 DSÖ tarafından tasarlanmış olan ICD-10, tüm hastalıkları ve ölüm sebeplerini standart bir dil altında toplamayı hedefler. 
 Ruhsal bozukluklar bu devasa kütüphanenin beşinci bölümünde, **F00-F99** kod aralığındadır. 
 
 Bu sistem, hiyerarşik mantıkla çalışır. Bilgisayardaki klasör içindeki klasörler gibi düşünebiliriz; her adımda odağı daraltarak daha spesifik tanıya ulaşırsın. 
 
-*Blok seviyesi, çift basamak*
-Klasörün kapağı. ***F4*** dendiğinde, nevrotik, stresle ilişkili ve somatoform bozuklukları kastederiz.
+**Blok seviyesi, çift basamak**
+Klasörün kapağı. **F4** dendiğinde, nevrotik, stresle ilişkili ve somatoform bozuklukları kastederiz.
 
-*Kategori seviyesi, üç basamak*
-Klasörü açarız. Mesela ***F40***, korkunun belli nesnelere yöneldiği fobik anksiyete bozukluklarına işaret eder. 
+**Kategori seviyesi, üç basamak**
+Klasörü açarız. Mesela **F40** , korkunun belli nesnelere yöneldiği fobik anksiyete bozukluklarına işaret eder. 
 
-*Subkategori seviyesi, dört basamak* 
-Detaya indik. ***F40.1*** kodu bizi direkt Sosyal Fobi'ye götürür. 
+**Subkategori seviyesi, dört basamak**
+Detaya indik. **F40.1** kodu bizi direkt Sosyal Fobi'ye götürür. 
 
-*Ek özellikler, beşinci basamak*
-İyice detaya ineriz. ***F40.10*** kodu, durumun arkasında bir panik bozukluk olup olmadığını gösterir. 
+**Ek özellikler, beşinci basamak**
+İyice detaya ineriz. **F40.10** kodu, durumun arkasında bir panik bozukluk olup olmadığını gösterir. 
 
 Tabii bildiğimiz üzere insan canlısı ve onun zihni her zaman böyle net çekmecelere sığmaz. Bu gri bölgelerde sistemin kurtarıcısı olan "NOS"[^nos-kodlari] (Not Otherwise Specified / Başka Şekilde Sınıflandırılmamış) kodları devreye girer. 
 
-***ICD-10 Eleştirileri***
+**ICD-10 Eleştirileri**
 Nereye giderseniz gidin, sınıflandırma sistemlerinin kendilerini "*tüm değerlerden arınmış!*", "*nesnel bilimsel harita*", "*objektifliğin nur çeşmesi*" olarak pazarlasa da, felsefe ve pratik uygulama arasındaki uçurum ağır krizler doğurur. 
-*Klinikte ortak bir dilin yaratılması kaosu engellemiş olsa da:*
+Klinikte ortak bir dilin yaratılması kaosu engellemiş olsa da:
 
-1) *Kodlar hastaya değil, sisteme yarar.*
-
+1) **Kodlar hastaya değil, sisteme yarar.**
 Amaç; İstatistiksel, idari ve finansal süreçlerin standart şekilde yürümesini sağlamaktır. Bir hastaya *F20.1* (Dezorganize Şizofreni) kodunu verdiğinizde, bu kod hastanın yaşadığı kırılmanın tüm nüanslarını yansıtmaz. Onun yerine sağlık sistemine, sigorta şirketine ve veri tabanına şunu der: "Bu bireyin tedavisi için *şu protokoller* **bu bütçe çerçevesinde** uygulanabilir."
 Böylece tanı süreci, acının anlamlandırılmasından çıkıp, resmi kurumların kullandığı bürokrasi diline dönüşür. 
 
-2) *Camdan hasta*
-
+2) **Camdan hasta**
 Sağlık sistemlerinin dijitalleşmesiyle birlikte ciddi bir gizlilik ikilemi oluşmuştur. Bireyin mahrem tanı kodlarının, tedavi süreçlerinin ve geçmişinin birer veri noktası haline gelmesi ve bu hassas verilerin sigorta şirketleri veya gelecekteki işverenler tarafından erişilebilir olması, hastalar üzerinde **damgalanma** korkusu yaratır. 
 
-3) *Kültürel körlük*
-
+3) **Kültürel körlük**
 Daha önce de dediğimiz gibi, ICD ve DSM gibi sistemler batı merkezli ve kökenli. Bireyci kültürler. Ve bu *kılavuzlar*, kendi kültürel kabullerini "evrensel insan doğası" gibi sunma eğilimindedir. 
 Daha önce bahsettiğim Taijin Kyofusho örneği de bu körlüktür işte. 
 
-4) *Bir komitenin oy çokluğu*
-
+4) **Bir komitenin oy çokluğu**
 Ruhsal bozuklukların sınırları, somatik hastalıklar gibi kesin olarak çizilemez. Bu sınırlar, periyodik olarak bir araya gelen bilimsel komitelerin uzlaşıları ve oylamaları sonucunda belirlenir. Bu durumdan ortaya çıkan; tanıların zamanın *ruhuna* ve toplumsal normlara ne kadar sıkı sıkıya bağlı olduğunu gösterir. 
 Mesela eski ICD sürümlerinde eşcinsellik bir hastalık olarak yer alıyordu. Sonrasında çıkartıldı..
 
@@ -262,15 +258,15 @@ Peki bu yapı ne diye durduk yere çöpe atıldı?
 - GAF Skoru: Hastanın semptom şiddeti ile hayata tutunma (işlevsellik) düzeyini kalkıp tek bir sayısal puan ile betimlemeye çalışmak.. Klinisyenlerin adeta akıl tutulması yaşamasına sebep oluyordu. DSM-5'te böyle bi puan bulamazsınız, gerçi onda da "şimdilik" daha objektif ve yapılandırılmış olan *WHODAS 2.0*[^whodas] denen bir şey geldi. 
 
 --
-DSM-5, monoton ve olduğu yerde sayan bir sınıflandırma yerine, bozuklukları bireyin yaşam seyri *boyunca* dizen bir ***metastrüktür*** benimsiyor. 
+DSM-5, monoton ve olduğu yerde sayan bir sınıflandırma yerine, bozuklukları bireyin yaşam seyri *boyunca* dizen bir **metastrüktür** benimsiyor. 
 Çocukluktan yaşlılığa doğru akan bir zaman çizelgesine sahip. 
 
 Mesela DSM-4'teki keskin kategori ayrımları tamamen kaldırıldı. Eskiden: otistik bozukluk, asperger sendromu, atipik otizm gibi tanımları çok daha fazla duyarken, artık yeni anlayış bu alt grupların sınırlarının son derece belirsiz olduğunu söyler ve böylece hepsi tek bir spektrum altında: *Otizm spektrum bozukluğu.*
 
-DSM-5 aynı zamanda kültürel farklılıkları tanı süreçlerinin içine yedirmeye *çalışmıştır.* Klinisyenin hastanın kültürel kimliğini, acıyı kavrayış biçimini ve yardım arama davranışlarını **sistematik olarak sorgulayabilmesi için** ***Kültürel Formülasyon Görüşmesi*** (*Cultural Formulation of Interview / CFI*)[^cfi] isminde yapılandırılmış bir **klinik rehber el kitabı eklemiştir.**
+DSM-5 aynı zamanda kültürel farklılıkları tanı süreçlerinin içine yedirmeye *çalışmıştır.* Klinisyenin hastanın kültürel kimliğini, acıyı kavrayış biçimini ve yardım arama davranışlarını **sistematik olarak sorgulayabilmesi için** **Kültürel Formülasyon Görüşmesi** (*Cultural Formulation of Interview / CFI*)[^cfi] isminde yapılandırılmış bir **klinik rehber el kitabı eklemiştir.**
 
 
-DSM 20 yılda bir kapağı açılan ve güncellenen bir kitap değildir; yaşayan bir belge gibi görmeli onu. Mesela 2013'te çıkan DSM-5'ten sonraki 10 yıllık bilimsel birikimi entegre etmek için 2022 yılında DSM-5-TR güncellemesi geldi. Burdaki TR, Türkiye/Türkçe demek değil.. **T**ext **R**evision anlamında. 
+DSM 20 yılda bir kapağı açılan ve güncellenen bir kitap değildir; yaşayan bir belge gibi görmeli onu. Mesela 2013'te çıkan DSM-5'ten sonraki 10 yıllık bilimsel birikimi entegre etmek için 2022 yılında DSM-5-TR güncellemesi geldi. Burdaki TR, Türkiye/Türkçe demek değil.. **T **ext **R **evision anlamında. 
 
 ---
 
@@ -339,7 +335,7 @@ Sınıflandırma sistemleri, insan zihninin derin ve karmaşık "acısını" ort
 
 **Tanımlar, kodlar, sistemler... Hepsi de bilimin ilerleyişiyle birlikte değişmeye, darmadağın olmaya ve yeniden yaratılmaya mahkûmdur.**
 
-*İnsanın o ***hakiki*** ve varoluşsal acısı her zaman baki kalacaktır......*
+İnsanın o **hakiki** ve varoluşsal acısı her zaman baki kalacaktır......
 
 ---
 
