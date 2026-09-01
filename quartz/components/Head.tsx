@@ -1288,17 +1288,39 @@ function scSerpentHr(){
 function scFooterMail(){
   // Deprecated: Mail button moved to SBB toolbar
 }
-// ── Görev 3b: Konu makalesinde başlığın üstüne büyük, ortalı hiyeroglif ──
+// ── Görev 3b: Konu makalesinde başlığın üstüne büyük, ortalı hiyeroglif ve Ders Rozeti ──
 function scArticleGlyph(){
   var slug=document.body.getAttribute('data-slug')||'';
-  if(slug.endsWith('/index')||slug===''||slug==='index'||slug==='404')return; // yalnız yaprak makaleler
+  if(slug.endsWith('/index')||slug===''||slug==='index'||slug==='404'||slug==='tum-yazilar')return; // yalnız yaprak makaleler
   var h=document.querySelector('.center .article-title, article .article-title');
   if(!h||h.getAttribute('data-sc-aglyph'))return;
-  var gl=scGlyphFor(h.textContent||'');
-  if(!gl)return;
   h.setAttribute('data-sc-aglyph','1');
-  var g=document.createElement('div');g.className='sc-article-glyph';g.setAttribute('aria-hidden','true');g.textContent=gl;
-  if(h.parentNode)h.parentNode.insertBefore(g,h);
+
+  var parts=slug.split('/').filter(Boolean);
+  var courseSlug=parts[0];
+  var courseName=SC_MAP[courseSlug];
+
+  var headerWrap=document.createElement('div');
+  headerWrap.className='sc-article-header-meta';
+
+  if(courseName){
+    var eyebrow=document.createElement('a');
+    eyebrow.className='sc-article-course-eyebrow';
+    eyebrow.href='/'+courseSlug+'/';
+    eyebrow.textContent=courseName;
+    headerWrap.appendChild(eyebrow);
+  }
+
+  var gl=scGlyphFor(h.textContent||'');
+  if(gl){
+    var g=document.createElement('div');
+    g.className='sc-article-glyph';
+    g.setAttribute('aria-hidden','true');
+    g.textContent=gl;
+    headerWrap.appendChild(g);
+  }
+
+  if(h.parentNode)h.parentNode.insertBefore(headerWrap,h);
 }
 function perNav(){
   // Masaüstünde sağ SBB/saat kutusu daima açık kalır; mobilde sayfa değişince kapanır
