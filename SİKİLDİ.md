@@ -66,6 +66,14 @@ Asistanın görevi yazarın metnini değiştirmek değil, metnin **etrafındaki*
 4. Kaynakçayı APA 7 standardında metnin en sonuna bağlamak.
 5. Varsa istenen görseli metnin akışını bozmadan doğru konuma iliştirmek.
 
+### 1.3 CommonMark Delimiter & Tipografi Kusursuzluğu (Sıfır Ham Asteriks)
+- **Boşluk Disiplini:** `**bold**` ve `*italik*` etiketlerinin sınırlarında CommonMark standardına kesinlikle uyulur:
+  - Açılış `**` öncesinde boşluk veya noktalama olmalıdır: `kelime. **vurgu**`
+  - Kapanış `**` sonrasında boşluk veya noktalama olmalıdır: `**vurgu** kelime`
+  - Etiketin içinde asla kenar boşluğu bırakılmaz: `**vurgu**` (Hatalı: `** vurgu **`)
+- **Karmaşık Etiketlerde Saf HTML:** Span veya mark (`<mark>`, `<span>`) ile kalınlaştırma iç içe geçtiğinde Markdown `**` yerine saf HTML `<strong>` kullanılır.
+- **Sıfır Ham Asteriks Denetimi:** Her derleme sonrasında `public/` altındaki HTML çıktılarında ham `**` kalmadığı testle doğrulanır.
+
 ---
 
 ## 2. Felsefi Temeller: Karpathy Sadeliği & Kepano Dayanıklılığı
@@ -96,6 +104,10 @@ tags:
 - `date`: Her zaman ISO 8601 formatında (`YYYY-MM-DD`). Yazının gerçek yazım tarihi kesinlikle korunur!
 - `tags`: YAML list formatında — tek satırda virgülle değil, her etiket ayrı satırda `- etiket` şeklinde.
 - `aliases`, `cssclasses`, `status` gibi ekstra kalabalık alanlar eklenmez.
+
+### 3.1 Quartz Eklentileri ve CI/CD (GitHub Actions) Kalıcılığı
+- Sıralama, filtreleme veya şablon değişikliği yapılan Quartz eklentileri (örneğin son eklenenler sırası vb.) uzak GitHub reposundan çekilmez (`github:quartz-community/...` yerine `./local-plugins/<eklenti-adı>`).
+- Tüm eklenti kaynak ve build kodları Git'te tutulur, böylece GitHub Actions CI derlemelerinde yerel mantık asla ezilmez.
 
 ---
 
