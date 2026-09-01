@@ -857,94 +857,77 @@ function scFitHex(){
 }
 
 function scSortRecentNotes(){
-  // Remove any remaining tags / see more link
-  document.querySelectorAll('.recent-notes p a[href*="tags"], .recent-notes a[href*="tags"]').forEach(function(el){
-    var p = el.closest('p');
-    if(p) p.remove();
-    else el.remove();
-  });
-  var rns=document.querySelectorAll('.recent-notes .recent-ul');
-  var DATE_MAP={
-    'GORSEL KORTEKS NESNELER VE SAHNELER': '2026-08-30',
-    'KURAMLAR VE KATEGORIK YAKLASIMLAR': '2026-08-27',
-    'GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA': '2026-08-20',
-    'GIRIS NORMAL VE ANORMAL': '2026-07-03',
-    'GUNESTEN KORUNMA': '2026-06-25',
-    'BESLENME PSIKOLOJISI': '2026-06-25',
-    'BESLENME': '2026-06-25',
-    'KONDOM KULLANIMI': '2026-06-25',
-    'FIZIKSEL AKTIVITE': '2026-06-25',
-    'SIGARANIN PSIKOLOJISI': '2026-06-23',
-    'SIGARA': '2026-06-23',
-    'GERI DUSUS': '2026-06-14',
-    'SAGLIK MODELLERI BILMEK NEDEN YETMIYOR': '2026-06-13',
-    'SAGLIK PSIKOLOJISI NEDIR VE NEDEN VAR': '2026-06-07',
-    'GIRIS GELISIM PSIKOLOJISININ KONUSU VE GOREVLERI': '2026-06-04',
-    'GIRIS AMPIRIK BIR BILIM OLARAK PSIKOLOJI': '2026-06-01',
-    'GIRIS': '2026-06-04'
-  };
-  rns.forEach(function(ul){
-    var lis=Array.from(ul.querySelectorAll(':scope > .recent-li'));
-    if(!lis.length)return;
-    // Filter only actual written articles
-    lis.forEach(function(li){
-      var a=li.querySelector('.desc h3 a')||li.querySelector('a');
-      var aTitle=scFold(a?a.textContent:'');
-      if(!DATE_MAP[aTitle]){
-        li.remove();
+  var isHome = document.body.getAttribute('data-slug') === 'index' || !document.body.getAttribute('data-slug');
+  var rns = document.querySelectorAll('.recent-notes .recent-ul');
+  
+  if(isHome){
+    var homeArticles = [
+      {
+        course: 'BİLİŞ PSİKOLOJİSİ 1',
+        title: 'Görsel Korteks — Nesneler ve Sahneler',
+        href: '/biliş-psikolojisi-1/görsel-korteks-—-nesneler-ve-sahneler',
+        dateStr: '30 AĞU 2026',
+        datetime: '2026-08-30T00:00:00.000Z',
+        cls: 'rp-1',
+        status: 'writing',
+        tooltip: 'Yazılıyor...'
+      },
+      {
+        course: 'KLİNİK PSİKOLOJİ 1',
+        title: 'Kuramlar ve Kategorik Yaklaşımlar',
+        href: '/klinik-psikoloji-1/kuramlar-ve-kategorik-yaklaşımlar',
+        dateStr: '27 AĞU 2026',
+        datetime: '2026-08-27T00:00:00.000Z',
+        cls: 'rp-2',
+        status: 'done',
+        tooltip: 'Tamamlandı.'
+      },
+      {
+        course: 'BİLİŞ PSİKOLOJİSİ 1',
+        title: 'Giriş: Algı, Duyu Fizyolojisi, Göz ve Retina',
+        href: '/biliş-psikolojisi-1/giriş:-algı,-duyu-fizyolojisi,-göz-ve-retina',
+        dateStr: '20 AĞU 2026',
+        datetime: '2026-08-20T00:00:00.000Z',
+        cls: 'rp-3',
+        status: 'done',
+        tooltip: 'Tamamlandı.'
+      },
+      {
+        course: 'KLİNİK PSİKOLOJİ 1',
+        title: 'Giriş: Normal ve Anormal',
+        href: '/klinik-psikoloji-1/giriş:-normal-ve-anormal',
+        dateStr: '03 TEM 2026',
+        datetime: '2026-07-03T00:00:00.000Z',
+        cls: 'rp-4',
+        status: 'done',
+        tooltip: 'Tamamlandı.'
+      }
+    ];
+    rns.forEach(function(ul){
+      if(ul.closest('.left.sidebar')) return;
+      var html = '';
+      homeArticles.forEach(function(art){
+        html += '<li class="recent-li ' + art.cls + '" data-sc-rp="1">' +
+          '<div class="section">' +
+          '<div class="desc">' +
+          '<span class="rp-eyebrow">' + art.course + '</span>' +
+          '<h3><a href="' + art.href + '" class="internal">' + art.title + '</a><span class="sc-status-dot sc-status-' + art.status + '" data-tooltip="' + art.tooltip + '"></span></h3>' +
+          '</div>' +
+          '<p class="meta"><time datetime="' + art.datetime + '">' + art.dateStr + '</time></p>' +
+          '</div>' +
+          '</li>';
+      });
+      ul.innerHTML = html;
+      
+      var rnCont = ul.closest('.recent-notes');
+      if(rnCont && !rnCont.querySelector('.sc-all-notes-btn-wrap')){
+        var btnWrap = document.createElement('div');
+        btnWrap.className = 'sc-all-notes-btn-wrap';
+        btnWrap.innerHTML = '<a href="/tum-yazilar" class="sc-all-notes-btn">Tüm Yazılar &rarr;</a>';
+        rnCont.appendChild(btnWrap);
       }
     });
-    var validLis=Array.from(ul.querySelectorAll(':scope > .recent-li'));
-    validLis.sort(function(a,b){
-      var aA=a.querySelector('.desc h3 a')||a.querySelector('a');
-      var bA=b.querySelector('.desc h3 a')||b.querySelector('a');
-      var aTitle=scFold(aA?aA.textContent:'');
-      var bTitle=scFold(bA?bA.textContent:'');
-      var aDate=DATE_MAP[aTitle]||'2026-01-01';
-      var bDate=DATE_MAP[bTitle]||'2026-01-01';
-      return bDate.localeCompare(aDate);
-    });
-    var isHome = document.body.getAttribute('data-slug') === 'index' || !document.body.getAttribute('data-slug');
-    validLis.forEach(function(li, idx){
-      if(isHome && idx >= 4){
-        li.remove();
-        return;
-      }
-      li.classList.remove('rp-1','rp-2','rp-3','rp-4');
-      if(idx === 0) li.classList.add('rp-1');
-      else if(idx === 1) li.classList.add('rp-2');
-      else if(idx === 2) li.classList.add('rp-3');
-      else if(idx === 3) li.classList.add('rp-4');
-
-      var a=li.querySelector('.desc h3 a')||li.querySelector('a');
-      var timeEl=li.querySelector('.meta time, time');
-      if(a && timeEl){
-        var aTitle=scFold(a.textContent);
-        if(aTitle==='GIRIS NORMAL VE ANORMAL'){
-          timeEl.textContent='03 Tem 2026';
-          timeEl.setAttribute('datetime','2026-07-03T00:00:00.000Z');
-        } else if(aTitle==='GORSEL KORTEKS NESNELER VE SAHNELER'){
-          timeEl.textContent='30 Ağu 2026';
-          timeEl.setAttribute('datetime','2026-08-30T00:00:00.000Z');
-        } else if(aTitle==='KURAMLAR VE KATEGORIK YAKLASIMLAR'){
-          timeEl.textContent='27 Ağu 2026';
-          timeEl.setAttribute('datetime','2026-08-27T00:00:00.000Z');
-        } else if(aTitle==='GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA'){
-          timeEl.textContent='20 Ağu 2026';
-          timeEl.setAttribute('datetime','2026-08-20T00:00:00.000Z');
-        }
-      }
-      ul.appendChild(li);
-    });
-    // Add "Tüm Yazılar..." button under recent-notes
-    var rnCont = ul.closest('.recent-notes');
-    if(rnCont && !rnCont.querySelector('.sc-all-notes-btn-wrap')){
-      var btnWrap = document.createElement('div');
-      btnWrap.className = 'sc-all-notes-btn-wrap';
-      btnWrap.innerHTML = '<a href="/tum-yazilar" class="sc-all-notes-btn">Tüm Yazılar &rarr;</a>';
-      rnCont.appendChild(btnWrap);
-    }
-  });
+  }
 }
 // Sayfanın sağ kenarı ile içerik kutusu arası mesafe (scrollbar hariç) → SBB/kuyruk
 // tam sayfa kenarına otursun diye --sc-redge olarak ölçülür.

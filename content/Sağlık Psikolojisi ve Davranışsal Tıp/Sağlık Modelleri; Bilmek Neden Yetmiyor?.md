@@ -151,8 +151,11 @@ Kafanın içinde bir yerde bu iki "kelimeye" farklı anlamlar ve aksiyon alma be
 
 Özetle, öznel kırılganlık ile hastalığın ağırlığı algısı birleşince algılanan sağlık tehdidi oluşuyor.
 Ama tehdit tek başına yeterli değil...
+
+
 **Tehdidi görüyorsun, peki önlem almaya değer mi?**
----
+--
+
 
 Sigara bırakmak kanser riskini düşürür, bu fayda.
 Ama kilo alabilirsin, sindirim sorunları yaşayabilirsin, bunlar maliyet.
@@ -575,9 +578,6 @@ katılımcıların 71%'i zaten "yapacağım" kararını vermiş durumdaydı, 5. 
 "Test formu gönderme" efor azaltma ise tam tersini yaptı: zaten kararlı olanları eyleme geçirdi, ama kararsızları etkilemedi.
 
 Yani iki farklı müdahale, iki farklı gruba farklı şekilde işledi. Bu da PAPM'ın temel iddiasını destekliyor: insanların değişim sürecinin neresinde olduğunu bilmeden yapılan müdahale boşuna gidiyor...
-
-```
-
 
 
 #### PAPM'ın Çatlakları

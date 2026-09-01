@@ -4669,3 +4669,76 @@ html[saved-theme="dark"] .sc-dialogue-tag,
   margin: 0 !important;
   letter-spacing: 0.03em;
 }
+
+// ─── Yazı Durum Göstergesi (Status Dot & Shader Glow) ────────
+.sc-status-dot {
+  display: inline-block;
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: 1px;
+  position: relative;
+  cursor: help;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  line-height: 1;
+
+  &:hover {
+    transform: scale(1.4);
+  }
+
+  // 1. Yazımı Devam Eden: Turuncu Glow Shader Pulse
+  &.sc-status-writing {
+    background-color: #ff9800;
+    box-shadow: 0 0 8px #ff9800, 0 0 14px rgba(255, 152, 0, 0.6);
+    animation: sc-glow-pulse 2.2s infinite ease-in-out;
+  }
+
+  // 2. Hazır / Tamamlanmış: Dark-Lime Green Soft Glow
+  &.sc-status-done {
+    background-color: #65a30d; // Dark/lime green
+    box-shadow: 0 0 6px rgba(101, 163, 13, 0.7);
+  }
+
+  // Minimalist Tooltip (Sadece Mouse Hover ile Belirir)
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: var(--dark, #1c1917);
+    color: var(--light, #fbf7ee);
+    border: 1px solid var(--gray, #78716c);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-family: var(--bodyFont, 'Libre Baskerville', serif);
+    font-style: normal;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes sc-glow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7), 0 0 6px #ff9800;
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 152, 0, 0), 0 0 14px rgba(255, 183, 77, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 152, 0, 0), 0 0 6px #ff9800;
+  }
+}
