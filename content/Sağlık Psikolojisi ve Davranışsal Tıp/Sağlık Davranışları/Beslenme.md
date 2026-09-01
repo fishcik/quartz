@@ -2,9 +2,9 @@
 title: Beslenme Psikolojisi
 date: 2026-06-25
 tags:
-  - sağlık-psikolojisi
-  - beslenme-psikolojisi
-  - sağlık-davranışları
+- sağlık-psikolojisi
+- beslenme-psikolojisi
+- sağlık-davranışları
 ---
 
 > Sağlıksız beslenme insanı anında yıkmaz; yarattığı aşırı kilo illüzyonu üzerinden Tip 2 diyabet ve kanser gibi hastalıklara zemin hazırlar.
@@ -20,20 +20,19 @@ tags:
 
 ---
 
-**Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-yeterlilik[^oz-yeterlilik]" mekanizmasını koruyabilmektir.**
+> Olay kalorileri ezberlemek değil. Niyetin eyleme dönüşemediği o yapısal uçurumda, o çatalı masaya bırakmanı sağlayacak "bireysel öz-yeterlilik[^oz-yeterlilik]" mekanizmasını koruyabilmektir.
 
 ---
 
 ## 1. Sağlıksız Beslenme ve DGE Kuralları
-
 **Sağlıksız beslenme neden tehlikeli?**
-- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı _aşırı kilo_ üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
+- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı _aşırı kilo_ üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir.
 
 ---
 
-Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç. 
+Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç.
 
-Hatta **DGE** (Deutsche Gesellschaft für Ernährung - Alman Beslenme Derneği) sağlıklı beslenmek için 10 kural bile çıkardı: 
+Hatta **DGE** (Deutsche Gesellschaft für Ernährung - Alman Beslenme Derneği) sağlıklı beslenmek için 10 kural bile çıkardı:
 
 1) Çeşitli ye
 Yasak besin yok. Çeşitlilik yeterli besini sağlar.
@@ -73,10 +72,11 @@ Ayrıca beslenmenin:
 - 52-53% karbonhidrat (_tahıl ürünleri, patates, meyve&sebze_)
 - 28-31% yağ (_60-80g, bitkisel_)
 - 16-17% protein (_süt ürünleri, et, balık_)
-şeklinde makrolara ayrılması DGE tarafından önerilir. 
+şeklinde makrolara ayrılması DGE tarafından önerilir.
 
 ---
-**DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-yeterlilik[^oz-yeterlilik] belirler.**
+
+> DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-yeterlilik[^oz-yeterlilik] belirler.
 
 Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.
 
@@ -85,51 +85,32 @@ Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor.
 
 ---
 
-**Sokak:**
->**"Şeker yemesem zayıflarım" aynen sanki tek sorrun şeker.**
+**Sokak:** "Şeker yemesem zayıflarım" aynen sanki tek sorrun şeker.
+**Bilim:** ==Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.==
 
-**Bilim:**
-==**Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.**==
+---
+**Sokak:** "Yağ yemek şişmanlatır" yağın türü ve miktarı değil, varlığı sorun gibi algılanır.
+**Bilim:** ==Yağın miktarı (günlük 60-80 g) ve türü (bitkisel) önemli. Sıfır yağ zaten önerilmiyor.==
+
+---
+**Sokak:** "Kilolu = tembel", aşırı kilo tamamen irade meselesi sanılır.
+**Bilim:** ==Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yoketmez.==
 
 ---
 
-**Sokak:**
->**"Yağ yemek şişmanlatır" yağın türü ve miktarı değil, varlığı sorun gibi algılanır.**
+**Sokak:** "Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
 
-**Bilim:**
-==**Yağın miktarı (günlük 60-80 g) ve türü (bitkisel) önemli. Sıfır yağ zaten önerilmiyor.**==
+**Bilim:** ==BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas[^adipositas]) resmi olarak hastalık sınıfında.==
 
 ---
 
-**Sokak:**
->**"Kilolu = tembel", aşırı kilo tamamen irade meselesi sanılır.**
+**Sokak:** "Kankam, benim kilom yerinde, göbek yok, istesem de şişmanlamıyorum. O yüzden istediğim çöpü gömerim. Hiç acımam."
 
-**Bilim:**
-==**Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yoketmez.**==
+**Bilim:** ==Yemezler. Yanlış beslenme normal kilolularda bile gizli hasar ve besin yetersizliği doğurur.==
 
 ---
-
-**Sokak:**
->**"Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
-
-**Bilim:**
-==**BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas[^adipositas]) resmi olarak hastalık sınıfında.**==
-
----
-
-**Sokak:**
->**"Kankam, benim kilom yerinde, göbek yok, istesem de şişmanlamıyorum. O yüzden istediğim çöpü gömerim. Hiç acımam."
-
-**Bilim:**
-==**Yemezler. Yanlış beslenme normal kilolularda bile gizli hasar ve besin yetersizliği doğurur.**==
-
----
-
-**Sokak:**
->**"Ben bu sefer sağlıklı beslenmeyi kafaya çok pis koydum. Yürekten niyetliyim. Kesin yaparım."**
-
-**Bilim:**
-==**Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.**==
+**Sokak:** "Ben bu sefer sağlıklı beslenmeyi kafaya çok pis koydum. Yürekten niyetliyim. Kesin yaparım."_
+**Bilim:** ==Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.==
 
 > Povey ve ark. (2000) bunu sayıyla gösterdi: niyet için %57–64 varyans açıklaması. Gerçek davranışa gelince bu oran %19–32'ye çakılıyor. Niyet-davranış uçurumu tam burada.
 
@@ -139,10 +120,7 @@ Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor.
 ## 4. Niyet-Davranış Uçurumu ve Öz-Yeterlilik
 
 Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teorideki algılanan davranış kontrolünden çok daha kritik bir eylem tahmincisidir.
-
-**DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.**
-
-**Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. Öz-yeterlilik de işte o ağır çantayı taşıyabildiğine duyduğun inanç**
+**DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.** Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. Öz-yeterlilik de işte o ağır çantayı taşıyabildiğine duyduğun inanç.
 ---
 
 [^adipositas]: **Adipositas / Klinik Obezite (Obesity):** Vücutta sağlığı bozacak ölçüde aşırı yağ dokusu birikimi ile karakterize, BMI $\ge 30 \text{ kg/m}^2$ olan kronik metabolik hastalık tablosu.

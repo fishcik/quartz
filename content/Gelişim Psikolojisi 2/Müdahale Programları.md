@@ -2,6 +2,6 @@
 title: Müdahale Programları
 date: 2026-01-15
 tags:
-  - gelişim-psikolojisi-2
-  - mudahale-programlari
+- gelişim-psikolojisi-2
+- mudahale-programlari
 ---

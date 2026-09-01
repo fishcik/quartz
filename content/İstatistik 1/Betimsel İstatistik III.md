@@ -2,6 +2,6 @@
 title: Betimsel İstatistik III
 date: 2026-01-15
 tags:
-  - istatistik-1
-  - betimsel-i-statistik
+- istatistik-1
+- betimsel-i-statistik
 ---

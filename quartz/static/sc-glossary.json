@@ -12,7 +12,7 @@
   },
   {
     "term": "Abstinans İhlal Etkisi (AVE / Abstinence Violation Effect)",
-    "desc": "Tek bir küçük kaçamağın (lapse) bireyde yarattığı *\"Madem kural bozuldu, battı balık yan gider\"* yıkımı ve kontrol kaybı krizidir.",
+    "desc": "Tek bir küçük kaçamağın (lapse) bireyde yarattığı **\"Madem kural bozuldu, battı balık yan gider\"** yıkımı ve kontrol kaybı krizidir.",
     "sources": [
       {
         "title": "Geri Düşüş",
@@ -551,6 +551,17 @@
         "title": "Güneşten Korunma",
         "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Güneşten Korunma",
         "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/güneşten-korunma"
+      }
+    ]
+  },
+  {
+    "term": "MET Değeri (Metabolic Equivalent of Task)",
+    "desc": "_ Bir fiziksel aktivite esnasındaki enerji harcamasının dinlenme anındaki bazal metabolizma hızına ($3.5\\text{ ml } O_2 / \\text{kg} \\cdot \\text{dk}$) oranını belirten standart fizyolojik birim.",
+    "sources": [
+      {
+        "title": "Fiziksel Aktivite",
+        "path": "Sağlık Psikolojisi ve Davranışsal Tıp/Sağlık Davranışları/Fiziksel Aktivite",
+        "url": "/sağlık-psikolojisi-ve-davranışsal-tıp/sağlık-davranışları/fiziksel-aktivite"
       }
     ]
   },

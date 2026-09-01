@@ -231,7 +231,7 @@ plugins:
       links: {}
   # Görev 1.4b: Sol sütun "Son Yazılar" accordion (JS ile <details>'e sarılır)
   # limit yüksek: JS folder-index sayfalarını eler, gerçek yazılar yüzeye çıkar
-  - source: github:quartz-community/recent-notes
+  - source: ./local-plugins/recent-notes
     enabled: true
     options:
       title: Son Yazılar
@@ -244,7 +244,7 @@ plugins:
       priority: 40
       condition: not-index
   # Görev 1.4a: Anasayfa son yazılar (JS folder-index'leri eler → ilk 3 hiyerarşi)
-  - source: github:quartz-community/recent-notes
+  - source: ./local-plugins/recent-notes
     enabled: true
     options:
       title: Son Eklenenler

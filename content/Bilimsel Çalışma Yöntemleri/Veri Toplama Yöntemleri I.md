@@ -2,6 +2,6 @@
 title: Veri Toplama Yöntemleri I
 date: 2026-01-15
 tags:
-  - bilimsel-çalışma-yöntemleri
-  - veri-toplama-yontemleri
+- bilimsel-çalışma-yöntemleri
+- veri-toplama-yontemleri
 ---

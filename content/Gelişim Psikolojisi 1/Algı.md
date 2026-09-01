@@ -2,8 +2,8 @@
 title: Algı
 date: 2026-01-15
 tags:
-  - gelişim-psikolojisi-1
-  - algi
+- gelişim-psikolojisi-1
+- algi
 ---
 
 Algı operasyonu yapanın bacısını sikerim.
