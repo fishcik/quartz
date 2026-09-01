@@ -923,6 +923,15 @@ function scSortRecentNotes(){
         if(aTitle==='GIRIS NORMAL VE ANORMAL'){
           timeEl.textContent='03 Tem 2026';
           timeEl.setAttribute('datetime','2026-07-03T00:00:00.000Z');
+        } else if(aTitle==='GORSEL KORTEKS NESNELER VE SAHNELER'){
+          timeEl.textContent='30 Ağu 2026';
+          timeEl.setAttribute('datetime','2026-08-30T00:00:00.000Z');
+        } else if(aTitle==='KURAMLAR VE KATEGORIK YAKLASIMLAR'){
+          timeEl.textContent='27 Ağu 2026';
+          timeEl.setAttribute('datetime','2026-08-27T00:00:00.000Z');
+        } else if(aTitle==='GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA'){
+          timeEl.textContent='20 Ağu 2026';
+          timeEl.setAttribute('datetime','2026-08-20T00:00:00.000Z');
         }
       }
       ul.appendChild(li);
@@ -1360,13 +1369,13 @@ function perNav(){
     }
   }
   document.querySelectorAll('.recent-notes .recent-li').forEach(function(li){
-    var a=li.querySelector('.desc h3 a');if(!a)return;
+    var a=li.querySelector('.desc h3 a')||li.querySelector('a');if(!a)return;
     var t=(a.textContent||'').trim().toLowerCase();
-    var np=decodeURIComponent((a.getAttribute('href')||'')).replace(/^[.][.][/]|^[.][/]/,'').replace(/[/]+$/,'');
-    var parts=np.split('/').filter(Boolean);
-    var topLevel=parts.length<=1;
-    var isCI=parts.length===2&&parts[1]==='index';
-    if(t==='sayko.ch'||np===''||np==='.'||np==='index'||np.endsWith('/index')||isCI||(topLevel&&(SC_MAP[parts[0]]||SC_MAP[np]))||topLevel){li.remove();}
+    var href=decodeURIComponent((a.getAttribute('href')||'')).normalize('NFC').replace(/^[.][.][/]|^[.][/]/,'').replace(/[/]+$/,'');
+    var isCourse = SC_MAP[href] || (href.indexOf('/') === -1 && SC_MAP[href]);
+    if(t==='sayko.ch'||t==='home'||t==='tüm yazılar'||t==='tum-yazilar'||href===''||href==='.'||href==='index'||href.endsWith('/index')||isCourse){
+      li.remove();
+    }
   });
   // Gerçek kronolojiye göre sırala
   scSortRecentNotes();

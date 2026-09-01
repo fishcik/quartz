@@ -31,7 +31,7 @@ Ne gördüğümüzü nereden biliyoruz?
 
 Ya da gördüğümüz şeyin gerçekten de "gördüğümüz şey" olduğunu?
 
-*"Why do things look as they do?" - Kurt Koffka (1886 - 1941)*
+"Why do things look as they do?" - Kurt Koffka (1886 - 1941)
 
 Gördüklerimizin nasıl oluyor da gördüğümüz gibi göründüğünü de içine alan geniş bir konu, algı psikolojisi.
 
@@ -44,19 +44,19 @@ Makalede bahsedilen şey, yeni ve devrim potansiyelinde bir teknolojik gelişme:
 İlk Perceptron'u yapan psikolog Frank Rosenblatt (1958). Oda boyutunda, tam beş ton ağırlığında bir makine düşün..
 Kendi kendine öğreniyor: solda işaret olan kart mı, sağda işaret olan kart mı, ayırt edebiliyor. Henüz o kadar oluyor..
 Rosenblatt diyor ki bu cihaz “optik, elektriksel ya da tonal bilgi örüntüleri arasındaki benzerlikleri veya özdeşlikleri, biyolojik bir beynin algısal süreçlerine bayağı benzer şekilde tanımayı öğrenebilir”.
-Yani adam resmen **"bu makine beyin gibi algılayacak"** diyor. Üstelik Rosenblatt ve o dönemin bilgisayarcıları, Perceptron gibi bir "algılayan makineyi" yapmak için on yıl falan yeterli diyorlar, biraz iyimserler. Yani *insan gibi* çevreyi kolaylıkla anlayabilen ve içinde hareket edebilen bir makine on yıla hazır olur diye düşünüyorlar.
+Yani adam resmen **"bu makine beyin gibi algılayacak"*_diyor. Üstelik Rosenblatt ve o dönemin bilgisayarcıları, Perceptron gibi bir "algılayan makineyi" yapmak için on yıl falan yeterli diyorlar, biraz iyimserler. Yani_insan gibi_ çevreyi kolaylıkla anlayabilen ve içinde hareket edebilen bir makine on yıla hazır olur diye düşünüyorlar.
 
 Açık konuşmak gerekirse Rosenblatt'ın Perceptron'u insan algısını taklit etmekte pek de başarılı olamadı.
 
 O beş tonluk Perceptron: solda mı sağda mı işaret var, onu bile **50** denemede/turda öğreniyordu. Bugünden bakınca komik geliyor, çünkü artık telefonundaki bir uygulama saniyeler içinde yüz tanıyor, sahne anlatıyor, hatta video izliyor/yaratıyor. 
 Rosenblatt'ın "makine algılayabilir" fikri ==bugünkü yapay zekânın ve özellikle derin öğrenmenin (deep learning) öncüsü/ilk adımı== sayılıyor ve kimse bunu tartışmıyor.
 
-Ama işin *ilginç* tarafı şu: Aradan neredeyse 70 yıl geçti, sistemler inanılmaz hale geldi ama "insan gibi algılama" konusunda **net** bir cevap yok..
+Ama işin _ilginç_tarafı şu: Aradan neredeyse 70 yıl geçti, sistemler inanılmaz hale geldi ama "insan gibi algılama" konusunda_*net** bir cevap yok..
 
-2020'lerin ortasında görsel-dil modelleri fotoğrafa bakıp yalnızca "pistte uçak var" demiyor; hava gösterisi olduğunu, insanların ziyaretçi olduğunu, *hatta* fotoğrafın duygusal tonunu bile söyleyebiliyor.
+2020'lerin ortasında görsel-dil modelleri fotoğrafa bakıp yalnızca "pistte uçak var" demiyor; hava gösterisi olduğunu, insanların ziyaretçi olduğunu, _hatta_ fotoğrafın duygusal tonunu bile söyleyebiliyor.
 **Ama bu, "algı" denen şeyin birebir aynısı mı?**
-*İşte orası hâlâ tartışmalı..*
-Çünkü insan algısı *sadece etiketleme değil*; beden, bellek, duygu ve bağlamla iç içe işleyen bir süreç. Bugünün modelleri inanılmaz derecede iyi birer örüntü makinesi ancak bu süreçlerin fenomenolojik olarak insan deneyimiyle aynı doğada olup olmadığı sorusu hâlâ açıktır.
+İşte orası hâlâ tartışmalı..
+Çünkü insan algısı _sadece etiketleme değil_; beden, bellek, duygu ve bağlamla iç içe işleyen bir süreç. Bugünün modelleri inanılmaz derecede iyi birer örüntü makinesi ancak bu süreçlerin fenomenolojik olarak insan deneyimiyle aynı doğada olup olmadığı sorusu hâlâ açıktır.
 
 Peki o zaman algı neden bu kadar zor? Neden makineler uzun süre bunu yapamadı? İşte **tam da bu noktada** Koffka'nın sorusuna geri dönüyoruz.
 
@@ -71,30 +71,28 @@ Peki bu deneyimler gerçekten **"dışarıda"** mı?
 
 Fizik açısından bakınca işler tuhaflaşıyor:
 
-Dış dünyada **renk yok**. Işık var; elektromanyetik spektrumun dar bir dilimi var. "Kırmızı" denen şey, o dalga boyunun beyinde yarattığı bir *deneyim*.
+Dış dünyada **renk yok**. Işık var; elektromanyetik spektrumun dar bir dilimi var. "Kırmızı" denen şey, o dalga boyunun beyinde yarattığı bir _deneyim_ .
 
 Dış dünyada **ses de yok**! Havada basınç dalgaları var. "Kuş sesi" dediğimiz şey, o dalgaların kulakta ve beyinde dönüştürülmesiyle ortaya çıkan bir yapı.
 
-Retina **iki boyutlu** bir yüzey; ama biz dünyayı üç boyutlu görüyoruz. Üstelik retinaya düşen görüntü, dış dünyanın **eksik ve belirsiz** bir izdüşümü. Aynı 2B görüntüyü doğurabilecek sonsuz sayıda 3B düzenleme var.
+Retina **iki boyutlu**bir yüzey; ama biz dünyayı üç boyutlu görüyoruz. Üstelik retinaya düşen görüntü, dış dünyanın**eksik ve belirsiz**bir izdüşümü. Aynı 2B görüntüyü doğurabilecek sonsuz sayıda 3B düzenleme var.**Yani elimizdeki veri, dış dünyanın birebir kopyası değil; sadece bir ipucu.**
 
-***Yani elimizdeki veri, dış dünyanın birebir kopyası değil; sadece bir ipucu.***
-
-Buna rağmen algımız çoğu zaman gayet net, istikrarlı ve *"gerçek"* hissettiriyor.
+Buna rağmen algımız çoğu zaman gayet net, istikrarlı ve _"gerçek"_ hissettiriyor.
 
 İşte paradoks burada:
 
 Dışarıda renk yok, ses yok, üçüncü boyut retinada yok. Ama biz renkli, sesli, derinlikli bir dünyada yaşıyoruz. Bu nasıl oluyor? Beyin **tam** olarak neyin peşinde?
 
 Beyin istatistiksel bir tahmin motorudur.
-Duyulardan gelen eksik ve gürültülü sinyalleri *pasif biçimde kaydetmiyor*; aktif olarak yorumluyor, tamamlıyor ve kestiriyor.
+Duyulardan gelen eksik ve gürültülü sinyalleri _pasif biçimde kaydetmiyor_; aktif olarak yorumluyor, tamamlıyor ve kestiriyor.
 
 Dünyaya dair **önceden öğrenilmiş istatistiksel beklentiler**i kullanıyor.
 Gelen duyusal veriyi bu beklentilerle birleştirip **en olası yorum**u üretiyor.
-*Yani algı, dış dünyanın bir fotoğrafı değil; beynin "büyük olasılıkla dışarıda olan şey bu" diye kurduğu bir hipotez.*
+Yani algı, dış dünyanın bir fotoğrafı değil; beynin "büyük olasılıkla dışarıda olan şey bu" diye kurduğu bir hipotez.
 
 Gerçeklik algısı, görünen dünya, beynin tahminlerinin sahnelenmesi gibi. Renk de, ses de, derinlik de o sahnenin parçaları.
 
-Örnek: Aynı işaret, ortamına göre "B" harfi ya da "13" sayısı olarak okunuyor. Fiziksel uyaran aynı; değişen tek şey bağlam. Beyin, çevredeki ipuçlarına bakıp "bu büyük olasılıkla bir harf" ya da "bu büyük olasılıkla bir sayı" diye kestirim yapıyor. Gelen veri değişmiyor; ama algı değişiyor. *Yani dışarıda değişen bir şey yok; değişen şey tahminin kendisi.*
+Örnek: Aynı işaret, ortamına göre "B" harfi ya da "13" sayısı olarak okunuyor. Fiziksel uyaran aynı; değişen tek şey bağlam. Beyin, çevredeki ipuçlarına bakıp "bu büyük olasılıkla bir harf" ya da "bu büyük olasılıkla bir sayı" diye kestirim yapıyor. Gelen veri değişmiyor; ama algı değişiyor. _Yani dışarıda değişen bir şey yok; değişen şey tahminin kendisi._
 
 ### Uzun İnce Bir Yol: Uyarıcıdan Aksiyona 7 Durak
 
@@ -107,7 +105,7 @@ Yolun sonunda ise bizim o uyarıcıyı algılamamız, tanımamız ve bir aksiyon
 
 Bu yolda 7 durak var ama panik yok, şimdilik sadece rotayı çiziyorum:
 
-Dışarıda bir şeyler oluyor (*Çevresel Uyarıcı*): Ortamda bir enerji var. Ağacın yansıttığı ışık.
+Dışarıda bir şeyler oluyor (_Çevresel Uyarıcı_): Ortamda bir enerji var. Ağacın yansıttığı ışık.
 
 Işık göze çarpıyor (Temsili Uyarıcı): O koca dünyadan sadece bir kesit, gözün merceğinden geçip retinaya düşüyor. Yani dünyanın 2 boyutlu, **eksik** bir fotoğrafı çekiliyor.
 
@@ -115,18 +113,14 @@ Reseptörler devrede (**Transdüksiyon**): Retinadaki çubuk ve koniler, bu ış
 
 Sinirlerde yolculuk (Nöral İşleme): Bu elektrik sinyali, bir uçtan diğerine, milyonlarca nöronun arasından geçerek beynin görme bölgesine doğru yola çıkıyor.
 
-Perde açılıyor (Algı): Beyin, gelen bu elektrik sinyallerini alıp işliyor ve bilinçli bir deneyim yaratıyor. **"Bir şey görüyorum!!"**
-
-Etiketleniyor (Tanıma): Beyin veri tabanını karıştırıyor ve diyor ki *"Bu gördüğün şey bir ağaç..."*
-
-**Harekete geçiyoruz** (Aksiyon): "Aa aslında güzel ağaçmış, gidip yakından bakayım bari.." deyip yürüyoruz.
+Perde açılıyor (Algı): Beyin, gelen bu elektrik sinyallerini alıp işliyor ve bilinçli bir deneyim yaratıyor. **"Bir şey görüyorum!!"*_Etiketleniyor (Tanıma): Beyin veri tabanını karıştırıyor ve diyor ki _"Bu gördüğün şey bir ağaç..."_**Harekete geçiyoruz** (Aksiyon): "Aa aslında güzel ağaçmış, gidip yakından bakayım bari.." deyip yürüyoruz.
 
 ### Psikofizik: Algıyı Ölçmek
 
 Görüyoruz ki algı dediğimiz şey, beynin dışarıdan gelen eksik veriyi kullanarak "büyük olasılıkla şu var" demesi. 
 Peki bu **"var"** deme işi ne zaman başlıyor? 
 Hangi uyarıcılar fark ediliyor, hangileri edilmiyor? Ve benzer soruların peşine düşen bilim dalıdır psikofizik. 
-Psikofizik, fiziksel *dünya ile zihinsel deneyim* arasındaki ilişkiyi sayılarla ölçmeye çalışıyor[^psikofizik].
+Psikofizik, fiziksel _dünya ile zihinsel deneyim_ arasındaki ilişkiyi sayılarla ölçmeye çalışıyor[^psikofizik].
 
 Peki, ilk ölçülecek şey ne? 
 
@@ -134,7 +128,7 @@ Peki, ilk ölçülecek şey ne?
 ### Mutlak Eşik
 
 "Var" demenin sınırına mutlak eşik deniyor. 
-Bir uyarıcının varlığını fark edebildiğin *en düşük enerji* seviyesi.
+Bir uyarıcının varlığını fark edebildiğin _en düşük enerji_ seviyesi.
 
 Dışarıda bir uyarıcı var. Ama ne kadar güçlü olursa olsun, her zaman algılanmıyor. Karanlık bir odada çok soluk bir ışık var; görür müsün? Görmeyebilirsin. Peki ışığı yavaş yavaş artırdık, artırdık, artırdık... Bi noktada "Aa, orada bir şey var!" diyorsun.
 
@@ -146,7 +140,7 @@ Ama burada ince bir detay var: Mutlak eşik = "her zaman fark ettiğin nokta" de
 Neden? Çünkü vücut gürültülü bir makine gibi. Dışarıdan gelen sinyallerin bir kısmı zaten gürültüye karışıyor; bir kısmı da kendisi gürültü zaten. 
 Aynı uyarıcıyı bir denemede fark edersin, bir sonrakinde fark etmezsin. Sistem stabil değil. O yüzden %50 kuralı bir filtre gibi çalışıyor: "Bu noktada artık şans eseri değil, gerçekten algılamaya başladın" diyoruz.
 
-Mutlak eşik **"var mı yok mu?"** sorusunun cevabıydı. Ama bir de işin şu kısmı var: **"Değişti mi?"**
+Mutlak eşik **"var mı yok mu?"**sorusunun cevabıydı. Ama bir de işin şu kısmı var:**"Değişti mi?"**
 
 Elimde 100 gram un var. Gözler kapalı. Birisi elime 2 gram daha koydu. Hissettim mi? Muhtemelen hayır. 
 Peki 5 gram? Belki. 8 gram? Evet, bir şeyler değişti galiba...
@@ -186,7 +180,7 @@ Ses için %4, ışık ve tat için %8'lik fark gerekiyor. Yani ışık değişim
 
 Bu yüzden Weber'in dediği: Duyular dünyayı mutlak değil, oransal tartıyor.
 
-Ama bi durup düşünelim: Bu adamlar 1800'lerde yaşıyor. Ve o dönemin genel kanısı şu:** Zihin ölçülemez..** Sebebi de basit: Beden fizikseldir, dokunursun, ölçersin. Ama zihin öyle mi? Görünmez, soyut. Hatta o dönemde "zihnin kendini incelemesi imkansızdır" diye bir inanç var. Yani *"Beyin kendini nasıl anlasın ki?"* gibi bir paradoks.
+Ama bi durup düşünelim: Bu adamlar 1800'lerde yaşıyor. Ve o dönemin genel kanısı şu:** Zihin ölçülemez..*_Sebebi de basit: Beden fizikseldir, dokunursun, ölçersin. Ama zihin öyle mi? Görünmez, soyut. Hatta o dönemde "zihnin kendini incelemesi imkansızdır" diye bir inanç var. Yani_"Beyin kendini nasıl anlasın ki?"_ gibi bir paradoks.
 
 22 Ekim 1850 sabahı, Leipzig Üniversitesi fizik profesörü Gustav Fechner yatağında yatarken birden aklına şöyle bir şey geliyor: "Ulan hadi aslında zihin ve beden iki ayrı şey değil de, aynı gerçekliğin iki yüzüyse!?"
 
@@ -233,9 +227,9 @@ Eksisi: Uzun sürer, denek sıkılır, bunalır..
 
 Gördüğümüz üzere Weber ve Fechner hep "fark ettin mi, etmedin mi?" diye sordu. Yani hep eşiklerle uğraştılar.
 
-Ama Stevens dedi ki: "Ya eşik tamam da... bir de şu var: Bu uyarıcılar ne kadar güçlü *hissettiriyor*?"
+Ama Stevens dedi ki: "Ya eşik tamam da... bir de şu var: Bu uyarıcılar ne kadar güçlü _hissettiriyor_ ?"
 
-Çünkü gerçek hayatta algı, fiziksel değerlerle birebir *gitmiyor*. Beyin bazen sansürlüyor, bazen de abartıyor, uyduruyor..
+Çünkü gerçek hayatta algı, fiziksel değerlerle birebir _gitmiyor_ . Beyin bazen sansürlüyor, bazen de abartıyor, uyduruyor..
 
 Telefonun parlaklık ayarı mesela. Parlaklığı %0'dan %10'a çıkarsan "Vaaay, gözüm açıldı!" dersin. Büyük bir fark.
 Sonra %90'dan %100'e çıkardın. Ne hissettin? Neredeyse hiçbir şey..
@@ -287,28 +281,24 @@ Telefon çalmadı, sen "çaldı!" dedin → Yanlış alarm
 Telefon çaldı, sen "çalmadı" dedin → Iska
 Telefon çalmadı, sen "çalmadı" dedin → Doğru ret
 
-*Hatta bunu şöyle açalım: *
-
-Kevser: Telefon çaldığında %90 duyuyor (iyi). Ama telefon çalmadığında da %50 "çaldı!" diye ayaklanıyor (berbat). Yani Kevser her sese atlıyor.. Kriteri çok düşük. **Cesur** *ama* **dikkatsiz**.
-Mülayim: Telefon çaldığında %60 duyuyor (daha düşük). Ama çalmadığında sadece %10 "çaldı!" diyor (*muhteşem*). Yani Mülayim **temkinli**. Kriteri yüksek. Cesareti az ama dikkati çok.
+**Hatta bunu şöyle açalım:**Kevser: Telefon çaldığında %90 duyuyor (iyi). Ama telefon çalmadığında da %50 "çaldı!" diye ayaklanıyor (berbat). Yani Kevser her sese atlıyor.. Kriteri çok düşük.**Cesur**_ama_**dikkatsiz**.
+Mülayim: Telefon çaldığında %60 duyuyor (daha düşük). Ama çalmadığında sadece %10 "çaldı!" diyor (_muhteşem_). Yani Mülayim _*temkinli**. Kriteri yüksek. Cesareti az ama dikkati çok.
 
 Peki "duyarlılık" ne demek? Duyarlılık, sinyal varken "var" diyebilme, yokken de "yok" diyebilme kapasitesidir. Yani eğriye eğri, doğruya doğru diyebilmek; Sezar'ın hakkını Sezar'a verebilmektir.. 
 
 Bunu basitçe şöyle hesaplıyoruz hatta:
 
-**Duyarlılık ≈ İsabet oranı ==–== Yanlış alarm oranı**
-Kevser: 90 – 50 = **40**
-Mülayim: 60 – 10 = **50**
+**Duyarlılık ≈ İsabet oranı ==–== Yanlış alarm oranı**Kevser: 90 – 50 =**40**Mülayim: 60 – 10 =**50**
 
 Gördüğümüz üzere Mülayim daha hassas!
 
-Mülayim, sinyali gürültüden ayırt etme işini daha temiz yapıyor. Kevser ise her şeye "sinyal!" diye atlıyor. Yani Kevser'in isabeti yüksek ama *bunu her şeye "var" diyerek başarıyor.*
+Mülayim, sinyali gürültüden ayırt etme işini daha temiz yapıyor. Kevser ise her şeye "sinyal!" diye atlıyor. Yani Kevser'in isabeti yüksek ama _bunu her şeye "var" diyerek başarıyor._
 
 =Yani:= 
 Klasik eşik: "Duyarsan algılarsın, duymazsan algılamazsın." (Mekanik)
 SDT[^sdt]: "Duyarsın ama 'duydum' demek bir **karardır**. O karar da kişiliğine göre değişir." (Psikolojik)
 
-Yani algı sadece duyu değil; aynı zamanda bir *kumar* oynama biçimidir.
+Yani algı sadece duyu değil; aynı zamanda bir _kumar_ oynama biçimidir.
 
 <div class="sc-sdt-simulator" id="sc-sdt-sim">
   <div class="sc-sdt-header">
@@ -366,8 +356,7 @@ Yani algı sadece duyu değil; aynı zamanda bir *kumar* oynama biçimidir.
 Pekii... Kafanın içinde ne oluyor? Tamam, algıyı ölçtük, kararı verdik, "Aa, bir şey **var!**" dedik.. O anda beyinde nasıl bi fırtına kopuyor?
 
 Buradan sonra işin içine ==elektrik== giriyor. 
-***Çünkü algı denilen şey, özünde bir elektrik sinyali meselesidir.***
-Beynin ***dili*** elektriktir. 
+**Çünkü algı denilen şey, özünde bir elektrik sinyali meselesidir.**Beynin**dili** elektriktir. 
 Dışarıdan gelen ışık, ses, basınç... Bunların hepsi vücudun içine girdiği anda elektrik sinyaline çevriliyor. 
 Şimdi bu elektrik tesisatına göz atmak **zorundayız**.
 
@@ -380,13 +369,13 @@ Sonra Santiago Ramón y Cajal çıkageldi.. Mikroskopla baktı ve dedi ki:
 
 "Hayır!! Bunlar ayrı ayrı hücreler. Aralarında minicik boşluklar var!"
 
-İşte buna Nöron Doktrini[^noron-doktrini] diyoruz. Yani beyin, birbirine **değmeyen** milyarlarca ayrı hücreden oluşuyor. **Her biri ayrı bir birey gibi.** Aralarındaki boşluk ise sinaps.
+İşte buna Nöron Doktrini[^noron-doktrini] diyoruz. Yani beyin, birbirine **değmeyen**milyarlarca ayrı hücreden oluşuyor.**Her biri ayrı bir birey gibi.** Aralarındaki boşluk ise sinaps.
 
 Bu keşif o kadar önemli ki, Cajal 1906'da Nobel alıyor. Çünkü bu, beynin **nasıl iletişim kurduğu**nu anlamanın kapısını açıyor.
 
 ### Aksiyon Potansiyeli: -70 mV Pusudan +40 mV Patlamaya
 **Peki bu ayrı ayrı nöronlar nasıl konuşuyor?**
-*Aksiyon potansiyeli denilen bir elektrik patlamasıyla.*
+Aksiyon potansiyeli denilen bir elektrik patlamasıyla.
 
 Şöyle ki:
 
@@ -397,7 +386,7 @@ Nöron dinlenirken aslında "uyumuyor", sürekli enerji depoluyor. Tıpkı yayı
 """Şimdi biraz netlik kazanalım: Hücre dediğimiz şey, dışı yağlı bir zarla kaplı ufak bir baloncuk. Bu zar, hücrenin "sınır kapısı" gibi. Öyle her isteyen içeri dışarı serbestçe geçemiyor.
 Dışarıda bir sürü Sodyum (Na+) var. İçeride de bir sürü Potasyum (K+) var. İkisi de pozitif yüklü. Ama burada bir dengesizlik var; dışarısı daha pozitif, içerisi daha negatif.
 Bu dengesizlik öyle kendi kendine oluşmuyor. İşte tam bu zarda yaşayan bir protein devreye giriyor. Adına da "pompa, motor" falan diyoruz ama aslında olay şu:
-Bu protein zorla 3 tane Sodyum'u *dışarı* atıyor, 2 tane Potasyum'u **içeri** alıyor.
+Bu protein zorla 3 tane Sodyum'u _dışarı_atıyor, 2 tane Potasyum'u_*içeri** alıyor.
 Yani bildiğin bir fedai gibi. Club'ın kapısında duruyor, VIP üyeleri içeri alıyor, kavga çıkaran hanzoları dışarı atıyor. Ama bunu bedava yapmıyor; maaşını (ATP) alıyor, ona göre çalışıyor.
 
 Şimdi neden "pompa" diyoruz? Çünkü bu iş bir konsantrasyon farkı yaratıyor. Suyu yokuş yukarı pompalamak gibi. İyonları, normalde **gitmek istemeyecekleri yöne** doğru itiyor.
@@ -410,9 +399,9 @@ Dinlenim: -70 mV (Yatıyorum, bana bulaşma...)
 Eşik Aşımı: -55 mV'a geldi. **Artık dönüş yok.** "Tamam! Dayanamıyorum!!"
 Ateşleme (Depolarizasyon): +40 mV'a kadar fırlıyor. İşte bu fırlamaya ==Aksiyon Potansiyeli== deniyor.
 Sakinleşme (Repolarizasyon): Potasyum (K+) dışarı çıkıyor, hücre **tekrar -70**'e dönüyor.
-Bu olay, **saniyenin binde biri** kadar sürüyor. Ve bu, beynin içindeki "*mesaj*"ın ta kendisi.
+Bu olay, **saniyenin binde biri*_ kadar sürüyor. Ve bu, beynin içindeki "_mesaj_"ın ta kendisi.
 
-Tabi bu elektrik ***tesisatının*** öyle kafasına göre çalışmadığını tahmin edebiliriz. 
+Tabi bu elektrik **tesisatının** öyle kafasına göre çalışmadığını tahmin edebiliriz. 
 Değişmez kuralları/kıstasları var:
 
 1) Ya hep, ya hiç!!
@@ -427,7 +416,7 @@ Nöron ateşlendi. Hemen tekrar ateşlenemez. Bi nefes alması lazım, kendine g
 Ejakülasyon sonrası  gibi.. 
 Bir kez boşalım oldu mu, sistemin toparlanması için zamana ihtiyacı vardır.
 
-Bu bekleme süresine **refrakter süre** deniyor.  Nöronun tekrar ateşlenebilmesi için: yaklaşık **1 milisaniye**.
+Bu bekleme süresine **refrakter süre**deniyor.  Nöronun tekrar ateşlenebilmesi için: yaklaşık**1 milisaniye**.
 
 Bu yüzden nöronun ateşleme hızının bir üst limiti var. Sonsuza kadar hızlanamaz.
 
@@ -445,7 +434,7 @@ Elektronik bateriyi düşünebiliriz anlamak için; davulcunun vurduğu her darb
 Şarkı sakinse: "Davulcu" ağır ağır ateşlenir. (tık... tık... tık... tık.......)
 Şarkı coşuyorsa: "Davulcu" deli gibi ateşlenir. (TAK TAK TAK TAK TAK TAK!!!!!)
 İşte buna **frekans kodlaması** diyoruz. Şiddet, voltajla değil, ateşleme hızıyla iletilir.
-Davulcunun vuruş şiddeti değişmedi; temposu (*frekansı*) değişti.
+Davulcunun vuruş şiddeti değişmedi; temposu (_frekansı_) değişti.
 Beyin de der ki: "Vay be...! Bu nöron ne kadar hızlı çalıyor? Demek ki sağlam bir uyarıcı sözkonusu burda!!"
 
 
@@ -453,7 +442,7 @@ Beyin de der ki: "Vay be...! Bu nöron ne kadar hızlı çalıyor? Demek ki sağ
 
 Nöronlar birbirine değmiyorsa elektrik nasıl karşıya geçiyor?
 
-Burda iş değişiyor. Elektrik, boşluğun kenarına geldiğinde duruyor. Elektrik boşluktan atlayamayacağı için, beyin *elektrik sinyalini* **kimyasal sinyale çeviriyor.** 
+Burda iş değişiyor. Elektrik, boşluğun kenarına geldiğinde duruyor. Elektrik boşluktan atlayamayacağı için, beyin _elektrik sinyalini_ _*kimyasal sinyale çeviriyor.** 
 Bu elektrik, hücrenin içindeki keseciklerin patlamasına neden olur. İçlerinden nörotransmitter (kimyasal haberci) boşluğa (sinapsa) dökülür. Bu nörotransmitterler, boşluğu yüzerek geçiyor ve karşıdaki nöronun kapılarını çalıyor ve yüzeyine yapışıyor!
 
 Peki bu kimyasal, karşı tarafta ne yapıyor? 
@@ -472,11 +461,7 @@ Yani hücreyi eşikten (-55 mV) uzaklaştırır, komşuya sükûnetli olmasını
 
 Beynin Karar Anı (Büyük Toplama)
 
-Bir nöronun üzerinde binlerce sinaps var. Bir sürü EPSP (gaz) ve bir sürü IPSP (fren) **aynı anda geliyor.**
-
-Beyin o anda ne yapıyor? Bildiğimiz toplama-çıkarma yapıyor:
-
-**Gelen tüm EPSP'leri topla, tüm IPSP'leri çıkar.**
+Bir nöronun üzerinde binlerce sinaps var. Bir sürü EPSP (gaz) ve bir sürü IPSP (fren) **aynı anda geliyor.**Beyin o anda ne yapıyor? Bildiğimiz toplama-çıkarma yapıyor:**Gelen tüm EPSP'leri topla, tüm IPSP'leri çıkar.**
 Eğer sonuç, hücreyi -55 mV'a ulaştıracak kadar pozitifse: ATEŞLE! (**Aksiyon Potansiyeli**)
 Eğer ulaşamıyorsa: Sükûnet.. Sessizlik. Hiçbir şey olmaz.
 
@@ -484,7 +469,7 @@ Eğer ulaşamıyorsa: Sükûnet.. Sessizlik. Hiçbir şey olmaz.
 
 ## 3. Gözün Optik Mimarisi ve Odaklanma
 
-Algı *fizyolojisi* bitti... Nöronlar davulcu gibi çalıyor, sinapslar gaz-fren yapıyor. Ama bu elektrik fırtınasını başlatan neydi?
+Algı _fizyolojisi_ bitti... Nöronlar davulcu gibi çalıyor, sinapslar gaz-fren yapıyor. Ama bu elektrik fırtınasını başlatan neydi?
 
 Işık. Göze giren ışık.
 
@@ -496,13 +481,13 @@ Gözün ne işe yaradığını anlamak için önce Larry'nin hikayesine bakalım
 
 Larry Hester, Kuzey Carolina'da emekli bir lastik satıcısı. 30'lu yaşlarının başında görme yetisi hızla bozulmaya başlıyor. Önceden de gözleri pek iyi değilmiş ama bu sefer durum farklı; dünya adeta üzerine kapanıyor.
 
-Doktora gidiyor. Sonuç: *Retinitis pigmentosa*. Genetik bir göz hastalığı. Çaresi yok, tamamen kör olacak.
+Doktora gidiyor. Sonuç: _Retinitis pigmentosa_ . Genetik bir göz hastalığı. Çaresi yok, tamamen kör olacak.
 Gerçekten de Larry, 33 yıl boyunca tamamen karanlıkta kalıyor.
 
 Ama sonra bir şey oluyor: Larry'ye biyonik göz takma fırsatı geliyor. Gözlüğe monte edilmiş bir kamera, gözün arkasına yerleştirilmiş elektrotlara sinyal gönderiyor. Sonuç? Tam görme değil, ama ışık-karanlık farkını, nesnelerin kenarlarını seçebiliyor. Yaya geçidinin çizgilerini, karısının yüzünün hatlarını görebiliyor..
 
 Larry: "Işık o kadar basit ki, kimse için bir anlam ifade etmez. Ama benim için 'görebiliyorum' demek." diyor.
-**Görme** dediğimiz şey, **ışıkla** başlıyor. Ve bu ışık, gözün arkasındaki milyonlarca hücre tarafından sinir sinyaline çevriliyor.
+**Görme**dediğimiz şey,**ışıkla** başlıyor. Ve bu ışık, gözün arkasındaki milyonlarca hücre tarafından sinir sinyaline çevriliyor.
 
 ### Işık: Görme Uyarıcısı
 
@@ -521,7 +506,7 @@ Yani dışarıda **renk yok**, sadece farklı dalga boyları var. Beyin o dalga 
 ### Gözün Yapısı: Işığın İçeri Girişi
 
 
-Işık, ilk önce göze pupilden (göz bebeği) içeri giriyor. Kornea ve lens bu ışığı kırarak retinaya odaklıyor. Retina, gözün arkasını kaplayan nöron ağı ve görme reseptörlerini (*fotoreseptörler*) içeriyor.
+Işık, ilk önce göze pupilden (göz bebeği) içeri giriyor. Kornea ve lens bu ışığı kırarak retinaya odaklıyor. Retina, gözün arkasını kaplayan nöron ağı ve görme reseptörlerini (_fotoreseptörler_) içeriyor.
 Kornea, gözün önündeki sabit cam gibi; işin %80'ini o hallediyor. Lens ise ince ayar ustası tam; kendini kalınlaştırıp incelerek yakına ve uzağa odaklanıyor, bildiğimiz kameralarda olan AF (otomatik odaklanma) gibi. Yani kornea sabit bir dürbün camı ise lens de o dürbünün otomatik odaklama sistemi gibi.
 
 İki tip fotoreseptör var: Çubuklar (rod) ve koniler (cone). İsimlerini şekillerinden alıyorlar. Dış segmentlerinde ışığa duyarlı kimyasallar (görsel pigmentler) bulunuyor.
@@ -554,7 +539,7 @@ Nasıl mı? Gözün içindeki siliyer kaslar lensi sıkıştırıp gevşetiyor. 
 Ama lens tabi hep genç kalmıyor. Yaş ilerledikçe sertleşiyor, esnekliğini kaybediyor.
 Sonuç? Presbiyopi[^presbiyopi]. Yani "babanne gözlüğü" durumu..
 
-Yakını görememeye başlayınca anlaşılır. Okuduğun şeyi gittikçe uzaklaştırıyorsun **çünkü lens kalınlaşıp yakına odaklanamıyor.** Nahpunkt (yakın nokta) yani en net görebildiğin minimum mesafe, yıllar içinde *kaçıyor*.
+Yakını görememeye başlayınca anlaşılır. Okuduğun şeyi gittikçe uzaklaştırıyorsun **çünkü lens kalınlaşıp yakına odaklanamıyor.** Nahpunkt (yakın nokta) yani en net görebildiğin minimum mesafe, yıllar içinde _kaçıyor_ .
 
 Kısaca:
 
@@ -567,16 +552,16 @@ Gençken lens, jimnastikçi gibidir, esnektir.. Yaşlanınca kireçlenir, esneme
 Kırma Kusurları: Gözün Forma Hataları
 
 Bunlar "doğuştan ya da sonradan" gelen kusurlar. 
-*Bunların olayı aslında şu*: Işık retinaya odaklanmak istiyor ama gözün uzunluğu ya da korneanın kavisi buna izin vermiyor.
+_Bunların olayı aslında şu_: Işık retinaya odaklanmak istiyor ama gözün uzunluğu ya da korneanın kavisi buna izin vermiyor.
 
-Miyopi (*Uzağı Görememe*):
+Miyopi (_Uzağı Görememe_):
 Göz küresi olması gerekenden uzun. Ya da kornea fazla kavisli.
 Bu sefer ne oluyor, ışık retinanın tam üstüne düşemiyor; retinanın fazla ilerisinde "huzmeleniyor". 
-Yani görüntü daha yoldayken *netleşiyor*, sonra retinaya ulaşınca bulanıklaşıyor. 
+Yani görüntü daha yoldayken _netleşiyor_ , sonra retinaya ulaşınca bulanıklaşıyor. 
 
 -
 
-Hipermetropi (*Yakını Görememe*):
+Hipermetropi (_Yakını Görememe_):
 Bu sefer de göz küresi kısa kalmış.. Işık retinanın önünde değil, arkasında odaklanıyor. Yani odak noktası bu defa retinanın yine önüne üstüne düşmesi gerekirken, fazla arkasında. Yakını netleştirmek için lens sürekli kasılıyor, ama bir yere kadar. Uzağa bakmak tabi daha rahat ama yakın okumada zorlanıyorsun.
 
 ### Beynin Photoshop Denemesi
@@ -586,7 +571,7 @@ Beyin dediğimiz sulu organ tahmin edeceğiniz üzere burada da boş durmuyor ta
 Ama bu, düşük çözünürlüklü pikselleri görünen bir fotoğrafı sonradan Photoshop'la düzeltmeye benziyor. Beyin, bulanık kenarları yumuşatıyor, boşlukları ==tahminle== dolduruyor, hatta bazen "bu harf kesin 'A'ydı yaae..." diye ==uyduruyor==. 
 Yani beyin, göz kusurunu bi noktaya kadar tolere edebiliyor, bi noktadan sonrasında ise de uydurma ve fazla basitleştirmeyle "yalan" söylüyor..
 
-Ama bu uğraş, gözlük ya da lens kadar temiz bir çözüm değil. Sürekli "photoshop yapan beyin" bir süre sonra *yoruluyor*. Baş ağrısı, göz yorgunluğu, odaklanma zorluğu... Çoğu bu yüzden.
+Ama bu uğraş, gözlük ya da lens kadar temiz bir çözüm değil. Sürekli "photoshop yapan beyin" bir süre sonra _yoruluyor_ . Baş ağrısı, göz yorgunluğu, odaklanma zorluğu... Çoğu bu yüzden.
 
 O yüzden işin finali şu:
 
@@ -597,20 +582,20 @@ Göz kusurunu beyne bırakırsan, beyin sana "kafa yorgunluğu" olarak geri dön
 
 Diyelim ki senin gözler miyop, ya da hipermetrop. Gözlük ya da lens kullanman gerekiyor ama bunları hep kullanmıyorsun, her an gözüne takılı değiller. 
 Araba sürerken takıyorsun ama evde uzanırken takmıyorsun. Bu durumda beyin yoruluyor mu? 
-*Kısa cevap: Duruma göre.*
+Kısa cevap: Duruma göre.
 Dışarıda yürürken ya da evde takılırken beyin, hafif bulanıklığı "normal" kabul ediyor ve seni yormuyor. Ama iş araba sürmeye, derste tahtaya bakmaya, sinemada ekrana odaklanmaya gelince, beyin bulanık görüntüyü düzeltmek için fazla mesai yapıyor.
 
 Gözlerini kısıyorsun (iğne deliği etkisi yaratmak uğruna..), kaşlarını çatıyorsun, göz kasların sürekli kasılıyor. Beyin de "bu bulanık şey neydi?" diye tahmin yürütüp duruyor. Yani bulanık tek bir "görüntü", beyinde ve gözde bi çok işlemi zincirleme ateşliyor. 
 Bu da baş ağrısı, göz ve çevresi yorgunluğu ve mental bitkinlik olarak geri dönüyor.
 Yani: Göz kusurun hafifse ve zorlamıyorsan, beyin idare eder. Ama net görmen gereken bir iş yapıyorsan, **gözlük takmamak beyne fazla mesai yaptırmaktır**. 
 
-*Peki göz nasıl oluyor da kendi kendine gelin güvey olup, "şu bulanık, şu değil" diye çıkarımlarda bulunup, kendini kasmaya başlıyor?*
-*Beyin görüntünün bulanık olduğunu nerden biliyor?* 
-*Referans noktası ne?*
-*Belki de "realite" gerçekten bulanık olamaz mı?*
+Peki göz nasıl oluyor da kendi kendine gelin güvey olup, "şu bulanık, şu değil" diye çıkarımlarda bulunup, kendini kasmaya başlıyor?
+**Beyin görüntünün bulanık olduğunu nerden biliyor?**
+**Referans noktası ne?**
+**Belki de "realite" gerçekten bulanık olamaz mı?**
 
 Bunların "özet" cevabı: Fizikte "bulanıklık" diye bir şey yoktur. 
-Fizik sadece fotonların *nasıl dağıldığını* bilir. 
+Fizik sadece fotonların _nasıl dağıldığını_ bilir. 
 "Bulanık" tamamen beynin bir yorumudur. (çoğu zaman olduğu gibi..)
 Peki beyin, bu dağınık foton kalabalığına neden "bulanık" diyor da "net" demiyor?
 
@@ -630,15 +615,11 @@ Keskin kenarlar kayboldu. Beyin o dağınık sinyali alıyor ve diyor ki:
 
 Yani beyin ona gelen görüntüyü, elindeki devasa "keskin dünya" arşiviyle kıyaslıyor ve "Ama bu görüntü olması gereken netliğe sahip değil?!" diye alarm veriyor.
 
-*Peki "Gerçeklik" Gerçekten Bulanık Olamaz mı?*
+**Peki "Gerçeklik" Gerçekten Bulanık Olamaz mı?**
 
 Doğada fiziksel olarak "bulanık bir gerçeklik" yoktur. 
 Sadece farklı frekanslarda yayılan fotonlar vardır. "Net" ve "bulanık" kavramları, tamamen beynin bilgi işleme kapasitesine göre koyduğu kategorilerdir.
-Doğuştan ileri derece bozuk görme ile doğan ve hiç gözlük takmamış birini düşünelim, o kişi, dünyanın **zaten** "böyle" olduğunu sanar. Çünkü beyninin arşivinde "keskin kenar" diye bir **referans yoktur.**
-
-==Yani özetle: beyin, "bulanık" dediği şeyi, ancak daha önce "net"i görmüşse bilir.==
-
-**Exkurs bitti.**
+Doğuştan ileri derece bozuk görme ile doğan ve hiç gözlük takmamış birini düşünelim, o kişi, dünyanın **zaten**"böyle" olduğunu sanar. Çünkü beyninin arşivinde "keskin kenar" diye bir**referans yoktur.**==Yani özetle: beyin, "bulanık" dediği şeyi, ancak daha önce "net"i görmüşse bilir.==**Exkurs bitti.**
 
 
 
@@ -646,7 +627,7 @@ Doğuştan ileri derece bozuk görme ile doğan ve hiç gözlük takmamış biri
 
 ### Retina: Işığın Aydınlattığı Mahalle
 
-*Işık içeri girdi, kornea kırdı, lens ince ayarı yaptı, görüntü retinaya düştü.*
+Işık içeri girdi, kornea kırdı, lens ince ayarı yaptı, görüntü retinaya düştü.
 **Peki şimdi ne oluyor?** 
 İşler değişiyor.. 
 Retinaya düşen görüntü, bir kameranın sensörüne düşen görüntü gibi değil. Retina, ışığı pasif biçimde kaydeden bir yüzey değil; **yaşayan, işleyen, yorumlayan bir ==nöron ağı==.**
@@ -657,30 +638,25 @@ Ama evrim demiş ki: "Bunu gözün içine koyayım, ışıkla doğrudan temas et
 
 Retinanın en kritik sakinleri şunlar: **Fotoreseptörler.** Yani ışığı yakalayan hücreler.
 
-İki tip var: **Çubuklar (Rod)** ve **Koniler (Cone).** İsimlerini şekillerinden alıyorlar. Biri ince uzun, diğeri koni şeklinde. Ama asıl farkları şekilleri değil; **iş bölümü.**
+İki tip var: **Çubuklar (Rod)**ve**Koniler (Cone).**İsimlerini şekillerinden alıyorlar. Biri ince uzun, diğeri koni şeklinde. Ama asıl farkları şekilleri değil;**iş bölümü.**
 
 ### Fototransdüksiyon: Işığın Kimyasal Kıvılcımı
 
-Şimdi işin en büyüleyici kısmlarından birine geldik: **Fototransdüksiyon.**
-Bu kelime korkutucu görünüyor ama olayı basit: Çubuklar ve koniler, ışığı yakalıyor ve resmen bir kimya laboratuvarı aktive oluyor. Bunun adı: ***fototransdüksiyon***[^fototransduksiyon]. 
-*Yani* ışığın, elektriğe çevrilmesi.. 
+Şimdi işin en büyüleyici kısmlarından birine geldik: **Fototransdüksiyon.**Bu kelime korkutucu görünüyor ama olayı basit: Çubuklar ve koniler, ışığı yakalıyor ve resmen bir kimya laboratuvarı aktive oluyor. Bunun adı:**fototransdüksiyon**[^fototransduksiyon]. 
+_Yani_ ışığın, elektriğe çevrilmesi.. 
 
 Çubukların içinde **rodopsin** denen bir molekül var. Bu, iki parçadan oluşuyor: opsin (bir protein) ve 11-cis retinal (A vitamininden türeme bir molekül). Karanlıkta bu ikili sarmaş dolaş, uyuyorlar.
 
 Olay şöyle:
 
-1. **Rodopsin hazır bekliyor:** Çubuklarda rodopsin molekülü var. Bu molekül, **opsin** (protein) + **11-cis retinal** (ışığa duyarlı kimyasal) olmak üzere iki parçadan oluşuyor.
+1. **Rodopsin hazır bekliyor:**Çubuklarda rodopsin molekülü var. Bu molekül,**opsin**(protein) +**11-cis retinal** (ışığa duyarlı kimyasal) olmak üzere iki parçadan oluşuyor.
 
 2. **Işık çarpıyor:** Bir foton (ışık parçacığı) rodopsin molekülüne çarpıyor.
 
-3. **İzomerizasyon:** 11-cis retinal, ışıkla birlikte şekil değiştiriyor. Düzleşiyor, trans formuna geçiyor, all-trans'a dönüşüyor. Bu olaya **izomerizasyon** deniyor.
+3. **İzomerizasyon:**11-cis retinal, ışıkla birlikte şekil değiştiriyor. Düzleşiyor, trans formuna geçiyor, all-trans'a dönüşüyor. Bu olaya**izomerizasyon** deniyor.
 
-4. **Ağarma (Bleaching):** Retinal şekil değiştirince opsinden ayrılıyor. Rodopsin molekülü parçalanıyor, yani **ağarıyor.**
-
-5. **Elektrik sinyali:** Bu parçalanma, hücrede bir dizi kimyasal reaksiyonu tetikliyor. Sonunda hücrenin elektriksel durumu değişiyor ve bir sinyal oluşuyor.
-
-**Sonuç?** Fotoreseptörün zarındaki iyon kanalları kapanıyor. Hücrenin içi daha negatif oluyor (hiperpolarize oluyor). Bu da nöronun ateşleme hızını değiştiriyor. 
-Işık yokken sürekli “karanlık var!” diye bağıran çubuk, ışıkla birlikte *susuyor*. Yani aslında fotoreseptörler, ışık geldiğinde *daha az sinyal gönderiyor.* 
+4. **Ağarma (Bleaching):**Retinal şekil değiştirince opsinden ayrılıyor. Rodopsin molekülü parçalanıyor, yani**ağarıyor.**5.**Elektrik sinyali:**Bu parçalanma, hücrede bir dizi kimyasal reaksiyonu tetikliyor. Sonunda hücrenin elektriksel durumu değişiyor ve bir sinyal oluşuyor.**Sonuç?** Fotoreseptörün zarındaki iyon kanalları kapanıyor. Hücrenin içi daha negatif oluyor (hiperpolarize oluyor). Bu da nöronun ateşleme hızını değiştiriyor. 
+Işık yokken sürekli “karanlık var!” diye bağıran çubuk, ışıkla birlikte _susuyor_. Yani aslında fotoreseptörler, ışık geldiğinde_daha az sinyal gönderiyor._ 
 Ters mantık gibi.
 **Burda beyin, sessizliği “ışık” olarak yorumluyor.**
 Ve bu süreç milisaniyeler içinde gerçekleşir..
@@ -697,10 +673,7 @@ Karanlıkta, retinal molekülü tekrar 11-cis formuna dönüyor ve opsinle yenid
 
 Ama bu süreç zaman alıyor. **30 dakika** boyunca rodopsin depoları yavaş yavaş doluyor, gözün karanlığa adaptasyonu da buna bağlı.
 
-İşte bu yüzden korsanlar gibi tek gözü kapatıp geceleri görüşü "hack"i işe yarıyor: Bandın altındaki göz, rodopsini **taze** tutuyor. Güverte altına inince o gözle anında görüyorsun, çünkü rodopsin depoları dolu.
-
-*Hayat/Deney:*
-Gözünü bir bantla ya da bezle kapatıp 20 dakika karanlıkta beklersen, o göz çubukları tam "şarj" olur. Sonra bandı çıkarıp o gözle karanlık bir yere baktığında, **diğer gözden çok daha iyi görürsün.** Laf değil, gerçek..
+İşte bu yüzden korsanlar gibi tek gözü kapatıp geceleri görüşü "hack"i işe yarıyor: Bandın altındaki göz, rodopsini **taze**tutuyor. Güverte altına inince o gözle anında görüyorsun, çünkü rodopsin depoları dolu.**Hayat/Deney:**Gözünü bir bantla ya da bezle kapatıp 20 dakika karanlıkta beklersen, o göz çubukları tam "şarj" olur. Sonra bandı çıkarıp o gözle karanlık bir yere baktığında,**diğer gözden çok daha iyi görürsün.** Laf değil, gerçek..
 
 Bu nasıl oluyor peki? 
 
@@ -717,7 +690,7 @@ Nasıl bir zaman alır?:
 
 İlk 5-7 dakika: Koniler hızla adapte olur. Eşik düşer ama çok değil.
 
-***7.*** dakika civarında bi kırılma olur: Buna Kohlrausch kırılması[^kohlrausch-kirilmasi] (Kohlrausch-Knick) denir.
+**7.** dakika civarında bi kırılma olur: Buna Kohlrausch kırılması[^kohlrausch-kirilmasi] (Kohlrausch-Knick) denir.
 
 ![Kohlrausch Karanlık Adaptasyon Eğrisi ve 7. Dakika Kırılması](/static/img/kogni1/kohlrausch_curve.svg) Burda olan şey şu aslında: koniler, zaten özünde renkli-görücüler, pes etmeye başlar..  ..ama aynı zamanda çubuklar da hazırdır, yani gececi tayfa kontrolü ele alır!
 Çubuklar ipleri eline alınca gözünün **ışık hassasiyeti bir anda binlerce kat artıyor.** Az önce göremediğin objeleri tıkır tıkır seçmeye başlıyorsun. 
@@ -731,20 +704,20 @@ Sonraki 20-30 dakika: Eşik iyice düşer, **göz neredeyse tek bir fotonu bile 
 
 Film ismi gibi, zaten olanlar da film gibi.
 
-*Şimdi bir düşünelim:*
+**Şimdi bir düşünelim:**
 Akşam alacakaranlıkta bahçedesin. Bi tarafta <span style="color:#C8102E">kırmızı</span> güller, laleler, karanfiller var, diğer tarafta <span style="color:#1f26ff">mavi</span> ortancalar, peygamber çiçekleri falan var. 
 Gündüz kırmızı taraf ne kadar parlaksa ne kadar canlıysa, alacakaranlıkta bir bakıyorsun, kırmızı gül kararmış, laleler solmuş, karanfiller neredeyse siyaha çalmış.. Ama mavi taraf pırıl pırıl, sanki kendiliğinden ışık saçıyor!
 
 Bu olaya Purkinje kayması[^purkinje-kaymasi] denir.
 
 ![Purkinje Spektral Hassasiyet Kayması](/static/img/kogni1/purkinje_shift.svg) 
-*Neden? Ne kayıyor? Ne oluyor?*
+**Neden? Ne kayıyor? Ne oluyor?**
 
 Güneş batıyor, ışık azalıyor.. Koniler ışık ister! Işık olmayınca bayılıyorlar.. "Ben böyle karanlıkta çalışamam, haydi eyvallah." diyorlar. 
 
-Bunlar gidince sahne artık **çubuklara** kalıyor. Çubuklar gececi. Gece bekçileri. Renkten anlamazlar ama **az** ışıkta **iyi** çalışıyorlar.
+Bunlar gidince sahne artık **çubuklara**kalıyor. Çubuklar gececi. Gece bekçileri. Renkten anlamazlar ama**az**ışıkta**iyi** çalışıyorlar.
 
-Çubukların en sevdiği dalga boyu **500 nanometre** civarı. Yani **<span style="color:#1c1ceb">mavi</span>-<span style="color:#2a6b5a">yeşil</span>**.
+Çubukların en sevdiği dalga boyu **500 nanometre**civarı. Yani**<span style="color:#1c1ceb">mavi</span>-<span style="color:#2a6b5a">yeşil</span>**.
 Ama kırmızıyı neredeyse hiç görmezler bile. 
 
 Aslında Değişen Ne?
@@ -762,21 +735,21 @@ Bu da yine aynı hikayeye bağlanıyor: **Renk dışarıda yok. Renk, hangi hüc
 Gözün fırsatçı mühendisliğine bakalım: Çubuklar ile koniler, beyne giden yolda farklı bağlantı stratejileri kullanır. 
 İşte burada devreye **konverjans** denilen olay giriyor.
 
-Çubuklar: Birçok çubuk, **tek bir** bipolar hücreye, o da **tek bir** ganglion hücresine bağlanır. Oran yaklaşık ==120:1==. *Yani 120 çubuk, tek bir kabloda toplanır.* Bu şekilde, zayıf ışığı toplayıp tek bir sinyal yaparlar. Bu yüksek hassasiyet sağlar (gece görmek), ama keskinlik de düşüktür (ayrıntıyı ayırt edemezsin)..
+Çubuklar: Birçok çubuk, **tek bir**bipolar hücreye, o da**tek bir*_ganglion hücresine bağlanır. Oran yaklaşık ==120:1==._Yani 120 çubuk, tek bir kabloda toplanır._ Bu şekilde, zayıf ışığı toplayıp tek bir sinyal yaparlar. Bu yüksek hassasiyet sağlar (gece görmek), ama keskinlik de düşüktür (ayrıntıyı ayırt edemezsin)..
 
-Koniler (özellikle foveada): Her koni hücresi, neredeyse 1:1 oranında kendi bipolar ve ganglion hücresine sahip. Böylece *her koni kendi sinyalini gönderir.* Bu yüksek keskinlik sağlar, ama hassasiyet düşüktür bu sefer de(loş ışıkta çalışmaz)..
+Koniler (özellikle foveada): Her koni hücresi, neredeyse 1:1 oranında kendi bipolar ve ganglion hücresine sahip. Böylece _her koni kendi sinyalini gönderir._ Bu yüksek keskinlik sağlar, ama hassasiyet düşüktür bu sefer de(loş ışıkta çalışmaz)..
 
 Yani çubuklar: 
-*“Arkadaşlar, birlikten kuvvet doğar! Ne kadar çok toplarsak, o kadar iyi görürüz! Detaylar da bulanık oluversin, ne olmuş yani?!”*
+“Arkadaşlar, birlikten kuvvet doğar! Ne kadar çok toplarsak, o kadar iyi görürüz! Detaylar da bulanık oluversin, ne olmuş yani?!”
 derken, 
 Koniler: 
 “Detay her şeydir. Işık az olursa olmaz ama..” derler. 
 
 Beyin tabi bu ikisini birleştirir.. Gündüz fovea ile okursun, gece çubuklarla yıldızları seyredersin.
 
-Beynin en büyük derdi ne? **Trafik..** Kafanın içinde **100 milyar** nöron var ama bu nöronları birbirine bağlayan kablo sınırlı. 
-Gözün arkasındaki o ufacık delikten (optik sinir) sadece *1 milyon* kablo çıkıyor. Ama bizde **126 milyon** fotoreseptör var!
-*Yani* matematiksel olarak imkansız bir durum var: 126 milyon hücrenin verisi, fikri, kararı o 1 milyon kabloya sığmak zorunda. 
+Beynin en büyük derdi ne? **Trafik..**Kafanın içinde**100 milyar** nöron var ama bu nöronları birbirine bağlayan kablo sınırlı. 
+Gözün arkasındaki o ufacık delikten (optik sinir) sadece _1 milyon_kablo çıkıyor. Ama bizde_*126 milyon** fotoreseptör var!
+_Yani_ matematiksel olarak imkansız bir durum var: 126 milyon hücrenin verisi, fikri, kararı o 1 milyon kabloya sığmak zorunda. 
 İşte bu sıkışıklığı çözen doğal mühendislik çözümüne **konverjans** diyoruz, 
 konverjans = ==birden fazla reseptörün tek bir sinir hücresine bağlanmasıdır.== 
 
@@ -787,15 +760,15 @@ Gece gökyüzüne bakıyorsun.. Çok soluk bir yıldız gördün.
 Tam gözünü ona dikip "şuna bi bakayım yahu.." diyorsun ve **yıldız kayboluyor!** Haydaa.. 
 Gözünü biraz yana kaydırıyorsun, yıldız tekrar beliriyor. Neden?
 
-Çünkü:  Tam gözünü yıldıza diktiğinde, ışık **foveaya** düşüyor. Foveada sadece **koniler** var (1:1). Koniler keskin ama ışık istiyor. Gece sönük yıldızın ışığı, bu zengin konileri harekete geçirmeye *malesef* yetmiyor.. 
+Çünkü:  Tam gözünü yıldıza diktiğinde, ışık **foveaya**düşüyor. Foveada sadece**koniler*_var (1:1). Koniler keskin ama ışık istiyor. Gece sönük yıldızın ışığı, bu zengin konileri harekete geçirmeye_malesef_ yetmiyor.. 
 Onlar da haliyle "Burada bir şey yok ki kardeşim, boşu boşuna uğraştırıyorsun bizi.." diyor.
 
-Gözünü yana kaydırınca, ışık foveaya *değil*, **perifere** düşüyor. Orada 120 çubuk birleşip "Durun ulan! Burda mutlaka bir şey var! Ben bir şey hissettim!" diye bağırıyor. Beyin de "Harbiden lan, orada cidden bi şey var galiba!" diyor.
+Gözünü yana kaydırınca, ışık foveaya _değil_,_*perifere** düşüyor. Orada 120 çubuk birleşip "Durun ulan! Burda mutlaka bir şey var! Ben bir şey hissettim!" diye bağırıyor. Beyin de "Harbiden lan, orada cidden bi şey var galiba!" diyor.
 
 Yani beynin, bir şeyi <span style="color:#C8102E">görebilmek</span> için bazen ==**<span style="color:#C8102E">ona bakmaman</span>**== **gerekiyor**! Bu tamamen 1:1 ve 120:1 konverjans farkının bir sonucu.
 
 Keskinlik arıyorsanız foveaya doğru alalım sizi..
-Detay değil, hassasiyet önemli derseniz de *kenara* alalım...
+Detay değil, hassasiyet önemli derseniz de _kenara_ alalım...
 
 --
 
@@ -804,11 +777,7 @@ Detay değil, hassasiyet önemli derseniz de *kenara* alalım...
 Şimdiye kadar gözü hep "ışığı yakalayan" bir organ olarak anlattık. Ama göz sadece ışık toplamakla kalmıyor; aynı zamanda kendi içinde bir **dedikodu ağı** işletiyor.. Bu mahallede yaşayan nöronlar birbirleriyle nasıl konuşuyor? Kesinlikle "Günaydın komşu, iyisin?!" diye değil.
 Bu mahallede geçerli olan kural şu: ==Ben parlarım, sen sönersin.==
 
-Olayın özü şu: Bir fotoreseptör (ya da ganglion hücresi) ışıkla uyarıldığında, sadece "Aha, ışık!!" diye bağırmıyor; aynı zamanda komşusuna dönüp **"Sen sus lan, ben parlıcam!"** diyor. ***Yani komşu hücreleri bastırıyor.***
-
-Neden? Çünkü beyin, keskin sınırları ve kenarları çok sever. Kenar dediğimiz şey, bir yerde ışık var, hemen yanında ışık yok demektir. Beyin bu farkı netleştirmek için, parlak bölgeyi daha parlak, karanlık bölgeyi daha karanlık yapar. İşte yanal engellemenin amacı bu: **Kontrastı artırmak.**
-
-Bu fikrin mimarı **Keffer Hartline** ve ekibi. 
+Olayın özü şu: Bir fotoreseptör (ya da ganglion hücresi) ışıkla uyarıldığında, sadece "Aha, ışık!!" diye bağırmıyor; aynı zamanda komşusuna dönüp **"Sen sus lan, ben parlıcam!"**diyor.**Yani komşu hücreleri bastırıyor.**Neden? Çünkü beyin, keskin sınırları ve kenarları çok sever. Kenar dediğimiz şey, bir yerde ışık var, hemen yanında ışık yok demektir. Beyin bu farkı netleştirmek için, parlak bölgeyi daha parlak, karanlık bölgeyi daha karanlık yapar. İşte yanal engellemenin amacı bu:**Kontrastı artırmak.**Bu fikrin mimarı**Keffer Hartline** ve ekibi. 
 ![Limulus Polyphemus (At Nalı Yengeci)](/static/img/kogni1/limulus.jpg)
 
 1956 yılında, **Limulus** (at nalı yengeci) denen ilginç bir hayvan üzerinde çalışıyorlar. 
@@ -821,13 +790,12 @@ Bu ne demek? Hartline, tek bir reseptörü ışıkla uyarırken, yanındaki rese
 
 Hartline şunu buluyor:
 1. **Reseptör A'ya ışık veriyorsun:** A, güçlü bir sinyal gönderiyor. 
-2. **Bölgedeki komşu reseptörlere de ışık veriyorsun:** A'nın sinyali **azalıyor!** 
-3. **Komşulara daha fazla ışık veriyorsun:** A'nın sinyali **daha da azalıyor..**
+2. **Bölgedeki komşu reseptörlere de ışık veriyorsun:**A'nın sinyali**azalıyor!**3.**Komşulara daha fazla ışık veriyorsun:**A'nın sinyali**daha da azalıyor..**
 
 Yani A'yı uyaran ışık değişmiyor, ama A'nın tepkisi düşüyor. Çünkü komşular, A'ya "baskı" yapıyor, "Fazla oluyorsun, sus!" diyorlar resmen.. 
 İşte bu mahalle baskısına **yanal engelleme**[^yanal-engelleme] deniyor.
 
-Bu baskı Limulus'un gözünde **lateral pleksus** isimli sinir ağı aracılığıyla taşınıyor. İnsan ve maymun retinasındaysa bu işi **horizontal hücreler** ve **amakrin hücreler** yapıyor.
+Bu baskı Limulus'un gözünde **lateral pleksus**isimli sinir ağı aracılığıyla taşınıyor. İnsan ve maymun retinasındaysa bu işi**horizontal hücreler**ve**amakrin hücreler** yapıyor.
 
 ---
 
@@ -841,7 +809,7 @@ Yanal engelleme sadece biyolojik bir sinyal filtreleme yöntemi değil; aynı za
 
 #### Hermann Izgarası
 ![Hermann Izgarası](/static/img/kogni1/hermann_grid.svg)
-*Kesişim noktalarındaki 4 beyaz yol, 4 yandan da yanal engelleme alarak daha fazla baskılanır. Fovea yerine perifere baktığında gri gölgeler belirir.*
+Kesişim noktalarındaki 4 beyaz yol, 4 yandan da yanal engelleme alarak daha fazla baskılanır. Fovea yerine perifere baktığında gri gölgeler belirir.
 
 </div>
 
@@ -849,7 +817,7 @@ Yanal engelleme sadece biyolojik bir sinyal filtreleme yöntemi değil; aynı za
 
 #### Benary Haçı
 ![Benary Haçı](/static/img/kogni1/benary_cross.svg)
-*İki gri üçgen aynı miktarda beyazla çevrili olmasına rağmen, siyah haçın 'içinde' algılanan üçgen Gestalt aidiyeti (belongingness) nedeniyle daha açık görünür.*
+İki gri üçgen aynı miktarda beyazla çevrili olmasına rağmen, siyah haçın 'içinde' algılanan üçgen Gestalt aidiyeti (belongingness) nedeniyle daha açık görünür.
 
 </div>
 
@@ -857,7 +825,7 @@ Yanal engelleme sadece biyolojik bir sinyal filtreleme yöntemi değil; aynı za
 
 #### White İllüzyonu
 ![White İllüzyonu](/static/img/kogni1/whites_illusion.svg)
-*Yanal engelleme teorisinin tersine; siyah şeritlerin üzerindeki gri çubuk daha koyu, beyaz şeritlerin üzerindeki gri çubuk ise daha açık görünür.*
+Yanal engelleme teorisinin tersine; siyah şeritlerin üzerindeki gri çubuk daha koyu, beyaz şeritlerin üzerindeki gri çubuk ise daha açık görünür.
 
 </div>
 
@@ -881,13 +849,13 @@ Yanal engelleme sadece biyolojik bir sinyal filtreleme yöntemi değil; aynı za
 
 ## Kaynaklar
 
-- Fechner, G. T. (1860). *Elemente der Psychophysik*. Breitkopf und Härtel.
-- Goldstein, E. B., & Brockmole, J. R. (2017). *Sensation and perception* (10th ed.). Cengage Learning.
-- Green, D. M., & Swets, J. A. (1966). *Signal detection theory and psychophysics*. John Wiley & Sons.
-- Hartline, H. K., & Ratliff, F. (1957). Inhibitory interaction of receptor units in the eye of Limulus. *Journal of General Physiology*, 40(3), 357–376. https://doi.org/10.1085/jgp.40.3.357
-- Hecht, S., Shlaer, S., & Pirenne, M. H. (1942). Energy, quanta, and vision. *Journal of General Physiology*, 25(6), 819–840. https://doi.org/10.1085/jgp.25.6.819
-- Hubel, D. H., & Wiesel, T. N. (1959). Receptive fields of single neurones in the cat's striate cortex. *The Journal of Physiology*, 148(3), 574–591. https://doi.org/10.1113/jphysiol.1959.sp006308
-- Koffka, K. (1935). *Principles of Gestalt psychology*. Harcourt, Brace & World.
-- Ramón y Cajal, S. (1906). The structure and connexions of neurons. *Nobel Lecture*, 12, 1901–1921.
-- Rosenblatt, F. (1958). The perceptron: A probabilistic model for information storage and organization in the brain. *Psychological Review*, 65(6), 386–408. https://doi.org/10.1037/h0042519
-- Stevens, S. S. (1957). On the psychophysical law. *Psychological Review*, 64(3), 153–181. https://doi.org/10.1037/h0046162
+- Fechner, G. T. (1860). _Elemente der Psychophysik_ . Breitkopf und Härtel.
+- Goldstein, E. B., & Brockmole, J. R. (2017). _Sensation and perception_ (10th ed.). Cengage Learning.
+- Green, D. M., & Swets, J. A. (1966). _Signal detection theory and psychophysics_ . John Wiley & Sons.
+- Hartline, H. K., & Ratliff, F. (1957). Inhibitory interaction of receptor units in the eye of Limulus. _Journal of General Physiology_ , 40(3), 357–376. https://doi.org/10.1085/jgp.40.3.357
+- Hecht, S., Shlaer, S., & Pirenne, M. H. (1942). Energy, quanta, and vision. _Journal of General Physiology_ , 25(6), 819–840. https://doi.org/10.1085/jgp.25.6.819
+- Hubel, D. H., & Wiesel, T. N. (1959). Receptive fields of single neurones in the cat's striate cortex. _The Journal of Physiology_ , 148(3), 574–591. https://doi.org/10.1113/jphysiol.1959.sp006308
+- Koffka, K. (1935). _Principles of Gestalt psychology_ . Harcourt, Brace & World.
+- Ramón y Cajal, S. (1906). The structure and connexions of neurons. _Nobel Lecture_ , 12, 1901–1921.
+- Rosenblatt, F. (1958). The perceptron: A probabilistic model for information storage and organization in the brain. _Psychological Review_ , 65(6), 386–408. https://doi.org/10.1037/h0042519
+- Stevens, S. S. (1957). On the psychophysical law. _Psychological Review_ , 64(3), 153–181. https://doi.org/10.1037/h0046162

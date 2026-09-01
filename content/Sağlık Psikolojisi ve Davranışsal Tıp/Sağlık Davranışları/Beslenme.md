@@ -26,109 +26,109 @@ tags:
 
 ## 1. Sağlıksız Beslenme ve DGE Kuralları
 
-***Sağlıksız beslenme neden tehlikeli?***
-- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı *aşırı kilo* üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
+**Sağlıksız beslenme neden tehlikeli?**
+- Büyük ölçüde dolaylı bi şekilde tehlikeli: sağlıksız beslenmenin olumsuz etkileri çoğunlukla yol açtığı _aşırı kilo_ üzerinden açıklanır, ama normal kiloda da çeşit çeşit eksiklikler ve yetersizlikle görülebilir. 
 
 ---
 
 Hepimiz az çok biliyoruz işte. Sebze ye, şeker yeme, bol su iç. 
 
-Hatta ***DGE*** (Deutsche Gesellschaft für Ernährung - Alman Beslenme Derneği) sağlıklı beslenmek için 10 kural bile çıkardı: 
+Hatta **DGE** (Deutsche Gesellschaft für Ernährung - Alman Beslenme Derneği) sağlıklı beslenmek için 10 kural bile çıkardı: 
 
 1) Çeşitli ye
-*Yasak besin yok. Çeşitlilik yeterli besini sağlar.*
+Yasak besin yok. Çeşitlilik yeterli besini sağlar.
 
 2) Tam tahıl & patates
-*Vitamin, mineral, lif. Düşük yağlı.*
+Vitamin, mineral, lif. Düşük yağlı.
 
 3) Günde 5 porsiyon meyve/sebze
-*Her gün 5 avuç dolusu meyve + sebze.*
+Her gün 5 avuç dolusu meyve + sebze.
 
 4) Her gün süt. Haftada 1-2 balık. Sınırlı et & şarküteri.
-*Et haftada 300-600 gramdan fazla olmamalı. Süt ürünleri de az yağlı tercih edilmeli.*
+Et haftada 300-600 gramdan fazla olmamalı. Süt ürünleri de az yağlı tercih edilmeli.
 
 5) Az yağ ve yağlı gıda
-*Günlük max. 60-80 g yağ; tercihen bitkisel.*
+Günlük max. 60-80 g yağ; tercihen bitkisel.
 
 6) Şeker ve tuzu insan gibi kullan
-*Endüstriyel şekerin besin değeri sıfır. Tuz iyotlu olsun.*
+Endüstriyel şekerin besin değeri sıfır. Tuz iyotlu olsun.
 
 7) Bol sıvı
-*Günde en az 1,5 litre kalorisi düşük içecek. Alkol nadiren ve az miktarda.*
+Günde en az 1,5 litre kalorisi düşük içecek. Alkol nadiren ve az miktarda.
 
 8) Lezzetli ve dikkatli pişir
-*Sebze ve meyveleri çok pişirmemek besin içeriğini korur ve zararlı bileşiklerin de oluşmasını engeller.*
+Sebze ve meyveleri çok pişirmemek besin içeriğini korur ve zararlı bileşiklerin de oluşmasını engeller.
 
 9) Zaman ayır, tadını çıkar
-*Dikkatli yemek tokluk sinyalini fark ettirir ve sindirime yardımcı olur.
+Dikkatli yemek tokluk sinyalini fark ettirir ve sindirime yardımcı olur.
 
 10) Kilo kontrolü ve hareket
-*Enerji ihtiyacına uygun yemek. Günlük 30-60 dk fiziksel aktivite.*
+Enerji ihtiyacına uygun yemek. Günlük 30-60 dk fiziksel aktivite.
 
-*Bu kurallar sağlıklı bireyler içindir; diyabetliler gibi hasta kişiler için tabi ki farklı öneriler geçerlidir.*
+Bu kurallar sağlıklı bireyler içindir; diyabetliler gibi hasta kişiler için tabi ki farklı öneriler geçerlidir.
 
 ## 2. DGE Beslenme Piramidi ve Makro Dağılımı
 
 Ayrıca beslenmenin:
-- 52-53% karbonhidrat (*tahıl ürünleri, patates, meyve&sebze*)
-- 28-31% yağ (*60-80g, bitkisel*)
-- 16-17% protein (*süt ürünleri, et, balık*)
+- 52-53% karbonhidrat (_tahıl ürünleri, patates, meyve&sebze_)
+- 28-31% yağ (_60-80g, bitkisel_)
+- 16-17% protein (_süt ürünleri, et, balık_)
 şeklinde makrolara ayrılması DGE tarafından önerilir. 
 
 ---
 **DGE kuralları sana neyi yiyip neyi yememen gerektiğini söyler. Ama senin inaktivite tuzağına düşüp düşmemeni ya da tabağını bitirme iradesini gösterip gösterememeni yine öz-yeterlilik[^oz-yeterlilik] belirler.**
 
-*Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.*
+Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.
 
 ---
 ## 3. Akademi vs. Sokak: Gerçekler ve Mitler
 
 ---
 
-*Sokak*
+**Sokak:**
 >**"Şeker yemesem zayıflarım" aynen sanki tek sorrun şeker.**
 
-*Bilim*
+**Bilim:**
 ==**Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.**==
 
 ---
 
-*Sokak*
+**Sokak:**
 >**"Yağ yemek şişmanlatır" yağın türü ve miktarı değil, varlığı sorun gibi algılanır.**
 
-*Bilim*
+**Bilim:**
 ==**Yağın miktarı (günlük 60-80 g) ve türü (bitkisel) önemli. Sıfır yağ zaten önerilmiyor.**==
 
 ---
 
-*Sokak*
+**Sokak:**
 >**"Kilolu = tembel", aşırı kilo tamamen irade meselesi sanılır.**
 
-*Bilim*
+**Bilim:**
 ==**Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yoketmez.**==
 
 ---
 
-*Sokak*
+**Sokak:**
 >**"Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
 
-*Bilim*
+**Bilim:**
 ==**BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas[^adipositas]) resmi olarak hastalık sınıfında.**==
 
 ---
 
-*Sokak*
+**Sokak:**
 >**"Kankam, benim kilom yerinde, göbek yok, istesem de şişmanlamıyorum. O yüzden istediğim çöpü gömerim. Hiç acımam."
 
-*Bilim*
+**Bilim:**
 ==**Yemezler. Yanlış beslenme normal kilolularda bile gizli hasar ve besin yetersizliği doğurur.**==
 
 ---
 
-*Sokak*
+**Sokak:**
 >**"Ben bu sefer sağlıklı beslenmeyi kafaya çok pis koydum. Yürekten niyetliyim. Kesin yaparım."**
 
-*Bilim*
+**Bilim:**
 ==**Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.**==
 
 > Povey ve ark. (2000) bunu sayıyla gösterdi: niyet için %57–64 varyans açıklaması. Gerçek davranışa gelince bu oran %19–32'ye çakılıyor. Niyet-davranış uçurumu tam burada.
@@ -152,6 +152,6 @@ Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teori
 
 ## Kaynaklar
 
-- Deutsche Gesellschaft für Ernährung. (2020). *DGE-Ernährungskreis: Vollwertig essen und trinken nach den 10 Regeln der DGE*. DGE Medien. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/
-- Herman, C. P., & Polivy, J. (1980). Restrained eating. In A. J. Stunkard (Ed.), *Obesity* (pp. 208–225). Saunders.
-- Povey, R., Conner, M., Sparks, P., James, R., & Shepherd, R. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of gender, habit and gender identity. *British Journal of Health Psychology*, 5(2), 121–139. https://doi.org/10.1348/135910700168810
+- Deutsche Gesellschaft für Ernährung. (2020). _DGE-Ernährungskreis: Vollwertig essen und trinken nach den 10 Regeln der DGE_ . DGE Medien. https://www.dge.de/gesunde-ernaehrung/dge-ernaehrungskreis/
+- Herman, C. P., & Polivy, J. (1980). Restrained eating. In A. J. Stunkard (Ed.), _Obesity_ (pp. 208–225). Saunders.
+- Povey, R., Conner, M., Sparks, P., James, R., & Shepherd, R. (2000). Application of the theory of planned behaviour to two dietary behaviours: Roles of gender, habit and gender identity. _British Journal of Health Psychology_ , 5(2), 121–139. https://doi.org/10.1348/135910700168810

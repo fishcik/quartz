@@ -26,7 +26,7 @@ tags:
 
 ==Görsel Korteks==
 
-Göz "dünyaya açılan bir pencere değildir". Bir kamera da değildir. Göz, fotonları yakalayıp elektrokimyasal bir *"gürültüye"* çeviren, sonra da bu gürültüyü *içerdeki* karanlık et yığınına yollayan ilkel bir dönüştürücüdür. 
+Göz "dünyaya açılan bir pencere değildir". Bir kamera da değildir. Göz, fotonları yakalayıp elektrokimyasal bir _"gürültüye"_çeviren, sonra da bu gürültüyü_içerdeki_ karanlık et yığınına yollayan ilkel bir dönüştürücüdür. 
 
 Bu gürültünün/sinyalin retinadan çıkıp da taa kafatasının arkasındaki **Primer Görsel Kortekse (V1)** ulaşması öyle düz bakır kablonun prizden ampule gitmesi gibi işlemiyor. Tesisat üzerinde önce geometrik olarak bir tersyüz edilme ve ardından da talamik bir sansür odası kurulur. 
 
@@ -34,41 +34,29 @@ Bu gürültünün/sinyalin retinadan çıkıp da taa kafatasının arkasındaki 
 
 ## 1. Kablo Tesisatı: Optik Kiazma ve Görme Alanının Dilimlenmesi
 
-Optik sinirler gözün arkasından çıkar ve beynin altındaki o **X** şeklindeki kavşakta (Optik kiazma[^optik-kiazma]) buluşur. Ama burdaki tesisatı anlamak için önce beynin temel kuralını bilmek gerek: Beyin organları (gözleri) değil, görme alanını dilimler... 
-
-*Görme alanı nedir peki?*
-
-Gözlerini tam karşındaki bir noktaya diktiğinde (mesela duvardaki saat), karşında gördüklerinin tamamı senin "görme alanın"dır. Bu noktanın **sağında kalan her şey**, iki gözün de retinasına düşer. Yani burnunun tam ortasından yukarı doğru dikey bir bölme varmış gibi hayal et, burnunun sağında kalan bütün dünya *Sağ Görme Alanı*, solunda kalan da *Sol Görme Alanı*dır. 
+Optik sinirler gözün arkasından çıkar ve beynin altındaki o **X**şeklindeki kavşakta (Optik kiazma[^optik-kiazma]) buluşur. Ama burdaki tesisatı anlamak için önce beynin temel kuralını bilmek gerek: Beyin organları (gözleri) değil, görme alanını dilimler... **Görme alanı nedir peki?**Gözlerini tam karşındaki bir noktaya diktiğinde (mesela duvardaki saat), karşında gördüklerinin tamamı senin "görme alanın"dır. Bu noktanın**sağında kalan her şey*_, iki gözün de retinasına düşer. Yani burnunun tam ortasından yukarı doğru dikey bir bölme varmış gibi hayal et, burnunun sağında kalan bütün dünya _Sağ Görme Alanı_, solunda kalan da_Sol Görme Alanı _dır. 
 
 Gözün arkasında yaklaşık 1 milyon gangliyon hücresi nöbet tutar. Bu hücrelerin her birinin arkasından uzanan mikroskobik elektrik kablolarına (akson) biyolojide "lif" (fiber) denir. Yani "lif" dediğimiz şey, bildiğin fiber-optik internet kablosudur. Gözün arkasındaki 1 milyon kablo birleşir ve kalın bir halat oluşturur: Optik Sinir.
 
 Yani bu kablo demeti/buketi koca dünyayı kafatasının içine taşır.. 
 
-*Ama nasıl?*
-
-İşin direkt biyolojik kısmı burda başlıyor: Retina düz bir "*ekran*" değil, **içbükey** bir çanaktır. Işık normalde kırılmadan doğrusal yayılır, ve fotonların, yani ışığın direksiyonu yoktur, viraj falan alamaz, dümdüz gider..
+**Ama nasıl?*_İşin direkt biyolojik kısmı burda başlıyor: Retina düz bir "_ekran_" değil,_*içbükey** bir çanaktır. Işık normalde kırılmadan doğrusal yayılır, ve fotonların, yani ışığın direksiyonu yoktur, viraj falan alamaz, dümdüz gider..
 
 Göz küresi de önünde bir minik delik (gözbebeği) bulunan karanlık bir kutudur aslında.. Fiziksel bir zorunluluk olarak: Dışarıdan gelen bütün ışınlar o minik delikten geçerken "**X**" biçiminde birbirini kesmek zorundadır. Tıpkı bir iğne deliği kamera, yani camera obscura gibi...
 
-Diyelim ki tam karşıya bakıyorsun, sağ tarafında bir lamba yandığını düşün: O lambadan çıkan ışık huzmesi iki gözünün de gözbebeğinden içeri girer. Viraj alamadığı, manevra yapamadığı için **dümdüz** ilerler ve her iki gözünün de **sol iç duvarına** çarpar.
+Diyelim ki tam karşıya bakıyorsun, sağ tarafında bir lamba yandığını düşün: O lambadan çıkan ışık huzmesi iki gözünün de gözbebeğinden içeri girer. Viraj alamadığı, manevra yapamadığı için **dümdüz**ilerler ve her iki gözünün de**sol iç duvarına** çarpar.
 
-Yüzümüz *simetrik* olduğu için, yani en azından kabaca, bu "sol duvarlar" iki gözde de farklı yerlere tekabül eder:
+Yüzümüz _simetrik_ olduğu için, yani en azından kabaca, bu "sol duvarlar" iki gözde de farklı yerlere tekabül eder:
 
-**SOL** gözünün *sol* duvarı -> kulağına/şakağına bakar (Temporal retina)
+**SOL*_gözünün _sol_ duvarı -> kulağına/şakağına bakar (Temporal retina)_*SAĞ*_gözünün_sol_ duvarı -> burnuna bakar (Nazal retina)
 
-**SAĞ** gözünün *sol* duvarı -> burnuna bakar (Nazal retina)
+Yani: karşıya bakarken o sağımızda yanan lamba; sol gözün şakağındaki, sağ gözün de burnundaki pikselleri ateşler.
 
-*Yani: karşıya bakarken o sağımızda yanan lamba; sol gözün şakağındaki, sağ gözün de burnundaki pikselleri ateşler.* 
+İşte o 1 milyon kablo var ya.. O 1 milyon kablo, optik kiazma kavşağına geldiğinde hummalı bir sınıflandırma/tasnif başlar: Beynin _sol_tarafı, "Sağ tarafta ne oluyor?! Bana bakın, sağ tarafta neler olduğunu öğrenmem lazım! Sağ tarafta her ne olup bitiyorsa, bana bir dosya halinde getirin derhal!!" der.. _Sağ_gözün burna bakan lifleri zaten kafanın sağındadır, kiazma kavşağında şeridini değiştirip karşıya geçer, yani sol beyne. _Sol_ gözün şakağa bakan lifleri ise zaten kafanın solundadır; kavşakta hiç sapmadan dümdüz sol beyne devam eder. 
 
-İşte o 1 milyon kablo var ya.. O 1 milyon kablo, optik kiazma kavşağına geldiğinde hummalı bir sınıflandırma/tasnif başlar: Beynin *sol* tarafı, "Sağ tarafta ne oluyor?! Bana bakın, sağ tarafta neler olduğunu öğrenmem lazım! Sağ tarafta her ne olup bitiyorsa, bana bir dosya halinde getirin derhal!!" der.. 
+Sonuç: _hangi gözden çıktığına bakılmaksızın_,_*sağ dünyanın bütün görüntüleri toplanıp tek bir paket halinde sol yarımküreye teslim edilir*_. _Aynı şekilde sol dünyanın görüntüleri de toplanıp sağ beyne yollanır._ 
 
-*Sağ* gözün burna bakan lifleri zaten kafanın sağındadır, kiazma kavşağında şeridini değiştirip karşıya geçer, yani sol beyne. 
-
-*Sol* gözün şakağa bakan lifleri ise zaten kafanın solundadır; kavşakta hiç sapmadan dümdüz sol beyne devam eder. 
-
-Sonuç: *hangi gözden çıktığına bakılmaksızın*, **sağ dünyanın bütün görüntüleri toplanıp tek bir paket halinde sol yarımküreye teslim edilir**. *Aynı şekilde sol dünyanın görüntüleri de toplanıp sağ beyne yollanır.* 
-
-*Mekanik test*: Tek gözünü kapattığında dünyanın yarısını "kaybetmezsin". Derinlik hissin zayıflar ama sol ve sağ **alanı** görmeye devam edersin. Çünkü, **iki göz de iki görsel alana sahiptir**, optik kiazma bu ham veriyi "sol/sağ dünya" diye ikiye bölüp, zıt beyin yarımkürelerine (*kontralateral*[^kontralateral-isleme]) yollar. 
+_Mekanik test_: Tek gözünü kapattığında dünyanın yarısını "kaybetmezsin". Derinlik hissin zayıflar ama sol ve sağ _*alanı**görmeye devam edersin. Çünkü,**iki göz de iki görsel alana sahiptir*_, optik kiazma bu ham veriyi "sol/sağ dünya" diye ikiye bölüp, zıt beyin yarımkürelerine (_kontralateral_[^kontralateral-isleme]) yollar. 
 
 > [!abstract] Optik Kiazma ve Görme Alanı Retinal Çaprazlama Mimarisi
 > <div class="sc-gfx-author"><a href="https://doi.org/10.1016/B978-0-12-809324-5.02235-9" target="_blank" rel="noopener noreferrer" class="sc-gfx-link">(Goldstein, 2014; Bear ve ark., 2016)</a></div>
@@ -121,7 +109,7 @@ Sonuç: *hangi gözden çıktığına bakılmaksızın*, **sağ dünyanın büt�
 > </svg>
 > </div>
 >
-> *Görme alanlarının içbükey retinadaki tersyüz olma fiziğini ve Optik Kiazma kavşağındaki nazal lif çaprazlaması (dekussasyon) ile zıt beyin yarımküresine (kontralateral) paketlenme geometrisini gösterir.*
+> _Görme alanlarının içbükey retinadaki tersyüz olma fiziğini ve Optik Kiazma kavşağındaki nazal lif çaprazlaması (dekussasyon) ile zıt beyin yarımküresine (kontralateral) paketlenme geometrisini gösterir._
 >
 > <div class="sc-gfx-source">Bear, M. F., Connors, B. W., &amp; Paradiso, M. A. (2016). Neuroscience: Exploring the brain (4th ed.). Wolters Kluwer.</div>
 
@@ -131,17 +119,17 @@ Sonuç: *hangi gözden çıktığına bakılmaksızın*, **sağ dünyanın büt�
 
 2) Kiazmadaki o kategorileme, sağ/sol kavgası bittiğinde, o kablolar artık basit bir "göz siniri" değildir.. Beynin ta en derinlerine kadar dalan kalın bir otobana, yani Tractus opticus'a dönüşür. Bu otoban da öyle doğrudan düşüncenin veya bilinçli görmenin merkezine akmaz.. 
 
-*Yol ikiye çatallanır*:
+_Yol ikiye çatallanır_:
 
-1) %10'luk **İlkel hat**. Superior colliculus[^superior-colliculus], yani *üst tepecik*. Bunun bilinçle bir işi yoktur.. Görsel alanın kenarında **aniden beliren** bir harekete kafanı ve gözlerini refleks olarak çevirmeni sağlayan, ***sürüngen beyninden miras kalmış ilkel bir nişancı kulesidir adeta..* 
+1) %10'luk **İlkel hat**. Superior colliculus[^superior-colliculus], yani _üst tepecik_. Bunun bilinçle bir işi yoktur.. Görsel alanın kenarında_*aniden beliren**bir harekete kafanı ve gözlerini refleks olarak çevirmeni sağlayan,***sürüngen beyninden miras kalmış ilkel bir nişancı kulesidir adeta..* 
 
-2) %90'lık **Ana hat**. LGN[^lgn-genikulat], yani Corpus geniculatum laterale. Talamusun bir parçasıdır. Bilincin resmen ana gümrük kapısıdır. Kortekse gidecek olan ***tüm*** görsel veri, talamusun bu çekirdeğinde işlenir. 
+2) %90'lık **Ana hat**. LGN[^lgn-genikulat], yani Corpus geniculatum laterale. Talamusun bir parçasıdır. Bilincin resmen ana gümrük kapısıdır. Kortekse gidecek olan **tüm** görsel veri, talamusun bu çekirdeğinde işlenir. 
 
 ---
 
 ## 3. Exkurs: Evrimsel Çöp Kutusu Var mıdır?
 
-***Exkurs: Evrimsel çöp kutusu var mıdır?***
+**Exkurs: Evrimsel çöp kutusu var mıdır?**
 
 Memeliler sahneye çıkmadan önce yani ortalıkta henüz neokorteks, felsefe, Köfteci Yusuf ya da Ajda Pekkan yokken; balıkların, kurbağaların ve sürüngenlerin dünyayı gördüğü ana beyin zaten buydu. 
 
@@ -149,11 +137,9 @@ Bir kurbağayı düşün: Bu kurbağa karşısındaki sineğin kanat desenini, g
 
 Kurbağa basit düşünür. Kurbağamız şu iki soruya odaklanır: 
 
-**1)** Görüş alanında küçük bir şey hareket ediyor mu? >> **O zaman** dili fırlat ve ye.
+**1)**Görüş alanında küçük bir şey hareket ediyor mu? >>**O zaman**dili fırlat ve ye.**2)**Görüş alanında kocaman bir gölge yaklaşıyor mu? >>**O zaman** suya zıpla ve kaç.
 
-**2)** Görüş alanında kocaman bir gölge yaklaşıyor mu? >> **O zaman** suya zıpla ve kaç.
-
-==Ye veya kaç.== *Tanıdık geldi mi?*
+==Ye veya kaç.== _Tanıdık geldi mi?_
 
 ---
 
@@ -162,9 +148,9 @@ Yani evrim, bize bu dev korteksi verip sinyalin %90'ını LGN üzerinden arkaya 
 Üst tepeciği, arabalardaki otonom acil fren sistemine benzetebiliriz; 
 
 Arabayı sürerken şoför koltuğunda oturan sensin; açmışsın müziğini, tabela okuyorsun, yolu süzüyorsun. Bu süreç **bilinçli**, detaylı ama biyolojik olarak **yavaştır**. 
-*Bir şeyi fark edip ayağını frene götürmen yüzlerce milisaniye sürer.*
+Bir şeyi fark edip ayağını frene götürmen yüzlerce milisaniye sürer.
 
-***Ama*** ön tamponun altına gizlenmiş küçük, çirkin, düşük çözünürlüklü bir sensör vardır: O radar önündeki şeyin çocuk mu, çöp bidonu mu, yoksa pahalı bir çanta mı olduğunu bilmez, **merak da etmez** çünkü nesne tanıma sıfır..
+**Ama**ön tamponun altına gizlenmiş küçük, çirkin, düşük çözünürlüklü bir sensör vardır: O radar önündeki şeyin çocuk mu, çöp bidonu mu, yoksa pahalı bir çanta mı olduğunu bilmez,**merak da etmez** çünkü nesne tanıma sıfır..
 
 Tek ve **en iyi** bildiği şudur ama: "Görsel alanda hızla yaklaşan bir kütle var!" Yani "Bir cisim yaklaşıyor efendim!" 
 
@@ -182,43 +168,40 @@ Kenardan bir şey fırladığında, sen daha "O neydi lan?" diyemeden kafanı ve
 
 ## 4. Talamik Sansür ve LGN Paradoksu: Bilişsel Amortisör Odası
 
-***Talamik sansür ve LGN paradoksu***
-
-Üst tepeciğin %10'luk acil durum kontrol devresini geçtik.. Geriye kalan o koca %90'lık ana akım, talamusun bir çekirdeği olan **LGN**'ye (*Corpus Geniculatum Laterale*) toslar. 
+**Talamik sansür ve LGN paradoksu**Üst tepeciğin %10'luk acil durum kontrol devresini geçtik.. Geriye kalan o koca %90'lık ana akım, talamusun bir çekirdeği olan**LGN*_'ye (_Corpus Geniculatum Laterale_) toslar. 
 
 Bu LGN dediğimiz kısmı beynin photoshop'u gibi düşünebiliriz. Burası V1'e giden tek yoldur. 
 
-Nörobiyologlar mikroelektrotları bu LGN'nin nöronlarına batırıp hücrelerin ne halt ettiğini dinlediklerinde, bir *fiyasko* ile karşılaşırlar. 
+Nörobiyologlar mikroelektrotları bu LGN'nin nöronlarına batırıp hücrelerin ne halt ettiğini dinlediklerinde, bir _fiyasko_ ile karşılaşırlar. 
 
-Beklenen şudur: Retinadan gelen o ilkel sinyal, talamus gibi kocaman bir *et parçasının* içine giriyorsa; burda muhakkak daha karmaşık, daha sofistike bir sentezleme olmalıdır. 
+Beklenen şudur: Retinadan gelen o ilkel sinyal, talamus gibi kocaman bir _et parçasının_ içine giriyorsa; burda muhakkak daha karmaşık, daha sofistike bir sentezleme olmalıdır. 
 
 --
-*Nasıl yani?*
-**Şöyle:** Retinadan 1 milyon tane ham pamuk ipliği topluyorsun ve bu iplikleri alıp devasa bir fabrikaya (Talamus/ LGN) sokuyorsun.
-*Mantıken ne beklersin?*
+**Nasıl yani?**
+**Şöyle:**Retinadan 1 milyon tane ham pamuk ipliği topluyorsun ve bu iplikleri alıp devasa bir fabrikaya (Talamus/ LGN) sokuyorsun.**Mantıken ne beklersin?**
 Bu fabrikanın bacası tütüyorsa, içeri o kadar hammadde giriyorsa; içeride o ipliklerin en azından kumaşa dönüşmesini, desenlerin/örüntülerin oluşmasını, bir gömleğin yakasının falan belirmesini beklersin, değil mi?
-Ama fabrikanın arka kapısını açıp banttan ne çıktığına bakıyorsun: ***Yine aynı ham pamuk ipliği!***
+Ama fabrikanın arka kapısını açıp banttan ne çıktığına bakıyorsun: **Yine aynı ham pamuk ipliği!**
 Tek bir dikiş bile atılmamış.. Kumaş falan yok, desen yok, hiçbir şeye dokunulmamış. 
 İnsan sormaz mı: "Ulan koca fabrikayı ipliğe bön bön bakmak için mi kurdunuz?!"
 --
 
-*Madem retinadan gelen veriyi biçimsel olarak hiç değiştirmeyecektik; araya talamus gibi dev bir ara istasyonu ne diye koyduk?*
-*Kabloyu direkt arkadaki görme korteksine (V1) bağlamak varken bu uğraş neyin nesidir?*
+Madem retinadan gelen veriyi biçimsel olarak hiç değiştirmeyecektik; araya talamus gibi dev bir ara istasyonu ne diye koyduk?
+Kabloyu direkt arkadaki görme korteksine (V1) bağlamak varken bu uğraş neyin nesidir?
 
-**Bunun cevabı sinyalin şeklinde değil,** *volümünde* **ve** *trafiğin akış yönünde* **gizlidir.**
+**Bunun cevabı sinyalin şeklinde değil,**_volümünde_**ve**_trafiğin akış yönünde_**gizlidir.**
 
 **LGN bir görüntü işleme atölyesi değildir; LGN beynin **bilişsel sansür ve amortisör odasıdır.**
 Yani eğer beyin bir müzik aleti olsaydı; LGN yeni bir şarkı besteleyen enstrüman değildir; kompresör ve ses kısma masasıdır.
 
-Retinadan gelen ham sinyal, amfiyi patlatacak kadar gürültülü bir çığlıktır. LGN bu ciyaklamayı alır, desibelini aşağı çeker (amortisör etkisi yapar) ve *prodüktörün* talimatına göre mikserin kanallarıyla oynar: "Kıs şu gitarları! Tamamen kıs! Bu ne ya böyle.. Tamam, şimdi sadece vokale odaklan."
+Retinadan gelen ham sinyal, amfiyi patlatacak kadar gürültülü bir çığlıktır. LGN bu ciyaklamayı alır, desibelini aşağı çeker (amortisör etkisi yapar) ve _prodüktörün_ talimatına göre mikserin kanallarıyla oynar: "Kıs şu gitarları! Tamamen kıs! Bu ne ya böyle.. Tamam, şimdi sadece vokale odaklan."
 
-Peki.. Bu *'prodüktör'* de kimdir?
+Peki.. Bu _'prodüktör'_ de kimdir?
 Bizzat yukarıdaki Primer Görsel Korteks (V1)!
 Kabloları saydığında ortaya çıkan skandal şudur: LGN, retinadan (gözden) aldığından çok daha fazla sinyali bizzat yukarıdan, V1 korteksinden geri alır.
-Yani yukarıdaki (arkadaki) patron, aşağıdaki ses masasına sürekli talimat çeker: *"Şu an kitaptaki tek bir kelimeye odaklandım; masadaki bardaktan gelen sinyali kıs!"* *"Gece karanlık bi sokaktayım; en ufak hareketin görüntüsünü öne çıkar, gerisini boğ!"*
+Yani yukarıdaki (arkadaki) patron, aşağıdaki ses masasına sürekli talimat çeker: _"Şu an kitaptaki tek bir kelimeye odaklandım; masadaki bardaktan gelen sinyali kıs!"_ _"Gece karanlık bi sokaktayım; en ufak hareketin görüntüsünü öne çıkar, gerisini boğ!"_
 
 Göz bir kamera, beyin de monitör değildir. Algı, dışarıdan içeriye tek hat üzerinden akan mekanik bir canlı yayın **hiç değildir.** 
-Yani algı korteksin dikte ettiği, sansür memurunun da (LGN) uyguladığı *kapalı devre bir yayındır.*
+Yani algı korteksin dikte ettiği, sansür memurunun da (LGN) uyguladığı _kapalı devre bir yayındır._
 
 Beyin, daha veriler görme korteksine adımını bile atmadan önce, talamusu koşullar. 
 
@@ -235,14 +218,13 @@ Tam bu noktada durup sormak gerekiyor:
 
 Evet!! Tam da öyledir...: Özyinelemeli algı döngüsü (Predictive Coding[^prediktif-kodlama]). Gözünle dış dünyayı doğrudan görmezsin; önceki tecrübelerinin talamus tarafından filtrelenen fotonları "gerçeklik" sanırsın.
 
-***Peki bu döngünün ilk domino taşını kim devirdi?*** 
+**Peki bu döngünün ilk domino taşını kim devirdi?** 
 **Hayat tarafından algılanan "ilk" şey neydi?**
 
 Cevap 3.8 milyar yıl önceki okyanus diplerinde yatıyor: Kimyasal gradyan[^kimyasal-gradyan]: Bir maddenin konsantrasyonunun mekân içinde bir noktadan diğerine değişmesi.
 
 Henüz ortalıkta ne beyin var.. Ne göz var.. Ne de tek bir nöron varken; ilk tek hücreli canlı etrafındaki kimyasal değişimi hissetti. **Sistem basit:**
-Besin molekülü artıyorsa: *Yaklaş ve ye.*
-Toksik asit artıyorsa: *Yön değiştir ve kaç.*
+Besin molekülü artıyorsa: _Yaklaş ve ye._Toksik asit artıyorsa:_Yön değiştir ve kaç._
 
 Hücre zarının üzerindeki o antik iyon kanalları dışarıdaki kimyasal voltajı hissetti; ilk algı ve ilk hareket böyle doğdu.
 
@@ -251,20 +233,16 @@ Hücre zarının üzerindeki o antik iyon kanalları dışarıdaki kimyasal volt
 Görme, işitme, dokunma gibi bütün duyular kortekse çıkmadan önce talamusa uğramak zorundayken, koku talamik işlemi tamamen pas geçer. 
 Doğrudan amigdala ve hipokampüse girer.
 
-Çünkü *talamus* da *korteks* de evrim sahnesine **dün çıkmış yapılardır**; ***koku ise o ilk hücre zarındaki kimyasal algının yaşayan fosilidir.*** 
-
-Çürük et kokusunu mantıkla tartamazsın, talamus araya giremeden miden bulanır; sokaktaki bi koku sana anında çocukluğunu hatırlatır.
-
-**Yani:**
+Çünkü _talamus_da_korteks_de evrim sahnesine_*dün çıkmış yapılardır**; **koku ise o ilk hücre zarındaki kimyasal algının yaşayan fosilidir.**Çürük et kokusunu mantıkla tartamazsın, talamus araya giremeden miden bulanır; sokaktaki bi koku sana anında çocukluğunu hatırlatır.**Yani:**
 Tüm yaşam, okyanusun dibindeki o ilk kimyasal molekülün peşine düşmüş kesintisiz bir açlığın mirasıdır.. Oluşan neden-sonuç ilişkisinin devasalığının tümüne hayat diyoruz. 
 
-*Retina, kiazma geometrisi, talamus ve arkaya taktırdığımız o koca görme korteksi...*
+Retina, kiazma geometrisi, talamus ve arkaya taktırdığımız o koca görme korteksi...
 
 Bunların hiçbiri "dünyayı şöyle estetik bir derinlikle seyr-i âlem eyleyeyim!" diye icat edilmedi. 
 Hepsi, o ilkel tek hücrelinin moleküle koşup zehirden kaçtığı kadim/alçak refleksi. 
 Bugün aynı şeyi ama bu sefer, kilometrelerce uzaktan, ışık hızında ve 3 boyutlu koordinatlarla falan yapabilmek için var retina, kiazma, talamus ve saz arkadaşları..
 
-*Exkurs bitti.*
+Exkurs bitti.
 
 ---
 
@@ -279,7 +257,7 @@ Bugün aynı şeyi ama bu sefer, kilometrelerce uzaktan, ışık hızında ve 3 
 
 ## Kaynaklar
 
-- Bear, M. F., Connors, B. W., & Paradiso, M. A. (2016). *Neuroscience: Exploring the brain* (4th ed.). Wolters Kluwer.
-- Friston, K. (2005). A theory of cortical responses. *Philosophical Transactions of the Royal Society B: Biological Sciences*, 360(1456), 815–836. https://doi.org/10.1098/rstb.2005.1622
-- Goldstein, E. B. (2014). *Sensation and perception* (9th ed.). Cengage Learning.
-- Hubel, D. H., & Wiesel, T. N. (1977). Ferrier lecture: Functional architecture of macaque monkey visual cortex. *Proceedings of the Royal Society of London. Series B. Biological Sciences*, 198(1130), 1–59. https://doi.org/10.1098/rspb.1977.0085
+- Bear, M. F., Connors, B. W., & Paradiso, M. A. (2016). _Neuroscience: Exploring the brain_ (4th ed.). Wolters Kluwer.
+- Friston, K. (2005). A theory of cortical responses. _Philosophical Transactions of the Royal Society B: Biological Sciences_ , 360(1456), 815–836. https://doi.org/10.1098/rstb.2005.1622
+- Goldstein, E. B. (2014). _Sensation and perception_ (9th ed.). Cengage Learning.
+- Hubel, D. H., & Wiesel, T. N. (1977). Ferrier lecture: Functional architecture of macaque monkey visual cortex. _Proceedings of the Royal Society of London. Series B. Biological Sciences_ , 198(1130), 1–59. https://doi.org/10.1098/rspb.1977.0085

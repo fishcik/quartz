@@ -38,7 +38,7 @@ Sağlık davranışı kazanmak bir şeydir, onu korumak bambaşka bir şeydir. K
   > *"Bağımlılık senin iradenle değil, genetikle ilgili bir hastalıktır. Bir kez hastalandıysan hayatın boyunca hastasındır ve ASLA iyileşmezsin. Tek kadeh şarap = Geri Düşüştür."*
   *(Buna rağmen AA'nın diğer tedavilerden daha başarılı olduğu kanıtlanmış değildir).*
 
-- **Sosyal-Bilişsel Model (Marlatt & Gordon, 1985):** Süreci detaylandırır. Tek bir hata veya kaçamak (Lapse / Ayak kayması), öğrenme sürecinin normal bir parçasıdır ve henüz gerçek anlamda kalıcı bir **Geri Düşüş (Relapse)** sayılmaz. 
+- **Sosyal-Bilişsel Model (Marlatt & Gordon, 1985):**Süreci detaylandırır. Tek bir hata veya kaçamak (Lapse / Ayak kayması), öğrenme sürecinin normal bir parçasıdır ve henüz gerçek anlamda kalıcı bir**Geri Düşüş (Relapse)** sayılmaz. 
 
 Sosyal-bilişsel perspektif temsilcileri, alkolizmin katı bir hastalık olduğu dogmasının kişinin sadece sorumluluğunu değil, aynı zamanda **kontrolünü de elinden aldığını** savunur.
 
@@ -171,7 +171,7 @@ Marlatt, insanı o eski alışkanlığına döndüren tetikleyicileri (yüksek r
 
 ### Görünüşte Alakasız Kararlar (AIDs[^gorunuste-alakasiz-kararlar])
 Bir bağımlı, bilinci açıkken doğrudan gidip o maddeyi almaz; ama beyni ona görünüşte çok mantıklı ve bağımlılıkla alakasız kararlar aldırır:
-*Örnek:* Alkolü bırakan birinin *"Haftaya arkadaşlar falan gelir, ne olur ne olmaz, evde bulunsun..."* diyerek eve alkol alması. Görünüşte misafirperverliktir; ancak arka planda zihin maddeyi ulaşılabilir kılarak olası bir kriz anında geri düşüşün zeminini bizzat hazırlar.
+Örnek:* Alkolü bırakan birinin *"Haftaya arkadaşlar falan gelir, ne olur ne olmaz, evde bulunsun..."* diyerek eve alkol alması. Görünüşte misafirperverliktir; ancak arka planda zihin maddeyi ulaşılabilir kılarak olası bir kriz anında geri düşüşün zeminini bizzat hazırlar.
 
 ---
 

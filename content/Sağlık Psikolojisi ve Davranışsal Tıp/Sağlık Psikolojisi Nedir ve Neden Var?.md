@@ -36,9 +36,7 @@ Sağlık psikolojisi 1980'li yıllarda psikolojinin bağımsız bir alt dalı ha
 > Hangi davranışlar sağlığı korur? Hastalıkları önlemede neler işe yarar? 
 > Hastalık varken yaşam kalitesi nasıl artırılır?
 
-> ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. Laboratuvardan çıkıp sahaya inen bir alan.***
-
-Klinik psikolojiden farkı: Klinik psikoloji zihinsel bozukluklar ve psikopatoloji üzerine yoğunlaşırken; sağlık psikolojisi doğrudan **fiziksel hastalıklara** ve onları çevreleyen duygu, stres ve davranış sarmalına odaklanır.
+> ***Yani hem "ne oluyor" hem de "ne yapılır" diyor. Laboratuvardan çıkıp sahaya inen bir alan.***Klinik psikolojiden farkı: Klinik psikoloji zihinsel bozukluklar ve psikopatoloji üzerine yoğunlaşırken; sağlık psikolojisi doğrudan**fiziksel hastalıklara** ve onları çevreleyen duygu, stres ve davranış sarmalına odaklanır.
 
 İnsan bedeni bir makine değil, bağlam içinde yaşayan bir organizma. *Ve o bağlamın büyük bölümü psikolojik.*
 
@@ -122,7 +120,7 @@ Sağlık psikolojisi bütünüyle bu **ikinci modelin** üzerine kuruludur.
 Sağlık psikolojisi yoktan doğmadı. Batı sanayi toplumlarında 20. yüzyılın ikinci yarısında epidemiyoloji[^epidemiyoloji] verilerinin ortaya koyduğu üç büyük trend bu alanın ortaya çıkmasını zorunlu kıldı:
 
 1. **Kronik-Dejeneratif Hastalıkların Artışı:** Tüberküloz gibi bulaşıcı enfeksiyonlar yerini kalp hastalıkları, kanser ve diyabet gibi yavaş ilerleyen hastalıklara bıraktı. Bunlar sadece antibiyotikle çözülmez; yaşam tarzı değişikliği gerektirir.
-2. **Davranışsal Risk Faktörlerinin Keşfi:** Sigara içmek, sedanter yaşam ve kronik stres biyolojik sonuçları doğrudan tayin eder. Artık **davranışın kendisi** tedavinin ve önlemenin ana konusu haline geldi.
+2. **Davranışsal Risk Faktörlerinin Keşfi:**Sigara içmek, sedanter yaşam ve kronik stres biyolojik sonuçları doğrudan tayin eder. Artık**davranışın kendisi** tedavinin ve önlemenin ana konusu haline geldi.
 3. **Sağlık Maliyetlerinin Patlaması:** Tedavi etmek devasa pahalıdır, oysa birincil koruma[^birincil-koruma] ve önleme çok daha ucuz ve sürdürülebilirdir.
 
 Bu faktörlerin kesişiminde, 1978 yılında APA bünyesinde **Division of Health Psychology** kurularak alan resmen kurumsallaşmıştır.

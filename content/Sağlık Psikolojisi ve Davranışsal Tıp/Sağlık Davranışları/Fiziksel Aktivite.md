@@ -26,7 +26,7 @@ tags:
 
 Fiziksel aktiviteden kasıt ağır performans sporları değildir. Alman Kardiyoloji Cemiyeti (DGK) yetişkinlere günde en az 30 dk. hafif terleten ve nabzı yükselten hareket önerirken, çocuklara 1-2 saat öneriyor.
 
-> Hareket, metabolik[^metabolik-risk] riskleri minimize eden ve klinik majör depresyonu[^majör-depresyon] önlemede koruyucu rol oynayan **düşük maliyetli** bir ***müdahale aracıdır.***
+> Hareket, metabolik[^metabolik-risk] riskleri minimize eden ve klinik majör depresyonu[^majör-depresyon] önlemede koruyucu rol oynayan **düşük maliyetli**bir***müdahale aracıdır.***
 
 > [!abstract] Fiziksel Aktivite Doz-Yanıt ve Mortalite Riski Modeli
 > <div class="sc-gfx-author"><a href="https://doi.org/10.1097/00005768-200106001-00003" target="_blank" rel="noopener noreferrer">(Kesäniemi ve ark., 2001; US DHHS, 2018)</a></div>
@@ -104,7 +104,7 @@ Bu planı yapmadan niyet sadece vicdan rahatlatıcı bir arzu olarak kalır.
 [^doz-yanit-iliskisi]: **Doz-Yanıt İlişkisi (Dose-Response Relationship):** Fiziksel aktivite süresi ve yoğunluğu arttıkça mortalite ve morbidite riskinin doğrusal olmayan şekilde azalması dinamik örüntüsü.
 [^majör-depresyon]: **Majör Depresif Bozukluk (Major Depressive Disorder):** Sürekli çökkün duygudurum ve anhedoni ile seyreden; düzenli aerobik egzersizle BDNF salınımı ve nöroplastisite üzerinden sağaltımı desteklenen klinik tablo.
 [^bdnf]: **BDNF (Brain-Derived Neurotrophic Factor):** Aerobik egzersizle kanda ve beyinde yükselerek yeni sinaps oluşumunu, nörogenezi ve sinir hücresi sağkalımını destekleyen nörotrofik faktör.
-[^met-degeri]: **MET Değeri (Metabolic Equivalent of Task):** Bir fiziksel aktivite esnasındaki enerji harcamasının dinlenme anındaki bazal metabolizma hızına ($3.5\text{ ml } O_2 / \text{kg} \cdot \text{dk}$) oranını belirten standart fizyolojik birim.
+[^met-degeri]: **MET Değeri (Metabolic Equivalent of Task):*_ Bir fiziksel aktivite esnasındaki enerji harcamasının dinlenme anındaki bazal metabolizma hızına ($3.5\text{ ml } O_2 / \text{kg} \cdot \text{dk}$) oranını belirten standart fizyolojik birim.
 [^hipokampal-norogenez]: **Hipokampal Nörogenez (Hippocampal Neurogenesis):** Düzenli aerobik aktivitenin hipokampusta yeni granül nöron üretimini uyararak hafıza konsolidasyonunu ve anksiyolitik dayanıklılığı güçlendirmesi.
 [^endokanabinoid-sistemi]: **Endokanabinoid Sistemi (Runner's High - Boecker):** Sürekli aerobik egzersiz sırasında kanda anandamid seviyesinin yükselerek santral sinir sisteminde öfori, sedasyon ve analjezi (ağrı kesici his) üretmesi.
 

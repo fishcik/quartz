@@ -80,7 +80,7 @@ Tamam. Tanımların bir kısmını masaya koyduk. Şimdi bu bilimin gerçekte na
 
 ## 2. Tanı Sınıflandırma Sistemleri ve Kesişim Alanları
 
-Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönler ile bozukluğa-özgü yönler birbirinden ayrılıyor. Bu mantıkta, bozukluklara **özgü** düzeyde, işlevler ve işlev örüntüleri ele alınıyor. Ve bu hep çift taraflı bir mercek: **içsel (intra) ve kişilerarası (inter) perspektif.**
+Baumann ve Perrez şöyle bir mantık kurmuşlar: Bozukluklar-arası ortak yönler ile bozukluğa-özgü yönler birbirinden ayrılıyor. Bu mantıkta, bozukluklara **özgü**düzeyde, işlevler ve işlev örüntüleri ele alınıyor. Ve bu hep çift taraflı bir mercek:**içsel (intra) ve kişilerarası (inter) perspektif.**
 
 **Bozulmuş işlevler** dediğimizde, genel psikolojiden, biyopsikolojiden ve nöropsikolojiden aşina olduğumuz temel süreçlere gönderme yaparız: algı, öğrenme, düşünme… Bunlar bozulduğunda devreye klinik psikoloji giriyor.
 
@@ -117,7 +117,7 @@ Bu geniş ilgi alanı, kaçınılmaz olarak psikolojinin diğer alt dallarıyla 
 
 Mesela sigarayı ele alalım. Aynı "sigara" örneği hem sağlık psikolojisinde, hem de davranışsal tıpta çıkıyor. Çünkü aynı durum iki farklı disiplinin perspektifinden inceleniyor: biri toplum sağlığı açısından, biri kalp hastalığı riski açısından. **Klinik psikoloji** ikisinin tam kesiştiği yerde, ortasında duruyor.
 
-Peki bu kesişimler tesadüf mü? **Hayır.** Burda klinik psikolojinin en temel özelliklerinden birine geliyoruz: **Disiplinlerarası bir temel yönelim taşıması.** Bu klinik psikolojinin en belirleyici özelliği belki de.
+Peki bu kesişimler tesadüf mü? **Hayır.**Burda klinik psikolojinin en temel özelliklerinden birine geliyoruz:**Disiplinlerarası bir temel yönelim taşıması.** Bu klinik psikolojinin en belirleyici özelliği belki de.
 
 Hem bu kadar konu varken hem de alan bu kadar katmanlıyken, diğer disiplinlerle sıkı fıkı olmaması garip olurdu zaten. Amaç bozulmuş ruhsal işlevleri ve bozukluk örüntülerini daha iyi ve derinlemesine anlamaktır. Bu yüzden, başka alanların modellerinden, paradigmalarından, yöntemlerinden ve tekniklerinden beslenir. Bu da nihayetinde daha isabetli teşhislere ve daha etkili müdahale yollarına ulaştırmaktadır.
 
@@ -284,7 +284,7 @@ Böyle olmasının bir **avantajı** güvenilirliği artırır ve iletişimini k
 
 Ortak bir **"dil"**, farklı ekollerden insanların aynı rahatsızlıktan bahsedebilmesini sağlıyor.
 
-*Örneğin,* "araba" kelimesi. Sen de ben de "araba" kelimesini kullanırken aynı şeyi anlıyoruz. "Araba" tekerlekli, motorlu bir taşıt diye kodlanmış. *Araba neden var?* demiyoruz, DSM de böyle çalışıyor.
+Örneğin,* "araba" kelimesi. Sen de ben de "araba" kelimesini kullanırken aynı şeyi anlıyoruz. "Araba" tekerlekli, motorlu bir taşıt diye kodlanmış. *Araba neden var?* demiyoruz, DSM de böyle çalışıyor.
 
 Ama bunun **dezavantajı** da tam burda zaten. Derinliği kaybediyoruz. Bu adam depresyonda, tamam, ama *neden* depresyonda? *Travma? Genetik? Yokluk/Yoksulluk? Yalnızlık?* 
 
@@ -380,7 +380,7 @@ Borderline kişilik bozukluğu olan birini düşündüğümüzde; bu kişi, duyg
 
 Yani: Örnek olarak kullandığımız borderline ile depresyonun bu kadar sık birlikte görülmesi, onları ayrı eksenlere koymak için gerçekten yapay ve keyfi sebepler bütünü oluşturdu. 
 
-*Hasta depresyonda olduğu için anti-depresan dayarsın, ama borderline’ın duygusal dengesizliği ilaçla düzelmez, terapi gerektirir.* Ya da *depresyon tedavi edilir, tamam. Ama bu sefer borderline daha da görünür hale gelir, çünkü asıl yapısal sorun zaten oradadır.* **İnsan varlığı o kadar karmaşık ki, onu "geçici epizod" ve "kalıcı kişilik" diye iki ayrı kutuya koymak gerçeği yansıtmıyor.** Depresyon eğer borderline zemininde gelişirse, sadece bir epizod olarak kalmıyor, kişiliğin bir ifadesi oluyor.
+Hasta depresyonda olduğu için anti-depresan dayarsın, ama borderline’ın duygusal dengesizliği ilaçla düzelmez, terapi gerektirir.* Ya da *depresyon tedavi edilir, tamam. Ama bu sefer borderline daha da görünür hale gelir, çünkü asıl yapısal sorun zaten oradadır.* **İnsan varlığı o kadar karmaşık ki, onu "geçici epizod" ve "kalıcı kişilik" diye iki ayrı kutuya koymak gerçeği yansıtmıyor.** Depresyon eğer borderline zemininde gelişirse, sadece bir epizod olarak kalmıyor, kişiliğin bir ifadesi oluyor.
 
 DSM-5, bu **yapay** ayrımı kaldırarak aslında yanıldığını itiraf etmiş oldu. *"Biz yanıldık… Aslında bu iki eksen zaten tek bir düzlemde, yan yana duruyormuş.."* Ama tabi bu itiraftan önce yıllarca bu sistemle idare edildi ve milyonlarca kişi, bu yapay ayrımların gölgesinde tanı ve tedavi aldı.
 
@@ -443,7 +443,7 @@ Mesela agorafobisi bulunan bir hasta, aynı zamanda agorafobiyle hiç ilgisi olm
 
 Ya da yine bu kişinin ailesiyle, işiyle, evi ve finansal durumuyla ilgili değişkenlerin de hesaba katılması gerekiyor ki, değerlendirme daha kapsayıcı ve anlamlı olabilsin. Alakasız görünen şeyler de, rahatsızlığa bütünsel olarak bakıldığında bir çok anlam ifade edici nokta çıkartabilir. Hatta, bunların hiç hesaba katılmamasının neredeyse hiçbir kazancı yok.
 
-Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile** kusurlu bulunuyor. **Neden?** İki büyük eksiklik var…
+Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile**kusurlu bulunuyor.**Neden?** İki büyük eksiklik var…
 
 1. **İşlevsel boyutların ihmal edilmesi:** Bir bozukluğun tanımlanırken, onun *ne* olduğuna odaklanmak ve *nasıl işlediğine* bakmamak. Kişinin günlük hayatında bu bozukluğun ne anlama geldiğine, hangi durumlarda peydah olduğuna, nasıl değişim gösterdiğine ve ne olunca azalıp/çoğaldığına pek dikkat etmemek…
 2. **Zaman dinamiği:** Bir bozukluğun zamanla nasıl değiştiğinin pek de hesaba katılmaması.. Bir insanın dünü ile bugünü farklıdır, yarını da. Ama çok eksenli sistem bu akışı yakalamakta zorlanır.
@@ -469,7 +469,7 @@ Ama bu daha kapsamlı ve çok eksenli yaklaşım **bile** kusurlu bulunuyor. **N
 > 
 > *Bu, psikotik bir vaka mıydı? Yoksa genç bir adamın yoğun stres altında yaşadığı geçici, atipik bir kriz miydi? Sesler gerçek miydi? Bunlar bozukluğun bir parçası mı yoksa bozukluğa tepki mi?*
 
-Bu örneklerin hepsi ortak noktası ne? Bir insanın yaşadıklarını **normal** ve **anormal**, **hasta** ve **sağlıklı** diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
+Bu örneklerin hepsi ortak noktası ne? Bir insanın yaşadıklarını **normal**ve**anormal**, **hasta**ve**sağlıklı** diye ikiye ayırmanın ne kadar zor olduğunu gösteriyor. Her birinde tanı koymak için bi ton veri varken hiçbiri tek başına cevap vermiyor. 
 
 Bu üç vaka, tam da **multimodal** yaklaşımın neden gerekli olduğunu gösteriyor. Çok eksenli sistem, bu hikayeleri kategorilere sığdırmaya çalışıyor. Ama hayat, kategorilerden hep taşıyor.
 

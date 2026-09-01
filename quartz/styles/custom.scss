@@ -4383,10 +4383,79 @@ body[data-slug="tum-yazilar"] {
     font-size: 2.2rem !important;
     color: var(--accent, #C8102E) !important;
     letter-spacing: 0.02em;
-    margin: 2.5rem 0 1.2rem;
-    padding-bottom: 0.4rem;
+    margin: 2.8rem 0 1.4rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px dashed rgba(200, 16, 46, 0.35);
+
+    a {
+      color: var(--accent, #C8102E) !important;
+      text-decoration: none !important;
+    }
   }
+}
+
+.sc-archive-course-header {
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed rgba(200, 16, 46, 0.35);
+
+  &:first-of-type {
+    margin-top: 1rem;
+  }
+}
+
+.sc-archive-course-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--accent, #C8102E) !important;
+  text-decoration: none !important;
+  transition: transform 160ms ease, opacity 160ms ease;
+
+  &:hover {
+    transform: translateX(4px);
+    opacity: 0.9;
+
+    .sc-archive-course-icon {
+      box-shadow: 0 4px 14px rgba(200, 16, 46, 0.2);
+    }
+  }
+}
+
+.sc-archive-course-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--bg-2, #ece8e1);
+  border: 1.5px solid var(--accent, #C8102E);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 3px 10px rgba(200, 16, 46, 0.12);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    display: block;
+    color: var(--accent, #C8102E);
+  }
+}
+
+.sc-archive-course-title {
+  font-family: 'Manufacturing Consent', serif !important;
+  font-style: normal !important;
+  font-size: 2.2rem !important;
+  color: var(--accent, #C8102E) !important;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+html[saved-theme="dark"] .sc-archive-course-icon,
+[saved-theme="dark"] .sc-archive-course-icon {
+  background: #1c1a16;
+  border-color: #C8102E;
 }
 
 .sc-archive-divider {
