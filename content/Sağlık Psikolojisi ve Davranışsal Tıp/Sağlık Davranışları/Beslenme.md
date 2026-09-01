@@ -81,36 +81,36 @@ Ayrıca beslenmenin:
 Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor. Yani toplumun yarısından fazlası DGE standartlarının altında kalıyor.
 
 ---
-## 3. Akademi vs. Sokak: Gerçekler ve Mitler
+## 3. Gerçekler ve Mitler
 
 ---
 
-**Sokak:** "Şeker yemesem zayıflarım" aynen sanki tek sorrun şeker.
-**Bilim:** ==Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.==
+**Mit:** "Şeker yemesem zayıflarım" aynen sanki tek sorrun şeker.
+**Bilim:** *Aşırı kilo çok faktörlü bir şey: genetik + sağlıksız beslenme + hareketsizlik + alkol.*
 
 ---
-**Sokak:** "Yağ yemek şişmanlatır" yağın türü ve miktarı değil, varlığı sorun gibi algılanır.
-**Bilim:** ==Yağın miktarı (günlük 60-80 g) ve türü (bitkisel) önemli. Sıfır yağ zaten önerilmiyor.==
+**Mit:** "Yağ yemek şişmanlatır" yağın türü ve miktarı değil, varlığı sorun gibi algılanır.
+**Bilim:** *Yağın miktarı (günlük 60-80 g) ve türü (bitkisel) önemli. Sıfır yağ zaten önerilmiyor.*
 
 ---
-**Sokak:** "Kilolu = tembel", aşırı kilo tamamen irade meselesi sanılır.
-**Bilim:** ==Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yoketmez.==
-
----
-
-**Sokak:** "Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
-
-**Bilim:** ==BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas[^adipositas]) resmi olarak hastalık sınıfında.==
+**Mit:** "Kilolu = tembel", aşırı kilo tamamen irade meselesi sanılır.
+**Bilim:** *Kilonun aşırıya kaçmasını sağlayan çok faktör vardır. Sadece iradeye indirgenmesi bu faktörleri yoketmez.*
 
 ---
 
-**Sokak:** "Kankam, benim kilom yerinde, göbek yok, istesem de şişmanlamıyorum. O yüzden istediğim çöpü gömerim. Hiç acımam."
+**Mit:** "Benim BMI 27, gayet sağlıklıyım valla", kilo hastalık değil diye ihmal edilir.
 
-**Bilim:** ==Yemezler. Yanlış beslenme normal kilolularda bile gizli hasar ve besin yetersizliği doğurur.==
+**Bilim:** *BMI 25-29.9 henüz hastalık sayılmıyor. Ama >30 (Adipositas[^adipositas]) resmi olarak hastalık sınıfında.*
 
 ---
-**Sokak:** "Ben bu sefer sağlıklı beslenmeyi kafaya çok pis koydum. Yürekten niyetliyim. Kesin yaparım."_
-**Bilim:** ==Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.==
+
+**Mit:** "Kankam, benim kilom yerinde, göbek yok, istesem de şişmanlamıyorum. O yüzden istediğim çöpü gömerim. Hiç acımam."
+
+**Bilim:** *Yemezler. Yanlış beslenme normal kilolularda bile gizli hasar ve besin yetersizliği doğurur.*
+
+---
+**Mit:** "Ben bu sefer sağlıklı beslenmeyi kafaya çok pis koydum. Yürekten niyetliyim. Kesin yaparım."_
+**Bilim:** *Fiyasko. Verilere göre niyet tam olsa bile eyleme dönüşme varyansı düşüyor, tek başına yetmiyor.*
 
 > Povey ve ark. (2000) bunu sayıyla gösterdi: niyet için %57–64 varyans açıklaması. Gerçek davranışa gelince bu oran %19–32'ye çakılıyor. Niyet-davranış uçurumu tam burada.
 
@@ -120,8 +120,12 @@ Sonuçta Alman yetişkinlerin sadece %45.8'i günlük düzenli sebze tüketiyor.
 ## 4. Niyet-Davranış Uçurumu ve Öz-Yeterlilik
 
 Beslenme psikolojisinde kişinin kendi kapasitesine olan rasyonel inancı, teorideki algılanan davranış kontrolünden çok daha kritik bir eylem tahmincisidir.
-**DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.** Yönünü bilmek başlamak için yeterli. Ama gitmek için başka şeyler de lazım. Öz-yeterlilik de işte o ağır çantayı taşıyabildiğine duyduğun inanç.
----
+**DGE ve benzerlerinin kurallarını bir pusulaya benzetebiliriz. Yönü gösterir ama arazi engebeli, yağmur falan var, sırt çantan da ağır.** 
+
+Yönünü bilmek başlamak için yeterli. 
+Ama gitmek için başka şeyler de lazım.. 
+Öz-yeterlilik de işte o kıçını kaldırabileceğine, taşıyabildiğine duyduğun inanç.
+
 
 [^adipositas]: **Adipositas / Klinik Obezite (Obesity):** Vücutta sağlığı bozacak ölçüde aşırı yağ dokusu birikimi ile karakterize, BMI $\ge 30 \text{ kg/m}^2$ olan kronik metabolik hastalık tablosu.
 [^oz-yeterlilik]: **Öz-Yeterlilik (Self-Efficacy):** Albert Bandura (1977) tarafından tanımlanan; bireyin zorlu koşullar altında dahi belirli bir davranışı (örneğin diyete sadık kalma) başarıyla gerçekleştirebileceğine dair kendi kapasitesine olan inancı.

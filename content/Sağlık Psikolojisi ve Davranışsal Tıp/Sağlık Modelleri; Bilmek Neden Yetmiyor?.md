@@ -426,7 +426,8 @@ Gelecek 6 ay içinde değişimi düşünüyor. Ama önündeki 30 gün için niye
 - "Olm ciddi ciddi 3 ay içmiyorum!"
 - "Yapıyorum ulan!"
 **Zaman:**
-**Hedef davranışı aktif olarak uyguladığı ilk 6 ay.** En tehlikeli, iradenin en çok kırıldığı ve tetiklenme seviyesinin pik yaptığı yer...*
+**Hedef davranışı aktif olarak uyguladığı ilk 6 ay.** 
+*En tehlikeli, iradenin en çok kırıldığı ve tetiklenme seviyesinin pik yaptığı yer...*
 
 ---
 
@@ -552,7 +553,7 @@ Ama ASLA 1. adım olan MUTLAK CAHİLLİĞE geri düşemezler. Bir kere duyup ö�
 PAPM'in en büyük iddiası şudur: _"Her aşamadaki insana aynı yaklaşımı uygulayamazsın."_
 
 > **Radon Çalışması**
-```
+
 1897 katılımcıyla yapılan randomize, boylamsal çalışmada iki müdahale test edildi: 
 _Yüksek risk bilgisi_ ve _düşük efor_. 
 
@@ -665,7 +666,7 @@ Vahşi ve TAM bir geri düşüş
 **Yani:** hastalık modelinin o katı ve dogmatik "tek yudum içersen yandın" bakış açısı, aslında AVE'yi bizzat kendi elleriyle besleyen ve insanı bilerek **tam** bir geri düşüşe sürükleyen tehlikeli bir kehanete dönüşüyor.
 Kontrolün kendisinde olmadığına, ve hiçbir zaman olamayacağına inanan birisi zaten davranışı kontrol etmeyi çalışmayı bırakır.
 **Tökezlemek normaldir. Hatayı bir "hastalık patlaması" olarak değil de, bir "öğrenme kazası" olarak yorumlamak hem kısırdöngüyü kırmak için hem de TAM teşekküllü bir geri düşüş yaşamamak için daha mantıklıdır.**
----
+
 
 [^oz-yeterlilik]: **Öz-Yeterlilik (Self-Efficacy):** Albert Bandura (1977) tarafından tanımlanan; bireyin belirli bir eylemi gerçekleştirebilmek için gerekli motivasyonel ve bilişsel kaynakları seferber edebileceğine dair sübjektif yetkinlik inancı.
 [^eylem-sonucu-beklentisi]: **Eylem Sonucu Beklentisi (Outcome Expectancy):** Bireyin belirli bir sağlık davranışını gerçekleştirdiğinde hangi olumlu veya olumsuz fizyolojik/sosyal sonuçlarla karşılaşacağına dair zihinsel olasılık hesabı.

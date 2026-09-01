@@ -105,16 +105,12 @@ Yani beyin mağdur değil. Uyum sağlamış. Ve uyum sağlayan bi şey, geri dö
 Doğru strateji ile. İlk 3 ay zor. 2024'te yayınlanan araştırmalar, sigara bırakıldıktan yaklaşık **3 ay** sonra beynin dopamin sisteminin yeniden normale döndüğünü gösteriyor.
 
 >21 günde reseptörlerini temizliyor, normalleştiriyor.
-
 >3 ayda dopaminini düzenliyor, dengeliyor.
-
 >1 yılda kalp riskini yarıya indiriyor.
 
 ---
 > **Beyin zaten napması gerektiğini biliyor. Bazen sadece doğru anda doğru şeyi hatırlaması yeterli.**
 
----
----
 
 [^koroner-arter-hastaligi]: **Koroner Arter Hastalığı (Coronary Artery Disease):** Kalp kasını besleyen koroner damarların ateroskleroz ve tütün toksinleri nedeniyle daralması sonucu miyokard enfarktüsü riskinin katlanması tablosu.
 [^zaman-gecikmeli-hasar]: **Kümülatif Zaman Gecikmeli Hasar (Time-Lagged Damage):** Toksik maruziyetin hücresel hasar ve mutasyonları sinsice biriktirerek klinik mortalite faturasını 20-30 yıl sonra orta yaşta çıkarması paterni.

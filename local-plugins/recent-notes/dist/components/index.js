@@ -1,52 +1,12 @@
-// node_modules/@quartz-community/utils/dist/date.js
-function formatDate(d2, locale = "en-US") {
-  return d2.toLocaleDateString(locale, {
-    year: "numeric",
-    month: "short",
-    day: "2-digit"
-  });
-}
+// local-plugins/recent-notes/src/components/RecentNotes.tsx
+import { formatDate } from "@quartz-community/utils/date";
+import { byDateAndAlphabetical, getDate } from "@quartz-community/utils/sort";
+import { isFolderPath } from "@quartz-community/utils/path";
 
-// node_modules/@quartz-community/utils/dist/sort.js
-function getDate(data) {
-  const defaultDateType = data.defaultDateType;
-  if (!defaultDateType) {
-    return void 0;
-  }
-  const dates = data.dates;
-  return dates?.[defaultDateType];
-}
-function byDateAndAlphabetical() {
-  return (f1, f22) => {
-    const d1 = f1.frontmatter?.date ? new Date(f1.frontmatter.date) : getDate(f1);
-    const d2 = f22.frontmatter?.date ? new Date(f22.frontmatter.date) : getDate(f22);
-    if (d1 && d2) {
-      return d2.getTime() - d1.getTime();
-    } else if (d1 && !d2) {
-      return -1;
-    } else if (!d1 && d2) {
-      return 1;
-    }
-    const f1Title = (f1.frontmatter?.title ?? "").toLowerCase();
-    const f2Title = (f22.frontmatter?.title ?? "").toLowerCase();
-    return f1Title.localeCompare(f2Title);
-  };
-}
+// local-plugins/recent-notes/src/util/lang.ts
+import { classNames } from "@quartz-community/utils/lang";
 
-// node_modules/@quartz-community/utils/dist/path.js
-function endsWith(s2, suffix) {
-  return s2 === suffix || s2.endsWith("/" + suffix);
-}
-function isFolderPath(fplike) {
-  return fplike.endsWith("/") || endsWith(fplike, "index") || endsWith(fplike, "index.md") || endsWith(fplike, "index.html");
-}
-
-// node_modules/@quartz-community/utils/dist/lang.js
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-// src/i18n/locales/en-US.ts
+// local-plugins/recent-notes/src/i18n/locales/en-US.ts
 var en_US_default = {
   components: {
     recentNotes: {
@@ -56,7 +16,7 @@ var en_US_default = {
   }
 };
 
-// src/i18n/locales/ar-SA.ts
+// local-plugins/recent-notes/src/i18n/locales/ar-SA.ts
 var ar_SA_default = {
   components: {
     recentNotes: {
@@ -66,7 +26,7 @@ var ar_SA_default = {
   }
 };
 
-// src/i18n/locales/ca-ES.ts
+// local-plugins/recent-notes/src/i18n/locales/ca-ES.ts
 var ca_ES_default = {
   components: {
     recentNotes: {
@@ -76,7 +36,7 @@ var ca_ES_default = {
   }
 };
 
-// src/i18n/locales/cs-CZ.ts
+// local-plugins/recent-notes/src/i18n/locales/cs-CZ.ts
 var cs_CZ_default = {
   components: {
     recentNotes: {
@@ -86,7 +46,7 @@ var cs_CZ_default = {
   }
 };
 
-// src/i18n/locales/de-DE.ts
+// local-plugins/recent-notes/src/i18n/locales/de-DE.ts
 var de_DE_default = {
   components: {
     recentNotes: {
@@ -96,7 +56,7 @@ var de_DE_default = {
   }
 };
 
-// src/i18n/locales/en-GB.ts
+// local-plugins/recent-notes/src/i18n/locales/en-GB.ts
 var en_GB_default = {
   components: {
     recentNotes: {
@@ -106,7 +66,7 @@ var en_GB_default = {
   }
 };
 
-// src/i18n/locales/es-ES.ts
+// local-plugins/recent-notes/src/i18n/locales/es-ES.ts
 var es_ES_default = {
   components: {
     recentNotes: {
@@ -116,7 +76,7 @@ var es_ES_default = {
   }
 };
 
-// src/i18n/locales/fa-IR.ts
+// local-plugins/recent-notes/src/i18n/locales/fa-IR.ts
 var fa_IR_default = {
   components: {
     recentNotes: {
@@ -126,7 +86,7 @@ var fa_IR_default = {
   }
 };
 
-// src/i18n/locales/fi-FI.ts
+// local-plugins/recent-notes/src/i18n/locales/fi-FI.ts
 var fi_FI_default = {
   components: {
     recentNotes: {
@@ -136,7 +96,7 @@ var fi_FI_default = {
   }
 };
 
-// src/i18n/locales/fr-FR.ts
+// local-plugins/recent-notes/src/i18n/locales/fr-FR.ts
 var fr_FR_default = {
   components: {
     recentNotes: {
@@ -146,7 +106,7 @@ var fr_FR_default = {
   }
 };
 
-// src/i18n/locales/he-IL.ts
+// local-plugins/recent-notes/src/i18n/locales/he-IL.ts
 var he_IL_default = {
   components: {
     recentNotes: {
@@ -156,7 +116,7 @@ var he_IL_default = {
   }
 };
 
-// src/i18n/locales/hu-HU.ts
+// local-plugins/recent-notes/src/i18n/locales/hu-HU.ts
 var hu_HU_default = {
   components: {
     recentNotes: {
@@ -166,7 +126,7 @@ var hu_HU_default = {
   }
 };
 
-// src/i18n/locales/id-ID.ts
+// local-plugins/recent-notes/src/i18n/locales/id-ID.ts
 var id_ID_default = {
   components: {
     recentNotes: {
@@ -176,7 +136,7 @@ var id_ID_default = {
   }
 };
 
-// src/i18n/locales/it-IT.ts
+// local-plugins/recent-notes/src/i18n/locales/it-IT.ts
 var it_IT_default = {
   components: {
     recentNotes: {
@@ -186,7 +146,7 @@ var it_IT_default = {
   }
 };
 
-// src/i18n/locales/ja-JP.ts
+// local-plugins/recent-notes/src/i18n/locales/ja-JP.ts
 var ja_JP_default = {
   components: {
     recentNotes: {
@@ -196,7 +156,7 @@ var ja_JP_default = {
   }
 };
 
-// src/i18n/locales/kk-KZ.ts
+// local-plugins/recent-notes/src/i18n/locales/kk-KZ.ts
 var kk_KZ_default = {
   components: {
     recentNotes: {
@@ -206,7 +166,7 @@ var kk_KZ_default = {
   }
 };
 
-// src/i18n/locales/ko-KR.ts
+// local-plugins/recent-notes/src/i18n/locales/ko-KR.ts
 var ko_KR_default = {
   components: {
     recentNotes: {
@@ -216,7 +176,7 @@ var ko_KR_default = {
   }
 };
 
-// src/i18n/locales/lt-LT.ts
+// local-plugins/recent-notes/src/i18n/locales/lt-LT.ts
 var lt_LT_default = {
   components: {
     recentNotes: {
@@ -226,7 +186,7 @@ var lt_LT_default = {
   }
 };
 
-// src/i18n/locales/nb-NO.ts
+// local-plugins/recent-notes/src/i18n/locales/nb-NO.ts
 var nb_NO_default = {
   components: {
     recentNotes: {
@@ -236,7 +196,7 @@ var nb_NO_default = {
   }
 };
 
-// src/i18n/locales/nl-NL.ts
+// local-plugins/recent-notes/src/i18n/locales/nl-NL.ts
 var nl_NL_default = {
   components: {
     recentNotes: {
@@ -246,7 +206,7 @@ var nl_NL_default = {
   }
 };
 
-// src/i18n/locales/pl-PL.ts
+// local-plugins/recent-notes/src/i18n/locales/pl-PL.ts
 var pl_PL_default = {
   components: {
     recentNotes: {
@@ -256,7 +216,7 @@ var pl_PL_default = {
   }
 };
 
-// src/i18n/locales/pt-BR.ts
+// local-plugins/recent-notes/src/i18n/locales/pt-BR.ts
 var pt_BR_default = {
   components: {
     recentNotes: {
@@ -266,7 +226,7 @@ var pt_BR_default = {
   }
 };
 
-// src/i18n/locales/ro-RO.ts
+// local-plugins/recent-notes/src/i18n/locales/ro-RO.ts
 var ro_RO_default = {
   components: {
     recentNotes: {
@@ -276,7 +236,7 @@ var ro_RO_default = {
   }
 };
 
-// src/i18n/locales/ru-RU.ts
+// local-plugins/recent-notes/src/i18n/locales/ru-RU.ts
 var ru_RU_default = {
   components: {
     recentNotes: {
@@ -294,7 +254,7 @@ function getForm(number, form1, form2, form5) {
   return form5;
 }
 
-// src/i18n/locales/th-TH.ts
+// local-plugins/recent-notes/src/i18n/locales/th-TH.ts
 var th_TH_default = {
   components: {
     recentNotes: {
@@ -304,7 +264,7 @@ var th_TH_default = {
   }
 };
 
-// src/i18n/locales/tr-TR.ts
+// local-plugins/recent-notes/src/i18n/locales/tr-TR.ts
 var tr_TR_default = {
   components: {
     recentNotes: {
@@ -314,7 +274,7 @@ var tr_TR_default = {
   }
 };
 
-// src/i18n/locales/uk-UA.ts
+// local-plugins/recent-notes/src/i18n/locales/uk-UA.ts
 var uk_UA_default = {
   components: {
     recentNotes: {
@@ -324,7 +284,7 @@ var uk_UA_default = {
   }
 };
 
-// src/i18n/locales/vi-VN.ts
+// local-plugins/recent-notes/src/i18n/locales/vi-VN.ts
 var vi_VN_default = {
   components: {
     recentNotes: {
@@ -334,7 +294,7 @@ var vi_VN_default = {
   }
 };
 
-// src/i18n/locales/zh-CN.ts
+// local-plugins/recent-notes/src/i18n/locales/zh-CN.ts
 var zh_CN_default = {
   components: {
     recentNotes: {
@@ -344,7 +304,7 @@ var zh_CN_default = {
   }
 };
 
-// src/i18n/locales/zh-TW.ts
+// local-plugins/recent-notes/src/i18n/locales/zh-TW.ts
 var zh_TW_default = {
   components: {
     recentNotes: {
@@ -354,7 +314,7 @@ var zh_TW_default = {
   }
 };
 
-// src/i18n/index.ts
+// local-plugins/recent-notes/src/i18n/index.ts
 var locales = {
   "en-US": en_US_default,
   "ar-SA": ar_SA_default,
@@ -390,87 +350,30 @@ var locales = {
 function i18n(locale) {
   return locales[locale] || en_US_default;
 }
-var l;
-l = { __e: function(n2, l2, u3, t2) {
-  for (var i2, r2, o2; l2 = l2.__; ) if ((i2 = l2.__c) && !i2.__) try {
-    if ((r2 = i2.constructor) && null != r2.getDerivedStateFromError && (i2.setState(r2.getDerivedStateFromError(n2)), o2 = i2.__d), null != i2.componentDidCatch && (i2.componentDidCatch(n2, t2 || {}), o2 = i2.__d), o2) return i2.__E = i2;
-  } catch (l3) {
-    n2 = l3;
-  }
-  throw n2;
-} }, "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, Math.random().toString(8);
 
-// node_modules/preact/jsx-runtime/dist/jsxRuntime.mjs
-var f2 = 0;
-function u2(e2, t2, n2, o2, i2, u3) {
-  t2 || (t2 = {});
-  var a2, c2, p2 = t2;
-  if ("ref" in p2) for (c2 in p2 = {}, t2) "ref" == c2 ? a2 = t2[c2] : p2[c2] = t2[c2];
-  var l2 = { type: e2, props: p2, key: n2, ref: a2, __k: null, __: null, __b: 0, __e: null, __c: null, constructor: void 0, __v: --f2, __i: -1, __u: 0, __source: i2, __self: u3 };
-  if ("function" == typeof e2 && (a2 = e2.defaultProps)) for (c2 in a2) void 0 === p2[c2] && (p2[c2] = a2[c2]);
-  return l.vnode && l.vnode(l2), l2;
-}
-
-// node_modules/@quartz-community/utils/dist/index.js
+// local-plugins/recent-notes/src/util/path.ts
+import { simplifySlug as utilSimplifySlug, joinSegments } from "@quartz-community/utils";
 function simplifySlug(fp) {
-  const res = stripSlashes(trimSuffix(fp, "index"), true);
-  return res.length === 0 ? "/" : res;
-}
-function joinSegments(...args) {
-  if (args.length === 0) {
-    return "";
-  }
-  let joined = args.filter((segment) => segment !== "" && segment !== "/").map((segment) => stripSlashes(segment)).join("/");
-  const first = args[0];
-  const last = args[args.length - 1];
-  if (first?.startsWith("/")) {
-    joined = "/" + joined;
-  }
-  if (last?.endsWith("/")) {
-    joined = joined + "/";
-  }
-  return joined;
-}
-function endsWith2(s2, suffix) {
-  return s2 === suffix || s2.endsWith("/" + suffix);
-}
-function trimSuffix(s2, suffix) {
-  if (endsWith2(s2, suffix)) {
-    s2 = s2.slice(0, -suffix.length);
-  }
-  return s2;
-}
-function stripSlashes(s2, onlyStripPrefix) {
-  if (s2.startsWith("/")) {
-    s2 = s2.substring(1);
-  }
-  if (!onlyStripPrefix && s2.endsWith("/")) {
-    s2 = s2.slice(0, -1);
-  }
-  return s2;
-}
-
-// src/util/path.ts
-function simplifySlug2(fp) {
-  return simplifySlug(fp);
+  return utilSimplifySlug(fp);
 }
 function resolveRelative(current, target) {
-  const simplified = simplifySlug2(target);
+  const simplified = simplifySlug(target);
   const rootPath = pathToRoot(current);
   return joinSegments(rootPath, simplified);
 }
-function pathToRoot(slug2) {
-  let rootPath = slug2.split("/").filter((x2) => x2 !== "").slice(0, -1).map((_2) => "..").join("/");
+function pathToRoot(slug) {
+  let rootPath = slug.split("/").filter((x) => x !== "").slice(0, -1).map((_) => "..").join("/");
   if (rootPath.length === 0) {
     rootPath = ".";
   }
   return rootPath;
 }
 
-// src/components/styles/recentNotes.scss
-var recentNotes_default = ".recent-notes > h3 {\n  margin: 0.5rem 0 0 0;\n  font-size: 1rem;\n}\n.recent-notes > ul.recent-ul {\n  list-style: none;\n  margin-top: 1rem;\n  padding-left: 0;\n}\n.recent-notes > ul.recent-ul > li {\n  margin: 1rem 0;\n}\n.recent-notes > ul.recent-ul > li .section > .desc > h3 > a {\n  background-color: transparent;\n}\n.recent-notes > ul.recent-ul > li .section > .meta {\n  margin: 0 0 0.5rem 0;\n  opacity: 0.6;\n}";
+// local-plugins/recent-notes/src/components/styles/recentNotes.scss
+var recentNotes_default = ".recent-notes {\n  & > h3 {\n    margin: 0.5rem 0 0 0;\n    font-size: 1rem;\n  }\n\n  & > ul.recent-ul {\n    list-style: none;\n    margin-top: 1rem;\n    padding-left: 0;\n\n    & > li {\n      margin: 1rem 0;\n      .section > .desc > h3 > a {\n        background-color: transparent;\n      }\n\n      .section > .meta {\n        margin: 0 0 0.5rem 0;\n        opacity: 0.6;\n      }\n    }\n  }\n}\n";
 
-// src/components/RecentNotes.tsx
+// local-plugins/recent-notes/src/components/RecentNotes.tsx
+import { jsx, jsxs } from "preact/jsx-runtime";
 function resolveDefaultDateType(data, cfg) {
   return data.defaultDateType ?? cfg.defaultDateType;
 }
@@ -480,21 +383,21 @@ var withResolvedDateType = (data, cfg) => {
   return { ...data, defaultDateType: resolved };
 };
 function filterListedPages(pages) {
-  return pages.filter((p2) => p2.unlisted !== true);
+  return pages.filter((p) => p.unlisted !== true);
 }
-function isTagPageSlug(slug2) {
-  if (!slug2) return false;
-  return slug2 === "tags" || slug2 === "tags/index" || slug2.startsWith("tags/");
+function isTagPageSlug(slug) {
+  if (!slug) return false;
+  return slug === "tags" || slug === "tags/index" || slug.startsWith("tags/");
 }
-function isFolderPageSlug(slug2) {
-  if (!slug2) return false;
-  return isFolderPath(slug2);
+function isFolderPageSlug(slug) {
+  if (!slug) return false;
+  return isFolderPath(slug);
 }
 var byDateAndAlphabeticalWithConfig = (cfg) => {
   const sortFn = byDateAndAlphabetical();
-  return (f1, f22) => sortFn(
+  return (f1, f2) => sortFn(
     withResolvedDateType(f1, cfg),
-    withResolvedDateType(f22, cfg)
+    withResolvedDateType(f2, cfg)
   );
 };
 var defaultOptions = (cfg) => ({
@@ -514,34 +417,53 @@ var RecentNotes_default = ((userOpts) => {
     cfg
   }) => {
     const opts = { ...defaultOptions(cfg), ...userOpts };
-    const isActualArticle = (p2) => {
-      if (p2.frontmatter?.draft === true || p2.slug === "tum-yazilar" || p2.slug === "index") return false;
-      const text = p2.text || p2.description || "";
-      const words = text.trim().split(/\s+/).filter(Boolean).length;
-      return words >= 100;
+    const parseDate = (d) => {
+      if (!d) return 0;
+      if (typeof d === "string") {
+        const t = Date.parse(d);
+        if (!isNaN(t)) return t;
+      }
+      if (d instanceof Date) return d.getTime();
+      return 0;
     };
-    const pages = filterListedPages(allFiles).filter((p2) => !opts.hideTagPages || !isTagPageSlug(p2.slug)).filter((p2) => !opts.hideFolderPages || !isFolderPageSlug(p2.slug)).filter(isActualArticle).filter(opts.filter).sort(opts.sort);
+    const sortByDateDesc = (f1, f2) => {
+      const d1 = parseDate(f1.frontmatter?.date ?? f1.dates?.published ?? f1.dates?.created);
+      const d2 = parseDate(f2.frontmatter?.date ?? f2.dates?.published ?? f2.dates?.created);
+      if (d1 !== d2) return d2 - d1;
+      return (f1.frontmatter?.title ?? "").localeCompare(f2.frontmatter?.title ?? "");
+    };
+    const isActualArticle = (p) => {
+      if (p.frontmatter?.draft === true) return false;
+      const slug2 = (p.slug ?? "").toLowerCase();
+      if (slug2 === "index" || slug2 === "tum-yazilar" || slug2 === "404" || slug2.endsWith("/index")) return false;
+      if (slug2.startsWith("tags/") || slug2 === "tags") return false;
+      if (isFolderPath(slug2)) return false;
+      const title = (p.frontmatter?.title ?? "").toLowerCase();
+      if (title === "sayko.ch" || title === "home" || title === "t\xFCm yaz\u0131lar") return false;
+      return true;
+    };
+    const pages = filterListedPages(allFiles).filter((p) => !opts.hideTagPages || !isTagPageSlug(p.slug)).filter((p) => !opts.hideFolderPages || !isFolderPageSlug(p.slug)).filter(isActualArticle).filter(opts.filter).sort(sortByDateDesc);
     const remaining = Math.max(0, pages.length - opts.limit);
-    const slug2 = fileData.slug;
+    const slug = fileData.slug;
     const locale = cfg.locale ?? "en-US";
-    return /* @__PURE__ */ u2("div", { class: classNames(displayClass, "recent-notes"), children: [
-      /* @__PURE__ */ u2("h3", { children: opts.title ?? i18n(locale).components.recentNotes.title }),
-      /* @__PURE__ */ u2("ul", { class: "recent-ul", children: pages.slice(0, opts.limit).map((page) => {
+    return /* @__PURE__ */ jsxs("div", { class: classNames(displayClass, "recent-notes"), children: [
+      /* @__PURE__ */ jsx("h3", { children: opts.title ?? i18n(locale).components.recentNotes.title }),
+      /* @__PURE__ */ jsx("ul", { class: "recent-ul", children: pages.slice(0, opts.limit).map((page) => {
         const title = page.frontmatter?.title ?? "Untitled";
         const tags = page.frontmatter?.tags ?? [];
-        return /* @__PURE__ */ u2("li", { class: "recent-li", children: /* @__PURE__ */ u2("div", { class: "section", children: [
-          /* @__PURE__ */ u2("div", { class: "desc", children: /* @__PURE__ */ u2("h3", { children: /* @__PURE__ */ u2("a", { href: resolveRelative(slug2, page.slug), class: "internal", children: title }) }) }),
-          page.dates && getDate(withResolvedDateType(page, cfg)) && /* @__PURE__ */ u2("p", { class: "meta", children: /* @__PURE__ */ u2("time", { datetime: getDate(withResolvedDateType(page, cfg)).toISOString(), children: formatDate(getDate(withResolvedDateType(page, cfg)), locale) }) }),
-          opts.showTags && /* @__PURE__ */ u2("ul", { class: "tags", children: tags.map((tag) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2("a", { class: "internal tag-link", href: resolveRelative(slug2, `tags/${tag}`), children: tag }) })) })
+        return /* @__PURE__ */ jsx("li", { class: "recent-li", children: /* @__PURE__ */ jsxs("div", { class: "section", children: [
+          /* @__PURE__ */ jsx("div", { class: "desc", children: /* @__PURE__ */ jsx("h3", { children: /* @__PURE__ */ jsx("a", { href: resolveRelative(slug, page.slug), class: "internal", children: title }) }) }),
+          page.dates && getDate(withResolvedDateType(page, cfg)) && /* @__PURE__ */ jsx("p", { class: "meta", children: /* @__PURE__ */ jsx("time", { datetime: getDate(withResolvedDateType(page, cfg)).toISOString(), children: formatDate(getDate(withResolvedDateType(page, cfg)), locale) }) }),
+          opts.showTags && /* @__PURE__ */ jsx("ul", { class: "tags", children: tags.map((tag) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { class: "internal tag-link", href: resolveRelative(slug, `tags/${tag}`), children: tag }) })) })
         ] }) });
       }) }),
-      opts.linkToMore && remaining > 0 && /* @__PURE__ */ u2("p", { children: /* @__PURE__ */ u2("a", { href: resolveRelative(slug2, opts.linkToMore), children: i18n(locale).components.recentNotes.seeRemainingMore({ remaining }) }) })
+      opts.linkToMore && remaining > 0 && /* @__PURE__ */ jsx("p", { children: /* @__PURE__ */ jsx("a", { href: resolveRelative(slug, opts.linkToMore), children: i18n(locale).components.recentNotes.seeRemainingMore({ remaining }) }) })
     ] });
   };
   RecentNotes.css = recentNotes_default;
   return RecentNotes;
 });
-
-export { RecentNotes_default as RecentNotes };
-//# sourceMappingURL=index.js.map
+export {
+  RecentNotes_default as RecentNotes
+};
 //# sourceMappingURL=index.js.map

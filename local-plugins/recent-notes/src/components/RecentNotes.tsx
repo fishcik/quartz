@@ -98,11 +98,32 @@ export default ((userOpts?: Partial<RecentNotesOptions>) => {
     cfg,
   }: QuartzComponentProps & { displayClass?: string }) => {
     const opts = { ...defaultOptions(cfg), ...userOpts };
+    const parseDate = (d: unknown): number => {
+      if (!d) return 0;
+      if (typeof d === "string") {
+        const t = Date.parse(d);
+        if (!isNaN(t)) return t;
+      }
+      if (d instanceof Date) return d.getTime();
+      return 0;
+    };
+
+    const sortByDateDesc = (f1: RecentNotesPluginData, f2: RecentNotesPluginData) => {
+      const d1 = parseDate(f1.frontmatter?.date ?? (f1 as any).dates?.published ?? (f1 as any).dates?.created);
+      const d2 = parseDate(f2.frontmatter?.date ?? (f2 as any).dates?.published ?? (f2 as any).dates?.created);
+      if (d1 !== d2) return d2 - d1;
+      return (f1.frontmatter?.title ?? "").localeCompare(f2.frontmatter?.title ?? "");
+    };
+
     const isActualArticle = (p: RecentNotesPluginData) => {
       if (p.frontmatter?.draft === true) return false;
-      const text = ((p as any).text as string | undefined) ?? ((p as any).description as string | undefined) ?? "";
-      const words = text.trim().split(/\s+/).filter(Boolean).length;
-      return words >= 100;
+      const slug = (p.slug ?? "").toLowerCase();
+      if (slug === "index" || slug === "tum-yazilar" || slug === "404" || slug.endsWith("/index")) return false;
+      if (slug.startsWith("tags/") || slug === "tags") return false;
+      if (isFolderPath(slug)) return false;
+      const title = (p.frontmatter?.title ?? "").toLowerCase();
+      if (title === "sayko.ch" || title === "home" || title === "tüm yazılar") return false;
+      return true;
     };
 
     const pages = filterListedPages(allFiles as RecentNotesPluginData[])
@@ -110,7 +131,7 @@ export default ((userOpts?: Partial<RecentNotesOptions>) => {
       .filter((p) => !opts.hideFolderPages || !isFolderPageSlug(p.slug))
       .filter(isActualArticle)
       .filter(opts.filter)
-      .sort(opts.sort);
+      .sort(sortByDateDesc);
     const remaining = Math.max(0, pages.length - opts.limit);
     const slug = fileData.slug as string | undefined;
     const locale = cfg.locale ?? "en-US";

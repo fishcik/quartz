@@ -215,10 +215,8 @@
       "installedAt": "2026-05-24T15:36:17.428Z"
     },
     "recent-notes": {
-      "source": "github:quartz-community/recent-notes",
-      "resolved": "https://github.com/quartz-community/recent-notes.git",
-      "commit": "4505adba9c213967ddf94ea5fc05039245fd9fe9",
-      "installedAt": "2026-05-26T20:20:42.557Z"
+      "source": "./local-plugins/recent-notes",
+      "local": true
     },
     "remove-draft": {
       "source": "github:quartz-community/remove-draft",

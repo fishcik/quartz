@@ -174,14 +174,15 @@ Nörobiyologlar mikroelektrotları bu LGN'nin nöronlarına batırıp hücreleri
 
 Beklenen şudur: Retinadan gelen o ilkel sinyal, talamus gibi kocaman bir _et parçasının_ içine giriyorsa; burda muhakkak daha karmaşık, daha sofistike bir sentezleme olmalıdır.
 
---
-**Nasıl yani?**
+
+==**Nasıl yani?**==
 **Şöyle:** Retinadan 1 milyon tane ham pamuk ipliği topluyorsun ve bu iplikleri alıp devasa bir fabrikaya (Talamus/ LGN) sokuyorsun. **Mantıken ne beklersin?**
 Bu fabrikanın bacası tütüyorsa, içeri o kadar hammadde giriyorsa; içeride o ipliklerin en azından kumaşa dönüşmesini, desenlerin/örüntülerin oluşmasını, bir gömleğin yakasının falan belirmesini beklersin, değil mi?
 Ama fabrikanın arka kapısını açıp banttan ne çıktığına bakıyorsun: **Yine aynı ham pamuk ipliği!**
 Tek bir dikiş bile atılmamış.. Kumaş falan yok, desen yok, hiçbir şeye dokunulmamış.
-İnsan sormaz mı: "Ulan koca fabrikayı ipliğe bön bön bakmak için mi kurdunuz?!"
---
+***İnsan sormaz mı: "Ulan koca fabrikayı ipliğe bön bön bakmak için mi kurdunuz?!"***
+
+
 
 Madem retinadan gelen veriyi biçimsel olarak hiç değiştirmeyecektik; araya talamus gibi dev bir ara istasyonu ne diye koyduk?
 Kabloyu direkt arkadaki görme korteksine (V1) bağlamak varken bu uğraş neyin nesidir?
@@ -206,12 +207,11 @@ Beyin, daha veriler görme korteksine adımını bile atmadan önce, talamusu ko
 Dış dünya, realite, içeriye olduğu gibi girmez, giremez, **izin verilen kadarını "gerçeklik" sanırsın...**
 
 ---
+*Tam bu noktada durup sorarlar adama:*
+## 5. *Exkurs*: Algıyı Kim Başlattı?
 
-## 5. Exkurs: Algıyı Kim Başlattı? (3.8 Milyar Yıllık İlk Koku)
+==3.8 Milyar yıllık o ilk koku...== Ah o koku yok mu..
 
-==[Exkurs] Algıyı kim başlattı? (3.8 Milyar yıllık o ilk koku...)==
-
-Tam bu noktada durup sormak gerekiyor:
 "Eğer algı korteksin dikte ettiği, LGN'nin uyguladığı kapalı devre bir yayındır diyorsak; içeride henüz bir algı yokken bu sınır ve tercihler nasıl belirleniyor? Algının ta kendisi, nasıl algılanacağına karar veriyorsa; bu kendi kuyruğunu yiyen bir yılan döngüsü değil midir?!"
 
 Evet!! Tam da öyledir...: Özyinelemeli algı döngüsü (Predictive Coding[^prediktif-kodlama]). Gözünle dış dünyayı doğrudan görmezsin; önceki tecrübelerinin talamus tarafından filtrelenen fotonları "gerçeklik" sanırsın.
