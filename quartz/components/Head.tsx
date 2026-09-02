@@ -911,7 +911,7 @@ function scSortRecentNotes(){
           '<div class="section">' +
           '<div class="desc">' +
           '<span class="rp-eyebrow">' + art.course + '</span>' +
-          '<h3><a href="' + art.href + '" class="internal">' + art.title + '</a><span class="sc-status-dot sc-status-' + art.status + '" data-tooltip="' + art.tooltip + '"></span></h3>' +
+          '<h3><span class="sc-status-dot sc-status-' + art.status + '" data-tooltip="' + art.tooltip + '"></span><a href="' + art.href + '" class="internal">' + art.title + '</a></h3>' +
           '</div>' +
           '<p class="meta"><time datetime="' + art.datetime + '">' + art.dateStr + '</time></p>' +
           '</div>' +
@@ -1092,14 +1092,227 @@ function initFx2(hdr){
     '<span class="sc-split-base">'+txt+'</span>';
   hdr.__scFxClean=function(){nm.classList.remove('sc-split');nm.innerHTML=txt;nm.removeAttribute('data-sc-split');};
 }
-// ── Header efekt koordinatörü — her sayfa yükünde efekt sırası döner ──
+
+// ── Header Efekt 3: Nöral Sinaps & Elektrik Arkı (Neural Spark) ──
+function initFx3(hdr){
+  var nm=hdr.querySelector('.sh-name');if(!nm)return;
+  var canvas=document.createElement('canvas');
+  canvas.className='sc-spark-canvas';
+  canvas.style.cssText='position:absolute;top:-15px;left:-15px;width:calc(100% + 30px);height:calc(100% + 30px);pointer-events:none;z-index:10;';
+  nm.style.position='relative';
+  nm.appendChild(canvas);
+  var ctx=canvas.getContext('2d');
+  var rafId=null, sparks=[];
+
+  function resize(){
+    var r=nm.getBoundingClientRect();
+    canvas.width=r.width+30;
+    canvas.height=r.height+30;
+  }
+  resize();
+
+  function addSpark(x,y){
+    var count=Math.floor(Math.random()*3)+2;
+    for(var i=0;i<count;i++){
+      var pts=[{x:x, y:y}];
+      var segs=4;
+      var cx=x, cy=y;
+      var targetAngle=Math.random()*Math.PI*2;
+      for(var s=0;s<segs;s++){
+        cx+=Math.cos(targetAngle)*8+(Math.random()-0.5)*12;
+        cy+=Math.sin(targetAngle)*8+(Math.random()-0.5)*12;
+        pts.push({x:cx, y:cy});
+      }
+      sparks.push({
+        pts:pts,
+        alpha:1,
+        color: Math.random()>0.4 ? '#C8102E' : (Math.random()>0.5 ? '#38bdf8' : '#fbbf24')
+      });
+    }
+  }
+
+  function frame(){
+    if(!canvas||!canvas.isConnected){cancelAnimationFrame(rafId);return;}
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(var i=sparks.length-1;i>=0;i--){
+      var sp=sparks[i];
+      sp.alpha-=0.06;
+      if(sp.alpha<=0){sparks.splice(i,1);continue;}
+      ctx.beginPath();
+      ctx.strokeStyle=sp.color;
+      ctx.globalAlpha=sp.alpha;
+      ctx.lineWidth=1.5;
+      ctx.moveTo(sp.pts[0].x, sp.pts[0].y);
+      for(var p=1;p<sp.pts.length;p++){
+        ctx.lineTo(sp.pts[p].x, sp.pts[p].y);
+      }
+      ctx.stroke();
+    }
+    if(sparks.length>0){
+      rafId=requestAnimationFrame(frame);
+    } else {
+      rafId=null;
+    }
+  }
+
+  function onMove(e){
+    var r=nm.getBoundingClientRect();
+    var x=e.clientX-r.left+15;
+    var y=e.clientY-r.top+15;
+    if(Math.random()>0.3){
+      addSpark(x,y);
+      if(!rafId) rafId=requestAnimationFrame(frame);
+    }
+  }
+
+  hdr.addEventListener('mousemove',onMove);
+  hdr.__scFxClean=function(){
+    cancelAnimationFrame(rafId);
+    hdr.removeEventListener('mousemove',onMove);
+    if(canvas&&canvas.parentNode) canvas.remove();
+  };
+}
+
+// ── Header Efekt 4: Rorschach Sıvı Deformasyonu (Ink Melt) ──
+function initFx4(hdr){
+  var nm=hdr.querySelector('.sh-name');if(!nm)return;
+  var svgFilterId='sc-rorschach-filter';
+  var svg=document.getElementById('sc-rorschach-svg');
+  if(!svg){
+    svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.id='sc-rorschach-svg';
+    svg.style.cssText='position:absolute;width:0;height:0;pointer-events:none;';
+    svg.innerHTML='<filter id="'+svgFilterId+'"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.05" numOctaves="2" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" id="sc-rorschach-disp"/></filter>';
+    document.body.appendChild(svg);
+  }
+  var disp=document.getElementById('sc-rorschach-disp');
+  nm.style.filter='url(#'+svgFilterId+')';
+
+  var scale=0, targetScale=0, rafId=null;
+  function frame(){
+    scale+=(targetScale-scale)*0.1;
+    if(disp) disp.setAttribute('scale', scale.toFixed(2));
+    if(Math.abs(targetScale-scale)>0.05){
+      rafId=requestAnimationFrame(frame);
+    } else {
+      if(targetScale===0 && disp) disp.setAttribute('scale','0');
+      rafId=null;
+    }
+  }
+
+  function onMove(e){
+    var r=nm.getBoundingClientRect();
+    var dx=e.clientX-(r.left+r.width/2), dy=e.clientY-(r.top+r.height/2);
+    var d=Math.sqrt(dx*dx+dy*dy);
+    targetScale=Math.max(0, (180-d)/180)*22;
+    if(!rafId) rafId=requestAnimationFrame(frame);
+  }
+  function onLeave(){
+    targetScale=0;
+    if(!rafId) rafId=requestAnimationFrame(frame);
+  }
+
+  hdr.addEventListener('mousemove',onMove);
+  hdr.addEventListener('mouseleave',onLeave);
+  hdr.__scFxClean=function(){
+    cancelAnimationFrame(rafId);
+    hdr.removeEventListener('mousemove',onMove);
+    hdr.removeEventListener('mouseleave',onLeave);
+    nm.style.filter='';
+  };
+}
+
+// ── Header Efekt 5: Bilişsel Deşifre / Stroop Scramble (Kinetic Decrypt) ──
+function initFx5(hdr){
+  var nm=hdr.querySelector('.sh-name');if(!nm)return;
+  var originalTxt=nm.textContent||'SAYKO';
+  var glyphs=['Ψ','Ω','Ξ','Σ','λ','𓁹','𓉐','𓀗','Δ','θ','0','1','§','∞','¥','ø'];
+  var isAnimating=false;
+  var animInterval=null;
+
+  function decrypt(){
+    if(isAnimating)return;
+    isAnimating=true;
+    var len=originalTxt.length;
+    var resolved=0;
+    var startTime=Date.now();
+    var duration=420;
+
+    animInterval=setInterval(function(){
+      var elapsed=Date.now()-startTime;
+      resolved=Math.floor((elapsed/duration)*len);
+      var display='';
+      for(var i=0;i<len;i++){
+        if(i<resolved){
+          display+=originalTxt[i];
+        } else {
+          display+=glyphs[Math.floor(Math.random()*glyphs.length)];
+        }
+      }
+      nm.textContent=display;
+      nm.style.color=resolved<len ? '#C8102E' : '';
+      if(resolved>=len){
+        clearInterval(animInterval);
+        nm.textContent=originalTxt;
+        nm.style.color='';
+        isAnimating=false;
+      }
+    }, 35);
+  }
+
+  function onEnter(){
+    decrypt();
+  }
+
+  hdr.addEventListener('mouseenter',onEnter);
+  hdr.__scFxClean=function(){
+    clearInterval(animInterval);
+    hdr.removeEventListener('mouseenter',onEnter);
+    nm.textContent=originalTxt;
+    nm.style.color='';
+  };
+}
+
+// ── Header Efekt 6: CRT Katot Işın Tüpü & Fosfor İzi (Phosphor Ghosting) ──
+function initFx6(hdr){
+  var nm=hdr.querySelector('.sh-name');if(!nm)return;
+  nm.classList.add('sc-crt-active');
+
+  function onMove(e){
+    var r=nm.getBoundingClientRect();
+    var dx=e.clientX-(r.left+r.width/2);
+    var norm=Math.max(-1, Math.min(1, dx/(r.width/2)));
+    var greenShift=norm*4;
+    var redShift=-norm*4;
+    nm.style.textShadow=greenShift.toFixed(1)+'px 0 6px rgba(101,163,13,0.75), '+
+                        redShift.toFixed(1)+'px 0 8px rgba(200,16,46,0.85), '+
+                        '0 0 12px rgba(255,255,255,0.4)';
+  }
+
+  function onLeave(){
+    nm.style.textShadow='none';
+  }
+
+  hdr.addEventListener('mousemove',onMove);
+  hdr.addEventListener('mouseleave',onLeave);
+  hdr.__scFxClean=function(){
+    hdr.removeEventListener('mousemove',onMove);
+    hdr.removeEventListener('mouseleave',onLeave);
+    nm.classList.remove('sc-crt-active');
+    nm.style.textShadow='';
+  };
+}
+
+// ── Header efekt koordinatörü — 7 efekt sırayla döner ──
 function initHeaderFx(){
   if(window.innerWidth<800)return;
   var hdr=document.querySelector('.site-header');if(!hdr)return;
   if(typeof hdr.__scFxClean==='function')hdr.__scFxClean();
   var n=0;try{n=parseInt(localStorage.getItem('sayko_fx')||'0');}catch(e){}
-  try{localStorage.setItem('sayko_fx',String((n+1)%3));}catch(e){}
-  if(n%3===0)initFx0(hdr);else if(n%3===1)initFx1(hdr);else initFx2(hdr);
+  try{localStorage.setItem('sayko_fx',String((n+1)%7));}catch(e){}
+  var fxList=[initFx0, initFx1, initFx2, initFx3, initFx4, initFx5, initFx6];
+  var fn=fxList[n%7];
+  if(typeof fn==='function') fn(hdr);
 }
 // ── Görev 7.2: Ders kartlarına imleç-güdümlü 3D tilt (yalnız masaüstü) ──
 function scCardTilt(){
