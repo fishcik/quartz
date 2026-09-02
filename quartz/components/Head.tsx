@@ -105,7 +105,7 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manufacturing+Consent&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manufacturing+Consent&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Cedarville+Cursive&family=Dancing+Script:wght@500;600&family=Contrail+One&family=Abril+Fatface&family=Cinzel+Decorative:wght@700&family=Poiret+One&family=Limelight&family=Megrim&family=Special+Elite&family=Ultra&family=Lobster&family=Monoton&family=Rye&family=Bungee&family=Rubik+Mono+One&family=Fredericka+the+Great&family=Pirata+One&family=UnifrakturCook:wght@700&family=Della+Respira&family=Italiana&family=Forum&family=Marcellus&family=Yeseva+One&family=Stardos+Stencil:wght@700&family=Audiowide&family=Orbitron:wght@700&family=Sancreek&family=Ewert&family=Fontdiner+Swanky&family=Bigshot+One&family=Codystar:wght@400&family=Silkscreen&family=Noto+Sans+Egyptian+Hieroglyphs&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Syne:wght@400..800&family=Cinzel:wght@400..900&family=Rubik+Glitch&family=Almendra+Display&display=swap"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -156,7 +156,7 @@ var SC_SB=${JSON.stringify(SC_SB_SVG)};
 var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 260 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 C14 4 24 16 38 10 C52 4 62 16 78 10 C94 4 106 16 124 10 C142 4 154 16 172 10 C188 4 200 16 214 10 C226 5 234 8 238 10" stroke-width="2.2"/><ellipse cx="245" cy="10" rx="7" ry="4.5" stroke-width="1.8"/><circle cx="248" cy="8.5" r="0.9" fill="currentColor" stroke="none"/><path d="M252 10 L257 7.5 M252 10 L257 12.5" stroke-width="1.1"/></svg>';
 var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
-var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen'];
+var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen','Fraunces','Syne','Cinzel','Rubik Glitch','Almendra Display'];
 // ── Görev 8: Konu hex'lerine Mısır hiyeroglifi — başlık üstünde, soluk ikincil renk ──
 // Eşleştirme başlık metniyle (Türkçe-ASCII fold) yapılır; ardışık konular (I/II/III)
 // aynı glifi tekrarlar. Önce TAM eşleşme, yoksa sondaki sayı ayrılıp temel glif tekrar.
@@ -1111,22 +1111,36 @@ function initFx3(hdr){
   }
   resize();
 
-  function addSpark(x,y){
-    var count=Math.floor(Math.random()*3)+2;
+  function addCapillary(x,y){
+    var count=Math.floor(Math.random()*2)+2;
     for(var i=0;i<count;i++){
+      var mainAngle=Math.random()*Math.PI*2;
       var pts=[{x:x, y:y}];
-      var segs=4;
       var cx=x, cy=y;
-      var targetAngle=Math.random()*Math.PI*2;
+      var segs=Math.floor(Math.random()*3)+4;
       for(var s=0;s<segs;s++){
-        cx+=Math.cos(targetAngle)*8+(Math.random()-0.5)*12;
-        cy+=Math.sin(targetAngle)*8+(Math.random()-0.5)*12;
+        cx+=Math.cos(mainAngle)*7+(Math.random()-0.5)*9;
+        cy+=Math.sin(mainAngle)*7+(Math.random()-0.5)*9;
         pts.push({x:cx, y:cy});
+      }
+      var subBranch=[];
+      if(pts.length>3 && Math.random()>0.3){
+        var forkIdx=Math.floor(pts.length/2);
+        var bx=pts[forkIdx].x, by=pts[forkIdx].y;
+        subBranch.push({x:bx, y:by});
+        var bAngle=mainAngle+(Math.random()>0.5?0.8:-0.8);
+        for(var b=0;b<3;b++){
+          bx+=Math.cos(bAngle)*6+(Math.random()-0.5)*7;
+          by+=Math.sin(bAngle)*6+(Math.random()-0.5)*7;
+          subBranch.push({x:bx, y:by});
+        }
       }
       sparks.push({
         pts:pts,
+        sub:subBranch,
         alpha:1,
-        color: Math.random()>0.4 ? '#C8102E' : (Math.random()>0.5 ? '#38bdf8' : '#fbbf24')
+        color: Math.random()>0.35 ? '#C8102E' : '#8A0303',
+        width: 0.9 + Math.random()*0.7
       });
     }
   }
@@ -1136,15 +1150,23 @@ function initFx3(hdr){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     for(var i=sparks.length-1;i>=0;i--){
       var sp=sparks[i];
-      sp.alpha-=0.06;
+      sp.alpha-=0.055;
       if(sp.alpha<=0){sparks.splice(i,1);continue;}
       ctx.beginPath();
       ctx.strokeStyle=sp.color;
       ctx.globalAlpha=sp.alpha;
-      ctx.lineWidth=1.5;
+      ctx.lineWidth=sp.width;
+      ctx.lineCap='round';
+      ctx.lineJoin='round';
       ctx.moveTo(sp.pts[0].x, sp.pts[0].y);
       for(var p=1;p<sp.pts.length;p++){
         ctx.lineTo(sp.pts[p].x, sp.pts[p].y);
+      }
+      if(sp.sub&&sp.sub.length>1){
+        ctx.moveTo(sp.sub[0].x, sp.sub[0].y);
+        for(var sb=1;sb<sp.sub.length;sb++){
+          ctx.lineTo(sp.sub[sb].x, sp.sub[sb].y);
+        }
       }
       ctx.stroke();
     }
@@ -1159,8 +1181,8 @@ function initFx3(hdr){
     var r=nm.getBoundingClientRect();
     var x=e.clientX-r.left+15;
     var y=e.clientY-r.top+15;
-    if(Math.random()>0.3){
-      addSpark(x,y);
+    if(Math.random()>0.25){
+      addCapillary(x,y);
       if(!rafId) rafId=requestAnimationFrame(frame);
     }
   }
@@ -1222,54 +1244,58 @@ function initFx4(hdr){
   };
 }
 
-// ── Header Efekt 5: Bilişsel Deşifre / Stroop Scramble (Kinetic Decrypt) ──
+// ── Header Efekt 5: Bilişsel Deşifre / Stroop Scramble (Interactive Kinetic Decrypt) ──
 function initFx5(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
   var originalTxt=nm.textContent||'SAYKO';
-  var glyphs=['Ψ','Ω','Ξ','Σ','λ','𓁹','𓉐','𓀗','Δ','θ','0','1','§','∞','¥','ø'];
-  var isAnimating=false;
-  var animInterval=null;
+  var glyphs=['Ψ','Φ','Ω','Ξ','Σ','λ','𓁹','𓉐','𓀗','Δ','θ','0','1','§','∞','¥','ø','µ','∿','⨀'];
+  nm.innerHTML='';
+  var spans=[];
 
-  function decrypt(){
-    if(isAnimating)return;
-    isAnimating=true;
-    var len=originalTxt.length;
-    var resolved=0;
-    var startTime=Date.now();
-    var duration=420;
+  originalTxt.split('').forEach(function(ch){
+    var s=document.createElement('span');
+    s.textContent=ch;
+    s.className='sc-decrypt-char';
+    s.setAttribute('data-orig', ch);
+    s.style.cssText='display:inline-block;cursor:crosshair;transition:color 0.15s ease, transform 0.15s ease;';
+    nm.appendChild(s);
+    spans.push(s);
 
-    animInterval=setInterval(function(){
-      var elapsed=Date.now()-startTime;
-      resolved=Math.floor((elapsed/duration)*len);
-      var display='';
-      for(var i=0;i<len;i++){
-        if(i<resolved){
-          display+=originalTxt[i];
-        } else {
-          display+=glyphs[Math.floor(Math.random()*glyphs.length)];
-        }
+    s.addEventListener('mouseenter', function(){
+      scrambleChar(s, ch);
+    });
+  });
+
+  function scrambleChar(el, finalChar){
+    var count=0, max=6;
+    var intId=setInterval(function(){
+      count++;
+      if(count<max){
+        el.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];
+        el.style.color='#C8102E';
+        el.style.transform='scale(1.15)';
+      } else {
+        clearInterval(intId);
+        el.textContent=finalChar;
+        el.style.color='';
+        el.style.transform='none';
       }
-      nm.textContent=display;
-      nm.style.color=resolved<len ? '#C8102E' : '';
-      if(resolved>=len){
-        clearInterval(animInterval);
-        nm.textContent=originalTxt;
-        nm.style.color='';
-        isAnimating=false;
-      }
-    }, 35);
+    }, 40);
   }
 
-  function onEnter(){
-    decrypt();
+  function cascadeDecrypt(){
+    spans.forEach(function(s, i){
+      setTimeout(function(){
+        scrambleChar(s, s.getAttribute('data-orig'));
+      }, i*70);
+    });
   }
+  cascadeDecrypt();
 
-  hdr.addEventListener('mouseenter',onEnter);
+  hdr.addEventListener('mouseenter', cascadeDecrypt);
   hdr.__scFxClean=function(){
-    clearInterval(animInterval);
-    hdr.removeEventListener('mouseenter',onEnter);
-    nm.textContent=originalTxt;
-    nm.style.color='';
+    hdr.removeEventListener('mouseenter', cascadeDecrypt);
+    nm.innerHTML=originalTxt;
   };
 }
 
@@ -1284,9 +1310,9 @@ function initFx6(hdr){
     var norm=Math.max(-1, Math.min(1, dx/(r.width/2)));
     var greenShift=norm*4;
     var redShift=-norm*4;
-    nm.style.textShadow=greenShift.toFixed(1)+'px 0 6px rgba(101,163,13,0.75), '+
-                        redShift.toFixed(1)+'px 0 8px rgba(200,16,46,0.85), '+
-                        '0 0 12px rgba(255,255,255,0.4)';
+    nm.style.textShadow=greenShift.toFixed(1)+'px 0 5px rgba(101,163,13,0.75), '+
+                        redShift.toFixed(1)+'px 0 7px rgba(200,16,46,0.85), '+
+                        '0 0 10px rgba(255,255,255,0.35)';
   }
 
   function onLeave(){
@@ -1303,15 +1329,60 @@ function initFx6(hdr){
   };
 }
 
-// ── Header efekt koordinatörü — 7 efekt sırayla döner ──
+// ── Header Efekt 7: Variable Font Canlı Deformasyon (Interactive Kinetic Weight) ──
+function initFx7(hdr){
+  var nm=hdr.querySelector('.sh-name');if(!nm)return;
+  nm.style.fontFamily="'Fraunces', 'Syne', serif";
+  nm.style.transition='letter-spacing 0.15s ease';
+  var curW=400, targetW=400, rafId=null;
+
+  function frame(){
+    curW+=(targetW-curW)*0.12;
+    nm.style.fontVariationSettings="'wght' " + curW.toFixed(0) + ", 'opsz' 72";
+    nm.style.fontWeight=curW.toFixed(0);
+    if(Math.abs(targetW-curW)>1){
+      rafId=requestAnimationFrame(frame);
+    } else {
+      rafId=null;
+    }
+  }
+
+  function onMove(e){
+    var xRatio=Math.max(0, Math.min(1, e.clientX / window.innerWidth));
+    targetW = 100 + xRatio * 800; // 100 (ultra-thin) to 900 (ultra-black)
+    var lsp = (-0.02 + xRatio * 0.14).toFixed(3) + 'em';
+    nm.style.letterSpacing=lsp;
+    if(!rafId) rafId=requestAnimationFrame(frame);
+  }
+
+  function onLeave(){
+    targetW=400;
+    nm.style.letterSpacing='0.04em';
+    if(!rafId) rafId=requestAnimationFrame(frame);
+  }
+
+  window.addEventListener('mousemove', onMove);
+  hdr.addEventListener('mouseleave', onLeave);
+  hdr.__scFxClean=function(){
+    cancelAnimationFrame(rafId);
+    window.removeEventListener('mousemove', onMove);
+    hdr.removeEventListener('mouseleave', onLeave);
+    nm.style.fontVariationSettings='';
+    nm.style.fontWeight='';
+    nm.style.letterSpacing='';
+    nm.style.fontFamily='';
+  };
+}
+
+// ── Header efekt koordinatörü — 8 efekt sırayla döner ──
 function initHeaderFx(){
   if(window.innerWidth<800)return;
   var hdr=document.querySelector('.site-header');if(!hdr)return;
   if(typeof hdr.__scFxClean==='function')hdr.__scFxClean();
   var n=0;try{n=parseInt(localStorage.getItem('sayko_fx')||'0');}catch(e){}
-  try{localStorage.setItem('sayko_fx',String((n+1)%7));}catch(e){}
-  var fxList=[initFx0, initFx1, initFx2, initFx3, initFx4, initFx5, initFx6];
-  var fn=fxList[n%7];
+  try{localStorage.setItem('sayko_fx',String((n+1)%8));}catch(e){}
+  var fxList=[initFx0, initFx1, initFx2, initFx3, initFx4, initFx5, initFx6, initFx7];
+  var fn=fxList[n%8];
   if(typeof fn==='function') fn(hdr);
 }
 // ── Görev 7.2: Ders kartlarına imleç-güdümlü 3D tilt (yalnız masaüstü) ──
