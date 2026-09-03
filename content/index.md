@@ -4,4 +4,4 @@ list: false
 index: true
 ---
 
-# SAYKO Atlası
+# Zihin, davranış ve aradaki her şey..

@@ -47,6 +47,210 @@ const SC_GRID_DATA = SC_COURSES.map((c) => ({
 const SC_COURSE_MAP: Record<string, string> = {}
 for (const c of SC_COURSES) SC_COURSE_MAP[c.slug] = c.name
 
+function scBuildFold(s: string) {
+  return (s || "")
+    .toUpperCase()
+    .replace(/İ/g, "I")
+    .replace(/Ş/g, "S")
+    .replace(/Ç/g, "C")
+    .replace(/Ğ/g, "G")
+    .replace(/Ü/g, "U")
+    .replace(/Ö/g, "O")
+    .replace(/[^A-Z0-9]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+const SC_CURRICULUM_DATA: Record<string, string[]> = {
+  'bilimsel-calisma-yontemleri': [
+    'GIRIS AMPIRIK BIR BILIM OLARAK PSIKOLOJI',
+    'ARASTIRMA SURECI ARASTIRMA SORULARI VE HIPOTEZLER',
+    'ISEVURUK TANIM VE OLCME',
+    'ARASTIRMA DESENLERI I',
+    'ARASTIRMA DESENLERI II',
+    'VERI TOPLAMA YONTEMLERI I',
+    'VERI TOPLAMA YONTEMLERI II',
+    'ORNEKLEM SECIMI',
+    'ISTATISTIKSEL VE ICERIKSEL ANLAMLILIK',
+    'BULGULARININ YAYIMLANMASI VE BILIM ETIGI',
+    'ARASTIRMA ETIGI',
+    'LITERATUR TARAMASI VE BILIMSEL METIN FORMATLARI'
+  ],
+  'bilis-psikolojisi-1': [
+    'GIRIS ALGI DUYU FIZYOLOJISI GOZ VE RETINA',
+    'GORSEL KORTEKS NESNELER VE SAHNELER',
+    'GORSEL DIKKAT VE EYLEM',
+    'RENK ALGISI DERINLIK VE BUYUKLUK ALGISI',
+    'HAREKET ALGISI',
+    'ISITME CEVRE MUZIK VE KONUSMA ALGISI',
+    'DERI DUYULARI VE KIMYASAL DUYULAR'
+  ],
+  'biyolojik-psikoloji-2': [
+    'BIYOPSIKOLOJININ DIGER ARASTIRMA YONTEMLERI',
+    'NOROPSIKOLOJIK TESTLER I',
+    'NOROPSIKOLOJIK TESTLER II',
+    'LATERALIZASYON DIL VE AYRIK BEYIN',
+    'BEYIN HASARI VE NOROPLASTISITE',
+    'OGRENME BELLEK VE AMNEZI',
+    'UYKU RUYA VE SIRKADIYEN RITIMLER',
+    'MADDE KULLANIMI BAGIMLILIK VE ODUL SISTEMI',
+    'DUYGU STRES VE SAGLIGIN BIYOPSIKOLOJISI',
+    'PSIKIYATRIK BOZUKLUKLARIN BIYOPSIKOLOJISI',
+    'DENGE DUYUSU',
+    'ISITME'
+  ],
+  'gelisim-psikolojisi-1': [
+    'GIRIS GELISIM PSIKOLOJISININ KONUSU VE GOREVLERI',
+    'GIRIS',
+    'GELISIM PSIKOLOJISININ KURAMLARI',
+    'GELISIM PSIKOLOJISININ YONTEMLERI',
+    'BIYOLOJI VE DAVRANIS',
+    'DOGUM ONCESI GELISIM DOGUM VE YENIDOGAN',
+    'ALGI',
+    'MOTOR GELISIM',
+    'BILIS I',
+    'BILIS II',
+    'DIL GELISIMI',
+    'ZEKA',
+    'OKUL BASARISI'
+  ],
+  'gelisim-psikolojisi-2': [
+    'DUYGUSAL GELISIM',
+    'BAGLANMA',
+    'KISILIK VE BENLIK KAVRAMI',
+    'CINSIYET GELISIMI',
+    'SOSYAL GELISIM',
+    'AKRAN ILISKILERI',
+    'AILE',
+    'AHLAK GELISIMI',
+    'MOTIVASYON VE EYLEM DUZENLEMESI',
+    'GELISIMSEL SAPMALAR',
+    'MUDAHALE PROGRAMLARI'
+  ],
+  'istatistik1': [
+    'ISTATISTIGE NEDEN IHTIYAC DUYARIZ',
+    'BETIMSEL ISTATISTIK I',
+    'BETIMSEL ISTATISTIK II',
+    'BETIMSEL ISTATISTIK III',
+    'OLASILIK KURAMI I',
+    'OLASILIK KURAMI II',
+    'OLASILIK KURAMI III',
+    'CIKARIMSAL ISTATISTIK I',
+    'CIKARIMSAL ISTATISTIK II',
+    'GRUP KARSILASTIRMALARI I',
+    'GRUP KARSILASTIRMALARI II'
+  ],
+  'klinikpsikoloji1': [
+    'GIRIS NORMAL VE ANORMAL',
+    'KURAMLAR VE KATEGORIK YAKLASIMLAR',
+    'BOYUTSAL YAKLASIMLAR',
+    'BILIM FELSEFESI VE ARASTIRMA YAKLASIMLARI',
+    'KAYGI BOZUKLUKLARI',
+    'OBSESIF KOMPULSIF BOZUKLUK VE TIKLER',
+    'TRAVMA VE TRAVMA SONRASI STRES BOZUKLUGU',
+    'DUYGUDURUM BOZUKLUKLARI',
+    'BAGIMLILIKLAR',
+    'PSIKOZLAR',
+    'YEME BOZUKLUKLARI',
+    'CINSEL ISLEV BOZUKLUKLARI VE UYKU BOZUKLUKLARI'
+  ],
+  'klinikpsikoloji2': [
+    'PSIKOTERAPI NEDIR PSIKOTERAPI EKOLLERI I',
+    'PSIKOTERAPI EKOLLERI II',
+    'TERAPININ ZORUNLU VE EKOL OTESI BOYUTLARI',
+    'DAVRANIS SEKILLENDIRME VE KOSULLU PEKISTIRME',
+    'MARUZ BIRAKMA VE DUYGULAR',
+    'BILIS DUSUNCE VE DIL',
+    'DIKKAT EGITIMI VE FARKINDALIK',
+    'DEGERLER VE KABUL VE KARARLILIK TERAPISI ACT',
+    'BENLIK KAVRAMLAR VE OZ SEFKAT',
+    'MOTIVASYON VE MOTIVASYONEL GORUSME',
+    'ARASTIRMA YONTEMLERI VE KANITA DAYALI TERAPILER'
+  ],
+  'saglikpsikolojisivedavranissaltip': [
+    'SAGLIK PSIKOLOJISI NEDIR VE NEDEN VAR',
+    'SAGLIK MODELLERI BILMEK NEDEN YETMIYOR',
+    'SAGLIK DAVRANISLARI',
+    'FIZIKSEL AKTIVITE',
+    'BESLENME PSIKOLOJISI',
+    'BESLENME',
+    'GUNESTEN KORUNMA',
+    'KONDOM KULLANIMI',
+    'SIGARANIN PSIKOLOJISI',
+    'SIGARA',
+    'GERI DUSUS'
+  ],
+  'sosyalpsikoloji': [
+    'GIRIS VE ARASTIRMA YONTEMLERI',
+    'SOSYAL BILIS',
+    'SOSYAL ALGI VE ATIF',
+    'BENLIK',
+    'TUTUMLAR VE TUTUM DEGISIMI',
+    'SOSYAL ETKI',
+    'GRUP DINAMIGI VE GRUP PERFORMANSI',
+    'KISILERARASI CEKIM VE YAKIN ILISKILER',
+    'PROSOSYAL DAVRANIS',
+    'SALDIRGANLIK',
+    'ONYARGI VE GRUPLAR ARASI ILISKILER',
+    'SOSYAL PSIKOLOJI VE KULTUREL FARKLILIKLAR'
+  ]
+}
+
+interface ScTopic {
+  num: number
+  title: string
+  order: number
+  isWritten: boolean
+  href: string
+  slug: string
+}
+
+const SC_COURSE_TOPICS: Record<string, ScTopic[]> = {}
+for (const c of SC_COURSES) {
+  const contentDir = path.join(process.cwd(), "content", c.name.replace(/\u00A0/g, " "))
+  const pubDir = path.join(process.cwd(), "public", c.slug)
+  const curKey = scBuildFold(c.slug).replace(/[^A-Z0-9]/g, "").toLowerCase()
+  const curList = SC_CURRICULUM_DATA[c.slug] || SC_CURRICULUM_DATA[curKey] || []
+  if (!fs.existsSync(contentDir)) continue
+
+  const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md") && f !== "index.md")
+  const topics: ScTopic[] = files.map((f) => {
+    const title = f.replace(/\.md$/, "")
+    const fText = scBuildFold(title)
+    let order = 999
+    for (let i = 0; i < curList.length; i++) {
+      if (fText === curList[i] || fText.indexOf(curList[i]) === 0 || curList[i].indexOf(fText) === 0) {
+        order = i
+        break
+      }
+    }
+    const stat = fs.statSync(path.join(contentDir, f))
+    let htmlSlug = ""
+    if (fs.existsSync(pubDir)) {
+      const pFiles = fs.readdirSync(pubDir).filter((pf) => pf.endsWith(".html") && pf !== "index.html")
+      const match = pFiles.find((pf) => {
+        const pClean = scBuildFold(decodeURIComponent(pf).replace(/\.html$/, ""))
+        return pClean === fText || pClean.indexOf(fText) === 0 || fText.indexOf(pClean) === 0
+      })
+      if (match) htmlSlug = match.replace(/\.html$/, "")
+    }
+    const slug = htmlSlug || encodeURIComponent(title.toLowerCase().replace(/[ —–]+/g, "-").replace(/\s+/g, "-"))
+    return {
+      num: 0,
+      title,
+      order,
+      isWritten: stat.size > 1000,
+      href: `/${c.slug}/${slug}`,
+      slug,
+    }
+  })
+  topics.sort((a, b) => a.order - b.order)
+  topics.forEach((t, idx) => {
+    t.num = idx + 1
+  })
+  SC_COURSE_TOPICS[c.slug] = topics
+}
+
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -150,11 +354,12 @@ export default (() => {
         <script dangerouslySetInnerHTML={{__html: `(function(){
 var SC_GRID=${JSON.stringify(SC_GRID_DATA)};
 var SC_MAP=${JSON.stringify(SC_COURSE_MAP)};
+var SC_TOPICS=${JSON.stringify(SC_COURSE_TOPICS)};
 var SC_LOGO=${JSON.stringify(SC_LOGO_SVG)};
 var SC_SB=${JSON.stringify(SC_SB_SVG)};
 // Gerçekçi yılan ayraç: S-kıvrımlı gövde + oval baş + göz + çatal dil
 var SC_SERPENT_LINE='<svg class="sc-serpent-div" viewBox="0 0 260 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 C14 4 24 16 38 10 C52 4 62 16 78 10 C94 4 106 16 124 10 C142 4 154 16 172 10 C188 4 200 16 214 10 C226 5 234 8 238 10" stroke-width="2.2"/><ellipse cx="245" cy="10" rx="7" ry="4.5" stroke-width="1.8"/><circle cx="248" cy="8.5" r="0.9" fill="currentColor" stroke="none"/><path d="M252 10 L257 7.5 M252 10 L257 12.5" stroke-width="1.1"/></svg>';
-var SLO=["Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
+var SLO=["Zihin, davranış ve aradaki her şey..","Psikoloji: Kitapta durduğu gibi durmaz.","Teori biter, maruz kalma başlar.","İncelemiyoruz, buyuz işte.","Okumuyoruz, maruz kalıyoruz.","Pratikte burdayız, teoride ordayız.","Kitap biter, kafa başlar.","Sistemler çöker, adaptasyon hayatta kalır.","Sınır, sadece bir varsayımdır.","Sınanmamış bir erdem, sadece iyi bir niyettir.","İyileşmek istiyorsan, maruz kalacaksın.","Kurtarıcını beklemeyi bıraktığında, psikolojik doğumun başlar.","Kendine dürüst olmak kadar büyük bir savaş yoktur. — Sigmund Freud","Psikolojinin uzun bir geçmişi, ama kısa bir tarihi vardır. — Ebbinghaus","İnsan, kendisinden başka bir şey değildir, ne olmayı tasarlıyorsa o olur. — Sartre","Kişinin kendisi hakkında çok konuşması, kendini gizlemenin de bir yoludur. — Friedrich Nietzsche","Bir durumu artık değiştiremediğimizde, kendimizi değiştirmeye çağrılırız. — Viktor E. Frankl","Travma başınıza gelen kötü şey değil; o şey gerçekleşirken içinizde verdiğiniz o ıssız savaştır. — Gabor Maté","Geçmiş henüz bitmedi; o, şu an verdiğiniz her otomatik tepkinin içinde saklanıyor. — Peter Levine","Korku, tehlikenin değil; zihninizin o tehlikeye yazdığı senaryonun ürünüdür. — David Burns","Bilişsel kapasiteniz ne kadar yüksek olursa olsun, sinir sisteminiz tehdit hissettiği an ilkelliğe mahkumsunuzdur. — Stephen Porges"];
 // Rotating header fonts — picks one per page load/nav (art deco / fancy / vintage / boring karışık)
 var SC_FONTS=['Playfair Display','Abril Fatface','Cinzel Decorative','Poiret One','Limelight','Megrim','Special Elite','Ultra','Lobster','Monoton','Rye','Dancing Script','Bebas Neue','Georgia','Bungee','Rubik Mono One','Fredericka the Great','Pirata One','UnifrakturCook','Della Respira','Italiana','Forum','Marcellus','Yeseva One','Stardos Stencil','Audiowide','Orbitron','Sancreek','Ewert','Fontdiner Swanky','Bigshot One','Codystar','Silkscreen','Fraunces','Syne','Cinzel','Rubik Glitch','Almendra Display'];
 // ── Görev 8: Konu hex'lerine Mısır hiyeroglifi — başlık üstünde, soluk ikincil renk ──
@@ -811,6 +1016,10 @@ function scFitHex(){
   if(!links.length)return;
   scSortHoneycombs();
   links=document.querySelectorAll('.page-listing .section-li .desc h3 a, .section-ul .section-li .desc h3 a');
+  var slug=document.body.getAttribute('data-slug')||window.location.pathname||'';
+  var folder=slug.replace(/[/]index$/,'').replace(/^[/]/,'').split('/')[0];
+  var cTopics=(typeof SC_TOPICS!=='undefined'&&SC_TOPICS)?SC_TOPICS[folder]:null;
+
   links.forEach(function(a, idx){
     var rawText=(a.getAttribute('data-raw-title')||a.textContent||'').trim();
     if(!a.getAttribute('data-raw-title')){
@@ -818,6 +1027,19 @@ function scFitHex(){
     }
     var cleanTitle=a.getAttribute('data-raw-title')||rawText;
     var gl=scGlyphFor(cleanTitle);
+
+    // Boş / Yazılmış konu tespiti
+    var isWritten=false;
+    if(cTopics){
+      var fClean=scFold(cleanTitle);
+      for(var ti=0;ti<cTopics.length;ti++){
+        var tt=cTopics[ti];
+        var fTitle=scFold(tt.title);
+        if(fTitle===fClean||fClean.indexOf(fTitle)===0||fTitle.indexOf(fClean)===0){
+          isWritten=tt.isWritten;break;
+        }
+      }
+    }
 
     // Tekrar eden isimleri engellemek için a içeriğini tamamen sıfırla
     a.innerHTML='';
@@ -845,6 +1067,16 @@ function scFitHex(){
     a.appendChild(lbl);
 
     var li=a.closest('.section-li');if(!li)return;
+    if(cTopics){
+      if(!isWritten){
+        li.classList.add('sc-hx-empty');
+        li.classList.remove('sc-hx-written');
+      } else {
+        li.classList.add('sc-hx-written');
+        li.classList.remove('sc-hx-empty');
+      }
+    }
+
     var H=li.clientHeight||198,W=li.clientWidth||172;
     var maxH=H*0.42,maxW=W-22;
     var len=cleanTitle.length;
@@ -990,6 +1222,84 @@ function scProps(){
     var t=(k.textContent||'').trim().toLowerCase();
     if(KEYS[t]&&!k.getAttribute('data-sc-tr')){k.textContent=KEYS[t];k.setAttribute('data-sc-tr','1');}
   });
+}
+// ─── Görev: Makale Sonu İleri / Geri Navigasyonu (Gardiner D54 / D55) ───
+function scPostNav(){
+  var slug=document.body.getAttribute('data-slug')||'';
+  if(!slug || slug==='index' || slug.endsWith('/index') || slug==='404' || slug==='tum-yazilar') return;
+
+  var segs=slug.split('/');
+  if(segs.length<2) return;
+  var courseSlug=segs[0];
+  var topics=(typeof SC_TOPICS!=='undefined'&&SC_TOPICS)?SC_TOPICS[courseSlug]:null;
+  if(!topics || !topics.length) return;
+
+  var art=document.querySelector('.center article');
+  if(!art) return;
+
+  var oldNav=art.querySelector('.sc-post-nav');
+  if(oldNav) oldNav.remove();
+
+  var pageTitleEl=art.querySelector('.article-title, h1');
+  var pageTitle=(pageTitleEl ? pageTitleEl.textContent : '').trim();
+  var pageTitleFold=scFold(pageTitle);
+  var currSlug=segs.slice(1).join('/');
+
+  var currIdx=-1;
+  for(var i=0; i<topics.length; i++){
+    var t=topics[i];
+    var tFold=scFold(t.title);
+    if(tFold===pageTitleFold || (pageTitleFold && (tFold.indexOf(pageTitleFold)===0 || pageTitleFold.indexOf(tFold)===0))){
+      currIdx=i; break;
+    }
+    if(t.slug===currSlug || decodeURIComponent(t.slug)===decodeURIComponent(currSlug)){
+      currIdx=i; break;
+    }
+  }
+  if(currIdx===-1) return;
+
+  var prevTopic = currIdx > 0 ? topics[currIdx - 1] : null;
+  var nextTopic = currIdx < topics.length - 1 ? topics[currIdx + 1] : null;
+  if(!prevTopic && !nextTopic) return;
+
+  var nav=document.createElement('nav');
+  nav.className='sc-post-nav';
+  if(!prevTopic) nav.classList.add('has-only-next');
+  if(!nextTopic) nav.classList.add('has-only-prev');
+
+  var html='';
+  if(prevTopic){
+    var prevNum = prevTopic.num < 10 ? '0' + prevTopic.num : String(prevTopic.num);
+    html += '<a href="' + prevTopic.href + '" class="sc-post-nav-card sc-post-nav-prev" aria-label="Önceki Konu: ' + prevTopic.title + '">' +
+              '<div class="sc-post-nav-meta">' +
+                '<span class="sc-post-nav-glyph" aria-hidden="true">𓂼</span>' +
+                '<span class="sc-post-nav-badge">' + prevNum + ' • ÖNCEKİ KONU</span>' +
+              '</div>' +
+              '<div class="sc-post-nav-title">' + prevTopic.title + '</div>' +
+            '</a>';
+  }
+  if(nextTopic){
+    var nextNum = nextTopic.num < 10 ? '0' + nextTopic.num : String(nextTopic.num);
+    html += '<a href="' + nextTopic.href + '" class="sc-post-nav-card sc-post-nav-next" aria-label="Sonraki Konu: ' + nextTopic.title + '">' +
+              '<div class="sc-post-nav-meta">' +
+                '<span class="sc-post-nav-badge">' + nextNum + ' • SONRAKİ KONU</span>' +
+                '<span class="sc-post-nav-glyph" aria-hidden="true">𓂻</span>' +
+              '</div>' +
+              '<div class="sc-post-nav-title">' + nextTopic.title + '</div>' +
+            '</a>';
+  }
+  nav.innerHTML = html;
+
+  // Sıralama kuralı: 'ileri/geri tuşları' > K&K (note-properties) > Kaynaklar (footnotes)
+  var np = art.querySelector('.note-properties');
+  var fn = art.querySelector('section[data-footnotes], section.footnotes');
+  if(np && np.parentNode === art){
+    art.insertBefore(nav, np);
+  } else if(fn && fn.parentNode === art){
+    art.insertBefore(nav, fn);
+  } else {
+    art.appendChild(nav);
+  }
 }
 // Header SAYKO kelimesi: sabit kutuya sığana dek küçülür (logo/slogan asla kaymaz, ".ch" kırpılmaz)
 function scFitHeader(){
@@ -1616,6 +1926,7 @@ function perNav(){
   scREdge();
   // Künye (note-properties) panelini yazının SONUNA taşı + Türkçe etiketle
   scProps();
+  scPostNav();
   // Dinamik etiket bulutu (/tags sayfası)
   scTagCloud();
   var slogan=SLO[Math.floor(Math.random()*SLO.length)];
@@ -1712,8 +2023,8 @@ function perNav(){
   var bl2=document.getElementById('sc-bclayers'),chev2=document.getElementById('sc-clk-toggle');
   if(chev2)chev2.style.display=(bl2&&bl2.children.length>0)?'':'none';
   if(window.__scProg)window.__scProg();
-  requestAnimationFrame(function(){requestAnimationFrame(scFitHex);});
-  if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(scFitHex);}
+  requestAnimationFrame(function(){requestAnimationFrame(scFitHex);requestAnimationFrame(scPostNav);});
+  if(document.fonts&&document.fonts.ready&&document.fonts.ready.then){document.fonts.ready.then(function(){scFitHex();scPostNav();});}
   
 
 // ─── KAVRAMLAR & KELİMELER (SÖZLÜK) & AKORDİYON SİSTEMİ ───────────
