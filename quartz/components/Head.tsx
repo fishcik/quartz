@@ -530,27 +530,14 @@ function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){
     pb=document.createElement('div');pb.id='sc-progress';
+    pb.setAttribute('title','Okuma İlerlemesi • Başa Dön');
     pb.innerHTML='<div class="sc-spine-column"></div>'+
-      '<div id="sc-progress-head" class="sc-progress-head" title="Başa Dön • Okuma İlerlemesi">'+
-        '<svg class="sc-viper-head-svg" viewBox="0 0 28 38" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'+
-          '<path d="M9 3 C12 1 16 1 19 3 C23 6 27 12 26 18 C25 24 18 29 14 31 C10 29 3 24 2 18 C1 12 5 6 9 3 Z" fill="currentColor" fill-opacity="0.22" stroke-width="1.8"/>'+
-          '<ellipse cx="8" cy="14" rx="1.6" ry="2.4" fill="currentColor" stroke="none"/>'+
-          '<ellipse cx="20" cy="14" rx="1.6" ry="2.4" fill="currentColor" stroke="none"/>'+
-          '<path d="M14 4 L14 22" stroke-width="1.2" stroke-dasharray="2 2"/>'+
-          '<circle cx="11.5" cy="27" r="0.7" fill="currentColor" stroke="none"/>'+
-          '<circle cx="16.5" cy="27" r="0.7" fill="currentColor" stroke="none"/>'+
-          '<path class="sc-viper-tongue" d="M14 31 L14 36 M14 36 L11 39 M14 36 L17 39" stroke-width="1.2"/>'+
-        '</svg>'+
-        '<span id="sc-progress-badge" class="sc-progress-badge"></span>'+
-      '</div>';
+      '<span id="sc-progress-badge" class="sc-progress-badge"></span>';
     document.body.appendChild(pb);
-    var pHead=pb.querySelector('#sc-progress-head');
-    if(pHead){
-      pHead.addEventListener('click',function(e){
-        e.stopPropagation();
-        window.scrollTo({top:0,behavior:'smooth'});
-      });
-    }
+    pb.addEventListener('click',function(e){
+      e.stopPropagation();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
   }
   function prog(){
     var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;
@@ -685,11 +672,25 @@ function ensure(){
     chev.innerHTML='<svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
     chev.addEventListener('click',function(){var exp=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',exp?'false':'true');bclayers.classList.toggle('sc-collapsed',exp);});
     sbb.appendChild(bclayers);sbb.appendChild(chev);
-    // SBB Alt Taban Şeridi (Minimalist Toolbar Bar)
     var sbbFoot=document.createElement('div');sbbFoot.className='sc-sbb-foot';
     var bm=document.createElement('a');bm.className='sc-sbb-mailbtn';bm.href='mailto:cio@sayko.ch';bm.title='cio@sayko.ch';bm.setAttribute('aria-label','E-posta: cio@sayko.ch');
     bm.innerHTML='<span class="sc-sbb-mail-at">@</span>';
     sbbFoot.appendChild(bm);
+
+    // ── Beta 1: 3D Anatomik Korteks Ağı (Hilal: ☾) ──
+    var bCortex=document.createElement('button');bCortex.type='button';bCortex.className='sc-sbb-footbtn sc-btn-cortex3d';
+    bCortex.title='Beta: 3D Anatomik Korteks Ağı';bCortex.setAttribute('aria-label','3D Nöral Korteks Ağı');
+    bCortex.innerHTML='<span class="sc-cortex-hilal" aria-hidden="true">☾</span>';
+    bCortex.addEventListener('click',function(e){e.stopPropagation();scOpen3DCortex();});
+    sbbFoot.appendChild(bCortex);
+
+    // ── Beta 2: Typst İsviçre Monografi Dizgisi (Mühür: 🞢) ──
+    var bTypst=document.createElement('button');bTypst.type='button';bTypst.className='sc-sbb-footbtn sc-btn-typst';
+    bTypst.title='Beta: Typst İsviçre Monografi Dizgisi';bTypst.setAttribute('aria-label','Typst Monografi Dizgisi');
+    bTypst.innerHTML='<span class="sc-typst-mark" aria-hidden="true">🞢</span>';
+    bTypst.addEventListener('click',function(e){e.stopPropagation();scTriggerTypstMode();});
+    sbbFoot.appendChild(bTypst);
+
     sbb.appendChild(sbbFoot);
     document.body.appendChild(sbb);
   }
@@ -1932,8 +1933,269 @@ function scArticleGlyph(){
     headerWrap.appendChild(g);
   }
 
-  if(h.parentNode)h.parentNode.insertBefore(headerWrap,h);
+// ─── BETA 1: 3D Anatomik Korteks Ağı (Self-Contained 3D Connectome Engine) ───
+function scOpen3DCortex(){
+  var existing=document.getElementById('sc-cortex-modal');
+  if(existing){ existing.remove(); return; }
+
+  var modal=document.createElement('div');
+  modal.id='sc-cortex-modal';
+  modal.className='sc-cortex-modal';
+  modal.innerHTML='<div class="sc-cortex-hud">' +
+      '<div class="sc-cortex-hud-left">' +
+        '<span class="sc-cortex-hud-badge">☾ 3D ANATOMİK KORTEKS AĞI • BETA</span>' +
+        '<span class="sc-cortex-hud-hint">Sürükle: 360° Döndür • Tekerlek: Yakınlaş • Düğüme Tıkla: Konuya Git</span>' +
+      '</div>' +
+      '<button type="button" class="sc-cortex-close" aria-label="Kapat">✕</button>' +
+    '</div>' +
+    '<canvas id="sc-cortex-canvas"></canvas>' +
+    '<div id="sc-cortex-tooltip" class="sc-cortex-tooltip"></div>';
+
+  document.body.appendChild(modal);
+
+  var canvas=modal.querySelector('#sc-cortex-canvas');
+  var ctx=canvas.getContext('2d');
+  var tooltip=modal.querySelector('#sc-cortex-tooltip');
+  var closeBtn=modal.querySelector('.sc-cortex-close');
+
+  function resize(){
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var nodes=[];
+  var lobes=[
+    {name:'FRONTAL KORTEKS (Sol)', h:-1, z:0.8, y:-0.3, col:'#C8102E'},
+    {name:'FRONTAL KORTEKS (Sağ)', h:1, z:0.8, y:-0.3, col:'#C8102E'},
+    {name:'PARİYETAL KORTEKS (Sol)', h:-1, z:0.1, y:-0.8, col:'#d29b63'},
+    {name:'PARİYETAL KORTEKS (Sağ)', h:1, z:0.1, y:-0.8, col:'#d29b63'},
+    {name:'TEMPORAL KORTEKS (Sol)', h:-1.1, z:0.2, y:0.2, col:'#a84b3e'},
+    {name:'TEMPORAL KORTEKS (Sağ)', h:1.1, z:0.2, y:0.2, col:'#a84b3e'},
+    {name:'OKSİPİTAL KORTEKS (Sol)', h:-0.8, z:-0.9, y:-0.2, col:'#e64a19'},
+    {name:'OKSİPİTAL KORTEKS (Sağ)', h:0.8, z:-0.9, y:-0.2, col:'#e64a19'},
+    {name:'SEREBELLUM / BEYİNSAPI', h:0, z:-0.6, y:0.9, col:'#8A0303'}
+  ];
+
+  var cList=SC_COURSES||[];
+  cList.forEach(function(c, i){
+    var lb=lobes[i % lobes.length];
+    var cx=(lb.h * 170) + (Math.random()-0.5)*40;
+    var cy=(lb.y * 140) + (Math.random()-0.5)*35;
+    var cz=(lb.z * 160) + (Math.random()-0.5)*40;
+    var cNode={
+      x:cx, y:cy, z:cz,
+      r:6.5,
+      name:c.name,
+      href:'/'+c.slug+'/',
+      lobe:lb.name,
+      isCourse:true,
+      color:lb.col
+    };
+    nodes.push(cNode);
+
+    var topics=(typeof SC_TOPICS!=='undefined'&&SC_TOPICS)?SC_TOPICS[c.slug]:[];
+    if(topics&&topics.length){
+      var tSample=topics.slice(0, 6);
+      tSample.forEach(function(t, ti){
+        var ang=(ti / tSample.length) * Math.PI * 2;
+        var rad=35 + Math.random()*25;
+        nodes.push({
+          x:cx + Math.cos(ang)*rad,
+          y:cy + Math.sin(ang)*rad*0.7,
+          z:cz + (Math.random()-0.5)*30,
+          r:3.2,
+          name:t.title,
+          href:t.href,
+          lobe:lb.name,
+          parent:cNode,
+          isCourse:false,
+          color:lb.col
+        });
+      });
+    }
+  });
+
+  var rotX=0.2, rotY=0.4;
+  var targetRotX=0.2, targetRotY=0.4;
+  var zoom=1.1, targetZoom=1.1;
+  var isDragging=false, lastMouseX=0, lastMouseY=0;
+  var hoveredNode=null;
+  var rafId=null;
+
+  function onMouseDown(e){
+    if(e.target===canvas){
+      isDragging=true;
+      lastMouseX=e.clientX;
+      lastMouseY=e.clientY;
+    }
+  }
+  function onMouseMove(e){
+    if(isDragging){
+      var dx=e.clientX - lastMouseX;
+      var dy=e.clientY - lastMouseY;
+      targetRotY += dx * 0.006;
+      targetRotX += dy * 0.006;
+      lastMouseX=e.clientX;
+      lastMouseY=e.clientY;
+    }
+    var rect=canvas.getBoundingClientRect();
+    var mx=e.clientX - rect.left;
+    var my=e.clientY - rect.top;
+    var found=null;
+    for(var i=nodes.length-1; i>=0; i--){
+      var n=nodes[i];
+      if(n._sx!==undefined && Math.hypot(n._sx - mx, n._sy - my) < (n.r * (n._scale||1) + 6)){
+        found=n; break;
+      }
+    }
+    hoveredNode=found;
+    if(found){
+      canvas.style.cursor='pointer';
+      tooltip.style.display='block';
+      tooltip.style.left=(e.clientX + 14)+'px';
+      tooltip.style.top=(e.clientY + 14)+'px';
+      tooltip.innerHTML='<div class="sc-tt-lobe">'+found.lobe+'</div><div class="sc-tt-title">'+found.name+'</div>';
+    } else {
+      canvas.style.cursor=isDragging?'grabbing':'grab';
+      tooltip.style.display='none';
+    }
+  }
+  function onMouseUp(){ isDragging=false; }
+  function onWheel(e){
+    e.preventDefault();
+    targetZoom = Math.max(0.55, Math.min(2.4, targetZoom - e.deltaY * 0.0015));
+  }
+  function onClick(e){
+    if(hoveredNode && hoveredNode.href){
+      cleanup();
+      window.location.href = hoveredNode.href;
+    }
+  }
+
+  function render(){
+    rotX += (targetRotX - rotX) * 0.1;
+    rotY += (targetRotY - rotY) * 0.1;
+    zoom += (targetZoom - zoom) * 0.1;
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    var cx=canvas.width/2;
+    var cy=canvas.height/2;
+    var cosY=Math.cos(rotY), sinY=Math.sin(rotY);
+    var cosX=Math.cos(rotX), sinX=Math.sin(rotX);
+    var fov=460 * zoom;
+
+    nodes.forEach(function(n){
+      var x1 = n.x * cosY - n.z * sinY;
+      var z1 = n.z * cosY + n.x * sinY;
+      var y1 = n.y * cosX - z1 * sinX;
+      var z2 = z1 * cosX + n.y * sinX + 500;
+
+      var scale = fov / Math.max(10, z2);
+      n._sx = cx + x1 * scale;
+      n._sy = cy + y1 * scale;
+      n._sz = z2;
+      n._scale = scale;
+    });
+
+    ctx.lineWidth=0.9;
+    nodes.forEach(function(n){
+      if(n.parent){
+        var alpha = Math.max(0.12, Math.min(0.75, 320 / n._sz));
+        ctx.strokeStyle = n.color || '#C8102E';
+        ctx.globalAlpha = alpha * 0.45;
+        ctx.beginPath();
+        ctx.moveTo(n._sx, n._sy);
+        ctx.lineTo(n.parent._sx, n.parent._sy);
+        ctx.stroke();
+      }
+    });
+
+    ctx.globalAlpha=0.18;
+    ctx.strokeStyle='#C8102E';
+    for(var b=0; b<nodes.length-4; b+=5){
+      ctx.beginPath();
+      ctx.moveTo(nodes[b]._sx, nodes[b]._sy);
+      ctx.lineTo(nodes[b+3]._sx, nodes[b+3]._sy);
+      ctx.stroke();
+    }
+
+    nodes.sort(function(a,b){ return b._sz - a._sz; });
+
+    nodes.forEach(function(n){
+      var isHov = (hoveredNode === n);
+      var radius = n.r * n._scale * (isHov ? 1.5 : 1);
+      ctx.globalAlpha = Math.max(0.25, Math.min(1, 460 / n._sz));
+      ctx.fillStyle = isHov ? '#ffffff' : n.color;
+      ctx.beginPath();
+      ctx.arc(n._sx, n._sy, Math.max(1.8, radius), 0, Math.PI*2);
+      ctx.fill();
+
+      if(n.isCourse || isHov){
+        ctx.fillStyle = isHov ? '#ffffff' : '#e6e2da';
+        ctx.font = (isHov ? '600 11px' : '500 9px') + ' "Josefin Sans", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(n.name, n._sx, n._sy - radius - 5);
+      }
+    });
+
+    rafId=requestAnimationFrame(render);
+  }
+
+  function onKeyDown(e){
+    if(e.key==='Escape') cleanup();
+  }
+
+  function cleanup(){
+    cancelAnimationFrame(rafId);
+    window.removeEventListener('resize', resize);
+    window.removeEventListener('mousemove', onMouseMove);
+    window.removeEventListener('mouseup', onMouseUp);
+    window.removeEventListener('keydown', onKeyDown);
+    if(modal.parentNode) modal.remove();
+  }
+
+  modal.addEventListener('mousedown', onMouseDown);
+  window.addEventListener('mousemove', onMouseMove);
+  window.addEventListener('mouseup', onMouseUp);
+  canvas.addEventListener('wheel', onWheel, {passive:false});
+  canvas.addEventListener('click', onClick);
+  closeBtn.addEventListener('click', cleanup);
+  window.addEventListener('keydown', onKeyDown);
+
+  rafId=requestAnimationFrame(render);
 }
+
+// ─── BETA 2: Typst İsviçre Klinik Monografi Dizgisi (Swiss Academic Monograph) ───
+function scTriggerTypstMode(){
+  var art=document.querySelector('.center article, article');
+  if(!art){
+    alert('Typst İsviçre Monografi Dizgisi bir makale sayfasında açılabilir.');
+    return;
+  }
+  var isTypst=document.body.classList.toggle('sc-typst-active');
+  var banner=document.getElementById('sc-typst-banner');
+  if(isTypst){
+    if(!banner){
+      banner=document.createElement('div');
+      banner.id='sc-typst-banner';
+      banner.className='sc-typst-banner';
+      banner.innerHTML='<div class="sc-typst-bar">' +
+          '<div class="sc-typst-title">🞢 TYPST İSVİÇRE MONOGRAFİ DİZGİSİ (BETA)</div>' +
+          '<div class="sc-typst-actions">' +
+            '<button type="button" class="sc-typst-btn sc-typst-print" onclick="window.print()">PDF Olarak Kaydet / Yazdır</button>' +
+            '<button type="button" class="sc-typst-btn sc-typst-close" onclick="scTriggerTypstMode()">Normale Dön ✕</button>' +
+          '</div>' +
+        '</div>';
+      document.body.appendChild(banner);
+    }
+  } else {
+    if(banner) banner.remove();
+  }
+}
+
 function perNav(){
   // Masaüstünde sağ SBB/saat kutusu daima açık kalır; mobilde sayfa değişince kapanır
   if(window.innerWidth>=1200){
