@@ -213,37 +213,86 @@ for (const c of SC_COURSES) {
   const curList = SC_CURRICULUM_DATA[c.slug] || SC_CURRICULUM_DATA[curKey] || []
   if (!fs.existsSync(contentDir)) continue
 
-  const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md") && f !== "index.md")
-  const topics: ScTopic[] = files.map((f) => {
-    const title = f.replace(/\.md$/, "")
-    const fText = scBuildFold(title)
-    let order = 999
-    for (let i = 0; i < curList.length; i++) {
-      if (fText === curList[i] || fText.indexOf(curList[i]) === 0 || curList[i].indexOf(fText) === 0) {
-        order = i
-        break
+  const topics: ScTopic[] = []
+  const entries = fs.readdirSync(contentDir)
+
+  for (const e of entries) {
+    if (e.startsWith(".") || e === "index.md") continue
+    const p = path.join(contentDir, e)
+    const stat = fs.statSync(p)
+
+    if (stat.isDirectory()) {
+      const subFiles = fs.readdirSync(p).filter((sf) => sf.endsWith(".md") && sf !== "index.md")
+      const isWritten = subFiles.some((sf) => fs.statSync(path.join(p, sf)).size > 1000)
+      const subDirSlug = e.toLowerCase().replace(/[ —–]+/g, "-").replace(/\s+/g, "-")
+      const fText = scBuildFold(e)
+      let order = 999
+      for (let i = 0; i < curList.length; i++) {
+        if (fText === curList[i] || fText.indexOf(curList[i]) === 0 || curList[i].indexOf(fText) === 0) {
+          order = i
+          break
+        }
       }
-    }
-    const stat = fs.statSync(path.join(contentDir, f))
-    let htmlSlug = ""
-    if (fs.existsSync(pubDir)) {
-      const pFiles = fs.readdirSync(pubDir).filter((pf) => pf.endsWith(".html") && pf !== "index.html")
-      const match = pFiles.find((pf) => {
-        const pClean = scBuildFold(decodeURIComponent(pf).replace(/\.html$/, ""))
-        return pClean === fText || pClean.indexOf(fText) === 0 || fText.indexOf(pClean) === 0
+      topics.push({
+        num: 0,
+        title: e,
+        order,
+        isWritten,
+        href: `/${c.slug}/${subDirSlug}/`,
+        slug: subDirSlug,
       })
-      if (match) htmlSlug = match.replace(/\.html$/, "")
+
+      // Alt konuları tara ve alt-ders listesi olarak da kaydet
+      const subTopics: ScTopic[] = subFiles.map((sf) => {
+        const sfTitle = sf.replace(/\.md$/, "")
+        const sfText = scBuildFold(sfTitle)
+        let sfOrder = 999
+        for (let i = 0; i < curList.length; i++) {
+          if (sfText === curList[i] || sfText.indexOf(curList[i]) === 0 || curList[i].indexOf(sfText) === 0) {
+            sfOrder = i
+            break
+          }
+        }
+        const sfStat = fs.statSync(path.join(p, sf))
+        const sfSlug = sfTitle.toLowerCase().replace(/[ —–]+/g, "-").replace(/\s+/g, "-")
+        return {
+          num: 0,
+          title: sfTitle,
+          order: sfOrder,
+          isWritten: sfStat.size > 1000,
+          href: `/${c.slug}/${subDirSlug}/${sfSlug}`,
+          slug: `${subDirSlug}/${sfSlug}`,
+        }
+      })
+      subTopics.sort((a, b) => a.order - b.order)
+      subTopics.forEach((st, idx) => {
+        st.num = idx + 1
+      })
+      SC_COURSE_TOPICS[`${c.slug}/${subDirSlug}`] = subTopics
+      SC_COURSE_TOPICS[subDirSlug] = subTopics
+      topics.push(...subTopics)
+    } else if (e.endsWith(".md")) {
+      const title = e.replace(/\.md$/, "")
+      const fText = scBuildFold(title)
+      let order = 999
+      for (let i = 0; i < curList.length; i++) {
+        if (fText === curList[i] || fText.indexOf(curList[i]) === 0 || curList[i].indexOf(fText) === 0) {
+          order = i
+          break
+        }
+      }
+      const slug = title.toLowerCase().replace(/[ —–]+/g, "-").replace(/\s+/g, "-")
+      topics.push({
+        num: 0,
+        title,
+        order,
+        isWritten: stat.size > 1000,
+        href: `/${c.slug}/${slug}`,
+        slug,
+      })
     }
-    const slug = htmlSlug || encodeURIComponent(title.toLowerCase().replace(/[ —–]+/g, "-").replace(/\s+/g, "-"))
-    return {
-      num: 0,
-      title,
-      order,
-      isWritten: stat.size > 1000,
-      href: `/${c.slug}/${slug}`,
-      slug,
-    }
-  })
+  }
+
   topics.sort((a, b) => a.order - b.order)
   topics.forEach((t, idx) => {
     t.num = idx + 1
@@ -481,20 +530,36 @@ function ensure(){
   var pb=document.getElementById('sc-progress');
   if(!pb){
     pb=document.createElement('div');pb.id='sc-progress';
-    pb.innerHTML='<div id="sc-progress-head" class="sc-progress-head" title="Okuma İlerlemesi">'+
-      '<svg class="sc-progress-serpent" viewBox="0 0 260 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'+
-        '<path d="M4 10 C14 4 24 16 38 10 C52 4 62 16 78 10 C94 4 106 16 124 10 C142 4 154 16 172 10 C188 4 200 16 214 10 C226 5 234 8 238 10" stroke-width="2.2"/>'+
-        '<ellipse cx="245" cy="10" rx="7" ry="4.5" stroke-width="1.8"/>'+
-        '<circle cx="248" cy="8.5" r="0.9" fill="currentColor" stroke="none"/>'+
-        '<path d="M252 10 L257 7.5 M252 10 L257 12.5" stroke-width="1.1"/>'+
-      '</svg>'+
-      '<span id="sc-progress-badge" class="sc-progress-badge"></span>'+
-    '</div>';
+    pb.innerHTML='<div class="sc-spine-column"></div>'+
+      '<div id="sc-progress-head" class="sc-progress-head" title="Başa Dön • Okuma İlerlemesi">'+
+        '<svg class="sc-viper-head-svg" viewBox="0 0 28 38" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">'+
+          '<path d="M9 3 C12 1 16 1 19 3 C23 6 27 12 26 18 C25 24 18 29 14 31 C10 29 3 24 2 18 C1 12 5 6 9 3 Z" fill="currentColor" fill-opacity="0.22" stroke-width="1.8"/>'+
+          '<ellipse cx="8" cy="14" rx="1.6" ry="2.4" fill="currentColor" stroke="none"/>'+
+          '<ellipse cx="20" cy="14" rx="1.6" ry="2.4" fill="currentColor" stroke="none"/>'+
+          '<path d="M14 4 L14 22" stroke-width="1.2" stroke-dasharray="2 2"/>'+
+          '<circle cx="11.5" cy="27" r="0.7" fill="currentColor" stroke="none"/>'+
+          '<circle cx="16.5" cy="27" r="0.7" fill="currentColor" stroke="none"/>'+
+          '<path class="sc-viper-tongue" d="M14 31 L14 36 M14 36 L11 39 M14 36 L17 39" stroke-width="1.2"/>'+
+        '</svg>'+
+        '<span id="sc-progress-badge" class="sc-progress-badge"></span>'+
+      '</div>';
     document.body.appendChild(pb);
+    var pHead=pb.querySelector('#sc-progress-head');
+    if(pHead){
+      pHead.addEventListener('click',function(e){
+        e.stopPropagation();
+        window.scrollTo({top:0,behavior:'smooth'});
+      });
+    }
   }
   function prog(){
     var de=document.documentElement;var st=de.scrollTop||document.body.scrollTop;var h=de.scrollHeight-de.clientHeight;var p=h>0?st/h:0;
     pb.style.height=(p*100)+'%';
+    if(p>0.008){
+      pb.classList.add('sc-prog-active');
+    }else{
+      pb.classList.remove('sc-prog-active');
+    }
     var badge=document.getElementById('sc-progress-badge');
     if(badge){
       var pct=Math.round(p*100);
@@ -1017,8 +1082,13 @@ function scFitHex(){
   scSortHoneycombs();
   links=document.querySelectorAll('.page-listing .section-li .desc h3 a, .section-ul .section-li .desc h3 a');
   var slug=document.body.getAttribute('data-slug')||window.location.pathname||'';
-  var folder=slug.replace(/[/]index$/,'').replace(/^[/]/,'').split('/')[0];
-  var cTopics=(typeof SC_TOPICS!=='undefined'&&SC_TOPICS)?SC_TOPICS[folder]:null;
+  var cleanSlug=slug.replace(/[/]index$/,'').replace(/^[/]/,'').replace(/[/]+$/,'');
+  var firstFolder=cleanSlug.split('/')[0];
+  var cTopics=null;
+  if(typeof SC_TOPICS!=='undefined'&&SC_TOPICS){
+    cTopics = SC_TOPICS[cleanSlug] || SC_TOPICS[decodeURIComponent(cleanSlug)] ||
+              SC_TOPICS[firstFolder] || SC_TOPICS[decodeURIComponent(firstFolder)];
+  }
 
   links.forEach(function(a, idx){
     var rawText=(a.getAttribute('data-raw-title')||a.textContent||'').trim();
@@ -1223,7 +1293,7 @@ function scProps(){
     if(KEYS[t]&&!k.getAttribute('data-sc-tr')){k.textContent=KEYS[t];k.setAttribute('data-sc-tr','1');}
   });
 }
-// ─── Görev: Makale Sonu İleri / Geri Navigasyonu (Gardiner D54 / D55) ───
+// ─── Görev: Makale Sonu İleri / Geri Navigasyonu (Sleek Serpent Head Arrows) ───
 function scPostNav(){
   var slug=document.body.getAttribute('data-slug')||'';
   if(!slug || slug==='index' || slug.endsWith('/index') || slug==='404' || slug==='tum-yazilar') return;
@@ -1262,6 +1332,18 @@ function scPostNav(){
   var nextTopic = currIdx < topics.length - 1 ? topics[currIdx + 1] : null;
   if(!prevTopic && !nextTopic) return;
 
+  var SC_ARROW_LEFT = '<svg class="sc-serpent-nav-arrow sc-arrow-left" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M32 8 C24 8 19 5 14 4 C10 3 6 7 5 8 C6 9 10 13 14 12 C19 11 24 8 32 8 Z" fill="currentColor" fill-opacity="0.18" stroke-width="1.7"/>' +
+    '<circle cx="9.5" cy="7.3" r="1.1" fill="currentColor" stroke="none"/>' +
+    '<path d="M5 8 L2.5 8 M2.5 8 L0.8 6.8 M2.5 8 L0.8 9.2" stroke-width="1.2"/>' +
+  '</svg>';
+
+  var SC_ARROW_RIGHT = '<svg class="sc-serpent-nav-arrow sc-arrow-right" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M2 8 C10 8 15 5 20 4 C24 3 28 7 29 8 C28 9 24 13 20 12 C15 11 10 8 2 8 Z" fill="currentColor" fill-opacity="0.18" stroke-width="1.7"/>' +
+    '<circle cx="24.5" cy="7.3" r="1.1" fill="currentColor" stroke="none"/>' +
+    '<path d="M29 8 L31.5 8 M31.5 8 L33.2 6.8 M31.5 8 L33.2 9.2" stroke-width="1.2"/>' +
+  '</svg>';
+
   var nav=document.createElement('nav');
   nav.className='sc-post-nav';
   if(!prevTopic) nav.classList.add('has-only-next');
@@ -1271,21 +1353,25 @@ function scPostNav(){
   if(prevTopic){
     var prevNum = prevTopic.num < 10 ? '0' + prevTopic.num : String(prevTopic.num);
     html += '<a href="' + prevTopic.href + '" class="sc-post-nav-card sc-post-nav-prev" aria-label="Önceki Konu: ' + prevTopic.title + '">' +
-              '<div class="sc-post-nav-meta">' +
-                '<span class="sc-post-nav-glyph" aria-hidden="true">𓂼</span>' +
-                '<span class="sc-post-nav-badge">' + prevNum + ' • ÖNCEKİ KONU</span>' +
+              '<div class="sc-post-nav-arrow-wrap sc-nav-left">' +
+                SC_ARROW_LEFT +
               '</div>' +
-              '<div class="sc-post-nav-title">' + prevTopic.title + '</div>' +
+              '<div class="sc-post-nav-text">' +
+                '<span class="sc-post-nav-badge">' + prevNum + ' • ÖNCEKİ KONU</span>' +
+                '<span class="sc-post-nav-title">' + prevTopic.title + '</span>' +
+              '</div>' +
             '</a>';
   }
   if(nextTopic){
     var nextNum = nextTopic.num < 10 ? '0' + nextTopic.num : String(nextTopic.num);
     html += '<a href="' + nextTopic.href + '" class="sc-post-nav-card sc-post-nav-next" aria-label="Sonraki Konu: ' + nextTopic.title + '">' +
-              '<div class="sc-post-nav-meta">' +
+              '<div class="sc-post-nav-text">' +
                 '<span class="sc-post-nav-badge">' + nextNum + ' • SONRAKİ KONU</span>' +
-                '<span class="sc-post-nav-glyph" aria-hidden="true">𓂻</span>' +
+                '<span class="sc-post-nav-title">' + nextTopic.title + '</span>' +
               '</div>' +
-              '<div class="sc-post-nav-title">' + nextTopic.title + '</div>' +
+              '<div class="sc-post-nav-arrow-wrap sc-nav-right">' +
+                SC_ARROW_RIGHT +
+              '</div>' +
             '</a>';
   }
   nav.innerHTML = html;
@@ -1403,105 +1489,67 @@ function initFx2(hdr){
   hdr.__scFxClean=function(){nm.classList.remove('sc-split');nm.innerHTML=txt;nm.removeAttribute('data-sc-split');};
 }
 
-// ── Header Efekt 3: Nöral Sinaps & Elektrik Arkı (Neural Spark) ──
-function initFx3(hdr){
+// ── Header Efekt 3: Blurred Dissolve (Bilinçaltı Çözünmesi / Ethereal Fog) ──
+function initFxBlurredDissolve(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
-  var canvas=document.createElement('canvas');
-  canvas.className='sc-spark-canvas';
-  canvas.style.cssText='position:absolute;top:-15px;left:-15px;width:calc(100% + 30px);height:calc(100% + 30px);pointer-events:none;z-index:10;';
-  nm.style.position='relative';
-  nm.appendChild(canvas);
-  var ctx=canvas.getContext('2d');
-  var rafId=null, sparks=[];
-
-  function resize(){
-    var r=nm.getBoundingClientRect();
-    canvas.width=r.width+30;
-    canvas.height=r.height+30;
-  }
-  resize();
-
-  function addCapillary(x,y){
-    var count=Math.floor(Math.random()*2)+2;
-    for(var i=0;i<count;i++){
-      var mainAngle=Math.random()*Math.PI*2;
-      var pts=[{x:x, y:y}];
-      var cx=x, cy=y;
-      var segs=Math.floor(Math.random()*3)+4;
-      for(var s=0;s<segs;s++){
-        cx+=Math.cos(mainAngle)*7+(Math.random()-0.5)*9;
-        cy+=Math.sin(mainAngle)*7+(Math.random()-0.5)*9;
-        pts.push({x:cx, y:cy});
-      }
-      var subBranch=[];
-      if(pts.length>3 && Math.random()>0.3){
-        var forkIdx=Math.floor(pts.length/2);
-        var bx=pts[forkIdx].x, by=pts[forkIdx].y;
-        subBranch.push({x:bx, y:by});
-        var bAngle=mainAngle+(Math.random()>0.5?0.8:-0.8);
-        for(var b=0;b<3;b++){
-          bx+=Math.cos(bAngle)*6+(Math.random()-0.5)*7;
-          by+=Math.sin(bAngle)*6+(Math.random()-0.5)*7;
-          subBranch.push({x:bx, y:by});
-        }
-      }
-      sparks.push({
-        pts:pts,
-        sub:subBranch,
-        alpha:1,
-        color: Math.random()>0.35 ? '#C8102E' : '#8A0303',
-        width: 0.9 + Math.random()*0.7
-      });
-    }
-  }
-
-  function frame(){
-    if(!canvas||!canvas.isConnected){cancelAnimationFrame(rafId);return;}
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    for(var i=sparks.length-1;i>=0;i--){
-      var sp=sparks[i];
-      sp.alpha-=0.055;
-      if(sp.alpha<=0){sparks.splice(i,1);continue;}
-      ctx.beginPath();
-      ctx.strokeStyle=sp.color;
-      ctx.globalAlpha=sp.alpha;
-      ctx.lineWidth=sp.width;
-      ctx.lineCap='round';
-      ctx.lineJoin='round';
-      ctx.moveTo(sp.pts[0].x, sp.pts[0].y);
-      for(var p=1;p<sp.pts.length;p++){
-        ctx.lineTo(sp.pts[p].x, sp.pts[p].y);
-      }
-      if(sp.sub&&sp.sub.length>1){
-        ctx.moveTo(sp.sub[0].x, sp.sub[0].y);
-        for(var sb=1;sb<sp.sub.length;sb++){
-          ctx.lineTo(sp.sub[sb].x, sp.sub[sb].y);
-        }
-      }
-      ctx.stroke();
-    }
-    if(sparks.length>0){
-      rafId=requestAnimationFrame(frame);
-    } else {
-      rafId=null;
-    }
-  }
+  var originalTxt=nm.textContent||'';
+  var chars=originalTxt.split('');
+  nm.innerHTML='';
+  var spans=[];
+  chars.forEach(function(ch){
+    var sp=document.createElement('span');
+    sp.textContent=ch;
+    sp.className='sc-dissolve-char';
+    sp.style.cssText='display:inline-block;transition:filter 0.28s cubic-bezier(0.16,1,0.3,1), transform 0.28s cubic-bezier(0.16,1,0.3,1), opacity 0.28s ease, color 0.28s ease;';
+    nm.appendChild(sp);
+    spans.push(sp);
+  });
 
   function onMove(e){
-    var r=nm.getBoundingClientRect();
-    var x=e.clientX-r.left+15;
-    var y=e.clientY-r.top+15;
-    if(Math.random()>0.25){
-      addCapillary(x,y);
-      if(!rafId) rafId=requestAnimationFrame(frame);
-    }
+    spans.forEach(function(sp){
+      var r=sp.getBoundingClientRect();
+      var cx=r.left+r.width/2, cy=r.top+r.height/2;
+      var dist=Math.hypot(e.clientX-cx, e.clientY-cy);
+      var radius=110;
+      if(dist<radius){
+        var intensity=1 - (dist/radius);
+        var blurPx=(intensity * 9.5).toFixed(1);
+        var op=(1 - intensity * 0.72).toFixed(2);
+        var driftY=((e.clientY - cy) * 0.16).toFixed(1);
+        var driftX=((e.clientX - cx) * 0.16).toFixed(1);
+        var scale=(1 + intensity * 0.12).toFixed(2);
+        sp.style.filter='blur(' + blurPx + 'px)';
+        sp.style.opacity=op;
+        sp.style.transform='translate(' + driftX + 'px,' + driftY + 'px) scale(' + scale + ')';
+        sp.style.color='#C8102E';
+        sp.style.textShadow='0 0 ' + (intensity * 16).toFixed(0) + 'px rgba(200,16,46,0.9), 0 0 ' + (intensity * 30).toFixed(0) + 'px rgba(138,3,3,0.7)';
+      } else {
+        sp.style.filter='blur(0px)';
+        sp.style.opacity='1';
+        sp.style.transform='none';
+        sp.style.color='';
+        sp.style.textShadow='none';
+      }
+    });
   }
 
-  hdr.addEventListener('mousemove',onMove);
+  function onLeave(){
+    spans.forEach(function(sp){
+      sp.style.filter='blur(0px)';
+      sp.style.opacity='1';
+      sp.style.transform='none';
+      sp.style.color='';
+      sp.style.textShadow='none';
+    });
+  }
+
+  hdr.addEventListener('mousemove', onMove);
+  hdr.addEventListener('mouseleave', onLeave);
   hdr.__scFxClean=function(){
-    cancelAnimationFrame(rafId);
-    hdr.removeEventListener('mousemove',onMove);
-    if(canvas&&canvas.parentNode) canvas.remove();
+    hdr.removeEventListener('mousemove', onMove);
+    hdr.removeEventListener('mouseleave', onLeave);
+    nm.innerHTML=originalTxt;
+    nm.style.filter='';
   };
 }
 
@@ -1609,38 +1657,8 @@ function initFx5(hdr){
   };
 }
 
-// ── Header Efekt 6: CRT Katot Işın Tüpü & Fosfor İzi (Phosphor Ghosting) ──
+// ── Header Efekt 6: Variable Font Canlı Deformasyon (Interactive Kinetic Weight) ──
 function initFx6(hdr){
-  var nm=hdr.querySelector('.sh-name');if(!nm)return;
-  nm.classList.add('sc-crt-active');
-
-  function onMove(e){
-    var r=nm.getBoundingClientRect();
-    var dx=e.clientX-(r.left+r.width/2);
-    var norm=Math.max(-1, Math.min(1, dx/(r.width/2)));
-    var greenShift=norm*4;
-    var redShift=-norm*4;
-    nm.style.textShadow=greenShift.toFixed(1)+'px 0 5px rgba(101,163,13,0.75), '+
-                        redShift.toFixed(1)+'px 0 7px rgba(200,16,46,0.85), '+
-                        '0 0 10px rgba(255,255,255,0.35)';
-  }
-
-  function onLeave(){
-    nm.style.textShadow='none';
-  }
-
-  hdr.addEventListener('mousemove',onMove);
-  hdr.addEventListener('mouseleave',onLeave);
-  hdr.__scFxClean=function(){
-    hdr.removeEventListener('mousemove',onMove);
-    hdr.removeEventListener('mouseleave',onLeave);
-    nm.classList.remove('sc-crt-active');
-    nm.style.textShadow='';
-  };
-}
-
-// ── Header Efekt 7: Variable Font Canlı Deformasyon (Interactive Kinetic Weight) ──
-function initFx7(hdr){
   var nm=hdr.querySelector('.sh-name');if(!nm)return;
   nm.style.fontFamily="'Fraunces', 'Syne', serif";
   nm.style.transition='letter-spacing 0.15s ease';
@@ -1684,15 +1702,15 @@ function initFx7(hdr){
   };
 }
 
-// ── Header efekt koordinatörü — 8 efekt sırayla döner ──
+// ── Header efekt koordinatörü — 7 seçkin efekt sırayla döner ──
 function initHeaderFx(){
   if(window.innerWidth<800)return;
   var hdr=document.querySelector('.site-header');if(!hdr)return;
   if(typeof hdr.__scFxClean==='function')hdr.__scFxClean();
   var n=0;try{n=parseInt(localStorage.getItem('sayko_fx')||'0');}catch(e){}
-  try{localStorage.setItem('sayko_fx',String((n+1)%8));}catch(e){}
-  var fxList=[initFx0, initFx1, initFx2, initFx3, initFx4, initFx5, initFx6, initFx7];
-  var fn=fxList[n%8];
+  try{localStorage.setItem('sayko_fx',String((n+1)%7));}catch(e){}
+  var fxList=[initFx0, initFx1, initFx2, initFxBlurredDissolve, initFx4, initFx5, initFx6];
+  var fn=fxList[n%7];
   if(typeof fn==='function') fn(hdr);
 }
 // ── Görev 7.2: Ders kartlarına imleç-güdümlü 3D tilt (yalnız masaüstü) ──

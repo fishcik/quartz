@@ -1746,37 +1746,10 @@ html[saved-theme="dark"] .sh-name.sc-split .sc-split-mask { color: var(--bordo);
   z-index: 10;
 }
 
-// ── Header Efekt 6: CRT Fosfor Tarama (Font İçinde Kilitli) ──
-.sh-name.sc-crt-active {
-  position: relative;
+// ── Header Efekt 3: Blurred Dissolve (Bilinçaltı Çözünmesi) ──
+.sh-name .sc-dissolve-char {
   display: inline-block;
-  overflow: hidden;
-  line-height: 1;
-  transition: text-shadow 0.15s ease;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(to right, rgba(200, 16, 46, 0) 0%, rgba(200, 16, 46, 0.95) 50%, rgba(200, 16, 46, 0) 100%);
-    box-shadow: 0 0 8px #C8102E, 0 0 14px rgba(200, 16, 46, 0.8);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-  }
-
-  &:hover::after {
-    opacity: 1;
-    animation: sc-crt-scan 1s linear infinite;
-  }
-}
-
-@keyframes sc-crt-scan {
-  0% { top: 0%; }
-  100% { top: calc(100% - 3px); }
+  will-change: filter, transform, opacity;
 }
 
 // Görev 3: başlık ile slogan arasındaki ayraç → minimal, hafif serpent
@@ -1871,52 +1844,71 @@ body.sc-scrolled .site-header-slogan {
   max-height: 180px;
 }
 
-// ─── 2: Dikey okuma ilerleme çubuğu (sol kenar, cardinal kırmızı) ──
+// ─── 2: Anatomik Engerek Omurgası Okuma İlerlemesi (Sol Kenar, Cardinal Red) ──
 
 #sc-progress {
   position: fixed;
   left: 0;
-  bottom: 0;
-  top: auto;
-  width: 16px;
+  top: 0;
+  width: 24px;
   height: 0;
-  background: var(--progress, #C8102E) !important;
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32"><path d="M8 0 C4 8 12 8 8 16 C4 24 12 24 8 32" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/></svg>');
-  -webkit-mask-size: 16px 32px;
-  -webkit-mask-repeat: repeat-y;
-  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32"><path d="M8 0 C4 8 12 8 8 16 C4 24 12 24 8 32" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round"/></svg>');
-  mask-size: 16px 32px;
-  mask-repeat: repeat-y;
+  max-height: 100vh;
   z-index: 9999;
-  opacity: 1;
-  transition: height 60ms linear;
-  pointer-events: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: height 60ms linear, opacity 0.25s ease;
+
+  &.sc-prog-active {
+    opacity: 1;
+  }
+
+  .sc-spine-column {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 100%;
+    background: var(--accent, #C8102E) !important;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="44" viewBox="0 0 22 44"><path d="M11 0 C8 11, 14 22, 11 33 C9 38, 11 44, 11 44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/><ellipse cx="10" cy="8" rx="2.2" ry="1.6" fill="black"/><path d="M9 8 C5 6, 2 10, 1 15" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><path d="M11 8 C15 6, 18 10, 20 15" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><ellipse cx="12" cy="22" rx="2.2" ry="1.6" fill="black"/><path d="M11 22 C7 20, 3 24, 2 29" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><path d="M13 22 C17 20, 20 24, 21 29" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><ellipse cx="10.5" cy="36" rx="2.2" ry="1.6" fill="black"/><path d="M9.5 36 C5.5 34, 2.5 38, 1.5 43" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><path d="M11.5 36 C15.5 34, 18.5 38, 20.5 43" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/></svg>');
+    -webkit-mask-size: 22px 44px;
+    -webkit-mask-repeat: repeat-y;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="44" viewBox="0 0 22 44"><path d="M11 0 C8 11, 14 22, 11 33 C9 38, 11 44, 11 44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/><ellipse cx="10" cy="8" rx="2.2" ry="1.6" fill="black"/><path d="M9 8 C5 6, 2 10, 1 15" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><path d="M11 8 C15 6, 18 10, 20 15" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><ellipse cx="12" cy="22" rx="2.2" ry="1.6" fill="black"/><path d="M11 22 C7 20, 3 24, 2 29" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><path d="M13 22 C17 20, 20 24, 21 29" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><ellipse cx="10.5" cy="36" rx="2.2" ry="1.6" fill="black"/><path d="M9.5 36 C5.5 34, 2.5 38, 1.5 43" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/><path d="M11.5 36 C15.5 34, 18.5 38, 20.5 43" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/></svg>');
+    mask-size: 22px 44px;
+    mask-repeat: repeat-y;
+    filter: drop-shadow(0 0 4px rgba(200, 16, 46, 0.45));
+  }
 }
 
 .sc-progress-head {
   position: absolute;
-  top: -110px;
+  bottom: -28px;
   left: -2px;
-  width: 20px;
-  height: 120px;
+  width: 28px;
+  height: 40px;
   color: var(--accent, #C8102E);
   cursor: pointer;
-  filter: drop-shadow(0 0 4px rgba(200, 16, 46, 0.6));
+  pointer-events: auto;
+  filter: drop-shadow(0 3px 6px rgba(200, 16, 46, 0.65));
   transition: transform 180ms cubic-bezier(.2,.8,.3,1);
-  
-  svg.sc-progress-serpent {
+
+  .sc-viper-head-svg {
     display: block;
-    width: 120px;
-    height: 20px;
-    position: absolute;
-    left: -50px;
-    top: 50px;
-    transform: rotate(-90deg);
-    transform-origin: 60px 10px;
+    width: 28px;
+    height: 38px;
   }
-  
+
+  .sc-viper-tongue {
+    transform-origin: 14px 31px;
+    transition: transform 0.15s ease;
+  }
+
   &:hover {
-    transform: scale(1.15) translateY(-2px);
+    transform: scale(1.15);
+
+    .sc-viper-tongue {
+      animation: sc-tongue-flick 0.6s ease infinite;
+    }
+
     .sc-progress-badge {
       opacity: 1;
       transform: translateX(0);
@@ -1925,10 +1917,15 @@ body.sc-scrolled .site-header-slogan {
   }
 }
 
+@keyframes sc-tongue-flick {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.35) scaleX(1.1); }
+}
+
 .sc-progress-badge {
   position: absolute;
-  left: 28px;
-  top: 8px;
+  left: 32px;
+  top: 10px;
   background: rgba(24, 20, 18, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1950,7 +1947,11 @@ body.sc-scrolled .site-header-slogan {
 
 html[saved-theme="dark"] #sc-progress,
 [saved-theme="dark"] #sc-progress {
-  opacity: 0.95;
+  opacity: 0;
+
+  &.sc-prog-active {
+    opacity: 0.95;
+  }
 }
 
 html[saved-theme="dark"] .sc-progress-badge {
@@ -4916,11 +4917,11 @@ html[saved-theme="dark"] .sc-article-course-eyebrow,
   }
 }
 
-// ─── Görev: Makale Sonu İleri / Geri Navigasyonu (Gardiner D54 / D55) ───
+// ─── Görev: Makale Sonu İleri / Geri Navigasyonu (Sleek Serpent Head Arrows) ───
 .sc-post-nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
   margin: 3.5rem 0 1.8rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--br, #dfd7ca);
@@ -4931,7 +4932,7 @@ html[saved-theme="dark"] .sc-article-course-eyebrow,
     .sc-post-nav-next {
       justify-self: end;
       width: 100%;
-      max-width: 440px;
+      max-width: 460px;
     }
   }
 
@@ -4940,60 +4941,85 @@ html[saved-theme="dark"] .sc-article-course-eyebrow,
     .sc-post-nav-prev {
       justify-self: start;
       width: 100%;
-      max-width: 440px;
+      max-width: 460px;
     }
   }
 
   .sc-post-nav-card {
     display: flex;
-    flex-direction: column;
-    padding: 15px 18px;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
     border: 1px solid var(--border, #dfd7ca);
-    border-radius: 3px;
+    border-radius: 4px;
     background: var(--bg-2, #ece8e1);
     text-decoration: none !important;
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
       transform: translateY(-2px);
       border-color: var(--accent, #C8102E) !important;
-      box-shadow: 0 4px 14px rgba(200, 16, 46, 0.12);
+      box-shadow: 0 4px 18px rgba(200, 16, 46, 0.15);
 
       .sc-post-nav-title {
         color: var(--accent, #C8102E) !important;
       }
 
-      .sc-post-nav-glyph {
-        transform: scale(1.18);
+      .sc-serpent-nav-arrow {
         color: var(--accent, #C8102E);
+        filter: drop-shadow(0 0 5px rgba(200, 16, 46, 0.65));
       }
-    }
-  }
 
-  .sc-post-nav-next {
-    text-align: right;
-    align-items: flex-end;
+      .sc-nav-left .sc-serpent-nav-arrow {
+        transform: translateX(-4px);
+      }
 
-    .sc-post-nav-meta {
-      justify-content: flex-end;
+      .sc-nav-right .sc-serpent-nav-arrow {
+        transform: translateX(4px);
+      }
     }
   }
 
   .sc-post-nav-prev {
     text-align: left;
-    align-items: flex-start;
 
-    .sc-post-nav-meta {
-      justify-content: flex-start;
+    .sc-post-nav-text {
+      align-items: flex-start;
     }
   }
 
-  .sc-post-nav-meta {
+  .sc-post-nav-next {
+    text-align: right;
+
+    .sc-post-nav-text {
+      align-items: flex-end;
+    }
+  }
+
+  .sc-post-nav-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sc-post-nav-arrow-wrap {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
-    line-height: 1;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    color: var(--accent, #C8102E);
+  }
+
+  .sc-serpent-nav-arrow {
+    display: block;
+    width: 34px;
+    height: 16px;
+    color: var(--accent, #C8102E);
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease;
   }
 
   .sc-post-nav-badge {
@@ -5001,27 +5027,21 @@ html[saved-theme="dark"] .sc-article-course-eyebrow,
     font-size: 0.72rem !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.12em !important;
+    letter-spacing: 0.14em !important;
     color: var(--secondary, #c79a6d);
+    line-height: 1.1;
   }
 
   .sc-post-nav-title {
     font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 0.95rem !important;
+    font-size: 0.98rem !important;
     font-weight: 600 !important;
     font-style: italic;
     color: var(--fg, #2b2b2b);
     line-height: 1.35;
     transition: color 0.2s ease;
-  }
-
-  .sc-post-nav-glyph {
-    font-family: 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Historic', 'Aegyptus', sans-serif !important;
-    font-size: 1.25rem;
-    line-height: 1;
-    color: var(--accent, #C8102E);
-    display: inline-block;
-    transition: transform 0.2s ease;
+    white-space: normal;
+    word-break: break-word;
   }
 }
 
@@ -5048,10 +5068,9 @@ html[saved-theme="dark"] .sc-post-nav {
       justify-self: stretch !important;
       max-width: 100% !important;
       text-align: left !important;
-      align-items: flex-start !important;
 
-      .sc-post-nav-meta {
-        justify-content: flex-start !important;
+      .sc-post-nav-text {
+        align-items: flex-start !important;
       }
     }
   }
