@@ -1933,6 +1933,9 @@ function scArticleGlyph(){
     headerWrap.appendChild(g);
   }
 
+  if(h.parentNode)h.parentNode.insertBefore(headerWrap,h);
+}
+
 // ─── BETA 1: 3D Anatomik Korteks Ağı (Self-Contained 3D Connectome Engine) ───
 function scOpen3DCortex(){
   var existing=document.getElementById('sc-cortex-modal');
