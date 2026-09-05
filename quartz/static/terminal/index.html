@@ -533,6 +533,61 @@
       box-shadow: 0 15px 50px rgba(0,0,0,0.8);
     }
 
+    /* Repo Radar Table & Detail Drawer */
+    .repo-row {
+      border-bottom: 1px solid var(--cream-border);
+      transition: background 0.15s ease;
+      cursor: pointer;
+    }
+    .repo-row:hover {
+      background: var(--cream-subtle);
+    }
+    .repo-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border: 1px solid;
+      white-space: nowrap;
+    }
+    .repo-progress-wrap {
+      background: var(--bg-base);
+      height: 7px;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid var(--cream-border);
+      width: 70px;
+      margin-top: 4px;
+    }
+    .repo-progress-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+    .repo-drawer {
+      display: none;
+      background: var(--bg-surface);
+      border-bottom: 2px solid var(--cream-border);
+      animation: fadeIn 0.2s ease;
+    }
+    .repo-drawer.active {
+      display: table-row;
+    }
+    .repo-drawer-inner {
+      padding: 14px 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      .repo-drawer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 900px) {
       .deck-container { flex-direction: column; }
       aside.deck-sidebar { width: 100%; height: auto; position: static; border-right: none; border-bottom: 2px solid var(--cream-border); }
@@ -643,6 +698,10 @@
         <!-- 7. AYARLAR & VAULT -->
         <div class="nav-item" onclick="switchTab('tab-settings')">
           <span>⚙️</span> <span>AYARLAR & GÜVENLİK</span>
+        </div>
+        <!-- 8. REPO VE AR-GE RADARI -->
+        <div class="nav-item" onclick="switchTab('tab-repos')">
+          <span>🔬</span> <span>AR-GE // REPO RADARI</span>
         </div>
       </div>
 
@@ -1053,6 +1112,64 @@
         </div>
       </section>
 
+      <!-- =======================================================================
+           TAB 11: AR-GE // GITHUB REPO & TEKNOLOJİ RADARI
+           ======================================================================= -->
+      <section id="tab-repos" class="tab-pane">
+        <div class="retro-card">
+          <div class="retro-card-header" style="flex-wrap: wrap; gap: 10px;">
+            <div>
+              <span class="crt-bloom" style="font-weight: 700; font-size: 15px;">🔬 SAYKO AR-GE // REPO & TEKNOLOJİ RADARI</span>
+              <div style="font-size: 12px; color: var(--primary-dim); margin-top: 3px;">
+                Sitede kullanılan, entegrasyonu planlanan, mutfakta tutulan ve elenen açık kaynak kütüphanelerin analizi.
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="repo-stats-badges">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Controls: Search & Category Filters -->
+          <div style="display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div style="flex: 1; min-width: 250px;">
+              <input type="text" id="repo-search-input" class="retro-input" placeholder="🔍 Repo, teknoloji veya kavram ara... (örn: psych, deney, apa, wasm)" oninput="filterRepos()" style="width: 100%;">
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;" id="repo-filter-buttons">
+              <button class="hud-btn active" onclick="setRepoFilter('all', this)">TÜMÜ (<span id="count-all">0</span>)</button>
+              <button class="hud-btn" onclick="setRepoFilter('accepted', this)">🟢 KABUL / AKTİF (<span id="count-accepted">0</span>)</button>
+              <button class="hud-btn" onclick="setRepoFilter('beta', this)">🟣 BETA / RADARDA (<span id="count-beta">0</span>)</button>
+              <button class="hud-btn" onclick="setRepoFilter('partial', this)">🔵 KISMİ / BAZ (<span id="count-partial">0</span>)</button>
+              <button class="hud-btn" onclick="setRepoFilter('rejected', this)">🔴 RED / ARŞİV (<span id="count-rejected">0</span>)</button>
+            </div>
+          </div>
+
+          <!-- Quick Tip -->
+          <div style="font-size: 12px; color: var(--primary-dim); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+            <span>💡 Satırlara tıklayarak <b>Mutlaka Alınanlar</b>, <b>Elenenler</b> ve <b>SAYKO Entegrasyon Formülü</b> detaylarını açabilirsiniz.</span>
+            <span id="repo-match-count" style="color: var(--cream-accent); font-weight: bold;"></span>
+          </div>
+
+          <!-- Repo Matrix Table -->
+          <div style="overflow-x: auto; border: 1px solid var(--cream-border); border-radius: var(--radius-sm);">
+            <table style="width: 100%; border-collapse: collapse; font-size: 12.5px;">
+              <thead>
+                <tr style="background: var(--bg-surface); color: var(--cream-accent); border-bottom: 2px solid var(--cream-border);">
+                  <th style="padding: 10px 12px; text-align: left; width: 145px;">DURUM</th>
+                  <th style="padding: 10px 12px; text-align: left; width: 220px;">REPO / TEKNOLOJİ</th>
+                  <th style="padding: 10px 12px; text-align: left; width: 160px;">KATEGORİ</th>
+                  <th style="padding: 10px 12px; text-align: left; width: 120px;">UYUM %</th>
+                  <th style="padding: 10px 12px; text-align: left;">SAYKO.CH DEĞERLENDİRMESİ VE ENTEGRASYON FORMU</th>
+                  <th style="padding: 10px 12px; text-align: center; width: 85px;">KAYNAK</th>
+                </tr>
+              </thead>
+              <tbody id="repo-list-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
 
@@ -1157,6 +1274,248 @@
       { name: "Prof. Dr. Fred Mast", title: "Kognitionspsychologie", field: "Zihinsel İmgeleme, Uzaysal Yönelim, Sanal Gerçeklik (VR) & Biliş", hindex: "35+", notes: "Kognitif psikoloji ve görsel algı alanında öncü." },
       { name: "Prof. Dr. Valentin Groebner", title: "Ordinarius für Geschichte (KSF)", field: "Ortaçağ ve Rönesans Tarihi, Tarih Teorisi, Kimlik ve Belgelerin Tarihi", hindex: "Yazar & Tarihçi", notes: "Tarih minoründe Ortaçağ/Rönesans derslerinin usta hocası." },
       { name: "Prof. Dr. Joachim Blatter", title: "Ordinarius für Politikwissenschaft (KSF)", field: "Demokrasi Teorileri, Siyasal Katılım, Sınır Aşan Yönetişim", hindex: "Demokrasi Uzmanı", notes: "Siyaset bilimi minoründe temel kolloquium hocası." }
+    ];
+
+    // Repos & Technology Radar Database
+    const REPOS_DB = [
+      {
+        id: "jspsych",
+        name: "jsPsych",
+        repo: "jspsych/jsPsych",
+        url: "https://github.com/jspsych/jsPsych",
+        cat: "Bilişsel Deney Motoru (Web)",
+        fit: 100,
+        status: "accepted",
+        statusBadge: "KABUL // DEMİRBAŞ",
+        badgeColor: "var(--accent-green)",
+        badgeBg: "rgba(74, 222, 128, 0.12)",
+        tag: "deney psikofizik canvas stroop sdt web kognitif",
+        verdict: "SAYKO'nun tek ve değişmez standart interaktif deney altyapısı.",
+        pros: "Tarayıcıda sıfır gecikmeli reaksiyon süresi (RT) ölçümü, Stroop, Sinyal Algılama (SDT), Gözlemci Karar Kriteri ve Görsel Arama eklentileri. Saf JS/HTML5 uyumlu, hiçbir derleyici veya framework zorunluluğu yok.",
+        cons: "Sunucu tarafı veri tabanı ve karmaşık uzaktan veri toplama eklentileri (SAYKO tamamen istemci taraflı statik çalıştığı için bunlara gerek yok).",
+        integration: "Biliş 1 ve Biyolojik Psikoloji başta olmak üzere, deney içeren tüm makalelere canlı interaktif modül olarak gömülür."
+      },
+      {
+        id: "pagefind",
+        name: "Pagefind",
+        repo: "cloudcannon/pagefind",
+        url: "https://github.com/cloudcannon/pagefind",
+        cat: "Statik Arama Motoru (WASM)",
+        fit: 95,
+        status: "beta",
+        statusBadge: "RADARDA // PLANLANDI",
+        badgeColor: "var(--floppy-cyan)",
+        badgeBg: "rgba(56, 189, 248, 0.12)",
+        tag: "arama wasm statik search index fast tam metin",
+        verdict: "Statik siteler için ultra hızlı WebAssembly tam metin arama motoru.",
+        pros: "Milisaniyeler içinde çalışan derlenmiş WASM indeksi, çok dilli arama desteği, sıfır sunucu maliyeti, tüm makale gövdelerini tam metin indeksleyebilme kabiliyeti.",
+        cons: "Derleme adımında ayrı bir post-build indeksi oluşturma gereksinimi.",
+        integration: "Sağ üstteki arama büyütecinin arkasına veya tamamlayıcısı olarak entegre edilip tüm SAYKO atlasını tek dokunuşla taranabilir kılmak."
+      },
+      {
+        id: "typst",
+        name: "Typst (Swiss Monograph)",
+        repo: "typst/typst",
+        url: "https://github.com/typst/typst",
+        cat: "Akademik Dizgi & Tipografi",
+        fit: 90,
+        status: "beta",
+        statusBadge: "BETA // AKTİF [🞢]",
+        badgeColor: "var(--accent-purple)",
+        badgeBg: "rgba(192, 132, 252, 0.12)",
+        tag: "typst tipografi monografi isvicre swiss monograph dizgi",
+        verdict: "SBB çekmecesinde '🞢' butonuyla çalışan minimalist İsviçre monografi modu.",
+        pros: "Saf akademik makale tipografisi, marjinal dipnot sütunları, dikkat dağıtmayan monolitik okuma nizamı, kusursuz oranlar.",
+        cons: "Rust tabanlı CLI derleyicisini web'e gömmek yerine saf CSS/JS monografi layout simülasyonu tercih edildi.",
+        integration: "Masaüstünde ve mobilde tek tıkla siteyi Yale/ETH Zürih standartlarında bilimsel monografi baskısına çevirir."
+      },
+      {
+        id: "cortex3d",
+        name: "3D Connectome (Cortex)",
+        repo: "vasturiano/3d-force-graph",
+        url: "https://github.com/vasturiano/3d-force-graph",
+        cat: "3D Nöron Ağı & Konnektom",
+        fit: 85,
+        status: "beta",
+        statusBadge: "BETA // AKTİF [☾]",
+        badgeColor: "var(--accent-purple)",
+        badgeBg: "rgba(192, 132, 252, 0.12)",
+        tag: "3d webgl korteks nöron connectome force graph üc boyut",
+        verdict: "SBB çekmecesindeki '☾' butonuyla açılan 3D anatomik beyin ve kavram ağı.",
+        pros: "Loblar arası sinirsel bağlantılar, anatomik korteks kümeleme algoritması, interaktif döndürülebilir ve odaklanabilir 3D WebGL render.",
+        cons: "Ağır doku ve poligon paketleri (sitede neon tel çerçeve ve hafif parçacık aksonları kullanılarak hafif tutuldu).",
+        integration: "Psikoloji derslerindeki kavramlar ve nöroanatomik yapılar arasındaki hiyerarşik bağı 3 boyutta keşfetmeyi sağlar."
+      },
+      {
+        id: "papaja",
+        name: "papaja (APA 7 Engine)",
+        repo: "crsh/papaja",
+        url: "https://github.com/crsh/papaja",
+        cat: "APA 7 İstatistik & Tablo",
+        fit: 60,
+        status: "partial",
+        statusBadge: "TİPOGRAFİ BAZI",
+        badgeColor: "var(--floppy-blue)",
+        badgeBg: "rgba(59, 130, 246, 0.12)",
+        tag: "papaja apa apa7 istatistik tablo r markdown bilimsel",
+        verdict: "R/LaTeX motoru reddedildi; APA 7 veri ve istatistik tablo nizamı alındı.",
+        pros: "APA 7 formatında p-değeri, korelasyon matrisi, t-test ve ANOVA sunum tabloları, kusursuz akademik raporlama standartları.",
+        cons: "RStudio ve LaTeX derleme zinciri gerektirmesi (statik web sitesi için tamamen hantal).",
+        integration: "İstatistik 1 ve deneysel makalelerdeki veri tablolarını papaja / APA 7 estetiğinde CSS tablo sınıflarıyla biçimlendirmek."
+      },
+      {
+        id: "awesome-psych",
+        name: "awesome-psychology",
+        repo: "weeeBox/awesome-psychology",
+        url: "https://github.com/weeeBox/awesome-psychology",
+        cat: "Açık Veri & Nörobilim Fihristi",
+        fit: 75,
+        status: "accepted",
+        statusBadge: "KABUL // KÜRATÖRLÜK",
+        badgeColor: "var(--accent-green)",
+        badgeBg: "rgba(74, 222, 128, 0.12)",
+        tag: "awesome veri openneuro hcp nörobilim kaynak fihrist",
+        verdict: "Açık nörobilim veri setleri ve psikometri araçları için referans fihristi.",
+        pros: "OpenNeuro, Human Connectome Project (HCP), psikofizik veri setleri ve laboratuvar yazılımlarının derli toplu açık kaynak indeksi.",
+        cons: "Terk edilmiş eski repolar ve ticari yazılım linkleri.",
+        integration: "Her dersin kaynakça ve giriş bölümlerine 'Açık Veri & Dış Kaynak Havuzu' olarak filtrelenmiş şekilde aktarılır."
+      },
+      {
+        id: "bcs-iitk",
+        name: "BCS Workshop (IIT Kanpur)",
+        repo: "bcs-iitk/BCS_Workshop_Apr_20",
+        url: "https://github.com/bcs-iitk/BCS_Workshop_Apr_20",
+        cat: "Hesaplamalı Sinirbilim & Korteks",
+        fit: 40,
+        status: "partial",
+        statusBadge: "TEORİK BAZ // DERS",
+        badgeColor: "var(--floppy-blue)",
+        badgeBg: "rgba(59, 130, 246, 0.12)",
+        tag: "sinirbilim korteks receptive field spiking nöron iitk hesaplamali",
+        verdict: "Jupyter/MATLAB kodları reddedildi; görsel korteks ve alıcı alan teorisi alındı.",
+        pros: "V1/V2 yönelim seçiciliği, Gabor filtresi alıcı alanları (receptive fields), spiking sinir ağları ve hesaplamalı korteks modelleri.",
+        cons: "Yerel makineye bağımlı ham Jupyter (.ipynb) ve MATLAB (.m) scriptleri (webde doğrudan çalıştırılamaz).",
+        integration: "Görsel Korteks ve Algı derslerinde teorik açıklamaları destekleyen interaktif formüller ve canvas şemaları için teorik baz."
+      },
+      {
+        id: "psychopy",
+        name: "PsychoPy",
+        repo: "psychopy/psychopy",
+        url: "https://github.com/psychopy/psychopy",
+        cat: "Nörobilim Deney Suite'i (Python)",
+        fit: 30,
+        status: "partial",
+        statusBadge: "KOD RED // PARADİGMA",
+        badgeColor: "var(--accent-amber)",
+        badgeBg: "rgba(251, 191, 36, 0.12)",
+        tag: "psychopy python deney mental rotasyon ddm rsvp",
+        verdict: "Desktop Python mimarisi reddedildi; deney paradigmaları jsPsych'a uyarlandı.",
+        pros: "Laboratuvar standardı deney paradigmaları (Drift Diffusion Model, Mental Rotation, RSVP, Gabor yamaları).",
+        cons: "Masaüstü Python GUI'si, C donanım kütüphaneleri, tarayıcıda doğrudan çalışmama ve yüksek sistem ağırlığı.",
+        integration: "Kodları değil, içindeki sağlam deney paradigmalarını ve matematiksel parametrelerini alıp jsPsych ile yeniden inşa etmek."
+      },
+      {
+        id: "auto-empirical",
+        name: "Auto-Empirical Research",
+        repo: "brycewang-stanford/Auto-Empirical-Research-Skills",
+        url: "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
+        cat: "Ampirik Araştırma & LLM Ajanı",
+        fit: 15,
+        status: "partial",
+        statusBadge: "SİTE DIŞI // MUTFAK",
+        badgeColor: "var(--primary-dim)",
+        badgeBg: "rgba(184, 173, 152, 0.12)",
+        tag: "stanford llm ajan ampirik literatür benchmark arastirma",
+        verdict: "Web sitesine entegre edilmez; içerik mutfağında literatür tarama asistanı.",
+        pros: "Stanford'ın sosyal bilimler için geliştirdiği otomatik hipotez analizi, literatür tarama ve bulgu sentezleme ajan promptları.",
+        cons: "Sitenin son kullanıcısına sunulacak bir web çıktısı olmaması; tamamen bir araştırma laboratuvarı benchmark aracı olması.",
+        integration: "Yeni ders notu yazarken arkada otomatik literatür taramak ve akademik makalelerden APA özeti çıkarmak için mutfak aracı."
+      },
+      {
+        id: "expyriment",
+        name: "Expyriment",
+        repo: "expyriment/expyriment",
+        url: "https://github.com/expyriment/expyriment",
+        cat: "Psikofizik Deney Kütüphanesi",
+        fit: 10,
+        status: "rejected",
+        statusBadge: "REDDEDİLDİ // ELENDİ",
+        badgeColor: "var(--accent-red)",
+        badgeBg: "rgba(248, 113, 113, 0.12)",
+        tag: "expyriment python pygame lab masaustu donanim",
+        verdict: "Masaüstü Python/Pygame yapısı ve web uyumsuzluğu sebebiyle elendi.",
+        pros: "Düşük gecikmeli yerel lab donanım zamanlayıcıları.",
+        cons: "Web desteği yok, Pygame motoru hantal, jsPsych varken hiçbir katma değer sunmuyor.",
+        integration: "Kullanım dışı / Arşiv. Web platformu için jsPsych tek yetkili kılınmıştır."
+      },
+      {
+        id: "tonejs",
+        name: "Tone.js",
+        repo: "Tonejs/Tone.js",
+        url: "https://github.com/Tonejs/Tone.js",
+        cat: "Web Audio & Synthesizer",
+        fit: 5,
+        status: "rejected",
+        statusBadge: "REDDEDİLDİ // DİTCH",
+        badgeColor: "var(--accent-red)",
+        badgeBg: "rgba(248, 113, 113, 0.12)",
+        tag: "tone audio synth muzik ses ditch sesler",
+        verdict: "Sitede müzik/ambient odağı bulunmadığı için tamamen ditchlendi.",
+        pros: "Web Audio synthesizer ve müzik teorisi fonksiyonları.",
+        cons: "Gereksiz bundle ağırlığı, sitenin bilimsel ciddiyetiyle örtüşmemesi, kullanıcıyı yoran işitsel yük.",
+        integration: "Tamamen çıkarıldı. Terminaldeki basit bleep sesleri için 5 satırlık yerel AudioContext fazlasıyla yeterli."
+      },
+      {
+        id: "cytoscape",
+        name: "Cytoscape.js",
+        repo: "cytoscape/cytoscape.js",
+        url: "https://github.com/cytoscape/cytoscape.js",
+        cat: "2D Ağ & Biyoinformatik Grafiği",
+        fit: 65,
+        status: "beta",
+        statusBadge: "YEDEKTE // RADARDA",
+        badgeColor: "var(--floppy-cyan)",
+        badgeBg: "rgba(56, 189, 248, 0.12)",
+        tag: "cytoscape 2d ag graf node network sema",
+        verdict: "3D Korteks alternatifi olarak 2D sinir iletim şemaları için yedekte.",
+        pros: "Hızlı 2D canvas render, force-directed yerleşim algoritmaları, geniş grafik filtreleme özellikleri.",
+        cons: "Mevcut 3D korteks kadar etkileyici olmaması ve stil konfigürasyonunun karmaşıklığı.",
+        integration: "Mobil cihazlarda veya 3D istemeyen okuyucular için düzlemsel sinir ağları şeması olarak yedek planda tutuluyor."
+      },
+      {
+        id: "leaflet",
+        name: "Leaflet.js",
+        repo: "Leaflet/Leaflet",
+        url: "https://github.com/Leaflet/Leaflet",
+        cat: "CBS & İnteraktif Harita",
+        fit: 100,
+        status: "accepted",
+        statusBadge: "KABUL // AKTİF ENTEGRE",
+        badgeColor: "var(--accent-green)",
+        badgeBg: "rgba(74, 222, 128, 0.12)",
+        tag: "leaflet harita map gta luzern radar cbs",
+        verdict: "Terminal'deki GTA Luzern Radar sekmesinde canlı çalışıyor.",
+        pros: "Ultra hafif mobil uyumlu harita motoru, sıfır bağımlılık, özel retro koyu tema harita katmanları.",
+        cons: "Yok.",
+        integration: "Luzern'deki kütüphaneler, mahkemeler ve sessiz çalışma alanlarını koordinatlarıyla harita üzerinde gösterir."
+      },
+      {
+        id: "katex",
+        name: "KaTeX",
+        repo: "KaTeX/KaTeX",
+        url: "https://github.com/KaTeX/KaTeX",
+        cat: "Hızlı TeX Matematik Motoru",
+        fit: 100,
+        status: "accepted",
+        statusBadge: "KABUL // AKTİF ENTEGRE",
+        badgeColor: "var(--accent-green)",
+        badgeBg: "rgba(74, 222, 128, 0.12)",
+        tag: "katex matematik formul tex latex denklem",
+        verdict: "Tüm psikofizik ve istatistik formüllerini render eden standart motor.",
+        pros: "MathJax'ten 10 kat daha hızlı, sıfır sayfa kayması (layout shift), mükemmel tipografik hassasiyet.",
+        cons: "Yok.",
+        integration: "Ders notlarında d' (d-prime), karar kriteri (c), beta ve t-test formüllerini anında tarayıcıda çizer."
+      }
     ];
 
     // User State Storage
@@ -1906,6 +2265,159 @@ END:VCALENDAR`;
     }
 
     /* --------------------------------------------------------------------------
+       N. REPO RADAR & AR-GE TECHNOLOGY MATRIX
+       -------------------------------------------------------------------------- */
+    let currentRepoFilter = "all";
+    let activeRepoDrawer = null;
+
+    function renderRepos() {
+      const searchEl = document.getElementById("repo-search-input");
+      const query = (searchEl ? searchEl.value : "").toLowerCase().trim();
+      
+      const counts = { all: REPOS_DB.length, accepted: 0, beta: 0, partial: 0, rejected: 0 };
+      REPOS_DB.forEach(r => {
+        if (counts[r.status] !== undefined) counts[r.status]++;
+      });
+
+      if (document.getElementById("count-all")) document.getElementById("count-all").innerText = counts.all;
+      if (document.getElementById("count-accepted")) document.getElementById("count-accepted").innerText = counts.accepted;
+      if (document.getElementById("count-beta")) document.getElementById("count-beta").innerText = counts.beta;
+      if (document.getElementById("count-partial")) document.getElementById("count-partial").innerText = counts.partial;
+      if (document.getElementById("count-rejected")) document.getElementById("count-rejected").innerText = counts.rejected;
+
+      const statsContainer = document.getElementById("repo-stats-badges");
+      if (statsContainer) {
+        statsContainer.innerHTML = `
+          <div class="stat-badge" style="border-color: var(--accent-green);">🟢 ${counts.accepted} AKTİF / KABUL</div>
+          <div class="stat-badge" style="border-color: var(--accent-purple);">🟣 ${counts.beta} BETA / RADAR</div>
+          <div class="stat-badge" style="border-color: var(--floppy-blue);">🔵 ${counts.partial} KISMİ / BAZ</div>
+          <div class="stat-badge" style="border-color: var(--accent-red);">🔴 ${counts.rejected} ELENEN / ARŞİV</div>
+        `;
+      }
+
+      const filtered = REPOS_DB.filter(r => {
+        const matchesFilter = (currentRepoFilter === "all" || r.status === currentRepoFilter);
+        const matchesQuery = !query || 
+          r.name.toLowerCase().includes(query) || 
+          r.repo.toLowerCase().includes(query) || 
+          r.cat.toLowerCase().includes(query) || 
+          r.tag.toLowerCase().includes(query) || 
+          r.verdict.toLowerCase().includes(query) ||
+          r.integration.toLowerCase().includes(query);
+        return matchesFilter && matchesQuery;
+      });
+
+      const matchLabel = document.getElementById("repo-match-count");
+      if (matchLabel) {
+        matchLabel.innerText = `${filtered.length} / ${REPOS_DB.length} repo listeleniyor`;
+      }
+
+      const tbody = document.getElementById("repo-list-body");
+      if (!tbody) return;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="6" style="padding: 30px; text-align: center; color: var(--primary-dim);">
+              [!] Aranan kriterlere uygun repo veya teknoloji kaydı bulunamadı.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      let html = "";
+      filtered.forEach(r => {
+        const isDrawerOpen = (activeRepoDrawer === r.id);
+        const fitColor = r.fit >= 80 ? 'var(--accent-green)' : (r.fit >= 40 ? 'var(--accent-amber)' : 'var(--accent-red)');
+        
+        html += `
+          <tr class="repo-row" onclick="toggleRepoDrawer('${r.id}')" title="Detayları açmak/kapatmak için tıklayın">
+            <td style="padding: 10px 12px;">
+              <span class="repo-badge" style="color: ${r.badgeColor}; border-color: ${r.badgeColor}; background: ${r.badgeBg};">
+                ${r.statusBadge}
+              </span>
+            </td>
+            <td style="padding: 10px 12px;">
+              <div style="font-weight: 700; color: var(--cream-accent); font-size: 13.5px; display: flex; align-items: center; gap: 6px;">
+                <span>${r.name}</span>
+                <span style="font-size: 10px; color: var(--primary-dim); font-weight: normal;">[${isDrawerOpen ? '▲ Kapat' : '▼ Detay'}]</span>
+              </div>
+              <div style="font-size: 11px; color: var(--primary-dim); font-family: var(--font-mono); margin-top: 2px;">${r.repo}</div>
+            </td>
+            <td style="padding: 10px 12px; color: var(--cream-dim); font-size: 12px;">
+              ${r.cat}
+            </td>
+            <td style="padding: 10px 12px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-weight: 700; color: ${fitColor}; font-size: 13px;">%${r.fit}</span>
+                <div class="repo-progress-wrap">
+                  <div class="repo-progress-fill" style="width: ${r.fit}%; background: ${fitColor};"></div>
+                </div>
+              </div>
+            </td>
+            <td style="padding: 10px 12px; color: var(--primary); line-height: 1.45;">
+              <div style="font-weight: 600; color: var(--cream-accent); margin-bottom: 2px;">${r.verdict}</div>
+              <div style="font-size: 11.5px; color: var(--primary-dim);">${r.integration}</div>
+            </td>
+            <td style="padding: 10px 12px; text-align: center;" onclick="event.stopPropagation();">
+              <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="hud-btn" style="padding: 4px 8px; font-size: 11px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                <span>↗</span> <span>KOD</span>
+              </a>
+            </td>
+          </tr>
+          <tr id="drawer-${r.id}" class="repo-drawer ${isDrawerOpen ? 'active' : ''}">
+            <td colspan="6" style="padding: 0;">
+              <div class="repo-drawer-inner">
+                <div style="background: rgba(0,0,0,0.25); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-green);">
+                  <div style="color: var(--accent-green); font-weight: bold; margin-bottom: 6px; font-size: 11px; letter-spacing: 0.5px;">✓ MUTLAKA ALINANLAR // GÜÇLÜ YÖNLER</div>
+                  <div style="color: var(--cream-dim); line-height: 1.5;">${r.pros}</div>
+                </div>
+                <div style="background: rgba(0,0,0,0.25); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-red);">
+                  <div style="color: var(--accent-red); font-weight: bold; margin-bottom: 6px; font-size: 11px; letter-spacing: 0.5px;">✕ GEREKSİZ // ELENEN KISIMLAR</div>
+                  <div style="color: var(--cream-dim); line-height: 1.5;">${r.cons}</div>
+                </div>
+                <div style="background: rgba(0,0,0,0.25); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid var(--floppy-cyan);">
+                  <div style="color: var(--floppy-cyan); font-weight: bold; margin-bottom: 6px; font-size: 11px; letter-spacing: 0.5px;">⚙ SAYKO.CH ENTEGRASYON FORMÜLÜ</div>
+                  <div style="color: var(--cream-dim); line-height: 1.5;">${r.integration}</div>
+                  <div style="margin-top: 10px;">
+                    <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="hud-btn" style="font-size: 11px; padding: 4px 10px; display: inline-flex;">
+                      🌐 GitHub Deposunu İncele (${r.repo})
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html;
+    }
+
+    function toggleRepoDrawer(id) {
+      if (activeRepoDrawer === id) {
+        activeRepoDrawer = null;
+      } else {
+        activeRepoDrawer = id;
+        playTone(520, 'sine', 0.03, 0.02);
+      }
+      renderRepos();
+    }
+
+    function setRepoFilter(filter, btn) {
+      currentRepoFilter = filter;
+      document.querySelectorAll("#repo-filter-buttons .hud-btn").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      playTone(480, 'sine', 0.03, 0.03);
+      renderRepos();
+    }
+
+    function filterRepos() {
+      renderRepos();
+    }
+
+    /* --------------------------------------------------------------------------
        M. INITIALIZATION
        -------------------------------------------------------------------------- */
     function initDeck() {
@@ -1918,6 +2430,7 @@ END:VCALENDAR`;
       renderProfs();
       renderHabits();
       renderSpots();
+      renderRepos();
       updateClockAndSensors();
     }
   </script>

@@ -1581,12 +1581,218 @@ html[saved-theme="dark"] .sc-sbb-foot,
   }
 }
 
-body.sc-typst-active {
-  padding-top: 50px !important;
+// ── Swiss Monograph Sheet Header ──
+.sc-monograph-sheet-header {
+  display: block;
+  margin-bottom: 2.2rem !important;
+  text-align: left !important;
+  user-select: text;
 
+  .sc-msh-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-bottom: 4px;
+
+    .sc-msh-brand {
+      display: flex;
+      flex-direction: column;
+
+      .sc-msh-brand-title {
+        font-weight: 800;
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
+        color: #111111;
+      }
+
+      .sc-msh-brand-sub {
+        font-size: 0.64rem;
+        letter-spacing: 0.12em;
+        color: #777777;
+        margin-top: 2px;
+      }
+    }
+
+    .sc-msh-location {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #C8102E;
+      text-transform: uppercase;
+    }
+  }
+
+  .sc-msh-rule {
+    height: 2px;
+    background: #C8102E;
+    margin: 5px 0 16px 0;
+  }
+
+  .sc-msh-eyebrow {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #C8102E;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .sc-msh-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0b0b0b;
+    margin: 0 0 14px 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .sc-msh-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.72rem;
+    color: #666666;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .sc-msh-rule-bottom {
+    height: 1px;
+    background: #e0dcd5;
+    margin: 14px 0 0 0;
+  }
+}
+
+// Ekran Görünümünde İsviçre Monografi Modu (Kağıt Sayfa Deneyimi)
+body.sc-typst-active {
+  background: #0f1115 !important;
+  color: #1a1a1a !important;
+  padding-top: 50px !important;
+  overflow-x: hidden;
+
+  // Arayüz elemanlarını ekrandan kaldır
+  .left.sidebar, .right.sidebar,
+  #sc-tools, .sc-sbb, .page-header, .site-header,
+  #sc-progress, #sc-totop, #sc-vignette, #sc-clock,
+  #sc-fw, footer, .sc-post-nav, .search, .sc-article-glyph {
+    display: none !important;
+  }
+
+  // Çift başlık olmaması için orijinal başlığı ve etiketleri gizle
+  .center .article-title, article .article-title, .sc-article-header-meta {
+    display: none !important;
+  }
+
+  #quartz-body {
+    display: block !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .center {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  // Beyaz İsviçre Monografi Sayfası
   article {
-    border-left: 2px solid var(--accent, #C8102E);
-    padding-left: 24px;
+    background: #ffffff !important;
+    color: #181818 !important;
+    max-width: 840px !important;
+    margin: 40px auto 80px auto !important;
+    padding: 60px 85px !important;
+    border-radius: 2px !important;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+    font-size: 1.05rem !important;
+    line-height: 1.68 !important;
+    text-align: justify !important;
+    border: none !important;
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      color: #111111 !important;
+      text-align: left !important;
+      font-weight: 700 !important;
+    }
+
+    h2 {
+      font-size: 1.45rem !important;
+      color: #C8102E !important;
+      border-bottom: 1px solid #eee !important;
+      padding-bottom: 6px !important;
+      margin-top: 2.4rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    h3 {
+      font-size: 1.2rem !important;
+      margin-top: 1.8rem !important;
+    }
+
+    p {
+      color: #222222 !important;
+      margin-bottom: 1.2rem !important;
+    }
+
+    .callout, blockquote {
+      background: #faf8f5 !important;
+      border: 1px solid #e8e3dc !important;
+      border-left: 3.5px solid #C8102E !important;
+      border-radius: 2px !important;
+      padding: 16px 20px !important;
+      margin: 1.8rem 0 !important;
+      color: #2a2a2a !important;
+    }
+
+    figure.sc-media-frame, .sc-media-frame {
+      background: #fdfdfd !important;
+      border: 1px solid #e2ded7 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+      padding: 16px !important;
+      margin: 2.2rem auto !important;
+
+      figcaption {
+        color: #C8102E !important;
+        font-family: 'Josefin Sans', sans-serif !important;
+        font-size: 0.9rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.06em !important;
+      }
+    }
+
+    table {
+      border-collapse: collapse !important;
+      width: 100% !important;
+      border-top: 2px solid #111 !important;
+      border-bottom: 2px solid #111 !important;
+      margin: 2rem 0 !important;
+
+      th {
+        border-bottom: 1px solid #111 !important;
+        background: #f8f6f2 !important;
+        font-family: 'Josefin Sans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.85rem !important;
+        padding: 10px !important;
+        text-transform: uppercase !important;
+      }
+
+      td {
+        border-bottom: 1px solid #eee !important;
+        padding: 10px !important;
+        font-size: 0.92rem !important;
+      }
+    }
   }
 }
 
@@ -2489,9 +2695,38 @@ body.is-focus .right.sidebar:hover > * {
   filter: none;
 }
 
-// Toolbar (fokus tuşu burada — net kalmalı) ve progress fokusta net
+// Toolbar (fokus tuşu burada — net kalmalı)
 body.is-focus #sc-tools { opacity: 1 !important; filter: none !important; }
 body.is-focus .flex-component { opacity: 1 !important; filter: none !important; }
+
+// Fokus modunda dikkat dağıtıcı tüm dinamik unsurlar durdurulur / gizlenir
+body.is-focus {
+  #sc-progress {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  #sc-fw, #sc-footer-waves, .sc-fwave-canvas {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .sh-fx-canvas {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .sc-sbb {
+    opacity: 0.2;
+    transition: opacity 300ms ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  #sc-totop {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
 
 // Vinyet overlay — geniş şeffaf merkez, sadece köşeler karardı
 // "at 40% center" → geniş alan açık, 90%+ kenarda hafif karardı
@@ -3446,73 +3681,204 @@ html.sc-theme-anim #sc-fw {
 }
 
 // ═══════════════════════════════════════════════════
-//  Öneri 11 — Yazdırma görünümü (temiz baskı)
+// ═══════════════════════════════════════════════════
+//  Öneri 11 — İsviçre Akademik Monografi Baskı Dizgisi (Swiss Monograph Print Engine)
 // ═══════════════════════════════════════════════════
 @media print {
-  // Tüm kabuk/süs öğeleri gizli — yalnız makale içeriği basılır
+  // 1. Tüm kabuk, arayüz, menü ve banner öğeleri gizlenir
+  #sc-typst-banner,
   #sc-sbb, #sc-sbb-tail, #sc-sbb-fab, #sc-sbb-backdrop,
-  #sc-progress, #sc-totop, #sc-vignette, #sc-lsb-restore,
-  .sidebar.left, .sidebar.right,
-  .site-header-slogan, .sh-divider,
-  body > footer, footer, #sc-fw,
-  .sc-curtain-btn, .search, .graph,
-  .note-properties, .backlinks {
+  #sc-tools, #sc-clock, #sc-progress, #sc-totop, #sc-vignette, #sc-lsb-restore,
+  .sidebar.left, .sidebar.right, .left.sidebar, .right.sidebar,
+  .page-header, .site-header, .site-header-slogan, .sh-divider,
+  body > footer, footer, #sc-fw, #sc-footer-waves, .sc-fwave-canvas, .sh-fx-canvas,
+  .sc-curtain-btn, .search, .graph, .backlinks, .note-properties,
+  .sc-post-nav, .sc-cortex-modal, .sc-article-glyph,
+  .center > .article-title, article > .article-title, .sc-article-header-meta {
     display: none !important;
   }
 
-  html, body {
-    background: #fff !important;
-    color: #000 !important;
-    font-size: 12pt !important;
-  }
-  body::after { display: none !important; }   // grain dokusu kapalı
-
-  #quartz-body {
-    grid-template-columns: auto !important;
-    grid-template-areas: "grid-center" !important;
+  // Monograph Sheet Header daima görünür ve en başta basılır
+  .sc-monograph-sheet-header {
     display: block !important;
+    margin-bottom: 22pt !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
   }
 
-  .center, article {
-    max-width: 100% !important;
+  // 2. A4 Sayfa Düzeni ve İsviçre Marjinal Running Header / Footer
+  @page {
+    size: A4 portrait;
+    margin: 22mm 18mm 20mm 18mm;
+
+    @top-left {
+      content: "SAYKO.CH // İSVİÇRE AKADEMİK MONOGRAFİ DİZİSİ";
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 7.5pt;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 0.5pt solid #ddd;
+      padding-bottom: 3pt;
+    }
+
+    @top-right {
+      content: "UNIVERSITÄT LUZERN • VPF";
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #C8102E;
+      border-bottom: 0.5pt solid #ddd;
+      padding-bottom: 3pt;
+    }
+
+    @bottom-left {
+      content: "Sayko Psikoloji Arşivi • Peer-Reviewed Digital Monograph";
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 7pt;
+      color: #888;
+    }
+
+    @bottom-right {
+      content: "Sayfa " counter(page);
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #C8102E;
+    }
+  }
+
+  // 3. Genel Sıfırlama
+  html, body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 10pt !important;
+    line-height: 1.55 !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    animation: none !important;
   }
+  body::after { display: none !important; }
 
-  article, article p, article li, article h1, article h2, article h3,
-  .article-title, .content-meta {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-
-  // Bağlantılar siyah + alt çizgi; URL'yi yanına bas
-  article a {
-    color: #000 !important;
-    text-decoration: underline !important;
+  #quartz-body, .center, article {
+    display: block !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     border: none !important;
-  }
-  article a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.78em;
-    color: #444;
-    word-break: break-all;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #111111 !important;
   }
 
-  // İçerik içi öğeler sayfa kırılımında bölünmesin
-  blockquote, pre, table, figure, img { page-break-inside: avoid; }
-  h1, h2, h3 { page-break-after: avoid; }
+  // 4. Tipografi
+  article {
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+    text-align: justify !important;
 
-  // Header: yalnız SAYKO.ch logosu kalsın (slogan gizlendi yukarıda)
-  .site-header {
-    border-bottom: 1px solid #000 !important;
-    page-break-after: avoid;
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      color: #111111 !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+      text-align: left !important;
+    }
+
+    h1 {
+      font-size: 17pt !important;
+      margin-top: 1.6em !important;
+      margin-bottom: 0.6em !important;
+      border-bottom: 1.2pt solid #C8102E !important;
+      padding-bottom: 4pt !important;
+    }
+
+    h2 {
+      font-size: 13pt !important;
+      color: #C8102E !important;
+      margin-top: 1.5em !important;
+      margin-bottom: 0.5em !important;
+      border-bottom: 0.5pt solid #e0dcd5 !important;
+      padding-bottom: 3pt !important;
+    }
+
+    h3 {
+      font-size: 11pt !important;
+      margin-top: 1.2em !important;
+      margin-bottom: 0.4em !important;
+    }
+
+    p {
+      margin-bottom: 0.85em !important;
+      orphans: 3 !important;
+      widows: 3 !important;
+      color: #111111 !important;
+    }
+
+    // Bağlantılarda ek URL parantezlerini kaldır (tertemiz monografi baskısı)
+    a {
+      color: #111111 !important;
+      text-decoration: none !important;
+      border: none !important;
+      &::after {
+        display: none !important;
+        content: none !important;
+      }
+    }
+
+    // Callout / Exkurs
+    .callout, blockquote {
+      background: #faf8f5 !important;
+      border: 1pt solid #e2ded7 !important;
+      border-left: 3pt solid #C8102E !important;
+      padding: 10pt 14pt !important;
+      margin: 14pt 0 !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      color: #222 !important;
+    }
+
+    // Tablolar (APA 7 Standart Baskı)
+    table {
+      border-collapse: collapse !important;
+      width: 100% !important;
+      border-top: 1.5pt solid #111 !important;
+      border-bottom: 1.5pt solid #111 !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      margin: 14pt 0 !important;
+
+      th {
+        border-bottom: 1pt solid #111 !important;
+        font-family: 'Josefin Sans', sans-serif !important;
+        font-size: 8.5pt !important;
+        text-transform: uppercase !important;
+        padding: 5pt 6pt !important;
+      }
+
+      td {
+        border-bottom: 0.5pt solid #eee !important;
+        font-size: 8.5pt !important;
+        padding: 5pt 6pt !important;
+      }
+    }
+
+    // Görseller ve Medya Çerçeveleri
+    figure, .sc-media-frame, img {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      max-width: 100% !important;
+      box-shadow: none !important;
+      border-color: #ddd !important;
+      margin: 14pt auto !important;
+
+      figcaption {
+        color: #C8102E !important;
+        font-family: 'Josefin Sans', sans-serif !important;
+        font-size: 8pt !important;
+      }
+    }
   }
-  .site-header-title, .sh-name, .sh-tld {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-  .sh-tld { color: #c8102e !important; }   // .ch imzası kırmızı kalsın
 }
 
 // ═══════════════════════════════════════════════════

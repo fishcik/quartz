@@ -1780,7 +1780,11 @@ function ensureFooterWave(){
     var dt=prev?(ts-prev)/1000:0;if(dt>0.1)dt=0.1;prev=ts;
     var W=ftn.clientWidth||300,H=Math.max(ftn.clientHeight,48);
     if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}
-    var ctx=cv.getContext('2d');ctx.clearRect(0,0,W,H);
+    var ctx=cv.getContext('2d');
+    if(document.body.classList.contains('is-focus')||document.body.classList.contains('sc-typst-active')){
+      ctx.clearRect(0,0,W,H);prev=0;return;
+    }
+    ctx.clearRect(0,0,W,H);
     var dk=document.documentElement.getAttribute('saved-theme')==='dark';
     var cs=dk?['rgba(50,8,12,0.90)','rgba(22,22,22,0.65)']:['rgba(185,171,150,0.62)','rgba(215,204,187,0.42)'];
     L.forEach(function(l,i){
@@ -1981,7 +1985,7 @@ function scOpen3DCortex(){
     {name:'SEREBELLUM / BEYİNSAPI', h:0, z:-0.6, y:0.9, col:'#8A0303'}
   ];
 
-  var cList=SC_COURSES||[];
+  var cList=(typeof SC_GRID!=='undefined'&&SC_GRID&&SC_GRID.length)?SC_GRID:[];
   cList.forEach(function(c, i){
     var lb=lobes[i % lobes.length];
     var cx=(lb.h * 170) + (Math.random()-0.5)*40;
@@ -1998,7 +2002,7 @@ function scOpen3DCortex(){
     };
     nodes.push(cNode);
 
-    var topics=(typeof SC_TOPICS!=='undefined'&&SC_TOPICS)?SC_TOPICS[c.slug]:[];
+    var topics=(typeof SC_TOPICS!=='undefined'&&SC_TOPICS)?(SC_TOPICS[c.slug]||[]):[];
     if(topics&&topics.length){
       var tSample=topics.slice(0, 6);
       tSample.forEach(function(t, ti){
@@ -2010,7 +2014,7 @@ function scOpen3DCortex(){
           z:cz + (Math.random()-0.5)*30,
           r:3.2,
           name:t.title,
-          href:t.href,
+          href:t.href || ('/'+c.slug+'/'+(t.slug||'')),
           lobe:lb.name,
           parent:cNode,
           isCourse:false,
@@ -2078,6 +2082,9 @@ function scOpen3DCortex(){
   }
 
   function render(){
+    if(!isDragging){
+      targetRotY += 0.0015;
+    }
     rotX += (targetRotX - rotX) * 0.1;
     rotY += (targetRotY - rotY) * 0.1;
     zoom += (targetZoom - zoom) * 0.1;
@@ -2180,24 +2187,103 @@ function scTriggerTypstMode(){
   }
   var isTypst=document.body.classList.toggle('sc-typst-active');
   var banner=document.getElementById('sc-typst-banner');
+  var existingHdr=document.getElementById('sc-monograph-header');
   if(isTypst){
     if(!banner){
       banner=document.createElement('div');
       banner.id='sc-typst-banner';
       banner.className='sc-typst-banner';
       banner.innerHTML='<div class="sc-typst-bar">' +
-          '<div class="sc-typst-title">🞢 TYPST İSVİÇRE MONOGRAFİ DİZGİSİ (BETA)</div>' +
+          '<div class="sc-typst-title">🞢 TYPST İSVİÇRE MONOGRAFİ DİZGİSİ</div>' +
           '<div class="sc-typst-actions">' +
-            '<button type="button" class="sc-typst-btn sc-typst-print" onclick="window.print()">PDF Olarak Kaydet / Yazdır</button>' +
+            '<button type="button" class="sc-typst-btn sc-typst-print" onclick="window.print()">🖨️ PDF Olarak Kaydet / Yazdır</button>' +
             '<button type="button" class="sc-typst-btn sc-typst-close" onclick="scTriggerTypstMode()">Normale Dön ✕</button>' +
           '</div>' +
         '</div>';
       document.body.appendChild(banner);
     }
+    if(!existingHdr){
+      var slug=document.body.getAttribute('data-slug')||'';
+      var parts=slug.split('/').filter(Boolean);
+      var courseSlug=parts[0];
+      var courseName=(typeof SC_MAP!=='undefined'&&SC_MAP)?SC_MAP[courseSlug]:'';
+      var titleEl=art.querySelector('.article-title, h1');
+      var titleText=titleEl ? titleEl.textContent.trim() : (document.title || 'Monografi');
+      var metaEl=art.querySelector('.content-meta');
+      var metaText=metaEl ? metaEl.textContent.trim() : '';
+
+      var hdr=document.createElement('div');
+      hdr.id='sc-monograph-header';
+      hdr.className='sc-monograph-sheet-header';
+      hdr.innerHTML='<div class="sc-msh-top">' +
+          '<div class="sc-msh-brand">' +
+            '<span class="sc-msh-brand-title">SAYKO.CH ARCHIVES</span>' +
+            '<span class="sc-msh-brand-sub">SCHWEIZERISCHE AKADEMISCHE MONOGRAPHIEN // ISSN 2026-86</span>' +
+          '</div>' +
+          '<div class="sc-msh-location">UNIVERSITÄT LUZERN • VPF</div>' +
+        '</div>' +
+        '<div class="sc-msh-rule"></div>' +
+        (courseName ? ('<div class="sc-msh-eyebrow">'+courseName.toUpperCase()+' // BASISSTUFE</div>') : '') +
+        '<h1 class="sc-msh-title">'+titleText+'</h1>' +
+        '<div class="sc-msh-meta-bar">' +
+          '<span><b>YAZAR:</b> CİHAN</span>' +
+          '<span>•</span>' +
+          '<span><b>KURUM:</b> UNIVERSITÄT LUZERN (VPF)</span>' +
+          (metaText ? ('<span>•</span><span>'+metaText+'</span>') : '') +
+          '<span>•</span>' +
+          '<span><b>BASKI:</b> SWISS EDITORIAL</span>' +
+        '</div>' +
+        '<div class="sc-msh-rule-bottom"></div>';
+      art.insertBefore(hdr, art.firstChild);
+    }
   } else {
     if(banner) banner.remove();
+    if(existingHdr) existingHdr.remove();
   }
 }
+
+window.addEventListener('beforeprint', function(){
+  var art=document.querySelector('.center article, article');
+  if(art && !document.getElementById('sc-monograph-header')){
+    var slug=document.body.getAttribute('data-slug')||'';
+    var parts=slug.split('/').filter(Boolean);
+    var courseSlug=parts[0];
+    var courseName=(typeof SC_MAP!=='undefined'&&SC_MAP)?SC_MAP[courseSlug]:'';
+    var titleEl=art.querySelector('.article-title, h1');
+    var titleText=titleEl ? titleEl.textContent.trim() : (document.title || 'Monografi');
+    var metaEl=art.querySelector('.content-meta');
+    var metaText=metaEl ? metaEl.textContent.trim() : '';
+
+    var hdr=document.createElement('div');
+    hdr.id='sc-monograph-header';
+    hdr.className='sc-monograph-sheet-header sc-print-only-header';
+    hdr.innerHTML='<div class="sc-msh-top">' +
+        '<div class="sc-msh-brand">' +
+          '<span class="sc-msh-brand-title">SAYKO.CH ARCHIVES</span>' +
+          '<span class="sc-msh-brand-sub">SCHWEIZERISCHE AKADEMISCHE MONOGRAPHIEN // ISSN 2026-86</span>' +
+        '</div>' +
+        '<div class="sc-msh-location">UNIVERSITÄT LUZERN • VPF</div>' +
+      '</div>' +
+      '<div class="sc-msh-rule"></div>' +
+      (courseName ? ('<div class="sc-msh-eyebrow">'+courseName.toUpperCase()+' // BASISSTUFE</div>') : '') +
+      '<h1 class="sc-msh-title">'+titleText+'</h1>' +
+      '<div class="sc-msh-meta-bar">' +
+        '<span><b>YAZAR:</b> CİHAN</span>' +
+        '<span>•</span>' +
+        '<span><b>KURUM:</b> UNIVERSITÄT LUZERN (VPF)</span>' +
+        (metaText ? ('<span>•</span><span>'+metaText+'</span>') : '') +
+        '<span>•</span>' +
+        '<span><b>BASKI:</b> SWISS EDITORIAL</span>' +
+      '</div>' +
+      '<div class="sc-msh-rule-bottom"></div>';
+    art.insertBefore(hdr, art.firstChild);
+  }
+});
+
+window.addEventListener('afterprint', function(){
+  var prHdr=document.querySelector('.sc-print-only-header');
+  if(prHdr) prHdr.remove();
+});
 
 function perNav(){
   // Masaüstünde sağ SBB/saat kutusu daima açık kalır; mobilde sayfa değişince kapanır
