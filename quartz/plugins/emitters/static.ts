@@ -33,21 +33,6 @@ export const Static: QuartzEmitterPlugin = () => ({
         yield dest
       }
     }
-
-    // Mirror quartz/static/beta directly to public/beta for clean URL sayko.ch/beta
-    const betaSrc = joinSegments(staticPath, "beta")
-    if (fs.existsSync(betaSrc)) {
-      const betaFps = await glob("**", betaSrc, cfg.configuration.ignorePatterns)
-      const outputBetaPath = joinSegments(argv.output, "beta")
-      await fs.promises.mkdir(outputBetaPath, { recursive: true })
-      for (const fp of betaFps) {
-        const src = joinSegments(betaSrc, fp) as FilePath
-        const dest = joinSegments(outputBetaPath, fp) as FilePath
-        await fs.promises.mkdir(dirname(dest), { recursive: true })
-        await fs.promises.copyFile(src, dest)
-        yield dest
-      }
-    }
   },
   async *partialEmit() {},
 })

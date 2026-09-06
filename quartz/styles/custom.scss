@@ -1471,6 +1471,41 @@ html[saved-theme="dark"] .sc-sbb-foot,
     }
   }
 
+  .sc-cortex-hud-lobes {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    pointer-events: auto;
+    background: rgba(20, 17, 15, 0.85);
+    border: 1px solid rgba(200, 16, 46, 0.3);
+    padding: 4px 8px;
+    border-radius: 20px;
+
+    .sc-lobe-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(230, 226, 218, 0.7);
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 4px 9px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+
+      &:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      &.active {
+        background: var(--accent, #C8102E);
+        color: #ffffff;
+        box-shadow: 0 0 8px rgba(200, 16, 46, 0.6);
+      }
+    }
+  }
+
   #sc-cortex-canvas {
     width: 100vw;
     height: 100vh;

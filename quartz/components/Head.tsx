@@ -1776,13 +1776,17 @@ function ensureFooterWave(){
   function lrp(a,b,t){var n=Math.max(a.length,b.length),r=[];for(var i=0;i<n;i++){var ai=a[i]||[0,1,0],bi=b[i]||[0,1,0];r.push([ai[0]+(bi[0]-ai[0])*t,ai[1]+(bi[1]-ai[1])*t,ai[2]+(bi[2]-ai[2])*t]);}return r;}
   var L=[{p:0,v:0.45,a:mkH(),b:mkH(),t:0,d:rnd(6,18)},{p:3.14,v:-0.32,a:mkH(),b:mkH(),t:0,d:rnd(6,18)}];
   var prev=0,snakePhase=0,snakeInit=false;
+  var isFwVisible=false;
+
   function tick(ts){
+    if(!isFwVisible){
+      window.__scFwRaf=null;
+      prev=0;
+      return;
+    }
     window.__scFwRaf=requestAnimationFrame(tick);
     var ftn=document.querySelector('footer');if(!ftn){prev=0;return;}
     var cv=ftn.querySelector('#sc-fw');if(!cv){prev=0;return;}
-    var rect=ftn.getBoundingClientRect();
-    var vh=window.innerHeight||document.documentElement.clientHeight||0;
-    if(rect.bottom<-40||rect.top>vh+40){prev=0;return;} // ekran dışı → boşuna çizme
     var dt=prev?(ts-prev)/1000:0;if(dt>0.1)dt=0.1;prev=ts;
     var W=ftn.clientWidth||300,H=Math.max(ftn.clientHeight,48);
     if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;}
@@ -1894,7 +1898,23 @@ function ensureFooterWave(){
       ctx.stroke();
     }
   }
-  requestAnimationFrame(tick);
+
+  if('IntersectionObserver' in window && ft){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        isFwVisible = entry.isIntersecting;
+        if(isFwVisible){
+          if(!window.__scFwRaf){ prev = 0; window.__scFwRaf = requestAnimationFrame(tick); }
+        } else {
+          if(window.__scFwRaf){ cancelAnimationFrame(window.__scFwRaf); window.__scFwRaf = null; prev = 0; }
+        }
+      });
+    }, { rootMargin: '60px' });
+    obs.observe(ft);
+  } else {
+    isFwVisible = true;
+    window.__scFwRaf = requestAnimationFrame(tick);
+  }
 }
 // ── Görev 3: Sitedeki TÜM ayraçlar (<hr>) varsayılan serpent ayracına dönüşür ──
 function scSerpentHr(){
@@ -1956,8 +1976,16 @@ function scOpen3DCortex(){
   modal.className='sc-cortex-modal';
   modal.innerHTML='<div class="sc-cortex-hud">' +
       '<div class="sc-cortex-hud-left">' +
-        '<span class="sc-cortex-hud-badge">☾ 3D ANATOMİK KORTEKS AĞI • BETA</span>' +
-        '<span class="sc-cortex-hud-hint">Sürükle: 360° Döndür • Tekerlek: Yakınlaş • Düğüme Tıkla: Konuya Git</span>' +
+        '<span class="sc-cortex-hud-badge">☾ 3D ANATOMİK KORTEKS AĞI</span>' +
+        '<span class="sc-cortex-hud-hint">Sürükle: 360° Döndür • Tekerlek: Yakınlaş • Düğüm: Konuya Git</span>' +
+      '</div>' +
+      '<div class="sc-cortex-hud-lobes" id="sc-cortex-lobes">' +
+        '<button type="button" class="sc-lobe-btn active" data-lobe="ALL">TÜMÜ</button>' +
+        '<button type="button" class="sc-lobe-btn" data-lobe="FRONTAL">FRONTAL</button>' +
+        '<button type="button" class="sc-lobe-btn" data-lobe="PARİYETAL">PARİYETAL</button>' +
+        '<button type="button" class="sc-lobe-btn" data-lobe="TEMPORAL">TEMPORAL</button>' +
+        '<button type="button" class="sc-lobe-btn" data-lobe="OKSİPİTAL">OKSİPİTAL</button>' +
+        '<button type="button" class="sc-lobe-btn" data-lobe="SEREBELLUM">SEREBELLUM</button>' +
       '</div>' +
       '<button type="button" class="sc-cortex-close" aria-label="Kapat">✕</button>' +
     '</div>' +
@@ -1978,17 +2006,30 @@ function scOpen3DCortex(){
   resize();
   window.addEventListener('resize', resize);
 
+  var activeLobeFilter='ALL';
+  var lobeBar=modal.querySelector('#sc-cortex-lobes');
+  if(lobeBar){
+    lobeBar.querySelectorAll('.sc-lobe-btn').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        lobeBar.querySelectorAll('.sc-lobe-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeLobeFilter=btn.getAttribute('data-lobe')||'ALL';
+      });
+    });
+  }
+
   var nodes=[];
   var lobes=[
-    {name:'FRONTAL KORTEKS (Sol)', h:-1, z:0.8, y:-0.3, col:'#C8102E'},
-    {name:'FRONTAL KORTEKS (Sağ)', h:1, z:0.8, y:-0.3, col:'#C8102E'},
-    {name:'PARİYETAL KORTEKS (Sol)', h:-1, z:0.1, y:-0.8, col:'#d29b63'},
-    {name:'PARİYETAL KORTEKS (Sağ)', h:1, z:0.1, y:-0.8, col:'#d29b63'},
-    {name:'TEMPORAL KORTEKS (Sol)', h:-1.1, z:0.2, y:0.2, col:'#a84b3e'},
-    {name:'TEMPORAL KORTEKS (Sağ)', h:1.1, z:0.2, y:0.2, col:'#a84b3e'},
-    {name:'OKSİPİTAL KORTEKS (Sol)', h:-0.8, z:-0.9, y:-0.2, col:'#e64a19'},
-    {name:'OKSİPİTAL KORTEKS (Sağ)', h:0.8, z:-0.9, y:-0.2, col:'#e64a19'},
-    {name:'SEREBELLUM / BEYİNSAPI', h:0, z:-0.6, y:0.9, col:'#8A0303'}
+    {key:'FRONTAL', name:'FRONTAL KORTEKS (Sol)', h:-1, z:0.8, y:-0.3, col:'#C8102E'},
+    {key:'FRONTAL', name:'FRONTAL KORTEKS (Sağ)', h:1, z:0.8, y:-0.3, col:'#C8102E'},
+    {key:'PARİYETAL', name:'PARİYETAL KORTEKS (Sol)', h:-1, z:0.1, y:-0.8, col:'#d29b63'},
+    {key:'PARİYETAL', name:'PARİYETAL KORTEKS (Sağ)', h:1, z:0.1, y:-0.8, col:'#d29b63'},
+    {key:'TEMPORAL', name:'TEMPORAL KORTEKS (Sol)', h:-1.1, z:0.2, y:0.2, col:'#a84b3e'},
+    {key:'TEMPORAL', name:'TEMPORAL KORTEKS (Sağ)', h:1.1, z:0.2, y:0.2, col:'#a84b3e'},
+    {key:'OKSİPİTAL', name:'OKSİPİTAL KORTEKS (Sol)', h:-0.8, z:-0.9, y:-0.2, col:'#e64a19'},
+    {key:'OKSİPİTAL', name:'OKSİPİTAL KORTEKS (Sağ)', h:0.8, z:-0.9, y:-0.2, col:'#e64a19'},
+    {key:'SEREBELLUM', name:'SEREBELLUM / BEYİNSAPI', h:0, z:-0.6, y:0.9, col:'#8A0303'}
   ];
 
   var cList=(typeof SC_GRID!=='undefined'&&SC_GRID&&SC_GRID.length)?SC_GRID:[];
@@ -2003,6 +2044,7 @@ function scOpen3DCortex(){
       name:c.name,
       href:'/'+c.slug+'/',
       lobe:lb.name,
+      lobeKey:lb.key,
       isCourse:true,
       color:lb.col
     };
@@ -2022,6 +2064,7 @@ function scOpen3DCortex(){
           name:t.title,
           href:t.href || ('/'+c.slug+'/'+(t.slug||'')),
           lobe:lb.name,
+          lobeKey:lb.key,
           parent:cNode,
           isCourse:false,
           color:lb.col
@@ -2029,6 +2072,16 @@ function scOpen3DCortex(){
       });
     }
   });
+
+  // Synaptic Action Potential Particles
+  var impulses=[];
+  for(var k=0; k<14; k++){
+    impulses.push({
+      nodeIdx: Math.floor(Math.random()*nodes.length),
+      progress: Math.random(),
+      speed: 0.007 + Math.random()*0.012
+    });
+  }
 
   var rotX=0.2, rotY=0.4;
   var targetRotX=0.2, targetRotY=0.4;
@@ -2114,12 +2167,16 @@ function scOpen3DCortex(){
       n._sy = cy + y1 * scale;
       n._sz = z2;
       n._scale = scale;
+
+      var isMatch = (activeLobeFilter === 'ALL' || n.lobeKey === activeLobeFilter);
+      n._dimAlpha = isMatch ? 1 : 0.14;
     });
 
+    // Axon links
     ctx.lineWidth=0.9;
     nodes.forEach(function(n){
       if(n.parent){
-        var alpha = Math.max(0.12, Math.min(0.75, 320 / n._sz));
+        var alpha = Math.max(0.12, Math.min(0.75, 320 / n._sz)) * n._dimAlpha;
         ctx.strokeStyle = n.color || '#C8102E';
         ctx.globalAlpha = alpha * 0.45;
         ctx.beginPath();
@@ -2129,13 +2186,31 @@ function scOpen3DCortex(){
       }
     });
 
+    // Action potential synaptic particles
+    impulses.forEach(function(imp){
+      var n = nodes[imp.nodeIdx];
+      if(n && n.parent && n._dimAlpha > 0.3){
+        imp.progress += imp.speed;
+        if(imp.progress > 1) imp.progress = 0;
+        var px = n._sx + (n.parent._sx - n._sx) * imp.progress;
+        var py = n._sy + (n.parent._sy - n._sy) * imp.progress;
+        ctx.globalAlpha = Math.max(0.2, Math.min(0.9, 440 / n._sz));
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(px, py, 2.0, 0, Math.PI*2);
+        ctx.fill();
+      }
+    });
+
     ctx.globalAlpha=0.18;
     ctx.strokeStyle='#C8102E';
     for(var b=0; b<nodes.length-4; b+=5){
-      ctx.beginPath();
-      ctx.moveTo(nodes[b]._sx, nodes[b]._sy);
-      ctx.lineTo(nodes[b+3]._sx, nodes[b+3]._sy);
-      ctx.stroke();
+      if(nodes[b]._dimAlpha > 0.3){
+        ctx.beginPath();
+        ctx.moveTo(nodes[b]._sx, nodes[b]._sy);
+        ctx.lineTo(nodes[b+3]._sx, nodes[b+3]._sy);
+        ctx.stroke();
+      }
     }
 
     nodes.sort(function(a,b){ return b._sz - a._sz; });
@@ -2143,13 +2218,22 @@ function scOpen3DCortex(){
     nodes.forEach(function(n){
       var isHov = (hoveredNode === n);
       var radius = n.r * n._scale * (isHov ? 1.5 : 1);
-      ctx.globalAlpha = Math.max(0.25, Math.min(1, 460 / n._sz));
+      ctx.globalAlpha = Math.max(0.25, Math.min(1, 460 / n._sz)) * n._dimAlpha;
       ctx.fillStyle = isHov ? '#ffffff' : n.color;
       ctx.beginPath();
       ctx.arc(n._sx, n._sy, Math.max(1.8, radius), 0, Math.PI*2);
       ctx.fill();
 
-      if(n.isCourse || isHov){
+      // Active/hovered node glowing action potential ring
+      if(isHov){
+        ctx.strokeStyle = '#C8102E';
+        ctx.lineWidth = 1.6;
+        ctx.beginPath();
+        ctx.arc(n._sx, n._sy, radius + 4, 0, Math.PI*2);
+        ctx.stroke();
+      }
+
+      if((n.isCourse || isHov) && n._dimAlpha > 0.4){
         ctx.fillStyle = isHov ? '#ffffff' : '#e6e2da';
         ctx.font = (isHov ? '600 11px' : '500 9px') + ' "Josefin Sans", sans-serif';
         ctx.textAlign = 'center';
@@ -2183,6 +2267,7 @@ function scOpen3DCortex(){
 
   rafId=requestAnimationFrame(render);
 }
+window.scOpen3DCortex = scOpen3DCortex;
 
 // ─── BETA 2: Typst İsviçre Klinik Monografi Dizgisi (Swiss Academic Monograph) ───
 function scTriggerTypstMode(){
