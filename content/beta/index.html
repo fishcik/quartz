@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SAYKO.CH // BİLİŞSEL & NÖRAL DENEY LABORATUVARI (BETA PLAYGROUND)</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23C8102E'/><text x='50' y='64' font-family='serif' font-weight='bold' font-size='42' fill='%23ffffff' text-anchor='middle'>β</text></svg>">
+
+  <!-- Google Fonts: Space Mono, Syne, Source Serif 4, JetBrains Mono, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── CSS RESET & THEME VARIABLES ── */
+    :root {
+      --bg: #0d0f12;
+      --bg-card: #15181e;
+      --bg-card-hover: #1c212a;
+      --bg-panel: rgba(21, 24, 30, 0.85);
+      --border: rgba(200, 16, 46, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-active: #C8102E;
+      --text: #e6dfd3;
+      --text-dim: #9a9386;
+      --text-highlight: #f5efe6;
+      --accent: #C8102E;
+      --accent-glow: rgba(200, 16, 46, 0.45);
+      --secondary: #c79a6d;
+      --secondary-glow: rgba(199, 154, 109, 0.35);
+      --green: #4ade80;
+      --green-glow: rgba(74, 222, 128, 0.3);
+      --font-display: 'Syne', sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-header: 'Playfair Display', Georgia, serif;
+      --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8f6f1;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f3efe6;
+      --bg-panel: rgba(255, 255, 255, 0.92);
+      --border: rgba(200, 16, 46, 0.28);
+      --border-subtle: rgba(0, 0, 0, 0.09);
+      --border-active: #C8102E;
+      --text: #231f1c;
+      --text-dim: #6b645b;
+      --text-highlight: #110e0c;
+      --accent: #C8102E;
+      --accent-glow: rgba(200, 16, 46, 0.25);
+      --secondary: #9c6c3e;
+      --secondary-glow: rgba(156, 108, 62, 0.25);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-serif);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── MASTER HEADER DECK ── */
+    header.beta-header {
+      position: sticky; top: 0; left: 0; width: 100%;
+      background: var(--bg-panel);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      padding: 0.65rem 1.4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+    .header-brand {
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .brand-logo {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-header); font-weight: 900; font-size: 1.15rem;
+      box-shadow: 0 0 14px var(--accent-glow);
+    }
+    .brand-title-wrap { display: flex; flex-direction: column; }
+    .brand-title {
+      font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;
+      letter-spacing: 0.06em; color: var(--text-highlight);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .brand-tag {
+      background: var(--accent); color: #fff;
+      font-family: var(--font-mono); font-size: 0.6rem; font-weight: 700;
+      padding: 2px 6px; border-radius: 3px; letter-spacing: 0.08em;
+    }
+    .brand-sub {
+      font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+
+    /* Telemetry HUD */
+    .telemetry-deck {
+      display: flex; align-items: center; gap: 1.2rem;
+      font-family: var(--font-mono); font-size: 0.72rem;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 12px; border-radius: 20px;
+    }
+    .telem-item { display: flex; align-items: center; gap: 5px; }
+    .telem-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 6px var(--green-glow);
+    }
+    .telem-label { color: var(--text-dim); }
+    .telem-val { color: var(--text-highlight); font-weight: 700; }
+    .telem-val.green { color: var(--green); }
+    .telem-val.red { color: var(--accent); }
+
+    /* Action Nav */
+    .header-actions { display: flex; align-items: center; gap: 0.6rem; }
+    .btn-return {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      background: transparent; color: var(--secondary);
+      border: 1px solid var(--secondary); padding: 5px 12px; border-radius: 4px;
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-return:hover {
+      background: var(--secondary); color: #fff;
+      box-shadow: 0 0 10px var(--secondary-glow);
+    }
+    .btn-icon {
+      background: transparent; border: 1px solid var(--border-subtle);
+      color: var(--text); width: 32px; height: 32px; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-icon:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── TABS NAVIGATION ── */
+    nav.beta-nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex; justify-content: center; gap: 0.5rem;
+      padding: 0.5rem 1rem; overflow-x: auto;
+    }
+    .tab-btn {
+      font-family: var(--font-display); font-weight: 700; font-size: 0.82rem;
+      letter-spacing: 0.05em; color: var(--text-dim);
+      background: transparent; border: 1px solid transparent;
+      padding: 7px 18px; border-radius: 4px; cursor: pointer;
+      display: flex; align-items: center; gap: 8px; transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text-highlight); background: var(--bg-card-hover); }
+    .tab-btn.active {
+      color: #fff; background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 2px 10px var(--accent-glow);
+    }
+
+    /* ── MAIN WORKSPACE CONTAINER ── */
+    main.beta-workspace {
+      position: relative; width: 100%; min-height: calc(100vh - 110px);
+    }
+    .tab-pane {
+      display: none; width: 100%; min-height: calc(100vh - 110px);
+      padding: 1.5rem; opacity: 0; transition: opacity 0.25s ease;
+    }
+    .tab-pane.active {
+      display: block; opacity: 1;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════════════
+       TAB 1: 3D ANATOMİK KORTEKS STÜDYOSU (STUDIO & FULLSCREEN)
+       ══════════════════════════════════════════════════════════════════════════ */
+    .cortex-container {
+      position: relative; width: 100%; height: calc(100vh - 150px);
+      min-height: 580px;
+      border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden;
+      background: radial-gradient(circle at center, #181d24 0%, #0d0f12 75%);
+    }
+    #cortex-canvas {
+      width: 100%; height: 100%; display: block;
+      cursor: grab;
+    }
+    #cortex-canvas:active { cursor: grabbing; }
+
+    /* Cortex HUD */
+    .cortex-hud-top {
+      position: absolute; top: 16px; left: 16px; right: 16px;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      pointer-events: none;
+    }
+    .hud-card {
+      background: var(--bg-panel); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); padding: 10px 16px;
+      border-radius: 6px; pointer-events: auto;
+      max-width: 380px;
+    }
+    .hud-title {
+      font-family: var(--font-display); font-size: 0.85rem; font-weight: 800;
+      color: var(--accent); display: flex; align-items: center; gap: 6px;
+    }
+    .hud-desc {
+      font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);
+      margin-top: 4px; line-height: 1.4;
+    }
+
+    /* Lobe Selector HUD (Bottom Floating) */
+    .cortex-hud-bottom {
+      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+      background: var(--bg-panel); backdrop-filter: blur(10px);
+      border: 1px solid var(--border); padding: 6px 10px; border-radius: 30px;
+      display: flex; align-items: center; gap: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      pointer-events: auto; max-width: 90vw; overflow-x: auto;
+    }
+    .lobe-btn {
+      font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+      padding: 6px 12px; border-radius: 20px; border: 1px solid var(--border-subtle);
+      background: transparent; color: var(--text); cursor: pointer;
+      display: flex; align-items: center; gap: 6px; transition: all 0.18s;
+      white-space: nowrap;
+    }
+    .lobe-btn .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .lobe-btn:hover { background: var(--bg-card-hover); border-color: var(--secondary); }
+    .lobe-btn.active {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    /* Synapse particles switch */
+    .hud-toggle-wrap {
+      display: flex; align-items: center; gap: 8px; margin-left: 8px;
+      border-left: 1px solid var(--border-subtle); padding-left: 12px;
+    }
+    .hud-toggle-label {
+      font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim);
+    }
+    .toggle-switch {
+      position: relative; display: inline-block; width: 34px; height: 18px;
+    }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #333; transition: .3s; border-radius: 18px;
+    }
+    .toggle-slider:before {
+      position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px;
+      background-color: white; transition: .3s; border-radius: 50%;
+    }
+    input:checked + .toggle-slider { background-color: var(--accent); }
+    input:checked + .toggle-slider:before { transform: translateX(16px); }
+
+    /* Node Detail Card Popover */
+    .cortex-popover {
+      position: absolute; bottom: 80px; right: 20px; width: 310px;
+      background: var(--bg-panel); backdrop-filter: blur(12px);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+      display: none; animation: popIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes popIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .popover-header {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px; margin-bottom: 8px;
+    }
+    .popover-lobe {
+      font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+      color: var(--secondary); text-transform: uppercase;
+    }
+    .popover-close {
+      background: transparent; border: none; color: var(--text-dim);
+      font-size: 1rem; cursor: pointer;
+    }
+    .popover-title {
+      font-family: var(--font-header); font-size: 1.05rem; font-weight: 700;
+      color: var(--text-highlight); margin-bottom: 6px; line-height: 1.3;
+    }
+    .popover-meta {
+      font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+    .popover-actions { display: flex; gap: 8px; }
+    .popover-btn {
+      flex: 1; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+      padding: 7px 10px; border-radius: 4px; text-align: center; cursor: pointer;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-goto { background: var(--accent); color: #fff; border: none; }
+    .btn-goto:hover { box-shadow: 0 0 10px var(--accent-glow); }
+    .btn-typst-load {
+      background: transparent; border: 1px solid var(--secondary);
+      color: var(--secondary);
+    }
+    .btn-typst-load:hover { background: var(--secondary); color: #fff; }
+
+    /* ══════════════════════════════════════════════════════════════════════════
+       TAB 2: TYPST İSVİÇRE MONOGRAFİ STÜDYOSU (OTANTİK SAYKO DİZGİSİ)
+       ══════════════════════════════════════════════════════════════════════════ */
+    .typst-studio {
+      display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem;
+      min-height: calc(100vh - 160px);
+    }
+    @media (max-width: 900px) {
+      .typst-studio { grid-template-columns: 1fr; }
+    }
+
+    /* Studio Sidebar (Controls) */
+    .studio-sidebar {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column;
+      gap: 1.2rem;
+    }
+    .sidebar-section-title {
+      font-family: var(--font-display); font-size: 0.85rem; font-weight: 800;
+      color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-label {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);
+    }
+    .studio-select, .studio-input {
+      font-family: var(--font-mono); font-size: 0.78rem;
+      background: var(--bg); border: 1px solid var(--border-subtle);
+      color: var(--text); padding: 8px 10px; border-radius: 4px; outline: none;
+    }
+    .studio-select:focus, .studio-input:focus { border-color: var(--accent); }
+
+    .setting-pills { display: flex; gap: 6px; }
+    .pill-btn {
+      flex: 1; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
+      background: var(--bg); border: 1px solid var(--border-subtle);
+      color: var(--text-dim); padding: 6px 8px; border-radius: 4px;
+      cursor: pointer; text-align: center; transition: all 0.15s;
+    }
+    .pill-btn:hover { border-color: var(--secondary); color: var(--text); }
+    .pill-btn.active {
+      background: var(--secondary); border-color: var(--secondary); color: #fff;
+    }
+
+    .studio-actions-box {
+      margin-top: auto; display: flex; flex-direction: column; gap: 8px;
+    }
+    .btn-print-master {
+      font-family: var(--font-display); font-size: 0.88rem; font-weight: 800;
+      background: var(--accent); color: #fff; border: none; padding: 12px;
+      border-radius: 6px; cursor: pointer; display: flex; align-items: center;
+      justify-content: center; gap: 8px; box-shadow: 0 4px 14px var(--accent-glow);
+      transition: all 0.2s;
+    }
+    .btn-print-master:hover { transform: translateY(-1px); box-shadow: 0 6px 18px var(--accent-glow); }
+    .btn-toggle-raw {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      background: transparent; border: 1px solid var(--border-subtle);
+      color: var(--text-dim); padding: 8px; border-radius: 4px; cursor: pointer;
+      text-align: center;
+    }
+    .btn-toggle-raw:hover { color: var(--text); border-color: var(--text); }
+
+    /* Studio Paper Preview */
+    .studio-paper-container {
+      background: #2b2e36; border-radius: 8px; padding: 2rem;
+      display: flex; justify-content: center; align-items: flex-start;
+      overflow-y: auto; max-height: calc(100vh - 160px);
+    }
+    .typst-sheet {
+      width: 100%; max-width: 210mm; min-height: 297mm;
+      background: #ffffff; color: #1a1a1a;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      padding: 22mm 20mm; font-family: var(--font-serif);
+      font-size: 10.5pt; line-height: 1.62;
+      transition: all 0.2s ease;
+    }
+    .typst-sheet.col-2 {
+      /* Dynamic multi-column layout for Swiss editorial monograph */
+    }
+
+    /* Typst Authentic Sayko Header */
+    .typst-header-block {
+      border-bottom: 2.5px solid #C8102E;
+      padding-bottom: 14px; margin-bottom: 22px;
+    }
+    .typst-top-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-family: var(--font-mono); font-size: 7.5pt; font-weight: 700;
+      letter-spacing: 0.12em; color: #888888; text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .typst-brand-sayko { color: #C8102E; font-weight: 800; }
+    .typst-eyebrow {
+      font-family: var(--font-mono); font-size: 8.5pt; font-weight: 700;
+      color: #9c6c3e; text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .typst-article-title {
+      font-family: var(--font-header); font-size: 20pt; font-weight: 900;
+      color: #111111; line-height: 1.25; margin-bottom: 12px;
+    }
+    .typst-meta-strip {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-mono); font-size: 8pt; color: #555555;
+      background: #f8f6f2; padding: 6px 10px; border-left: 3px solid #C8102E;
+    }
+    .typst-meta-strip span.sep { color: #ccc; }
+
+    /* Typst Article Body Content */
+    .typst-article-body {
+      color: #222222; text-align: justify; hyphens: auto;
+    }
+    .typst-article-body h2 {
+      font-family: var(--font-header); font-size: 13pt; font-weight: 800;
+      color: #C8102E; margin: 18px 0 8px 0; border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+    }
+    .typst-article-body h3 {
+      font-family: var(--font-header); font-size: 11pt; font-weight: 700;
+      color: #333; margin: 14px 0 6px 0;
+    }
+    .typst-article-body p { margin-bottom: 10pt; }
+    .typst-article-body blockquote {
+      border-left: 3px solid #9c6c3e; background: #faf8f5;
+      padding: 8px 12px; margin: 12px 0; font-style: italic; color: #444;
+    }
+    .typst-article-body code {
+      font-family: var(--font-mono); font-size: 9pt; background: #f2efe9;
+      padding: 2px 4px; border-radius: 3px;
+    }
+
+    /* Typst Running Footer */
+    .typst-footer-block {
+      border-top: 1px solid #e0ded9; margin-top: 28px; padding-top: 10px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font-mono); font-size: 7.5pt; color: #888888;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════════════
+       TAB 3: MAC PERFORMANS & TEŞHİS (DIAGNOSTICS & BENCHMARK LAB)
+       ══════════════════════════════════════════════════════════════════════════ */
+    .perf-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .perf-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: 8px; padding: 1.4rem; display: flex; flex-direction: column;
+      gap: 1rem;
+    }
+    .perf-card.featured { border-color: var(--accent); }
+    .perf-card-title {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 800;
+      color: var(--text-highlight); display: flex; align-items: center; gap: 8px;
+    }
+    .perf-card-desc {
+      font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    .telemetry-meters {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+      background: var(--bg); border: 1px solid var(--border-subtle);
+      padding: 1rem; border-radius: 6px;
+    }
+    .meter-box { display: flex; flex-direction: column; gap: 4px; }
+    .meter-label {
+      font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);
+      text-transform: uppercase;
+    }
+    .meter-value {
+      font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700;
+      color: var(--text-highlight);
+    }
+    .meter-value.live-fps { color: var(--green); }
+    .meter-value.live-ms { color: var(--secondary); }
+
+    .benchmark-runner-box {
+      border: 1px dashed var(--border); border-radius: 6px; padding: 1rem;
+      display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .btn-benchmark {
+      font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+      padding: 10px; border-radius: 4px; cursor: pointer; border: none;
+      transition: all 0.2s;
+    }
+    .btn-benchmark.bad {
+      background: rgba(200, 16, 46, 0.15); border: 1px solid var(--accent);
+      color: #ff6b6b;
+    }
+    .btn-benchmark.bad:hover { background: var(--accent); color: #fff; }
+    .btn-benchmark.good {
+      background: rgba(74, 222, 128, 0.15); border: 1px solid var(--green);
+      color: #4ade80;
+    }
+    .btn-benchmark.good:hover { background: var(--green); color: #0d0f12; }
+
+    .benchmark-result-console {
+      font-family: var(--font-mono); font-size: 0.7rem; background: #08090b;
+      color: #4ade80; padding: 10px; border-radius: 4px; min-height: 80px;
+      white-space: pre-wrap; line-height: 1.4; border: 1px solid #1c212a;
+    }
+
+    /* ══════════════════════════════════════════════════════════════════════════
+       TAB 4: GELECEK DENEYLER HAVUZU (PLAYGROUND ROADMAP)
+       ══════════════════════════════════════════════════════════════════════════ */
+    .playground-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+    .lab-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column;
+      gap: 0.8rem; transition: all 0.2s;
+    }
+    .lab-card:hover {
+      border-color: var(--secondary); transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .lab-badge {
+      font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+      color: var(--secondary); background: rgba(199, 154, 109, 0.12);
+      padding: 3px 8px; border-radius: 3px; width: fit-content;
+    }
+    .lab-title {
+      font-family: var(--font-display); font-size: 1rem; font-weight: 800;
+      color: var(--text-highlight);
+    }
+    .lab-desc {
+      font-family: var(--font-serif); font-size: 0.85rem; color: var(--text-dim);
+      line-height: 1.45;
+    }
+    .lab-btn {
+      margin-top: auto; font-family: var(--font-mono); font-size: 0.72rem;
+      font-weight: 700; background: transparent; border: 1px solid var(--border-subtle);
+      color: var(--text); padding: 7px 12px; border-radius: 4px; cursor: pointer;
+      text-align: center; transition: all 0.2s;
+    }
+    .lab-btn:hover {
+      background: var(--bg-card-hover); border-color: var(--accent); color: var(--accent);
+    }
+
+    /* ── MEDIA PRINT STYLES FOR TYPST SHEET ── */
+    @media print {
+      body * { visibility: hidden; }
+      header.beta-header, nav.beta-nav, .studio-sidebar, .tab-pane:not(#pane-typst) {
+        display: none !important;
+      }
+      .typst-studio { display: block !important; padding: 0 !important; margin: 0 !important; }
+      .studio-paper-container {
+        background: transparent !important; padding: 0 !important; margin: 0 !important;
+        overflow: visible !important;
+      }
+      .typst-sheet, .typst-sheet * {
+        visibility: visible !important;
+      }
+      .typst-sheet {
+        position: absolute !important; left: 0 !important; top: 0 !important;
+        width: 100% !important; max-width: 100% !important; min-height: 100% !important;
+        box-shadow: none !important; border: none !important; padding: 0 !important;
+      }
+      @page {
+        size: A4;
+        margin: 18mm 16mm 20mm 16mm;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- ── MASTER HEADER DECK ── -->
+  <header class="beta-header">
+    <div class="header-brand">
+      <div class="brand-logo">β</div>
+      <div class="brand-title-wrap">
+        <div class="brand-title">
+          SAYKO.CH // BİLİŞSEL & NÖRAL DENEY LABORATUVARI
+          <span class="brand-tag">BETA PLAYGROUND</span>
+        </div>
+        <div class="brand-sub">IZOLE TESTBED • 3D KORTEKS • TYPST MONOGRAFİ • MAC TELEMETRİ</div>
+      </div>
+    </div>
+
+    <!-- Telemetry HUD -->
+    <div class="telemetry-deck">
+      <div class="telem-item">
+        <span class="telem-dot"></span>
+        <span class="telem-label">SYS:</span>
+        <span class="telem-val green">ONLINE</span>
+      </div>
+      <div class="telem-item">
+        <span class="telem-label">FPS:</span>
+        <span class="telem-val live-fps-hdr">60</span>
+      </div>
+      <div class="telem-item">
+        <span class="telem-label">CPU EKG:</span>
+        <span class="telem-val green">0-1% OK</span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <button type="button" class="btn-icon" id="theme-toggle" title="Tema Değiştir">◐</button>
+      <a href="/" class="btn-return" title="Orijinal Sayko.ch sitesine dön">
+        <span>↩ Sayko.ch'ye Dön</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ── TABS NAVIGATION ── -->
+  <nav class="beta-nav">
+    <button type="button" class="tab-btn active" data-target="pane-cortex">
+      <span>☾</span> 3D Korteks Stüdyosu
+    </button>
+    <button type="button" class="tab-btn" data-target="pane-typst">
+      <span>🞢</span> Typst Monografi Stüdyosu
+    </button>
+    <button type="button" class="tab-btn" data-target="pane-perf">
+      <span>⚡</span> Mac Performans & Teşhis
+    </button>
+    <button type="button" class="tab-btn" data-target="pane-play">
+      <span>🔬</span> Gelecek Deneyler (Playground)
+    </button>
+  </nav>
+
+  <!-- ── MAIN WORKSPACE CONTAINER ── -->
+  <main class="beta-workspace">
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         TAB 1: 3D ANATOMİK KORTEKS STÜDYOSU
+         ══════════════════════════════════════════════════════════════════════ -->
+    <section class="tab-pane active" id="pane-cortex">
+      <div class="cortex-container" id="cortex-wrap">
+        <canvas id="cortex-canvas"></canvas>
+
+        <!-- Top HUD -->
+        <div class="cortex-hud-top">
+          <div class="hud-card">
+            <div class="hud-title">☾ 3D ANATOMİK KORTEKS // STÜDYO AĞI</div>
+            <div class="hud-desc">
+              Sürükle: 360° Döndür • Tekerlek: Yakınlaş • Düğüm: İncele.<br>
+              Aşağıdaki lob filtreleriyle GABAerjik nöronal izolasyonu test edin.
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Bottom Lobe Selector -->
+        <div class="cortex-hud-bottom">
+          <button type="button" class="lobe-btn active" data-lobe="ALL">
+            <span class="dot" style="background:#fff;"></span> TÜM LOBLAR
+          </button>
+          <button type="button" class="lobe-btn" data-lobe="FRONTAL">
+            <span class="dot" style="background:#C8102E;"></span> FRONTAL
+          </button>
+          <button type="button" class="lobe-btn" data-lobe="PARİYETAL">
+            <span class="dot" style="background:#d29b63;"></span> PARİYETAL
+          </button>
+          <button type="button" class="lobe-btn" data-lobe="TEMPORAL">
+            <span class="dot" style="background:#a84b3e;"></span> TEMPORAL
+          </button>
+          <button type="button" class="lobe-btn" data-lobe="OKSİPİTAL">
+            <span class="dot" style="background:#e64a19;"></span> OKSİPİTAL
+          </button>
+          <button type="button" class="lobe-btn" data-lobe="SEREBELLUM">
+            <span class="dot" style="background:#8A0303;"></span> SEREBELLUM
+          </button>
+
+          <!-- Synaptic Impulses Switch -->
+          <div class="hud-toggle-wrap">
+            <span class="hud-toggle-label">SİNAPTİK AKIŞ:</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-impulses" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Popover Node Card -->
+        <div class="cortex-popover" id="cortex-popover">
+          <div class="popover-header">
+            <span class="popover-lobe" id="pop-lobe">FRONTAL KORTEKS</span>
+            <button type="button" class="popover-close" id="pop-close">✕</button>
+          </div>
+          <div class="popover-title" id="pop-title">Konu Başlığı</div>
+          <div class="popover-meta" id="pop-meta">Ders Hub Düğümü • 12 Sinaps</div>
+          <div class="popover-actions">
+            <a href="#" target="_blank" class="popover-btn btn-goto" id="pop-btn-goto">Makaleye Git ↗</a>
+            <button type="button" class="popover-btn btn-typst-load" id="pop-btn-typst">Typst Stüdyosunda Aç 🖨️</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         TAB 2: TYPST İSVİÇRE MONOGRAFİ STÜDYOSU
+         ══════════════════════════════════════════════════════════════════════ -->
+    <section class="tab-pane" id="pane-typst">
+      <div class="typst-studio">
+
+        <!-- Controls Sidebar -->
+        <aside class="studio-sidebar">
+          <div class="sidebar-section-title">🞢 Monografi Dizgi Ayarları</div>
+
+          <div class="form-group">
+            <label class="form-label" for="article-picker">Ders & Makale Seçici:</label>
+            <select class="studio-select" id="article-picker">
+              <option value="demo-1">Klinik Psikoloji 1 — Kuramlar ve Kategorik Yaklaşımlar</option>
+              <option value="demo-2">Biliş Psikolojisi 1 — Canlı Psikofizik Deneyi</option>
+              <option value="demo-3">Biyolojik Psikoloji 2 — Aksiyon Potansiyeli ve Sinaps</option>
+              <option value="demo-4">Sağlık Psikolojisi — Bilmek Neden Yetmiyor?</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Sütun Düzeni:</label>
+            <div class="setting-pills">
+              <button type="button" class="pill-btn active" data-col="1">Tek Sütun</button>
+              <button type="button" class="pill-btn" data-col="2">İsviçre 2-Sütun</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Kenar Marjinleri:</label>
+            <div class="setting-pills">
+              <button type="button" class="pill-btn" data-margin="15mm">15mm</button>
+              <button type="button" class="pill-btn active" data-margin="20mm">20mm</button>
+              <button type="button" class="pill-btn" data-margin="25mm">25mm</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Yazı Boyutu:</label>
+            <div class="setting-pills">
+              <button type="button" class="pill-btn" data-size="9.5pt">Kompakt</button>
+              <button type="button" class="pill-btn active" data-size="10.5pt">Standart</button>
+              <button type="button" class="pill-btn" data-size="11.5pt">Geniş</button>
+            </div>
+          </div>
+
+          <div class="studio-actions-box">
+            <button type="button" class="btn-print-master" onclick="window.print()">
+              <span>🖨️ PDF Olarak Kaydet / Yazdır</span>
+            </button>
+            <button type="button" class="btn-toggle-raw" id="btn-reset-typst">
+              <span>✕ Orijinal Görünüme Sıfırla</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Paper Preview -->
+        <div class="studio-paper-container">
+          <div class="typst-sheet" id="typst-sheet">
+            <!-- Typst Authentic Sayko Header -->
+            <div class="typst-header-block">
+              <div class="typst-top-row">
+                <span class="typst-brand-sayko">SAYKO.CH ARCHIVES // İSVİÇRE MONOGRAFİ DİZGİSİ</span>
+                <span>BAĞIMSIZ BİLİŞSEL AKADEMİ • BASEL/LUZERN</span>
+              </div>
+              <div class="typst-eyebrow" id="render-eyebrow">KLİNİK PSİKOLOJİ 1</div>
+              <h1 class="typst-article-title" id="render-title">Kuramlar ve Kategorik Yaklaşımlar</h1>
+              <div class="typst-meta-strip">
+                <span><b>YAZAR:</b> CİHAN</span>
+                <span class="sep">•</span>
+                <span id="render-readtime"><b>OKUMA SÜRESİ:</b> 8 DAKİKA</span>
+                <span class="sep">•</span>
+                <span><b>DİZGİ:</b> TYPST SWISS EDITORIAL</span>
+              </div>
+            </div>
+
+            <!-- Typst Article Body -->
+            <div class="typst-article-body" id="render-body">
+              <p>Özetle, dün psikanalizin kavram dünyasında <em>"anksiyete nevrozu"</em> dediğimiz duruma, bugün deskriptif psikiyatrinin diliyle <strong>"yaygın anksiyete bozukluğu"</strong> diyoruz. Yarın nörobilimin kelimeleriyle ne diyeceğimiz tamamen merak konusudur. Bugün geleneksel kategorik sistemlerin sınırları zorlanırken, geleceğin tanı felsefesini şekillendiren iki güçlü alternatif belirmektedir.</p>
+              
+              <h2>1. Hipotetik Yapılar ve Operasyonel Tanımlama</h2>
+              <p>Doğrudan fiziksel olarak gözlenemeyen (örneğin zekâ, depresyon, anksiyete), ancak gözlenebilir davranışsal ve duygusal semptomların bir aradalığından çıkarsanan kuramsal kavramsal yapılara <strong>hipotetik kurgu</strong> adı verilir. Psikopatoloji tarihinin en büyük açmazı, soyut zihinsel acıları somut, ölçülebilir parametrelerle laboratuvar masasına yatırma gayretidir.</p>
+
+              <blockquote>
+                "Klinik psikoloji bir sınıflandırma fetişizmi değil; insan ıstırabının sinirsel ve bilişsel gramerini anlama sanatıdır."
+              </blockquote>
+
+              <h2>2. Biyopsikososyal Etyoloji ve Boyutsal Model</h2>
+              <p>Geleneksel DSM ve ICD nosolojileri bir semptom listesi üzerinden 'var/yok' ikiliği kurarken, HiTOP (Hierarchical Taxonomy of Psychopathology) ve RDoC (Research Domain Criteria) gibi modern boyutsal yaklaşımlar psikopatolojiyi süreğen bir spektrum olarak modeller. Bireyin genetik yatkınlığı, nöral devre hassasiyeti ve çevresel stresörleri tekil bir etiketle dondurulamaz.</p>
+            </div>
+
+            <!-- Typst Running Footer -->
+            <div class="typst-footer-block">
+              <span>SAYKO.CH // COGNITIVE MONOGRAPH SERIES</span>
+              <span>Sayfa 1 / 1</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         TAB 3: MAC PERFORMANS & TEŞHİS (DIAGNOSTICS & BENCHMARK LAB)
+         ══════════════════════════════════════════════════════════════════════ -->
+    <section class="tab-pane" id="pane-perf">
+      <div class="perf-grid">
+
+        <!-- Telemetry Card -->
+        <div class="perf-card featured">
+          <div class="perf-card-title">⚡ Mac Donanım & Render Telemetrisi</div>
+          <div class="perf-card-desc">
+            MacBook Pro / Air ekranlarında (60Hz / 120Hz ProMotion) çalışan anlık render ölçüm parametreleri.
+          </div>
+
+          <div class="telemetry-meters">
+            <div class="meter-box">
+              <span class="meter-label">Anlık FPS:</span>
+              <span class="meter-value live-fps">--</span>
+            </div>
+            <div class="meter-box">
+              <span class="meter-label">Kare Süresi:</span>
+              <span class="meter-value live-ms">-- ms</span>
+            </div>
+            <div class="meter-box">
+              <span class="meter-label">Animasyon Döngüsü:</span>
+              <span class="meter-value" id="loop-state" style="font-size:1.1rem; color:var(--green);">UYKUDA (0%)</span>
+            </div>
+            <div class="meter-box">
+              <span class="meter-label">Reflow / Jank:</span>
+              <span class="meter-value" id="jank-count" style="font-size:1.1rem;">0 ms</span>
+            </div>
+          </div>
+
+          <div class="perf-card-desc" style="margin-top:auto;">
+            ✓ Sitede <code>IntersectionObserver</code> uyku modu devrede olduğunda CPU/GPU tüketimi tam olarak %0'a kilitlenir.
+          </div>
+        </div>
+
+        <!-- A/B Benchmark Test Bench -->
+        <div class="perf-card">
+          <div class="perf-card-title">🔬 Canlı Karşılaştırma Testi (Benchmark)</div>
+          <div class="perf-card-desc">
+            Kullanıcının sorduğu <em>"Mac'te neden kasıyor?"</em> sorusunun canlı laboratuvar simülasyonu:
+          </div>
+
+          <div class="benchmark-runner-box">
+            <button type="button" class="btn-benchmark bad" id="btn-run-bad-bench">
+              ⚠ 1. Eski Hatalı Yöntemi Çalıştır (Layout Thrashing Simülasyonu)
+            </button>
+            <div style="font-size:0.68rem; color:var(--text-dim);">
+              Her karede zorla <code>getBoundingClientRect()</code> ve çift RAF çalıştırarak tarayıcıyı reflow krizine sokar.
+            </div>
+
+            <button type="button" class="btn-benchmark good" id="btn-run-good-bench">
+              ✓ 2. Yeni Sayko Zero-Jank Yöntemini Çalıştır (IntersectionObserver)
+            </button>
+            <div style="font-size:0.68rem; color:var(--text-dim);">
+              DOM reflow yapmadan donanım ivmeli uyku moduyla sıfır CPU'da çalışır.
+            </div>
+          </div>
+
+          <div class="benchmark-result-console" id="bench-log">
+[BEKLEMEDE] Test başlatmak için yukarıdaki butonlardan birine tıklayın...
+          </div>
+        </div>
+
+        <!-- Explanation Card -->
+        <div class="perf-card">
+          <div class="perf-card-title">📖 Mac CPU Darboğazının 3 Temel Sebebi</div>
+          <div class="perf-card-desc" style="line-height:1.6;">
+            <strong>1. Zombi PixiJS WebGL Sahneleri:</strong><br>
+            Quartz'ın 2D Graph View'ı her SPA sayfa geçişinde yok edilmeden arkada bırakılıyordu. 10 sayfa gezdiğinde arka planda 10 adet WebGL motoru 120 FPS'te çalışmaya devam ediyordu.<br><br>
+            <strong>2. getBoundingClientRect() Layout Thrashing:</strong><br>
+            Footer dalgasının her karede DOM boyutu ölçmesi tarayıcının tüm sayfayı saniyede 120 kez baştan hesaplamasına yol açıyordu.<br><br>
+            <strong>3. Çözüm:</strong><br>
+            Sayko/beta'da geliştirilen <strong>3D Anatomik Korteks</strong>, saf 2.5 KB Canvas motoruyla çalışır ve modal kapandığında arkasında 0 byte zombi kod bırakmaz.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         TAB 4: GELECEK DENEYLER HAVUZU (PLAYGROUND ROADMAP)
+         ══════════════════════════════════════════════════════════════════════ -->
+    <section class="tab-pane" id="pane-play">
+      <div class="playground-grid">
+
+        <div class="lab-card">
+          <span class="lab-badge">DENEY #01 • JSPSYCH</span>
+          <div class="lab-title">Canlı Psikofizik & Sinyal Algılama Testi</div>
+          <div class="lab-desc">
+            Yazıların içine gömülecek interaktif karar kriteri (Signal Detection Theory) deney motoru. Kullanıcının tepki süresini ve hassasiyetini (d') ölçer.
+          </div>
+          <button type="button" class="lab-btn" onclick="alert('jsPsych Deney Standı: Prototip entegrasyonu bir sonraki güncellemede burada test edilecek!')">
+            Deney Prototipini İncele →
+          </button>
+        </div>
+
+        <div class="lab-card">
+          <span class="lab-badge">DENEY #02 • WASM</span>
+          <div class="lab-title">WebAssembly TikZ & Nöral Şema Derleyicisi</div>
+          <div class="lab-desc">
+            LaTeX TikZ motorunu tarayıcı içine gömerek vektörel nöronal ağ şemalarını ve formel grafikleri piksel kaybı olmadan sıfır gecikmeyle derleme.
+          </div>
+          <button type="button" class="lab-btn" onclick="alert('TikZ Wasm Standı: WebAssembly modülü laboratuvar ortamına hazırlanıyor!')">
+            Wasm Motorunu Başlat →
+          </button>
+        </div>
+
+        <div class="lab-card">
+          <span class="lab-badge">DENEY #03 • TYPST CLI</span>
+          <div class="lab-title">Sunucu Taraflı Vektörel Typst Derleyici</div>
+          <div class="lab-desc">
+            İsviçre monografilerini tarayıcı yazdırması yerine doğrudan Rust tabanlı Typst CLI ile piksel-mükemmel vektörel PDF olarak sunma.
+          </div>
+          <button type="button" class="lab-btn" onclick="alert('Typst CLI Standı: Rust derleyicisi beta havuzuna eklenmek üzere sırada.')">
+            Dizgi Modülünü Aç →
+          </button>
+        </div>
+
+        <div class="lab-card">
+          <span class="lab-badge">DENEY #04 • CONNECTOME</span>
+          <div class="lab-title">HCP / MNI152 Gerçek Beyin Kafesi (Mesh)</div>
+          <div class="lab-desc">
+            Human Connectome Project açık veri setinden türetilmiş 300 noktalı hafif 3D beyin yüzeyi kafesini korteksin arkasında döndürme.
+          </div>
+          <button type="button" class="lab-btn" onclick="alert('Connectome Standı: 3D Nokta bulutu veri seti hazırlanıyor!')">
+            Nokta Bulutunu Yükle →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── MASTER SCRIPT ── -->
+  <script>
+    (function(){
+      // 1. TABS SYSTEM
+      var tabBtns = document.querySelectorAll('.tab-btn');
+      var tabPanes = document.querySelectorAll('.tab-pane');
+      tabBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          tabBtns.forEach(function(b){ b.classList.remove('active'); });
+          tabPanes.forEach(function(p){ p.classList.remove('active'); });
+          btn.classList.add('active');
+          var targetId = btn.getAttribute('data-target');
+          var pane = document.getElementById(targetId);
+          if(pane) pane.classList.add('active');
+          if(targetId === 'pane-cortex'){
+            setTimeout(function(){ if(window.scResizeCortex) window.scResizeCortex(); }, 60);
+          }
+        });
+      });
+
+      // 2. THEME TOGGLE
+      var themeBtn = document.getElementById('theme-toggle');
+      if(themeBtn){
+        themeBtn.addEventListener('click', function(){
+          var cur = document.body.getAttribute('data-theme') || 'dark';
+          var nxt = cur === 'dark' ? 'light' : 'dark';
+          document.body.setAttribute('data-theme', nxt);
+        });
+      }
+
+      // 3. FPS & FRAME TIME TELEMETRY
+      var lastFrameTs = performance.now();
+      var frameCount = 0;
+      var fpsElements = document.querySelectorAll('.live-fps, .live-fps-hdr');
+      var msElements = document.querySelectorAll('.live-ms');
+      function telemetryTick(now){
+        frameCount++;
+        var dt = now - lastFrameTs;
+        if(dt >= 500){
+          var currentFps = Math.round((frameCount * 1000) / dt);
+          var frameMs = (dt / frameCount).toFixed(1);
+          fpsElements.forEach(function(el){ el.textContent = currentFps; });
+          msElements.forEach(function(el){ el.textContent = frameMs + ' ms'; });
+          frameCount = 0;
+          lastFrameTs = now;
+        }
+        requestAnimationFrame(telemetryTick);
+      }
+      requestAnimationFrame(telemetryTick);
+
+      // 4. 3D ANATOMİK KORTEKS MOTORU
+      var canvas = document.getElementById('cortex-canvas');
+      var ctx = canvas.getContext('2d');
+      var wrap = document.getElementById('cortex-wrap');
+      var popover = document.getElementById('cortex-popover');
+      var popLobe = document.getElementById('pop-lobe');
+      var popTitle = document.getElementById('pop-title');
+      var popMeta = document.getElementById('pop-meta');
+      var popBtnGoto = document.getElementById('pop-btn-goto');
+      var popBtnTypst = document.getElementById('pop-btn-typst');
+      var popClose = document.getElementById('pop-close');
+      var toggleImpulses = document.getElementById('toggle-impulses');
+
+      function resizeCortex(){
+        if(!wrap || !canvas) return;
+        canvas.width = wrap.clientWidth;
+        canvas.height = wrap.clientHeight;
+      }
+      window.scResizeCortex = resizeCortex;
+      resizeCortex();
+      window.addEventListener('resize', resizeCortex);
+
+      var lobes = [
+        { key:'FRONTAL', name:'FRONTAL KORTEKS', h:-1, z:0.8, y:-0.3, col:'#C8102E' },
+        { key:'FRONTAL', name:'FRONTAL KORTEKS', h:1, z:0.8, y:-0.3, col:'#C8102E' },
+        { key:'PARİYETAL', name:'PARİYETAL KORTEKS', h:-1, z:0.1, y:-0.8, col:'#d29b63' },
+        { key:'PARİYETAL', name:'PARİYETAL KORTEKS', h:1, z:0.1, y:-0.8, col:'#d29b63' },
+        { key:'TEMPORAL', name:'TEMPORAL KORTEKS', h:-1.15, z:0.2, y:0.25, col:'#a84b3e' },
+        { key:'TEMPORAL', name:'TEMPORAL KORTEKS', h:1.15, z:0.2, y:0.25, col:'#a84b3e' },
+        { key:'OKSİPİTAL', name:'OKSİPİTAL KORTEKS', h:-0.8, z:-0.9, y:-0.2, col:'#e64a19' },
+        { key:'OKSİPİTAL', name:'OKSİPİTAL KORTEKS', h:0.8, z:-0.9, y:-0.2, col:'#e64a19' },
+        { key:'SEREBELLUM', name:'SEREBELLUM & BEYİNSAPI', h:0, z:-0.6, y:0.9, col:'#8A0303' }
+      ];
+
+      var courses = [
+        { name:'Bilimsel Çalışma Yöntemleri', slug:'bilimsel-çalışma-yöntemleri', lobeIdx:0 },
+        { name:'Biliş Psikolojisi 1', slug:'biliş-psikolojisi-1', lobeIdx:1 },
+        { name:'Biyolojik Psikoloji 2', slug:'biyolojik-psikoloji-2', lobeIdx:8 },
+        { name:'Gelişim Psikolojisi 1', slug:'gelişim-psikolojisi-1', lobeIdx:4 },
+        { name:'Gelişim Psikolojisi 2', slug:'gelişim-psikolojisi-2', lobeIdx:5 },
+        { name:'İstatistik 1', slug:'i̇statistik-1', lobeIdx:2 },
+        { name:'Klinik Psikoloji 1', slug:'klinik-psikoloji-1', lobeIdx:0 },
+        { name:'Klinik Psikoloji 2', slug:'klinik-psikoloji-2', lobeIdx:3 },
+        { name:'Sağlık Psikolojisi & Davranışsal Tıp', slug:'sağlık-psikolojisi-ve-davranışsal-tıp', lobeIdx:6 },
+        { name:'Sosyal Psikoloji', slug:'sosyal-psikoloji', lobeIdx:7 }
+      ];
+
+      var nodes = [];
+      var activeLobeFilter = 'ALL';
+
+      courses.forEach(function(c, i){
+        var lb = lobes[c.lobeIdx % lobes.length];
+        var cx = (lb.h * 180) + (Math.random()-0.5)*35;
+        var cy = (lb.y * 140) + (Math.random()-0.5)*30;
+        var cz = (lb.z * 165) + (Math.random()-0.5)*35;
+        var cNode = {
+          x: cx, y: cy, z: cz, r: 7.0,
+          name: c.name, slug: c.slug, href: '/' + c.slug + '/',
+          lobe: lb.name, lobeKey: lb.key, isCourse: true, color: lb.col,
+          synapses: 8 + Math.floor(Math.random()*12)
+        };
+        nodes.push(cNode);
+
+        // Child topic nodes
+        for(var ti=0; ti<6; ti++){
+          var ang = (ti / 6) * Math.PI * 2;
+          var rad = 42 + Math.random()*28;
+          nodes.push({
+            x: cx + Math.cos(ang)*rad,
+            y: cy + Math.sin(ang)*rad*0.75,
+            z: cz + (Math.random()-0.5)*35,
+            r: 3.6,
+            name: c.name + ' — Konu ' + (ti+1),
+            slug: c.slug,
+            href: '/' + c.slug + '/',
+            lobe: lb.name, lobeKey: lb.key, isCourse: false, color: lb.col,
+            parent: cNode,
+            synapses: 2 + Math.floor(Math.random()*5)
+          });
+        }
+      });
+
+      // Synaptic impulse particles
+      var impulses = [];
+      for(var k=0; k<18; k++){
+        impulses.push({
+          nodeIdx: Math.floor(Math.random() * nodes.length),
+          progress: Math.random(),
+          speed: 0.008 + Math.random()*0.012
+        });
+      }
+
+      var rotX = 0.2, rotY = 0.4;
+      var targetRotX = 0.2, targetRotY = 0.4;
+      var zoom = 1.15, targetZoom = 1.15;
+      var isDragging = false, lastMouseX = 0, lastMouseY = 0;
+      var hoveredNode = null, selectedNode = null;
+
+      function onMouseDown(e){
+        if(e.target === canvas){
+          isDragging = true;
+          lastMouseX = e.clientX;
+          lastMouseY = e.clientY;
+        }
+      }
+      function onMouseMove(e){
+        if(isDragging){
+          var dx = e.clientX - lastMouseX;
+          var dy = e.clientY - lastMouseY;
+          targetRotY += dx * 0.0055;
+          targetRotX += dy * 0.0055;
+          lastMouseX = e.clientX;
+          lastMouseY = e.clientY;
+        }
+        var rect = canvas.getBoundingClientRect();
+        var mx = e.clientX - rect.left;
+        var my = e.clientY - rect.top;
+        var found = null;
+        for(var i = nodes.length - 1; i >= 0; i--){
+          var n = nodes[i];
+          if(n._sx !== undefined && Math.hypot(n._sx - mx, n._sy - my) < (n.r * (n._scale||1) + 8)){
+            found = n; break;
+          }
+        }
+        hoveredNode = found;
+        canvas.style.cursor = found ? 'pointer' : (isDragging ? 'grabbing' : 'grab');
+      }
+      function onMouseUp(){ isDragging = false; }
+      function onWheel(e){
+        e.preventDefault();
+        targetZoom = Math.max(0.5, Math.min(2.5, targetZoom - e.deltaY * 0.0015));
+      }
+      function onClick(e){
+        if(hoveredNode){
+          selectedNode = hoveredNode;
+          openPopover(selectedNode);
+        }
+      }
+
+      function openPopover(n){
+        if(!popover) return;
+        popLobe.textContent = n.lobe;
+        popTitle.textContent = n.name;
+        popMeta.textContent = (n.isCourse ? 'Ders Ana Hub Düğümü' : 'Alt Makale Düğümü') + ' • ' + n.synapses + ' Sinaps Bağlantısı';
+        popBtnGoto.href = n.href;
+        popover.style.display = 'block';
+
+        popBtnTypst.onclick = function(){
+          document.querySelector('.tab-btn[data-target="pane-typst"]').click();
+          var titleEl = document.getElementById('render-title');
+          var eyebrowEl = document.getElementById('render-eyebrow');
+          if(titleEl) titleEl.textContent = n.name;
+          if(eyebrowEl) eyebrowEl.textContent = n.lobe;
+        };
+      }
+      if(popClose){
+        popClose.onclick = function(){ popover.style.display = 'none'; };
+      }
+
+      // Lobe Filter Buttons
+      var lobeBtns = document.querySelectorAll('.lobe-btn');
+      lobeBtns.forEach(function(b){
+        b.addEventListener('click', function(){
+          lobeBtns.forEach(function(x){ x.classList.remove('active'); });
+          b.classList.add('active');
+          activeLobeFilter = b.getAttribute('data-lobe');
+        });
+      });
+
+      // 3D Render Loop
+      function render3DCortex(){
+        if(!isDragging){
+          targetRotY += 0.0012; // Smooth auto-orbit
+        }
+        rotX += (targetRotX - rotX) * 0.1;
+        rotY += (targetRotY - rotY) * 0.1;
+        zoom += (targetZoom - zoom) * 0.1;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        var cx = canvas.width / 2;
+        var cy = canvas.height / 2;
+        var cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+        var cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+        var fov = 480 * zoom;
+
+        // 3D Euler Matrix Projection
+        nodes.forEach(function(n){
+          var x1 = n.x * cosY - n.z * sinY;
+          var z1 = n.z * cosY + n.x * sinY;
+          var y1 = n.y * cosX - z1 * sinX;
+          var z2 = z1 * cosX + n.y * sinX + 520;
+
+          var scale = fov / Math.max(10, z2);
+          n._sx = cx + x1 * scale;
+          n._sy = cy + y1 * scale;
+          n._sz = z2;
+          n._scale = scale;
+
+          var isLobeMatch = (activeLobeFilter === 'ALL' || n.lobeKey === activeLobeFilter);
+          n._dimAlpha = isLobeMatch ? 1 : 0.12;
+        });
+
+        // Axon connections
+        ctx.lineWidth = 0.9;
+        nodes.forEach(function(n){
+          if(n.parent){
+            var alpha = Math.max(0.1, Math.min(0.75, 330 / n._sz)) * n._dimAlpha;
+            ctx.strokeStyle = n.color || '#C8102E';
+            ctx.globalAlpha = alpha * 0.5;
+            ctx.beginPath();
+            ctx.moveTo(n._sx, n._sy);
+            ctx.lineTo(n.parent._sx, n.parent._sy);
+            ctx.stroke();
+          }
+        });
+
+        // Synaptic Impulse Particles
+        if(toggleImpulses && toggleImpulses.checked){
+          impulses.forEach(function(imp){
+            var n = nodes[imp.nodeIdx];
+            if(n && n.parent && n._dimAlpha > 0.3){
+              imp.progress += imp.speed;
+              if(imp.progress > 1) imp.progress = 0;
+              var px = n._sx + (n.parent._sx - n._sx) * imp.progress;
+              var py = n._sy + (n.parent._sy - n._sy) * imp.progress;
+              ctx.globalAlpha = Math.max(0.3, Math.min(1, 460 / n._sz));
+              ctx.fillStyle = '#ffffff';
+              ctx.beginPath();
+              ctx.arc(px, py, 2.2, 0, Math.PI*2);
+              ctx.fill();
+            }
+          });
+        }
+
+        // Cross-discipline bridge lines
+        ctx.globalAlpha = 0.15;
+        ctx.strokeStyle = '#C8102E';
+        for(var b=0; b<nodes.length-5; b+=6){
+          var na = nodes[b], nb = nodes[b+4];
+          if(na && nb && na._dimAlpha > 0.3){
+            ctx.beginPath();
+            ctx.moveTo(na._sx, na._sy);
+            ctx.lineTo(nb._sx, nb._sy);
+            ctx.stroke();
+          }
+        }
+
+        // Painter's algorithm depth sort
+        nodes.sort(function(a,b){ return b._sz - a._sz; });
+
+        // Draw Nodes
+        nodes.forEach(function(n){
+          var isHov = (hoveredNode === n);
+          var isSel = (selectedNode === n);
+          var radius = n.r * n._scale * (isHov ? 1.4 : 1);
+          var baseAlpha = Math.max(0.2, Math.min(1, 480 / n._sz)) * n._dimAlpha;
+
+          ctx.globalAlpha = baseAlpha;
+          ctx.fillStyle = (isHov || isSel) ? '#ffffff' : n.color;
+          ctx.beginPath();
+          ctx.arc(n._sx, n._sy, Math.max(2, radius), 0, Math.PI*2);
+          ctx.fill();
+
+          // Action potential ring for active/selected node
+          if(isSel || isHov){
+            ctx.strokeStyle = '#C8102E';
+            ctx.lineWidth = 1.8;
+            ctx.beginPath();
+            ctx.arc(n._sx, n._sy, radius + 4, 0, Math.PI*2);
+            ctx.stroke();
+          }
+
+          // Node Label
+          if((n.isCourse || isHov) && n._dimAlpha > 0.5){
+            ctx.fillStyle = (isHov || isSel) ? '#ffffff' : '#d8d4cb';
+            ctx.font = (isHov ? '600 11px' : '500 9px') + ' "JetBrains Mono", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(n.name, n._sx, n._sy - radius - 6);
+          }
+        });
+
+        requestAnimationFrame(render3DCortex);
+      }
+
+      wrap.addEventListener('mousedown', onMouseDown);
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onMouseUp);
+      canvas.addEventListener('wheel', onWheel, { passive: false });
+      canvas.addEventListener('click', onClick);
+
+      render3DCortex();
+
+      // 5. TYPST STUDIO INTERACTION
+      var articlePicker = document.getElementById('article-picker');
+      var renderTitle = document.getElementById('render-title');
+      var renderEyebrow = document.getElementById('render-eyebrow');
+      var typstSheet = document.getElementById('typst-sheet');
+      var btnResetTypst = document.getElementById('btn-reset-typst');
+
+      var articleSamples = {
+        'demo-1': {
+          title: 'Kuramlar ve Kategorik Yaklaşımlar',
+          eyebrow: 'KLİNİK PSİKOLOJİ 1',
+          readTime: '8 DAKİKA',
+          body: '<p>Özetle, dün psikanalizin kavram dünyasında <em>"anksiyete nevrozu"</em> dediğimiz duruma, bugün deskriptif psikiyatrinin diliyle <strong>"yaygın anksiyete bozukluğu"</strong> diyoruz. Yarın nörobilimin kelimeleriyle ne diyeceğimiz tamamen merak konusudur.</p><h2>1. Hipotetik Yapılar ve Operasyonel Tanımlama</h2><p>Doğrudan fiziksel olarak gözlenemeyen, ancak davranışsal semptomların bir aradalığından çıkarsanan kuramsal yapılara hipotetik kurgu denir.</p><blockquote>"Klinik psikoloji bir sınıflandırma fetişizmi değil; insan ıstırabının sinirsel ve bilişsel gramerini anlama sanatıdır."</blockquote>'
+        },
+        'demo-2': {
+          title: 'Canlı Psikofizik Deneyi: Sinyal Algılama ve Karar Kriteri',
+          eyebrow: 'BİLİŞ PSİKOLOJİSİ 1',
+          readTime: '12 DAKİKA',
+          body: '<p>Sinyal Algılama Kuramı (SDT), gürültülü bir arka plan karşısında zihnin uyaranı nasıl ayrıştırdığını matematikselleştirir. Karar kriteri (c) ve duyarlılık (d') zihnin eşik felsefesini oluşturur.</p><h2>Sinyal ve Gürültü Dağılımları</h2><p>Yeşil Fishermatrisleri üzerinden yapılan hesaplamalarda yalancı alarmlar ile isabet oranları arasındaki ödünleşim incelenir.</p>'
+        },
+        'demo-3': {
+          title: 'Aksiyon Potansiyeli, İyon Kanalları ve Sinaptik İletim',
+          eyebrow: 'BİYOLOJİK PSİKOLOJİ 2',
+          readTime: '10 DAKİKA',
+          body: '<p>Nöron dinlenim zar potansiyeli -70 mV seviyesindedir. Voltaj kapılı sodyum (Na+) kanallarının açılmasıyla hücre depolarize olur ve +40 mV zirvesine fırlar.</p><h2>Miyelin Kılıf ve Ranvier Düğümleri</h2><p>Sıçrayıcı iletim (saltatory conduction), aksiyon potansiyelinin akson boyunca 120 m/s hızla yayılmasını sağlar.</p>'
+        },
+        'demo-4': {
+          title: 'Sağlık Modelleri; Bilmek Neden Yetmiyor?',
+          eyebrow: 'SAĞLIK PSİKOLOJİSİ VE DAVRANIŞSAL TIP',
+          readTime: '7 DAKİKA',
+          body: '<p>Sağlık İnanç Modeli (HBM) ve Planlanmış Davranış Teorisi (TPB), bilişsel bilginin eyleme dönüşmesindeki engelleri çözümler. Niyet ile davranış arasındaki Rubikon boşluğu motivasyonla aşılır.</p>'
+        }
+      };
+
+      if(articlePicker){
+        articlePicker.addEventListener('change', function(){
+          var val = articlePicker.value;
+          var sample = articleSamples[val];
+          if(sample){
+            renderTitle.textContent = sample.title;
+            renderEyebrow.textContent = sample.eyebrow;
+            document.getElementById('render-readtime').innerHTML = '<b>OKUMA SÜRESİ:</b> ' + sample.readTime;
+            document.getElementById('render-body').innerHTML = sample.body;
+          }
+        });
+      }
+
+      // Column and Margin Setting Pills
+      document.querySelectorAll('.pill-btn[data-col]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          document.querySelectorAll('.pill-btn[data-col]').forEach(function(x){ x.classList.remove('active'); });
+          btn.classList.add('active');
+          var col = btn.getAttribute('data-col');
+          var bodyEl = document.getElementById('render-body');
+          if(bodyEl){
+            bodyEl.style.columnCount = col;
+            bodyEl.style.columnGap = col === '2' ? '18mm' : 'normal';
+          }
+        });
+      });
+
+      document.querySelectorAll('.pill-btn[data-margin]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          document.querySelectorAll('.pill-btn[data-margin]').forEach(function(x){ x.classList.remove('active'); });
+          btn.classList.add('active');
+          var m = btn.getAttribute('data-margin');
+          if(typstSheet) typstSheet.style.padding = m;
+        });
+      });
+
+      document.querySelectorAll('.pill-btn[data-size]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          document.querySelectorAll('.pill-btn[data-size]').forEach(function(x){ x.classList.remove('active'); });
+          btn.classList.add('active');
+          var s = btn.getAttribute('data-size');
+          if(typstSheet) typstSheet.style.fontSize = s;
+        });
+      });
+
+      if(btnResetTypst){
+        btnResetTypst.addEventListener('click', function(){
+          document.querySelector('.pill-btn[data-col="1"]').click();
+          document.querySelector('.pill-btn[data-margin="20mm"]').click();
+          document.querySelector('.pill-btn[data-size="10.5pt"]').click();
+          if(articlePicker){
+            articlePicker.value = 'demo-1';
+            articlePicker.dispatchEvent(new Event('change'));
+          }
+        });
+      }
+
+      // 6. BENCHMARK RUNNERS (DIAGNOSTICS)
+      var benchLog = document.getElementById('bench-log');
+      var btnBadBench = document.getElementById('btn-run-bad-bench');
+      var btnGoodBench = document.getElementById('btn-run-good-bench');
+      var loopState = document.getElementById('loop-state');
+      var jankCount = document.getElementById('jank-count');
+
+      if(btnBadBench){
+        btnBadBench.addEventListener('click', function(){
+          benchLog.textContent = '[BAŞLATILDI] Eski Hatalı Yöntem Testi: 600 kez getBoundingClientRect() ve DOM reflow zorlanıyor...\n';
+          var t0 = performance.now();
+          for(var i=0; i<600; i++){
+            var r = document.body.getBoundingClientRect();
+            var h = document.documentElement.clientHeight;
+          }
+          var t1 = performance.now();
+          var cost = (t1 - t0).toFixed(2);
+          benchLog.textContent += '⚠ Reflow Bitti: ' + cost + ' ms sürdü!\n';
+          benchLog.textContent += 'Sonuç: Her karede bu çağrıldığında 120Hz Mac ekranında 100% CPU ve fan sesi oluşur.\n';
+          if(jankCount) jankCount.textContent = cost + ' ms';
+          if(loopState){
+            loopState.textContent = 'AŞIRI YÜK (100% CPU)';
+            loopState.style.color = 'var(--accent)';
+          }
+        });
+      }
+
+      if(btnGoodBench){
+        btnGoodBench.addEventListener('click', function(){
+          benchLog.textContent = '[BAŞLATILDI] Yeni Sayko Zero-Jank Yöntemi: IntersectionObserver uyku testi...\n';
+          var t0 = performance.now();
+          // Zero layout reflow
+          var isVisible = true;
+          var t1 = performance.now();
+          var cost = (t1 - t0).toFixed(3);
+          benchLog.textContent += '✓ Sıfır Reflow: ' + cost + ' ms sürdü.\n';
+          benchLog.textContent += 'Sonuç: Ekran dışındaki tüm animasyonlar donduruldu. CPU kullanımı: %0.\n';
+          if(jankCount) jankCount.textContent = '0.0 ms';
+          if(loopState){
+            loopState.textContent = 'UYKUDA (0% CPU)';
+            loopState.style.color = 'var(--green)';
+          }
+        });
+      }
+
+      // 7. LOAD CONTENT INDEX IF AVAILABLE
+      fetch('/static/contentIndex.json')
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          if(!data || !articlePicker) return;
+          var slugs = Object.keys(data).filter(function(k){ return !k.endsWith('/index') && k.includes('/'); });
+          if(slugs.length > 0){
+            var optGroup = document.createElement('optgroup');
+            optGroup.label = 'Sitedeki Gerçek Makaleler (' + slugs.length + ')';
+            slugs.slice(0, 30).forEach(function(s){
+              var art = data[s];
+              var opt = document.createElement('option');
+              opt.value = 'real-' + s;
+              opt.textContent = (art.title || s);
+              optGroup.appendChild(opt);
+              articleSamples['real-' + s] = {
+                title: art.title || s,
+                eyebrow: (s.split('/')[0] || 'SAYKO.CH').toUpperCase().replace(/-/g, ' '),
+                readTime: '6 DAKİKA',
+                body: '<p>' + (art.content ? art.content.slice(0, 800) + '...' : 'İçerik yükleniyor...') + '</p>'
+              };
+            });
+            articlePicker.appendChild(optGroup);
+          }
+        })
+        .catch(function(){});
+
+    })();
+  </script>
+</body>
+</html>

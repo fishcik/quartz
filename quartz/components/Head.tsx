@@ -691,6 +691,12 @@ function ensure(){
     bTypst.addEventListener('click',function(e){e.stopPropagation();scTriggerTypstMode();});
     sbbFoot.appendChild(bTypst);
 
+    // ── Beta 3: Sayko Beta Deney Laboratuvarı & Playground (β) ──
+    var bBeta=document.createElement('a');bBeta.className='sc-sbb-footbtn sc-btn-beta';bBeta.href='/beta/';
+    bBeta.title='Beta: Sayko Bilişsel Deney Laboratuvarı & Playground';bBeta.setAttribute('aria-label','Beta Laboratuvarı');
+    bBeta.innerHTML='<span class="sc-beta-mark" aria-hidden="true" style="font-weight:900;font-size:1.05rem;">β</span>';
+    sbbFoot.appendChild(bBeta);
+
     sbb.appendChild(sbbFoot);
     document.body.appendChild(sbb);
   }
@@ -2197,10 +2203,12 @@ function scTriggerTypstMode(){
           '<div class="sc-typst-title">🞢 TYPST İSVİÇRE MONOGRAFİ DİZGİSİ</div>' +
           '<div class="sc-typst-actions">' +
             '<button type="button" class="sc-typst-btn sc-typst-print" onclick="window.print()">🖨️ PDF Olarak Kaydet / Yazdır</button>' +
-            '<button type="button" class="sc-typst-btn sc-typst-close" onclick="scTriggerTypstMode()">Normale Dön ✕</button>' +
+            '<button type="button" class="sc-typst-btn sc-typst-close" id="sc-typst-close-btn">Normale Dön ✕</button>' +
           '</div>' +
         '</div>';
       document.body.appendChild(banner);
+      var closeBtn = banner.querySelector('#sc-typst-close-btn');
+      if(closeBtn) closeBtn.addEventListener('click', scTriggerTypstMode);
     }
     if(!existingHdr){
       var slug=document.body.getAttribute('data-slug')||'';
@@ -2217,21 +2225,18 @@ function scTriggerTypstMode(){
       hdr.className='sc-monograph-sheet-header';
       hdr.innerHTML='<div class="sc-msh-top">' +
           '<div class="sc-msh-brand">' +
-            '<span class="sc-msh-brand-title">SAYKO.CH ARCHIVES</span>' +
-            '<span class="sc-msh-brand-sub">SCHWEIZERISCHE AKADEMISCHE MONOGRAPHIEN // ISSN 2026-86</span>' +
+            '<span class="sc-msh-brand-title">SAYKO.CH ARCHIVES // MONOGRAFİ DİZGİSİ</span>' +
           '</div>' +
-          '<div class="sc-msh-location">UNIVERSITÄT LUZERN • VPF</div>' +
+          '<div class="sc-msh-location">BAĞIMSIZ BİLİŞSEL AKADEMİ</div>' +
         '</div>' +
         '<div class="sc-msh-rule"></div>' +
-        (courseName ? ('<div class="sc-msh-eyebrow">'+courseName.toUpperCase()+' // BASISSTUFE</div>') : '') +
+        (courseName ? ('<div class="sc-msh-eyebrow">'+courseName.toUpperCase()+'</div>') : '') +
         '<h1 class="sc-msh-title">'+titleText+'</h1>' +
         '<div class="sc-msh-meta-bar">' +
           '<span><b>YAZAR:</b> CİHAN</span>' +
-          '<span>•</span>' +
-          '<span><b>KURUM:</b> UNIVERSITÄT LUZERN (VPF)</span>' +
           (metaText ? ('<span>•</span><span>'+metaText+'</span>') : '') +
           '<span>•</span>' +
-          '<span><b>BASKI:</b> SWISS EDITORIAL</span>' +
+          '<span><b>DİZGİ:</b> TYPST SWISS EDITORIAL</span>' +
         '</div>' +
         '<div class="sc-msh-rule-bottom"></div>';
       art.insertBefore(hdr, art.firstChild);
@@ -2241,6 +2246,7 @@ function scTriggerTypstMode(){
     if(existingHdr) existingHdr.remove();
   }
 }
+window.scTriggerTypstMode = scTriggerTypstMode;
 
 window.addEventListener('beforeprint', function(){
   var art=document.querySelector('.center article, article');
@@ -2259,21 +2265,18 @@ window.addEventListener('beforeprint', function(){
     hdr.className='sc-monograph-sheet-header sc-print-only-header';
     hdr.innerHTML='<div class="sc-msh-top">' +
         '<div class="sc-msh-brand">' +
-          '<span class="sc-msh-brand-title">SAYKO.CH ARCHIVES</span>' +
-          '<span class="sc-msh-brand-sub">SCHWEIZERISCHE AKADEMISCHE MONOGRAPHIEN // ISSN 2026-86</span>' +
+          '<span class="sc-msh-brand-title">SAYKO.CH ARCHIVES // MONOGRAFİ DİZGİSİ</span>' +
         '</div>' +
-        '<div class="sc-msh-location">UNIVERSITÄT LUZERN • VPF</div>' +
+        '<div class="sc-msh-location">BAĞIMSIZ BİLİŞSEL AKADEMİ</div>' +
       '</div>' +
       '<div class="sc-msh-rule"></div>' +
-      (courseName ? ('<div class="sc-msh-eyebrow">'+courseName.toUpperCase()+' // BASISSTUFE</div>') : '') +
+      (courseName ? ('<div class="sc-msh-eyebrow">'+courseName.toUpperCase()+'</div>') : '') +
       '<h1 class="sc-msh-title">'+titleText+'</h1>' +
       '<div class="sc-msh-meta-bar">' +
         '<span><b>YAZAR:</b> CİHAN</span>' +
-        '<span>•</span>' +
-        '<span><b>KURUM:</b> UNIVERSITÄT LUZERN (VPF)</span>' +
         (metaText ? ('<span>•</span><span>'+metaText+'</span>') : '') +
         '<span>•</span>' +
-        '<span><b>BASKI:</b> SWISS EDITORIAL</span>' +
+        '<span><b>DİZGİ:</b> TYPST SWISS EDITORIAL</span>' +
       '</div>' +
       '<div class="sc-msh-rule-bottom"></div>';
     art.insertBefore(hdr, art.firstChild);
